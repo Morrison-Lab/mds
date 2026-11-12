@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-12 02:46:13 (PST)
+Last modified: 2026-11-12 03:43:59 (PST)
 
 > **NOTE:**
 >
@@ -1916,6 +1916,26 @@ Last modified: 2026-11-12 02:46:13 (PST)
 
 > **NOTE:**
 >
+> **Exercise 44 (Choosing a constant that makes an affine map linear)** By [Theorem 16](#thm-affine-linear-iff), an [affine map](#def-affine-map) is a [linear map](#def-linear-map) exactly when its [offset](#def-affine-offset) is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$. For $c \in \mathbb{R}$, let $f: \mathbb{R}^2 \to \mathbb{R}^2$ be
+>
+> $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = (x_1 - x_2 + c - 2,\ 3 x_1 + c^2 - 4).$$
+>
+> For which values of $c$ is $f$ linear?
+>
+> > **TIP:**
+> >
+> > Find the [offset of](#def-affine-offset) $f$ as a function of $c$.
+
+> **NOTE:**
+>
+> *Solution 44*. Only for $c = 2$. The map is
+>
+> $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \begin{bmatrix}1 & -1 \\ 3 & 0\end{bmatrix} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \begin{bmatrix}c - 2 \\ c^2 - 4\end{bmatrix},$$
+>
+> so its [offset](#def-affine-offset) is ${(c - 2,\ c^2 - 4)}^{\top}$. By [Theorem 16](#thm-affine-linear-iff), $f$ is linear exactly when both entries are $0$. The first entry is $0$ only for $c = 2$, and then the second entry is $2^2 - 4 = 0$ too.
+
+> **NOTE:**
+>
 > **Corollary 2 (Every linear map is affine)** Every linear map $f : \mathbb{R}^p \to \mathbb{R}^m$ ([Definition 20](#def-linear-map)) is an affine map ([Definition 24](#def-affine-map)) with offset $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$.
 
 > **NOTE:**
@@ -1928,6 +1948,24 @@ Last modified: 2026-11-12 02:46:13 (PST)
 > \end{aligned}$$
 >
 > which is [Definition 24](#def-affine-map) with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$.
+
+> **NOTE:**
+>
+> **Exercise 45 (Testing whether a linear score is an affine map)** Some results hold only for [affine maps](#def-affine-map), so it helps to check whether a given score qualifies. Let $f: \mathbb{R}^2 \to \mathbb{R}$ be $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1 - 4 x_2$, a [linear map](#def-linear-map).
+>
+> Is $f$ an [affine map](#def-affine-map)?
+>
+> > **TIP:**
+> >
+> > Use [Corollary 2](#cor-linear-is-affine).
+
+> **NOTE:**
+>
+> *Solution 45*. Yes. By [Corollary 2](#cor-linear-is-affine), every [linear map](#def-linear-map) is an [affine map](#def-affine-map) with [offset](#def-affine-offset) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$. Here
+>
+> $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \begin{bmatrix}1 & -4\end{bmatrix} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ 0,$$
+>
+> with the $1 \times 2$ [matrix](#def-matrix) $\begin{bmatrix}1 & -4\end{bmatrix}$ and offset $0$.
 
 > **NOTE:**
 >
@@ -1950,6 +1988,24 @@ Last modified: 2026-11-12 02:46:13 (PST)
 > \end{aligned}$$
 >
 > for all $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, so $\mathbf{A}$ and $\mathbf{A}'$ are both matrices ([Definition 22](#def-matrix-of-linear-map)) of the linear map $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\mapsto f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ (linear by [Theorem 12](#thm-matrix-map-linear)), and the uniqueness in [Theorem 14](#thm-linear-map-matrix) gives $\mathbf{A}' = \mathbf{A}$.
+
+> **NOTE:**
+>
+> **Exercise 46 (Matching the offsets of two formulas for one affine map)** [Theorem 17](#thm-affine-map-unique) says that an [affine map](#def-affine-map) has only one [matrix](#def-matrix) and one [offset](#def-affine-offset), so two ways of writing the same map must agree term by term. For $c \in \mathbb{R}$, suppose that
+>
+> $$\begin{bmatrix}1 & 0 \\ 2 & 1\end{bmatrix} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \begin{bmatrix}3 \\ 1\end{bmatrix}
+> = \begin{bmatrix}1 & 0 \\ 2 & 1\end{bmatrix} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \begin{bmatrix}c \\ 1\end{bmatrix}
+> \quad \text{for every } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^2.$$
+>
+> Find $c$.
+>
+> > **TIP:**
+> >
+> > Compare the [offsets](#def-affine-offset) of the two sides.
+
+> **NOTE:**
+>
+> *Solution 46*. $c = 3$. Both sides describe the same [affine map](#def-affine-map). By [Theorem 17](#thm-affine-map-unique), the two sides have the same [offset](#def-affine-offset), so ${(3, 1)}^{\top} = {(c, 1)}^{\top}$ and $c = 3$. Setting $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ gives the same answer directly.
 
 > **NOTE:**
 >
@@ -1980,6 +2036,24 @@ Last modified: 2026-11-12 02:46:13 (PST)
 >
 > - With $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, 1)$ and $b = -1$, the hyperplane in $\mathbb{R}^2$ is the line $x_1 + x_2 - 1 = 0$. The point $(1, 0)$ is on it, since $1 + 0 - 1 = 0$; the point $(1, 1)$ is not, since $1 + 1 - 1 = 1 > 0$, so it lies in the half-space where $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b > 0$.
 > - With $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, the equation reads $b = 0$: if $b \ne 0$ no point satisfies it, and if $b = 0$ every point does, so the set is empty or all of $\mathbb{R}^2$, not a line. That degenerate case is why the definition requires $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$.
+
+> **NOTE:**
+>
+> **Exercise 47 (Testing whether a vertical line is a hyperplane)** A vertical line in $\mathbb{R}^2$ is parallel to the $x_2$-axis. It cannot be written as $x_2 = m x_1 + k$ for any numbers $m$ and $k$. Let $L$ be the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of points $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^2$ with $x_1 = 3$.
+>
+> Is $L$ a [hyperplane](#def-hyperplane) in $\mathbb{R}^2$?
+>
+> > **TIP:**
+> >
+> > Look for $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ and $b$ in [Definition 27](#def-hyperplane).
+
+> **NOTE:**
+>
+> *Solution 47*. Yes. Take $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = {(1, 0)}^{\top} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ and $b = -3$. Then
+>
+> $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b = x_1 - 3,$$
+>
+> which is $0$ exactly when $x_1 = 3$. So $L$ is the [hyperplane](#def-hyperplane) with these $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ and $b$.
 
 > **NOTE:**
 >
@@ -2087,7 +2161,7 @@ Last modified: 2026-11-12 02:46:13 (PST)
 
 > **NOTE:**
 >
-> **Exercise 44 (Write a rule in matrix form)** A clinic scores a patient’s risk from three measurements.
+> **Exercise 48 (Write a rule in matrix form)** A clinic scores a patient’s risk from three measurements.
 >
 > | symbol | meaning                 | units    |
 > |--------|-------------------------|----------|
@@ -2103,7 +2177,7 @@ Last modified: 2026-11-12 02:46:13 (PST)
 
 > **NOTE:**
 >
-> *Solution 44*. Read the [coefficients](linear-algebra-vectors.llms.md#def-lincom-coefficient) straight off the rule. There are three inputs, so $p = 3$:
+> *Solution 48*. Read the [coefficients](linear-algebra-vectors.llms.md#def-lincom-coefficient) straight off the rule. There are three inputs, so $p = 3$:
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \begin{bmatrix} 0.4 \\ 0.2 \\ 1.5 \end{bmatrix},
 > \qquad b = -30$$
@@ -2112,11 +2186,11 @@ Last modified: 2026-11-12 02:46:13 (PST)
 
 > **NOTE:**
 >
-> **Exercise 45 (Score a patient)** Give the score from the rule in [Exercise 44](#exr-write-in-matrix-form) for a patient aged $50$ with blood pressure $130$ and BMI $28$.
+> **Exercise 49 (Score a patient)** Give the score from the rule in [Exercise 48](#exr-write-in-matrix-form) for a patient aged $50$ with blood pressure $130$ and BMI $28$.
 
 > **NOTE:**
 >
-> *Solution 45*. For the patient,
+> *Solution 49*. For the patient,
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix} 50 \\ 130 \\ 28 \end{bmatrix}$$
 >
@@ -2137,7 +2211,7 @@ Last modified: 2026-11-12 02:46:13 (PST)
 
 > **NOTE:**
 >
-> **Exercise 46 (Which of these are affine in** $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$?) Each of the five expressions is a function of the weights $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p$, with the data $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $y$ held fixed. Say which ones are affine ([Definition 24](#def-affine-map)), that is, have the form [Equation 1](#eq-linear-scalar) — an inner product plus an offset — and which of those are also linear ([Definition 20](#def-linear-map)).
+> **Exercise 50 (Which of these are affine in** $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$?) Each of the five expressions is a function of the weights $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p$, with the data $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $y$ held fixed. Say which ones are affine ([Definition 24](#def-affine-map)), that is, have the form [Equation 1](#eq-linear-scalar) — an inner product plus an offset — and which of those are also linear ([Definition 20](#def-linear-map)).
 >
 > 1.  $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$
 > 2.  $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- y$
@@ -2147,7 +2221,7 @@ Last modified: 2026-11-12 02:46:13 (PST)
 
 > **NOTE:**
 >
-> *Solution 46*.
+> *Solution 50*.
 >
 > 1.  **Affine, and linear.** It is [Equation 1](#eq-linear-scalar) with $b = 0$, which is a linear map by [Theorem 12](#thm-matrix-map-linear): the matrix ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}$ times $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$.
 > 2.  **Affine.** Still an inner product plus an offset; here the offset is $b = -y$, which is a constant because $y$ is held fixed. It is linear only when $y = 0$: otherwise $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ gives $-y \ne 0$, and a linear map sends $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ to $0$ ([Theorem 11](#thm-linear-map-zero)).
@@ -2237,7 +2311,7 @@ Last modified: 2026-11-12 02:46:13 (PST)
 
 > **NOTE:**
 >
-> **Exercise 47 (The order of the factors in a transposed square product)** [Remark 8](#rem-transpose-product-order) shows that, for factors that are not [square](#def-square-matrix), keeping the original order of the factors in the [transpose](#def-matrix-transpose) of a [product](#def-matrix-mult) can give an undefined product. For two [square matrices](#def-square-matrix) of the same size, both ${\mathbf{A}}^{\top}{\mathbf{B}}^{\top}$ and ${\mathbf{B}}^{\top}{\mathbf{A}}^{\top}$ are defined, so the shapes alone cannot settle which order gives ${(\mathbf{A}\mathbf{B})}^{\top}$. Let
+> **Exercise 51 (The order of the factors in a transposed square product)** [Remark 8](#rem-transpose-product-order) shows that, for factors that are not [square](#def-square-matrix), keeping the original order of the factors in the [transpose](#def-matrix-transpose) of a [product](#def-matrix-mult) can give an undefined product. For two [square matrices](#def-square-matrix) of the same size, both ${\mathbf{A}}^{\top}{\mathbf{B}}^{\top}$ and ${\mathbf{B}}^{\top}{\mathbf{A}}^{\top}$ are defined, so the shapes alone cannot settle which order gives ${(\mathbf{A}\mathbf{B})}^{\top}$. Let
 >
 > $$\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 0 & 1 \end{bmatrix},
 > \qquad
@@ -2251,7 +2325,7 @@ Last modified: 2026-11-12 02:46:13 (PST)
 
 > **NOTE:**
 >
-> *Solution 47*. No: the two [matrices](#def-matrix) differ, so keeping the order of the factors gives the wrong [transpose](#def-matrix-transpose).
+> *Solution 51*. No: the two [matrices](#def-matrix) differ, so keeping the order of the factors gives the wrong [transpose](#def-matrix-transpose).
 >
 > The [product](#def-matrix-mult) $\mathbf{A}\mathbf{B}$ and its transpose are
 >
