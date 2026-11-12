@@ -1,0 +1,18 @@
+:::{#exr-linear-is-affine-practice}
+#### Testing whether a linear score is an affine map
+
+Some results hold only for [affine maps](#def-affine-map),
+so it helps to check whether a given score qualifies.
+Let $f: \reals^2 \to \reals$ be $f(\vx) = x_1 - 4 x_2$,
+a [linear map](#def-linear-map).
+
+Is $f$ an [affine map](#def-affine-map)?
+
+::: {.callout-tip}
+#### Hint
+
+Use @cor-linear-is-affine.
+
+:::
+
+:::

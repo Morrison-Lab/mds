@@ -1,0 +1,11 @@
+:::{#sol-affine-map-unique-practice}
+
+$c = 3$.
+Both sides describe the same [affine map](#def-affine-map).
+By @thm-affine-map-unique,
+the two sides have the same [offset](#def-affine-offset),
+so $\tp{(3, 1)} = \tp{(c, 1)}$
+and $c = 3$.
+Setting $\vx = \vzero$ gives the same answer directly.
+
+:::

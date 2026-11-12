@@ -1,0 +1,34 @@
+:::{#exm-convex-on}
+#### A function convex on an interval but not on the whole line
+
+Let $f(x) = \minf{x^2, 1}$.
+
+- $f$ is [convex on](#def-convex-on) $[-1, 1]$,
+  which is the [closed ball](vector-calculus.qmd#def-closed-ball) of radius $1$ around $0$ and so [convex](#def-convex-set) by @exm-convex-set.
+  For $x, y \in [-1, 1]$ and $t \in [0, 1]$, the point $t x + (1 - t) y$ is also in $[-1, 1]$,
+  where $f$ agrees with $x^2$,
+  so the defining [inequality](https://morrison-lab.github.io/mcs/proof-writing.html#def-inequality) of $f$ is the defining inequality of $x^2$,
+  which holds by @exm-strictly-convex.
+- $f$ is not [convex](algebra-sums.qmd#def-convex-function) on all of $\reals$:
+  with $x = 0$, $y = 2$ and $t = \tfrac{1}{2}$,
+
+  $$
+  \ba
+  f\paren{\tfrac{1}{2} \cdot 0 + \tfrac{1}{2} \cdot 2}
+  &= f(1)
+  && \text{(} \tfrac{1}{2} \cdot 0 + \tfrac{1}{2} \cdot 2 = 1 \text{)}
+  \\
+  &= 1,
+  && \text{(} \minf{1, 1} = 1 \text{)}
+  \ea
+  $$
+
+  which is greater than $\tfrac{1}{2} f(0) + \tfrac{1}{2} f(2) = \tfrac{1}{2}$,
+  since $f(0) = 0$ and $f(2) = 1$.
+
+In @fig-convex-on, the [chord](algebra-sums.qmd#def-chord) from $0$ to $2$ passes below the [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) at $1$,
+while every chord with both ends in $[-1, 1]$ lies on or above it.
+
+{{< include mds/_subfiles/vector-calc/_fig-convex-on.qmd >}}
+
+:::

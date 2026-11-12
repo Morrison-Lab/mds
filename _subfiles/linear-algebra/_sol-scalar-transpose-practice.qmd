@@ -1,0 +1,19 @@
+:::{#sol-scalar-transpose-practice}
+
+By @thm-scalar-transpose,
+$\tp{\vecf{v}}\,\tp{\matr{M}}\,\vecf{u} = \tp{\vecf{u}}\matr{M}\vecf{v}$.
+By @def-matvec-mult,
+
+$$
+\matr{M}\vecf{v} = \sbmat{0 \cd 2 + 1 \cd 3 \\ 2 \cd 2 + 0 \cd 3} = \sbmat{3 \\ 4},
+$$
+
+so
+
+$$
+\tp{\vecf{u}}\matr{M}\vecf{v} = 1 \cd 3 + (-1) \cd 4 = -1.
+$$
+
+The answer is $-1$.
+
+:::
