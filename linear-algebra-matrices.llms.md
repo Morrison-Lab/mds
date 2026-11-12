@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-11 23:39:51 (PST)
+Last modified: 2026-11-12 00:35:24 (PST)
 
 > **NOTE:**
 >
@@ -1408,6 +1408,32 @@ Last modified: 2026-11-11 23:39:51 (PST)
 
 > **NOTE:**
 >
+> **Exercise 34 (Recognizing a linear map as multiplication by a matrix)** [Theorem 12](#thm-matrix-map-linear) saves checking additivity and homogeneity by hand: a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) that multiplies its input by a fixed [matrix](#def-matrix) is a [linear map](#def-linear-map). Let $f: \mathbb{R}^2 \to \mathbb{R}^2$ be
+>
+> $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = (x_1 + 2 x_2,\ 3 x_1 - x_2).$$
+>
+> Is $f$ a [linear map](#def-linear-map)?
+>
+> > **TIP:**
+> >
+> > Find a $2 \times 2$ [matrix](#def-matrix) $\mathbf{A}$ with $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, using [Definition 16](#def-matvec-mult).
+
+> **NOTE:**
+>
+> *Solution 34*. Yes. Let
+>
+> $$\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 3 & -1 \end{bmatrix}.$$
+>
+> By [Definition 16](#def-matvec-mult),
+>
+> $$\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix} 1 \cdot x_1 + 2 \cdot x_2 \\ 3 \cdot x_1 + (-1) \cdot x_2 \end{bmatrix}
+> = \begin{bmatrix} x_1 + 2 x_2 \\ 3 x_1 - x_2 \end{bmatrix}
+> = f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}).$$
+>
+> So $f$ multiplies its input by $\mathbf{A}$, and $f$ is a [linear map](#def-linear-map) by [Theorem 12](#thm-matrix-map-linear).
+
+> **NOTE:**
+>
 > **Theorem 13 (A linear map preserves linear combinations)** If $f: \mathbb{R}^p \to \mathbb{R}^m$ is a linear map ([Definition 20](#def-linear-map)), then for any vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_k \in \mathbb{R}^p$ and any coefficients $c_1, \ldots, c_k \in \mathbb{R}$:
 >
 > $$f\mathopen{}\left(\sum_{j=1}^{k} c_j \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_j\right)\mathclose{} = \sum_{j=1}^{k} c_j f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_j)$$
@@ -1430,6 +1456,34 @@ Last modified: 2026-11-11 23:39:51 (PST)
 > && \text{(homogeneity)}
 > \\&= \sum_{j=1}^{k+1} c_j f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_j)
 > && \text{(join the last term back on)}
+> \end{aligned}$$
+
+> **NOTE:**
+>
+> **Exercise 35 (Evaluating a linear map on a linear combination)** A [linear map](#def-linear-map) is determined on a [linear combination](linear-algebra-vectors.llms.md#def-linear-combination) of vectors by its values on those vectors alone. Let $f: \mathbb{R}^2 \to \mathbb{R}^2$ be a linear map with
+>
+> $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1) = \begin{bmatrix} 1 \\ 2 \end{bmatrix},
+> \qquad
+> f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2) = \begin{bmatrix} 0 \\ -1 \end{bmatrix}.$$
+>
+> Find $f(3 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 - 2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2)$.
+>
+> > **TIP:**
+> >
+> > Apply [Theorem 13](#thm-linear-map-lincom) with $c_1 = 3$ and $c_2 = -2$.
+
+> **NOTE:**
+>
+> *Solution 35*. $$\begin{aligned}
+> f(3 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 - 2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2)
+> &= 3 f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1) - 2 f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2)
+> && \text{(}\href{#thm-linear-map-lincom}{\text{Theorem~13}}\text{)}
+> \\&= 3 \begin{bmatrix} 1 \\ 2 \end{bmatrix} - 2 \begin{bmatrix} 0 \\ -1 \end{bmatrix}
+> && \text{(the given values)}
+> \\&= \begin{bmatrix} 3 \\ 6 \end{bmatrix} - \begin{bmatrix} 0 \\ -2 \end{bmatrix}
+> && \text{(}\href{#def-scalar-mult}{\text{Definition~9}}\text{)}
+> \\&= \begin{bmatrix} 3 \\ 8 \end{bmatrix}
+> && \text{(subtracting entry by entry)}
 > \end{aligned}$$
 
 > **NOTE:**
@@ -1504,6 +1558,58 @@ Last modified: 2026-11-11 23:39:51 (PST)
 > f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2) = f\mathopen{}\left(\begin{bmatrix}0 \\ 1\end{bmatrix}\right)\mathclose{} = \begin{bmatrix}2 \cdot 0 \\ 0 + 1\end{bmatrix} = \begin{bmatrix}0 \\ 1\end{bmatrix}$$
 >
 > and these are the columns of the matrix of $f$ ([Definition 22](#def-matrix-of-linear-map)): $\mathbf{A} = \begin{bmatrix}2 & 0 \\ 1 & 1\end{bmatrix}$.
+
+> **NOTE:**
+>
+> **Exercise 36 (Evaluating a linear map from its values on the indicator vectors)** By [Theorem 14](#thm-linear-map-matrix), the values of a [linear map](#def-linear-map) at the [indicator vectors](linear-algebra-vectors.llms.md#def-indicator-vector) determine it everywhere. Let $f: \mathbb{R}^2 \to \mathbb{R}^2$ be a linear map with
+>
+> $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1) = \begin{bmatrix} 1 \\ 3 \end{bmatrix},
+> \qquad
+> f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2) = \begin{bmatrix} -2 \\ 0 \end{bmatrix}.$$
+>
+> Find $f\mathopen{}\left(\begin{bmatrix} 4 \\ 1 \end{bmatrix}\right)\mathclose{}$.
+>
+> > **TIP:**
+> >
+> > Build the [matrix of](#def-matrix-of-linear-map) $f$ from the two given values, then multiply.
+
+> **NOTE:**
+>
+> *Solution 36*. By [Theorem 14](#thm-linear-map-matrix), $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, where [column](#def-matrix-column) $j$ of $\mathbf{A}$ is $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j)$:
+>
+> $$\mathbf{A} = \begin{bmatrix} 1 & -2 \\ 3 & 0 \end{bmatrix}.$$
+>
+> So
+>
+> $$f\mathopen{}\left(\begin{bmatrix} 4 \\ 1 \end{bmatrix}\right)\mathclose{}
+> = \begin{bmatrix} 1 \cdot 4 + (-2) \cdot 1 \\ 3 \cdot 4 + 0 \cdot 1 \end{bmatrix}
+> = \begin{bmatrix} 2 \\ 12 \end{bmatrix}.$$
+
+> **NOTE:**
+>
+> **Exercise 37 (Finding the matrix of a linear map into** $\mathbb{R}^3$) The [matrix of a linear map](#def-matrix-of-linear-map) turns the map into a table of numbers that software can store and multiply. Let $f: \mathbb{R}^2 \to \mathbb{R}^3$ be the [linear map](#def-linear-map)
+>
+> $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = (x_2,\ x_1,\ x_1 - x_2).$$
+>
+> Find the [matrix of](#def-matrix-of-linear-map) $f$.
+>
+> > **TIP:**
+> >
+> > [Column](#def-matrix-column) $j$ of the matrix is $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j)$.
+
+> **NOTE:**
+>
+> *Solution 37*. The values of $f$ at the [indicator vectors](linear-algebra-vectors.llms.md#def-indicator-vector) are
+>
+> $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1) = f\mathopen{}\left(\begin{bmatrix} 1 \\ 0 \end{bmatrix}\right)\mathclose{} = \begin{bmatrix} 0 \\ 1 \\ 1 \end{bmatrix},
+> \qquad
+> f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2) = f\mathopen{}\left(\begin{bmatrix} 0 \\ 1 \end{bmatrix}\right)\mathclose{} = \begin{bmatrix} 1 \\ 0 \\ -1 \end{bmatrix}.$$
+>
+> These values are the [columns](#def-matrix-column) of the [matrix of](#def-matrix-of-linear-map) $f$:
+>
+> $$\mathbf{A} = \begin{bmatrix} 0 & 1 \\ 1 & 0 \\ 1 & -1 \end{bmatrix}.$$
+>
+> It is $3 \times 2$, since $f$ sends $\mathbb{R}^2$ to $\mathbb{R}^3$.
 
 > **NOTE:**
 >
@@ -1848,7 +1954,7 @@ Last modified: 2026-11-11 23:39:51 (PST)
 
 > **NOTE:**
 >
-> **Exercise 34 (Write a rule in matrix form)** A clinic scores a patient’s risk from three measurements.
+> **Exercise 38 (Write a rule in matrix form)** A clinic scores a patient’s risk from three measurements.
 >
 > | symbol | meaning                 | units    |
 > |--------|-------------------------|----------|
@@ -1864,7 +1970,7 @@ Last modified: 2026-11-11 23:39:51 (PST)
 
 > **NOTE:**
 >
-> *Solution 34*. Read the [coefficients](linear-algebra-vectors.llms.md#def-lincom-coefficient) straight off the rule. There are three inputs, so $p = 3$:
+> *Solution 38*. Read the [coefficients](linear-algebra-vectors.llms.md#def-lincom-coefficient) straight off the rule. There are three inputs, so $p = 3$:
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \begin{bmatrix} 0.4 \\ 0.2 \\ 1.5 \end{bmatrix},
 > \qquad b = -30$$
@@ -1873,11 +1979,11 @@ Last modified: 2026-11-11 23:39:51 (PST)
 
 > **NOTE:**
 >
-> **Exercise 35 (Score a patient)** Give the score from the rule in [Exercise 34](#exr-write-in-matrix-form) for a patient aged $50$ with blood pressure $130$ and BMI $28$.
+> **Exercise 39 (Score a patient)** Give the score from the rule in [Exercise 38](#exr-write-in-matrix-form) for a patient aged $50$ with blood pressure $130$ and BMI $28$.
 
 > **NOTE:**
 >
-> *Solution 35*. For the patient,
+> *Solution 39*. For the patient,
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix} 50 \\ 130 \\ 28 \end{bmatrix}$$
 >
@@ -1898,7 +2004,7 @@ Last modified: 2026-11-11 23:39:51 (PST)
 
 > **NOTE:**
 >
-> **Exercise 36 (Which of these are affine in** $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$?) Each of the five expressions is a function of the weights $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p$, with the data $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $y$ held fixed. Say which ones are affine ([Definition 24](#def-affine-map)), that is, have the form [Equation 1](#eq-linear-scalar) — an inner product plus an offset — and which of those are also linear ([Definition 20](#def-linear-map)).
+> **Exercise 40 (Which of these are affine in** $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$?) Each of the five expressions is a function of the weights $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p$, with the data $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $y$ held fixed. Say which ones are affine ([Definition 24](#def-affine-map)), that is, have the form [Equation 1](#eq-linear-scalar) — an inner product plus an offset — and which of those are also linear ([Definition 20](#def-linear-map)).
 >
 > 1.  $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$
 > 2.  $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- y$
@@ -1908,7 +2014,7 @@ Last modified: 2026-11-11 23:39:51 (PST)
 
 > **NOTE:**
 >
-> *Solution 36*.
+> *Solution 40*.
 >
 > 1.  **Affine, and linear.** It is [Equation 1](#eq-linear-scalar) with $b = 0$, which is a linear map by [Theorem 12](#thm-matrix-map-linear): the matrix ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}$ times $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$.
 > 2.  **Affine.** Still an inner product plus an offset; here the offset is $b = -y$, which is a constant because $y$ is held fixed. It is linear only when $y = 0$: otherwise $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ gives $-y \ne 0$, and a linear map sends $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ to $0$ ([Theorem 11](#thm-linear-map-zero)).
@@ -1998,7 +2104,7 @@ Last modified: 2026-11-11 23:39:51 (PST)
 
 > **NOTE:**
 >
-> **Exercise 37 (The order of the factors in a transposed square product)** [Remark 8](#rem-transpose-product-order) shows that, for factors that are not [square](#def-square-matrix), keeping the original order of the factors in the [transpose](#def-matrix-transpose) of a [product](#def-matrix-mult) can give an undefined product. For two [square matrices](#def-square-matrix) of the same size, both ${\mathbf{A}}^{\top}{\mathbf{B}}^{\top}$ and ${\mathbf{B}}^{\top}{\mathbf{A}}^{\top}$ are defined, so the shapes alone cannot settle which order gives ${(\mathbf{A}\mathbf{B})}^{\top}$. Let
+> **Exercise 41 (The order of the factors in a transposed square product)** [Remark 8](#rem-transpose-product-order) shows that, for factors that are not [square](#def-square-matrix), keeping the original order of the factors in the [transpose](#def-matrix-transpose) of a [product](#def-matrix-mult) can give an undefined product. For two [square matrices](#def-square-matrix) of the same size, both ${\mathbf{A}}^{\top}{\mathbf{B}}^{\top}$ and ${\mathbf{B}}^{\top}{\mathbf{A}}^{\top}$ are defined, so the shapes alone cannot settle which order gives ${(\mathbf{A}\mathbf{B})}^{\top}$. Let
 >
 > $$\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 0 & 1 \end{bmatrix},
 > \qquad
@@ -2012,7 +2118,7 @@ Last modified: 2026-11-11 23:39:51 (PST)
 
 > **NOTE:**
 >
-> *Solution 37*. No: the two [matrices](#def-matrix) differ, so keeping the order of the factors gives the wrong [transpose](#def-matrix-transpose).
+> *Solution 41*. No: the two [matrices](#def-matrix) differ, so keeping the order of the factors gives the wrong [transpose](#def-matrix-transpose).
 >
 > The [product](#def-matrix-mult) $\mathbf{A}\mathbf{B}$ and its transpose are
 >
