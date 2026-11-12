@@ -361,7 +361,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-10 22:42:39 (PST)</p>
+  <p class="date">Last modified: 2026-11-11 20:23:09 (PST)</p>
 </section><section class="slide level2"><p><span id="sec-complex-numbers"></span></p>
 </section><section class="slide level2"><div id="def-imaginary-unit" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 1 (Imaginary unit)</strong></span> The <strong>imaginary unit</strong> <span class="math inline">\(i\)</span> is a number whose square is <span class="math inline">\(-1\)</span> <span class="citation" data-cites="wikipedia_imaginary_unit"><a href="#/references" role="doc-biblioref" onclick="">[1]</a></span>:</p>
@@ -442,7 +442,22 @@ i^5
 </section><section class="slide level2"><div id="thm-negative-imaginary-unit" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 1 (The number <span class="math inline">\(-i\)</span> also squares to <span class="math inline">\(-1\)</span>)</strong></span> <span class="math display">\[(-i)^2 = -1.\]</span></p>
 </div>
-</section><section class="slide level2"></section><section class="slide level2"><div id="exm-negative-imaginary-unit" class="theorem example">
+</section><section class="slide level2"><div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><span class="math display">\[
+\begin{aligned}
+(-i)^2
+&amp;= (-1)^2\,i^2
+&amp;&amp; \text{(} -i = (-1) \cdot i \text{, and } (ab)^2 = a^2 b^2 \text{ because products commute and associate)}
+\\
+&amp;= 1 \cdot(-1)
+&amp;&amp; \text{(} (-1)^2 = 1 \text{ and }\href{#def-imaginary-unit}{\text{Definition~1}}\text{)}
+\\
+&amp;= -1
+&amp;&amp; \text{(multiply)}
+\end{aligned}
+\]</span></p>
+</div>
+</section><section class="slide level2"><div id="exm-negative-imaginary-unit" class="theorem example">
 <p><span class="theorem-title"><strong>Example 3 (Squaring <span class="math inline">\(i\)</span> and <span class="math inline">\(-i\)</span> in R)</strong></span> R has the imaginary unit as <code>1i</code>. The code below squares it and its negative.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-label="1"></a>squares <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="at">i =</span> (<span class="dv">1</span>i)<span class="sc">^</span><span class="dv">2</span>, <span class="at">minus_i =</span> (<span class="sc">-</span><span class="dv">1</span>i)<span class="sc">^</span><span class="dv">2</span>)</span>
@@ -488,7 +503,22 @@ i^5
 </section><section class="slide level2"><div id="thm-reals-in-complex" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 2 (Every real number is a complex number)</strong></span> A complex number <span class="math inline">\(z\)</span> is a real number exactly when <span class="math inline">\(\operatorname{Im} z = 0\)</span>. In particular, every real number <span class="math inline">\(a\)</span> is the complex number <span class="math inline">\(a + 0\,i\)</span>, with <span class="math inline">\(\operatorname{Re} a = a\)</span> and <span class="math inline">\(\operatorname{Im} a = 0\)</span>, so <span class="math inline">\(\mathbb{R}\)</span> is a subset of <span class="math inline">\(\mathbb{C}\)</span>.</p>
 </div>
-</section><section class="slide level2"></section><section class="slide level2"><div id="exm-reals-in-complex" class="theorem example">
+</section><section class="slide level2"><div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(a\)</span> be a real number. Since <span class="math inline">\(0\,i = 0\)</span>,</p>
+<p><span class="math display">\[
+\begin{aligned}
+a + 0\,i
+&amp;= a + 0
+&amp;&amp; \text{(} 0\,i = 0 \text{)}
+\\
+&amp;= a
+&amp;&amp; \text{(}\href{algebra-sums.qmd#thm-add-ident}{\text{Theorem~4 in Convexity, Infimum and Sums}}\text{)}
+\end{aligned}
+\]</span></p>
+<p>so <span class="math inline">\(a\)</span> is the complex number <span class="math inline">\(a + 0\,i\)</span>, whose imaginary part is <span class="math inline">\(0\)</span>. The real part of <span class="math inline">\(a + 0\,i\)</span> is <span class="math inline">\(a\)</span>, and by the equality rule in <a href="#/def-complex-equality" class="quarto-xref">Definition&nbsp;5</a> no other pair of real and imaginary parts gives the same number.</p>
+<p>Conversely, if <span class="math inline">\(z = a + b\,i\)</span> has <span class="math inline">\(b = \operatorname{Im} z = 0\)</span>, then <span class="math inline">\(z = a + 0\,i = a\)</span> by the same calculation, so <span class="math inline">\(z\)</span> is real.</p>
+</div>
+</section><section class="slide level2"><div id="exm-reals-in-complex" class="theorem example">
 <p><span class="theorem-title"><strong>Example 5 (Which complex numbers are real)</strong></span> R stores complex numbers as a real part and an imaginary part. The code below converts the real number <span class="math inline">\(7\)</span> to a complex number and reads the parts of three complex numbers.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-label="1"></a>z <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">as.complex</span>(<span class="dv">7</span>), <span class="dv">2</span> <span class="sc">-</span> <span class="dv">5</span>i, <span class="dv">3</span> <span class="sc">+</span> <span class="dv">0</span>i)</span>
