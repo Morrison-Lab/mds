@@ -1,0 +1,17 @@
+:::{#exr-hyperplane-practice}
+#### Testing whether a vertical line is a hyperplane
+
+A vertical line in $\reals^2$ is parallel to the $x_2$-axis.
+It cannot be written as $x_2 = m x_1 + k$ for any numbers $m$ and $k$.
+Let $L$ be the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of points $\vx \in \reals^2$ with $x_1 = 3$.
+
+Is $L$ a [hyperplane](#def-hyperplane) in $\reals^2$?
+
+::: {.callout-tip}
+#### Hint
+
+Look for $\vec{w} \ne \vzero$ and $b$ in @def-hyperplane.
+
+:::
+
+:::
