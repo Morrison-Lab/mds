@@ -10,7 +10,7 @@
     This expression is the squared error of one observation, and its
     curvature in $\vec w$ is exactly why fitting a model is an optimization
     problem rather than a lookup.
-4.  **Not affine.** By @eq-l2-norm this is $\vec w\' \vec w$,
+4.  **Not affine.** By @eq-norm-dot-product this is $\vec w\' \vec w$,
     which has $\vec w$ in both slots at once.
     Hold either slot fixed and it is linear in the other;
     as a function of the single variable $\vec w$ it is quadratic.

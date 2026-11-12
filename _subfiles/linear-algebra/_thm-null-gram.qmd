@@ -44,7 +44,7 @@ $$
 && \text{(@exm-dot-product-matmul)}
 \\
 &= \norm{\matr{A} \vecf{x}}^2.
-&& \text{(square both sides of @eq-l2-norm)}
+&& \text{(square both sides of @eq-norm-dot-product)}
 \ea
 $$
 

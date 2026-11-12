@@ -35,7 +35,7 @@ $$
 && \text{(@thm-transpose-product, @thm-matmul-assoc)}
 \\
 &= \norm{\matr{B} \vx}^2
-&& \text{(@eq-l2-norm, squared)}
+&& \text{(@eq-norm-dot-product, squared)}
 \\
 &\ge 0.
 && \text{(@thm-norm-properties)}

@@ -1,0 +1,25 @@
+:::{#exm-norm-dot-product}
+#### The length of a vector from its dot product
+
+For $\vx = (3, 4)$ from @exm-euclidean-norm:
+
+$$
+\ba
+\vx \cdot \vx
+&= 3 \cdot 3 + 4 \cdot 4
+&& \text{(@eq-inner-product)}
+\\
+&= 9 + 16
+&& \text{(multiply)}
+\\
+&= 25
+&& \text{(add)}
+\ea
+$$
+
+so @thm-norm-dot-product gives $\norm{\vx} = \sqrt{25} = 5$,
+the same length that @exm-euclidean-norm found from @eq-l2-norm.
+
+<!-- no-figure: the example computes one number; @exm-euclidean-norm's vector has no new data to plot -->
+
+:::

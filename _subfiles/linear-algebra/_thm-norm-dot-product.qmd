@@ -1,0 +1,27 @@
+:::{#thm-norm-dot-product}
+#### Euclidean norm from the dot product
+
+The [Euclidean norm](#def-euclidean-norm) of a vector $\vx$
+is the [square root](algebra.qmd#def-square-root) of the [dot product](#def-dot-product) of $\vx$ with itself:
+
+$$\norm{\vx} = \sqrt{\vx \cdot \vx}$$ {#eq-norm-dot-product}
+
+:::
+
+::: proof
+
+$$
+\ba
+\norm{\vx}
+&= \sqrt{\sumip x_i^2}
+&& \text{(@eq-l2-norm)}
+\\
+&= \sqrt{\sumip x_i x_i}
+&& \text{(} x_i^2 = x_i x_i \text{)}
+\\
+&= \sqrt{\vx \cdot \vx}
+&& \text{(@eq-inner-product, with } \vy = \vx \text{)}
+\ea
+$$
+
+:::
