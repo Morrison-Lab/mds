@@ -10,7 +10,8 @@ Find $\mathcal{N}(\tp{\matr{A}}\matr{A})$.
 ::: {.callout-tip}
 #### Hint
 
-Find $\mathcal{N}(\matr{A})$ first: each entry of $\matr{A}\vecf{x}$ is $x_1 + x_2$.
+Find $\mathcal{N}(\matr{A})$ first.
+Each entry of $\matr{A}\vecf{x}$ is $x_1 + x_2$.
 
 :::
 

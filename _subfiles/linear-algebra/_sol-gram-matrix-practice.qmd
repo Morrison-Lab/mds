@@ -1,6 +1,7 @@
 :::{#sol-gram-matrix-practice}
 
-The [columns of $\matr{A}$](linear-algebra-matrices.qmd#def-matrix-column) are $\vecf{a}_1 = (1, 0, 1)$ and $\vecf{a}_2 = (2, 1, 0)$, so
+The [columns of $\matr{A}$](linear-algebra-matrices.qmd#def-matrix-column) are $\vecf{a}_1 = (1, 0, 1)$ and $\vecf{a}_2 = (2, 1, 0)$,
+so
 
 $$
 \ba
