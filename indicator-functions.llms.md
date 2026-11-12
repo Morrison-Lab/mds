@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-11 18:52:11 (PST)
+Last modified: 2026-11-11 19:44:00 (PST)
 
 An **indicator function** is a mathematical function that signals whether an element belongs to a specified set, or whether a given logical condition is satisfied. In statistics and epidemiology, indicator functions are ubiquitous. They represent:
 

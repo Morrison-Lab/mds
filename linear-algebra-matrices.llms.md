@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-11 18:52:11 (PST)
+Last modified: 2026-11-11 19:44:00 (PST)
 
 > **NOTE:**
 >
@@ -390,9 +390,71 @@ Last modified: 2026-11-11 18:52:11 (PST)
 
 > **NOTE:**
 >
+> **Exercise 11 (Proving that matrix addition is commutative)** [Theorem 3](#thm-matadd-commutative) lets two [matrices](#def-matrix) be added in either order, just as two numbers can be ([sums are symmetric](algebra-sums.llms.md#thm-sum-symmetric)).
+>
+> Prove [Theorem 3](#thm-matadd-commutative).
+>
+> > **TIP:**
+> >
+> > Two $m \times n$ [matrices](#def-matrix) are [equal](#def-matrix-equality) when their $(i, j)$ entries agree for every $i$ and $j$. Express the $(i, j)$ entry of each side with [Definition 8](#def-matrix-addition).
+
+> **NOTE:**
+>
+> *Solution 11*. Both sides are $m \times n$ [matrices](#def-matrix), so they are [equal](#def-matrix-equality) when their $(i, j)$ entries agree for every $i$ and $j$. For each $i$ and $j$,
+>
+> $$\begin{aligned}
+> (\mathbf{A} + \mathbf{B})_{ij}
+> &= a_{ij} + b_{ij}
+> && \text{(}\href{#def-matrix-addition}{\text{Definition~8}}\text{)}
+> \\
+> &= b_{ij} + a_{ij}
+> && \text{(sums of numbers are symmetric)}
+> \\
+> &= (\mathbf{B} + \mathbf{A})_{ij},
+> && \text{(}\href{#def-matrix-addition}{\text{Definition~8}}\text{)}
+> \end{aligned}$$
+>
+> where the middle step uses [the symmetry of sums of numbers](algebra-sums.llms.md#thm-sum-symmetric). So $\mathbf{A} + \mathbf{B} = \mathbf{B} + \mathbf{A}$.
+
+> **NOTE:**
+>
 > **Theorem 4 (Matrix addition is associative)** For $m \times n$ matrices $\mathbf{A}$, $\mathbf{B}$, and $\mathbf{C}$, matrix addition is [associative](algebra-sums.llms.md#def-associative):
 >
 > $$(\mathbf{A} + \mathbf{B}) + \mathbf{C} = \mathbf{A} + (\mathbf{B} + \mathbf{C})$$
+
+> **NOTE:**
+>
+> **Exercise 12 (Proving that matrix addition is associative)** [Theorem 4](#thm-matadd-assoc) lets three [matrices](#def-matrix) be added without parentheses, just as three numbers can be ([sums are associative](algebra-sums.llms.md#thm-sum-assoc)).
+>
+> Prove [Theorem 4](#thm-matadd-assoc).
+>
+> > **TIP:**
+> >
+> > Two $m \times n$ [matrices](#def-matrix) are [equal](#def-matrix-equality) when their $(i, j)$ entries agree for every $i$ and $j$. Apply [Definition 8](#def-matrix-addition) twice on each side.
+
+> **NOTE:**
+>
+> *Solution 12*. Both sides are $m \times n$ [matrices](#def-matrix), so they are [equal](#def-matrix-equality) when their $(i, j)$ entries agree for every $i$ and $j$. For each $i$ and $j$,
+>
+> $$\begin{aligned}
+> ((\mathbf{A} + \mathbf{B}) + \mathbf{C})_{ij}
+> &= (\mathbf{A} + \mathbf{B})_{ij} + c_{ij}
+> && \text{(}\href{#def-matrix-addition}{\text{Definition~8}}\text{)}
+> \\
+> &= (a_{ij} + b_{ij}) + c_{ij}
+> && \text{(}\href{#def-matrix-addition}{\text{Definition~8}}\text{)}
+> \\
+> &= a_{ij} + (b_{ij} + c_{ij})
+> && \text{(sums of numbers are associative)}
+> \\
+> &= a_{ij} + (\mathbf{B} + \mathbf{C})_{ij}
+> && \text{(}\href{#def-matrix-addition}{\text{Definition~8}}\text{)}
+> \\
+> &= (\mathbf{A} + (\mathbf{B} + \mathbf{C}))_{ij},
+> && \text{(}\href{#def-matrix-addition}{\text{Definition~8}}\text{)}
+> \end{aligned}$$
+>
+> where the middle step uses [the associativity of sums of numbers](algebra-sums.llms.md#thm-sum-assoc). So $(\mathbf{A} + \mathbf{B}) + \mathbf{C} = \mathbf{A} + (\mathbf{B} + \mathbf{C})$.
 
 > **NOTE:**
 >
@@ -402,9 +464,68 @@ Last modified: 2026-11-11 18:52:11 (PST)
 
 > **NOTE:**
 >
+> **Exercise 13 (Proving that the zero matrix is the additive identity)** [Theorem 5](#thm-matadd-identity) says that adding the [zero matrix](#def-zero-matrix) leaves a [matrix](#def-matrix) unchanged, just as adding the number $0$ leaves a number unchanged.
+>
+> Prove [Theorem 5](#thm-matadd-identity).
+>
+> > **TIP:**
+> >
+> > Express the $(i, j)$ entry of $\mathbf{A} + \mathbf{0}_{m \times n}$ with [Definition 8](#def-matrix-addition), and use that every entry of $\mathbf{0}_{m \times n}$ is $0$.
+
+> **NOTE:**
+>
+> *Solution 13*. Both sides are $m \times n$ [matrices](#def-matrix), so they are [equal](#def-matrix-equality) when their $(i, j)$ entries agree for every $i$ and $j$. For each $i$ and $j$,
+>
+> $$\begin{aligned}
+> (\mathbf{A} + \mathbf{0}_{m \times n})_{ij}
+> &= a_{ij} + (\mathbf{0}_{m \times n})_{ij}
+> && \text{(}\href{#def-matrix-addition}{\text{Definition~8}}\text{)}
+> \\
+> &= a_{ij} + 0
+> && \text{(}\href{#def-zero-matrix}{\text{Definition~7}}\text{)}
+> \\
+> &= a_{ij}.
+> && \text{(adding } 0 \text{ to a number leaves it unchanged)}
+> \end{aligned}$$
+>
+> So $\mathbf{A} + \mathbf{0}_{m \times n} = \mathbf{A}$.
+
+> **NOTE:**
+>
 > **Theorem 6 (Additive inverse)** For any $m \times n$ matrix $\mathbf{A}$, the $m \times n$ matrix $-\mathbf{A}$ (defined by $(-\mathbf{A})_{ij} = -a_{ij}$) satisfies:
 >
 > $$\mathbf{A} + (-\mathbf{A}) = \mathbf{0}_{m \times n}$$
+
+> **NOTE:**
+>
+> **Exercise 14 (Proving that a matrix plus its negation is zero)** [Theorem 6](#thm-matadd-inverse) says that adding $-\mathbf{A}$ to a [matrix](#def-matrix) $\mathbf{A}$ gives the [zero matrix](#def-zero-matrix), just as adding $-a$ to a number $a$ gives $0$. Here $-\mathbf{A}$, the negation of $\mathbf{A}$, negates every entry of $\mathbf{A}$.
+>
+> Prove [Theorem 6](#thm-matadd-inverse).
+>
+> > **TIP:**
+> >
+> > Express the $(i, j)$ entry of $\mathbf{A} + (-\mathbf{A})$ with [Definition 8](#def-matrix-addition), and use $(-\mathbf{A})_{ij} = -a_{ij}$ from [Theorem 6](#thm-matadd-inverse).
+
+> **NOTE:**
+>
+> *Solution 14*. Both sides are $m \times n$ [matrices](#def-matrix), so they are [equal](#def-matrix-equality) when their $(i, j)$ entries agree for every $i$ and $j$. For each $i$ and $j$,
+>
+> $$\begin{aligned}
+> (\mathbf{A} + (-\mathbf{A}))_{ij}
+> &= a_{ij} + (-\mathbf{A})_{ij}
+> && \text{(}\href{#def-matrix-addition}{\text{Definition~8}}\text{)}
+> \\
+> &= a_{ij} + (-a_{ij})
+> && \text{(definition of } -\mathbf{A} \text{ in }\href{#thm-matadd-inverse}{\text{Theorem~6}}\text{)}
+> \\
+> &= 0
+> && \text{(a number plus its negative is } 0 \text{)}
+> \\
+> &= (\mathbf{0}_{m \times n})_{ij}.
+> && \text{(}\href{#def-zero-matrix}{\text{Definition~7}}\text{)}
+> \end{aligned}$$
+>
+> So $\mathbf{A} + (-\mathbf{A}) = \mathbf{0}_{m \times n}$.
 
 # 3 Scalar multiplication
 
@@ -424,7 +545,7 @@ Last modified: 2026-11-11 18:52:11 (PST)
 
 > **NOTE:**
 >
-> **Exercise 11 (Multiplying a matrix by a negative factor)** A [scalar multiple](#def-scalar-mult) rescales every entry of a [matrix](#def-matrix) by the same factor, as when a table of distances is converted from meters to centimeters. A negative factor flips the sign of every entry, and a factor between $-1$ and $1$ shrinks every entry toward $0$. Let
+> **Exercise 15 (Multiplying a matrix by a negative factor)** A [scalar multiple](#def-scalar-mult) rescales every entry of a [matrix](#def-matrix) by the same factor, as when a table of distances is converted from meters to centimeters. A negative factor flips the sign of every entry, and a factor between $-1$ and $1$ shrinks every entry toward $0$. Let
 >
 > $$\mathbf{C} = \begin{bmatrix} 4 & -2 \\ 0 & 6 \end{bmatrix}.$$
 >
@@ -436,7 +557,7 @@ Last modified: 2026-11-11 18:52:11 (PST)
 
 > **NOTE:**
 >
-> *Solution 11*. $$\begin{aligned}
+> *Solution 15*. $$\begin{aligned}
 > -\frac{1}{2} \mathbf{C}
 > &= \begin{bmatrix}
 > -\frac{1}{2} \cdot 4 & -\frac{1}{2} \cdot(-2) \\
@@ -569,7 +690,7 @@ Last modified: 2026-11-11 18:52:11 (PST)
 
 > **NOTE:**
 >
-> **Exercise 12 (Which of these products are defined?)** Let $\mathbf{A}$ be $4 \times 3$, let $\mathbf{B}$ be $3 \times 2$, and let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^3$. For each expression, say whether it is defined, and if so give the shape of the result:
+> **Exercise 16 (Which of these products are defined?)** Let $\mathbf{A}$ be $4 \times 3$, let $\mathbf{B}$ be $3 \times 2$, and let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^3$. For each expression, say whether it is defined, and if so give the shape of the result:
 >
 > 1.  $\mathbf{A}\mathbf{B}$
 > 2.  $\mathbf{B}\mathbf{A}$
@@ -579,7 +700,7 @@ Last modified: 2026-11-11 18:52:11 (PST)
 
 > **NOTE:**
 >
-> *Solution 12*. A vector in $\mathbb{R}^3$ is a $3 \times 1$ matrix, so the same rule settles every case.
+> *Solution 16*. A vector in $\mathbb{R}^3$ is a $3 \times 1$ matrix, so the same rule settles every case.
 >
 > 1.  $\mathbf{A}\mathbf{B}$: $(4 \times 3)(3 \times 2)$. The inner pair is $3$ and $3$, so it is defined, and the result is $4 \times 2$.
 > 2.  $\mathbf{B}\mathbf{A}$: $(3 \times 2)(4 \times 3)$. The inner pair is $2$ and $4$, which do not match, so it is **not defined**. Matrix multiplication is not commutative, and this is the blunt form of that: swapping the order can leave an expression that means nothing.
@@ -656,7 +777,7 @@ Last modified: 2026-11-11 18:52:11 (PST)
 
 > **NOTE:**
 >
-> **Exercise 13 (Multiplying by an identity matrix)** [Theorem 10](#thm-identity) says that an [identity matrix](#def-identity-matrix) of the right size leaves a [matrix](#def-matrix) unchanged under [matrix multiplication](#def-matrix-mult), just as multiplying a number by $1$ leaves it unchanged. Let
+> **Exercise 17 (Multiplying by an identity matrix)** [Theorem 10](#thm-identity) says that an [identity matrix](#def-identity-matrix) of the right size leaves a [matrix](#def-matrix) unchanged under [matrix multiplication](#def-matrix-mult), just as multiplying a number by $1$ leaves it unchanged. Let
 >
 > $$\mathbf{A} = \begin{bmatrix} 2 & 0 & -1 \\ 5 & 3 & 4 \end{bmatrix}.$$
 >
@@ -668,7 +789,7 @@ Last modified: 2026-11-11 18:52:11 (PST)
 
 > **NOTE:**
 >
-> *Solution 13*. $\mathbf{I}_2$ is $2 \times 2$ and $\mathbf{A}$ is $2 \times 3$, so the [product](#def-matrix-mult) is defined and is $2 \times 3$. The first [row of](#def-matrix-row) $\mathbf{I}_2$ is $\begin{bmatrix} 1 & 0 \end{bmatrix}$ and the second is $\begin{bmatrix} 0 & 1 \end{bmatrix}$, so by [Definition 10](#def-matrix-mult)
+> *Solution 17*. $\mathbf{I}_2$ is $2 \times 2$ and $\mathbf{A}$ is $2 \times 3$, so the [product](#def-matrix-mult) is defined and is $2 \times 3$. The first [row of](#def-matrix-row) $\mathbf{I}_2$ is $\begin{bmatrix} 1 & 0 \end{bmatrix}$ and the second is $\begin{bmatrix} 0 & 1 \end{bmatrix}$, so by [Definition 10](#def-matrix-mult)
 >
 > $$\begin{aligned}
 > \mathbf{I}_2 \mathbf{A}
@@ -709,7 +830,7 @@ Last modified: 2026-11-11 18:52:11 (PST)
 
 > **NOTE:**
 >
-> **Exercise 14 (A matrix-vector product with more columns than rows)** A [matrix-vector product](#def-matvec-mult) $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ computes one [weighted sum](linear-algebra-vectors.llms.md#def-weighted-sum) of the entries of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ for each [row of](#def-matrix-row) $\mathbf{A}$, so one multiplication computes several weighted sums at once. The [matrix](#def-matrix) $\mathbf{A}$ below has more [column](#def-matrix-column)s than [row](#def-matrix-row)s, so $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is shorter than $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$. Let
+> **Exercise 18 (A matrix-vector product with more columns than rows)** A [matrix-vector product](#def-matvec-mult) $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ computes one [weighted sum](linear-algebra-vectors.llms.md#def-weighted-sum) of the entries of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ for each [row of](#def-matrix-row) $\mathbf{A}$, so one multiplication computes several weighted sums at once. The [matrix](#def-matrix) $\mathbf{A}$ below has more [column](#def-matrix-column)s than [row](#def-matrix-row)s, so $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is shorter than $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$. Let
 >
 > $$\mathbf{A} = \begin{bmatrix} 2 & 0 & -1 \\ 5 & 3 & 4 \end{bmatrix},
 > \qquad
@@ -723,7 +844,7 @@ Last modified: 2026-11-11 18:52:11 (PST)
 
 > **NOTE:**
 >
-> *Solution 14*. $\mathbf{A}$ is $2 \times 3$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is $3 \times 1$, so the [matrix-vector product](#def-matvec-mult) is defined and is $2 \times 1$:
+> *Solution 18*. $\mathbf{A}$ is $2 \times 3$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is $3 \times 1$, so the [matrix-vector product](#def-matvec-mult) is defined and is $2 \times 1$:
 >
 > $$\begin{aligned}
 > \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
@@ -1360,7 +1481,7 @@ Last modified: 2026-11-11 18:52:11 (PST)
 
 > **NOTE:**
 >
-> **Exercise 15 (Write a rule in matrix form)** A clinic scores a patient’s risk from three measurements.
+> **Exercise 19 (Write a rule in matrix form)** A clinic scores a patient’s risk from three measurements.
 >
 > | symbol | meaning                 | units    |
 > |--------|-------------------------|----------|
@@ -1376,7 +1497,7 @@ Last modified: 2026-11-11 18:52:11 (PST)
 
 > **NOTE:**
 >
-> *Solution 15*. Read the [coefficients](linear-algebra-vectors.llms.md#def-lincom-coefficient) straight off the rule. There are three inputs, so $p = 3$:
+> *Solution 19*. Read the [coefficients](linear-algebra-vectors.llms.md#def-lincom-coefficient) straight off the rule. There are three inputs, so $p = 3$:
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \begin{bmatrix} 0.4 \\ 0.2 \\ 1.5 \end{bmatrix},
 > \qquad b = -30$$
@@ -1385,11 +1506,11 @@ Last modified: 2026-11-11 18:52:11 (PST)
 
 > **NOTE:**
 >
-> **Exercise 16 (Score a patient)** Give the score from the rule in [Exercise 15](#exr-write-in-matrix-form) for a patient aged $50$ with blood pressure $130$ and BMI $28$.
+> **Exercise 20 (Score a patient)** Give the score from the rule in [Exercise 19](#exr-write-in-matrix-form) for a patient aged $50$ with blood pressure $130$ and BMI $28$.
 
 > **NOTE:**
 >
-> *Solution 16*. For the patient,
+> *Solution 20*. For the patient,
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix} 50 \\ 130 \\ 28 \end{bmatrix}$$
 >
@@ -1410,7 +1531,7 @@ Last modified: 2026-11-11 18:52:11 (PST)
 
 > **NOTE:**
 >
-> **Exercise 17 (Which of these are affine in** $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$?) Each of the five expressions is a function of the weights $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p$, with the data $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $y$ held fixed. Say which ones are affine ([Definition 24](#def-affine-map)), that is, have the form [Equation 1](#eq-linear-scalar) — an inner product plus an offset — and which of those are also linear ([Definition 20](#def-linear-map)).
+> **Exercise 21 (Which of these are affine in** $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$?) Each of the five expressions is a function of the weights $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p$, with the data $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $y$ held fixed. Say which ones are affine ([Definition 24](#def-affine-map)), that is, have the form [Equation 1](#eq-linear-scalar) — an inner product plus an offset — and which of those are also linear ([Definition 20](#def-linear-map)).
 >
 > 1.  $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$
 > 2.  $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- y$
@@ -1420,7 +1541,7 @@ Last modified: 2026-11-11 18:52:11 (PST)
 
 > **NOTE:**
 >
-> *Solution 17*.
+> *Solution 21*.
 >
 > 1.  **Affine, and linear.** It is [Equation 1](#eq-linear-scalar) with $b = 0$, which is a linear map by [Theorem 12](#thm-matrix-map-linear): the matrix ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}$ times $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$.
 > 2.  **Affine.** Still an inner product plus an offset; here the offset is $b = -y$, which is a constant because $y$ is held fixed. It is linear only when $y = 0$: otherwise $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ gives $-y \ne 0$, and a linear map sends $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ to $0$ ([Theorem 11](#thm-linear-map-zero)).
@@ -1510,7 +1631,7 @@ Last modified: 2026-11-11 18:52:11 (PST)
 
 > **NOTE:**
 >
-> **Exercise 18 (The order of the factors in a transposed square product)** [Remark 8](#rem-transpose-product-order) shows that, for factors that are not [square](#def-square-matrix), keeping the original order of the factors in the [transpose](#def-matrix-transpose) of a [product](#def-matrix-mult) can give an undefined product. For two [square matrices](#def-square-matrix) of the same size, both ${\mathbf{A}}^{\top}{\mathbf{B}}^{\top}$ and ${\mathbf{B}}^{\top}{\mathbf{A}}^{\top}$ are defined, so the shapes alone cannot settle which order gives ${(\mathbf{A}\mathbf{B})}^{\top}$. Let
+> **Exercise 22 (The order of the factors in a transposed square product)** [Remark 8](#rem-transpose-product-order) shows that, for factors that are not [square](#def-square-matrix), keeping the original order of the factors in the [transpose](#def-matrix-transpose) of a [product](#def-matrix-mult) can give an undefined product. For two [square matrices](#def-square-matrix) of the same size, both ${\mathbf{A}}^{\top}{\mathbf{B}}^{\top}$ and ${\mathbf{B}}^{\top}{\mathbf{A}}^{\top}$ are defined, so the shapes alone cannot settle which order gives ${(\mathbf{A}\mathbf{B})}^{\top}$. Let
 >
 > $$\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 0 & 1 \end{bmatrix},
 > \qquad
@@ -1524,7 +1645,7 @@ Last modified: 2026-11-11 18:52:11 (PST)
 
 > **NOTE:**
 >
-> *Solution 18*. No: the two [matrices](#def-matrix) differ, so keeping the order of the factors gives the wrong [transpose](#def-matrix-transpose).
+> *Solution 22*. No: the two [matrices](#def-matrix) differ, so keeping the order of the factors gives the wrong [transpose](#def-matrix-transpose).
 >
 > The [product](#def-matrix-mult) $\mathbf{A}\mathbf{B}$ and its transpose are
 >
