@@ -8,6 +8,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_exm-euclidean-norm.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-unit-vector.qmd >}}
 
 {{< slidebreak >}}
