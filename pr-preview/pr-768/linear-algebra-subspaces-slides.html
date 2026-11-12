@@ -302,7 +302,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-11 12:17:36 (PST)</p>
+  <p class="date">Last modified: 2026-11-12 01:57:31 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -403,11 +403,11 @@ c_1 &amp;= \cdots \\
 <section class="slide level2">
 
 <div id="exr-rank-practice" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 2 (Finding the rank of a matrix whose third column is a total)</strong></span> The <a href="#/def-rank">rank</a> of a data <a href="./linear-algebra-matrices.html#def-matrix">matrix</a> counts how many of its <a href="./linear-algebra-matrices.html#def-matrix-column">columns</a> carry new information. Let</p>
+<p><span class="theorem-title"><strong>Exercise 2 (Finding the rank of a <span class="math inline">\(3 \times 3\)</span> matrix)</strong></span> The <a href="#/def-rank">rank</a> of a data <a href="./linear-algebra-matrices.html#def-matrix">matrix</a> counts how many of its <a href="./linear-algebra-matrices.html#def-matrix-column">columns</a> carry new information. Let</p>
 <p><span class="math display">\[
 \mathbf{A} = \begin{bmatrix}1 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 1 \\ 2 &amp; 1 &amp; 3\end{bmatrix}.
 \]</span></p>
-<p>Find <span class="math inline">\(\operatorname{rank}(\mathbf{A})\)</span>.</p>
+<p>Find <span class="math inline">\({\operatorname{rank}\mathopen{}\left(\mathbf{A}\right)\mathclose{}}\)</span>.</p>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -426,7 +426,7 @@ c_1 &amp;= \cdots \\
 <section class="slide level2">
 
 <div id="sol-rank-practice" class="proof solution">
-<p><span class="proof-title"><em>Solution 2</em>. </span><span class="math inline">\(\operatorname{rank}(\mathbf{A}) = 2\)</span>. The third <a href="./linear-algebra-matrices.html#def-matrix-column">column of <span class="math inline">\(\mathbf{A}\)</span></a> adds up the first two: <span class="math inline">\({(1, 0, 2)}^{\top} + {(0, 1, 1)}^{\top} = {(1, 1, 3)}^{\top}\)</span>, so the three are not <a href="#/def-linearly-independent">linearly independent</a>. The first two are: if <span class="math inline">\(c_1 {(1, 0, 2)}^{\top} + c_2 {(0, 1, 1)}^{\top} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, then the first entry gives <span class="math inline">\(c_1 = 0\)</span> and the second gives <span class="math inline">\(c_2 = 0\)</span>. By <a href="#/def-rank" class="quarto-xref">Definition&nbsp;2</a>, the <a href="#/def-rank">rank</a> is <span class="math inline">\(2\)</span>.</p>
+<p><span class="proof-title"><em>Solution 2</em>. </span><span class="math inline">\({\operatorname{rank}\mathopen{}\left(\mathbf{A}\right)\mathclose{}} = 2\)</span>. The third <a href="./linear-algebra-matrices.html#def-matrix-column">column of <span class="math inline">\(\mathbf{A}\)</span></a> adds up the first two: <span class="math inline">\({(1, 0, 2)}^{\top} + {(0, 1, 1)}^{\top} = {(1, 1, 3)}^{\top}\)</span>, so the three are not <a href="#/def-linearly-independent">linearly independent</a>. The first two are: if <span class="math inline">\(c_1 {(1, 0, 2)}^{\top} + c_2 {(0, 1, 1)}^{\top} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, then the first entry gives <span class="math inline">\(c_1 = 0\)</span>, and the second gives <span class="math inline">\(c_2 = 0\)</span>. By <a href="#/def-rank" class="quarto-xref">Definition&nbsp;2</a>, the <a href="#/def-rank">rank</a> is <span class="math inline">\(2\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -520,11 +520,11 @@ c_1 + 4 c_2 = 0.
 <section class="slide level2">
 
 <div id="exr-subspace-practice" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 4 (Testing whether the vectors with a nonnegative second entry form a subspace)</strong></span> A constraint such as “every entry is at least <span class="math inline">\(0\)</span>” cuts out a <a href="https://morrison-lab.github.io/mcs/sets.html#def-set">set</a> of vectors, and it is worth knowing whether that set is a <a href="#/def-subspace">subspace</a>. Let</p>
+<p><span class="theorem-title"><strong>Exercise 4 (Testing whether vectors with a nonnegative second entry are a subspace)</strong></span> A constraint such as “this entry is at least <span class="math inline">\(0\)</span>” cuts out a <a href="https://morrison-lab.github.io/mcs/sets.html#def-set">set</a> of vectors, and it is worth knowing whether that set is a <a href="#/def-subspace">subspace</a>. Let</p>
 <p><span class="math display">\[
 \mathcal{H} = \mathopen{}\left\{(x, y) \in \mathbb{R}^2 : y \ge 0\right\}\mathclose{},
 \]</span></p>
-<p>the vectors whose second entry is nonnegative, so that they form the set <span class="math inline">\(\mathcal{H}\)</span>.</p>
+<p>the vectors whose second entry is nonnegative.</p>
 <p>Is <span class="math inline">\(\mathcal{H}\)</span> a subspace of <span class="math inline">\(\mathbb{R}^2\)</span>?</p>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
@@ -1060,35 +1060,6 @@ c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphant
 </section>
 <section class="slide level2">
 
-<div id="exr-basis-unique-practice" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 12 (Counting the ways to write a vector in a basis)</strong></span> <a href="#/thm-basis-unique" class="quarto-xref">Theorem&nbsp;6</a> is what makes <a href="#/def-coordinates">coordinates</a> well defined. The vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 = {(1, 1)}^{\top}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 = {(1, -1)}^{\top}\)</span> form a <a href="#/def-basis">basis</a> of <span class="math inline">\(\mathbb{R}^2\)</span>, and</p>
-<p><span class="math display">\[
-\begin{bmatrix}5 \\ 1\end{bmatrix} = 3 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 + 2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2.
-\]</span></p>
-<p>How many lists of numbers <span class="math inline">\(c_1, c_2\)</span> satisfy <span class="math inline">\({(5, 1)}^{\top} = c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 + c_2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2\)</span>?</p>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Hint</strong></p>
-</div>
-<div class="callout-content">
-<p>Use <a href="#/thm-basis-unique" class="quarto-xref">Theorem&nbsp;6</a>.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="sol-basis-unique-practice" class="proof solution">
-<p><span class="proof-title"><em>Solution 12</em>. </span>Exactly one, namely <span class="math inline">\(c_1 = 3\)</span> and <span class="math inline">\(c_2 = 2\)</span>. By <a href="#/thm-basis-unique" class="quarto-xref">Theorem&nbsp;6</a>, a vector in the <a href="#/def-span">span</a> of a <a href="#/def-basis">basis</a> has only one list of numbers, and <span class="math inline">\(3, 2\)</span> is a list that works.</p>
-</div>
-</section>
-<section class="slide level2">
-
 <div id="def-coordinates" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 7 (Coordinates in a basis)</strong></span> Let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_k\)</span> be a basis of a subspace <span class="math inline">\(\mathcal{S}\)</span> (<a href="#/def-basis" class="quarto-xref">Definition&nbsp;6</a>), and let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \in \mathcal{S}\)</span>. The <strong>coordinates</strong> <span class="citation" data-cites="wikipedia_coordinate_vector"><a href="#/references" role="doc-biblioref" onclick="">[7]</a></span> of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> in this basis are the numbers <span class="math inline">\(c_1, \ldots, c_k\)</span> with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 + \cdots + c_k \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_k\)</span>. By <a href="#/thm-basis-unique" class="quarto-xref">Theorem&nbsp;6</a> there is exactly one such list of numbers.</p>
 </div>
@@ -1114,64 +1085,6 @@ c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphant
 \end{aligned}
 \]</span></p>
 <p>In the basis <span class="math inline">\((1, 0), (0, 1)\)</span>, its coordinates are its entries, <span class="math inline">\(4\)</span> and <span class="math inline">\(1\)</span>.</p>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="exr-coordinates-practice" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 13 (Finding coordinates in a basis other than the indicator vectors)</strong></span> The <a href="#/def-coordinates">coordinates</a> of a vector depend on the <a href="#/def-basis">basis</a>, and they equal its entries only in the basis of <a href="./linear-algebra-vectors.html#def-indicator-vector">indicator vectors</a>. The vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 = {(2, 0)}^{\top}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 = {(1, 1)}^{\top}\)</span> form a basis of <span class="math inline">\(\mathbb{R}^2\)</span>. Let</p>
-<p><span class="math display">\[
-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \begin{bmatrix}7 \\ 3\end{bmatrix}.
-\]</span></p>
-<p>Find the coordinates of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> in the basis <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2\)</span>.</p>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Hint</strong></p>
-</div>
-<div class="callout-content">
-<p>Write <span class="math inline">\(c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 + c_2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2\)</span> entry by entry, and start from the second entry.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="sol-coordinates-practice" class="proof solution">
-<p><span class="proof-title"><em>Solution 13</em>. </span>The <a href="#/def-coordinates">coordinates</a> of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> are <span class="math inline">\(2\)</span> and <span class="math inline">\(3\)</span>. Entry by entry, <span class="math inline">\(c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 + c_2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 = {(2 c_1 + c_2,\ c_2)}^{\top}\)</span>. The second entry gives <span class="math inline">\(c_2 = 3\)</span>, and then the first gives <span class="math inline">\(2 c_1 + 3 = 7\)</span>, so <span class="math inline">\(c_1 = 2\)</span>. As a check, <span class="math inline">\(2 {(2, 0)}^{\top} + 3 {(1, 1)}^{\top} = {(7, 3)}^{\top}\)</span>.</p>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="exr-coordinate-vector-practice" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 14 (Describing a point on a plane in <span class="math inline">\(\mathbb{R}^3\)</span> with two numbers)</strong></span> A point on a plane through the origin in <span class="math inline">\(\mathbb{R}^3\)</span> needs only two numbers, its <a href="#/def-coordinate-vector">coordinate vector</a> in a <a href="#/def-basis">basis</a> of the plane. The vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 = {(1, 1, 0)}^{\top}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 = {(0, 1, 1)}^{\top}\)</span> form a basis of a plane <span class="math inline">\(\mathcal{S}\)</span>, which contains</p>
-<p><span class="math display">\[
-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \begin{bmatrix}2 \\ 5 \\ 3\end{bmatrix}.
-\]</span></p>
-<p>Find the coordinate vector of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> in the basis <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2\)</span>.</p>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Hint</strong></p>
-</div>
-<div class="callout-content">
-<p>Write <span class="math inline">\(c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 + c_2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2\)</span> entry by entry, then use <a href="#/def-coordinate-vector" class="quarto-xref">Definition&nbsp;8</a>.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="sol-coordinate-vector-practice" class="proof solution">
-<p><span class="proof-title"><em>Solution 14</em>. </span>Entry by entry, <span class="math inline">\(c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 + c_2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 = {(c_1,\ c_1 + c_2,\ c_2)}^{\top}\)</span>. Matching <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> gives <span class="math inline">\(c_1 = 2\)</span> and <span class="math inline">\(c_2 = 3\)</span>, and the second entry checks: <span class="math inline">\(2 + 3 = 5\)</span>. By <a href="#/def-coordinate-vector" class="quarto-xref">Definition&nbsp;8</a>, the <a href="#/def-coordinate-vector">coordinate vector</a> of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is <span class="math inline">\({(2, 3)}^{\top} \in \mathbb{R}^2\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -1230,61 +1143,6 @@ c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphant
 </section>
 <section class="slide level2">
 
-<div id="exr-basis-size-practice" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 15 (Testing whether two vectors can form a basis of <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> A list of two features cannot describe every point in <span class="math inline">\(\mathbb{R}^3\)</span>, and <a href="#/thm-basis-size" class="quarto-xref">Theorem&nbsp;7</a> says why in terms of <a href="#/def-basis">bases</a>. The <a href="./linear-algebra-vectors.html#def-indicator-vector">indicator vectors</a> <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1\)</span>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3\)</span> form a basis of <span class="math inline">\(\mathbb{R}^3\)</span>.</p>
-<p>Can a list of <span class="math inline">\(2\)</span> vectors be a basis of <span class="math inline">\(\mathbb{R}^3\)</span>?</p>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Hint</strong></p>
-</div>
-<div class="callout-content">
-<p>Use <a href="#/thm-basis-size" class="quarto-xref">Theorem&nbsp;7</a> with the <a href="#/def-basis">basis</a> <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3\)</span>.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="sol-basis-size-practice" class="proof solution">
-<p><span class="proof-title"><em>Solution 15</em>. </span>No. <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3\)</span> is a <a href="#/def-basis">basis</a> of <span class="math inline">\(\mathbb{R}^3\)</span> with <span class="math inline">\(3\)</span> vectors, so by <a href="#/thm-basis-size" class="quarto-xref">Theorem&nbsp;7</a> every basis of <span class="math inline">\(\mathbb{R}^3\)</span> has <span class="math inline">\(3\)</span> vectors, not <span class="math inline">\(2\)</span>.</p>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="exr-dimension-practice" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 16 (Finding the dimension of a span that includes a multiple)</strong></span> The <a href="#/def-dimension">dimension</a> of a <a href="#/def-span">span</a> can be smaller than the number of vectors that span it, for example when one vector is a multiple of another. Let</p>
-<p><span class="math display">\[
-\mathcal{S} = \operatorname{span}\mathopen{}\left\{{(1, 2, 0)}^{\top},\ {(2, 4, 0)}^{\top},\ {(0, 0, 1)}^{\top}\right\}\mathclose{}.
-\]</span></p>
-<p>Find <span class="math inline">\(\dim(\mathcal{S})\)</span>.</p>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Hint</strong></p>
-</div>
-<div class="callout-content">
-<p>Look for a vector in the list that is a multiple of another, then check that the rest are <a href="#/def-linearly-independent">linearly independent</a>.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="sol-dimension-practice" class="proof solution">
-<p><span class="proof-title"><em>Solution 16</em>. </span><span class="math inline">\(\dim(\mathcal{S}) = 2\)</span>. Since <span class="math inline">\({(2, 4, 0)}^{\top} = 2 {(1, 2, 0)}^{\top}\)</span>, dropping <span class="math inline">\({(2, 4, 0)}^{\top}\)</span> leaves the <a href="#/def-span">span</a> unchanged, so <span class="math inline">\({(1, 2, 0)}^{\top}\)</span> and <span class="math inline">\({(0, 0, 1)}^{\top}\)</span> span <span class="math inline">\(\mathcal{S}\)</span>. They are <a href="#/def-linearly-independent">linearly independent</a>: if <span class="math inline">\(c_1 {(1, 2, 0)}^{\top} + c_2 {(0, 0, 1)}^{\top} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, the first entry gives <span class="math inline">\(c_1 = 0\)</span> and the third gives <span class="math inline">\(c_2 = 0\)</span>. So they form a <a href="#/def-basis">basis</a> of <span class="math inline">\(\mathcal{S}\)</span> with <span class="math inline">\(2\)</span> vectors, and by <a href="#/def-dimension" class="quarto-xref">Definition&nbsp;9</a> the <a href="#/def-dimension">dimension</a> is <span class="math inline">\(2\)</span>.</p>
-</div>
-</section>
-<section class="slide level2">
-
 <div id="thm-add-outside-span" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 8 (Adding a vector outside the span keeps a list independent)</strong></span> If <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_k\)</span> are linearly independent (<a href="#/def-linearly-independent" class="quarto-xref">Definition&nbsp;1</a>) and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> is not in <span class="math inline">\(\operatorname{span}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_k\right\}\mathclose{}\)</span> (<a href="#/def-span" class="quarto-xref">Definition&nbsp;5</a>), then <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_k, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> are linearly independent.</p>
 </div>
@@ -1316,39 +1174,6 @@ c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphant
 </section>
 <section class="slide level2">
 
-<div id="exr-add-outside-span-practice" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 17 (Adding a third feature to an independent pair)</strong></span> Adding a new feature keeps a list of features <a href="#/def-linearly-independent">linearly independent</a> when the new one is not a combination of the old ones, which is what <a href="#/thm-add-outside-span" class="quarto-xref">Theorem&nbsp;8</a> says. Let</p>
-<p><span class="math display">\[
-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 = \begin{bmatrix}1 \\ 0 \\ 0\end{bmatrix},
-\qquad
-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2 = \begin{bmatrix}0 \\ 1 \\ 0\end{bmatrix},
-\qquad
-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \begin{bmatrix}1 \\ 1 \\ 1\end{bmatrix}.
-\]</span></p>
-<p>Are <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1\)</span>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> linearly independent?</p>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Hint</strong></p>
-</div>
-<div class="callout-content">
-<p>Check whether <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> is in <span class="math inline">\(\operatorname{span}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2\right\}\mathclose{}\)</span>, then use <a href="#/thm-add-outside-span" class="quarto-xref">Theorem&nbsp;8</a>.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="sol-add-outside-span-practice" class="proof solution">
-<p><span class="proof-title"><em>Solution 17</em>. </span>Yes. <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2\)</span> are <a href="#/def-linearly-independent">linearly independent</a>: <span class="math inline">\(c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 + c_2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2 = {(c_1, c_2, 0)}^{\top}\)</span> is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> only for <span class="math inline">\(c_1 = c_2 = 0\)</span>. Every vector in their <a href="#/def-span">span</a> has third entry <span class="math inline">\(0\)</span>, and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> has third entry <span class="math inline">\(1\)</span>, so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> is not in the span. By <a href="#/thm-add-outside-span" class="quarto-xref">Theorem&nbsp;8</a>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1\)</span>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> are linearly independent.</p>
-</div>
-</section>
-<section class="slide level2">
-
 <div id="thm-extend-basis" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 9 (An independent list extends to a basis)</strong></span> If <span class="math inline">\(\mathcal{S}\)</span> is a subspace of <span class="math inline">\(\mathbb{R}^p\)</span> (<a href="#/def-subspace" class="quarto-xref">Definition&nbsp;4</a>) and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_k \in \mathcal{S}\)</span> are linearly independent (<a href="#/def-linearly-independent" class="quarto-xref">Definition&nbsp;1</a>), then adding vectors of <span class="math inline">\(\mathcal{S}\)</span> to the list gives a basis of <span class="math inline">\(\mathcal{S}\)</span> (<a href="#/def-basis" class="quarto-xref">Definition&nbsp;6</a>). Starting from the empty list shows that every subspace has a basis.</p>
 </div>
@@ -1368,35 +1193,6 @@ c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphant
 <li>The list <span class="math inline">\((1, 1, 0), (1, 0, 0), (0, 0, 1)\)</span> spans <span class="math inline">\(\mathbb{R}^3\)</span>: <span class="math inline">\((x, y, z) = y\,(1, 1, 0) + (x - y)\,(1, 0, 0) + z\,(0, 0, 1)\)</span>. Stop.</li>
 </ol>
 <p>The result is a basis of <span class="math inline">\(\mathbb{R}^3\)</span> that contains the starting vector.</p>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="exr-extend-basis-practice" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 18 (Extending one vector to a basis of <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> <a href="#/thm-extend-basis" class="quarto-xref">Theorem&nbsp;9</a> says that any <a href="#/def-linearly-independent">linearly independent</a> list can be completed to a <a href="#/def-basis">basis</a>. Let</p>
-<p><span class="math display">\[
-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 = \begin{bmatrix}1 \\ 1 \\ 0\end{bmatrix}.
-\]</span></p>
-<p>Find two <a href="./linear-algebra-vectors.html#def-indicator-vector">indicator vectors</a> that extend <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1\)</span> to a basis of <span class="math inline">\(\mathbb{R}^3\)</span>.</p>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Hint</strong></p>
-</div>
-<div class="callout-content">
-<p>Add <a href="./linear-algebra-vectors.html#def-indicator-vector">indicator vectors</a> one at a time, each outside the <a href="#/def-span">span</a> of the list so far, as <a href="#/thm-add-outside-span" class="quarto-xref">Theorem&nbsp;8</a> allows.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="sol-extend-basis-practice" class="proof solution">
-<p><span class="proof-title"><em>Solution 18</em>. </span>One answer is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3\)</span>. The list <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1\)</span> is <a href="#/def-linearly-independent">linearly independent</a>, since <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>. <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2 = {(0, 1, 0)}^{\top}\)</span> is not a multiple of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1\)</span>, whose first two entries are equal, so by <a href="#/thm-add-outside-span" class="quarto-xref">Theorem&nbsp;8</a> the list <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2\)</span> is linearly independent. Every vector in its <a href="#/def-span">span</a> has third entry <span class="math inline">\(0\)</span>, so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3\)</span> is outside it, and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3\)</span> is linearly independent too. These three vectors span <span class="math inline">\(\mathbb{R}^3\)</span>, because <span class="math inline">\({(x, y, z)}^{\top} = x \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 + (y - x) \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2 + z \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3\)</span>, so they form a <a href="#/def-basis">basis</a> of <span class="math inline">\(\mathbb{R}^3\)</span>. The pair <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3\)</span> works too.</p>
 </div>
 </section>
 <section class="slide level2 scrollable">
@@ -1451,32 +1247,6 @@ c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphant
 </section>
 <section class="slide level2">
 
-<div id="exr-dim-bound-practice" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 19 (Testing whether four independent vectors fit in a three-dimensional subspace)</strong></span> <a href="#/thm-dim-bound" class="quarto-xref">Theorem&nbsp;10</a> caps how many <a href="#/def-linearly-independent">linearly independent vectors</a> a <a href="#/def-subspace">subspace</a> can hold. Let <span class="math inline">\(\mathcal{S}\)</span> be a subspace of <span class="math inline">\(\mathbb{R}^5\)</span> with <a href="#/def-dimension">dimension</a> <span class="math inline">\(3\)</span>.</p>
-<p>Can <span class="math inline">\(\mathcal{S}\)</span> contain <span class="math inline">\(4\)</span> linearly independent vectors?</p>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Hint</strong></p>
-</div>
-<div class="callout-content">
-<p>Use part 1 of <a href="#/thm-dim-bound" class="quarto-xref">Theorem&nbsp;10</a> with <span class="math inline">\(d = 3\)</span>.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="sol-dim-bound-practice" class="proof solution">
-<p><span class="proof-title"><em>Solution 19</em>. </span>No. By part 1 of <a href="#/thm-dim-bound" class="quarto-xref">Theorem&nbsp;10</a>, a <a href="#/def-linearly-independent">linearly independent</a> list of vectors in <span class="math inline">\(\mathcal{S}\)</span> has at most <span class="math inline">\(\dim(\mathcal{S}) = 3\)</span> vectors, so it cannot have <span class="math inline">\(4\)</span>.</p>
-</div>
-</section>
-<section class="slide level2">
-
 <div id="thm-subspace-equal-dim" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 11 (A subspace inside another of the same dimension equals it)</strong></span> If <span class="math inline">\(\mathcal{T}\)</span> and <span class="math inline">\(\mathcal{S}\)</span> are subspaces of <span class="math inline">\(\mathbb{R}^p\)</span> with <span class="math inline">\(\mathcal{T} \subseteq \mathcal{S}\)</span> and <span class="math inline">\(\dim(\mathcal{T}) = \dim(\mathcal{S})\)</span> (<a href="#/def-dimension" class="quarto-xref">Definition&nbsp;9</a>), then <span class="math inline">\(\mathcal{T} = \mathcal{S}\)</span>.</p>
 </div>
@@ -1490,39 +1260,10 @@ c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphant
 <p><span class="theorem-title"><strong>Example 20 (Two independent vectors in a plane span it)</strong></span> Let <span class="math inline">\(\mathcal{S} = \mathopen{}\left\{(x, y, 0) : x, y \in \mathbb{R}\right\}\mathclose{}\)</span>, the plane <span class="math inline">\(z = 0\)</span>, which has dimension <span class="math inline">\(2\)</span> (<a href="#/exm-dimension" class="quarto-xref">Example&nbsp;16</a>), and let <span class="math inline">\(\mathcal{T} = \operatorname{span}\mathopen{}\left\{(1, 0, 0), (1, 1, 0)\right\}\mathclose{}\)</span>. Both vectors have third entry <span class="math inline">\(0\)</span>, so <span class="math inline">\(\mathcal{T} \subseteq \mathcal{S}\)</span>. They are linearly independent: <span class="math inline">\(c_1 (1, 0, 0) + c_2 (1, 1, 0) = (c_1 + c_2, c_2, 0)\)</span>, which is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> only if <span class="math inline">\(c_2 = 0\)</span> and then <span class="math inline">\(c_1 = 0\)</span>. So <span class="math inline">\(\dim(\mathcal{T}) = 2\)</span>, and <a href="#/thm-subspace-equal-dim" class="quarto-xref">Theorem&nbsp;11</a> gives <span class="math inline">\(\mathcal{T} = \mathcal{S}\)</span> without solving for any coefficients. As a check, <span class="math inline">\((x, y, 0) = (x - y)\,(1, 0, 0) + y\,(1, 1, 0)\)</span>.</p>
 </div>
 </section>
-<section class="slide level2">
+<section class="slide level2 smaller scrollable" id="references">
 
 <div id="exm-subspace-equal-dim-fails" class="theorem example">
 <p><span class="theorem-title"><strong>Example 21 (Equal dimensions without containment)</strong></span> The lines <span class="math inline">\(\operatorname{span}\mathopen{}\left\{(1, 0, 0)\right\}\mathclose{}\)</span> and <span class="math inline">\(\operatorname{span}\mathopen{}\left\{(0, 1, 0)\right\}\mathclose{}\)</span> in <span class="math inline">\(\mathbb{R}^3\)</span> both have dimension <span class="math inline">\(1\)</span>, but they are not equal: <span class="math inline">\((1, 0, 0)\)</span> is in the first and not the second. <a href="#/thm-subspace-equal-dim" class="quarto-xref">Theorem&nbsp;11</a> does not apply, because neither line contains the other.</p>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="exr-subspace-equal-dim-practice" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 20 (Showing that a span of two vectors is all of <span class="math inline">\(\mathbb{R}^2\)</span>)</strong></span> <a href="#/thm-subspace-equal-dim" class="quarto-xref">Theorem&nbsp;11</a> shows that two <a href="#/def-subspace">subspaces</a> are equal by comparing <a href="#/def-dimension">dimensions</a> instead of checking every vector. Let</p>
-<p><span class="math display">\[
-\mathcal{T} = \operatorname{span}\mathopen{}\left\{{(1, 2)}^{\top},\ {(3, 1)}^{\top}\right\}\mathclose{}.
-\]</span></p>
-<p>Is <span class="math inline">\(\mathcal{T}\)</span> equal to <span class="math inline">\(\mathbb{R}^2\)</span>?</p>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Hint</strong></p>
-</div>
-<div class="callout-content">
-<p>Find <span class="math inline">\(\dim(\mathcal{T})\)</span> and <span class="math inline">\(\dim(\mathbb{R}^2)\)</span>, then use <a href="#/thm-subspace-equal-dim" class="quarto-xref">Theorem&nbsp;11</a> with <span class="math inline">\(\mathcal{S} = \mathbb{R}^2\)</span>.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="slide level2 smaller scrollable" id="references">
-
-<div id="sol-subspace-equal-dim-practice" class="proof solution">
-<p><span class="proof-title"><em>Solution 20</em>. </span>Yes. The two vectors are <a href="#/def-linearly-independent">linearly independent</a>: if <span class="math inline">\(c_1 {(1, 2)}^{\top} + c_2 {(3, 1)}^{\top} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, then <span class="math inline">\(c_1 + 3 c_2 = 0\)</span> and <span class="math inline">\(2 c_1 + c_2 = 0\)</span>. Subtracting twice the first equation from the second gives <span class="math inline">\(-5 c_2 = 0\)</span>, so <span class="math inline">\(c_2 = 0\)</span> and then <span class="math inline">\(c_1 = 0\)</span>. So they form a <a href="#/def-basis">basis</a> of <span class="math inline">\(\mathcal{T}\)</span>, and <span class="math inline">\(\dim(\mathcal{T}) = 2\)</span>. The <a href="./linear-algebra-vectors.html#def-indicator-vector">indicator vectors</a> <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2\)</span> form a basis of <span class="math inline">\(\mathbb{R}^2\)</span>, so <span class="math inline">\(\dim(\mathbb{R}^2) = 2\)</span>. Since <span class="math inline">\(\mathcal{T} \subseteq \mathbb{R}^2\)</span> and the <a href="#/def-dimension">dimensions</a> are equal, <a href="#/thm-subspace-equal-dim" class="quarto-xref">Theorem&nbsp;11</a> gives <span class="math inline">\(\mathcal{T} = \mathbb{R}^2\)</span>.</p>
 </div>
 
 
