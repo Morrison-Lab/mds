@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-12 00:55:06 (PST)
+Last modified: 2026-11-12 02:25:08 (PST)
 
 > **NOTE:**
 >
@@ -38,7 +38,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> **Example 1 (Same entries, different shapes)** $$\begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix},
+> **Example 1 (Equal and unequal matrices)** $$\begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix},
 > \qquad
 > \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} \ne \begin{bmatrix} 1 & 2 \\ 3 & 5 \end{bmatrix},
 > \qquad
@@ -543,6 +543,32 @@ Last modified: 2026-11-12 00:55:06 (PST)
 > &= \begin{bmatrix} 3 & -6 \\ 0 & 12 \end{bmatrix}.
 > \end{aligned}$$
 
+> **NOTE:**
+>
+> **Exercise 15 (Multiplying a matrix by a negative factor)** A [scalar multiple](#def-scalar-mult) rescales every entry of a [matrix](#def-matrix) by the same factor, as when a table of distances is converted from meters to centimeters. A negative factor flips the sign of every entry, and a factor between $-1$ and $1$ shrinks every entry toward $0$. Let
+>
+> $$\mathbf{C} = \begin{bmatrix} 4 & -2 \\ 0 & 6 \end{bmatrix}.$$
+>
+> Compute $-\frac{1}{2} \mathbf{C}$.
+>
+> > **TIP:**
+> >
+> > Multiply each entry by $-\frac{1}{2}$, as in [Example 7](#exm-scalar-mult).
+
+> **NOTE:**
+>
+> *Solution 15*. $$\begin{aligned}
+> -\frac{1}{2} \mathbf{C}
+> &= \begin{bmatrix}
+> -\frac{1}{2} \cdot 4 & -\frac{1}{2} \cdot(-2) \\
+> -\frac{1}{2} \cdot 0 & -\frac{1}{2} \cdot 6
+> \end{bmatrix}
+> && \text{(}\href{#def-scalar-mult}{\text{Definition~9}}\text{)}
+> \\
+> &= \begin{bmatrix} -2 & 1 \\ 0 & -3 \end{bmatrix}.
+> && \text{(multiply)}
+> \end{aligned}$$
+
 # 4 Matrix multiplication
 
 > **NOTE:**
@@ -588,7 +614,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> **Exercise 15 (Computing the product of a** $2 \times 3$ and a $3 \times 2$ matrix) The [product](#def-matrix-mult) of two [matrices](#def-matrix) is defined only when the first has as many [column](#def-matrix-column)s as the second has [row](#def-matrix-row)s. Each entry of the product combines one [row of the first factor](#def-matrix-row) with one [column of the second](#def-matrix-column). Let
+> **Exercise 16 (Computing the product of a** $2 \times 3$ and a $3 \times 2$ matrix) The [product](#def-matrix-mult) of two [matrices](#def-matrix) is defined only when the first has as many [column](#def-matrix-column)s as the second has [row](#def-matrix-row)s. Each entry of the product combines one [row of the first factor](#def-matrix-row) with one [column of the second](#def-matrix-column). Let
 >
 > $$\mathbf{A} = \begin{bmatrix} 1 & 0 & 2 \\ -1 & 3 & 1 \end{bmatrix},
 > \qquad
@@ -602,7 +628,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> *Solution 15*. $\mathbf{A}$ has three [column](#def-matrix-column)s, and $\mathbf{B}$ has three [row](#def-matrix-row)s. So the [product](#def-matrix-mult) is defined and is $2 \times 2$. Its entries are
+> *Solution 16*. $\mathbf{A}$ has three [column](#def-matrix-column)s, and $\mathbf{B}$ has three [row](#def-matrix-row)s. So the [product](#def-matrix-mult) is defined and is $2 \times 2$. Its entries are
 >
 > $$\begin{aligned}
 > \mathbf{A}\mathbf{B}
@@ -647,7 +673,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> **Exercise 16 (Grouping a product of three matrices)** By [Theorem 7](#thm-matmul-assoc), a [product](#def-matrix-mult) of three [matrices](#def-matrix) can be grouped either way, so $\mathbf{A}\mathbf{B}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ can be computed as $\mathbf{A}(\mathbf{B}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$, without ever forming $\mathbf{A}\mathbf{B}$. Let
+> **Exercise 17 (Grouping a product of three matrices)** By [Theorem 7](#thm-matmul-assoc), a [product](#def-matrix-mult) of three [matrices](#def-matrix) can be grouped either way, so $\mathbf{A}\mathbf{B}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ can be computed as $\mathbf{A}(\mathbf{B}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$, without ever forming $\mathbf{A}\mathbf{B}$. Let
 >
 > $$\mathbf{A} = \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix},
 > \qquad
@@ -665,7 +691,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> *Solution 16*. First,
+> *Solution 17*. First,
 >
 > $$\begin{aligned}
 > \mathbf{B}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
@@ -704,7 +730,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> **Exercise 17 (Proving that matrix multiplication distributes from the left)** [Theorem 8](#thm-matmul-distrib) lets a [product](#def-matrix-mult) with a [matrix sum](#def-matrix-addition) be expanded term by term, just as multiplication of numbers [distributes over](algebra-sums.llms.md#def-distributes-over) addition. Let $\mathbf{A}$ be an $m \times k$ [matrix](#def-matrix), and let $\mathbf{B}$ and $\mathbf{C}$ be $k \times n$ matrices.
+> **Exercise 18 (Proving that matrix multiplication distributes from the left)** [Theorem 8](#thm-matmul-distrib) lets a [product](#def-matrix-mult) with a [matrix sum](#def-matrix-addition) be expanded term by term, just as multiplication of numbers [distributes over](algebra-sums.llms.md#def-distributes-over) addition. Let $\mathbf{A}$ be an $m \times k$ [matrix](#def-matrix), and let $\mathbf{B}$ and $\mathbf{C}$ be $k \times n$ matrices.
 >
 > Prove that $\mathbf{A}(\mathbf{B} + \mathbf{C}) = \mathbf{A}\mathbf{B} + \mathbf{A}\mathbf{C}$.
 >
@@ -714,7 +740,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> *Solution 17*. Both sides are $m \times n$ [matrices](#def-matrix), so they are [equal](#def-matrix-equality) when their $(i, j)$ entries agree for every $i$ and $j$. For each $i$ and $j$,
+> *Solution 18*. Both sides are $m \times n$ [matrices](#def-matrix), so they are [equal](#def-matrix-equality) when their $(i, j)$ entries agree for every $i$ and $j$. For each $i$ and $j$,
 >
 > $$\begin{aligned}
 > \mathopen{}\left[\mathbf{A}(\mathbf{B} + \mathbf{C})\right]\mathclose{}_{ij}
@@ -778,7 +804,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> **Exercise 18 (Comparing** $(\mathbf{A} + \mathbf{B})(\mathbf{A} + \mathbf{B})$ with the rule for numbers) For numbers, $(a + b)^2 = a^2 + 2ab + b^2$. [Theorem 9](#thm-matmul-product-of-sums) expands a [product](#def-matrix-mult) of two [matrix sums](#def-matrix-addition) into four terms instead, because $\mathbf{A}\mathbf{B}$ and $\mathbf{B}\mathbf{A}$ can differ. Let
+> **Exercise 19 (Comparing** $(\mathbf{A} + \mathbf{B})(\mathbf{A} + \mathbf{B})$ with the rule for numbers) For numbers, $(a + b)^2 = a^2 + 2ab + b^2$. [Theorem 9](#thm-matmul-product-of-sums) expands a [product](#def-matrix-mult) of two [matrix sums](#def-matrix-addition) into four terms instead, because $\mathbf{A}\mathbf{B}$ and $\mathbf{B}\mathbf{A}$ can differ. Let
 >
 > $$\mathbf{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix},
 > \qquad
@@ -792,7 +818,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> *Solution 18*. No. On the left, $\mathbf{A} + \mathbf{B} = \begin{bmatrix} 1 & 1 \\ 0 & 0 \end{bmatrix}$, so
+> *Solution 19*. No. On the left, $\mathbf{A} + \mathbf{B} = \begin{bmatrix} 1 & 1 \\ 0 & 0 \end{bmatrix}$, so
 >
 > $$\begin{aligned}
 > (\mathbf{A} + \mathbf{B})(\mathbf{A} + \mathbf{B})
@@ -812,7 +838,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> **Exercise 19 (Which of these products are defined?)** Let $\mathbf{A}$ be $4 \times 3$, let $\mathbf{B}$ be $3 \times 2$, and let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^3$. For each expression, say whether it is defined, and if so give the shape of the result:
+> **Exercise 20 (Which of these products are defined?)** Let $\mathbf{A}$ be $4 \times 3$, let $\mathbf{B}$ be $3 \times 2$, and let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^3$. For each expression, say whether it is defined, and if so give the shape of the result:
 >
 > 1.  $\mathbf{A}\mathbf{B}$
 > 2.  $\mathbf{B}\mathbf{A}$
@@ -822,7 +848,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> *Solution 19*. A vector in $\mathbb{R}^3$ is a $3 \times 1$ matrix, so the same rule settles every case.
+> *Solution 20*. A vector in $\mathbb{R}^3$ is a $3 \times 1$ matrix, so the same rule settles every case.
 >
 > 1.  $\mathbf{A}\mathbf{B}$: $(4 \times 3)(3 \times 2)$. The inner pair is $3$ and $3$, so it is defined, and the result is $4 \times 2$.
 > 2.  $\mathbf{B}\mathbf{A}$: $(3 \times 2)(4 \times 3)$. The inner pair is $2$ and $4$, which do not match, so it is **not defined**. Matrix multiplication is not commutative, and this is the blunt form of that: swapping the order can leave an expression that means nothing.
@@ -844,7 +870,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> **Exercise 20 (Whether a data matrix times its transpose is square)** Many statistical methods start from an $n \times p$ data [matrix](#def-matrix) $\mathbf{X}$, with one [row](#def-matrix-row) per observation, and form the [product](#def-matrix-mult) ${\mathbf{X}}^{\top}\mathbf{X}$ of its [transpose](#def-matrix-transpose) with itself. Whether that product is [square](#def-square-matrix) matters, because some operations, such as taking the [inverse of a matrix](linear-algebra-special-matrices.llms.md#def-matrix-inverse), apply only to [square matrices](#def-square-matrix).
+> **Exercise 21 (Whether a data matrix times its transpose is square)** Many statistical methods start from an $n \times p$ data [matrix](#def-matrix) $\mathbf{X}$, with one [row](#def-matrix-row) per observation, and form the [product](#def-matrix-mult) ${\mathbf{X}}^{\top}\mathbf{X}$ of its [transpose](#def-matrix-transpose) with itself. Whether that product is [square](#def-square-matrix) matters, because some operations, such as taking the [inverse of a matrix](linear-algebra-special-matrices.llms.md#def-matrix-inverse), apply only to [square matrices](#def-square-matrix).
 >
 > Is ${\mathbf{X}}^{\top}\mathbf{X}$ square?
 >
@@ -854,7 +880,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> *Solution 20*. Yes. The [transpose](#def-matrix-transpose) ${\mathbf{X}}^{\top}$ is $p \times n$, so ${\mathbf{X}}^{\top}$ has $n$ [column](#def-matrix-column)s. $\mathbf{X}$ has $n$ [row](#def-matrix-row)s, so the [product](#def-matrix-mult) ${\mathbf{X}}^{\top}\mathbf{X}$ is defined and is $p \times p$. It has $p$ rows and $p$ columns, so it is [square](#def-square-matrix) for every $n$ and $p$.
+> *Solution 21*. Yes. The [transpose](#def-matrix-transpose) ${\mathbf{X}}^{\top}$ is $p \times n$, so ${\mathbf{X}}^{\top}$ has $n$ [column](#def-matrix-column)s. $\mathbf{X}$ has $n$ [row](#def-matrix-row)s, so the [product](#def-matrix-mult) ${\mathbf{X}}^{\top}\mathbf{X}$ is defined and is $p \times p$. It has $p$ rows and $p$ columns, so it is [square](#def-square-matrix) for every $n$ and $p$.
 
 > **NOTE:**
 >
@@ -877,7 +903,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> **Exercise 21 (The main diagonal of a tall matrix)** The [main diagonal](#def-main-diagonal) of a [matrix](#def-matrix) that is not [square](#def-square-matrix) stops when it runs out of [row](#def-matrix-row)s or [column](#def-matrix-column)s, whichever comes first. A tall matrix, with more rows than columns, runs out of columns first. Let
+> **Exercise 22 (The main diagonal of a tall matrix)** The [main diagonal](#def-main-diagonal) of a [matrix](#def-matrix) that is not [square](#def-square-matrix) stops when it runs out of [row](#def-matrix-row)s or [column](#def-matrix-column)s, whichever comes first. A tall matrix, with more rows than columns, runs out of columns first. Let
 >
 > $$\mathbf{E} = \begin{bmatrix} 7 & -2 \\ 1 & 3 \\ 0 & 5 \\ 4 & -6 \end{bmatrix}.$$
 >
@@ -889,11 +915,11 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> *Solution 21*. Write $e_{ij}$ for the entry of $\mathbf{E}$ in [row](#def-matrix-row) $i$ and [column](#def-matrix-column) $j$. $\mathbf{E}$ is $4 \times 2$, so $m = 4$, $n = 2$ and $k = 2$. The [main diagonal](#def-main-diagonal) of $\mathbf{E}$ is therefore the list $e_{11}, e_{22}$, that is, $7, 3$. The list stops at $e_{22}$ because $\mathbf{E}$ has no third [column](#def-matrix-column). It therefore has no entry $e_{33}$.
+> *Solution 22*. Write $e_{ij}$ for the entry of $\mathbf{E}$ in [row](#def-matrix-row) $i$ and [column](#def-matrix-column) $j$. $\mathbf{E}$ is $4 \times 2$, so $m = 4$, $n = 2$ and $k = 2$. The [main diagonal](#def-main-diagonal) of $\mathbf{E}$ is therefore the list $e_{11}, e_{22}$, that is, $7, 3$. The list stops at $e_{22}$ because $\mathbf{E}$ has no third [column](#def-matrix-column). It therefore has no entry $e_{33}$.
 
 > **NOTE:**
 >
-> **Exercise 22 (Adding the diagonal entries of a square matrix)** The [sum](algebra-sums.llms.md#def-summation) of the [diagonal entries](#def-diagonal-entry) of a [square matrix](#def-square-matrix) summarizes that [matrix](#def-matrix) in one number, called its [trace](linear-algebra-special-matrices.llms.md#def-trace). Let
+> **Exercise 23 (Adding the diagonal entries of a square matrix)** The [sum](algebra-sums.llms.md#def-summation) of the [diagonal entries](#def-diagonal-entry) of a [square matrix](#def-square-matrix) summarizes that [matrix](#def-matrix) in one number, called its [trace](linear-algebra-special-matrices.llms.md#def-trace). Let
 >
 > $$\mathbf{F} = \begin{bmatrix} 2 & 5 & -1 \\ 0 & -3 & 8 \\ 4 & 1 & 6 \end{bmatrix}.$$
 >
@@ -905,13 +931,13 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> *Solution 22*. Write $f_{ij}$ for the entry of $\mathbf{F}$ in [row](#def-matrix-row) $i$ and [column](#def-matrix-column) $j$. $\mathbf{F}$ is $3 \times 3$, so its [diagonal entries](#def-diagonal-entry) are $f_{11} = 2$, $f_{22} = -3$ and $f_{33} = 6$, and adding them gives
+> *Solution 23*. Write $f_{ij}$ for the entry of $\mathbf{F}$ in [row](#def-matrix-row) $i$ and [column](#def-matrix-column) $j$. $\mathbf{F}$ is $3 \times 3$, so its [diagonal entries](#def-diagonal-entry) are $f_{11} = 2$, $f_{22} = -3$ and $f_{33} = 6$, and adding them gives
 >
 > $$f_{11} + f_{22} + f_{33} = 2 + (-3) + 6 = 5.$$
 
 > **NOTE:**
 >
-> **Exercise 23 (Counting the off-diagonal entries of a square matrix)** In a table of pairwise comparisons among several items, the [off-diagonal entries](#def-off-diagonal-entry) are the comparisons between two different items, so counting them counts the ordered pairs of different items. Let $\mathbf{A}$ be a $5 \times 5$ [matrix](#def-matrix), so $\mathbf{A}$ is [square](#def-square-matrix).
+> **Exercise 24 (Counting the off-diagonal entries of a square matrix)** In a table of pairwise comparisons among several items, the [off-diagonal entries](#def-off-diagonal-entry) are the comparisons between two different items, so counting them counts the ordered pairs of different items. Let $\mathbf{A}$ be a $5 \times 5$ [matrix](#def-matrix), so $\mathbf{A}$ is [square](#def-square-matrix).
 >
 > How many off-diagonal entries does $\mathbf{A}$ have?
 >
@@ -921,7 +947,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> *Solution 23*. $\mathbf{A}$ has $5 \cdot 5 = 25$ entries. Its [diagonal entries](#def-diagonal-entry) are the $5$ entries $a_{ii}$, $i = 1, \ldots, 5$, and every other entry has $i \ne j$, so $\mathbf{A}$ has $25 - 5 = 20$ [off-diagonal entries](#def-off-diagonal-entry).
+> *Solution 24*. $\mathbf{A}$ has $5 \cdot 5 = 25$ entries. Its [diagonal entries](#def-diagonal-entry) are the $5$ entries $a_{ii}$, $i = 1, \ldots, 5$, and every other entry has $i \ne j$, so $\mathbf{A}$ has $25 - 5 = 20$ [off-diagonal entries](#def-off-diagonal-entry).
 
 > **NOTE:**
 >
@@ -949,7 +975,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> **Exercise 24 (Whether a matrix with the identity pattern is an identity matrix)** An [identity matrix](#def-identity-matrix) has ones on its [main diagonal](#def-main-diagonal) and zeros elsewhere. The [matrix](#def-matrix) below has the same pattern of ones and zeros. Let
+> **Exercise 25 (Whether a matrix with the identity pattern is an identity matrix)** An [identity matrix](#def-identity-matrix) has ones on its [main diagonal](#def-main-diagonal) and zeros elsewhere. The [matrix](#def-matrix) below has the same pattern of ones and zeros. Let
 >
 > $$\mathbf{J} = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \end{bmatrix}.$$
 >
@@ -961,7 +987,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> *Solution 24*. No. Every [identity matrix](#def-identity-matrix) $\mathbf{I}_p$ is $p \times p$, so it is [square](#def-square-matrix). $\mathbf{J}$ is $2 \times 3$, so it is not square. Therefore $\mathbf{J}$ is not an identity matrix, even though its [main diagonal](#def-main-diagonal) holds ones and its other entries are zeros.
+> *Solution 25*. No. Every [identity matrix](#def-identity-matrix) $\mathbf{I}_p$ is $p \times p$, so it is [square](#def-square-matrix). $\mathbf{J}$ is $2 \times 3$, so it is not square. Therefore $\mathbf{J}$ is not an identity matrix, even though its [main diagonal](#def-main-diagonal) holds ones and its other entries are zeros.
 
 > **NOTE:**
 >
@@ -974,6 +1000,38 @@ Last modified: 2026-11-12 00:55:06 (PST)
 > $$\mathbf{A}\,\mathbf{I}_p = \mathbf{A}$$
 >
 > $$\mathbf{I}_m\,\mathbf{A} = \mathbf{A}$$
+
+> **NOTE:**
+>
+> **Exercise 26 (Multiplying by an identity matrix)** [Theorem 10](#thm-identity) says that an [identity matrix](#def-identity-matrix) of the right size leaves a [matrix](#def-matrix) unchanged under [matrix multiplication](#def-matrix-mult), just as multiplying a number by $1$ leaves it unchanged. Let
+>
+> $$\mathbf{A} = \begin{bmatrix} 2 & 0 & -1 \\ 5 & 3 & 4 \end{bmatrix}.$$
+>
+> Compute $\mathbf{I}_2 \mathbf{A}$ entry by entry, from the definition of matrix multiplication.
+>
+> > **TIP:**
+> >
+> > Entry $(i, j)$ of $\mathbf{I}_2 \mathbf{A}$ is the [dot product](linear-algebra-vectors.llms.md#def-dot-product) of the $i$th [row of](#def-matrix-row) $\mathbf{I}_2$ with the $j$th [column of](#def-matrix-column) $\mathbf{A}$, as in [Example 8](#exm-dot-product-matmul).
+
+> **NOTE:**
+>
+> *Solution 26*. $\mathbf{I}_2$ is $2 \times 2$ and $\mathbf{A}$ is $2 \times 3$, so the [product](#def-matrix-mult) is defined and is $2 \times 3$. The first [row of](#def-matrix-row) $\mathbf{I}_2$ is $\begin{bmatrix} 1 & 0 \end{bmatrix}$ and the second is $\begin{bmatrix} 0 & 1 \end{bmatrix}$, so by [Definition 10](#def-matrix-mult)
+>
+> $$\begin{aligned}
+> \mathbf{I}_2 \mathbf{A}
+> &= \begin{bmatrix}
+> 1 \cdot 2 + 0 \cdot 5 & 1 \cdot 0 + 0 \cdot 3 & 1 \cdot(-1) + 0 \cdot 4 \\
+> 0 \cdot 2 + 1 \cdot 5 & 0 \cdot 0 + 1 \cdot 3 & 0 \cdot(-1) + 1 \cdot 4
+> \end{bmatrix}
+> && \text{(}\href{#def-matrix-mult}{\text{Definition~10}}\text{)}
+> \\
+> &= \begin{bmatrix} 2 & 0 & -1 \\ 5 & 3 & 4 \end{bmatrix}
+> && \text{(multiply and add)}
+> \\
+> &= \mathbf{A}.
+> \end{aligned}$$
+>
+> Each row of $\mathbf{I}_2$ has a single $1$, so entry $(i, j)$ of the product picks out entry $(i, j)$ of $\mathbf{A}$, as [Theorem 10](#thm-identity) says.
 
 # 6 Matrix-vector multiplication
 
@@ -994,6 +1052,39 @@ Last modified: 2026-11-12 00:55:06 (PST)
 > \begin{bmatrix} 1 \cdot 1 + 2 \cdot(-1) \\ 3 \cdot 1 + 4 \cdot(-1) \end{bmatrix} \\
 > &=
 > \begin{bmatrix} -1 \\ -1 \end{bmatrix}.
+> \end{aligned}$$
+
+> **NOTE:**
+>
+> **Exercise 27 (A matrix-vector product with more columns than rows)** A [matrix-vector product](#def-matvec-mult) $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ computes one [weighted sum](linear-algebra-vectors.llms.md#def-weighted-sum) of the entries of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ for each [row of](#def-matrix-row) $\mathbf{A}$, so one multiplication computes several weighted sums at once. The [matrix](#def-matrix) $\mathbf{A}$ below has more [column](#def-matrix-column)s than [row](#def-matrix-row)s, so $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is shorter than $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$. Let
+>
+> $$\mathbf{A} = \begin{bmatrix} 2 & 0 & -1 \\ 5 & 3 & 4 \end{bmatrix},
+> \qquad
+> \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}.$$
+>
+> Compute $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$.
+>
+> > **TIP:**
+> >
+> > Entry $i$ of $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is the [dot product](linear-algebra-vectors.llms.md#def-dot-product) of the $i$th [row of](#def-matrix-row) $\mathbf{A}$ with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, as in [Remark 4](#rem-matvec-row-dot-products).
+
+> **NOTE:**
+>
+> *Solution 27*. $\mathbf{A}$ is $2 \times 3$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is $3 \times 1$, so the [matrix-vector product](#def-matvec-mult) is defined and is $2 \times 1$:
+>
+> $$\begin{aligned}
+> \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
+> &= \begin{bmatrix}
+> 2 \cdot 1 + 0 \cdot 2 + (-1) \cdot 3 \\
+> 5 \cdot 1 + 3 \cdot 2 + 4 \cdot 3
+> \end{bmatrix}
+> && \text{(}\href{#def-matvec-mult}{\text{Definition~16}}\text{)}
+> \\
+> &= \begin{bmatrix} 2 + 0 - 3 \\ 5 + 6 + 12 \end{bmatrix}
+> && \text{(multiply)}
+> \\
+> &= \begin{bmatrix} -1 \\ 23 \end{bmatrix}.
+> && \text{(add)}
 > \end{aligned}$$
 
 > **NOTE:**
@@ -1021,7 +1112,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> **Exercise 25 (Checking whether a vector solves a linear system)** Checking whether a vector solves a [linear system](#def-linear-system) takes only one [matrix-vector product](#def-matvec-mult), which is much less work than solving the system. Let
+> **Exercise 28 (Checking whether a vector solves a linear system)** Checking whether a vector solves a [linear system](#def-linear-system) takes only one [matrix-vector product](#def-matvec-mult), which is much less work than solving the system. Let
 >
 > $$\mathbf{A} = \begin{bmatrix} 3 & 1 \\ 1 & -2 \end{bmatrix},
 > \qquad
@@ -1037,7 +1128,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> *Solution 25*. Yes. The [matrix-vector product](#def-matvec-mult) is
+> *Solution 28*. Yes. The [matrix-vector product](#def-matvec-mult) is
 >
 > $$\begin{aligned}
 > \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
@@ -1074,7 +1165,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> **Exercise 26 (Testing whether** $x_1 x_2$ is additive) An [additive function](#def-additive-function) can be evaluated at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ by evaluating it at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ separately, so additivity is worth checking before splitting a computation that way. Let $f: \mathbb{R}^2 \to \mathbb{R}$ be $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1 x_2$.
+> **Exercise 29 (Testing whether** $x_1 x_2$ is additive) An [additive function](#def-additive-function) can be evaluated at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ by evaluating it at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ separately, so additivity is worth checking before splitting a computation that way. Let $f: \mathbb{R}^2 \to \mathbb{R}$ be $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1 x_2$.
 >
 > Is $f$ [additive](#def-additive-function)?
 >
@@ -1084,7 +1175,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> *Solution 26*. No. For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 0)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (0, 1)$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (1, 1)$, so
+> *Solution 29*. No. For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 0)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (0, 1)$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (1, 1)$, so
 >
 > $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) = 1 \cdot 1 = 1,
 > \qquad
@@ -1125,7 +1216,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> **Exercise 27 (Testing whether the absolute value is homogeneous)** A [homogeneous function](#def-homogeneous-function) turns a rescaled input into the same rescaling of its output, including a rescaling by a negative number. Let $f: \mathbb{R}\to \mathbb{R}$ be the [absolute value](algebra-basics.llms.md#def-absolute-value), $f(x) = \mathopen{}\left|x\right|\mathclose{}$.
+> **Exercise 30 (Testing whether the absolute value is homogeneous)** A [homogeneous function](#def-homogeneous-function) turns a rescaled input into the same rescaling of its output, including a rescaling by a negative number. Let $f: \mathbb{R}\to \mathbb{R}$ be the [absolute value](algebra-basics.llms.md#def-absolute-value), $f(x) = \mathopen{}\left|x\right|\mathclose{}$.
 >
 > Is $f$ [homogeneous](#def-homogeneous-function)?
 >
@@ -1135,7 +1226,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> *Solution 27*. No. Take $c = -1$ and $x = 1$. Then
+> *Solution 30*. No. Take $c = -1$ and $x = 1$. Then
 >
 > $$f(c x) = \mathopen{}\left|-1\right|\mathclose{} = 1,
 > \qquad
@@ -1171,7 +1262,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> **Exercise 28 (Testing whether a difference of scaled measurements is a linear map)** A score that scales two measurements and takes their difference, such as $3 x_1 - x_2$, is a common building block of a model. Let $f: \mathbb{R}^2 \to \mathbb{R}$ be $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = 3 x_1 - x_2$.
+> **Exercise 31 (Testing whether a difference of scaled measurements is a linear map)** A score that scales two measurements and takes their difference, such as $3 x_1 - x_2$, is a common building block of a model. Let $f: \mathbb{R}^2 \to \mathbb{R}$ be $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = 3 x_1 - x_2$.
 >
 > Is $f$ a [linear map](#def-linear-map)?
 >
@@ -1181,7 +1272,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> *Solution 28*. Yes. For any $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^2$, $f$ is [additive](#def-additive-function):
+> *Solution 31*. Yes. For any $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^2$, $f$ is [additive](#def-additive-function):
 >
 > $$\begin{aligned}
 > f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})
@@ -1215,7 +1306,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> **Exercise 29 (Testing whether a projection is a linear operator)** Dropping the last coordinate of a point in $\mathbb{R}^3$ projects it onto a plane, as a shadow does. Let $f: \mathbb{R}^3 \to \mathbb{R}^2$ be $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = (x_1, x_2)$. This $f$ is a [linear map](#def-linear-map).
+> **Exercise 32 (Testing whether a projection is a linear operator)** Dropping the last coordinate of a point in $\mathbb{R}^3$ projects it onto a plane, as a shadow does. Let $f: \mathbb{R}^3 \to \mathbb{R}^2$ be $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = (x_1, x_2)$. This $f$ is a [linear map](#def-linear-map).
 >
 > Is $f$ a [linear operator](#def-linear-operator) on $\mathbb{R}^3$?
 >
@@ -1225,7 +1316,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> *Solution 29*. No. A [linear operator](#def-linear-operator) on $\mathbb{R}^3$ sends $\mathbb{R}^3$ to $\mathbb{R}^3$. The outputs of $f$ lie in $\mathbb{R}^2$, not $\mathbb{R}^3$, so $f$ is a [linear map](#def-linear-map) but not a linear operator.
+> *Solution 32*. No. A [linear operator](#def-linear-operator) on $\mathbb{R}^3$ sends $\mathbb{R}^3$ to $\mathbb{R}^3$. The outputs of $f$ lie in $\mathbb{R}^2$, not $\mathbb{R}^3$, so $f$ is a [linear map](#def-linear-map) but not a linear operator.
 
 > **NOTE:**
 >
@@ -1253,7 +1344,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> **Exercise 30 (Ruling out a linear map from its value at zero)** [Theorem 11](#thm-linear-map-zero) gives a quick test: a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) that does not send $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ cannot be a [linear map](#def-linear-map). Let $g: \mathbb{R}^2 \to \mathbb{R}^2$ be
+> **Exercise 33 (Ruling out a linear map from its value at zero)** [Theorem 11](#thm-linear-map-zero) gives a quick test: a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) that does not send $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ cannot be a [linear map](#def-linear-map). Let $g: \mathbb{R}^2 \to \mathbb{R}^2$ be
 >
 > $$g(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = (x_1 + x_2,\ x_2 - 1).$$
 >
@@ -1265,7 +1356,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> *Solution 30*. No.
+> *Solution 33*. No.
 >
 > $$g(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}) = (0 + 0,\ 0 - 1) = (0, -1) \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}.$$
 >
@@ -1317,7 +1408,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> **Exercise 31 (Recognizing a linear map as multiplication by a matrix)** [Theorem 12](#thm-matrix-map-linear) saves checking additivity and homogeneity by hand: a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) that multiplies its input by a fixed [matrix](#def-matrix) is a [linear map](#def-linear-map). Let $f: \mathbb{R}^2 \to \mathbb{R}^2$ be
+> **Exercise 34 (Recognizing a linear map as multiplication by a matrix)** [Theorem 12](#thm-matrix-map-linear) saves checking additivity and homogeneity by hand: a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) that multiplies its input by a fixed [matrix](#def-matrix) is a [linear map](#def-linear-map). Let $f: \mathbb{R}^2 \to \mathbb{R}^2$ be
 >
 > $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = (x_1 + 2 x_2,\ 3 x_1 - x_2).$$
 >
@@ -1329,7 +1420,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> *Solution 31*. Yes. Let
+> *Solution 34*. Yes. Let
 >
 > $$\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 3 & -1 \end{bmatrix}.$$
 >
@@ -1369,7 +1460,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> **Exercise 32 (Evaluating a linear map on a linear combination)** A [linear map](#def-linear-map) is determined on a [linear combination](linear-algebra-vectors.llms.md#def-linear-combination) of vectors by its values on those vectors alone. Let $f: \mathbb{R}^2 \to \mathbb{R}^2$ be a linear map with
+> **Exercise 35 (Evaluating a linear map on a linear combination)** A [linear map](#def-linear-map) is determined on a [linear combination](linear-algebra-vectors.llms.md#def-linear-combination) of vectors by its values on those vectors alone. Let $f: \mathbb{R}^2 \to \mathbb{R}^2$ be a linear map with
 >
 > $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1) = \begin{bmatrix} 1 \\ 2 \end{bmatrix},
 > \qquad
@@ -1383,7 +1474,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> *Solution 32*. $$\begin{aligned}
+> *Solution 35*. $$\begin{aligned}
 > f(3 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 - 2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2)
 > &= 3 f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1) - 2 f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2)
 > && \text{(}\href{#thm-linear-map-lincom}{\text{Theorem~13}}\text{)}
@@ -1470,7 +1561,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> **Exercise 33 (Evaluating a linear map from its values on the indicator vectors)** By [Theorem 14](#thm-linear-map-matrix), the values of a [linear map](#def-linear-map) at the [indicator vectors](linear-algebra-vectors.llms.md#def-indicator-vector) determine it everywhere. Let $f: \mathbb{R}^2 \to \mathbb{R}^2$ be a linear map with
+> **Exercise 36 (Evaluating a linear map from its values on the indicator vectors)** By [Theorem 14](#thm-linear-map-matrix), the values of a [linear map](#def-linear-map) at the [indicator vectors](linear-algebra-vectors.llms.md#def-indicator-vector) determine it everywhere. Let $f: \mathbb{R}^2 \to \mathbb{R}^2$ be a linear map with
 >
 > $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1) = \begin{bmatrix} 1 \\ 3 \end{bmatrix},
 > \qquad
@@ -1484,7 +1575,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> *Solution 33*. By [Theorem 14](#thm-linear-map-matrix), $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, where [column](#def-matrix-column) $j$ of $\mathbf{A}$ is $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j)$:
+> *Solution 36*. By [Theorem 14](#thm-linear-map-matrix), $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, where [column](#def-matrix-column) $j$ of $\mathbf{A}$ is $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j)$:
 >
 > $$\mathbf{A} = \begin{bmatrix} 1 & -2 \\ 3 & 0 \end{bmatrix}.$$
 >
@@ -1496,7 +1587,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> **Exercise 34 (Finding the matrix of a linear map into** $\mathbb{R}^3$) The [matrix of a linear map](#def-matrix-of-linear-map) turns the map into a table of numbers that software can store and multiply. Let $f: \mathbb{R}^2 \to \mathbb{R}^3$ be the [linear map](#def-linear-map)
+> **Exercise 37 (Finding the matrix of a linear map into** $\mathbb{R}^3$) The [matrix of a linear map](#def-matrix-of-linear-map) turns the map into a table of numbers that software can store and multiply. Let $f: \mathbb{R}^2 \to \mathbb{R}^3$ be the [linear map](#def-linear-map)
 >
 > $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = (x_2,\ x_1,\ x_1 - x_2).$$
 >
@@ -1508,7 +1599,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> *Solution 34*. The values of $f$ at the [indicator vectors](linear-algebra-vectors.llms.md#def-indicator-vector) are
+> *Solution 37*. The values of $f$ at the [indicator vectors](linear-algebra-vectors.llms.md#def-indicator-vector) are
 >
 > $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1) = f\mathopen{}\left(\begin{bmatrix} 1 \\ 0 \end{bmatrix}\right)\mathclose{} = \begin{bmatrix} 0 \\ 1 \\ 1 \end{bmatrix},
 > \qquad
@@ -1569,7 +1660,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> **Exercise 35 (Finding the weight vector of a linear score)** A linear score of $p$ measurements is a [dot product](linear-algebra-vectors.llms.md#def-dot-product) of the measurements with a vector of [weights](linear-algebra-vectors.llms.md#def-weight), by [Corollary 1](#cor-linear-scalar). Let $f: \mathbb{R}^3 \to \mathbb{R}$ be a [linear map](#def-linear-map) with
+> **Exercise 38 (Finding the weight vector of a linear score)** A linear score of $p$ measurements is a [dot product](linear-algebra-vectors.llms.md#def-dot-product) of the measurements with a vector of [weights](linear-algebra-vectors.llms.md#def-weight), by [Corollary 1](#cor-linear-scalar). Let $f: \mathbb{R}^3 \to \mathbb{R}$ be a [linear map](#def-linear-map) with
 >
 > $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1) = 2,
 > \qquad
@@ -1585,7 +1676,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> *Solution 35*. By [Corollary 1](#cor-linear-scalar), $w_j = f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j)$ for each $j$, so
+> *Solution 38*. By [Corollary 1](#cor-linear-scalar), $w_j = f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j)$ for each $j$, so
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \begin{bmatrix} 2 \\ 0 \\ -1 \end{bmatrix}.$$
 >
@@ -1620,7 +1711,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> **Exercise 36 (Finding the translation that moves one point to another)** A [translation](#def-translation) moves every point by the same vector, so where it sends one point fixes the whole translation. A translation $t_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}}$ of $\mathbb{R}^2$ sends ${(2, 3)}^{\top}$ to ${(5, 1)}^{\top}$.
+> **Exercise 39 (Finding the translation that moves one point to another)** A [translation](#def-translation) moves every point by the same vector, so where it sends one point fixes the whole translation. A translation $t_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}}$ of $\mathbb{R}^2$ sends ${(2, 3)}^{\top}$ to ${(5, 1)}^{\top}$.
 >
 > Find $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$.
 >
@@ -1630,7 +1721,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> *Solution 36*. By [Definition 23](#def-translation), $t_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}}\mathopen{}\left({(2, 3)}^{\top}\right)\mathclose{} = {(2, 3)}^{\top} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$. Matching this vector with ${(5, 1)}^{\top}$ entry by entry gives
+> *Solution 39*. By [Definition 23](#def-translation), $t_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}}\mathopen{}\left({(2, 3)}^{\top}\right)\mathclose{} = {(2, 3)}^{\top} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$. Matching this vector with ${(5, 1)}^{\top}$ entry by entry gives
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \begin{bmatrix}5 - 2 \\ 1 - 3\end{bmatrix} = \begin{bmatrix}3 \\ -2\end{bmatrix}.$$
 
@@ -1650,7 +1741,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> **Exercise 37 (Testing whether a rescale-and-shift is an affine map)** Rescaling a measurement and then shifting it, as when converting units with a different zero point, is the typical [affine map](#def-affine-map). Let $f: \mathbb{R}^2 \to \mathbb{R}^2$ be
+> **Exercise 40 (Testing whether a rescale-and-shift is an affine map)** Rescaling a measurement and then shifting it, as when converting units with a different zero point, is the typical [affine map](#def-affine-map). Let $f: \mathbb{R}^2 \to \mathbb{R}^2$ be
 >
 > $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = (2 x_1 + 1,\ x_2 - 3).$$
 >
@@ -1662,7 +1753,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> *Solution 37*. Yes. Let
+> *Solution 40*. Yes. Let
 >
 > $$\mathbf{A} = \begin{bmatrix}2 & 0 \\ 0 & 1\end{bmatrix},
 > \qquad
@@ -1686,7 +1777,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> **Exercise 38 (Reading off the offset of an affine map)** In a fitted model, the [offset](#def-affine-offset) is the part of the output that does not depend on the input. Let $f: \mathbb{R}^2 \to \mathbb{R}^2$ be the [affine map](#def-affine-map)
+> **Exercise 41 (Reading off the offset of an affine map)** In a fitted model, the [offset](#def-affine-offset) is the part of the output that does not depend on the input. Let $f: \mathbb{R}^2 \to \mathbb{R}^2$ be the [affine map](#def-affine-map)
 >
 > $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = (x_1 - x_2 + 4,\ 3 x_2 - 1).$$
 >
@@ -1698,7 +1789,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> *Solution 38*. $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \begin{bmatrix}1 & -1 \\ 0 & 3\end{bmatrix} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \begin{bmatrix}4 \\ -1\end{bmatrix},$$
+> *Solution 41*. $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \begin{bmatrix}1 & -1 \\ 0 & 3\end{bmatrix} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \begin{bmatrix}4 \\ -1\end{bmatrix},$$
 >
 > so the [offset of](#def-affine-offset) $f$ is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = {(4, -1)}^{\top}$. Each entry of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ is the term with no $x_j$ in the matching entry of $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$.
 
@@ -1727,7 +1818,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> **Exercise 39 (Absorbing an offset into a dot product with the augmented vector)** The [augmented vector](#def-augmented-vector) lets software treat an [affine](#def-affine-map) score as a [dot product](linear-algebra-vectors.llms.md#def-dot-product), with the [offset](#def-affine-offset) as one more [weight](linear-algebra-vectors.llms.md#def-weight). Let $f: \mathbb{R}^2 \to \mathbb{R}$ be
+> **Exercise 42 (Absorbing an offset into a dot product with the augmented vector)** The [augmented vector](#def-augmented-vector) lets software treat an [affine](#def-affine-map) score as a [dot product](linear-algebra-vectors.llms.md#def-dot-product), with the [offset](#def-affine-offset) as one more [weight](linear-algebra-vectors.llms.md#def-weight). Let $f: \mathbb{R}^2 \to \mathbb{R}$ be
 >
 > $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = 2 x_1 - x_2 + 5.$$
 >
@@ -1739,7 +1830,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> *Solution 39*. Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = {(5, 2, -1)}^{\top}$. Since ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{aug}} = {(1, x_1, x_2)}^{\top}$ by [Definition 26](#def-augmented-vector),
+> *Solution 42*. Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = {(5, 2, -1)}^{\top}$. Since ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{aug}} = {(1, x_1, x_2)}^{\top}$ by [Definition 26](#def-augmented-vector),
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \cdot {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{aug}} = 5 \cdot 1 + 2 x_1 + (-1) x_2 = f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}).$$
 >
@@ -1777,7 +1868,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> **Exercise 40 (Recovering a column of an affine map’s matrix from two values)** [Theorem 15](#thm-affine-map-zero) says that the value of an [affine map](#def-affine-map) at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ is its [offset](#def-affine-offset), so subtracting that value isolates the [matrix](#def-matrix) part. Let $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ be an affine map from $\mathbb{R}^2$ to $\mathbb{R}^2$ with
+> **Exercise 43 (Recovering a column of an affine map’s matrix from two values)** [Theorem 15](#thm-affine-map-zero) says that the value of an [affine map](#def-affine-map) at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ is its [offset](#def-affine-offset), so subtracting that value isolates the [matrix](#def-matrix) part. Let $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ be an affine map from $\mathbb{R}^2$ to $\mathbb{R}^2$ with
 >
 > $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}) = \begin{bmatrix}1 \\ 2\end{bmatrix},
 > \qquad
@@ -1791,7 +1882,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> *Solution 40*. By [Theorem 15](#thm-affine-map-zero), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}) = {(1, 2)}^{\top}$. So
+> *Solution 43*. By [Theorem 15](#thm-affine-map-zero), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}) = {(1, 2)}^{\top}$. So
 >
 > $$\begin{aligned}
 > \mathbf{A} \begin{bmatrix}1 \\ 0\end{bmatrix}
@@ -1825,7 +1916,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> **Exercise 41 (Choosing a constant that makes an affine map linear)** By [Theorem 16](#thm-affine-linear-iff), an [affine map](#def-affine-map) is a [linear map](#def-linear-map) exactly when its [offset](#def-affine-offset) is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$. For $c \in \mathbb{R}$, let $f: \mathbb{R}^2 \to \mathbb{R}^2$ be
+> **Exercise 44 (Choosing a constant that makes an affine map linear)** By [Theorem 16](#thm-affine-linear-iff), an [affine map](#def-affine-map) is a [linear map](#def-linear-map) exactly when its [offset](#def-affine-offset) is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$. For $c \in \mathbb{R}$, let $f: \mathbb{R}^2 \to \mathbb{R}^2$ be
 >
 > $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = (x_1 - x_2 + c - 2,\ 3 x_1 + c^2 - 4).$$
 >
@@ -1837,7 +1928,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> *Solution 41*. Only for $c = 2$. The map is
+> *Solution 44*. Only for $c = 2$. The map is
 >
 > $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \begin{bmatrix}1 & -1 \\ 3 & 0\end{bmatrix} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \begin{bmatrix}c - 2 \\ c^2 - 4\end{bmatrix},$$
 >
@@ -1860,7 +1951,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> **Exercise 42 (Testing whether a linear score is an affine map)** A model whose output is $0$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ is still an [affine map](#def-affine-map), which matters when a result is stated only for affine maps. Let $f: \mathbb{R}^2 \to \mathbb{R}$ be $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1 - 4 x_2$, a [linear map](#def-linear-map).
+> **Exercise 45 (Testing whether a linear score is an affine map)** Some results hold only for [affine maps](#def-affine-map), so it helps to check whether a given score qualifies. Let $f: \mathbb{R}^2 \to \mathbb{R}$ be $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1 - 4 x_2$, a [linear map](#def-linear-map).
 >
 > Is $f$ an [affine map](#def-affine-map)?
 >
@@ -1870,7 +1961,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> *Solution 42*. Yes. By [Corollary 2](#cor-linear-is-affine), every [linear map](#def-linear-map) is an [affine map](#def-affine-map) with [offset](#def-affine-offset) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$. Here
+> *Solution 45*. Yes. By [Corollary 2](#cor-linear-is-affine), every [linear map](#def-linear-map) is an [affine map](#def-affine-map) with [offset](#def-affine-offset) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$. Here
 >
 > $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \begin{bmatrix}1 & -4\end{bmatrix} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ 0,$$
 >
@@ -1900,7 +1991,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> **Exercise 43 (Matching the offsets of two formulas for one affine map)** [Theorem 17](#thm-affine-map-unique) says that an [affine map](#def-affine-map) has only one [matrix](#def-matrix) and one [offset](#def-affine-offset), so two ways of writing the same map must agree term by term. For $c \in \mathbb{R}$, suppose that
+> **Exercise 46 (Matching the offsets of two formulas for one affine map)** [Theorem 17](#thm-affine-map-unique) says that an [affine map](#def-affine-map) has only one [matrix](#def-matrix) and one [offset](#def-affine-offset), so two ways of writing the same map must agree term by term. For $c \in \mathbb{R}$, suppose that
 >
 > $$\begin{bmatrix}1 & 0 \\ 2 & 1\end{bmatrix} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \begin{bmatrix}3 \\ 1\end{bmatrix}
 > = \begin{bmatrix}1 & 0 \\ 2 & 1\end{bmatrix} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \begin{bmatrix}c \\ 1\end{bmatrix}
@@ -1914,7 +2005,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> *Solution 43*. $c = 3$. Both sides describe the same [affine map](#def-affine-map). By [Theorem 17](#thm-affine-map-unique), the two sides have the same [offset](#def-affine-offset), so ${(3, 1)}^{\top} = {(c, 1)}^{\top}$ and $c = 3$. Setting $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ gives the same answer directly.
+> *Solution 46*. $c = 3$. Both sides describe the same [affine map](#def-affine-map). By [Theorem 17](#thm-affine-map-unique), the two sides have the same [offset](#def-affine-offset), so ${(3, 1)}^{\top} = {(c, 1)}^{\top}$ and $c = 3$. Setting $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ gives the same answer directly.
 
 > **NOTE:**
 >
@@ -1948,7 +2039,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> **Exercise 44 (Testing whether a vertical line is a hyperplane)** A vertical line in $\mathbb{R}^2$ is parallel to the $x_2$-axis. It cannot be written as $x_2 = m x_1 + k$ for any numbers $m$ and $k$. Let $L$ be the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of points $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^2$ with $x_1 = 3$.
+> **Exercise 47 (Testing whether a vertical line is a hyperplane)** A vertical line in $\mathbb{R}^2$ is parallel to the $x_2$-axis. It cannot be written as $x_2 = m x_1 + k$ for any numbers $m$ and $k$. Let $L$ be the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of points $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^2$ with $x_1 = 3$.
 >
 > Is $L$ a [hyperplane](#def-hyperplane) in $\mathbb{R}^2$?
 >
@@ -1958,7 +2049,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> *Solution 44*. Yes. Take $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = {(1, 0)}^{\top} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ and $b = -3$. Then
+> *Solution 47*. Yes. Take $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = {(1, 0)}^{\top} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ and $b = -3$. Then
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b = x_1 - 3,$$
 >
@@ -1966,7 +2057,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> **Exercise 45 (Finding a normal vector of a plane in** $\mathbb{R}^3$) In $\mathbb{R}^3$ a [hyperplane](#def-hyperplane) is a plane, and a [normal vector](#def-normal-vector) points straight out of it. Let $H$ be the hyperplane of points $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^3$ with
+> **Exercise 48 (Finding a normal vector of a plane in** $\mathbb{R}^3$) In $\mathbb{R}^3$ a [hyperplane](#def-hyperplane) is a plane, and a [normal vector](#def-normal-vector) points straight out of it. Let $H$ be the hyperplane of points $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^3$ with
 >
 > $$2 x_1 - x_2 + 4 x_3 = 7.$$
 >
@@ -1978,7 +2069,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> *Solution 45*. Subtracting $7$ from both sides gives
+> *Solution 48*. Subtracting $7$ from both sides gives
 >
 > $$2 x_1 - x_2 + 4 x_3 - 7 = 0,$$
 >
@@ -2090,7 +2181,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> **Exercise 46 (Write a rule in matrix form)** A clinic scores a patient’s risk from three measurements.
+> **Exercise 49 (Write a rule in matrix form)** A clinic scores a patient’s risk from three measurements.
 >
 > | symbol | meaning                 | units    |
 > |--------|-------------------------|----------|
@@ -2106,7 +2197,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> *Solution 46*. Read the [coefficients](linear-algebra-vectors.llms.md#def-lincom-coefficient) straight off the rule. There are three inputs, so $p = 3$:
+> *Solution 49*. Read the [coefficients](linear-algebra-vectors.llms.md#def-lincom-coefficient) straight off the rule. There are three inputs, so $p = 3$:
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \begin{bmatrix} 0.4 \\ 0.2 \\ 1.5 \end{bmatrix},
 > \qquad b = -30$$
@@ -2115,11 +2206,11 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> **Exercise 47 (Score a patient)** Give the score from the rule in [Exercise 46](#exr-write-in-matrix-form) for a patient aged $50$ with blood pressure $130$ and BMI $28$.
+> **Exercise 50 (Score a patient)** Give the score from the rule in [Exercise 49](#exr-write-in-matrix-form) for a patient aged $50$ with blood pressure $130$ and BMI $28$.
 
 > **NOTE:**
 >
-> *Solution 47*. For the patient,
+> *Solution 50*. For the patient,
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix} 50 \\ 130 \\ 28 \end{bmatrix}$$
 >
@@ -2140,7 +2231,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> **Exercise 48 (Which of these are affine in** $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$?) Each of the five expressions is a function of the weights $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p$, with the data $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $y$ held fixed. Say which ones are affine ([Definition 24](#def-affine-map)), that is, have the form [Equation 1](#eq-linear-scalar) — an inner product plus an offset — and which of those are also linear ([Definition 20](#def-linear-map)).
+> **Exercise 51 (Which of these are affine in** $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$?) Each of the five expressions is a function of the weights $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p$, with the data $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $y$ held fixed. Say which ones are affine ([Definition 24](#def-affine-map)), that is, have the form [Equation 1](#eq-linear-scalar) — an inner product plus an offset — and which of those are also linear ([Definition 20](#def-linear-map)).
 >
 > 1.  $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$
 > 2.  $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- y$
@@ -2150,7 +2241,7 @@ Last modified: 2026-11-12 00:55:06 (PST)
 
 > **NOTE:**
 >
-> *Solution 48*.
+> *Solution 51*.
 >
 > 1.  **Affine, and linear.** It is [Equation 1](#eq-linear-scalar) with $b = 0$, which is a linear map by [Theorem 12](#thm-matrix-map-linear): the matrix ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}$ times $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$.
 > 2.  **Affine.** Still an inner product plus an offset; here the offset is $b = -y$, which is a constant because $y$ is held fixed. It is linear only when $y = 0$: otherwise $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ gives $-y \ne 0$, and a linear map sends $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ to $0$ ([Theorem 11](#thm-linear-map-zero)).
@@ -2237,6 +2328,58 @@ Last modified: 2026-11-12 00:55:06 (PST)
 > = \begin{bmatrix} 3 & 4 \\ 6 & 8 \end{bmatrix}.$$
 >
 > If instead $\mathbf{A}$ is $2 \times 3$ and $\mathbf{B}$ is $3 \times 1$, then ${\mathbf{B}}^{\top}\,{\mathbf{A}}^{\top}$ is a $(1 \times 3)(3 \times 2)$ product, but ${\mathbf{A}}^{\top}\,{\mathbf{B}}^{\top}$ is a $(3 \times 2)(1 \times 3)$ product, which is undefined.
+
+> **NOTE:**
+>
+> **Exercise 52 (The order of the factors in a transposed square product)** [Remark 8](#rem-transpose-product-order) shows that, for factors that are not [square](#def-square-matrix), keeping the original order of the factors in the [transpose](#def-matrix-transpose) of a [product](#def-matrix-mult) can give an undefined product. For two [square matrices](#def-square-matrix) of the same size, both ${\mathbf{A}}^{\top}{\mathbf{B}}^{\top}$ and ${\mathbf{B}}^{\top}{\mathbf{A}}^{\top}$ are defined, so the shapes alone cannot settle which order gives ${(\mathbf{A}\mathbf{B})}^{\top}$. Let
+>
+> $$\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 0 & 1 \end{bmatrix},
+> \qquad
+> \mathbf{B} = \begin{bmatrix} 1 & 0 \\ 1 & 1 \end{bmatrix}.$$
+>
+> Does ${\mathbf{A}}^{\top}{\mathbf{B}}^{\top}$ equal ${(\mathbf{A}\mathbf{B})}^{\top}$ for these $\mathbf{A}$ and $\mathbf{B}$?
+>
+> > **TIP:**
+> >
+> > Compute $\mathbf{A}\mathbf{B}$ with [Definition 10](#def-matrix-mult) and take its [transpose](#def-matrix-transpose), then compute ${\mathbf{A}}^{\top}{\mathbf{B}}^{\top}$ and compare the two entry by entry.
+
+> **NOTE:**
+>
+> *Solution 52*. No: the two [matrices](#def-matrix) differ, so keeping the order of the factors gives the wrong [transpose](#def-matrix-transpose).
+>
+> The [product](#def-matrix-mult) $\mathbf{A}\mathbf{B}$ and its transpose are
+>
+> $$\begin{aligned}
+> \mathbf{A}\mathbf{B}
+> &= \begin{bmatrix}
+> 1 \cdot 1 + 2 \cdot 1 & 1 \cdot 0 + 2 \cdot 1 \\
+> 0 \cdot 1 + 1 \cdot 1 & 0 \cdot 0 + 1 \cdot 1
+> \end{bmatrix}
+> && \text{(}\href{#def-matrix-mult}{\text{Definition~10}}\text{)}
+> \\
+> &= \begin{bmatrix} 3 & 2 \\ 1 & 1 \end{bmatrix},
+> && \text{(multiply and add)}
+> \end{aligned}$$
+>
+> so ${(\mathbf{A}\mathbf{B})}^{\top} = \begin{bmatrix} 3 & 1 \\ 2 & 1 \end{bmatrix}$.
+>
+> The transposes are ${\mathbf{A}}^{\top} = \begin{bmatrix} 1 & 0 \\ 2 & 1 \end{bmatrix}$ and ${\mathbf{B}}^{\top} = \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix}$, so
+>
+> $$\begin{aligned}
+> {\mathbf{A}}^{\top}{\mathbf{B}}^{\top}
+> &= \begin{bmatrix}
+> 1 \cdot 1 + 0 \cdot 0 & 1 \cdot 1 + 0 \cdot 1 \\
+> 2 \cdot 1 + 1 \cdot 0 & 2 \cdot 1 + 1 \cdot 1
+> \end{bmatrix}
+> && \text{(}\href{#def-matrix-mult}{\text{Definition~10}}\text{)}
+> \\
+> &= \begin{bmatrix} 1 & 1 \\ 2 & 3 \end{bmatrix}.
+> && \text{(multiply and add)}
+> \end{aligned}$$
+>
+> Entry $(1, 1)$ is $3$ in ${(\mathbf{A}\mathbf{B})}^{\top}$ and $1$ in ${\mathbf{A}}^{\top}{\mathbf{B}}^{\top}$. In the reversed order, as [Theorem 19](#thm-transpose-product) says, ${\mathbf{B}}^{\top}{\mathbf{A}}^{\top}
+> = \begin{bmatrix} 1 \cdot 1 + 1 \cdot 2 & 1 \cdot 0 + 1 \cdot 1 \\ 0 \cdot 1 + 1 \cdot 2 & 0 \cdot 0 + 1 \cdot 1 \end{bmatrix}
+> = \begin{bmatrix} 3 & 1 \\ 2 & 1 \end{bmatrix}$, which matches ${(\mathbf{A}\mathbf{B})}^{\top}$.
 
 > **NOTE:**
 >
