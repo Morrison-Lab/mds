@@ -1,9 +1,0 @@
-:::{#sol-transpose-practice}
-
-By @def-transpose,
-
-$$
-\tp{\vx} = [4,\; -1,\; 0].
-$$
-
-:::

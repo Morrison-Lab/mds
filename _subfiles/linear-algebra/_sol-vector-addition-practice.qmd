@@ -1,9 +1,0 @@
-:::{#sol-vector-addition-practice}
-
-By @def-vector-addition,
-
-$$
-\vx + \vy = \sbmat{12 + 10 \\ 5 + 7 \\ 8 + 3} = \sbmat{22 \\ 12 \\ 11}.
-$$
-
-:::
