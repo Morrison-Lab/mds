@@ -1,8 +1,0 @@
-:::{#sol-basis-size-practice}
-
-No.
-$\vecf{e}_1, \vecf{e}_2, \vecf{e}_3$ is a [basis](#def-basis) of $\reals^3$ with $3$ vectors,
-so by @thm-basis-size every basis of $\reals^3$ has $3$ vectors,
-not $2$.
-
-:::

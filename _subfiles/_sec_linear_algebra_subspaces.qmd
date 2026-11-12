@@ -142,31 +142,7 @@
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/linear-algebra/_exr-basis-size-practice.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_sol-basis-size-practice.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_exr-dimension-practice.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_sol-dimension-practice.qmd >}}
-
-{{< slidebreak >}}
-
 {{< include mds/_subfiles/linear-algebra/_thm-add-outside-span.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_exr-add-outside-span-practice.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_sol-add-outside-span-practice.qmd >}}
 
 {{< slidebreak >}}
 
