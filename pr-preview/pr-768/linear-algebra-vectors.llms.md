@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-12 12:42:13 (PST)
+Last modified: 2026-11-12 13:50:17 (PST)
 
 > **NOTE:**
 >
@@ -157,6 +157,26 @@ Last modified: 2026-11-12 12:42:13 (PST)
 
 > **NOTE:**
 >
+> **Exercise 6 (Evaluating a vector-valued function at one input)** A [vector-valued function](#def-vector-valued) returns several numbers for one input. Let $g : \mathbb{R}^2 \to \mathbb{R}^3$ be
+>
+> $$g(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \begin{bmatrix}x_1 + x_2 \\ x_1 x_2 \\ x_1 - x_2\end{bmatrix}.$$
+>
+> Find $g\mathopen{}\left(\begin{bmatrix}2 \\ 3\end{bmatrix}\right)\mathclose{}$.
+>
+> > **TIP:**
+> >
+> > Substitute $x_1 = 2$ and $x_2 = 3$ into each entry, as in [Example 2](#exm-real-vector-valued).
+
+> **NOTE:**
+>
+> *Solution 6*. Substituting $x_1 = 2$ and $x_2 = 3$,
+>
+> $$g\mathopen{}\left(\begin{bmatrix}2 \\ 3\end{bmatrix}\right)\mathclose{} = \begin{bmatrix}2 + 3 \\ 2 \cdot 3 \\ 2 - 3\end{bmatrix} = \begin{bmatrix}5 \\ 6 \\ -1\end{bmatrix},$$
+>
+> a [column vector](#def-column-vector) in $\mathbb{R}^3$.
+
+> **NOTE:**
+>
 > **Definition 6 (Transpose)** The **transpose** of a column vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is the row vector with the same [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) of entries, written horizontally:
 >
 > $${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \equiv \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}' \equiv [x_1,\; x_2,\; \ldots,\; x_p]$$
@@ -167,6 +187,24 @@ Last modified: 2026-11-12 12:42:13 (PST)
 >
 > $${\begin{bmatrix} 2 \\ -1 \\ 5 \end{bmatrix}}^{\top}
 > = [2,\; -1,\; 5].$$
+
+> **NOTE:**
+>
+> **Exercise 7 (Writing one observation as a row vector)** A data table stores each observation on its own line, so an observation held as a [column vector](#def-column-vector) is written in the table as its [transpose](#def-transpose). Let
+>
+> $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix}4 \\ -1 \\ 0\end{bmatrix}.$$
+>
+> Find ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}$.
+>
+> > **TIP:**
+> >
+> > By [Definition 6](#def-transpose), keep the entries in the same order and write them horizontally.
+
+> **NOTE:**
+>
+> *Solution 7*. By [Definition 6](#def-transpose),
+>
+> $${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} = [4,\; -1,\; 0].$$
 
 > **NOTE:**
 >
@@ -185,6 +223,28 @@ Last modified: 2026-11-12 12:42:13 (PST)
 > &=
 > \begin{bmatrix} 5 \\ 7 \\ 9 \end{bmatrix}
 > \end{aligned}$$
+
+> **NOTE:**
+>
+> **Exercise 8 (Adding two months of sales for three items)** A shop records how many units of each of three items it sells in a month, as a [column vector](#def-column-vector) in $\mathbb{R}^3$. In two months it sells
+>
+> $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix}12 \\ 5 \\ 8\end{bmatrix}
+> \quad \text{and} \quad
+> \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= \begin{bmatrix}10 \\ 7 \\ 3\end{bmatrix}$$
+>
+> units.
+>
+> Find $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$, the units of each item sold over both months.
+>
+> > **TIP:**
+> >
+> > Use [Definition 7](#def-vector-addition), as in [Example 4](#exm-vector-addition).
+
+> **NOTE:**
+>
+> *Solution 8*. By [Definition 7](#def-vector-addition),
+>
+> $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= \begin{bmatrix}12 + 10 \\ 5 + 7 \\ 8 + 3\end{bmatrix} = \begin{bmatrix}22 \\ 12 \\ 11\end{bmatrix}.$$
 
 > **NOTE:**
 >
@@ -606,7 +666,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Exercise 6 (How far apart are two points?)** Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 2)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (4, 6)$.
+> **Exercise 9 (How far apart are two points?)** Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 2)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (4, 6)$.
 >
 > 1.  Compute the vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$.
 > 2.  Compute the length of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$, using the [Euclidean norm](#def-euclidean-norm).
@@ -614,7 +674,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> *Solution 6*.
+> *Solution 9*.
 >
 > 1.  $$\begin{aligned}
 >     \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}&= (1 - 4, 2 - 6) \\
@@ -703,7 +763,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Exercise 7 (Compute an inner product and a norm)** Let
+> **Exercise 10 (Compute an inner product and a norm)** Let
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}= \begin{bmatrix} 3 \\ -1 \\ 2 \end{bmatrix},
 > \qquad
@@ -713,7 +773,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> *Solution 7*. Multiply entry by entry and add:
+> *Solution 10*. Multiply entry by entry and add:
 >
 > $$\begin{aligned}
 > \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}
