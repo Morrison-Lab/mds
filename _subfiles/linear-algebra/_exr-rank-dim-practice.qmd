@@ -14,7 +14,7 @@ Find $\rankf{\matr{A}}$ by finding $\dim\paren{\mathcal{C}(\matr{A})}$.
 ::: {.callout-tip}
 #### Hint
 
-In $\matr{A}$, the second column is a multiple of the first.
+In $\matr{A}$, the second [column](linear-algebra-matrices.qmd#def-matrix-column) is a multiple of the first.
 
 :::
 
