@@ -2,6 +2,14 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_exr-transpose-sum-practice.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-transpose-sum-practice.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_thm-transpose-product.qmd >}}
 
 {{< include mds/_subfiles/linear-algebra/_note-thm-transpose-product.qmd >}}
@@ -17,3 +25,11 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_thm-scalar-transpose.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exr-scalar-transpose-practice.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-scalar-transpose-practice.qmd >}}
