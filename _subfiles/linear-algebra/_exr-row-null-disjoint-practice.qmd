@@ -13,7 +13,7 @@ $$
 
 so that $\vecf{v} = (1, 1, 0) + (0, 1, 1)$ adds the two [rows of $\matr{A}$](linear-algebra-matrices.qmd#def-matrix-row).
 
-Compute $\matr{A}\vecf{v}$, and check that $\vecf{v}$ is not in $\mathcal{N}(\matr{A})$.
+Check that $\vecf{v}$ is not in $\mathcal{N}(\matr{A})$.
 
 ::: {.callout-tip}
 #### Hint
