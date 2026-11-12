@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-11 12:09:04 (PST)
+Last modified: 2026-11-12 11:30:11 (PST)
 
 > **NOTE:**
 >
@@ -156,13 +156,13 @@ Last modified: 2026-11-11 12:09:04 (PST)
 >     ax.set_title(title)
 >     ax.set_xlabel("x")
 >     ax.set_ylim(0, 10)
-> #> <matplotlib.collections.FillBetweenPolyCollection object at 0x7ffa3455da90>
-> #> [<matplotlib.lines.Line2D object at 0x7ffa3455dbd0>]
+> #> <matplotlib.collections.FillBetweenPolyCollection object at 0x7f7bbb6bda90>
+> #> [<matplotlib.lines.Line2D object at 0x7f7bbb6bdbd0>]
 > #> Text(0.5, 1.0, 'p = 1: area = 2')
 > #> Text(0.5, 0, 'x')
 > #> (0.0, 10.0)
-> #> <matplotlib.collections.FillBetweenPolyCollection object at 0x7ffa3455dd10>
-> #> [<matplotlib.lines.Line2D object at 0x7ffa3455de50>]
+> #> <matplotlib.collections.FillBetweenPolyCollection object at 0x7f7bbb6bdd10>
+> #> [<matplotlib.lines.Line2D object at 0x7f7bbb6bde50>]
 > #> Text(0.5, 1.0, 'p = 2: area = infinity')
 > #> Text(0.5, 0, 'x')
 > #> (0.0, 10.0)

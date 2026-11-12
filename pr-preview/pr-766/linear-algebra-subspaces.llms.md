@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-11 12:09:04 (PST)
+Last modified: 2026-11-12 11:30:11 (PST)
 
 # 1 Rank
 
@@ -172,7 +172,7 @@ Last modified: 2026-11-11 12:09:04 (PST)
 > $$\begin{aligned}
 > (\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})_i
 > &= a_{i1} x_1 + \cdots + a_{in} x_n
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~15 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~16 in Matrices}}\text{)}
 > \\
 > &= x_1 a_{i1} + \cdots + x_n a_{in}
 > && \text{(multiplication of numbers is commutative)}
@@ -214,7 +214,7 @@ Last modified: 2026-11-11 12:09:04 (PST)
 > $$\begin{aligned}
 > \mathbf{A}\,(2, -1)
 > &= (1 \cdot 2 + 2 \cdot(-1),\; 3 \cdot 2 + 4 \cdot(-1))
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~15 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~16 in Matrices}}\text{)}
 > \\
 > &= (0, 2)
 > && \text{(arithmetic)}
@@ -365,7 +365,7 @@ Last modified: 2026-11-11 12:09:04 (PST)
 >
 > *Proof*. Let $\mathbf{A}$ be the $p \times k$ matrix with columns $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_k$, and $\mathbf{B}$ the $p \times l$ matrix with columns $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}_l$.
 >
-> **Write** $\mathbf{A}$ in terms of $\mathbf{B}$. Each $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j$ is in $\mathcal{S}$, and the $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$’s span $\mathcal{S}$ ([Definition 5](#def-span)), so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j = \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_j$ for some $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_j \in \mathbb{R}^l$ ([Definition 15 in Matrices](linear-algebra-matrices.llms.md#def-matvec-mult)). Let $\mathbf{C}$ be the $l \times k$ matrix with columns $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_k$. Then $\underbrace{\mathbf{A}}_{p \times k}
+> **Write** $\mathbf{A}$ in terms of $\mathbf{B}$. Each $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j$ is in $\mathcal{S}$, and the $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$’s span $\mathcal{S}$ ([Definition 5](#def-span)), so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j = \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_j$ for some $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_j \in \mathbb{R}^l$ ([Definition 16 in Matrices](linear-algebra-matrices.llms.md#def-matvec-mult)). Let $\mathbf{C}$ be the $l \times k$ matrix with columns $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_k$. Then $\underbrace{\mathbf{A}}_{p \times k}
 > = \underbrace{\mathbf{B}}_{p \times l}\,\underbrace{\mathbf{C}}_{l \times k}$, because column $j$ of $\mathbf{B} \mathbf{C}$ is $\mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_j$.
 >
 > **The columns of** $\mathbf{C}$ are linearly independent. Suppose $\mathbf{C} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ for some $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \in \mathbb{R}^k$. Then

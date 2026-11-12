@@ -4,23 +4,23 @@ Code
 
 Published
 
-Last modified: 2026-11-11 12:09:04 (PST)
+Last modified: 2026-11-12 11:30:11 (PST)
 
 # 1 Special Matrices
 
 Some special matrices appeared earlier:
 
-- the zero matrix ([Definition 6 in Matrices](linear-algebra-matrices.llms.md#def-zero-matrix)), in the section on matrix addition
-- square matrices ([Definition 10 in Matrices](linear-algebra-matrices.llms.md#def-square-matrix)), in the section on square and identity matrices
-- the identity matrix ([Definition 14 in Matrices](linear-algebra-matrices.llms.md#def-identity-matrix)), in that same section
+- the zero matrix ([Definition 7 in Matrices](linear-algebra-matrices.llms.md#def-zero-matrix)), in the section on matrix addition
+- square matrices ([Definition 11 in Matrices](linear-algebra-matrices.llms.md#def-square-matrix)), in the section on square and identity matrices
+- the identity matrix ([Definition 15 in Matrices](linear-algebra-matrices.llms.md#def-identity-matrix)), in that same section
 
 > **NOTE:**
 >
-> **Definition 1 (Order of a square matrix)** The **order** of a square matrix ([Definition 10 in Matrices](linear-algebra-matrices.llms.md#def-square-matrix)) is its number of rows, which equals its number of columns.
+> **Definition 1 (Order of a square matrix)** The **order** of a square matrix ([Definition 11 in Matrices](linear-algebra-matrices.llms.md#def-square-matrix)) is its number of rows, which equals its number of columns.
 
 > **NOTE:**
 >
-> **Example 1 (Orders of square matrices)** $\begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$ has order $2$, and $[5]$ has order $1$. A $2 \times 3$ matrix has no order, since it is not square ([Example 9 in Matrices](linear-algebra-matrices.llms.md#exm-square-matrix)).
+> **Example 1 (Orders of square matrices)** $\begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$ has order $2$, and $[5]$ has order $1$. A $2 \times 3$ matrix has no order, since it is not square ([Example 10 in Matrices](linear-algebra-matrices.llms.md#exm-square-matrix)).
 
 > **NOTE:**
 >
@@ -50,7 +50,7 @@ Some special matrices appeared earlier:
 > && \text{(multiply and add)}
 > \end{aligned}$$
 >
-> A $2 \times 3$ matrix $\mathbf{B}$ is not square ([Definition 10 in Matrices](linear-algebra-matrices.llms.md#def-square-matrix)), so $\mathbf{B}^2$ is not defined; indeed $\mathbf{B} \mathbf{B}$ would multiply a matrix with $3$ columns by one with $2$ rows, which [Definition 9 in Matrices](linear-algebra-matrices.llms.md#def-matrix-mult) does not allow.
+> A $2 \times 3$ matrix $\mathbf{B}$ is not square ([Definition 11 in Matrices](linear-algebra-matrices.llms.md#def-square-matrix)), so $\mathbf{B}^2$ is not defined; indeed $\mathbf{B} \mathbf{B}$ would multiply a matrix with $3$ columns by one with $2$ rows, which [Definition 10 in Matrices](linear-algebra-matrices.llms.md#def-matrix-mult) does not allow.
 
 > **NOTE:**
 >
@@ -116,7 +116,7 @@ Some special matrices appeared earlier:
 > &= \mathbf{I}_p,
 > \end{aligned}$$
 >
-> where $\mathbf{I}_p$ is the identity matrix ([Definition 14 in Matrices](linear-algebra-matrices.llms.md#def-identity-matrix)). A square matrix that is not invertible is **singular**.
+> where $\mathbf{I}_p$ is the identity matrix ([Definition 15 in Matrices](linear-algebra-matrices.llms.md#def-identity-matrix)). A square matrix that is not invertible is **singular**.
 
 > **NOTE:**
 >
@@ -346,7 +346,7 @@ Some special matrices appeared earlier:
 > \qquad
 > \mathbf{B} = \begin{bmatrix} 0 & 0 \\ 0 & 1 \end{bmatrix},$$
 >
-> neither matrix is the zero matrix ([Definition 6 in Matrices](linear-algebra-matrices.llms.md#def-zero-matrix)), but
+> neither matrix is the zero matrix ([Definition 7 in Matrices](linear-algebra-matrices.llms.md#def-zero-matrix)), but
 >
 > $$\begin{aligned}
 > \mathbf{A}\mathbf{B}
@@ -364,7 +364,7 @@ Some special matrices appeared earlier:
 >
 > **Products.** Matrix multiplication keeps three properties of multiplication of numbers: it is associative ([Theorem 7 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc)), it is distributive over addition ([Theorem 8 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-distrib)), and it has an identity, $\mathbf{I}_p$ ([Theorem 10 in Matrices](linear-algebra-matrices.llms.md#thm-identity)). It differs from multiplication of numbers in four ways:
 >
-> - $\mathbf{A}\mathbf{B}$ is defined only when the number of columns of $\mathbf{A}$ equals the number of rows of $\mathbf{B}$ ([Definition 9 in Matrices](linear-algebra-matrices.llms.md#def-matrix-mult)).
+> - $\mathbf{A}\mathbf{B}$ is defined only when the number of columns of $\mathbf{A}$ equals the number of rows of $\mathbf{B}$ ([Definition 10 in Matrices](linear-algebra-matrices.llms.md#def-matrix-mult)).
 > - It is not commutative: $\mathbf{A}\mathbf{B} \neq \mathbf{B}\mathbf{A}$ in general ([Remark 2 in Matrices](linear-algebra-matrices.llms.md#rem-matmul-not-commutative)).
 > - A nonzero square matrix need not have an inverse ([Example 5](#exm-invertible-matrix)).
 > - $\mathbf{A}\mathbf{B} = \mathbf{0}$ can hold with $\mathbf{A} \neq \mathbf{0}$ and $\mathbf{B} \neq \mathbf{0}$ ([Example 9](#exm-matmul-zero-divisors)), so a factor cannot be cancelled from $\mathbf{A}\mathbf{B} = \mathbf{A}\mathbf{C}$ unless it is invertible ([Theorem 3](#thm-invertible-cancel)).
@@ -617,7 +617,7 @@ Some special matrices appeared earlier:
 > && \text{(definition of the Euclidean norm)}
 > \end{aligned}$$
 >
-> Both norms are nonnegative square roots, so equal squares give $\mathopen{}\left\lVert\mathbf{Q}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{} = \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}$. The second step is [Example 7 in Matrices](linear-algebra-matrices.llms.md#exm-dot-product-matmul), the third is [Theorem 19 in Matrices](linear-algebra-matrices.llms.md#thm-transpose-product), and the fourth is [Theorem 7 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc).
+> Both norms are nonnegative square roots, so equal squares give $\mathopen{}\left\lVert\mathbf{Q}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{} = \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}$. The second step is [Example 8 in Matrices](linear-algebra-matrices.llms.md#exm-dot-product-matmul), the third is [Theorem 19 in Matrices](linear-algebra-matrices.llms.md#thm-transpose-product), and the fourth is [Theorem 7 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc).
 
 > **NOTE:**
 >
@@ -1951,7 +1951,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 > && \text{(transposing twice changes nothing)}
 > \end{aligned}$$
 >
-> The first step is [Theorem 19 in Matrices](linear-algebra-matrices.llms.md#thm-transpose-product), and the second follows from [Definition 5 in Matrices](linear-algebra-matrices.llms.md#def-matrix-transpose), which swaps rows and columns, so swapping them again restores $\mathbf{A}$.
+> The first step is [Theorem 19 in Matrices](linear-algebra-matrices.llms.md#thm-transpose-product), and the second follows from [Definition 6 in Matrices](linear-algebra-matrices.llms.md#def-matrix-transpose), which swaps rows and columns, so swapping them again restores $\mathbf{A}$.
 >
 > **The factorization.**
 >
@@ -2183,7 +2183,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 >
 > **Example 33 (Positive definite, semidefinite, and neither)**  
 >
-> - The identity matrix $\mathbf{I}_p$ ([Definition 14 in Matrices](linear-algebra-matrices.llms.md#def-identity-matrix)) is positive definite: ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{I}_p \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \sum_{i=1}^px_i^2$, which is positive unless every $x_i$ is $0$.
+> - The identity matrix $\mathbf{I}_p$ ([Definition 15 in Matrices](linear-algebra-matrices.llms.md#def-identity-matrix)) is positive definite: ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{I}_p \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \sum_{i=1}^px_i^2$, which is positive unless every $x_i$ is $0$.
 >
 > - $\mathbf{B} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$ from [Example 31](#exm-positive-semidefinite) is positive semidefinite but not positive definite: at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, -1) \neq \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$,
 >
@@ -2608,13 +2608,13 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 > && \text{(substitute vectors and matrix)}
 > \\
 > &= \begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 2 \cdot 3 + 1 \cdot(-1) \\ 1 \cdot 3 + 2 \cdot(-1) \end{bmatrix}
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~15 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~16 in Matrices}}\text{)}
 > \\
 > &= \begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 5 \\ 1 \end{bmatrix}
 > && \text{(multiply and add)}
 > \\
 > &= 1 \cdot 5 + 2 \cdot 1
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~15 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~16 in Matrices}}\text{)}
 > \\
 > &= 7.
 > && \text{(multiply and add)}
@@ -2657,7 +2657,7 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 >   && \text{(definition of } {\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}}_{\mathbf{A}} \text{)}
 >   \\
 >   &= (a\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} + b\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}^{\top})\,\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}
->   && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-sum}{\text{Theorem~18 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~8 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~5 in Matrices}}\text{)}
+>   && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-sum}{\text{Theorem~18 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~9 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~6 in Matrices}}\text{)}
 >   \\
 >   &= a\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + b\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}^{\top}\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}
 >   && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-distrib}{\text{Theorem~8 in Matrices}}\text{)}
@@ -2697,7 +2697,7 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 > && \text{(define } A_{ij} \stackrel{\text{def}}{=}{\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_i, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j\right\rangle\mathclose{}} \text{)}
 > \\
 > &= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}.
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~15 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~16 in Matrices}}\text{)}
 > \end{aligned}$$
 >
 > Symmetry of ${\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}}$ ensures

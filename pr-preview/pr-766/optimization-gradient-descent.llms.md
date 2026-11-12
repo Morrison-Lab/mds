@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-11 12:09:04 (PST)
+Last modified: 2026-11-12 11:30:11 (PST)
 
 > **NOTE:**
 >
@@ -945,7 +945,7 @@ Last modified: 2026-11-11 12:09:04 (PST)
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > grid_bf = np.linspace(-1.6, 1.6, 321)
 > ax.plot(grid_bf, basin_cost_bf(grid_bf), color="grey")
-> #> [<matplotlib.lines.Line2D object at 0x7f10a72fa490>]
+> #> [<matplotlib.lines.Line2D object at 0x7f39ec4fe490>]
 > for start in sorted(basin_starts_bs[:6], reverse=True):
 >     x = [start]
 >     for _ in range(30):
@@ -957,18 +957,18 @@ Last modified: 2026-11-11 12:09:04 (PST)
 >             marker="o" if above else "^",
 >             label=("start above 0" if above else "start below 0")
 >             if abs(start) == 0.1 else None)
-> #> [<matplotlib.lines.Line2D object at 0x7f10a72fa5d0>]
-> #> [<matplotlib.lines.Line2D object at 0x7f10a72fa710>]
-> #> [<matplotlib.lines.Line2D object at 0x7f10a72fa850>]
-> #> [<matplotlib.lines.Line2D object at 0x7f10a72fa990>]
-> #> [<matplotlib.lines.Line2D object at 0x7f10a72faad0>]
-> #> [<matplotlib.lines.Line2D object at 0x7f10a72fac10>]
+> #> [<matplotlib.lines.Line2D object at 0x7f39ec4fe5d0>]
+> #> [<matplotlib.lines.Line2D object at 0x7f39ec4fe710>]
+> #> [<matplotlib.lines.Line2D object at 0x7f39ec4fe850>]
+> #> [<matplotlib.lines.Line2D object at 0x7f39ec4fe990>]
+> #> [<matplotlib.lines.Line2D object at 0x7f39ec4fead0>]
+> #> [<matplotlib.lines.Line2D object at 0x7f39ec4fec10>]
 > ax.set_xlabel("x")
 > #> Text(0.5, 0, 'x')
 > ax.set_ylabel("f(x)")
 > #> Text(0, 0.5, 'f(x)')
 > fig.legend(loc="outside lower center", ncol=2)
-> #> <matplotlib.legend.Legend object at 0x7f10a72fad50>
+> #> <matplotlib.legend.Legend object at 0x7f39ec4fed50>
 > plt.show()
 > ```
 >
@@ -1058,19 +1058,19 @@ Last modified: 2026-11-11 12:09:04 (PST)
 > >             solid_capstyle="butt")
 > >     ax.plot([dwf_cut_py, 8], [dwf_i_py] * 2, color="#D55E00", lw=8,
 > >             solid_capstyle="butt")
-> > #> [<matplotlib.lines.Line2D object at 0x7f10a7172990>]
-> > #> [<matplotlib.lines.Line2D object at 0x7f10a7172ad0>]
-> > #> [<matplotlib.lines.Line2D object at 0x7f10a7172c10>]
-> > #> [<matplotlib.lines.Line2D object at 0x7f10a7172d50>]
-> > #> [<matplotlib.lines.Line2D object at 0x7f10a7172e90>]
-> > #> [<matplotlib.lines.Line2D object at 0x7f10a7172fd0>]
-> > #> [<matplotlib.lines.Line2D object at 0x7f10a7173110>]
-> > #> [<matplotlib.lines.Line2D object at 0x7f10a7173250>]
-> > #> [<matplotlib.lines.Line2D object at 0x7f10a7173390>]
+> > #> [<matplotlib.lines.Line2D object at 0x7f39ec382990>]
+> > #> [<matplotlib.lines.Line2D object at 0x7f39ec382ad0>]
+> > #> [<matplotlib.lines.Line2D object at 0x7f39ec382c10>]
+> > #> [<matplotlib.lines.Line2D object at 0x7f39ec382d50>]
+> > #> [<matplotlib.lines.Line2D object at 0x7f39ec382e90>]
+> > #> [<matplotlib.lines.Line2D object at 0x7f39ec382fd0>]
+> > #> [<matplotlib.lines.Line2D object at 0x7f39ec383110>]
+> > #> [<matplotlib.lines.Line2D object at 0x7f39ec383250>]
+> > #> [<matplotlib.lines.Line2D object at 0x7f39ec383390>]
 > > ax.axvline(4, linestyle=":", color="black")
-> > #> <matplotlib.lines.Line2D object at 0x7f10a71734d0>
+> > #> <matplotlib.lines.Line2D object at 0x7f39ec3834d0>
 > > ax.set_yticks(range(3), [str(s) for s in dwf_step_py])
-> > #> [<matplotlib.axis.YTick object at 0x7f10a7170e10>, <matplotlib.axis.YTick object at 0x7f10a7173750>, <matplotlib.axis.YTick object at 0x7f10a7173ed0>]
+> > #> [<matplotlib.axis.YTick object at 0x7f39ec380e10>, <matplotlib.axis.YTick object at 0x7f39ec383750>, <matplotlib.axis.YTick object at 0x7f39ec383ed0>]
 > > ax.set_xlabel("starting point")
 > > #> Text(0.5, 0, 'starting point')
 > > ax.set_ylabel("step length")
@@ -1139,10 +1139,10 @@ Last modified: 2026-11-11 12:09:04 (PST)
 > plateau_marks_pf = np.array([0, 10])
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > ax.plot(plateau_grid_pf, 1 / (1 + np.exp(plateau_grid_pf)), color="#0072B2")
-> #> [<matplotlib.lines.Line2D object at 0x7f10a713efd0>]
+> #> [<matplotlib.lines.Line2D object at 0x7f39ec347110>]
 > ax.plot(plateau_marks_pf, 1 / (1 + np.exp(plateau_marks_pf)),
 >         color="#D55E00", marker="^", markersize=8, linestyle="")
-> #> [<matplotlib.lines.Line2D object at 0x7f10a713c050>]
+> #> [<matplotlib.lines.Line2D object at 0x7f39ec346fd0>]
 > ax.set_yscale("log")
 > ax.set_xlabel("x")
 > #> Text(0.5, 0, 'x')
@@ -1327,11 +1327,11 @@ Last modified: 2026-11-11 12:09:04 (PST)
 > bcs_rho_pf = np.maximum(np.abs(1 - 3 * bcs_grid_pf), np.abs(1 - bcs_grid_pf))
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > ax.plot(bcs_grid_pf, bcs_rho_pf, color="#0072B2")
-> #> [<matplotlib.lines.Line2D object at 0x7f10a6f46fd0>]
+> #> [<matplotlib.lines.Line2D object at 0x7f39ec14afd0>]
 > ax.axhline(1, color="black", linestyle=":")
-> #> <matplotlib.lines.Line2D object at 0x7f10a6f47110>
+> #> <matplotlib.lines.Line2D object at 0x7f39ec14b110>
 > ax.axvline(0.5, color="#D55E00", linestyle="--")
-> #> <matplotlib.lines.Line2D object at 0x7f10a6f47250>
+> #> <matplotlib.lines.Line2D object at 0x7f39ec14b250>
 > ax.set_xlabel("Step length")
 > #> Text(0.5, 0, 'Step length')
 > ax.set_ylabel("Error factor")
