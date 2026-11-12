@@ -94,6 +94,22 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_exr-centered-data-rank-practice.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-centered-data-rank-practice.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exr-sample-covariance-singular-practice.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-sample-covariance-singular-practice.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-affine-subspace.qmd >}}
 
 {{< slidebreak >}}
@@ -102,7 +118,23 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_exr-affine-subspace-practice.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-affine-subspace-practice.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_thm-hyperplane-subspace.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exr-hyperplane-subspace-practice.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-hyperplane-subspace-practice.qmd >}}
 
 {{< slidebreak >}}
 
