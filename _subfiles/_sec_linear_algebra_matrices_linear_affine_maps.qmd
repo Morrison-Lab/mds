@@ -116,6 +116,14 @@
 
 {{< include mds/_subfiles/linear-algebra/_cor-linear-scalar.qmd >}}
 
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exr-linear-scalar-practice.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-linear-scalar-practice.qmd >}}
+
 {{< include mds/_subfiles/linear-algebra/_note-video-linear-maps.qmd >}}
 
 {{< slidebreak >}}
