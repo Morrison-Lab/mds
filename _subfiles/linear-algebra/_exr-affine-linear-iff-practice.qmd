@@ -2,7 +2,8 @@
 #### Choosing a constant that makes an affine map linear
 
 By @thm-affine-linear-iff,
-an [affine map](#def-affine-map) is a [linear map](#def-linear-map) exactly when its [offset](#def-affine-offset) is $\vzero$.
+an [affine map](#def-affine-map) is a [linear map](#def-linear-map)
+exactly when its [offset](#def-affine-offset) is $\vzero$.
 For $c \in \reals$,
 let $f: \reals^2 \to \reals^2$ be
 
