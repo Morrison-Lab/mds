@@ -1,0 +1,16 @@
+:::{#exr-mean-practice}
+#### Finding the mean age of four siblings
+
+Four siblings are $3$, $7$, $10$ and $12$ years old.
+
+Find the [mean](#def-mean) of their ages.
+
+::: {.callout-tip}
+#### Hint
+
+Use @def-mean with $n = 4$,
+as in @exm-mean.
+
+:::
+
+:::

@@ -1,0 +1,14 @@
+:::{#sol-span-practice}
+
+Yes.
+Entry by entry,
+$c_1 \vecf{v}_1 + c_2 \vecf{v}_2 = \tp{(c_1,\ c_1 + c_2,\ c_2)}$.
+Matching $\vecf{w}$,
+the first entry gives $c_1 = 3$
+and the third gives $c_2 = 2$.
+Then the second entry is $3 + 2 = 5$,
+which matches too,
+so $\vecf{w} = 3 \vecf{v}_1 + 2 \vecf{v}_2$
+is in the [span](#def-span).
+
+:::

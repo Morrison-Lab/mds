@@ -1,0 +1,21 @@
+:::{#exr-subspace-zero-practice}
+#### Testing whether $p_1 + p_2 = 1$ defines a subspace
+
+A coin toss can land heads or tails,
+and the [probabilities](https://morrison-lab.github.io/pds/probability-basics.html#def-probability) $p_1$ and $p_2$ of those two results satisfy $p_1 + p_2 = 1$.
+That condition defines the [set](https://morrison-lab.github.io/mcs/sets.html#def-set)
+
+$$
+\mathcal{P} = \cb{(p_1, p_2) \in \reals^2 : p_1 + p_2 = 1}.
+$$
+
+Is $\mathcal{P}$ a [subspace](#def-subspace) of $\reals^2$?
+
+::: {.callout-tip}
+#### Hint
+
+Use @thm-subspace-zero.
+
+:::
+
+:::

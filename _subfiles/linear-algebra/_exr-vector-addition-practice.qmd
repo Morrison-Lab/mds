@@ -1,0 +1,27 @@
+:::{#exr-vector-addition-practice}
+#### Adding two months of sales for three items
+
+A shop records how many units of each of three items it sells in a month,
+as a [column vector](#def-column-vector) in $\reals^3$.
+In two months it sells
+
+$$
+\vx = \sbmat{12 \\ 5 \\ 8}
+\quad \text{and} \quad
+\vy = \sbmat{10 \\ 7 \\ 3}
+$$
+
+units.
+
+Find $\vx + \vy$,
+the units of each item sold over both months.
+
+::: {.callout-tip}
+#### Hint
+
+Use @def-vector-addition,
+as in @exm-vector-addition.
+
+:::
+
+:::
