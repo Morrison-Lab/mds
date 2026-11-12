@@ -1,0 +1,11 @@
+:::{#sol-vector-valued-practice}
+
+Substituting $x_1 = 2$ and $x_2 = 3$,
+
+$$
+g\paren{\sbmat{2 \\ 3}} = \sbmat{2 + 3 \\ 2 \cd 3 \\ 2 - 3} = \sbmat{5 \\ 6 \\ -1},
+$$
+
+a [column vector](#def-column-vector) in $\reals^3$.
+
+:::
