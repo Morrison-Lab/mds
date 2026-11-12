@@ -1,7 +1,7 @@
 :::{#rem-newton-root-vs-model}
 #### Two ways to read the Newton step
 
-@thm-newton-model reads the [Newton step](#def-newton-step) as the [minimizer](algebra.qmd#def-global-minimizer) of the [quadratic model](#def-quadratic-model),
+@thm-newton-model reads the [Newton step](#def-newton-step) as the [minimizer](algebra.qmd#def-global-minimizer) of the [quadratic approximation](#def-quadratic-model),
 which needs the [Hessian](vector-calculus.qmd#def-hessian) $\matr{H}$ to be [positive definite](linear-algebra-special-matrices.qmd#def-positive-definite).
 @thm-newton-linearized-gradient reads it as the root of the [linear approximation of the gradient](#def-gradient-linear-approximation),
 which needs only $\matr{H}$ [invertible](linear-algebra-special-matrices.qmd#def-matrix-inverse).

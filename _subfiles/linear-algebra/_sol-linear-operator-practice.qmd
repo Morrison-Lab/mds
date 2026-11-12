@@ -1,0 +1,8 @@
+:::{#sol-linear-operator-practice}
+
+No.
+A [linear operator](#def-linear-operator) on $\reals^3$ sends $\reals^3$ to $\reals^3$.
+The outputs of $f$ lie in $\reals^2$, not $\reals^3$,
+so $f$ is a [linear map](#def-linear-map) but not a linear operator.
+
+:::

@@ -1,0 +1,9 @@
+{{< include mds/_subfiles/vector-calc/_def-iterative-method.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_def-vector-sequence-limit.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-vector-sequence-limit.qmd >}}

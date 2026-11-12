@@ -1,0 +1,28 @@
+:::{#exr-transpose-product-practice}
+#### The order of the factors in a transposed square product
+
+@rem-transpose-product-order shows that,
+for factors that are not [square](#def-square-matrix),
+keeping the original order of the factors in the [transpose](#def-matrix-transpose) of a [product](#def-matrix-mult) can give an undefined product.
+For two [square matrices](#def-square-matrix) of the same size,
+both $\tp{\matr{A}}\tp{\matr{B}}$ and $\tp{\matr{B}}\tp{\matr{A}}$ are defined,
+so the shapes alone cannot settle which order gives $\tp{(\matr{A}\matr{B})}$.
+Let
+
+$$
+\matr{A} = \begin{bmatrix} 1 & 2 \\ 0 & 1 \end{bmatrix},
+\qquad
+\matr{B} = \begin{bmatrix} 1 & 0 \\ 1 & 1 \end{bmatrix}.
+$$
+
+Does $\tp{\matr{A}}\tp{\matr{B}}$ equal $\tp{(\matr{A}\matr{B})}$ for these $\matr{A}$ and $\matr{B}$?
+
+::: {.callout-tip}
+#### Hint
+
+Compute $\matr{A}\matr{B}$ with @def-matrix-mult and take its [transpose](#def-matrix-transpose),
+then compute $\tp{\matr{A}}\tp{\matr{B}}$ and compare the two entry by entry.
+
+:::
+
+:::

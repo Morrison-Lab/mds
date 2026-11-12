@@ -1,0 +1,25 @@
+{{< include mds/_subfiles/vector-calc/_def-newton-method.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_def-quadratic-model.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-quadratic-model.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_rem-quadratic-model-taylor.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_thm-newton-model.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-newton-model.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_fig-newton-model.qmd >}}
