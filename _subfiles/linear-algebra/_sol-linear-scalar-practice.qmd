@@ -1,0 +1,13 @@
+:::{#sol-linear-scalar-practice}
+
+By @cor-linear-scalar,
+$w_j = f(\vecf{e}_j)$ for each $j$,
+so
+
+$$
+\vec{w} = \begin{bmatrix} 2 \\ 0 \\ -1 \end{bmatrix}.
+$$
+
+Then $f(\vx) = 2 x_1 - x_3$ for every $\vx \in \reals^3$.
+
+:::
