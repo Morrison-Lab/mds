@@ -188,14 +188,6 @@
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/linear-algebra/_exr-affine-map-zero-practice.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_sol-affine-map-zero-practice.qmd >}}
-
-{{< slidebreak >}}
-
 {{< include mds/_subfiles/linear-algebra/_thm-affine-linear-iff.qmd >}}
 
 {{< slidebreak >}}
