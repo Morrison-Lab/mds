@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-11 13:08:44 (PST)
+Last modified: 2026-11-12 02:19:53 (PST)
 
 # 1 Sums and direct sums
 
@@ -709,24 +709,6 @@ Last modified: 2026-11-11 13:08:44 (PST)
 
 > **NOTE:**
 >
-> **Exercise 12 (Finding the orthogonal complement of two vectors)** [Theorem 6](#thm-orthogonal-complement-subspace) says that an [orthogonal complement](#def-orthogonal-complement) is always a [subspace](linear-algebra-subspaces.llms.md#def-subspace), even when the original [set](https://morrison-lab.github.io/mcs/sets.html#def-set) is not. Let $\mathcal{X} = \mathopen{}\left\{(1, 0, 1), (1, 0, -1)\right\}\mathclose{}$, a set of two vectors in $\mathbb{R}^3$.
->
-> Find $\mathcal{X}^\perp$ as a [span](linear-algebra-subspaces.llms.md#def-span).
->
-> > **TIP:**
-> >
-> > A vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ is in $\mathcal{X}^\perp$ when $u_1 + u_3 = 0$ and $u_1 - u_3 = 0$.
-
-> **NOTE:**
->
-> *Solution 12*. A vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ is in $\mathcal{X}^\perp$ exactly when $(1, 0, 1) \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = u_1 + u_3 = 0$ and $(1, 0, -1) \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = u_1 - u_3 = 0$. Adding the two equations gives $u_1 = 0$, and then $u_3 = 0$, while $u_2$ is free. So
->
-> $$\mathcal{X}^\perp = \mathopen{}\left\{(0, u_2, 0) : u_2 \in \mathbb{R}\right\}\mathclose{} = \operatorname{span}\mathopen{}\left\{(0, 1, 0)\right\}\mathclose{},$$
->
-> the second coordinate axis, which is a [subspace](linear-algebra-subspaces.llms.md#def-subspace), as [Theorem 6](#thm-orthogonal-complement-subspace) says.
-
-> **NOTE:**
->
 > **Theorem 7 (The orthogonal complement of a column space is a null space)** For any $m \times n$ matrix $\mathbf{A}$,
 >
 > $$\mathcal{C}(\mathbf{A})^\perp = \mathcal{N}({\mathbf{A}}^{\top}).$$
@@ -797,30 +779,6 @@ Last modified: 2026-11-11 13:08:44 (PST)
 > &= 0.
 > && \text{(arithmetic)}
 > \end{aligned}$$
-
-> **NOTE:**
->
-> **Exercise 13 (Finding the orthogonal complement of a column space)** [Theorem 7](#thm-complement-null-space) turns the [orthogonal complement](#def-orthogonal-complement) of a [column space](linear-algebra-rank-nullity.llms.md#def-column-space) into a [null space](linear-algebra-rank-nullity.llms.md#def-null-space), which a [linear system](linear-algebra-matrices.llms.md#def-linear-system) describes. Let
->
-> $$\mathbf{A} = \begin{bmatrix}1 & 0 \\ 0 & 1 \\ 1 & 1\end{bmatrix}.$$
->
-> Find $\mathcal{C}(\mathbf{A})^\perp$ as a [span](linear-algebra-subspaces.llms.md#def-span).
->
-> > **TIP:**
-> >
-> > Solve ${\mathbf{A}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2$.
-
-> **NOTE:**
->
-> *Solution 13*. By [Theorem 7](#thm-complement-null-space), $\mathcal{C}(\mathbf{A})^\perp = \mathcal{N}({\mathbf{A}}^{\top})$. For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = (y_1, y_2, y_3)$,
->
-> $${\mathbf{A}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \begin{bmatrix}1 & 0 & 1 \\ 0 & 1 & 1\end{bmatrix} \begin{bmatrix}y_1 \\ y_2 \\ y_3\end{bmatrix} = \begin{bmatrix}y_1 + y_3 \\ y_2 + y_3\end{bmatrix},$$
->
-> which is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2$ exactly when $y_1 = y_2 = -y_3$. So
->
-> $$\mathcal{C}(\mathbf{A})^\perp = \operatorname{span}\mathopen{}\left\{(-1, -1, 1)\right\}\mathclose{}.$$
->
-> As a check, $(-1, -1, 1)$ is [orthogonal](linear-algebra-vectors.llms.md#def-orthogonal-vectors) to both [columns of](linear-algebra-matrices.llms.md#def-matrix-column) $\mathbf{A}$: $-1 + 0 + 1 = 0$ and $0 - 1 + 1 = 0$.
 
 > **NOTE:**
 >
@@ -928,24 +886,6 @@ Last modified: 2026-11-11 13:08:44 (PST)
 
 > **NOTE:**
 >
-> **Exercise 14 (Splitting a vector into a piece in a line and an orthogonal piece)** By [Theorem 8](#thm-orthogonal-direct-sum), every vector of $\mathbb{R}^p$ splits in only one way into a piece in a [subspace](linear-algebra-subspaces.llms.md#def-subspace) $\mathcal{S}$ and a piece in its [orthogonal complement](#def-orthogonal-complement). Let $\mathcal{S} = \operatorname{span}\mathopen{}\left\{(1, 2)\right\}\mathclose{}$, a line in $\mathbb{R}^2$, and let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = (5, 0)$.
->
-> Find $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \in \mathcal{S}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \in \mathcal{S}^\perp$ with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$.
->
-> > **TIP:**
-> >
-> > Take $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = t\,(1, 2)$, and choose $t$ so that $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ is [orthogonal](linear-algebra-vectors.llms.md#def-orthogonal-vectors) to $(1, 2)$.
-
-> **NOTE:**
->
-> *Solution 14*. Take $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = t\,(1, 2)$. Then $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = (5 - t, -2t)$ is in $\mathcal{S}^\perp$ exactly when
->
-> $$(1, 2) \cdot (5 - t, -2t) = 5 - t - 4t = 5 - 5t = 0,$$
->
-> so $t = 1$. Then $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = (1, 2)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (4, -2)$, with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (5, 0)$ and $(1, 2) \cdot (4, -2) = 4 - 4 = 0$.
-
-> **NOTE:**
->
 > **Theorem 9 (The orthogonal complement of the orthogonal complement)** For any subspace $\mathcal{S}$ of $\mathbb{R}^p$,
 >
 > $$(\mathcal{S}^\perp)^\perp = \mathcal{S}.$$
@@ -982,24 +922,6 @@ Last modified: 2026-11-11 13:08:44 (PST)
 > **NOTE:**
 >
 > **Example 17 (A set that is not a subspace does not come back)** The one-element set $\mathcal{X} = \mathopen{}\left\{(1, 1, 0)\right\}\mathclose{}$ is not a subspace. Its orthogonal complement is the same as that of $\mathcal{S}$ in [Example 16](#exm-double-complement), since both are defined by the single condition $u_1 + u_2 = 0$, so $(\mathcal{X}^\perp)^\perp = \operatorname{span}\mathopen{}\left\{(1, 1, 0)\right\}\mathclose{}$, which contains $(2, 2, 0) \notin \mathcal{X}$. [Theorem 9](#thm-double-complement) needs $\mathcal{S}$ to be a subspace.
-
-> **NOTE:**
->
-> **Exercise 15 (Taking the orthogonal complement twice)** [Theorem 9](#thm-double-complement) says that taking the [orthogonal complement](#def-orthogonal-complement) of a [subspace](linear-algebra-subspaces.llms.md#def-subspace) twice gives back the subspace. Let $\mathcal{S} = \operatorname{span}\mathopen{}\left\{(1, 2)\right\}\mathclose{}$ in $\mathbb{R}^2$, whose orthogonal complement is $\mathcal{S}^\perp = \operatorname{span}\mathopen{}\left\{(-2, 1)\right\}\mathclose{}$.
->
-> Find $(\mathcal{S}^\perp)^\perp$ directly from $\mathcal{S}^\perp = \operatorname{span}\mathopen{}\left\{(-2, 1)\right\}\mathclose{}$.
->
-> > **TIP:**
-> >
-> > A vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ is [orthogonal](linear-algebra-vectors.llms.md#def-orthogonal-vectors) to every multiple of $(-2, 1)$ exactly when $-2 w_1 + w_2 = 0$.
-
-> **NOTE:**
->
-> *Solution 15*. A vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ is in $(\mathcal{S}^\perp)^\perp$ exactly when $c\,(-2, 1) \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = c\,(-2 w_1 + w_2) = 0$ for every $c$, that is, when $w_2 = 2 w_1$. So
->
-> $$(\mathcal{S}^\perp)^\perp = \mathopen{}\left\{(w_1, 2 w_1) : w_1 \in \mathbb{R}\right\}\mathclose{} = \operatorname{span}\mathopen{}\left\{(1, 2)\right\}\mathclose{} = \mathcal{S},$$
->
-> as [Theorem 9](#thm-double-complement) says.
 
 # 3 The fundamental theorem of linear algebra
 
@@ -1096,7 +1018,7 @@ Last modified: 2026-11-11 13:08:44 (PST)
 
 > **NOTE:**
 >
-> **Exercise 16 (Testing whether a linear system has a solution through the left null space)** Part 2 of [Theorem 10](#thm-fundamental-subspaces) says that $\mathcal{C}(\mathbf{A}) = \mathcal{N}({\mathbf{A}}^{\top})^\perp$, so a [linear system](linear-algebra-matrices.llms.md#def-linear-system) $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ has a solution exactly when $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ is [orthogonal](linear-algebra-vectors.llms.md#def-orthogonal-vectors) to every vector of the [left null space](linear-algebra-rank-nullity.llms.md#def-left-null-space). Let
+> **Exercise 12 (Testing whether a linear system has a solution through the left null space)** Part 2 of [Theorem 10](#thm-fundamental-subspaces) says that $\mathcal{C}(\mathbf{A}) = \mathcal{N}({\mathbf{A}}^{\top})^\perp$, so a [linear system](linear-algebra-matrices.llms.md#def-linear-system) $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ has a solution exactly when $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ is [orthogonal](linear-algebra-vectors.llms.md#def-orthogonal-vectors) to every vector of the [left null space](linear-algebra-rank-nullity.llms.md#def-left-null-space). Let
 >
 > $$\mathbf{A} = \begin{bmatrix}1 & 1 \\ 1 & 1 \\ 0 & 0\end{bmatrix},
 > \qquad
@@ -1110,7 +1032,7 @@ Last modified: 2026-11-11 13:08:44 (PST)
 
 > **NOTE:**
 >
-> *Solution 16*. Here ${\mathbf{A}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = (y_1 + y_2, y_1 + y_2)$, so $(1, -1, 0)$ is in $\mathcal{N}({\mathbf{A}}^{\top})$. But
+> *Solution 12*. Here ${\mathbf{A}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = (y_1 + y_2, y_1 + y_2)$, so $(1, -1, 0)$ is in $\mathcal{N}({\mathbf{A}}^{\top})$. But
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \cdot (1, -1, 0) = 1 - 2 + 0 = -1 \neq 0,$$
 >
