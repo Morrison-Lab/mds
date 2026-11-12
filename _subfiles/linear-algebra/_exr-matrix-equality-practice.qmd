@@ -1,0 +1,23 @@
+:::{#exr-matrix-equality-practice}
+#### Solving for an unknown entry
+
+Two [matrices](#def-matrix) are [equal](#def-matrix-equality) only when every pair of matching entries agrees,
+so one matrix equation stands for several equations between numbers.
+Let
+
+$$
+\begin{bmatrix} 2 & x + 1 \\ 0 & 5 \end{bmatrix}
+= \begin{bmatrix} 2 & 4 \\ 0 & 5 \end{bmatrix}.
+$$
+
+Find $x$.
+
+::: {.callout-tip}
+#### Hint
+
+Both [matrices](#def-matrix) are $2 \times 2$,
+so by @def-matrix-equality each entry on the left is the same number as the entry in the same position on the right.
+
+:::
+
+:::

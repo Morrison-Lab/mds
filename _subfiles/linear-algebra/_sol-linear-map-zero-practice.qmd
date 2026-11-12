@@ -1,0 +1,12 @@
+:::{#sol-linear-map-zero-practice}
+
+No.
+
+$$
+g(\vzero) = (0 + 0,\ 0 - 1) = (0, -1) \ne \vzero.
+$$
+
+Every [linear map](#def-linear-map) sends $\vzero$ to $\vzero$ by @thm-linear-map-zero,
+so $g$ is not one.
+
+:::

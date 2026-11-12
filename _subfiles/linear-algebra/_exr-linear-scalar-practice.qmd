@@ -1,0 +1,25 @@
+:::{#exr-linear-scalar-practice}
+#### Finding the weight vector of a linear score
+
+A linear score of $p$ measurements is a [dot product](linear-algebra-vectors.qmd#def-dot-product) of the measurements with a vector of [weights](linear-algebra-vectors.qmd#def-weight),
+by @cor-linear-scalar.
+Let $f: \reals^3 \to \reals$ be a [linear map](#def-linear-map) with
+
+$$
+f(\vecf{e}_1) = 2,
+\qquad
+f(\vecf{e}_2) = 0,
+\qquad
+f(\vecf{e}_3) = -1.
+$$
+
+Find the vector $\vec{w}$ with $f(\vx) = \dprod{\vec{w}}{\vx}$ for every $\vx \in \reals^3$.
+
+::: {.callout-tip}
+#### Hint
+
+@cor-linear-scalar gives each entry $w_j$ of $\vec{w}$.
+
+:::
+
+:::

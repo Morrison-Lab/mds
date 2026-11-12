@@ -20,4 +20,20 @@ reticulate::py_require(py_packages)
 
 []{#sec-newton-method}
 
-{{< include mds/_subfiles/_sec_optimization_newton.qmd >}}
+{{< include mds/_subfiles/vector-calc/_prose-descent-attribution.qmd >}}
+
+# Iterative methods {#sec-newton-iterative}
+
+{{< include mds/_subfiles/_sec_optimization_newton_iterative.qmd >}}
+
+# Newton's method and the quadratic approximation {#sec-newton-quadratic-approximation}
+
+{{< include mds/_subfiles/_sec_optimization_newton_model.qmd >}}
+
+# The Newton step as a root of the linear approximation of the gradient {#sec-newton-gradient-root}
+
+{{< include mds/_subfiles/_sec_optimization_newton_root.qmd >}}
+
+# Convergence {#sec-newton-convergence}
+
+{{< include mds/_subfiles/_sec_optimization_newton_convergence.qmd >}}

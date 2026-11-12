@@ -1,0 +1,10 @@
+:::{#sol-real-valued-practice}
+
+Yes.
+For every $\vx \in \reals^3$,
+$2 x_1 + 5 x_2 - x_3$ is one [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers),
+so $f : \reals^3 \to \reals$ is [real-valued](#def-real-vector-valued).
+For example,
+$f\paren{\sbmat{1 \\ 1 \\ 1}} = 2 + 5 - 1 = 6$.
+
+:::

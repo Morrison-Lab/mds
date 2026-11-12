@@ -1,0 +1,11 @@
+:::{#sol-square-matrix-practice}
+
+Yes.
+The [transpose](#def-matrix-transpose) $\tp{\matr{X}}$ is $p \times n$,
+so $\tp{\matr{X}}$ has $n$ [column](#def-matrix-column)s.
+$\matr{X}$ has $n$ [row](#def-matrix-row)s,
+so the [product](#def-matrix-mult) $\tp{\matr{X}}\matr{X}$ is defined and is $p \times p$.
+It has $p$ rows and $p$ columns,
+so it is [square](#def-square-matrix) for every $n$ and $p$.
+
+:::

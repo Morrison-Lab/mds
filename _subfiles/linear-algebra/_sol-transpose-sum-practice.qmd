@@ -1,0 +1,19 @@
+:::{#sol-transpose-sum-practice}
+
+Adding entry by entry,
+
+$$
+\matr{A} + \matr{B} = \sbmat{1 & 3 & 1 \\ 5 & 1 & 1},
+$$
+
+so
+
+$$
+\tp{(\matr{A} + \matr{B})} = \sbmat{1 & 5 \\ 3 & 1 \\ 1 & 1}.
+$$
+
+By @thm-transpose-sum,
+adding $\tp{\matr{A}} = \sbmat{1 & 3 \\ 2 & -1 \\ 0 & 4}$ and $\tp{\matr{B}} = \sbmat{0 & 2 \\ 1 & 2 \\ 1 & -3}$
+gives the same [matrix](#def-matrix).
+
+:::
