@@ -2,7 +2,7 @@
 #### Finding coordinates in a basis other than the indicator vectors
 
 The [coordinates](#def-coordinates) of a vector depend on the [basis](#def-basis),
-and they equal its entries only in the basis of [indicator vectors](linear-algebra-vectors.qmd#def-indicator-vector).
+and they match its entries only in the basis of [indicator vectors](linear-algebra-vectors.qmd#def-indicator-vector).
 The vectors $\vecf{a}_1 = \tp{(2, 0)}$ and $\vecf{a}_2 = \tp{(1, 1)}$ form a basis of $\reals^2$.
 Let
 
