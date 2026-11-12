@@ -1,0 +1,31 @@
+:::{#thm-open-ball-convex}
+#### An open ball is convex
+
+Let $\vx_0 \in \reals^p$ and $r > 0$.
+The [open ball](vector-calculus.qmd#def-ball) of radius $r$ around $\vx_0$ is a [convex set](#def-convex-set).
+
+:::
+
+::: proof
+
+Call the [open ball](vector-calculus.qmd#def-ball) $B$, and let $\vx, \vy \in B$ and $t \in [0, 1]$.
+The [triangle inequality](linear-algebra-inner-products.qmd#thm-triangle-inequality)
+and the [absolute homogeneity of the norm](linear-algebra-inner-products.qmd#thm-norm-properties) give
+
+$$
+\ba
+\norm{t \vx + (1 - t) \vy - \vx_0}
+&= \norm{t (\vx - \vx_0) + (1 - t) (\vy - \vx_0)}
+&& \text{(} \vx_0 = t \vx_0 + (1 - t) \vx_0 \text{)}
+\\
+&\le t \norm{\vx - \vx_0} + (1 - t) \norm{\vy - \vx_0}
+&& \text{(triangle inequality and } t, 1 - t \ge 0 \text{)}
+\\
+&< r,
+&& \text{(weighted mean of two numbers less than } r \text{)}
+\ea
+$$
+
+so $t \vx + (1 - t) \vy \in B$.
+
+:::
