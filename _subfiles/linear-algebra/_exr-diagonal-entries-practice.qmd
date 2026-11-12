@@ -1,0 +1,22 @@
+:::{#exr-diagonal-entries-practice}
+#### Adding the diagonal entries of a square matrix
+
+The [sum](algebra-sums.qmd#def-summation) of the [diagonal entries](#def-diagonal-entry) of a [square matrix](#def-square-matrix)
+summarizes that [matrix](#def-matrix) in one number,
+called its [trace](linear-algebra-special-matrices.qmd#def-trace).
+Let
+
+$$
+\matr{F} = \begin{bmatrix} 2 & 5 & -1 \\ 0 & -3 & 8 \\ 4 & 1 & 6 \end{bmatrix}.
+$$
+
+Find the sum of the diagonal entries of $\matr{F}$.
+
+::: {.callout-tip}
+#### Hint
+
+Find the [main diagonal](#def-main-diagonal) of $\matr{F}$ first.
+
+:::
+
+:::

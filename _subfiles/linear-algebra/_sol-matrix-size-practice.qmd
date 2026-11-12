@@ -1,0 +1,14 @@
+:::{#sol-matrix-size-practice}
+
+$\matr{C}$ has three [row](#def-matrix-row)s,
+$\begin{bmatrix} 4 & 0 \end{bmatrix}$,
+$\begin{bmatrix} 1 & -3 \end{bmatrix}$
+and
+$\begin{bmatrix} 2 & 7 \end{bmatrix}$,
+and each row has two entries,
+so $\matr{C}$ has two [column](#def-matrix-column)s.
+So $m = 3$ and $n = 2$:
+$\matr{C}$ is a $3 \times 2$ [matrix](#def-matrix),
+with $3 \cd 2 = 6$ entries.
+
+:::
