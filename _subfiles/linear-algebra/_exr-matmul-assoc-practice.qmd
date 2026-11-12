@@ -1,0 +1,29 @@
+:::{#exr-matmul-assoc-practice}
+#### Grouping a product of three matrices
+
+By @thm-matmul-assoc, a [product](#def-matrix-mult) of three [matrices](#def-matrix) can be grouped either way,
+so $\matr{A}\matr{B}\vx$ can be computed as $\matr{A}(\matr{B}\vx)$,
+without ever forming $\matr{A}\matr{B}$.
+Let
+
+$$
+\matr{A} = \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix},
+\qquad
+\matr{B} = \begin{bmatrix} 2 & 0 \\ 1 & 1 \end{bmatrix},
+\qquad
+\vx = \begin{bmatrix} 1 \\ 2 \end{bmatrix},
+$$
+
+where $\vx$ is a $2 \times 1$ matrix.
+
+Find $\matr{A}\matr{B}\vx$ by computing $\matr{B}\vx$ first.
+
+::: {.callout-tip}
+#### Hint
+
+By @def-matrix-mult, $\matr{B}\vx$ is a $2 \times 1$ [matrix](#def-matrix);
+multiply $\matr{A}$ by it.
+
+:::
+
+:::

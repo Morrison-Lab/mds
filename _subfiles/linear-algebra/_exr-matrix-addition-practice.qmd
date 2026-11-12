@@ -1,0 +1,24 @@
+:::{#exr-matrix-addition-practice}
+#### Adding two $2 \times 2$ matrices
+
+A [matrix sum](#def-matrix-addition) combines two tables of the same shape entry by entry,
+such as two months of counts recorded in the same [row](#def-matrix-row)s and [column](#def-matrix-column)s.
+Let
+
+$$
+\matr{A} = \begin{bmatrix} 1 & -1 \\ 2 & 0 \end{bmatrix},
+\qquad
+\matr{B} = \begin{bmatrix} 3 & 2 \\ -2 & 5 \end{bmatrix}.
+$$
+
+Compute $\matr{A} + \matr{B}$.
+
+::: {.callout-tip}
+#### Hint
+
+Add the entries in the same position,
+as in @exm-matrix-addition.
+
+:::
+
+:::
