@@ -302,7 +302,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-12 02:00:12 (PST)</p>
+  <p class="date">Last modified: 2026-11-12 12:56:41 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -698,7 +698,7 @@ a &amp;= b \\
 &amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~8 in Vectors}}\text{)}
 \\
 &amp;= \sum_{i=1}^px_i\,(a u_i + b w_i)
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~8 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-vector-addition}{\text{Definition~7 in Vectors}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~9 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-vector-addition}{\text{Definition~7 in Vectors}}\text{)}
 \\
 &amp;= \sum_{i=1}^p\mathopen{}\left(x_i a u_i + x_i b w_i\right)\mathclose{}
 &amp;&amp; \text{(distribute each } x_i \text{)}
@@ -890,10 +890,10 @@ u_1 &amp;= u_2 \\
 \begin{aligned}
 ({\mathbf{A}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})_j
 &amp;= \sum_{i=1}^{m} ({\mathbf{A}}^{\top})_{ji}\, x_i
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~15 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~16 in Matrices}}\text{)}
 \\
 &amp;= \sum_{i=1}^{m} a_{ij}\, x_i
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~5 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~6 in Matrices}}\text{)}
 \\
 &amp;= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}.
 &amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~8 in Vectors}}\text{)}
@@ -909,7 +909,7 @@ u_1 &amp;= u_2 \\
 &amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~8 in Vectors}}\text{)}
 \\
 &amp;= \sum_{i=1}^{m} \mathopen{}\left(\sum_{j=1}^na_{ij} z_j\right)\mathclose{}\, x_i
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~15 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~16 in Matrices}}\text{)}
 \\
 &amp;= \sum_{i=1}^{m} \sum_{j=1}^na_{ij}\, z_j\, x_i
 &amp;&amp; \text{(distribute each } x_i \text{ over the inner sum)}
@@ -1087,7 +1087,7 @@ a &amp;= c \\
 <section class="slide level2">
 
 <div id="exm-double-complement" class="theorem example">
-<p><span class="theorem-title"><strong>Example 16 (Back to the line)</strong></span> In <a href="#/exm-orthogonal-direct-sum" class="quarto-xref">Example&nbsp;15</a>, <span class="math inline">\(\mathcal{S} = \operatorname{span}\mathopen{}\left\{(1, 1, 0)\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathcal{S}^\perp = \operatorname{span}\mathopen{}\left\{(1, -1, 0), (0, 0, 1)\right\}\mathclose{}\)</span>. Put those two spanning vectors in the columns of the <span class="math inline">\(3 \times 2\)</span> matrix <span class="math inline">\(\mathbf{B} = \begin{bmatrix} 1 &amp; 0 \\ -1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}\)</span>, so <span class="math inline">\(\mathcal{S}^\perp = \mathcal{C}(\mathbf{B})\)</span> (<a href="./linear-algebra-rank-nullity.html#thm-column-space-span">Theorem&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>) and <span class="math inline">\((\mathcal{S}^\perp)^\perp = \mathcal{N}({\mathbf{B}}^{\top})\)</span> (<a href="#/thm-complement-null-space" class="quarto-xref">Theorem&nbsp;7</a>). Since <span class="math inline">\({\mathbf{B}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (w_1 - w_2,\ w_3)\)</span> (<a href="./linear-algebra-matrices.html#def-matvec-mult">Definition&nbsp;15 in Matrices</a>), <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in (\mathcal{S}^\perp)^\perp\)</span> exactly when <span class="math inline">\(w_1 - w_2 = 0\)</span> and <span class="math inline">\(w_3 = 0\)</span>. So</p>
+<p><span class="theorem-title"><strong>Example 16 (Back to the line)</strong></span> In <a href="#/exm-orthogonal-direct-sum" class="quarto-xref">Example&nbsp;15</a>, <span class="math inline">\(\mathcal{S} = \operatorname{span}\mathopen{}\left\{(1, 1, 0)\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathcal{S}^\perp = \operatorname{span}\mathopen{}\left\{(1, -1, 0), (0, 0, 1)\right\}\mathclose{}\)</span>. Put those two spanning vectors in the columns of the <span class="math inline">\(3 \times 2\)</span> matrix <span class="math inline">\(\mathbf{B} = \begin{bmatrix} 1 &amp; 0 \\ -1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}\)</span>, so <span class="math inline">\(\mathcal{S}^\perp = \mathcal{C}(\mathbf{B})\)</span> (<a href="./linear-algebra-rank-nullity.html#thm-column-space-span">Theorem&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>) and <span class="math inline">\((\mathcal{S}^\perp)^\perp = \mathcal{N}({\mathbf{B}}^{\top})\)</span> (<a href="#/thm-complement-null-space" class="quarto-xref">Theorem&nbsp;7</a>). Since <span class="math inline">\({\mathbf{B}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (w_1 - w_2,\ w_3)\)</span> (<a href="./linear-algebra-matrices.html#def-matvec-mult">Definition&nbsp;16 in Matrices</a>), <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in (\mathcal{S}^\perp)^\perp\)</span> exactly when <span class="math inline">\(w_1 - w_2 = 0\)</span> and <span class="math inline">\(w_3 = 0\)</span>. So</p>
 <p><span class="math display">\[
 \begin{aligned}
 (\mathcal{S}^\perp)^\perp &amp;= \mathopen{}\left\{(a, a, 0) : a \in \mathbb{R}\right\}\mathclose{} \\
