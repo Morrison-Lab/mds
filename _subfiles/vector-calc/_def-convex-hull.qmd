@@ -1,0 +1,13 @@
+:::{#def-convex-hull}
+#### Convex hull, convex envelope
+
+The **convex hull** (or **convex envelope**)
+[@wikipedia_convex_hull]
+of a [set](https://morrison-lab.github.io/mcs/sets.html#def-set) $S \subseteq \reals^p$ is the set of points
+that lie in every [convex set](#def-convex-set) containing $S$:
+
+$$
+\operatorname{conv}(S) \eqdef \cb{\vx \in \reals^p : \vx \in K \text{ for every convex } K \subseteq \reals^p \text{ with } S \subseteq K}.
+$$
+
+:::
