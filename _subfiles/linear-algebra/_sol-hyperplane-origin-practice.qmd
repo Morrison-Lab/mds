@@ -1,0 +1,15 @@
+:::{#sol-hyperplane-origin-practice}
+
+Setting $x_2 = 0$ gives $x_1 = 2$, so $\vx_0 = (2, 0)$ is in $\mathcal{H}$.
+With $\vec{w} = (2, 1)$, take $\vecf{v} = (-1, 2)$.
+Then $\vx_0 + t\,\vecf{v} = (2 - t, 2t)$, and
+
+$$
+2\,(2 - t) + 2t - 4 = 0
+$$
+
+for every $t$.
+Conversely, a point $(x_1, x_2)$ of $\mathcal{H}$ has $x_2 = 4 - 2 x_1$,
+so it equals $\vx_0 + t\,\vecf{v}$ with $t = 2 - x_1$.
+
+:::
