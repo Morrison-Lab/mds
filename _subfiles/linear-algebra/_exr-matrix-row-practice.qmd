@@ -1,0 +1,22 @@
+:::{#exr-matrix-row-practice}
+#### Reading off a row of a matrix
+
+When each [row of a matrix](#def-matrix-row) records one observation,
+reading off a [row](#def-matrix-row) extracts every measured quantity for that one observation.
+Let
+
+$$
+\matr{D} = \begin{bmatrix} 1 & -4 & 2 \\ 0 & 6 & 3 \\ 5 & 5 & -1 \end{bmatrix}.
+$$
+
+Find $\matr{D}_{3,:}$, the third [row of $\matr{D}$](#def-matrix-row).
+
+::: {.callout-tip}
+#### Hint
+
+A [row of a matrix](#def-matrix-row) lists the entries $a_{i1}, \ldots, a_{in}$ from left to right,
+as in @exm-matrix-rows-columns.
+
+:::
+
+:::

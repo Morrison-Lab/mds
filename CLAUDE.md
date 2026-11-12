@@ -4,7 +4,9 @@ Project guidance for Claude Code (CLI, IDE, and the GitHub Action). The same con
 
 ## Project context
 
-`mds` holds the mathematics that the Morrison-Lab data science courses assume: notation, algebra, calculus, linear algebra and vector calculus, as [Quarto](https://quarto.org/) fragments. It renders on its own as a website, and course sites such as `mlds` link to its pages by URL, so a page's path and its `#id` anchors are an interface: renaming either breaks those links. The scaffolding came from the UCD-SERG `qwt` template.
+`mds` holds the mathematics that the Morrison-Lab data science courses assume: notation, algebra, calculus, linear algebra and vector calculus, as [Quarto](https://quarto.org/) fragments.
+It renders on its own as a website, and course sites such as `lds` link to its pages by URL, so a page's path and its `#id` anchors are an interface: renaming either breaks those links.
+The scaffolding came from the UCD-SERG `qwt` template.
 
 The shared math basics (logic and proof writing, sets, functions, number systems, relations, induction, growth rates, expressions and algorithms, notation) moved to [`Morrison-Lab/mcs`](https://github.com/Morrison-Lab/mcs), the first site in the course sequence (Morrison-Lab/mcs#60).
 The matching `mds` pages are redirect stubs.
@@ -14,7 +16,11 @@ Authoritative style guide: [UCD-SERG Lab Manual](https://ucd-serg.github.io/lab-
 
 ## Repository layout
 
-- `index.qmd`, `chapters/`, `appendix-*.qmd` --- Quarto source pages
+- `index.qmd`, the other top-level `*.qmd` files, and `appendix-*.qmd` --- Quarto source pages
+  (there is no `chapters/` directory)
+- `_subfiles/` --- the units the pages include: some in topic folders (`_subfiles/linear-algebra/`, `_subfiles/measures/`, ...), the rest still at the top of `_subfiles/`
+- `_*.qmd` at the top level (`_algebra.qmd`, `_measures.qmd`, ...) --- section bodies that a page includes
+- `mds` --- a symlink to `.`; the pages write their includes through it (`{{< include mds/_subfiles/... >}}`)
 - `references.qmd` --- standalone reference page; excluded from the default website
   render (`!references.qmd` in `_quarto-website.yml`), so it isn't part of the
   normal site build

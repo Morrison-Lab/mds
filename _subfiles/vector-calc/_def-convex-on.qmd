@@ -1,0 +1,13 @@
+:::{#def-convex-on}
+#### Convex function on a set
+
+Let $K \subseteq \reals^p$ be a [convex set](#def-convex-set).
+A function $f : \reals^p \to \reals$ is **convex on** $K$ if
+
+$$
+f(t \vx + (1 - t) \vy) \le t f(\vx) + (1 - t) f(\vy)
+$$
+
+[for all](https://morrison-lab.github.io/mcs/proof-writing.html#def-universal-quantifier) $\vx, \vy \in K$ and all $t \in [0, 1]$.
+
+:::

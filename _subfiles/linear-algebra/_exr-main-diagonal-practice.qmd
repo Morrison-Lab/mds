@@ -1,0 +1,23 @@
+:::{#exr-main-diagonal-practice}
+#### The main diagonal of a tall matrix
+
+The [main diagonal](#def-main-diagonal) of a [matrix](#def-matrix) that is not [square](#def-square-matrix)
+stops when it runs out of [row](#def-matrix-row)s or [column](#def-matrix-column)s,
+whichever comes first.
+A tall matrix, with more rows than columns, runs out of columns first.
+Let
+
+$$
+\matr{E} = \begin{bmatrix} 7 & -2 \\ 1 & 3 \\ 0 & 5 \\ 4 & -6 \end{bmatrix}.
+$$
+
+Find the main diagonal of $\matr{E}$.
+
+::: {.callout-tip}
+#### Hint
+
+Find $m$, $n$ and $k$ in @def-main-diagonal.
+
+:::
+
+:::
