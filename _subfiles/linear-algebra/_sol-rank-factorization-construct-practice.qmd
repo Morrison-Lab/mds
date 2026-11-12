@@ -4,9 +4,9 @@
 are [linearly independent](linear-algebra-subspaces.qmd#def-linearly-independent):
 the third entry of $c_1\,(1, 2, 1) + c_2\,(2, 4, 0)$ is $c_1$, and then the first is $2 c_2$.
 They [span](linear-algebra-subspaces.qmd#def-span) $\mathcal{C}(\matr{A})$,
-since the third column equals the first plus the second,
+since the third [column](linear-algebra-matrices.qmd#def-matrix-column) is the sum of the first and the second,
 so $\rankf{\matr{A}} = 2$.
-Each column of $\matr{A}$ in terms of them:
+Each [column of](linear-algebra-matrices.qmd#def-matrix-column) $\matr{A}$ in terms of them:
 
 $$
 \ba

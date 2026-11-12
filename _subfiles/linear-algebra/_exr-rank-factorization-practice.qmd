@@ -14,7 +14,7 @@ Find a rank factorization of $\matr{A}$.
 ::: {.callout-tip}
 #### Hint
 
-In $\matr{A}$, the second column is twice the first, so $\rankf{\matr{A}} = 1$.
+In $\matr{A}$, the second [column](linear-algebra-matrices.qmd#def-matrix-column) is twice the first, so $\rankf{\matr{A}} = 1$.
 
 :::
 

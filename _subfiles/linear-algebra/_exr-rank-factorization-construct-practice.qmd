@@ -9,14 +9,14 @@ $$
 \matr{A} = \sbmat{1 & 2 & 3 \\ 2 & 4 & 6 \\ 1 & 0 & 1},
 $$
 
-in which column $3$ equals column $1$ plus column $2$.
+in which [column](linear-algebra-matrices.qmd#def-matrix-column) $3$ is the sum of columns $1$ and $2$.
 
 Find a rank factorization $\matr{A} = \matr{C}\matr{R}$ in which $\matr{C}$ holds [columns 1 and 2 of $\matr{A}$](linear-algebra-matrices.qmd#def-matrix-column).
 
 ::: {.callout-tip}
 #### Hint
 
-Column $j$ of $\matr{R}$ says how much of column $1$ and of column $2$ of $\matr{C}$ add up to column $j$ of $\matr{A}$.
+[Column $j$ of](linear-algebra-matrices.qmd#def-matrix-column) $\matr{R}$ says how much of column $1$ and of column $2$ of $\matr{C}$ add up to column $j$ of $\matr{A}$.
 
 :::
 
