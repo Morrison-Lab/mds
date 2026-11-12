@@ -5255,6 +5255,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra#def-matrix-equality",
+   "site": "mds",
+   "page": "linear-algebra",
+   "div": "def-matrix-equality",
+   "kind": "def",
+   "title": "Equal matrices",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra#def-matrix-induced-inner-product",
    "site": "mds",
    "page": "linear-algebra",
@@ -8141,6 +8150,15 @@
    "div": "def-matrix-column",
    "kind": "def",
    "title": "Column of a matrix",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-matrices#def-matrix-equality",
+   "site": "mds",
+   "page": "linear-algebra-matrices",
+   "div": "def-matrix-equality",
+   "kind": "def",
+   "title": "Equal matrices",
    "external": false
   },
   {
@@ -15857,6 +15875,10 @@
    "mds/linear-algebra-subspaces#def-linearly-independent"
   ],
   [
+   "mds/linear-algebra#def-matrix-equality",
+   "mds/linear-algebra#def-matrix"
+  ],
+  [
    "mds/linear-algebra#def-matrix-induced-inner-product",
    "mds/linear-algebra#def-positive-definite"
   ],
@@ -19430,6 +19452,10 @@
   ],
   [
    "mds/linear-algebra-matrices#def-matrix-column",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
+   "mds/linear-algebra-matrices#def-matrix-equality",
    "mds/linear-algebra-matrices#def-matrix"
   ],
   [
