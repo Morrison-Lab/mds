@@ -1,0 +1,8 @@
+:::{#rem-linear-approximation-vector}
+#### The one-variable linear approximation is the case $p = 1$
+
+For $p = 1$, the [gradient](#def-vector-derivative) of $f$ is its [derivative](calculus-derivatives.qmd#def-derivative),
+so @eq-linear-approximation-vector is the one-variable [linear approximation](calculus-derivatives.qmd#def-linear-approximation),
+with the step $\stepvec$ in place of $\smallconst$.
+
+:::

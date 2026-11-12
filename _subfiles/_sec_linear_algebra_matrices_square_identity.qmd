@@ -53,3 +53,11 @@
 {{< include mds/_subfiles/linear-algebra/_rem-identity-matrix-kronecker-delta.qmd >}}
 
 {{< include mds/_subfiles/linear-algebra/_thm-identity.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exr-identity-product-practice.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-identity-product-practice.qmd >}}
