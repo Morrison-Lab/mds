@@ -230,45 +230,15 @@ cookieconsent.run({
 <script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
 <link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 <style>
-div.callout-exm.callout {
-  border-left-color: #6A1B9A;
+div.callout-solution.callout {
+  border-left-color: #4E342E;
 }
-div.callout-exm.callout-style-default .callout-header {
-  background-color: rgba(106, 27, 154, 0.13);
+div.callout-solution.callout-style-default .callout-header {
+  background-color: rgba(78, 52, 46, 0.13);
 }
-div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-fig.callout {
-  border-left-color: #757575;
-}
-div.callout-fig.callout-style-default .callout-header {
-  background-color: rgba(117, 117, 117, 0.13);
-}
-div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-exr.callout {
-  border-left-color: #FFA500;
-}
-div.callout-exr.callout-style-default .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
-}
-div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-tbl.callout {
-  border-left-color: #757575;
-}
-div.callout-tbl.callout-style-default .callout-header {
-  background-color: rgba(117, 117, 117, 0.13);
-}
-div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-remark.callout {
   border-left-color: #AD1457;
@@ -280,25 +250,25 @@ div.callout-remark .callout-toggle::before {  background-image: url('data:image/
 div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-solution.callout {
-  border-left-color: #4E342E;
+div.callout-cor.callout {
+  border-left-color: #00838F;
 }
-div.callout-solution.callout-style-default .callout-header {
-  background-color: rgba(78, 52, 46, 0.13);
+div.callout-cor.callout-style-default .callout-header {
+  background-color: rgba(0, 131, 143, 0.13);
 }
-div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-lem.callout {
-  border-left-color: #1565C0;
+div.callout-exr.callout {
+  border-left-color: #FFA500;
 }
-div.callout-lem.callout-style-default .callout-header {
-  background-color: rgba(21, 101, 192, 0.13);
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
 }
-div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-proof.callout {
   border-left-color: #37474F;
@@ -310,25 +280,35 @@ div.callout-proof .callout-toggle::before {  background-image: url('data:image/s
 div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-cnj.callout {
-  border-left-color: #558B2F;
+div.callout-fig.callout {
+  border-left-color: #757575;
 }
-div.callout-cnj.callout-style-default .callout-header {
-  background-color: rgba(85, 139, 47, 0.13);
+div.callout-fig.callout-style-default .callout-header {
+  background-color: rgba(117, 117, 117, 0.13);
 }
-div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-def.callout {
-  border-left-color: #1B5E20;
+div.callout-tbl.callout {
+  border-left-color: #757575;
 }
-div.callout-def.callout-style-default .callout-header {
-  background-color: rgba(27, 94, 32, 0.13);
+div.callout-tbl.callout-style-default .callout-header {
+  background-color: rgba(117, 117, 117, 0.13);
 }
-div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-exm.callout {
+  border-left-color: #6A1B9A;
+}
+div.callout-exm.callout-style-default .callout-header {
+  background-color: rgba(106, 27, 154, 0.13);
+}
+div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-prp.callout {
   border-left-color: #827717;
@@ -340,15 +320,35 @@ div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-cor.callout {
-  border-left-color: #00838F;
+div.callout-def.callout {
+  border-left-color: #1B5E20;
 }
-div.callout-cor.callout-style-default .callout-header {
-  background-color: rgba(0, 131, 143, 0.13);
+div.callout-def.callout-style-default .callout-header {
+  background-color: rgba(27, 94, 32, 0.13);
 }
-div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-lem.callout {
+  border-left-color: #1565C0;
+}
+div.callout-lem.callout-style-default .callout-header {
+  background-color: rgba(21, 101, 192, 0.13);
+}
+div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
+}
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
+}
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 
@@ -1131,7 +1131,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-11-11 21:31:16 (PST)</p>
+      <p class="date">Last modified: 2026-11-11 22:34:02 (PST)</p>
     </div>
   </div>
   
@@ -1222,14 +1222,14 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exm</span><a href="#exm-matrix-equality" class="quarto-xref">Example&nbsp;1</a> (Same entries, different shapes)
+<span class="screen-reader-only">Exm</span><a href="#exm-matrix-equality" class="quarto-xref">Example&nbsp;1</a> (Equal and unequal matrices)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-matrix-equality" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1 (Same entries, different shapes)</strong></span> <span class="math display">\[
+<p><span class="theorem-title"><strong>Example 1 (Equal and unequal matrices)</strong></span> <span class="math display">\[
 \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix} = \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix},
 \qquad
 \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix} \ne \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 5 \end{bmatrix},
@@ -3577,8 +3577,61 @@ f_{11} + f_{22} + f_{33} = 2 + (-3) + 6 = 5.
 </div>
 </div>
 </div>
+<div class="callouty-titled callout callout-style-default callout-exr callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-113-contents" aria-controls="callout-113" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exr</span><a href="#exr-identity-matrix-shape" class="quarto-xref">Exercise&nbsp;25</a> (Whether a matrix with the identity pattern is an identity matrix)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-113" class="callout-113-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div id="exr-identity-matrix-shape" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 25 (Whether a matrix with the identity pattern is an identity matrix)</strong></span> An <a href="#def-identity-matrix">identity matrix</a> has ones on its <a href="#def-main-diagonal">main diagonal</a> and zeros elsewhere. The <a href="#def-matrix">matrix</a> below has the same pattern of ones and zeros. Let</p>
+<p><span class="math display">\[
+\mathbf{J} = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \end{bmatrix}.
+\]</span></p>
+<p>Is <span class="math inline">\(\mathbf{J}\)</span> an identity matrix?</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Hint
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Compare the shape of <span class="math inline">\(\mathbf{J}\)</span> with the shape of <span class="math inline">\(\mathbf{I}_p\)</span> in <a href="#def-identity-matrix" class="quarto-xref">Definition&nbsp;15</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-114-contents" aria-controls="callout-114" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Solution</span><a href="#sol-identity-matrix-shape" class="quarto-xref">Solution&nbsp;25</a>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-114" class="callout-114-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="sol-identity-matrix-shape" class="proof solution">
+<p><span class="proof-title"><em>Solution 25</em>. </span>No. Every <a href="#def-identity-matrix">identity matrix</a> <span class="math inline">\(\mathbf{I}_p\)</span> is <span class="math inline">\(p \times p\)</span>, so it is <a href="#def-square-matrix">square</a>. <span class="math inline">\(\mathbf{J}\)</span> is <span class="math inline">\(2 \times 3\)</span>, so it is not square. Therefore <span class="math inline">\(\mathbf{J}\)</span> is not an identity matrix, even though its <a href="#def-main-diagonal">main diagonal</a> holds ones and its other entries are zeros.</p>
+</div>
+</div>
+</div>
+</div>
 <div class="callouty-titled callout callout-style-default callout-remark callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-112-contents" aria-controls="callout-112" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-115-contents" aria-controls="callout-115" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3587,7 +3640,7 @@ f_{11} + f_{22} + f_{33} = 2 + (-3) + 6 = 5.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-112" class="callout-112-contents callout-collapse collapse show">
+<div id="callout-115" class="callout-115-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="rem-identity-matrix-kronecker-delta" class="proof remark">
 <p><span class="proof-title"><em>Remark 3</em> (The identity matrix and the Kronecker delta). </span>The entries of the identity matrix are given by the <a href="./indicator-functions.html#def-kronecker-delta">Kronecker delta</a>: <span class="math inline">\((\mathbf{I}_p)_{ij} = \delta_{ij}\)</span>.</p>
@@ -3596,7 +3649,7 @@ f_{11} + f_{22} + f_{33} = 2 + (-3) + 6 = 5.
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-lem callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-113-contents" aria-controls="callout-113" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-116-contents" aria-controls="callout-116" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3605,7 +3658,7 @@ f_{11} + f_{22} + f_{33} = 2 + (-3) + 6 = 5.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-113" class="callout-113-contents callout-collapse collapse show">
+<div id="callout-116" class="callout-116-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="thm-identity" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 10 (Identity matrix is a multiplicative identity)</strong></span> For any <span class="math inline">\(m \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span>:</p>
@@ -3616,19 +3669,19 @@ f_{11} + f_{22} + f_{33} = 2 + (-3) + 6 = 5.
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exr callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-115-contents" aria-controls="callout-115" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-118-contents" aria-controls="callout-118" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exr</span><a href="#exr-identity-product-practice" class="quarto-xref">Exercise&nbsp;25</a> (Multiplying by an identity matrix)
+<span class="screen-reader-only">Exr</span><a href="#exr-identity-product-practice" class="quarto-xref">Exercise&nbsp;26</a> (Multiplying by an identity matrix)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-115" class="callout-115-contents callout-collapse collapse show">
+<div id="callout-118" class="callout-118-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exr-identity-product-practice" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 25 (Multiplying by an identity matrix)</strong></span> <a href="#thm-identity" class="quarto-xref">Theorem&nbsp;10</a> says that an <a href="#def-identity-matrix">identity matrix</a> of the right size leaves a <a href="#def-matrix">matrix</a> unchanged under <a href="#def-matrix-mult">matrix multiplication</a>, just as multiplying a number by <span class="math inline">\(1\)</span> leaves it unchanged. Let</p>
+<p><span class="theorem-title"><strong>Exercise 26 (Multiplying by an identity matrix)</strong></span> <a href="#thm-identity" class="quarto-xref">Theorem&nbsp;10</a> says that an <a href="#def-identity-matrix">identity matrix</a> of the right size leaves a <a href="#def-matrix">matrix</a> unchanged under <a href="#def-matrix-mult">matrix multiplication</a>, just as multiplying a number by <span class="math inline">\(1\)</span> leaves it unchanged. Let</p>
 <p><span class="math display">\[
 \mathbf{A} = \begin{bmatrix} 2 &amp; 0 &amp; -1 \\ 5 &amp; 3 &amp; 4 \end{bmatrix}.
 \]</span></p>
@@ -3651,19 +3704,19 @@ f_{11} + f_{22} + f_{33} = 2 + (-3) + 6 = 5.
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-116-contents" aria-controls="callout-116" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-119-contents" aria-controls="callout-119" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span><a href="#sol-identity-product-practice" class="quarto-xref">Solution&nbsp;25</a>
+<span class="screen-reader-only">Solution</span><a href="#sol-identity-product-practice" class="quarto-xref">Solution&nbsp;26</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-116" class="callout-116-contents callout-collapse collapse">
+<div id="callout-119" class="callout-119-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-identity-product-practice" class="proof solution">
-<p><span class="proof-title"><em>Solution 25</em>. </span><span class="math inline">\(\mathbf{I}_2\)</span> is <span class="math inline">\(2 \times 2\)</span> and <span class="math inline">\(\mathbf{A}\)</span> is <span class="math inline">\(2 \times 3\)</span>, so the <a href="#def-matrix-mult">product</a> is defined and is <span class="math inline">\(2 \times 3\)</span>. The first <a href="#def-matrix-row">row of <span class="math inline">\(\mathbf{I}_2\)</span></a> is <span class="math inline">\(\begin{bmatrix} 1 &amp; 0 \end{bmatrix}\)</span> and the second is <span class="math inline">\(\begin{bmatrix} 0 &amp; 1 \end{bmatrix}\)</span>, so by <a href="#def-matrix-mult" class="quarto-xref">Definition&nbsp;10</a></p>
+<p><span class="proof-title"><em>Solution 26</em>. </span><span class="math inline">\(\mathbf{I}_2\)</span> is <span class="math inline">\(2 \times 2\)</span> and <span class="math inline">\(\mathbf{A}\)</span> is <span class="math inline">\(2 \times 3\)</span>, so the <a href="#def-matrix-mult">product</a> is defined and is <span class="math inline">\(2 \times 3\)</span>. The first <a href="#def-matrix-row">row of <span class="math inline">\(\mathbf{I}_2\)</span></a> is <span class="math inline">\(\begin{bmatrix} 1 &amp; 0 \end{bmatrix}\)</span> and the second is <span class="math inline">\(\begin{bmatrix} 0 &amp; 1 \end{bmatrix}\)</span>, so by <a href="#def-matrix-mult" class="quarto-xref">Definition&nbsp;10</a></p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathbf{I}_2 \mathbf{A}
@@ -3688,7 +3741,7 @@ f_{11} + f_{22} + f_{33} = 2 + (-3) + 6 = 5.
 <section id="matrix-vector-multiplication" class="level1" data-number="6">
 <h1 data-number="6"><span class="header-section-number">6</span> Matrix-vector multiplication</h1>
 <div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-117-contents" aria-controls="callout-117" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-120-contents" aria-controls="callout-120" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3697,7 +3750,7 @@ f_{11} + f_{22} + f_{33} = 2 + (-3) + 6 = 5.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-117" class="callout-117-contents callout-collapse collapse show">
+<div id="callout-120" class="callout-120-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-matvec-mult" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 16 (Matrix-vector multiplication)</strong></span> The <strong>matrix-vector product</strong> of an <span class="math inline">\(m \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and a <span class="math inline">\(p \times 1\)</span> column vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is the <span class="math inline">\(m \times 1\)</span> column vector <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> with entries:</p>
@@ -3707,7 +3760,7 @@ f_{11} + f_{22} + f_{33} = 2 + (-3) + 6 = 5.
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-remark callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-118-contents" aria-controls="callout-118" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-121-contents" aria-controls="callout-121" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3716,7 +3769,7 @@ f_{11} + f_{22} + f_{33} = 2 + (-3) + 6 = 5.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-118" class="callout-118-contents callout-collapse collapse show">
+<div id="callout-121" class="callout-121-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="rem-matvec-row-dot-products" class="proof remark">
 <p><span class="proof-title"><em>Remark 4</em> (Each entry is a dot product). </span>Matrix-vector multiplication extends the dot product (<a href="./linear-algebra-vectors.html#def-dot-product">Definition&nbsp;8 in Vectors</a>): entry <span class="math inline">\(i\)</span> of <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is the dot product of row <span class="math inline">\(i\)</span> of <span class="math inline">\(\mathbf{A}\)</span> with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>. For example,</p>
@@ -3735,19 +3788,19 @@ f_{11} + f_{22} + f_{33} = 2 + (-3) + 6 = 5.
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exr callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-120-contents" aria-controls="callout-120" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-123-contents" aria-controls="callout-123" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exr</span><a href="#exr-matvec-practice" class="quarto-xref">Exercise&nbsp;26</a> (A matrix-vector product with more columns than rows)
+<span class="screen-reader-only">Exr</span><a href="#exr-matvec-practice" class="quarto-xref">Exercise&nbsp;27</a> (A matrix-vector product with more columns than rows)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-120" class="callout-120-contents callout-collapse collapse show">
+<div id="callout-123" class="callout-123-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exr-matvec-practice" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 26 (A matrix-vector product with more columns than rows)</strong></span> A <a href="#def-matvec-mult">matrix-vector product</a> <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> computes one <a href="./linear-algebra-vectors.html#def-weighted-sum">weighted sum</a> of the entries of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> for each <a href="#def-matrix-row">row of <span class="math inline">\(\mathbf{A}\)</span></a>, so one multiplication computes several weighted sums at once. The <a href="#def-matrix">matrix</a> <span class="math inline">\(\mathbf{A}\)</span> below has more <a href="#def-matrix-column">column</a>s than <a href="#def-matrix-row">row</a>s, so <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is shorter than <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>. Let</p>
+<p><span class="theorem-title"><strong>Exercise 27 (A matrix-vector product with more columns than rows)</strong></span> A <a href="#def-matvec-mult">matrix-vector product</a> <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> computes one <a href="./linear-algebra-vectors.html#def-weighted-sum">weighted sum</a> of the entries of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> for each <a href="#def-matrix-row">row of <span class="math inline">\(\mathbf{A}\)</span></a>, so one multiplication computes several weighted sums at once. The <a href="#def-matrix">matrix</a> <span class="math inline">\(\mathbf{A}\)</span> below has more <a href="#def-matrix-column">column</a>s than <a href="#def-matrix-row">row</a>s, so <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is shorter than <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>. Let</p>
 <p><span class="math display">\[
 \mathbf{A} = \begin{bmatrix} 2 &amp; 0 &amp; -1 \\ 5 &amp; 3 &amp; 4 \end{bmatrix},
 \qquad
@@ -3772,19 +3825,19 @@ f_{11} + f_{22} + f_{33} = 2 + (-3) + 6 = 5.
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-121-contents" aria-controls="callout-121" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-124-contents" aria-controls="callout-124" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span><a href="#sol-matvec-practice" class="quarto-xref">Solution&nbsp;26</a>
+<span class="screen-reader-only">Solution</span><a href="#sol-matvec-practice" class="quarto-xref">Solution&nbsp;27</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-121" class="callout-121-contents callout-collapse collapse">
+<div id="callout-124" class="callout-124-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-matvec-practice" class="proof solution">
-<p><span class="proof-title"><em>Solution 26</em>. </span><span class="math inline">\(\mathbf{A}\)</span> is <span class="math inline">\(2 \times 3\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is <span class="math inline">\(3 \times 1\)</span>, so the <a href="#def-matvec-mult">matrix-vector product</a> is defined and is <span class="math inline">\(2 \times 1\)</span>:</p>
+<p><span class="proof-title"><em>Solution 27</em>. </span><span class="math inline">\(\mathbf{A}\)</span> is <span class="math inline">\(2 \times 3\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is <span class="math inline">\(3 \times 1\)</span>, so the <a href="#def-matvec-mult">matrix-vector product</a> is defined and is <span class="math inline">\(2 \times 1\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
@@ -3806,7 +3859,7 @@ f_{11} + f_{22} + f_{33} = 2 + (-3) + 6 = 5.
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-122-contents" aria-controls="callout-122" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-125-contents" aria-controls="callout-125" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3815,7 +3868,7 @@ f_{11} + f_{22} + f_{33} = 2 + (-3) + 6 = 5.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-122" class="callout-122-contents callout-collapse collapse show">
+<div id="callout-125" class="callout-125-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-linear-system" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 17 (Linear system, system of linear equations)</strong></span> A <strong>linear system</strong> <span class="citation" data-cites="wikipedia_system_of_linear_equations"><a href="#ref-wikipedia_system_of_linear_equations" role="doc-biblioref">[11]</a></span> (or <strong>system of linear equations</strong>) with <span class="math inline">\(m\)</span> equations in <span class="math inline">\(n\)</span> unknowns is an equation <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> in which the <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and the vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m\)</span> are given. A <strong>solution</strong> of the system is a vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^n\)</span> for which <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> holds.</p>
@@ -3824,7 +3877,7 @@ f_{11} + f_{22} + f_{33} = 2 + (-3) + 6 = 5.
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-123-contents" aria-controls="callout-123" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-126-contents" aria-controls="callout-126" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3833,7 +3886,7 @@ f_{11} + f_{22} + f_{33} = 2 + (-3) + 6 = 5.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-123" class="callout-123-contents callout-collapse collapse show">
+<div id="callout-126" class="callout-126-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-linear-system" class="theorem example">
 <p><span class="theorem-title"><strong>Example 13 (Two equations in two unknowns)</strong></span> By <a href="#def-matvec-mult" class="quarto-xref">Definition&nbsp;16</a>, row <span class="math inline">\(i\)</span> of <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> is the equation <span class="math inline">\(a_{i1} x_1 + \cdots + a_{in} x_n = b_i\)</span>. So the two equations <span class="math inline">\(x_1 + 2 x_2 = 5\)</span> and <span class="math inline">\(3 x_1 + 4 x_2 = 6\)</span> form the linear system <span class="math inline">\(\begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix} 5 \\ 6 \end{bmatrix}\)</span>. The vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (-4, 4.5)\)</span> is a solution:</p>
@@ -3856,11 +3909,79 @@ f_{11} + f_{22} + f_{33} = 2 + (-3) + 6 = 5.
 </div>
 </div>
 </div>
+<div class="callouty-titled callout callout-style-default callout-exr callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-128-contents" aria-controls="callout-128" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exr</span><a href="#exr-linear-system-check" class="quarto-xref">Exercise&nbsp;28</a> (Checking whether a vector solves a linear system)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-128" class="callout-128-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div id="exr-linear-system-check" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 28 (Checking whether a vector solves a linear system)</strong></span> Checking whether a vector solves a <a href="#def-linear-system">linear system</a> takes only one <a href="#def-matvec-mult">matrix-vector product</a>, which is much less work than solving the system. Let</p>
+<p><span class="math display">\[
+\mathbf{A} = \begin{bmatrix} 3 &amp; 1 \\ 1 &amp; -2 \end{bmatrix},
+\qquad
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \begin{bmatrix} 5 \\ 4 \end{bmatrix},
+\qquad
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix} 2 \\ -1 \end{bmatrix}.
+\]</span></p>
+<p>Is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> a <a href="#def-linear-system">solution of <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span></a>?</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Hint
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Compute <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> with <a href="#def-matvec-mult" class="quarto-xref">Definition&nbsp;16</a>. Then compare it with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>, as in <a href="#exm-linear-system" class="quarto-xref">Example&nbsp;13</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-129-contents" aria-controls="callout-129" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Solution</span><a href="#sol-linear-system-check" class="quarto-xref">Solution&nbsp;28</a>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-129" class="callout-129-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="sol-linear-system-check" class="proof solution">
+<p><span class="proof-title"><em>Solution 28</em>. </span>Yes. The <a href="#def-matvec-mult">matrix-vector product</a> is</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
+&amp;= \begin{bmatrix} 3 \cdot 2 + 1 \cdot(-1) \\ 1 \cdot 2 + (-2) \cdot(-1) \end{bmatrix}
+&amp;&amp; \text{(}\href{#def-matvec-mult}{\text{Definition~16}}\text{)}
+\\
+&amp;= \begin{bmatrix} 5 \\ 4 \end{bmatrix},
+&amp;&amp; \text{(multiply and add)}
+\end{aligned}
+\]</span></p>
+<p>which matches <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> entry by entry, so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is a <a href="#def-linear-system">solution of the system</a>.</p>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="linear-and-affine-maps" class="level1" data-number="7">
 <h1 data-number="7"><span class="header-section-number">7</span> Linear and affine maps</h1>
 <div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-124-contents" aria-controls="callout-124" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-130-contents" aria-controls="callout-130" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3869,7 +3990,7 @@ f_{11} + f_{22} + f_{33} = 2 + (-3) + 6 = 5.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-124" class="callout-124-contents callout-collapse collapse show">
+<div id="callout-130" class="callout-130-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-additive-function" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 18 (Additive function)</strong></span> A <a href="https://morrison-lab.github.io/mcs/functions.html#def-function">function</a> <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> is <strong>additive</strong> <span class="citation" data-cites="wikipedia_linear_map"><a href="#ref-wikipedia_linear_map" role="doc-biblioref">[12]</a></span> if it preserves <a href="./linear-algebra-vectors.html#def-vector-addition">vector addition</a>: <a href="https://morrison-lab.github.io/mcs/proof-writing.html#def-universal-quantifier">for all</a> <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p\)</span>,</p>
@@ -3879,7 +4000,7 @@ f_{11} + f_{22} + f_{33} = 2 + (-3) + 6 = 5.
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-125-contents" aria-controls="callout-125" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-131-contents" aria-controls="callout-131" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3888,7 +4009,7 @@ f_{11} + f_{22} + f_{33} = 2 + (-3) + 6 = 5.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-125" class="callout-125-contents callout-collapse collapse show">
+<div id="callout-131" class="callout-131-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-additive-function" class="theorem example">
 <p><span class="theorem-title"><strong>Example 14 (An additive function, and one that is not)</strong></span> &nbsp;</p>
@@ -3908,8 +4029,64 @@ f(x + y) &amp;= 2(x + y) \\
 </div>
 </div>
 </div>
+<div class="callouty-titled callout callout-style-default callout-exr callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-133-contents" aria-controls="callout-133" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exr</span><a href="#exr-additive-product" class="quarto-xref">Exercise&nbsp;29</a> (Testing whether <span class="math inline">\(x_1 x_2\)</span> is additive)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-133" class="callout-133-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div id="exr-additive-product" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 29 (Testing whether <span class="math inline">\(x_1 x_2\)</span> is additive)</strong></span> An <a href="#def-additive-function">additive function</a> can be evaluated at <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> by evaluating it at <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and at <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> separately, so additivity is worth checking before splitting a computation that way. Let <span class="math inline">\(f: \mathbb{R}^2 \to \mathbb{R}\)</span> be <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1 x_2\)</span>.</p>
+<p>Is <span class="math inline">\(f\)</span> <a href="#def-additive-function">additive</a>?</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Hint
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Try <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 0)\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (0, 1)\)</span> in <a href="#def-additive-function" class="quarto-xref">Definition&nbsp;18</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-134-contents" aria-controls="callout-134" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Solution</span><a href="#sol-additive-product" class="quarto-xref">Solution&nbsp;29</a>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-134" class="callout-134-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="sol-additive-product" class="proof solution">
+<p><span class="proof-title"><em>Solution 29</em>. </span>No. For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 0)\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (0, 1)\)</span>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (1, 1)\)</span>, so</p>
+<p><span class="math display">\[
+f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) = 1 \cdot 1 = 1,
+\qquad
+f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) + f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) = 1 \cdot 0 + 0 \cdot 1 = 0.
+\]</span></p>
+<p>These differ, so <span class="math inline">\(f\)</span> does not satisfy <a href="#def-additive-function" class="quarto-xref">Definition&nbsp;18</a> for this pair of inputs, and <span class="math inline">\(f\)</span> is not <a href="#def-additive-function">additive</a>.</p>
+</div>
+</div>
+</div>
+</div>
 <div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-126-contents" aria-controls="callout-126" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-135-contents" aria-controls="callout-135" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3918,7 +4095,7 @@ f(x + y) &amp;= 2(x + y) \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-126" class="callout-126-contents callout-collapse collapse show">
+<div id="callout-135" class="callout-135-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-homogeneous-function" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 19 (Homogeneous function)</strong></span> A <a href="https://morrison-lab.github.io/mcs/functions.html#def-function">function</a> <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> is <strong>homogeneous</strong> <span class="citation" data-cites="wikipedia_linear_map"><a href="#ref-wikipedia_linear_map" role="doc-biblioref">[12]</a></span> if it preserves <a href="#def-scalar-mult">scalar multiplication</a>: <a href="https://morrison-lab.github.io/mcs/proof-writing.html#def-universal-quantifier">for all</a> <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p\)</span> and <span class="math inline">\(c \in \mathbb{R}\)</span>,</p>
@@ -3928,7 +4105,7 @@ f(x + y) &amp;= 2(x + y) \\
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-127-contents" aria-controls="callout-127" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-136-contents" aria-controls="callout-136" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3937,7 +4114,7 @@ f(x + y) &amp;= 2(x + y) \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-127" class="callout-127-contents callout-collapse collapse show">
+<div id="callout-136" class="callout-136-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-homogeneous-function" class="theorem example">
 <p><span class="theorem-title"><strong>Example 15 (Homogeneous functions, and one that is not)</strong></span> &nbsp;</p>
@@ -3968,7 +4145,7 @@ k(c \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphant
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-128-contents" aria-controls="callout-128" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-137-contents" aria-controls="callout-137" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3977,7 +4154,7 @@ k(c \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphant
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-128" class="callout-128-contents callout-collapse collapse show">
+<div id="callout-137" class="callout-137-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-linear-map" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 20 (Linear map, linear transformation, linear function)</strong></span> A <a href="https://morrison-lab.github.io/mcs/functions.html#def-function">function</a> <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> is a <strong>linear map</strong> <span class="citation" data-cites="wikipedia_linear_map"><a href="#ref-wikipedia_linear_map" role="doc-biblioref">[12]</a></span> (also called a <strong>linear transformation</strong> or <strong>linear function</strong>) if it is both <a href="#def-additive-function">additive</a> and <a href="#def-homogeneous-function">homogeneous</a>.</p>
@@ -3986,7 +4163,7 @@ k(c \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphant
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-129-contents" aria-controls="callout-129" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-138-contents" aria-controls="callout-138" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3995,7 +4172,7 @@ k(c \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphant
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-129" class="callout-129-contents callout-collapse collapse show">
+<div id="callout-138" class="callout-138-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-linear-map" class="theorem example">
 <p><span class="theorem-title"><strong>Example 16 (A linear map, and two functions that are not)</strong></span> &nbsp;</p>
@@ -4022,7 +4199,7 @@ f(c \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphant
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-130-contents" aria-controls="callout-130" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-139-contents" aria-controls="callout-139" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4031,7 +4208,7 @@ f(c \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphant
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-130" class="callout-130-contents callout-collapse collapse show">
+<div id="callout-139" class="callout-139-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-linear-operator" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 21 (Linear operator)</strong></span> A <strong>linear operator</strong> on <span class="math inline">\(\mathbb{R}^p\)</span> is a linear map (<a href="#def-linear-map" class="quarto-xref">Definition&nbsp;20</a>) from <span class="math inline">\(\mathbb{R}^p\)</span> to itself, that is, a linear map <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}^p\)</span> whose input and output have the same length. Some authors use “operator” more loosely, for any linear map.</p>
@@ -4040,7 +4217,7 @@ f(c \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphant
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-131-contents" aria-controls="callout-131" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-140-contents" aria-controls="callout-140" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4049,7 +4226,7 @@ f(c \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphant
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-131" class="callout-131-contents callout-collapse collapse show">
+<div id="callout-140" class="callout-140-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-linear-operator" class="theorem example">
 <p><span class="theorem-title"><strong>Example 17 (A linear operator, and a linear map that is not one)</strong></span> The map <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = (2 x_1,\ x_1 + x_2)\)</span> from <a href="#exm-linear-map" class="quarto-xref">Example&nbsp;16</a> sends <span class="math inline">\(\mathbb{R}^2\)</span> to <span class="math inline">\(\mathbb{R}^2\)</span>, so it is a linear operator on <span class="math inline">\(\mathbb{R}^2\)</span>. The linear map <span class="math inline">\(g(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1 + x_2\)</span> sends <span class="math inline">\(\mathbb{R}^2\)</span> to <span class="math inline">\(\mathbb{R}\)</span>, so it is linear but not an operator: its outputs have length <span class="math inline">\(1\)</span>, not <span class="math inline">\(2\)</span>.</p>
@@ -4058,7 +4235,7 @@ f(c \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphant
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-lem callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-132-contents" aria-controls="callout-132" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-141-contents" aria-controls="callout-141" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4067,7 +4244,7 @@ f(c \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphant
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-132" class="callout-132-contents callout-collapse collapse show">
+<div id="callout-141" class="callout-141-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="thm-linear-map-zero" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 11 (A linear map sends zero to zero)</strong></span> If <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> is a linear map (<a href="#def-linear-map" class="quarto-xref">Definition&nbsp;20</a>), then <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>.</p>
@@ -4076,7 +4253,7 @@ f(c \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphant
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-133-contents" aria-controls="callout-133" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-142-contents" aria-controls="callout-142" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4085,7 +4262,7 @@ f(c \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphant
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-133" class="callout-133-contents callout-collapse collapse">
+<div id="callout-142" class="callout-142-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>On the left, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> is the zero vector of length <span class="math inline">\(p\)</span>; on the right, it is the zero vector of length <span class="math inline">\(m\)</span>.</p>
@@ -4105,7 +4282,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-134-contents" aria-controls="callout-134" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-143-contents" aria-controls="callout-143" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4114,7 +4291,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-134" class="callout-134-contents callout-collapse collapse show">
+<div id="callout-143" class="callout-143-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-linear-map-zero" class="theorem example">
 <p><span class="theorem-title"><strong>Example 18 (Ruling out linearity at zero)</strong></span> In <a href="#exm-linear-map" class="quarto-xref">Example&nbsp;16</a>, <span class="math inline">\(g(x) = x + 1\)</span> has <span class="math inline">\(g(0) = 1 \neq 0\)</span>, so by <a href="#thm-linear-map-zero" class="quarto-xref">Theorem&nbsp;11</a> it is not linear, without checking additivity or homogeneity.</p>
@@ -4124,7 +4301,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-lem callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-135-contents" aria-controls="callout-135" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-144-contents" aria-controls="callout-144" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4133,7 +4310,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-135" class="callout-135-contents callout-collapse collapse show">
+<div id="callout-144" class="callout-144-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="thm-matrix-map-linear" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 12 (Multiplying by a matrix is a linear map)</strong></span> For any <span class="math inline">\(m \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span>, the function <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> defined by <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is a linear map (<a href="#def-linear-map" class="quarto-xref">Definition&nbsp;20</a>).</p>
@@ -4142,7 +4319,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-136-contents" aria-controls="callout-136" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-145-contents" aria-controls="callout-145" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4151,7 +4328,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-136" class="callout-136-contents callout-collapse collapse">
+<div id="callout-145" class="callout-145-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Both conditions are checked one entry at a time. For each <span class="math inline">\(i \in \{1, \ldots, m\}\)</span>, additivity:</p>
@@ -4196,7 +4373,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-lem callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-137-contents" aria-controls="callout-137" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-146-contents" aria-controls="callout-146" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4205,7 +4382,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-137" class="callout-137-contents callout-collapse collapse show">
+<div id="callout-146" class="callout-146-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="thm-linear-map-lincom" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 13 (A linear map preserves linear combinations)</strong></span> If <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> is a linear map (<a href="#def-linear-map" class="quarto-xref">Definition&nbsp;20</a>), then for any vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_k \in \mathbb{R}^p\)</span> and any coefficients <span class="math inline">\(c_1, \ldots, c_k \in \mathbb{R}\)</span>:</p>
@@ -4215,7 +4392,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-138-contents" aria-controls="callout-138" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-147-contents" aria-controls="callout-147" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4224,7 +4401,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-138" class="callout-138-contents callout-collapse collapse">
+<div id="callout-147" class="callout-147-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>By <a href="https://morrison-lab.github.io/mcs/proof-writing.html#def-proof-by-induction">induction</a> on <span class="math inline">\(k\)</span>. For <span class="math inline">\(k = 1\)</span>, the claim <span class="math inline">\(f(c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1) = c_1 f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1)\)</span> is homogeneity.</p>
@@ -4249,7 +4426,7 @@ f\mathopen{}\left(\sum_{j=1}^{k+1} c_j \mathord{\smash[b]{\underset{\raise.3ex\h
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-lem callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-139-contents" aria-controls="callout-139" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-148-contents" aria-controls="callout-148" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4258,7 +4435,7 @@ f\mathopen{}\left(\sum_{j=1}^{k+1} c_j \mathord{\smash[b]{\underset{\raise.3ex\h
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-139" class="callout-139-contents callout-collapse collapse show">
+<div id="callout-148" class="callout-148-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="thm-linear-map-matrix" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 14 (Every linear map is multiplication by a matrix)</strong></span> If <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> is a linear map (<a href="#def-linear-map" class="quarto-xref">Definition&nbsp;20</a>), then there is exactly one <span class="math inline">\(m \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> such that</p>
@@ -4269,7 +4446,7 @@ f\mathopen{}\left(\sum_{j=1}^{k+1} c_j \mathord{\smash[b]{\underset{\raise.3ex\h
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-140-contents" aria-controls="callout-140" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-149-contents" aria-controls="callout-149" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4278,7 +4455,7 @@ f\mathopen{}\left(\sum_{j=1}^{k+1} c_j \mathord{\smash[b]{\underset{\raise.3ex\h
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-140" class="callout-140-contents callout-collapse collapse">
+<div id="callout-149" class="callout-149-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><strong>Existence.</strong> Let <span class="math inline">\(\mathbf{A}\)</span> be the <span class="math inline">\(m \times p\)</span> matrix with <span class="math inline">\(a_{ij} = \mathopen{}\left(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j)\right)\mathclose{}_i\)</span>. For any <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p\)</span>,</p>
@@ -4334,7 +4511,7 @@ b_{ij} &amp;= \mathopen{}\left(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-141-contents" aria-controls="callout-141" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-150-contents" aria-controls="callout-150" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4343,7 +4520,7 @@ b_{ij} &amp;= \mathopen{}\left(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-141" class="callout-141-contents callout-collapse collapse show">
+<div id="callout-150" class="callout-150-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-matrix-of-linear-map" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 22 (Matrix of a linear map)</strong></span> The <strong>matrix of</strong> a linear map <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> is the unique <span class="math inline">\(m \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> with <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> for all <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> (<a href="#thm-linear-map-matrix" class="quarto-xref">Theorem&nbsp;14</a>). Its column <span class="math inline">\(j\)</span> is <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j)\)</span>.</p>
@@ -4352,7 +4529,7 @@ b_{ij} &amp;= \mathopen{}\left(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-142-contents" aria-controls="callout-142" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-151-contents" aria-controls="callout-151" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4361,7 +4538,7 @@ b_{ij} &amp;= \mathopen{}\left(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-142" class="callout-142-contents callout-collapse collapse show">
+<div id="callout-151" class="callout-151-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-linear-map-matrix" class="theorem example">
 <p><span class="theorem-title"><strong>Example 19 (Finding the matrix of a linear map)</strong></span> For <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = (2 x_1,\ x_1 + x_2)\)</span> from <a href="#exm-linear-map" class="quarto-xref">Example&nbsp;16</a>, the values of <span class="math inline">\(f\)</span> at the indicator vectors are</p>
@@ -4376,7 +4553,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-cor callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-143-contents" aria-controls="callout-143" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-152-contents" aria-controls="callout-152" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4385,7 +4562,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-143" class="callout-143-contents callout-collapse collapse show">
+<div id="callout-152" class="callout-152-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="cor-linear-scalar" class="theorem corollary">
 <p><span class="theorem-title"><strong>Corollary 1 (Linear functions from vectors to numbers)</strong></span> A function <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}\)</span> is linear (<a href="#def-linear-map" class="quarto-xref">Definition&nbsp;20</a>) if and only if there is a vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p\)</span> such that</p>
@@ -4396,7 +4573,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-144-contents" aria-controls="callout-144" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-153-contents" aria-controls="callout-153" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4405,7 +4582,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-144" class="callout-144-contents callout-collapse collapse">
+<div id="callout-153" class="callout-153-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><strong>If <span class="math inline">\(f\)</span> is linear.</strong> <a href="#thm-linear-map-matrix" class="quarto-xref">Theorem&nbsp;14</a> with <span class="math inline">\(m = 1\)</span> gives a <span class="math inline">\(1 \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> with <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and <span class="math inline">\(a_{1j} = f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j)\)</span>. Let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> be the vector with <span class="math inline">\(w_j = a_{1j}\)</span>, so that <span class="math inline">\(\mathbf{A} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top}\)</span>. Then</p>
@@ -4431,7 +4608,7 @@ w_j &amp;= a_{1j} \\
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-145-contents" aria-controls="callout-145" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-154-contents" aria-controls="callout-154" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4440,7 +4617,7 @@ w_j &amp;= a_{1j} \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-145" class="callout-145-contents callout-collapse collapse show">
+<div id="callout-154" class="callout-154-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-linear-scalar" class="theorem example">
 <p><span class="theorem-title"><strong>Example 20 (A linear function from <span class="math inline">\(\mathbb{R}^2\)</span> to <span class="math inline">\(\mathbb{R}\)</span>)</strong></span> <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = 3 x_1 + 5 x_2\)</span> is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = {(3, 5)}^{\top}\)</span>, so it is linear by <a href="#cor-linear-scalar" class="quarto-xref">Corollary&nbsp;1</a>. The entries of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> are the values at the indicator vectors:</p>
@@ -4480,7 +4657,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-147-contents" aria-controls="callout-147" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-156-contents" aria-controls="callout-156" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4489,7 +4666,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-147" class="callout-147-contents callout-collapse collapse show">
+<div id="callout-156" class="callout-156-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-translation" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 23 (Translation)</strong></span> For a fixed vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m\)</span>, the <strong>translation</strong> <span class="citation" data-cites="wikipedia_translation_geometry"><a href="#ref-wikipedia_translation_geometry" role="doc-biblioref">[13]</a></span> by <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> is the function <span class="math inline">\(t_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}} : \mathbb{R}^m \to \mathbb{R}^m\)</span> defined by</p>
@@ -4499,7 +4676,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-148-contents" aria-controls="callout-148" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-157-contents" aria-controls="callout-157" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4508,7 +4685,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-148" class="callout-148-contents callout-collapse collapse show">
+<div id="callout-157" class="callout-157-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-translation" class="theorem example">
 <p><span class="theorem-title"><strong>Example 21 (Translating two points)</strong></span> The translation by <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = {(1, -2)}^{\top}\)</span> sends</p>
@@ -4523,7 +4700,7 @@ t_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphanto
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-remark callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-149-contents" aria-controls="callout-149" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-158-contents" aria-controls="callout-158" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4532,7 +4709,7 @@ t_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphanto
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-149" class="callout-149-contents callout-collapse collapse show">
+<div id="callout-158" class="callout-158-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="rem-translation-moves-every-point" class="proof remark">
 <p><span class="proof-title"><em>Remark 5</em> (A translation moves every point by the same vector). </span>A translation by <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> moves every point by the same vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>.</p>
@@ -4541,7 +4718,7 @@ t_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphanto
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-150-contents" aria-controls="callout-150" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-159-contents" aria-controls="callout-159" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4550,7 +4727,7 @@ t_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphanto
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-150" class="callout-150-contents callout-collapse collapse show">
+<div id="callout-159" class="callout-159-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-affine-map" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 24</strong></span> &nbsp;</p>
@@ -4571,7 +4748,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-151-contents" aria-controls="callout-151" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-160-contents" aria-controls="callout-160" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4580,7 +4757,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-151" class="callout-151-contents callout-collapse collapse show">
+<div id="callout-160" class="callout-160-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-affine-offset" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 25 (Offset of an affine map, intercept, bias)</strong></span> In <a href="#def-affine-map" class="quarto-xref">Definition&nbsp;24</a>, the vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> is called the <strong>offset</strong> of <span class="math inline">\(f\)</span> (statistics also calls it the <strong>intercept</strong>, and machine learning the <strong>bias</strong>).</p>
@@ -4589,7 +4766,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-remark callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-152-contents" aria-controls="callout-152" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-161-contents" aria-controls="callout-161" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4598,7 +4775,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-152" class="callout-152-contents callout-collapse collapse show">
+<div id="callout-161" class="callout-161-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="rem-affine-map-real-valued" class="proof remark">
 <p><span class="proof-title"><em>Remark 6</em> (Real-valued affine maps). </span>For a real-valued function (<a href="./linear-algebra-vectors.html#def-real-vector-valued">Definition&nbsp;4 in Vectors</a>, <span class="math inline">\(m = 1\)</span>), <span class="math inline">\(\mathbf{A}\)</span> is a single row, written <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top}\)</span>, and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> is a single number <span class="math inline">\(b\)</span>, so an affine function is a linear function <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> (<a href="#cor-linear-scalar" class="quarto-xref">Corollary&nbsp;1</a>) plus an offset:</p>
@@ -4608,7 +4785,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-153-contents" aria-controls="callout-153" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-162-contents" aria-controls="callout-162" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4617,7 +4794,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-153" class="callout-153-contents callout-collapse collapse show">
+<div id="callout-162" class="callout-162-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-augmented-vector" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 26 (Augmented vector)</strong></span> The <strong>augmented vector</strong> of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p\)</span> is the vector <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{aug}} \in \mathbb{R}^{p+1}\)</span> formed by placing a <span class="math inline">\(1\)</span> above the entries of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>:</p>
@@ -4633,7 +4810,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-154-contents" aria-controls="callout-154" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-163-contents" aria-controls="callout-163" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4642,7 +4819,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-154" class="callout-154-contents callout-collapse collapse show">
+<div id="callout-163" class="callout-163-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-augmented-vector" class="theorem example">
 <p><span class="theorem-title"><strong>Example 22 (An affine function as a dot product with an augmented vector)</strong></span> For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= {(2, 5)}^{\top}\)</span>, the augmented vector is <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{aug}} = {(1, 2, 5)}^{\top}\)</span>. With <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = {(3, -1)}^{\top}\)</span> and <span class="math inline">\(b = 4\)</span>, the affine function <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b\)</span> (<a href="#eq-linear-scalar" class="quarto-xref">Equation&nbsp;1</a>) equals the dot product of <span class="math inline">\({(b, w_1, w_2)}^{\top} = {(4, 3, -1)}^{\top}\)</span> with <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{aug}}\)</span>:</p>
@@ -4661,7 +4838,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-lem callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-155-contents" aria-controls="callout-155" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-164-contents" aria-controls="callout-164" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4670,7 +4847,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-155" class="callout-155-contents callout-collapse collapse show">
+<div id="callout-164" class="callout-164-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="thm-affine-map-zero" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 15 (An affine map sends zero to its offset)</strong></span> An affine map <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> (<a href="#def-affine-map" class="quarto-xref">Definition&nbsp;24</a>) satisfies <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>.</p>
@@ -4679,7 +4856,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-156-contents" aria-controls="callout-156" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-165-contents" aria-controls="callout-165" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4688,7 +4865,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-156" class="callout-156-contents callout-collapse collapse">
+<div id="callout-165" class="callout-165-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>First, <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>: for each <span class="math inline">\(i\)</span>,</p>
@@ -4720,7 +4897,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-lem callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-157-contents" aria-controls="callout-157" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-166-contents" aria-controls="callout-166" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4729,7 +4906,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-157" class="callout-157-contents callout-collapse collapse show">
+<div id="callout-166" class="callout-166-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="thm-affine-linear-iff" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 16 (An affine map is linear exactly when its offset is zero)</strong></span> An affine map <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> (<a href="#def-affine-map" class="quarto-xref">Definition&nbsp;24</a>) is linear (<a href="#def-linear-map" class="quarto-xref">Definition&nbsp;20</a>) if and only if <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>.</p>
@@ -4738,7 +4915,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-158-contents" aria-controls="callout-158" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-167-contents" aria-controls="callout-167" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4747,7 +4924,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-158" class="callout-158-contents callout-collapse collapse">
+<div id="callout-167" class="callout-167-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>If <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, then</p>
@@ -4763,7 +4940,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-159-contents" aria-controls="callout-159" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-168-contents" aria-controls="callout-168" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4772,7 +4949,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-159" class="callout-159-contents callout-collapse collapse show">
+<div id="callout-168" class="callout-168-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-affine-linear-iff" class="theorem example">
 <p><span class="theorem-title"><strong>Example 23 (Two affine maps with the same matrix)</strong></span> Let <span class="math inline">\(\mathbf{A} = \begin{bmatrix}2 &amp; 0 \\ 1 &amp; 1\end{bmatrix}\)</span>, the matrix of the linear map in <a href="#exm-linear-map" class="quarto-xref">Example&nbsp;16</a>. <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> has offset <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, so it is linear. <span class="math inline">\(g(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \begin{bmatrix}1 \\ 0\end{bmatrix}\)</span> has offset <span class="math inline">\(\begin{bmatrix}1 \\ 0\end{bmatrix} \neq \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, so by <a href="#thm-affine-linear-iff" class="quarto-xref">Theorem&nbsp;16</a> it is not linear: indeed <span class="math inline">\(g(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}) = \begin{bmatrix}1 \\ 0\end{bmatrix}\)</span>, not <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>.</p>
@@ -4781,7 +4958,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-cor callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-160-contents" aria-controls="callout-160" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-169-contents" aria-controls="callout-169" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4790,7 +4967,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-160" class="callout-160-contents callout-collapse collapse show">
+<div id="callout-169" class="callout-169-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="cor-linear-is-affine" class="theorem corollary">
 <p><span class="theorem-title"><strong>Corollary 2 (Every linear map is affine)</strong></span> Every linear map <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}^m\)</span> (<a href="#def-linear-map" class="quarto-xref">Definition&nbsp;20</a>) is an affine map (<a href="#def-affine-map" class="quarto-xref">Definition&nbsp;24</a>) with offset <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>.</p>
@@ -4799,7 +4976,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-161-contents" aria-controls="callout-161" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-170-contents" aria-controls="callout-170" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4808,7 +4985,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-161" class="callout-161-contents callout-collapse collapse">
+<div id="callout-170" class="callout-170-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>If <span class="math inline">\(f\)</span> is linear, <a href="#thm-linear-map-matrix" class="quarto-xref">Theorem&nbsp;14</a> gives a matrix <span class="math inline">\(\mathbf{A}\)</span> with</p>
@@ -4824,7 +5001,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-lem callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-162-contents" aria-controls="callout-162" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-171-contents" aria-controls="callout-171" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4833,7 +5010,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-162" class="callout-162-contents callout-collapse collapse show">
+<div id="callout-171" class="callout-171-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="thm-affine-map-unique" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 17 (An affine map determines its matrix and offset)</strong></span> If <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> and <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}'\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}'\)</span> for all <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p\)</span> (<a href="#def-affine-map" class="quarto-xref">Definition&nbsp;24</a>), then <span class="math inline">\(\mathbf{A}' = \mathbf{A}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}' = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>.</p>
@@ -4842,7 +5019,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-163-contents" aria-controls="callout-163" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-172-contents" aria-controls="callout-172" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4851,7 +5028,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-163" class="callout-163-contents callout-collapse collapse">
+<div id="callout-172" class="callout-172-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>By <a href="#thm-affine-map-zero" class="quarto-xref">Theorem&nbsp;15</a>, applied to each formula,</p>
@@ -4874,7 +5051,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-remark callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-164-contents" aria-controls="callout-164" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-173-contents" aria-controls="callout-173" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4883,7 +5060,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-164" class="callout-164-contents callout-collapse collapse show">
+<div id="callout-173" class="callout-173-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="rem-linear-affine-terminology" class="proof remark">
 <p><span class="proof-title"><em>Remark 7</em> (“Linear” in this site, and in machine learning and statistics). </span>This site uses “linear” only in the sense of <a href="#def-linear-map" class="quarto-xref">Definition&nbsp;20</a>, so by <a href="#thm-affine-linear-iff" class="quarto-xref">Theorem&nbsp;16</a> a function with a nonzero offset is affine but not linear. For functions of one variable, this is the same split as <a href="./algebra-exponentials.html#def-affine-function">affine</a> <span class="math inline">\(a x + b\)</span> versus <a href="./algebra-exponentials.html#def-linear-function">linear</a> <span class="math inline">\(a x\)</span> on the algebra page. (The algebra page writes these as <span class="math inline">\(m x + b\)</span> and <span class="math inline">\(m x\)</span>; here <span class="math inline">\(m\)</span> already names the number of outputs.)</p>
@@ -4909,7 +5086,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-166-contents" aria-controls="callout-166" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-175-contents" aria-controls="callout-175" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4918,7 +5095,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-166" class="callout-166-contents callout-collapse collapse show">
+<div id="callout-175" class="callout-175-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-hyperplane" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 27 (Hyperplane)</strong></span> A <strong>hyperplane</strong> <span class="citation" data-cites="wikipedia_hyperplane"><a href="#ref-wikipedia_hyperplane" role="doc-biblioref">[16]</a></span> in <span class="math inline">\(\mathbb{R}^p\)</span> is the set of points <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p\)</span> satisfying</p>
@@ -4929,7 +5106,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-def callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-167-contents" aria-controls="callout-167" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-176-contents" aria-controls="callout-176" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4938,7 +5115,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-167" class="callout-167-contents callout-collapse collapse show">
+<div id="callout-176" class="callout-176-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-normal-vector" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 28 (Normal vector of a hyperplane)</strong></span> In <a href="#def-hyperplane" class="quarto-xref">Definition&nbsp;27</a>, the vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> is a <strong>normal vector</strong> <span class="citation" data-cites="wikipedia_normal_geometry"><a href="#ref-wikipedia_normal_geometry" role="doc-biblioref">[17]</a></span> of the hyperplane.</p>
@@ -4947,7 +5124,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-168-contents" aria-controls="callout-168" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-177-contents" aria-controls="callout-177" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4956,7 +5133,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-168" class="callout-168-contents callout-collapse collapse show">
+<div id="callout-177" class="callout-177-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-hyperplane" class="theorem example">
 <p><span class="theorem-title"><strong>Example 24 (A line in <span class="math inline">\(\mathbb{R}^2\)</span>, and why the normal vector must be nonzero)</strong></span> &nbsp;</p>
@@ -5137,19 +5314,19 @@ Figure&nbsp;1: The <a href="https://morrison-lab.github.io/mcs/functions.html#de
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exr callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-169-contents" aria-controls="callout-169" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-178-contents" aria-controls="callout-178" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exr</span><a href="#exr-write-in-matrix-form" class="quarto-xref">Exercise&nbsp;27</a> (Write a rule in matrix form)
+<span class="screen-reader-only">Exr</span><a href="#exr-write-in-matrix-form" class="quarto-xref">Exercise&nbsp;30</a> (Write a rule in matrix form)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-169" class="callout-169-contents callout-collapse collapse show">
+<div id="callout-178" class="callout-178-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exr-write-in-matrix-form" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 27 (Write a rule in matrix form)</strong></span> A clinic scores a patient’s risk from three measurements.</p>
+<p><span class="theorem-title"><strong>Exercise 30 (Write a rule in matrix form)</strong></span> A clinic scores a patient’s risk from three measurements.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -5184,19 +5361,19 @@ Figure&nbsp;1: The <a href="https://morrison-lab.github.io/mcs/functions.html#de
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-170-contents" aria-controls="callout-170" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-179-contents" aria-controls="callout-179" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span><a href="#sol-write-in-matrix-form" class="quarto-xref">Solution&nbsp;27</a>
+<span class="screen-reader-only">Solution</span><a href="#sol-write-in-matrix-form" class="quarto-xref">Solution&nbsp;30</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-170" class="callout-170-contents callout-collapse collapse">
+<div id="callout-179" class="callout-179-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-write-in-matrix-form" class="proof solution">
-<p><span class="proof-title"><em>Solution 27</em>. </span>Read the <a href="./linear-algebra-vectors.html#def-lincom-coefficient">coefficients</a> straight off the rule. There are three inputs, so <span class="math inline">\(p = 3\)</span>:</p>
+<p><span class="proof-title"><em>Solution 30</em>. </span>Read the <a href="./linear-algebra-vectors.html#def-lincom-coefficient">coefficients</a> straight off the rule. There are three inputs, so <span class="math inline">\(p = 3\)</span>:</p>
 <p><span class="math display">\[\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \begin{bmatrix} 0.4 \\ 0.2 \\ 1.5 \end{bmatrix},
 \qquad b = -30\]</span></p>
 <p>and the rule is <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ b\)</span>.</p>
@@ -5205,37 +5382,37 @@ Figure&nbsp;1: The <a href="https://morrison-lab.github.io/mcs/functions.html#de
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exr callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-171-contents" aria-controls="callout-171" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-180-contents" aria-controls="callout-180" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exr</span><a href="#exr-write-in-matrix-form-score" class="quarto-xref">Exercise&nbsp;28</a> (Score a patient)
+<span class="screen-reader-only">Exr</span><a href="#exr-write-in-matrix-form-score" class="quarto-xref">Exercise&nbsp;31</a> (Score a patient)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-171" class="callout-171-contents callout-collapse collapse show">
+<div id="callout-180" class="callout-180-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exr-write-in-matrix-form-score" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 28 (Score a patient)</strong></span> Give the score from the rule in <a href="#exr-write-in-matrix-form" class="quarto-xref">Exercise&nbsp;27</a> for a patient aged <span class="math inline">\(50\)</span> with blood pressure <span class="math inline">\(130\)</span> and BMI <span class="math inline">\(28\)</span>.</p>
+<p><span class="theorem-title"><strong>Exercise 31 (Score a patient)</strong></span> Give the score from the rule in <a href="#exr-write-in-matrix-form" class="quarto-xref">Exercise&nbsp;30</a> for a patient aged <span class="math inline">\(50\)</span> with blood pressure <span class="math inline">\(130\)</span> and BMI <span class="math inline">\(28\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-172-contents" aria-controls="callout-172" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-181-contents" aria-controls="callout-181" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span><a href="#sol-write-in-matrix-form-score" class="quarto-xref">Solution&nbsp;28</a>
+<span class="screen-reader-only">Solution</span><a href="#sol-write-in-matrix-form-score" class="quarto-xref">Solution&nbsp;31</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-172" class="callout-172-contents callout-collapse collapse">
+<div id="callout-181" class="callout-181-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-write-in-matrix-form-score" class="proof solution">
-<p><span class="proof-title"><em>Solution 28</em>. </span>For the patient,</p>
+<p><span class="proof-title"><em>Solution 31</em>. </span>For the patient,</p>
 <p><span class="math display">\[\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix} 50 \\ 130 \\ 28 \end{bmatrix}\]</span></p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -5258,19 +5435,19 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exr callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-173-contents" aria-controls="callout-173" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-182-contents" aria-controls="callout-182" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exr</span><a href="#exr-which-are-linear" class="quarto-xref">Exercise&nbsp;29</a> (Which of these are affine in <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>?)
+<span class="screen-reader-only">Exr</span><a href="#exr-which-are-linear" class="quarto-xref">Exercise&nbsp;32</a> (Which of these are affine in <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>?)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-173" class="callout-173-contents callout-collapse collapse show">
+<div id="callout-182" class="callout-182-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exr-which-are-linear" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 29 (Which of these are affine in <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>?)</strong></span> Each of the five expressions is a function of the weights <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p\)</span>, with the data <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and <span class="math inline">\(y\)</span> held fixed. Say which ones are affine (<a href="#def-affine-map" class="quarto-xref">Definition&nbsp;24</a>), that is, have the form <a href="#eq-linear-scalar" class="quarto-xref">Equation&nbsp;1</a> — an inner product plus an offset — and which of those are also linear (<a href="#def-linear-map" class="quarto-xref">Definition&nbsp;20</a>).</p>
+<p><span class="theorem-title"><strong>Exercise 32 (Which of these are affine in <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>?)</strong></span> Each of the five expressions is a function of the weights <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p\)</span>, with the data <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and <span class="math inline">\(y\)</span> held fixed. Say which ones are affine (<a href="#def-affine-map" class="quarto-xref">Definition&nbsp;24</a>), that is, have the form <a href="#eq-linear-scalar" class="quarto-xref">Equation&nbsp;1</a> — an inner product plus an offset — and which of those are also linear (<a href="#def-linear-map" class="quarto-xref">Definition&nbsp;20</a>).</p>
 <ol type="1">
 <li><span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span></li>
 <li><span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- y\)</span></li>
@@ -5283,19 +5460,19 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-174-contents" aria-controls="callout-174" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-183-contents" aria-controls="callout-183" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span><a href="#sol-which-are-linear" class="quarto-xref">Solution&nbsp;29</a>
+<span class="screen-reader-only">Solution</span><a href="#sol-which-are-linear" class="quarto-xref">Solution&nbsp;32</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-174" class="callout-174-contents callout-collapse collapse">
+<div id="callout-183" class="callout-183-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-which-are-linear" class="proof solution">
-<p><span class="proof-title"><em>Solution 29</em>. </span></p>
+<p><span class="proof-title"><em>Solution 32</em>. </span></p>
 <ol type="1">
 <li><strong>Affine, and linear.</strong> It is <a href="#eq-linear-scalar" class="quarto-xref">Equation&nbsp;1</a> with <span class="math inline">\(b = 0\)</span>, which is a linear map by <a href="#thm-matrix-map-linear" class="quarto-xref">Theorem&nbsp;12</a>: the matrix <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\)</span> times <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>.</li>
 <li><strong>Affine.</strong> Still an inner product plus an offset; here the offset is <span class="math inline">\(b = -y\)</span>, which is a constant because <span class="math inline">\(y\)</span> is held fixed. It is linear only when <span class="math inline">\(y = 0\)</span>: otherwise <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> gives <span class="math inline">\(-y \ne 0\)</span>, and a linear map sends <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> to <span class="math inline">\(0\)</span> (<a href="#thm-linear-map-zero" class="quarto-xref">Theorem&nbsp;11</a>).</li>
@@ -5313,7 +5490,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <h1 data-number="8"><span class="header-section-number">8</span> Transposes of sums and products</h1>
 <!-- heading shares the slide; do not re-flag -->
 <div class="callouty-titled callout callout-style-default callout-lem callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-175-contents" aria-controls="callout-175" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-184-contents" aria-controls="callout-184" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -5322,7 +5499,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-175" class="callout-175-contents callout-collapse collapse show">
+<div id="callout-184" class="callout-184-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="thm-transpose-sum" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 18 (Transpose of a sum)</strong></span> For <span class="math inline">\(m \times n\)</span> matrices <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span>:</p>
@@ -5334,7 +5511,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-176-contents" aria-controls="callout-176" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-185-contents" aria-controls="callout-185" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -5343,7 +5520,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-176" class="callout-176-contents callout-collapse collapse">
+<div id="callout-185" class="callout-185-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Entry <span class="math inline">\((i, j)\)</span> of each side:</p>
@@ -5368,7 +5545,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-lem callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-177-contents" aria-controls="callout-177" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-186-contents" aria-controls="callout-186" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -5377,7 +5554,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-177" class="callout-177-contents callout-collapse collapse show">
+<div id="callout-186" class="callout-186-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="thm-transpose-product" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 19 (Transpose of a product)</strong></span> For an <span class="math inline">\(m \times k\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and a <span class="math inline">\(k \times n\)</span> matrix <span class="math inline">\(\mathbf{B}\)</span>:</p>
@@ -5390,7 +5567,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-178-contents" aria-controls="callout-178" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-187-contents" aria-controls="callout-187" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -5399,7 +5576,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-178" class="callout-178-contents callout-collapse collapse">
+<div id="callout-187" class="callout-187-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Entry <span class="math inline">\((i, j)\)</span> of each side:</p>
@@ -5424,7 +5601,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-remark callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-179-contents" aria-controls="callout-179" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-188-contents" aria-controls="callout-188" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -5433,7 +5610,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-179" class="callout-179-contents callout-collapse collapse show">
+<div id="callout-188" class="callout-188-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="rem-transpose-product-order" class="proof remark">
 <p><span class="proof-title"><em>Remark 8</em> (The order of the factors reverses). </span>Transposing a product reverses the order of the factors. Keeping the original order usually gives an undefined product or a different matrix. For example, with <span class="math inline">\(\mathbf{A} = [1,\; 2]\)</span> (<span class="math inline">\(1 \times 2\)</span>) and <span class="math inline">\(\mathbf{B} = \begin{bmatrix} 3 \\ 4 \end{bmatrix}\)</span> (<span class="math inline">\(2 \times 1\)</span>),</p>
@@ -5459,19 +5636,19 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exr callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-181-contents" aria-controls="callout-181" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-190-contents" aria-controls="callout-190" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Exr</span><a href="#exr-transpose-product-practice" class="quarto-xref">Exercise&nbsp;30</a> (The order of the factors in a transposed square product)
+<span class="screen-reader-only">Exr</span><a href="#exr-transpose-product-practice" class="quarto-xref">Exercise&nbsp;33</a> (The order of the factors in a transposed square product)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-181" class="callout-181-contents callout-collapse collapse show">
+<div id="callout-190" class="callout-190-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exr-transpose-product-practice" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 30 (The order of the factors in a transposed square product)</strong></span> <a href="#rem-transpose-product-order" class="quarto-xref">Remark&nbsp;8</a> shows that, for factors that are not <a href="#def-square-matrix">square</a>, keeping the original order of the factors in the <a href="#def-matrix-transpose">transpose</a> of a <a href="#def-matrix-mult">product</a> can give an undefined product. For two <a href="#def-square-matrix">square matrices</a> of the same size, both <span class="math inline">\({\mathbf{A}}^{\top}{\mathbf{B}}^{\top}\)</span> and <span class="math inline">\({\mathbf{B}}^{\top}{\mathbf{A}}^{\top}\)</span> are defined, so the shapes alone cannot settle which order gives <span class="math inline">\({(\mathbf{A}\mathbf{B})}^{\top}\)</span>. Let</p>
+<p><span class="theorem-title"><strong>Exercise 33 (The order of the factors in a transposed square product)</strong></span> <a href="#rem-transpose-product-order" class="quarto-xref">Remark&nbsp;8</a> shows that, for factors that are not <a href="#def-square-matrix">square</a>, keeping the original order of the factors in the <a href="#def-matrix-transpose">transpose</a> of a <a href="#def-matrix-mult">product</a> can give an undefined product. For two <a href="#def-square-matrix">square matrices</a> of the same size, both <span class="math inline">\({\mathbf{A}}^{\top}{\mathbf{B}}^{\top}\)</span> and <span class="math inline">\({\mathbf{B}}^{\top}{\mathbf{A}}^{\top}\)</span> are defined, so the shapes alone cannot settle which order gives <span class="math inline">\({(\mathbf{A}\mathbf{B})}^{\top}\)</span>. Let</p>
 <p><span class="math display">\[
 \mathbf{A} = \begin{bmatrix} 1 &amp; 2 \\ 0 &amp; 1 \end{bmatrix},
 \qquad
@@ -5496,19 +5673,19 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-182-contents" aria-controls="callout-182" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-191-contents" aria-controls="callout-191" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span><a href="#sol-transpose-product-practice" class="quarto-xref">Solution&nbsp;30</a>
+<span class="screen-reader-only">Solution</span><a href="#sol-transpose-product-practice" class="quarto-xref">Solution&nbsp;33</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-182" class="callout-182-contents callout-collapse collapse">
+<div id="callout-191" class="callout-191-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-transpose-product-practice" class="proof solution">
-<p><span class="proof-title"><em>Solution 30</em>. </span>No: the two <a href="#def-matrix">matrices</a> differ, so keeping the order of the factors gives the wrong <a href="#def-matrix-transpose">transpose</a>.</p>
+<p><span class="proof-title"><em>Solution 33</em>. </span>No: the two <a href="#def-matrix">matrices</a> differ, so keeping the order of the factors gives the wrong <a href="#def-matrix-transpose">transpose</a>.</p>
 <p>The <a href="#def-matrix-mult">product</a> <span class="math inline">\(\mathbf{A}\mathbf{B}\)</span> and its transpose are</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -5546,7 +5723,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-lem callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-183-contents" aria-controls="callout-183" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-192-contents" aria-controls="callout-192" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -5555,7 +5732,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-183" class="callout-183-contents callout-collapse collapse show">
+<div id="callout-192" class="callout-192-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="thm-scalar-transpose" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 20 (A <span class="math inline">\(1 \times 1\)</span> product equals its own transpose)</strong></span> If <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> are vectors of length <span class="math inline">\(p\)</span> and <span class="math inline">\(\mathbf{M}\)</span> is a <span class="math inline">\(p \times p\)</span> matrix, then <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top}\mathbf{M}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> is a number, and</p>
@@ -5569,7 +5746,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-184-contents" aria-controls="callout-184" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-193-contents" aria-controls="callout-193" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -5578,7 +5755,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-184" class="callout-184-contents callout-collapse collapse">
+<div id="callout-193" class="callout-193-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>The product <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top}\mathbf{M}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> is a <span class="math inline">\((1 \times p)(p \times p)(p \times 1)\)</span> product, so it is a <span class="math inline">\(1 \times 1\)</span> matrix. The transpose of a <span class="math inline">\(1 \times 1\)</span> matrix is itself, so</p>
@@ -5601,7 +5778,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-185-contents" aria-controls="callout-185" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-194-contents" aria-controls="callout-194" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -5610,7 +5787,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-185" class="callout-185-contents callout-collapse collapse show">
+<div id="callout-194" class="callout-194-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-scalar-transpose" class="theorem example">
 <p><span class="theorem-title"><strong>Example 25 (Two ways to write the same number)</strong></span> Take <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = (1, 2)\)</span>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (3, -1)\)</span> and <span class="math inline">\(\mathbf{M} = \begin{bmatrix} 1 &amp; 2 \\ 0 &amp; 3 \end{bmatrix}\)</span>. Then <span class="math inline">\(\mathbf{M}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (1, -3)\)</span>, so</p>
