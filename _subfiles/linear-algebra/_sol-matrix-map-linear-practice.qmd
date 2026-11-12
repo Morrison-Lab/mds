@@ -1,0 +1,21 @@
+:::{#sol-matrix-map-linear-practice}
+
+Yes.
+Let
+
+$$
+\matr{A} = \begin{bmatrix} 1 & 2 \\ 3 & -1 \end{bmatrix}.
+$$
+
+By @def-matvec-mult,
+
+$$
+\matr{A}\vx = \begin{bmatrix} 1 \cd x_1 + 2 \cd x_2 \\ 3 \cd x_1 + (-1) \cd x_2 \end{bmatrix}
+= \begin{bmatrix} x_1 + 2 x_2 \\ 3 x_1 - x_2 \end{bmatrix}
+= f(\vx).
+$$
+
+So $f$ multiplies its input by $\matr{A}$,
+and $f$ is a [linear map](#def-linear-map) by @thm-matrix-map-linear.
+
+:::

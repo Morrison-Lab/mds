@@ -1,0 +1,23 @@
+:::{#exr-real-coordinate-space-practice}
+#### Testing whether a vector with entries $\sqrt{2}$ and $\pi$ lies in $\reals^3$
+
+Entries such as $\sqrt{2}$ and $\pi$ have no exact decimal form,
+but they are still [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers).
+Let
+
+$$
+\vecf{v} = \sbmat{\sqrt{2} \\ \pi \\ -1}.
+$$
+
+Is $\vecf{v}$ in $\reals^3$?
+
+::: {.callout-tip}
+#### Hint
+
+@def-real-coordinate-space has two conditions:
+the number of entries of the [column vector](#def-column-vector),
+and the kind of number in each entry.
+
+:::
+
+:::

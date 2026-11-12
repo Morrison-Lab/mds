@@ -11,11 +11,11 @@ that is, $f$ is strictly larger at $-2$ than at all nearby points.
 In this example, the [Hessian](vector-calculus.qmd#def-hessian) $H = f''(x) = 2x$ is negative at every [iterate](#def-iterate).
 If $H < 0$, then @thm-newton-model does not apply,
 because it requires a [positive definite](linear-algebra.qmd#def-positive-definite) Hessian.
-Instead, the [model](#def-quadratic-model) $\quadmodelf{\step} = f + g\,\step + \tfrac{1}{2} H \step^2$
+Instead, the [quadratic approximation](#def-quadratic-model) $\quadmodelf{\step} = f + g\,\step + \tfrac{1}{2} H \step^2$
 tends to $-\infty$ as $\abs{\step} \to \infty$,
 so it has no minimizer.
 
-@fig-newton-maximum shows the [cubic](algebra.qmd#def-cubic-polynomial) and its model.
+@fig-newton-maximum shows the [cubic](algebra.qmd#def-cubic-polynomial) and its quadratic approximation.
 
 {{< include mds/_subfiles/vector-calc/_fig-newton-maximum.qmd >}}
 
