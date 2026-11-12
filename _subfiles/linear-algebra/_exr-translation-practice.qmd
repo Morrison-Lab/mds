@@ -1,0 +1,17 @@
+:::{#exr-translation-practice}
+#### Finding the translation that moves one point to another
+
+A [translation](#def-translation) moves every point by the same vector,
+so where it sends one point fixes the whole translation.
+A translation $t_{\vec{b}}$ of $\reals^2$ sends $\tp{(2, 3)}$ to $\tp{(5, 1)}$.
+
+Find $\vec{b}$.
+
+::: {.callout-tip}
+#### Hint
+
+Solve $\tp{(2, 3)} + \vec{b} = \tp{(5, 1)}$ entry by entry.
+
+:::
+
+:::

@@ -1,0 +1,25 @@
+:::{#exr-matmul-product-of-sums-practice}
+#### Comparing $(\matr{A} + \matr{B})(\matr{A} + \matr{B})$ with the rule for numbers
+
+For numbers, $(a + b)^2 = a^2 + 2ab + b^2$.
+@thm-matmul-product-of-sums expands a [product](#def-matrix-mult) of two [matrix sums](#def-matrix-addition) into four terms instead,
+because $\matr{A}\matr{B}$ and $\matr{B}\matr{A}$ can differ.
+Let
+
+$$
+\matr{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix},
+\qquad
+\matr{B} = \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}.
+$$
+
+Is $(\matr{A} + \matr{B})(\matr{A} + \matr{B})$ [equal](#def-matrix-equality) to $\matr{A}\matr{A} + 2\matr{A}\matr{B} + \matr{B}\matr{B}$?
+
+::: {.callout-tip}
+#### Hint
+
+Compute $\matr{A} + \matr{B}$ and its [product](#def-matrix-mult) with itself,
+then compute $\matr{A}\matr{A}$, $\matr{A}\matr{B}$ and $\matr{B}\matr{B}$ with @def-matrix-mult.
+
+:::
+
+:::

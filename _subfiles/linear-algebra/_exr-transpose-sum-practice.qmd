@@ -1,0 +1,24 @@
+:::{#exr-transpose-sum-practice}
+#### Transposing a sum of two matrices
+
+@thm-transpose-sum lets a [transpose](#def-matrix-transpose) be taken before or after adding,
+whichever is less work.
+Let
+
+$$
+\matr{A} = \sbmat{1 & 2 & 0 \\ 3 & -1 & 4},
+\qquad
+\matr{B} = \sbmat{0 & 1 & 1 \\ 2 & 2 & -3}.
+$$
+
+Find $\tp{(\matr{A} + \matr{B})}$.
+
+::: {.callout-tip}
+#### Hint
+
+Add first with @def-matrix-addition,
+then take the [transpose](#def-matrix-transpose).
+
+:::
+
+:::
