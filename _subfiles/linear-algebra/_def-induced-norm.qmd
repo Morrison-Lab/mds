@@ -4,8 +4,8 @@
 In an [inner product space](#def-inner-product-space) $(V, \iprod{\cdot}{\cdot})$,
 the **induced norm** (or **norm induced by** $\iprod{\cdot}{\cdot}$)
 is the [function](https://morrison-lab.github.io/mcs/functions.html#def-function)
-that maps each vector $\vx \in V$
-to the [square root](algebra.qmd#def-square-root) of the inner product of $\vx$ with itself:
+that assigns to each vector $\vx \in V$
+the [square root](algebra.qmd#def-square-root) of the [inner product](#def-inner-product) of $\vx$ with itself:
 
 $$\norm{\vx} \eqdef \sqrt{\iprod{\vx}{\vx}}$$ {#eq-induced-norm}
 
