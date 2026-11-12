@@ -1,0 +1,27 @@
+:::{#exr-matrix-from-columns-practice}
+#### Placing columns side by side
+
+@thm-matrix-row-of-columns says that a [matrix](#def-matrix) is determined by its [column](#def-matrix-column)s,
+so measurements recorded one quantity at a time
+can be assembled into a matrix by placing those lists side by side.
+Let $\matr{N}$ be the $2 \times 3$ matrix with
+
+$$
+\matr{N}_{:,1} = \begin{bmatrix} 2 \\ -1 \end{bmatrix},
+\qquad
+\matr{N}_{:,2} = \begin{bmatrix} 0 \\ 3 \end{bmatrix},
+\qquad
+\matr{N}_{:,3} = \begin{bmatrix} 4 \\ 1 \end{bmatrix}.
+$$
+
+What is $\matr{N}_{2,:}$, the second [row of $\matr{N}$](#def-matrix-row)?
+
+::: {.callout-tip}
+#### Hint
+
+Place the [column](#def-matrix-column)s from left to right, as in @thm-matrix-row-of-columns,
+then read across the second [row](#def-matrix-row).
+
+:::
+
+:::
