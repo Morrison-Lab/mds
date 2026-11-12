@@ -4,8 +4,8 @@
 This section is adapted from the Newton-Raphson and gradient descent parts of @zhou2024optim,
 used under the MIT License
 (see the license text in [Linear Algebra](linear-algebra.qmd#sec-subspaces)).
-The source motivates the Newton step by minimizing a quadratic approximation;
-here that step is proved to be the exact minimizer of the quadratic model.
+The source motivates the [Newton step](#def-newton-step) informally, as the step that minimizes a [quadratic approximation](#def-quadratic-model);
+here @thm-newton-model proves that the step is that approximation's exact [minimizer](algebra.qmd#def-global-minimizer).
 In the source's zigzag example the starting value of the objective is $\tfrac{1}{2}(b^2 + b)$,
 not $\tfrac{1}{2}(1 + b^2)$ as the source writes;
 the ratio of successive values is unaffected.

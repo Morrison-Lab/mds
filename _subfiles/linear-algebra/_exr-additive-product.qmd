@@ -1,0 +1,18 @@
+:::{#exr-additive-product}
+#### Testing whether $x_1 x_2$ is additive
+
+An [additive function](#def-additive-function) can be evaluated at $\vx + \vy$
+by evaluating it at $\vx$ and at $\vy$ separately,
+so additivity is worth checking before splitting a computation that way.
+Let $f: \reals^2 \to \reals$ be $f(\vx) = x_1 x_2$.
+
+Is $f$ [additive](#def-additive-function)?
+
+::: {.callout-tip}
+#### Hint
+
+Try $\vx = (1, 0)$ and $\vy = (0, 1)$ in @def-additive-function.
+
+:::
+
+:::

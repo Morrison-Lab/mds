@@ -1,0 +1,26 @@
+:::{#sol-matadd-inverse-proof}
+
+Both sides are $m \times n$ [matrices](#def-matrix),
+so they are [equal](#def-matrix-equality) when their $(i, j)$ entries agree for every $i$ and $j$.
+For each $i$ and $j$,
+
+$$
+\ba
+(\matr{A} + (-\matr{A}))_{ij}
+&= a_{ij} + (-\matr{A})_{ij}
+&& \text{(@def-matrix-addition)}
+\\
+&= a_{ij} + (-a_{ij})
+&& \text{(definition of } -\matr{A} \text{ in @thm-matadd-inverse)}
+\\
+&= 0
+&& \text{(a number plus its negative is } 0 \text{)}
+\\
+&= (\matr{0}_{m \times n})_{ij}.
+&& \text{(@def-zero-matrix)}
+\ea
+$$
+
+So $\matr{A} + (-\matr{A}) = \matr{0}_{m \times n}$.
+
+:::

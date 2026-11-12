@@ -1,0 +1,23 @@
+:::{#exr-linear-map-lincom-practice}
+#### Evaluating a linear map on a linear combination
+
+A [linear map](#def-linear-map) is determined on a [linear combination](linear-algebra-vectors.qmd#def-linear-combination) of vectors
+by its values on those vectors alone.
+Let $f: \reals^2 \to \reals^2$ be a linear map with
+
+$$
+f(\vecf{v}_1) = \begin{bmatrix} 1 \\ 2 \end{bmatrix},
+\qquad
+f(\vecf{v}_2) = \begin{bmatrix} 0 \\ -1 \end{bmatrix}.
+$$
+
+Find $f(3 \vecf{v}_1 - 2 \vecf{v}_2)$.
+
+::: {.callout-tip}
+#### Hint
+
+Apply @thm-linear-map-lincom with $c_1 = 3$ and $c_2 = -2$.
+
+:::
+
+:::

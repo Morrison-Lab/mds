@@ -1,0 +1,30 @@
+:::{#sol-matadd-assoc-proof}
+
+Both sides are $m \times n$ [matrices](#def-matrix),
+so they are [equal](#def-matrix-equality) when their $(i, j)$ entries agree for every $i$ and $j$.
+For each $i$ and $j$,
+
+$$
+\ba
+((\matr{A} + \matr{B}) + \matr{C})_{ij}
+&= (\matr{A} + \matr{B})_{ij} + c_{ij}
+&& \text{(@def-matrix-addition)}
+\\
+&= (a_{ij} + b_{ij}) + c_{ij}
+&& \text{(@def-matrix-addition)}
+\\
+&= a_{ij} + (b_{ij} + c_{ij})
+&& \text{(sums of numbers are associative)}
+\\
+&= a_{ij} + (\matr{B} + \matr{C})_{ij}
+&& \text{(@def-matrix-addition)}
+\\
+&= (\matr{A} + (\matr{B} + \matr{C}))_{ij},
+&& \text{(@def-matrix-addition)}
+\ea
+$$
+
+where the middle step uses [the associativity of sums of numbers](algebra-sums.qmd#thm-sum-assoc).
+So $(\matr{A} + \matr{B}) + \matr{C} = \matr{A} + (\matr{B} + \matr{C})$.
+
+:::
