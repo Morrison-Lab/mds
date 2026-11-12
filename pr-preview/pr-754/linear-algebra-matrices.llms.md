@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-11 10:54:51 (PST)
+Last modified: 2026-11-11 20:00:46 (PST)
 
 > **NOTE:**
 >
@@ -543,6 +543,32 @@ Last modified: 2026-11-11 10:54:51 (PST)
 > &= \begin{bmatrix} 3 & -6 \\ 0 & 12 \end{bmatrix}.
 > \end{aligned}$$
 
+> **NOTE:**
+>
+> **Exercise 15 (Multiplying a matrix by a negative factor)** A [scalar multiple](#def-scalar-mult) rescales every entry of a [matrix](#def-matrix) by the same factor, as when a table of distances is converted from meters to centimeters. A negative factor flips the sign of every entry, and a factor between $-1$ and $1$ shrinks every entry toward $0$. Let
+>
+> $$\mathbf{C} = \begin{bmatrix} 4 & -2 \\ 0 & 6 \end{bmatrix}.$$
+>
+> Compute $-\frac{1}{2} \mathbf{C}$.
+>
+> > **TIP:**
+> >
+> > Multiply each entry by $-\frac{1}{2}$, as in [Example 7](#exm-scalar-mult).
+
+> **NOTE:**
+>
+> *Solution 15*. $$\begin{aligned}
+> -\frac{1}{2} \mathbf{C}
+> &= \begin{bmatrix}
+> -\frac{1}{2} \cdot 4 & -\frac{1}{2} \cdot(-2) \\
+> -\frac{1}{2} \cdot 0 & -\frac{1}{2} \cdot 6
+> \end{bmatrix}
+> && \text{(}\href{#def-scalar-mult}{\text{Definition~9}}\text{)}
+> \\
+> &= \begin{bmatrix} -2 & 1 \\ 0 & -3 \end{bmatrix}.
+> && \text{(multiply)}
+> \end{aligned}$$
+
 # 4 Matrix multiplication
 
 > **NOTE:**
@@ -588,7 +614,7 @@ Last modified: 2026-11-11 10:54:51 (PST)
 
 > **NOTE:**
 >
-> **Exercise 15 (Computing the product of a** $2 \times 3$ and a $3 \times 2$ matrix) The [product](#def-matrix-mult) of two [matrices](#def-matrix) is defined only when the first has as many [column](#def-matrix-column)s as the second has [row](#def-matrix-row)s. Each entry of the product combines one [row of the first factor](#def-matrix-row) with one [column of the second](#def-matrix-column). Let
+> **Exercise 16 (Computing the product of a** $2 \times 3$ and a $3 \times 2$ matrix) The [product](#def-matrix-mult) of two [matrices](#def-matrix) is defined only when the first has as many [column](#def-matrix-column)s as the second has [row](#def-matrix-row)s. Each entry of the product combines one [row of the first factor](#def-matrix-row) with one [column of the second](#def-matrix-column). Let
 >
 > $$\mathbf{A} = \begin{bmatrix} 1 & 0 & 2 \\ -1 & 3 & 1 \end{bmatrix},
 > \qquad
@@ -602,7 +628,7 @@ Last modified: 2026-11-11 10:54:51 (PST)
 
 > **NOTE:**
 >
-> *Solution 15*. $\mathbf{A}$ has three [column](#def-matrix-column)s, and $\mathbf{B}$ has three [row](#def-matrix-row)s. So the [product](#def-matrix-mult) is defined and is $2 \times 2$. Its entries are
+> *Solution 16*. $\mathbf{A}$ has three [column](#def-matrix-column)s, and $\mathbf{B}$ has three [row](#def-matrix-row)s. So the [product](#def-matrix-mult) is defined and is $2 \times 2$. Its entries are
 >
 > $$\begin{aligned}
 > \mathbf{A}\mathbf{B}
@@ -647,7 +673,7 @@ Last modified: 2026-11-11 10:54:51 (PST)
 
 > **NOTE:**
 >
-> **Exercise 16 (Grouping a product of three matrices)** By [Theorem 7](#thm-matmul-assoc), a [product](#def-matrix-mult) of three [matrices](#def-matrix) can be grouped either way, so $\mathbf{A}\mathbf{B}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ can be computed as $\mathbf{A}(\mathbf{B}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$, without ever forming $\mathbf{A}\mathbf{B}$. Let
+> **Exercise 17 (Grouping a product of three matrices)** By [Theorem 7](#thm-matmul-assoc), a [product](#def-matrix-mult) of three [matrices](#def-matrix) can be grouped either way, so $\mathbf{A}\mathbf{B}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ can be computed as $\mathbf{A}(\mathbf{B}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$, without ever forming $\mathbf{A}\mathbf{B}$. Let
 >
 > $$\mathbf{A} = \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix},
 > \qquad
@@ -665,7 +691,7 @@ Last modified: 2026-11-11 10:54:51 (PST)
 
 > **NOTE:**
 >
-> *Solution 16*. First,
+> *Solution 17*. First,
 >
 > $$\begin{aligned}
 > \mathbf{B}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
@@ -704,7 +730,7 @@ Last modified: 2026-11-11 10:54:51 (PST)
 
 > **NOTE:**
 >
-> **Exercise 17 (Proving that matrix multiplication distributes from the left)** [Theorem 8](#thm-matmul-distrib) lets a [product](#def-matrix-mult) with a [matrix sum](#def-matrix-addition) be expanded term by term, just as multiplication of numbers [distributes over](algebra-sums.llms.md#def-distributes-over) addition. Let $\mathbf{A}$ be an $m \times k$ [matrix](#def-matrix), and let $\mathbf{B}$ and $\mathbf{C}$ be $k \times n$ matrices.
+> **Exercise 18 (Proving that matrix multiplication distributes from the left)** [Theorem 8](#thm-matmul-distrib) lets a [product](#def-matrix-mult) with a [matrix sum](#def-matrix-addition) be expanded term by term, just as multiplication of numbers [distributes over](algebra-sums.llms.md#def-distributes-over) addition. Let $\mathbf{A}$ be an $m \times k$ [matrix](#def-matrix), and let $\mathbf{B}$ and $\mathbf{C}$ be $k \times n$ matrices.
 >
 > Prove that $\mathbf{A}(\mathbf{B} + \mathbf{C}) = \mathbf{A}\mathbf{B} + \mathbf{A}\mathbf{C}$.
 >
@@ -714,7 +740,7 @@ Last modified: 2026-11-11 10:54:51 (PST)
 
 > **NOTE:**
 >
-> *Solution 17*. Both sides are $m \times n$ [matrices](#def-matrix), so they are [equal](#def-matrix-equality) when their $(i, j)$ entries agree for every $i$ and $j$. For each $i$ and $j$,
+> *Solution 18*. Both sides are $m \times n$ [matrices](#def-matrix), so they are [equal](#def-matrix-equality) when their $(i, j)$ entries agree for every $i$ and $j$. For each $i$ and $j$,
 >
 > $$\begin{aligned}
 > \mathopen{}\left[\mathbf{A}(\mathbf{B} + \mathbf{C})\right]\mathclose{}_{ij}
@@ -778,7 +804,7 @@ Last modified: 2026-11-11 10:54:51 (PST)
 
 > **NOTE:**
 >
-> **Exercise 18 (Comparing** $(\mathbf{A} + \mathbf{B})(\mathbf{A} + \mathbf{B})$ with the rule for numbers) For numbers, $(a + b)^2 = a^2 + 2ab + b^2$. [Theorem 9](#thm-matmul-product-of-sums) expands a [product](#def-matrix-mult) of two [matrix sums](#def-matrix-addition) into four terms instead, because $\mathbf{A}\mathbf{B}$ and $\mathbf{B}\mathbf{A}$ can differ. Let
+> **Exercise 19 (Comparing** $(\mathbf{A} + \mathbf{B})(\mathbf{A} + \mathbf{B})$ with the rule for numbers) For numbers, $(a + b)^2 = a^2 + 2ab + b^2$. [Theorem 9](#thm-matmul-product-of-sums) expands a [product](#def-matrix-mult) of two [matrix sums](#def-matrix-addition) into four terms instead, because $\mathbf{A}\mathbf{B}$ and $\mathbf{B}\mathbf{A}$ can differ. Let
 >
 > $$\mathbf{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix},
 > \qquad
@@ -792,7 +818,7 @@ Last modified: 2026-11-11 10:54:51 (PST)
 
 > **NOTE:**
 >
-> *Solution 18*. No. On the left, $\mathbf{A} + \mathbf{B} = \begin{bmatrix} 1 & 1 \\ 0 & 0 \end{bmatrix}$, so
+> *Solution 19*. No. On the left, $\mathbf{A} + \mathbf{B} = \begin{bmatrix} 1 & 1 \\ 0 & 0 \end{bmatrix}$, so
 >
 > $$\begin{aligned}
 > (\mathbf{A} + \mathbf{B})(\mathbf{A} + \mathbf{B})
@@ -812,7 +838,7 @@ Last modified: 2026-11-11 10:54:51 (PST)
 
 > **NOTE:**
 >
-> **Exercise 19 (Which of these products are defined?)** Let $\mathbf{A}$ be $4 \times 3$, let $\mathbf{B}$ be $3 \times 2$, and let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^3$. For each expression, say whether it is defined, and if so give the shape of the result:
+> **Exercise 20 (Which of these products are defined?)** Let $\mathbf{A}$ be $4 \times 3$, let $\mathbf{B}$ be $3 \times 2$, and let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^3$. For each expression, say whether it is defined, and if so give the shape of the result:
 >
 > 1.  $\mathbf{A}\mathbf{B}$
 > 2.  $\mathbf{B}\mathbf{A}$
@@ -822,7 +848,7 @@ Last modified: 2026-11-11 10:54:51 (PST)
 
 > **NOTE:**
 >
-> *Solution 19*. A vector in $\mathbb{R}^3$ is a $3 \times 1$ matrix, so the same rule settles every case.
+> *Solution 20*. A vector in $\mathbb{R}^3$ is a $3 \times 1$ matrix, so the same rule settles every case.
 >
 > 1.  $\mathbf{A}\mathbf{B}$: $(4 \times 3)(3 \times 2)$. The inner pair is $3$ and $3$, so it is defined, and the result is $4 \times 2$.
 > 2.  $\mathbf{B}\mathbf{A}$: $(3 \times 2)(4 \times 3)$. The inner pair is $2$ and $4$, which do not match, so it is **not defined**. Matrix multiplication is not commutative, and this is the blunt form of that: swapping the order can leave an expression that means nothing.
@@ -844,7 +870,7 @@ Last modified: 2026-11-11 10:54:51 (PST)
 
 > **NOTE:**
 >
-> **Exercise 20 (Whether a data matrix times its transpose is square)** Many statistical methods start from an $n \times p$ data [matrix](#def-matrix) $\mathbf{X}$, with one [row](#def-matrix-row) per observation, and form the [product](#def-matrix-mult) ${\mathbf{X}}^{\top}\mathbf{X}$ of its [transpose](#def-matrix-transpose) with itself. Whether that product is [square](#def-square-matrix) matters, because some operations, such as taking the [inverse of a matrix](linear-algebra-special-matrices.llms.md#def-matrix-inverse), apply only to [square matrices](#def-square-matrix).
+> **Exercise 21 (Whether a data matrix times its transpose is square)** Many statistical methods start from an $n \times p$ data [matrix](#def-matrix) $\mathbf{X}$, with one [row](#def-matrix-row) per observation, and form the [product](#def-matrix-mult) ${\mathbf{X}}^{\top}\mathbf{X}$ of its [transpose](#def-matrix-transpose) with itself. Whether that product is [square](#def-square-matrix) matters, because some operations, such as taking the [inverse of a matrix](linear-algebra-special-matrices.llms.md#def-matrix-inverse), apply only to [square matrices](#def-square-matrix).
 >
 > Is ${\mathbf{X}}^{\top}\mathbf{X}$ square?
 >
@@ -854,7 +880,7 @@ Last modified: 2026-11-11 10:54:51 (PST)
 
 > **NOTE:**
 >
-> *Solution 20*. Yes. The [transpose](#def-matrix-transpose) ${\mathbf{X}}^{\top}$ is $p \times n$, so ${\mathbf{X}}^{\top}$ has $n$ [column](#def-matrix-column)s. $\mathbf{X}$ has $n$ [row](#def-matrix-row)s, so the [product](#def-matrix-mult) ${\mathbf{X}}^{\top}\mathbf{X}$ is defined and is $p \times p$. It has $p$ rows and $p$ columns, so it is [square](#def-square-matrix) for every $n$ and $p$.
+> *Solution 21*. Yes. The [transpose](#def-matrix-transpose) ${\mathbf{X}}^{\top}$ is $p \times n$, so ${\mathbf{X}}^{\top}$ has $n$ [column](#def-matrix-column)s. $\mathbf{X}$ has $n$ [row](#def-matrix-row)s, so the [product](#def-matrix-mult) ${\mathbf{X}}^{\top}\mathbf{X}$ is defined and is $p \times p$. It has $p$ rows and $p$ columns, so it is [square](#def-square-matrix) for every $n$ and $p$.
 
 > **NOTE:**
 >
@@ -877,7 +903,7 @@ Last modified: 2026-11-11 10:54:51 (PST)
 
 > **NOTE:**
 >
-> **Exercise 21 (The main diagonal of a tall matrix)** The [main diagonal](#def-main-diagonal) of a [matrix](#def-matrix) that is not [square](#def-square-matrix) stops when it runs out of [row](#def-matrix-row)s or [column](#def-matrix-column)s, whichever comes first. A tall matrix, with more rows than columns, runs out of columns first. Let
+> **Exercise 22 (The main diagonal of a tall matrix)** The [main diagonal](#def-main-diagonal) of a [matrix](#def-matrix) that is not [square](#def-square-matrix) stops when it runs out of [row](#def-matrix-row)s or [column](#def-matrix-column)s, whichever comes first. A tall matrix, with more rows than columns, runs out of columns first. Let
 >
 > $$\mathbf{E} = \begin{bmatrix} 7 & -2 \\ 1 & 3 \\ 0 & 5 \\ 4 & -6 \end{bmatrix}.$$
 >
@@ -889,11 +915,11 @@ Last modified: 2026-11-11 10:54:51 (PST)
 
 > **NOTE:**
 >
-> *Solution 21*. Write $e_{ij}$ for the entry of $\mathbf{E}$ in [row](#def-matrix-row) $i$ and [column](#def-matrix-column) $j$. $\mathbf{E}$ is $4 \times 2$, so $m = 4$, $n = 2$ and $k = 2$. The [main diagonal](#def-main-diagonal) of $\mathbf{E}$ is therefore the list $e_{11}, e_{22}$, that is, $7, 3$. The list stops at $e_{22}$ because $\mathbf{E}$ has no third [column](#def-matrix-column). It therefore has no entry $e_{33}$.
+> *Solution 22*. Write $e_{ij}$ for the entry of $\mathbf{E}$ in [row](#def-matrix-row) $i$ and [column](#def-matrix-column) $j$. $\mathbf{E}$ is $4 \times 2$, so $m = 4$, $n = 2$ and $k = 2$. The [main diagonal](#def-main-diagonal) of $\mathbf{E}$ is therefore the list $e_{11}, e_{22}$, that is, $7, 3$. The list stops at $e_{22}$ because $\mathbf{E}$ has no third [column](#def-matrix-column). It therefore has no entry $e_{33}$.
 
 > **NOTE:**
 >
-> **Exercise 22 (Adding the diagonal entries of a square matrix)** The [sum](algebra-sums.llms.md#def-summation) of the [diagonal entries](#def-diagonal-entry) of a [square matrix](#def-square-matrix) summarizes that [matrix](#def-matrix) in one number, called its [trace](linear-algebra-special-matrices.llms.md#def-trace). Let
+> **Exercise 23 (Adding the diagonal entries of a square matrix)** The [sum](algebra-sums.llms.md#def-summation) of the [diagonal entries](#def-diagonal-entry) of a [square matrix](#def-square-matrix) summarizes that [matrix](#def-matrix) in one number, called its [trace](linear-algebra-special-matrices.llms.md#def-trace). Let
 >
 > $$\mathbf{F} = \begin{bmatrix} 2 & 5 & -1 \\ 0 & -3 & 8 \\ 4 & 1 & 6 \end{bmatrix}.$$
 >
@@ -905,13 +931,13 @@ Last modified: 2026-11-11 10:54:51 (PST)
 
 > **NOTE:**
 >
-> *Solution 22*. Write $f_{ij}$ for the entry of $\mathbf{F}$ in [row](#def-matrix-row) $i$ and [column](#def-matrix-column) $j$. $\mathbf{F}$ is $3 \times 3$, so its [diagonal entries](#def-diagonal-entry) are $f_{11} = 2$, $f_{22} = -3$ and $f_{33} = 6$, and adding them gives
+> *Solution 23*. Write $f_{ij}$ for the entry of $\mathbf{F}$ in [row](#def-matrix-row) $i$ and [column](#def-matrix-column) $j$. $\mathbf{F}$ is $3 \times 3$, so its [diagonal entries](#def-diagonal-entry) are $f_{11} = 2$, $f_{22} = -3$ and $f_{33} = 6$, and adding them gives
 >
 > $$f_{11} + f_{22} + f_{33} = 2 + (-3) + 6 = 5.$$
 
 > **NOTE:**
 >
-> **Exercise 23 (Counting the off-diagonal entries of a square matrix)** In a table of pairwise comparisons among several items, the [off-diagonal entries](#def-off-diagonal-entry) are the comparisons between two different items, so counting them counts the ordered pairs of different items. Let $\mathbf{A}$ be a $5 \times 5$ [matrix](#def-matrix), so $\mathbf{A}$ is [square](#def-square-matrix).
+> **Exercise 24 (Counting the off-diagonal entries of a square matrix)** In a table of pairwise comparisons among several items, the [off-diagonal entries](#def-off-diagonal-entry) are the comparisons between two different items, so counting them counts the ordered pairs of different items. Let $\mathbf{A}$ be a $5 \times 5$ [matrix](#def-matrix), so $\mathbf{A}$ is [square](#def-square-matrix).
 >
 > How many off-diagonal entries does $\mathbf{A}$ have?
 >
@@ -921,7 +947,7 @@ Last modified: 2026-11-11 10:54:51 (PST)
 
 > **NOTE:**
 >
-> *Solution 23*. $\mathbf{A}$ has $5 \cdot 5 = 25$ entries. Its [diagonal entries](#def-diagonal-entry) are the $5$ entries $a_{ii}$, $i = 1, \ldots, 5$, and every other entry has $i \ne j$, so $\mathbf{A}$ has $25 - 5 = 20$ [off-diagonal entries](#def-off-diagonal-entry).
+> *Solution 24*. $\mathbf{A}$ has $5 \cdot 5 = 25$ entries. Its [diagonal entries](#def-diagonal-entry) are the $5$ entries $a_{ii}$, $i = 1, \ldots, 5$, and every other entry has $i \ne j$, so $\mathbf{A}$ has $25 - 5 = 20$ [off-diagonal entries](#def-off-diagonal-entry).
 
 > **NOTE:**
 >
@@ -959,6 +985,38 @@ Last modified: 2026-11-11 10:54:51 (PST)
 >
 > $$\mathbf{I}_m\,\mathbf{A} = \mathbf{A}$$
 
+> **NOTE:**
+>
+> **Exercise 25 (Multiplying by an identity matrix)** [Theorem 10](#thm-identity) says that an [identity matrix](#def-identity-matrix) of the right size leaves a [matrix](#def-matrix) unchanged under [matrix multiplication](#def-matrix-mult), just as multiplying a number by $1$ leaves it unchanged. Let
+>
+> $$\mathbf{A} = \begin{bmatrix} 2 & 0 & -1 \\ 5 & 3 & 4 \end{bmatrix}.$$
+>
+> Compute $\mathbf{I}_2 \mathbf{A}$ entry by entry, from the definition of matrix multiplication.
+>
+> > **TIP:**
+> >
+> > Entry $(i, j)$ of $\mathbf{I}_2 \mathbf{A}$ is the [dot product](linear-algebra-vectors.llms.md#def-dot-product) of the $i$th [row of](#def-matrix-row) $\mathbf{I}_2$ with the $j$th [column of](#def-matrix-column) $\mathbf{A}$, as in [Example 8](#exm-dot-product-matmul).
+
+> **NOTE:**
+>
+> *Solution 25*. $\mathbf{I}_2$ is $2 \times 2$ and $\mathbf{A}$ is $2 \times 3$, so the [product](#def-matrix-mult) is defined and is $2 \times 3$. The first [row of](#def-matrix-row) $\mathbf{I}_2$ is $\begin{bmatrix} 1 & 0 \end{bmatrix}$ and the second is $\begin{bmatrix} 0 & 1 \end{bmatrix}$, so by [Definition 10](#def-matrix-mult)
+>
+> $$\begin{aligned}
+> \mathbf{I}_2 \mathbf{A}
+> &= \begin{bmatrix}
+> 1 \cdot 2 + 0 \cdot 5 & 1 \cdot 0 + 0 \cdot 3 & 1 \cdot(-1) + 0 \cdot 4 \\
+> 0 \cdot 2 + 1 \cdot 5 & 0 \cdot 0 + 1 \cdot 3 & 0 \cdot(-1) + 1 \cdot 4
+> \end{bmatrix}
+> && \text{(}\href{#def-matrix-mult}{\text{Definition~10}}\text{)}
+> \\
+> &= \begin{bmatrix} 2 & 0 & -1 \\ 5 & 3 & 4 \end{bmatrix}
+> && \text{(multiply and add)}
+> \\
+> &= \mathbf{A}.
+> \end{aligned}$$
+>
+> Each row of $\mathbf{I}_2$ has a single $1$, so entry $(i, j)$ of the product picks out entry $(i, j)$ of $\mathbf{A}$, as [Theorem 10](#thm-identity) says.
+
 # 6 Matrix-vector multiplication
 
 > **NOTE:**
@@ -978,6 +1036,39 @@ Last modified: 2026-11-11 10:54:51 (PST)
 > \begin{bmatrix} 1 \cdot 1 + 2 \cdot(-1) \\ 3 \cdot 1 + 4 \cdot(-1) \end{bmatrix} \\
 > &=
 > \begin{bmatrix} -1 \\ -1 \end{bmatrix}.
+> \end{aligned}$$
+
+> **NOTE:**
+>
+> **Exercise 26 (A matrix-vector product with more columns than rows)** A [matrix-vector product](#def-matvec-mult) $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ computes one [weighted sum](linear-algebra-vectors.llms.md#def-weighted-sum) of the entries of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ for each [row of](#def-matrix-row) $\mathbf{A}$, so one multiplication computes several weighted sums at once. The [matrix](#def-matrix) $\mathbf{A}$ below has more [column](#def-matrix-column)s than [row](#def-matrix-row)s, so $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is shorter than $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$. Let
+>
+> $$\mathbf{A} = \begin{bmatrix} 2 & 0 & -1 \\ 5 & 3 & 4 \end{bmatrix},
+> \qquad
+> \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}.$$
+>
+> Compute $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$.
+>
+> > **TIP:**
+> >
+> > Entry $i$ of $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is the [dot product](linear-algebra-vectors.llms.md#def-dot-product) of the $i$th [row of](#def-matrix-row) $\mathbf{A}$ with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, as in [Remark 4](#rem-matvec-row-dot-products).
+
+> **NOTE:**
+>
+> *Solution 26*. $\mathbf{A}$ is $2 \times 3$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is $3 \times 1$, so the [matrix-vector product](#def-matvec-mult) is defined and is $2 \times 1$:
+>
+> $$\begin{aligned}
+> \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
+> &= \begin{bmatrix}
+> 2 \cdot 1 + 0 \cdot 2 + (-1) \cdot 3 \\
+> 5 \cdot 1 + 3 \cdot 2 + 4 \cdot 3
+> \end{bmatrix}
+> && \text{(}\href{#def-matvec-mult}{\text{Definition~16}}\text{)}
+> \\
+> &= \begin{bmatrix} 2 + 0 - 3 \\ 5 + 6 + 12 \end{bmatrix}
+> && \text{(multiply)}
+> \\
+> &= \begin{bmatrix} -1 \\ 23 \end{bmatrix}.
+> && \text{(add)}
 > \end{aligned}$$
 
 > **NOTE:**
@@ -1600,7 +1691,7 @@ Last modified: 2026-11-11 10:54:51 (PST)
 
 > **NOTE:**
 >
-> **Exercise 24 (Write a rule in matrix form)** A clinic scores a patient’s risk from three measurements.
+> **Exercise 27 (Write a rule in matrix form)** A clinic scores a patient’s risk from three measurements.
 >
 > | symbol | meaning                 | units    |
 > |--------|-------------------------|----------|
@@ -1616,7 +1707,7 @@ Last modified: 2026-11-11 10:54:51 (PST)
 
 > **NOTE:**
 >
-> *Solution 24*. Read the [coefficients](linear-algebra-vectors.llms.md#def-lincom-coefficient) straight off the rule. There are three inputs, so $p = 3$:
+> *Solution 27*. Read the [coefficients](linear-algebra-vectors.llms.md#def-lincom-coefficient) straight off the rule. There are three inputs, so $p = 3$:
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \begin{bmatrix} 0.4 \\ 0.2 \\ 1.5 \end{bmatrix},
 > \qquad b = -30$$
@@ -1625,11 +1716,11 @@ Last modified: 2026-11-11 10:54:51 (PST)
 
 > **NOTE:**
 >
-> **Exercise 25 (Score a patient)** Give the score from the rule in [Exercise 24](#exr-write-in-matrix-form) for a patient aged $50$ with blood pressure $130$ and BMI $28$.
+> **Exercise 28 (Score a patient)** Give the score from the rule in [Exercise 27](#exr-write-in-matrix-form) for a patient aged $50$ with blood pressure $130$ and BMI $28$.
 
 > **NOTE:**
 >
-> *Solution 25*. For the patient,
+> *Solution 28*. For the patient,
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix} 50 \\ 130 \\ 28 \end{bmatrix}$$
 >
@@ -1650,7 +1741,7 @@ Last modified: 2026-11-11 10:54:51 (PST)
 
 > **NOTE:**
 >
-> **Exercise 26 (Which of these are affine in** $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$?) Each of the five expressions is a function of the weights $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p$, with the data $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $y$ held fixed. Say which ones are affine ([Definition 24](#def-affine-map)), that is, have the form [Equation 1](#eq-linear-scalar) — an inner product plus an offset — and which of those are also linear ([Definition 20](#def-linear-map)).
+> **Exercise 29 (Which of these are affine in** $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$?) Each of the five expressions is a function of the weights $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p$, with the data $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $y$ held fixed. Say which ones are affine ([Definition 24](#def-affine-map)), that is, have the form [Equation 1](#eq-linear-scalar) — an inner product plus an offset — and which of those are also linear ([Definition 20](#def-linear-map)).
 >
 > 1.  $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$
 > 2.  $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- y$
@@ -1660,7 +1751,7 @@ Last modified: 2026-11-11 10:54:51 (PST)
 
 > **NOTE:**
 >
-> *Solution 26*.
+> *Solution 29*.
 >
 > 1.  **Affine, and linear.** It is [Equation 1](#eq-linear-scalar) with $b = 0$, which is a linear map by [Theorem 12](#thm-matrix-map-linear): the matrix ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}$ times $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$.
 > 2.  **Affine.** Still an inner product plus an offset; here the offset is $b = -y$, which is a constant because $y$ is held fixed. It is linear only when $y = 0$: otherwise $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ gives $-y \ne 0$, and a linear map sends $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ to $0$ ([Theorem 11](#thm-linear-map-zero)).
@@ -1747,6 +1838,58 @@ Last modified: 2026-11-11 10:54:51 (PST)
 > = \begin{bmatrix} 3 & 4 \\ 6 & 8 \end{bmatrix}.$$
 >
 > If instead $\mathbf{A}$ is $2 \times 3$ and $\mathbf{B}$ is $3 \times 1$, then ${\mathbf{B}}^{\top}\,{\mathbf{A}}^{\top}$ is a $(1 \times 3)(3 \times 2)$ product, but ${\mathbf{A}}^{\top}\,{\mathbf{B}}^{\top}$ is a $(3 \times 2)(1 \times 3)$ product, which is undefined.
+
+> **NOTE:**
+>
+> **Exercise 30 (The order of the factors in a transposed square product)** [Remark 8](#rem-transpose-product-order) shows that, for factors that are not [square](#def-square-matrix), keeping the original order of the factors in the [transpose](#def-matrix-transpose) of a [product](#def-matrix-mult) can give an undefined product. For two [square matrices](#def-square-matrix) of the same size, both ${\mathbf{A}}^{\top}{\mathbf{B}}^{\top}$ and ${\mathbf{B}}^{\top}{\mathbf{A}}^{\top}$ are defined, so the shapes alone cannot settle which order gives ${(\mathbf{A}\mathbf{B})}^{\top}$. Let
+>
+> $$\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 0 & 1 \end{bmatrix},
+> \qquad
+> \mathbf{B} = \begin{bmatrix} 1 & 0 \\ 1 & 1 \end{bmatrix}.$$
+>
+> Does ${\mathbf{A}}^{\top}{\mathbf{B}}^{\top}$ equal ${(\mathbf{A}\mathbf{B})}^{\top}$ for these $\mathbf{A}$ and $\mathbf{B}$?
+>
+> > **TIP:**
+> >
+> > Compute $\mathbf{A}\mathbf{B}$ with [Definition 10](#def-matrix-mult) and take its [transpose](#def-matrix-transpose), then compute ${\mathbf{A}}^{\top}{\mathbf{B}}^{\top}$ and compare the two entry by entry.
+
+> **NOTE:**
+>
+> *Solution 30*. No: the two [matrices](#def-matrix) differ, so keeping the order of the factors gives the wrong [transpose](#def-matrix-transpose).
+>
+> The [product](#def-matrix-mult) $\mathbf{A}\mathbf{B}$ and its transpose are
+>
+> $$\begin{aligned}
+> \mathbf{A}\mathbf{B}
+> &= \begin{bmatrix}
+> 1 \cdot 1 + 2 \cdot 1 & 1 \cdot 0 + 2 \cdot 1 \\
+> 0 \cdot 1 + 1 \cdot 1 & 0 \cdot 0 + 1 \cdot 1
+> \end{bmatrix}
+> && \text{(}\href{#def-matrix-mult}{\text{Definition~10}}\text{)}
+> \\
+> &= \begin{bmatrix} 3 & 2 \\ 1 & 1 \end{bmatrix},
+> && \text{(multiply and add)}
+> \end{aligned}$$
+>
+> so ${(\mathbf{A}\mathbf{B})}^{\top} = \begin{bmatrix} 3 & 1 \\ 2 & 1 \end{bmatrix}$.
+>
+> The transposes are ${\mathbf{A}}^{\top} = \begin{bmatrix} 1 & 0 \\ 2 & 1 \end{bmatrix}$ and ${\mathbf{B}}^{\top} = \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix}$, so
+>
+> $$\begin{aligned}
+> {\mathbf{A}}^{\top}{\mathbf{B}}^{\top}
+> &= \begin{bmatrix}
+> 1 \cdot 1 + 0 \cdot 0 & 1 \cdot 1 + 0 \cdot 1 \\
+> 2 \cdot 1 + 1 \cdot 0 & 2 \cdot 1 + 1 \cdot 1
+> \end{bmatrix}
+> && \text{(}\href{#def-matrix-mult}{\text{Definition~10}}\text{)}
+> \\
+> &= \begin{bmatrix} 1 & 1 \\ 2 & 3 \end{bmatrix}.
+> && \text{(multiply and add)}
+> \end{aligned}$$
+>
+> Entry $(1, 1)$ is $3$ in ${(\mathbf{A}\mathbf{B})}^{\top}$ and $1$ in ${\mathbf{A}}^{\top}{\mathbf{B}}^{\top}$. In the reversed order, as [Theorem 19](#thm-transpose-product) says, ${\mathbf{B}}^{\top}{\mathbf{A}}^{\top}
+> = \begin{bmatrix} 1 \cdot 1 + 1 \cdot 2 & 1 \cdot 0 + 1 \cdot 1 \\ 0 \cdot 1 + 1 \cdot 2 & 0 \cdot 0 + 1 \cdot 1 \end{bmatrix}
+> = \begin{bmatrix} 3 & 1 \\ 2 & 1 \end{bmatrix}$, which matches ${(\mathbf{A}\mathbf{B})}^{\top}$.
 
 > **NOTE:**
 >
