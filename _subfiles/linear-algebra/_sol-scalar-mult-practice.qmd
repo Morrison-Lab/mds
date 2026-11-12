@@ -1,0 +1,17 @@
+:::{#sol-scalar-mult-practice}
+
+$$
+\ba
+-\frac{1}{2} \matr{C}
+&= \begin{bmatrix}
+-\frac{1}{2} \cd 4 & -\frac{1}{2} \cd (-2) \\
+-\frac{1}{2} \cd 0 & -\frac{1}{2} \cd 6
+\end{bmatrix}
+&& \text{(@def-scalar-mult)}
+\\
+&= \begin{bmatrix} -2 & 1 \\ 0 & -3 \end{bmatrix}.
+&& \text{(multiply)}
+\ea
+$$
+
+:::
