@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-11-12 12:42:10 (PST)
+Last modified: 2026-11-12 14:30:30 (PST)
 
 # 1 Column space and null space
 
@@ -89,6 +89,98 @@ Last modified: 2026-11-12 12:42:10 (PST)
 > shows $\mathcal{N}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\{(2, 1, 0), (2, 0, 1)\right\}\mathclose{}$, a plane in $\mathbb{R}^3$.
 >
 > For the left null space, ${\mathbf{A}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = (y_1 + 3y_2,\; -2\,(y_1 + 3y_2),\; -2\,(y_1 + 3y_2))$, which is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_3$ exactly when $y_1 = -3y_2$, so $\mathcal{N}({\mathbf{A}}^{\top}) = \operatorname{span}\mathopen{}\left\{(-3, 1)\right\}\mathclose{}$, a line in $\mathbb{R}^2$.
+
+> **NOTE:**
+>
+> **Exercise 1 (Testing whether a vector is in a column space)** A vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ is in the [column space](#def-column-space) of a [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{A}$ exactly when some $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ gives $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$. Let
+>
+> $$\mathbf{A} = \begin{bmatrix}1 & 2 \\ 3 & 6\end{bmatrix},
+> \qquad
+> \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \begin{bmatrix}2 \\ 6\end{bmatrix}.$$
+>
+> Decide whether $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ is in $\mathcal{C}(\mathbf{A})$.
+>
+> > **TIP:**
+> >
+> > Try $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (x_1, 0)$ and solve for $x_1$.
+
+> **NOTE:**
+>
+> *Solution 1*. Take $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (2, 0)$. Then
+>
+> $$\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
+> = \begin{bmatrix}1 \cdot 2 + 2 \cdot 0 \\ 3 \cdot 2 + 6 \cdot 0\end{bmatrix}
+> = \begin{bmatrix}2 \\ 6\end{bmatrix}
+> = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}},$$
+>
+> so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ is in $\mathcal{C}(\mathbf{A})$.
+
+> **NOTE:**
+>
+> **Exercise 2 (Testing whether a vector is in a row space)** The [row space](#def-row-space) of a [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{A}$ is the [column space](#def-column-space) of its [transpose](linear-algebra-matrices.llms.md#def-matrix-transpose). Let
+>
+> $$\mathbf{A} = \begin{bmatrix}1 & 2 \\ 3 & 6\end{bmatrix}$$
+>
+> and let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ be the [column vector](linear-algebra-vectors.llms.md#def-column-vector) $(1, 2)$.
+>
+> Decide whether $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ is in the row space $\mathcal{C}({\mathbf{A}}^{\top})$.
+>
+> > **TIP:**
+> >
+> > Write out ${\mathbf{A}}^{\top}$ and look for $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ with ${\mathbf{A}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$.
+
+> **NOTE:**
+>
+> *Solution 2*. Here
+>
+> $${\mathbf{A}}^{\top} = \begin{bmatrix}1 & 3 \\ 2 & 6\end{bmatrix}.$$
+>
+> Take $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = (1, 0)$. Then
+>
+> $${\mathbf{A}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}
+> = \begin{bmatrix}1 \cdot 1 + 3 \cdot 0 \\ 2 \cdot 1 + 6 \cdot 0\end{bmatrix}
+> = \begin{bmatrix}1 \\ 2\end{bmatrix}
+> = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}},$$
+>
+> so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ is in the [row space](#def-row-space).
+
+> **NOTE:**
+>
+> **Exercise 3 (Showing that a column space is all of** $\mathbb{R}^2$) [Theorem 1](#thm-column-space-span) describes a [column space](#def-column-space) as the [span](linear-algebra-subspaces.llms.md#def-span) of the [columns of](linear-algebra-matrices.llms.md#def-matrix-column) $\mathbf{A}$. Let
+>
+> $$\mathbf{A} = \begin{bmatrix}1 & 0 & 1 \\ 0 & 1 & 1\end{bmatrix}.$$
+>
+> Show that $\mathcal{C}(\mathbf{A}) = \mathbb{R}^2$.
+>
+> > **TIP:**
+> >
+> > Two of the [columns of](linear-algebra-matrices.llms.md#def-matrix-column) $\mathbf{A}$ are the [indicator vectors](linear-algebra-vectors.llms.md#def-indicator-vector) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2$.
+
+> **NOTE:**
+>
+> *Solution 3*. By [Theorem 1](#thm-column-space-span), $\mathcal{C}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\{(1, 0), (0, 1), (1, 1)\right\}\mathclose{}$. Every $(b_1, b_2) \in \mathbb{R}^2$ is $b_1\,(1, 0) + b_2\,(0, 1) + 0\,(1, 1)$, so it is in that [span](linear-algebra-subspaces.llms.md#def-span). The [column space](#def-column-space) also lies inside $\mathbb{R}^2$, so $\mathcal{C}(\mathbf{A}) = \mathbb{R}^2$.
+
+> **NOTE:**
+>
+> **Exercise 4 (Finding a null space)** The [null space](#def-null-space) of a [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{A}$ holds every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ with $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$. Let
+>
+> $$\mathbf{A} = \begin{bmatrix}1 & 2 & 0 \\ 0 & 0 & 1\end{bmatrix}.$$
+>
+> Find $\mathcal{N}(\mathbf{A})$ as a [span](linear-algebra-subspaces.llms.md#def-span).
+>
+> > **TIP:**
+> >
+> > Write out the two entries of $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and make each $0$.
+
+> **NOTE:**
+>
+> *Solution 4*. For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (x_1, x_2, x_3)$,
+>
+> $$\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \begin{bmatrix}x_1 + 2 x_2 \\ x_3\end{bmatrix}.$$
+>
+> This vector is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2$ exactly when $x_3 = 0$ and $x_1 = -2 x_2$. So $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (-2 x_2, x_2, 0) = x_2\,(-2, 1, 0)$, and
+>
+> $$\mathcal{N}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\{(-2, 1, 0)\right\}\mathclose{}.$$
 
 > **NOTE:**
 >
@@ -1103,7 +1195,7 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 
 > **NOTE:**
 >
-> **Exercise 1 (Which side of the plane?)** Let $\mathcal{H}$ be the plane in $\mathbb{R}^3$ with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, 1, 1)$ and $b = -1$ ([Example 22](#exm-hyperplane-subspace)).
+> **Exercise 5 (Which side of the plane?)** Let $\mathcal{H}$ be the plane in $\mathbb{R}^3$ with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, 1, 1)$ and $b = -1$ ([Example 22](#exm-hyperplane-subspace)).
 >
 > 1.  For each point, say whether it is in $\mathcal{H}^+$, $\mathcal{H}$ or $\mathcal{H}^-$ ([Definition 9](#def-half-space)): $(0, 0, 0)$, $(1, 0, 0)$ and $(1, 1, 1)$.
 > 2.  Write the plane and its half-spaces using $-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ and $-b$. Which points from part 1 change sides?
@@ -1111,7 +1203,7 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 
 > **NOTE:**
 >
-> *Solution 1*.
+> *Solution 5*.
 >
 > 1.  Compute $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b = x_1 + x_2 + x_3 - 1$ at each point.
 >
