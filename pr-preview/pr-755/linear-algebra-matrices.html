@@ -230,35 +230,25 @@ cookieconsent.run({
 <script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
 <link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 <style>
-div.callout-exr.callout {
-  border-left-color: #FFA500;
+div.callout-def.callout {
+  border-left-color: #1B5E20;
 }
-div.callout-exr.callout-style-default .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
+div.callout-def.callout-style-default .callout-header {
+  background-color: rgba(27, 94, 32, 0.13);
 }
-div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-cnj.callout {
-  border-left-color: #558B2F;
+div.callout-solution.callout {
+  border-left-color: #4E342E;
 }
-div.callout-cnj.callout-style-default .callout-header {
-  background-color: rgba(85, 139, 47, 0.13);
+div.callout-solution.callout-style-default .callout-header {
+  background-color: rgba(78, 52, 46, 0.13);
 }
-div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-prp.callout {
-  border-left-color: #827717;
-}
-div.callout-prp.callout-style-default .callout-header {
-  background-color: rgba(130, 119, 23, 0.13);
-}
-div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-cor.callout {
   border-left-color: #00838F;
@@ -270,25 +260,25 @@ div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-exm.callout {
-  border-left-color: #6A1B9A;
-}
-div.callout-exm.callout-style-default .callout-header {
-  background-color: rgba(106, 27, 154, 0.13);
-}
-div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-fig.callout {
+div.callout-tbl.callout {
   border-left-color: #757575;
 }
-div.callout-fig.callout-style-default .callout-header {
+div.callout-tbl.callout-style-default .callout-header {
   background-color: rgba(117, 117, 117, 0.13);
 }
-div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
+div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-exr.callout {
+  border-left-color: #FFA500;
+}
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
+}
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-proof.callout {
   border-left-color: #37474F;
@@ -300,16 +290,6 @@ div.callout-proof .callout-toggle::before {  background-image: url('data:image/s
 div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-def.callout {
-  border-left-color: #1B5E20;
-}
-div.callout-def.callout-style-default .callout-header {
-  background-color: rgba(27, 94, 32, 0.13);
-}
-div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
 div.callout-lem.callout {
   border-left-color: #1565C0;
 }
@@ -319,16 +299,6 @@ div.callout-lem.callout-style-default .callout-header {
 div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-tbl.callout {
-  border-left-color: #757575;
-}
-div.callout-tbl.callout-style-default .callout-header {
-  background-color: rgba(117, 117, 117, 0.13);
-}
-div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-remark.callout {
   border-left-color: #AD1457;
@@ -340,15 +310,45 @@ div.callout-remark .callout-toggle::before {  background-image: url('data:image/
 div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-solution.callout {
-  border-left-color: #4E342E;
+div.callout-prp.callout {
+  border-left-color: #827717;
 }
-div.callout-solution.callout-style-default .callout-header {
-  background-color: rgba(78, 52, 46, 0.13);
+div.callout-prp.callout-style-default .callout-header {
+  background-color: rgba(130, 119, 23, 0.13);
 }
-div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-fig.callout {
+  border-left-color: #757575;
+}
+div.callout-fig.callout-style-default .callout-header {
+  background-color: rgba(117, 117, 117, 0.13);
+}
+div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-exm.callout {
+  border-left-color: #6A1B9A;
+}
+div.callout-exm.callout-style-default .callout-header {
+  background-color: rgba(106, 27, 154, 0.13);
+}
+div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
+}
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
+}
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 
@@ -1134,7 +1134,7 @@ window.Quarto = {
 <!-- gha-preview-page-banner:start -->
 <div class="preview-page-changes-banner" style="background: #f8f9fa; border-left: 4px solid #0d6efd; padding: 10px 15px; margin: 15px 0; border-radius: 4px;">
     <p style="margin: 0;">
-        <strong>📝 Preview Changes:</strong> This page has been modified in this pull request (~7% of content changed).
+        <strong>📝 Preview Changes:</strong> This page has been modified in this pull request (~5% of content changed).
         <br>
         <strong>🎨 Highlighting Legend:</strong> 
         <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 3px; border-radius: 2px;">Modified text (yellow)</mark> shows changed words/phrases, 
@@ -1159,7 +1159,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-11-11 16:04:33 (PST)</p>
+      <p class="date">Last modified: 2026-11-11 16:53:56 (PST)</p>
     </div>
   </div>
   
@@ -1465,11 +1465,11 @@ x &amp;= 3.
 <div id="callout-15" class="callout-15-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exr-matrix-size-practice" class="theorem exercise">
-<p><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;"><span class="theorem-title"><strong>Exercise 3 (Counting the rows and columns of a matrix)</strong></span> Data with one <a href="#def-matrix-row">row</a> per observation and one <a href="#def-matrix-column">column</a> per measured quantity is stored as a <a href="#def-matrix">matrix</a>, so the matrix’s number of rows is the number of observations and its number of columns is the number of quantities. Let</mark></p>
-<p><span class="math display"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\[
+<p><span class="theorem-title"><strong>Exercise <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">3</mark> (Counting the rows and columns of a matrix)</strong></span> Data with one <a href="#def-matrix-row">row</a> per observation and one <a href="#def-matrix-column">column</a> per measured quantity is stored as a <a href="#def-matrix">matrix</a>, so the matrix’s number of rows is the number of observations and its number of columns is the number of quantities. Let</p>
+<p><span class="math display">\[
 \mathbf{C} = \begin{bmatrix} 4 &amp; 0 \\ 1 &amp; -3 \\ 2 &amp; 7 \end{bmatrix}.
-\]</mark></span></p>
-<p><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Find </mark><span class="math inline"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\(m\)</mark></span><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;"> and </mark><span class="math inline"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\(n\)</mark></span><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;"> such that </mark><span class="math inline"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\(\mathbf{C}\)</mark></span><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;"> is an</mark> <span class="math inline">\(m \times n\)</span> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">matrix.</mark></p>
+\]</span></p>
+<p>Find <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> such that <span class="math inline">\(\mathbf{C}\)</span> is an <span class="math inline">\(m \times n\)</span> matrix.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1480,7 +1480,7 @@ x &amp;= 3.
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;">In <a href="#def-matrix" class="quarto-xref">Definition&nbsp;1</a>, <span class="math inline">\(m\)</span> counts the <a href="#def-matrix-row">row</a>s and <span class="math inline">\(n\)</span> counts the <a href="#def-matrix-column">column</a>s.</mark></p>
+<p>In <a href="#def-matrix" class="quarto-xref">Definition&nbsp;1</a>, <span class="math inline">\(m\)</span> counts the <a href="#def-matrix-row">row</a>s and <span class="math inline">\(n\)</span> counts the <a href="#def-matrix-column">column</a>s.</p>
 </div>
 </div>
 </div>
@@ -1500,7 +1500,7 @@ x &amp;= 3.
 <div id="callout-16" class="callout-16-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-matrix-size-practice" class="proof solution">
-<p><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;"><span class="proof-title"><em>Solution 3</em>. </span><span class="math inline">\(\mathbf{C}\)</span> has three <a href="#def-matrix-row">row</a>s, <span class="math inline">\(\begin{bmatrix} 4 &amp; 0 \end{bmatrix}\)</span>, <span class="math inline">\(\begin{bmatrix} 1 &amp; -3 \end{bmatrix}\)</span> and <span class="math inline">\(\begin{bmatrix} 2 &amp; 7 \end{bmatrix}\)</span>, and each row has two entries, so <span class="math inline">\(\mathbf{C}\)</span> has two <a href="#def-matrix-column">column</a>s. So <span class="math inline">\(m = 3\)</span> and <span class="math inline">\(n = 2\)</span>: <span class="math inline">\(\mathbf{C}\)</span> is a <span class="math inline">\(3 \times 2\)</span> <a href="#def-matrix">matrix</a>, with <span class="math inline">\(3 \cdot 2 = 6\)</span> entries.</mark></p>
+<p><span class="proof-title"><em>Solution <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">3</mark></em><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">.</mark> </span><span class="math inline">\(\mathbf{C}\)</span> has three <a href="#def-matrix-row">row</a>s, <span class="math inline">\(\begin{bmatrix} 4 &amp; 0 \end{bmatrix}\)</span>, <span class="math inline">\(\begin{bmatrix} 1 &amp; -3 \end{bmatrix}\)</span> and <span class="math inline">\(\begin{bmatrix} 2 &amp; 7 \end{bmatrix}\)</span>, and each row has two entries, so <span class="math inline">\(\mathbf{C}\)</span> has two <a href="#def-matrix-column">column</a>s. So <span class="math inline">\(m = 3\)</span> and <span class="math inline">\(n = 2\)</span>: <span class="math inline">\(\mathbf{C}\)</span> is a <span class="math inline">\(3 \times 2\)</span> <a href="#def-matrix">matrix</a>, with <span class="math inline">\(3 \cdot 2 = 6\)</span> entries.</p>
 </div>
 </div>
 </div>
@@ -1518,11 +1518,11 @@ x &amp;= 3.
 <div id="callout-18" class="callout-18-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exr-matrix-row-practice" class="theorem exercise">
-<p><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;"><span class="theorem-title"><strong>Exercise 4 (Reading off a row of a matrix)</strong></span> When each <a href="#def-matrix-row">row of a matrix</a> records one observation, reading off a <a href="#def-matrix-row">row</a> extracts every measured quantity for that one observation. Let</mark></p>
-<p><span class="math display"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\[
+<p><span class="theorem-title"><strong>Exercise <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">4</mark> (Reading off a row of a matrix)</strong></span> When each <a href="#def-matrix-row">row of a matrix</a> records one observation, reading off a <a href="#def-matrix-row">row</a> extracts every measured quantity for that one observation. Let</p>
+<p><span class="math display">\[
 \mathbf{D} = \begin{bmatrix} 1 &amp; -4 &amp; 2 \\ 0 &amp; 6 &amp; 3 \\ 5 &amp; 5 &amp; -1 \end{bmatrix}.
-\]</mark></span></p>
-<p><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Find</mark> <span class="math inline"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\(\mathbf{D}_{3,:}\)</mark></span><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">,</mark> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">the</mark> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">third </mark><a href="#def-matrix-row"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">row of </mark><span class="math inline"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\(\mathbf{D}\)</mark></span></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">.</mark></p>
+\]</span></p>
+<p>Find <span class="math inline">\(\mathbf{D}_{3,:}\)</span>, the third <a href="#def-matrix-row">row of <span class="math inline">\(\mathbf{D}\)</span></a>.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1533,7 +1533,7 @@ x &amp;= 3.
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;">A <a href="#def-matrix-row">row of a matrix</a> lists the entries <span class="math inline">\(a_{i1}, \ldots, a_{in}\)</span> from left to right, as in <a href="#exm-matrix-rows-columns" class="quarto-xref">Example&nbsp;2</a>.</mark></p>
+<p>A <a href="#def-matrix-row">row of a matrix</a> lists the entries <span class="math inline">\(a_{i1}, \ldots, a_{in}\)</span> from left to right, as in <a href="#exm-matrix-rows-columns" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Example&nbsp;2</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">.</mark></p>
 </div>
 </div>
 </div>
@@ -1553,7 +1553,7 @@ x &amp;= 3.
 <div id="callout-19" class="callout-19-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-matrix-row-practice" class="proof solution">
-<p><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;"><span class="proof-title"><em>Solution 4</em>. </span>Write <span class="math inline">\(d_{ij}\)</span> for the entry of <span class="math inline">\(\mathbf{D}\)</span> in <a href="#def-matrix-row">row</a> <span class="math inline">\(i\)</span> and <a href="#def-matrix-column">column</a> <span class="math inline">\(j\)</span>. <span class="math inline">\(\mathbf{D}\)</span> has <span class="math inline">\(n = 3\)</span> columns, so its third <a href="#def-matrix-row">row</a> holds the three entries <span class="math inline">\(d_{31}\)</span>, <span class="math inline">\(d_{32}\)</span> and <span class="math inline">\(d_{33}\)</span>:</mark></p>
+<p><span class="proof-title"><em>Solution <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">4</mark></em><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">.</mark> </span>Write <span class="math inline">\(d_{ij}\)</span> for the entry of <span class="math inline">\(\mathbf{D}\)</span> in <a href="#def-matrix-row">row</a> <span class="math inline">\(i\)</span> and <a href="#def-matrix-column">column</a> <span class="math inline">\(j\)</span>. <span class="math inline">\(\mathbf{D}\)</span> has <span class="math inline">\(n = 3\)</span> columns, so its third <a href="#def-matrix-row">row</a> holds the three entries <span class="math inline">\(d_{31}\)</span>, <span class="math inline">\(d_{32}\)</span> and <span class="math inline">\(d_{33}\)</span>:</p>
 <p><span class="math display"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\[
 \mathbf{D}_{3,:} = \begin{bmatrix} d_{31} &amp; d_{32} &amp; d_{33} \end{bmatrix}
 = \begin{bmatrix} 5 &amp; 5 &amp; -1 \end{bmatrix}.
@@ -1601,15 +1601,15 @@ x &amp;= 3.
 <div id="callout-22" class="callout-22-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exr-matrix-from-rows-practice" class="theorem exercise">
-<p><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;"><span class="theorem-title"><strong>Exercise 5 (Stacking rows into a matrix)</strong></span> <a href="#thm-matrix-column-of-rows" class="quarto-xref">Theorem&nbsp;1</a> says that a <a href="#def-matrix">matrix</a> is determined by its <a href="#def-matrix-row">row</a>s, so data recorded one observation at a time can be assembled into a matrix by stacking those records. Let <span class="math inline">\(\mathbf{M}\)</span> be the <span class="math inline">\(3 \times 2\)</span> matrix with</mark></p>
-<p><span class="math display"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\[
+<p><span class="theorem-title"><strong>Exercise <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">5</mark> (Stacking rows into a matrix)</strong></span> <a href="#thm-matrix-column-of-rows" class="quarto-xref">Theorem&nbsp;1</a> says that a <a href="#def-matrix">matrix</a> is determined by its <a href="#def-matrix-row">row</a>s, so data recorded one observation at a time can be assembled into a matrix by stacking those records. Let <span class="math inline">\(\mathbf{M}\)</span> be the <span class="math inline">\(3 \times 2\)</span> matrix with</p>
+<p><span class="math display">\[
 \mathbf{M}_{1,:} = \begin{bmatrix} 1 &amp; 2 \end{bmatrix},
 \qquad
 \mathbf{M}_{2,:} = \begin{bmatrix} 3 &amp; -1 \end{bmatrix},
 \qquad
 \mathbf{M}_{3,:} = \begin{bmatrix} 0 &amp; 4 \end{bmatrix}.
-\]</mark></span></p>
-<p><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">What</mark> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">is</mark> <span class="math inline"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\(\mathbf{M}_{:,2}\)</mark></span><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">,</mark> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">the</mark> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">second</mark> <a href="#def-matrix-column"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">column</mark> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">of</mark> <span class="math inline"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\(\mathbf{M}\)</mark></span></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">?</mark></p>
+\]</span></p>
+<p>What is <span class="math inline">\(\mathbf{M}_{:,2}\)</span>, the second <a href="#def-matrix-column">column of <span class="math inline">\(\mathbf{M}\)</span></a>?</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1620,7 +1620,7 @@ x &amp;= 3.
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;">Stack the <a href="#def-matrix-row">row</a>s from top to bottom, as in <a href="#thm-matrix-column-of-rows" class="quarto-xref">Theorem&nbsp;1</a>, then read down the second <a href="#def-matrix-column">column</a>.</mark></p>
+<p>Stack the <a href="#def-matrix-row">row</a>s from top to bottom, as in <a href="#thm-matrix-column-of-rows" class="quarto-xref">Theorem&nbsp;1</a>, then read down the second <a href="#def-matrix-column">column</a>.</p>
 </div>
 </div>
 </div>
@@ -1640,8 +1640,8 @@ x &amp;= 3.
 <div id="callout-23" class="callout-23-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-matrix-from-rows-practice" class="proof solution">
-<p><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;"><span class="proof-title"><em>Solution 5</em>. </span>Stacking the three <a href="#def-matrix-row">row</a>s from top to bottom gives</mark></p>
-<p><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;"><span class="math display">\[
+<p><span class="proof-title"><em>Solution <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">5</mark></em><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">.</mark> </span>Stacking the three <a href="#def-matrix-row">row</a>s from top to bottom gives</p>
+<p><span class="math display">\[
 \begin{aligned}
 \mathbf{M}
 &amp;= \begin{bmatrix} \mathbf{M}_{1,:} \\ \mathbf{M}_{2,:} \\ \mathbf{M}_{3,:} \end{bmatrix}
@@ -1650,11 +1650,11 @@ x &amp;= 3.
 &amp;= \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; -1 \\ 0 &amp; 4 \end{bmatrix},
 &amp;&amp; \text{(substitute the rows)}
 \end{aligned}
-\]</span></mark></p>
-<p><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;">so the second <a href="#def-matrix-column">column of <span class="math inline">\(\mathbf{M}\)</span></a> lists the second entry of each <a href="#def-matrix-row">row</a>:</mark></p>
-<p><span class="math display"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\[
+\]</span></p>
+<p>so the second <a href="#def-matrix-column">column of <span class="math inline">\(\mathbf{M}\)</span></a> lists the second entry of each <a href="#def-matrix-row">row</a>:</p>
+<p><span class="math display">\[
 \mathbf{M}_{:,2} = \begin{bmatrix} 2 \\ -1 \\ 4 \end{bmatrix}.
-\]</mark></span></p>
+\]</span></p>
 </div>
 </div>
 </div>
@@ -1788,9 +1788,9 @@ not taken from that page.
 <div class="callout-body-container callout-body">
 <div id="exr-matrix-transpose-practice" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">6</mark> (Transposing a <span class="math inline">\(3 \times 2\)</span> matrix)</strong></span> The <a href="#def-matrix-transpose">transpose</a> turns the <a href="#def-matrix-row">row</a>s of a <a href="#def-matrix">matrix</a> into <a href="#def-matrix-column">column</a>s, just as the <a href="./linear-algebra-vectors.html#def-transpose">transpose of a vector</a> turns a column into a row. Let</p>
-<p><span class="math display"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\[
+<p><span class="math display">\[
 \mathbf{B} = \begin{bmatrix} 1 &amp; -2 \\ 0 &amp; 3 \\ 4 &amp; 5 \end{bmatrix}.
-\]</mark></span></p>
+\]</span></p>
 <p>Compute <span class="math inline">\({\mathbf{B}}^{\top}\)</span>.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -1823,9 +1823,9 @@ not taken from that page.
 <div class="callout-body-container callout-body">
 <div id="sol-matrix-transpose-practice" class="proof solution">
 <p><span class="proof-title"><em>Solution <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">6</mark></em><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">.</mark> </span><span class="math inline">\(\mathbf{B}\)</span> is <span class="math inline">\(3 \times 2\)</span>, so its <a href="#def-matrix-transpose">transpose</a> is <span class="math inline">\(2 \times 3\)</span>. The <span class="math inline">\(i\)</span>th <a href="#def-matrix-row">row of <span class="math inline">\({\mathbf{B}}^{\top}\)</span></a> is the <span class="math inline">\(i\)</span>th <a href="#def-matrix-column">column of <span class="math inline">\(\mathbf{B}\)</span></a>:</p>
-<p><span class="math display"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\[
+<p><span class="math display">\[
 {\mathbf{B}}^{\top} = \begin{bmatrix} 1 &amp; 0 &amp; 4 \\ -2 &amp; 3 &amp; 5 \end{bmatrix}.
-\]</mark></span></p>
+\]</span></p>
 <p>For instance, entry <span class="math inline">\((2, 3)\)</span> of <span class="math inline">\({\mathbf{B}}^{\top}\)</span> is <span class="math inline">\(b_{32} = 5\)</span>.</p>
 </div>
 </div>
@@ -1946,12 +1946,12 @@ not taken from that page.
 <div class="callout-body-container callout-body">
 <div id="exr-matrix-addition-practice" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">7</mark> (Adding two <span class="math inline">\(2 \times 2\)</span> matrices)</strong></span> A <a href="#def-matrix-addition">matrix sum</a> combines two tables of the same shape entry by entry, such as two months of counts recorded in the same <a href="#def-matrix-row">row</a>s and <a href="#def-matrix-column">column</a>s. Let</p>
-<p><span class="math display"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\[
+<p><span class="math display">\[
 \mathbf{A} = \begin{bmatrix} 1 &amp; -1 \\ 2 &amp; 0 \end{bmatrix},
 \qquad
 \mathbf{B} = \begin{bmatrix} 3 &amp; 2 \\ -2 &amp; 5 \end{bmatrix}.
-\]</mark></span></p>
-<p><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Compute </mark><span class="math inline"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\(\mathbf{A} + \mathbf{B}\)</mark></span><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">.</mark></p>
+\]</span></p>
+<p>Compute <span class="math inline">\(\mathbf{A} + \mathbf{B}\)</span>.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -2133,9 +2133,9 @@ not taken from that page.
 <div class="callout-body-container callout-body">
 <div id="exr-scalar-mult-practice" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">8</mark> (Multiplying a matrix by a negative factor)</strong></span> A <a href="#def-scalar-mult">scalar multiple</a> rescales every entry of a <a href="#def-matrix">matrix</a> by the same factor, as when a table of distances is converted from meters to centimeters. A negative factor flips the sign of every entry, and a factor between <span class="math inline">\(-1\)</span> and <span class="math inline">\(1\)</span> shrinks every entry toward <span class="math inline">\(0\)</span>. Let</p>
-<p><span class="math display"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\[
+<p><span class="math display">\[
 \mathbf{C} = \begin{bmatrix} 4 &amp; -2 \\ 0 &amp; 6 \end{bmatrix}.
-\]</mark></span></p>
+\]</span></p>
 <p>Compute <span class="math inline">\(-\frac{1}{2} \mathbf{C}\)</span>.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -2167,7 +2167,7 @@ not taken from that page.
 <div id="callout-47" class="callout-47-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-scalar-mult-practice" class="proof solution">
-<p><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;"><span class="proof-title"><em>Solution 8</em>. </span><span class="math display">\[
+<p><span class="proof-title"><em>Solution <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">8</mark></em><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">.</mark> </span><span class="math display"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\[
 \begin{aligned}
 -\frac{1}{2} \mathbf{C}
 &amp;= \begin{bmatrix}
@@ -2179,7 +2179,7 @@ not taken from that page.
 &amp;= \begin{bmatrix} -2 &amp; 1 \\ 0 &amp; -3 \end{bmatrix}.
 &amp;&amp; \text{(multiply)}
 \end{aligned}
-\]</span></mark></p>
+\]</mark></span></p>
 </div>
 </div>
 </div>
@@ -2220,11 +2220,11 @@ not taken from that page.
 <div class="callout-body-container callout-body">
 <div id="rem-matmul-not-commutative" class="proof remark">
 <p><span class="proof-title"><em>Remark 2</em> (Matrix multiplication is not commutative). </span>When <span class="math inline">\(\mathbf{A}\mathbf{B}\)</span> and <span class="math inline">\(\mathbf{B}\mathbf{A}\)</span> are both defined, they are usually different. For example, with</p>
-<p><span class="math display"><mark class="preview-text-added" style="background-color: #d1e7dd; color: inherit; padding: 1px 2px; border-radius: 2px;">\[
+<p><span class="math display">\[
 \mathbf{A} = \begin{bmatrix} 1 &amp; 2 \\ 0 &amp; 1 \end{bmatrix},
 \qquad
 \mathbf{B} = \begin{bmatrix} 1 &amp; 0 \\ 1 &amp; 1 \end{bmatrix},
-\]</mark></span></p>
+\]</span></p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathbf{A}\mathbf{B}
@@ -2345,7 +2345,7 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 <div id="thm-matmul-distrib" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 8 (Matrix multiplication is distributive over addition)</strong></span> Matrix multiplication <a href="./algebra-sums.html#def-distributes-over">distributes</a> over addition from the left and from the right. For an <span class="math inline">\(m \times k\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(k \times n\)</span> matrices <span class="math inline">\(\mathbf{B}\)</span> and <span class="math inline">\(\mathbf{C}\)</span>:</p>
 <p><span class="math display">\[\mathbf{A}(\mathbf{B} + \mathbf{C}) = \mathbf{A}\mathbf{B} + \mathbf{A}\mathbf{C}\]</span></p>
-<p>For <span class="math inline">\(m \times k\)</span> matrices <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span> and <mark class="preview-text-added" style="background-color: #d1e7dd; color: inherit; padding: 1px 2px; border-radius: 2px;">a </mark><span class="math inline">\(k \times n\)</span> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">matrix</mark> <span class="math inline"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\(\mathbf{C}\)</mark></span><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">:</mark></p>
+<p>For <span class="math inline">\(m \times k\)</span> matrices <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span> and a <span class="math inline">\(k \times n\)</span> matrix <span class="math inline">\(\mathbf{C}\)</span>:</p>
 <p><span class="math display">\[(\mathbf{A} + \mathbf{B})\mathbf{C} = \mathbf{A}\mathbf{C} + \mathbf{B}\mathbf{C}\]</span></p>
 </div>
 </div>
@@ -2364,7 +2364,7 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 <div id="callout-54" class="callout-54-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="thm-matmul-product-of-sums" class="theorem">
-<p><span class="theorem-title"><strong>Theorem <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">9</mark> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(Product</mark> of <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">two</mark> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">sums of matrices)</mark></strong></span> For <span class="math inline">\(m \times k\)</span> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">matrices</mark> <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\(\mathbf{B}\)</mark></span><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;"> and</mark> <span class="math inline">\(k \times n\)</span> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">matrices</mark> <span class="math inline"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\(\mathbf{C}\)</mark></span><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;"> and </mark><span class="math inline"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\(\mathbf{D}\)</mark></span><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">,</mark></p>
+<p><span class="theorem-title"><strong>Theorem 9 (Product of two sums of matrices)</strong></span> For <span class="math inline">\(m \times k\)</span> matrices <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span> and <span class="math inline">\(k \times n\)</span> matrices <span class="math inline">\(\mathbf{C}\)</span> and <span class="math inline">\(\mathbf{D}\)</span>,</p>
 <p><span class="math display">\[
 (\mathbf{A} + \mathbf{B})(\mathbf{C} + \mathbf{D})
 = \mathbf{A}\mathbf{C} + \mathbf{A}\mathbf{D} + \mathbf{B}\mathbf{C} + \mathbf{B}\mathbf{D}.
@@ -2447,7 +2447,7 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 <div id="exr-shape-rule" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">9</mark> (Which of these products are defined?)</strong></span> Let <span class="math inline">\(\mathbf{A}\)</span> be <span class="math inline">\(4 \times 3\)</span>, let <span class="math inline">\(\mathbf{B}\)</span> be <span class="math inline">\(3 \times 2\)</span>, and let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^3\)</span>. For each expression, say whether it is defined, and if so give the shape of the result:</p>
 <ol type="1">
-<li><span class="math inline"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\(\mathbf{A}\mathbf{B}\)</mark></span></li>
+<li><span class="math inline">\(\mathbf{A}\mathbf{B}\)</span></li>
 <li><span class="math inline">\(\mathbf{B}\mathbf{A}\)</span></li>
 <li><span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span></li>
 <li><span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span></li>
@@ -2644,10 +2644,10 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 <div id="callout-66" class="callout-66-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-identity-matrix" class="theorem example">
-<p><span class="theorem-title"><strong><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Example</mark> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">12</mark> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(The</mark> <span class="math inline"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\(3 \times 3\)</mark></span> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">identity)</mark></strong></span> <span class="math display"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\[
+<p><span class="theorem-title"><strong>Example <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">12</mark> (The <span class="math inline">\(3 \times 3\)</span> identity)</strong></span> <span class="math display">\[
 \mathbf{I}_3 = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{bmatrix},
-\]</mark></span></p>
-<p><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;">so, for instance, <span class="math inline">\((\mathbf{I}_3)_{22} = 1\)</span> and <span class="math inline">\((\mathbf{I}_3)_{23} = 0\)</span>.</mark></p>
+\]</span></p>
+<p>so, for instance, <span class="math inline">\((\mathbf{I}_3)_{22} = 1\)</span> and <span class="math inline">\((\mathbf{I}_3)_{23} = 0\)</span>.</p>
 </div>
 </div>
 </div>
@@ -2704,9 +2704,9 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 <div class="callout-body-container callout-body">
 <div id="exr-identity-product-practice" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">10</mark> (Multiplying by an identity matrix)</strong></span> <a href="#thm-identity" class="quarto-xref">Theorem&nbsp;10</a> says that an <a href="#def-identity-matrix">identity matrix</a> of the right size leaves a <a href="#def-matrix">matrix</a> unchanged under <a href="#def-matrix-mult">matrix multiplication</a>, just as multiplying a number by <span class="math inline">\(1\)</span> leaves it unchanged. Let</p>
-<p><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;"><span class="math display">\[
+<p><span class="math display">\[
 \mathbf{A} = \begin{bmatrix} 2 &amp; 0 &amp; -1 \\ 5 &amp; 3 &amp; 4 \end{bmatrix}.
-\]</span></mark></p>
+\]</span></p>
 <p>Compute <span class="math inline">\(\mathbf{I}_2 \mathbf{A}\)</span> entry by entry, from the definition of matrix multiplication.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -2823,11 +2823,11 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 <div class="callout-body-container callout-body">
 <div id="exr-matvec-practice" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">11</mark> (A matrix-vector product with more columns than rows)</strong></span> A <a href="#def-matvec-mult">matrix-vector product</a> <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> computes one <a href="./linear-algebra-vectors.html#def-weighted-sum">weighted sum</a> of the entries of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> for each <a href="#def-matrix-row">row of <span class="math inline">\(\mathbf{A}\)</span></a>, so one multiplication computes several weighted sums at once. The <a href="#def-matrix">matrix</a> <span class="math inline">\(\mathbf{A}\)</span> below has more <a href="#def-matrix-column">column</a>s than <a href="#def-matrix-row">row</a>s, so <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is shorter than <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>. Let</p>
-<p><span class="math display"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\[
+<p><span class="math display">\[
 \mathbf{A} = \begin{bmatrix} 2 &amp; 0 &amp; -1 \\ 5 &amp; 3 &amp; 4 \end{bmatrix},
 \qquad
 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}.
-\]</mark></span></p>
+\]</span></p>
 <p>Compute <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -3445,7 +3445,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom
 \qquad
 f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2) = f\mathopen{}\left(\begin{bmatrix}0 \\ 1\end{bmatrix}\right)\mathclose{} = \begin{bmatrix}2 \cdot 0 \\ 0 + 1\end{bmatrix} = \begin{bmatrix}0 \\ 1\end{bmatrix}
 \]</span></p>
-<p><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;">and these are the columns of the matrix of <span class="math inline">\(f\)</span> (<a href="#def-matrix-of-linear-map" class="quarto-xref">Definition&nbsp;22</a>): <span class="math inline">\(\mathbf{A} = \begin{bmatrix}2 &amp; 0 \\ 1 &amp; 1\end{bmatrix}\)</span>.</mark></p>
+<p>and these are the columns of the matrix of <span class="math inline">\(f\)</span> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">(</mark><a href="#def-matrix-of-linear-map" class="quarto-xref"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">Definition&nbsp;22</mark></a><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">):</mark> <span class="math inline">\(\mathbf{A} = \begin{bmatrix}2 &amp; 0 \\ 1 &amp; 1\end{bmatrix}\)</span>.</p>
 </div>
 </div>
 </div>
@@ -4311,7 +4311,7 @@ Figure&nbsp;1: The <a href="https://morrison-lab.github.io/mcs/functions.html#de
 <div class="callout-body-container callout-body">
 <div id="sol-write-in-matrix-form-score" class="proof solution">
 <p><span class="proof-title"><em>Solution <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">13</mark></em><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">.</mark> </span>For the patient,</p>
-<p><span class="math display"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\[\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix} 50 \\ 130 \\ 28 \end{bmatrix}\]</mark></span></p>
+<p><span class="math display">\[\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix} 50 \\ 130 \\ 28 \end{bmatrix}\]</span></p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
@@ -4320,13 +4320,13 @@ Figure&nbsp;1: The <a href="https://morrison-lab.github.io/mcs/functions.html#de
 &amp;= 88
 \end{aligned}
 \]</span></p>
-<p><span class="math display"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\[
+<p><span class="math display">\[
 \begin{aligned}
 f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})
 &amp;= 88 - 30 \\
 &amp;= 58
 \end{aligned}
-\]</mark></span></p>
+\]</span></p>
 <p>Two things are worth noticing. The <a href="./linear-algebra-vectors.html#def-lincom-coefficient">coefficients</a> are not comparable as they stand. The <a href="./linear-algebra-vectors.html#def-weight">weight</a> on BMI, <span class="math inline">\(1.5\)</span>, is <span class="math inline">\(7.5\)</span> times the weight on blood pressure, <span class="math inline">\(0.2\)</span>, but the contribution of BMI, <span class="math inline">\(42\)</span>, is less than twice the contribution of blood pressure, <span class="math inline">\(26\)</span>, because the BMI <a href="https://morrison-lab.github.io/mcs/functions.html#def-value">value</a>, <span class="math inline">\(28\)</span>, is much smaller than the blood pressure value, <span class="math inline">\(130\)</span>. So the weight on a feature says nothing on its own about how much that feature contributes to the score. And <span class="math inline">\(b = -30\)</span> changes the score: without it, the score would be <span class="math inline">\(88\)</span> instead of <span class="math inline">\(58\)</span>.</p>
 </div>
 </div>
@@ -4350,7 +4350,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <li><span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span></li>
 <li><span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- y\)</span></li>
 <li><span class="math inline">\((\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- y)^2\)</span></li>
-<li><span class="math inline"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\(\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\right\rVert\mathclose{}_2^2\)</mark></span></li>
+<li><span class="math inline">\(\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\right\rVert\mathclose{}_2^2\)</span></li>
 <li><span class="math inline">\(w_1 x_1 + 3\)</span></li>
 </ol>
 </div>
@@ -4455,7 +4455,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <div id="callout-132" class="callout-132-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="thm-transpose-product" class="theorem">
-<p><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;"><span class="theorem-title"><strong>Theorem 19 (Transpose of a product)</strong></span> For an <span class="math inline">\(m \times k\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and a <span class="math inline">\(k \times n\)</span> matrix <span class="math inline">\(\mathbf{B}\)</span>:</mark></p>
+<p><span class="theorem-title"><strong>Theorem 19 (Transpose of a product)</strong></span> For an <span class="math inline">\(m \times k\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and a <span class="math inline">\(k \times n\)</span> matrix <span class="math inline">\(\mathbf{B}\)</span>:</p>
 <p><span class="math display">\[
 \underbrace{{(\mathbf{A}\mathbf{B})}^{\top}}_{n \times m}
 = \underbrace{{\mathbf{B}}^{\top}}_{n \times k}\,\underbrace{{\mathbf{A}}^{\top}}_{k \times m}
@@ -4518,7 +4518,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 &amp;= 11,
 \end{aligned}
 \]</span></p>
-<p><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">so</mark> <span class="math inline"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\({(\mathbf{A}\mathbf{B})}^{\top} = 11\)</mark></span><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">,</mark> and</p>
+<p>so <span class="math inline">\({(\mathbf{A}\mathbf{B})}^{\top} = 11\)</span>, and</p>
 <p><span class="math display">\[
 {\mathbf{B}}^{\top}\,{\mathbf{A}}^{\top}
 = [3,\; 4] \begin{bmatrix} 1 \\ 2 \end{bmatrix}
@@ -4584,8 +4584,8 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <div class="callout-body-container callout-body">
 <div id="sol-transpose-product-practice" class="proof solution">
 <p><span class="proof-title"><em>Solution <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">15</mark></em><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">.</mark> </span>No: the two <a href="#def-matrix">matrices</a> differ, so keeping the order of the factors gives the wrong <a href="#def-matrix-transpose">transpose</a>.</p>
-<p><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;">The <a href="#def-matrix-mult">product</a> <span class="math inline">\(\mathbf{A}\mathbf{B}\)</span> and its transpose are</mark></p>
-<p><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;"><span class="math display">\[
+<p>The <a href="#def-matrix-mult">product</a> <span class="math inline">\(\mathbf{A}\mathbf{B}\)</span> and its transpose are</p>
+<p><span class="math display"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\[
 \begin{aligned}
 \mathbf{A}\mathbf{B}
 &amp;= \begin{bmatrix}
@@ -4597,9 +4597,9 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 &amp;= \begin{bmatrix} 3 &amp; 2 \\ 1 &amp; 1 \end{bmatrix},
 &amp;&amp; \text{(multiply and add)}
 \end{aligned}
-\]</span></mark></p>
-<p><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;">so <span class="math inline">\({(\mathbf{A}\mathbf{B})}^{\top} = \begin{bmatrix} 3 &amp; 1 \\ 2 &amp; 1 \end{bmatrix}\)</span>.</mark></p>
-<p><mark class="preview-element-added" style="background-color: #cff4fc; color: inherit; padding: 1px 2px; border-radius: 2px;">The transposes are <span class="math inline">\({\mathbf{A}}^{\top} = \begin{bmatrix} 1 &amp; 0 \\ 2 &amp; 1 \end{bmatrix}\)</span> and <span class="math inline">\({\mathbf{B}}^{\top} = \begin{bmatrix} 1 &amp; 1 \\ 0 &amp; 1 \end{bmatrix}\)</span>, so</mark></p>
+\]</mark></span></p>
+<p><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">so</mark> <span class="math inline"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\({(\mathbf{A}\mathbf{B})}^{\top} = \begin{bmatrix} 3 &amp; 1 \\ 2 &amp; 1 \end{bmatrix}\)</mark></span><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">.</mark></p>
+<p><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">The</mark> <mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">transposes are </mark><span class="math inline"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\({\mathbf{A}}^{\top} = \begin{bmatrix} 1 &amp; 0 \\ 2 &amp; 1 \end{bmatrix}\)</mark></span> and <span class="math inline"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\({\mathbf{B}}^{\top} = \begin{bmatrix} 1 &amp; 1 \\ 0 &amp; 1 \end{bmatrix}\)</mark></span><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">,</mark> so</p>
 <p><span class="math display"><mark class="preview-text-changed" style="background-color: #fff3cd; color: inherit; padding: 1px 2px; border-radius: 2px;">\[
 \begin{aligned}
 {\mathbf{A}}^{\top}{\mathbf{B}}^{\top}
