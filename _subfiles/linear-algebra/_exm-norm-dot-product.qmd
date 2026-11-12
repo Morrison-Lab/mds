@@ -18,7 +18,7 @@ $$
 $$
 
 so @thm-norm-dot-product gives $\norm{\vx} = \sqrt{25} = 5$,
-the same length that @exm-euclidean-norm found from @eq-l2-norm.
+the same [length](#def-euclidean-norm) that @exm-euclidean-norm found from @eq-l2-norm.
 
 <!-- no-figure: the example computes one number; @exm-euclidean-norm's vector has no new data to plot -->
 
