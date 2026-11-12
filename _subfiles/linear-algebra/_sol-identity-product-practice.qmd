@@ -1,0 +1,29 @@
+:::{#sol-identity-product-practice}
+
+$\matr{I}_2$ is $2 \times 2$ and $\matr{A}$ is $2 \times 3$,
+so the [product](#def-matrix-mult) is defined and is $2 \times 3$.
+The first [row of $\matr{I}_2$](#def-matrix-row) is $\begin{bmatrix} 1 & 0 \end{bmatrix}$
+and the second is $\begin{bmatrix} 0 & 1 \end{bmatrix}$,
+so by @def-matrix-mult
+
+$$
+\ba
+\matr{I}_2 \matr{A}
+&= \begin{bmatrix}
+1 \cd 2 + 0 \cd 5 & 1 \cd 0 + 0 \cd 3 & 1 \cd (-1) + 0 \cd 4 \\
+0 \cd 2 + 1 \cd 5 & 0 \cd 0 + 1 \cd 3 & 0 \cd (-1) + 1 \cd 4
+\end{bmatrix}
+&& \text{(@def-matrix-mult)}
+\\
+&= \begin{bmatrix} 2 & 0 & -1 \\ 5 & 3 & 4 \end{bmatrix}
+&& \text{(multiply and add)}
+\\
+&= \matr{A}.
+\ea
+$$
+
+Each row of $\matr{I}_2$ has a single $1$,
+so entry $(i, j)$ of the product picks out entry $(i, j)$ of $\matr{A}$,
+as @thm-identity says.
+
+:::

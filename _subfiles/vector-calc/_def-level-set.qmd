@@ -1,17 +1,14 @@
 :::{#def-level-set}
 #### Level set
 
-Let $f : \reals^p \to \reals$ and let $c$ be a real number.
+Let $f : \reals^p \to \reals$,
+and let $c$ be a [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers).
 The **level set**
 [@wikipedia_level_set]
-of $f$ at $c$ is
+of $f$ at $c$ is the [preimage](https://morrison-lab.github.io/mcs/functions.html#def-preimage) of the single value $c$ under $f$:
 
 $$
-\cb{\vx \in \reals^p : f(\vx) = c},
+\levelsetof{c}{f} \eqdef \preimage{f}{\cb{c}}.
 $$
-
-the set of points where $f$ takes the value $c$.
-It is the [preimage](https://morrison-lab.github.io/mcs/functions.html#def-preimage) of $\cb{c}$ under $f$, so we write it $\levelsetof{c}{f}$.
-For $p = 2$, a level set is often a curve in the plane.
 
 :::
