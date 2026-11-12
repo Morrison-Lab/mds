@@ -1,0 +1,17 @@
+:::{#exr-matadd-identity-proof}
+#### Proving that the zero matrix is the additive identity
+
+@thm-matadd-identity says that adding the [zero matrix](#def-zero-matrix) leaves a [matrix](#def-matrix) unchanged,
+just as adding the number $0$ leaves a number unchanged.
+
+Prove @thm-matadd-identity.
+
+::: {.callout-tip}
+#### Hint
+
+Express the $(i, j)$ entry of $\matr{A} + \matr{0}_{m \times n}$ with @def-matrix-addition,
+and use that every entry of $\matr{0}_{m \times n}$ is $0$.
+
+:::
+
+:::

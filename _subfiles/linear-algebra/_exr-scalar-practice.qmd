@@ -1,0 +1,22 @@
+:::{#exr-scalar-practice}
+#### Picking out the scalars among class summaries
+
+A summary of a class of $30$ students can report single numbers or whole lists of numbers.
+Consider these three quantities:
+
+- the height of the tallest student in the class,
+- the list of every student's height,
+- the number of students in the class.
+
+Which of these three quantities are [scalars](#def-scalar)?
+
+::: {.callout-tip}
+#### Hint
+
+By @def-scalar,
+a [scalar](#def-scalar) is one [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers).
+Count the numbers in each quantity.
+
+:::
+
+:::

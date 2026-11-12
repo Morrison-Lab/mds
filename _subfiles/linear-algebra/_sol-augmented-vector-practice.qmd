@@ -1,0 +1,13 @@
+:::{#sol-augmented-vector-practice}
+
+Let $\vecf{v} = \tp{(5, 2, -1)}$.
+Since $\aug{\vx} = \tp{(1, x_1, x_2)}$ by @def-augmented-vector,
+
+$$
+\dprod{\vecf{v}}{\aug{\vx}} = 5 \cd 1 + 2 x_1 + (-1) x_2 = f(\vx).
+$$
+
+The first entry of $\vecf{v}$ is the [offset](#def-affine-offset) $5$,
+and the other two are the numbers multiplying $x_1$ and $x_2$.
+
+:::

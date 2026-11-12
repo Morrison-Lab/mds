@@ -10,9 +10,9 @@
 #|   Plot of the cubic f of x equals x cubed over 3 minus 4 x for x from -4
 #|   to -0.5, in blue, with a local maximum at x equal to -2, marked by a
 #|   blue square. A dashed vermilion parabola opening downward is the
-#|   quadratic model at the start -2.5. It touches the cubic at -2.5 and has
-#|   its highest point at -2.05, marked by a vermilion triangle. A vermilion
-#|   circle marks the start -2.5.
+#|   quadratic approximation at the start -2.5. It touches the cubic at -2.5
+#|   and has its highest point at -2.05, marked by a vermilion triangle. A
+#|   vermilion circle marks the start -2.5.
 #| fig-height: 4
 #| fig-width: 6
 nx_x_nx <- seq(-4, -0.5, length.out = 301)
@@ -56,9 +56,9 @@ nx_curve_nx |>
 #|   Plot of the cubic f of x equals x cubed over 3 minus 4 x for x from -4
 #|   to -0.5, in blue, with a local maximum at x equal to -2, marked by a
 #|   blue square. A dashed vermilion parabola opening downward is the
-#|   quadratic model at the start -2.5. It touches the cubic at -2.5 and has
-#|   its highest point at -2.05, marked by a vermilion triangle. A vermilion
-#|   circle marks the start -2.5.
+#|   quadratic approximation at the start -2.5. It touches the cubic at -2.5
+#|   and has its highest point at -2.05, marked by a vermilion triangle. A
+#|   vermilion circle marks the start -2.5.
 #| fig-height: 4
 #| fig-width: 6
 import matplotlib.pyplot as plt
@@ -85,10 +85,10 @@ plt.show();
 :::
 
 The [cubic](algebra.qmd#def-cubic-polynomial) $f(x) = x^3 / 3 - 4x$ of @exm-newton-maximum is blue,
-and its [quadratic model](#def-quadratic-model) at the start $-2.5$ is dashed vermilion.
-The model opens downward,
+and its [quadratic approximation](#def-quadratic-model) at the start $-2.5$ is dashed vermilion.
+The approximation opens downward,
 so its [stationary point](#def-stationary-point) $-2.05$ (triangle) is the point
-where the model is largest,
+where the approximation is largest,
 and the [Newton step](#def-newton-step) moves uphill.
 The [iterates](#def-iterate) approach the [local maximum](#def-local-maximizer) at $-2$ (blue marker).
 

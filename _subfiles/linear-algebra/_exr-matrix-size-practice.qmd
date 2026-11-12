@@ -1,0 +1,24 @@
+:::{#exr-matrix-size-practice}
+#### Counting the rows and columns of a matrix
+
+Data with one [row](#def-matrix-row) per observation
+and one [column](#def-matrix-column) per measured quantity
+is stored as a [matrix](#def-matrix),
+so the matrix's number of rows is the number of observations
+and its number of columns is the number of quantities.
+Let
+
+$$
+\matr{C} = \begin{bmatrix} 4 & 0 \\ 1 & -3 \\ 2 & 7 \end{bmatrix}.
+$$
+
+Find $m$ and $n$ such that $\matr{C}$ is an $m \times n$ matrix.
+
+::: {.callout-tip}
+#### Hint
+
+In @def-matrix, $m$ counts the [row](#def-matrix-row)s and $n$ counts the [column](#def-matrix-column)s.
+
+:::
+
+:::

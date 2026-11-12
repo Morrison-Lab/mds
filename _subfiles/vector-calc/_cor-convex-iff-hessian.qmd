@@ -1,0 +1,16 @@
+:::{#cor-convex-iff-hessian}
+#### Convex if and only if the Hessian is positive semidefinite
+
+Let $f : \reals^p \to \reals$ have first and [second partial derivatives](vector-calculus.qmd#def-second-partial-derivative)
+that are [continuous on](vector-calculus.qmd#def-continuous-on) $\reals^p$.
+Then $f$ is [convex](algebra-sums.qmd#def-convex-function) [if and only if](https://morrison-lab.github.io/mcs/proof-writing.html#def-iff)
+the [Hessian](vector-calculus.qmd#def-hessian) $\matr{H}_f(\vx)$ is [positive semidefinite](linear-algebra-special-matrices.qmd#def-positive-semidefinite) for every $\vx \in \reals^p$.
+
+:::
+
+::: proof
+
+Part 1 of @thm-convex-hessian proves that a [positive semidefinite](linear-algebra-special-matrices.qmd#def-positive-semidefinite) [Hessian](vector-calculus.qmd#def-hessian) at every point makes $f$ [convex](algebra-sums.qmd#def-convex-function),
+and @thm-convex-hessian-converse proves that a convex $f$ has a positive semidefinite Hessian at every point.
+
+:::

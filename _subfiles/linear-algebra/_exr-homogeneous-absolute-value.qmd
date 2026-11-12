@@ -1,0 +1,18 @@
+:::{#exr-homogeneous-absolute-value}
+#### Testing whether the absolute value is homogeneous
+
+A [homogeneous function](#def-homogeneous-function) turns a rescaled input into the same rescaling of its output,
+including a rescaling by a negative number.
+Let $f: \reals \to \reals$ be the [absolute value](algebra.qmd#def-absolute-value),
+$f(x) = \abs{x}$.
+
+Is $f$ [homogeneous](#def-homogeneous-function)?
+
+::: {.callout-tip}
+#### Hint
+
+Try a negative $c$ in @def-homogeneous-function.
+
+:::
+
+:::

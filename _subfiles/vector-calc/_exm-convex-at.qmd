@@ -1,0 +1,38 @@
+:::{#exm-convex-at}
+#### A function convex at one point and not at another
+
+Let $f(x) = \minf{x^2, 1}$, as in @exm-convex-on.
+
+- $f$ is [convex at](#def-convex-at) $0$:
+  the [open ball](vector-calculus.qmd#def-ball) of radius $1$ around $0$ is $(-1, 1)$,
+  a [subset](https://morrison-lab.github.io/mcs/sets.html#def-subset) of $[-1, 1]$,
+  and $f$ is [convex on](#def-convex-on) $[-1, 1]$ by @exm-convex-on,
+  so the defining [inequality](https://morrison-lab.github.io/mcs/proof-writing.html#def-inequality) holds [for all](https://morrison-lab.github.io/mcs/proof-writing.html#def-universal-quantifier) $x, y \in (-1, 1)$ as well.
+- $f$ is not convex at $1$.
+  Take any $r > 0$, let $\smallconst = \tfrac{1}{2} \minf{r, 1}$,
+  and take $x = 1 - \smallconst$, $y = 1 + \smallconst$ and $t = \tfrac{1}{2}$,
+  so that $x$ and $y$ are in the open ball of radius $r$ around $1$
+  and $t x + (1 - t) y = 1$.
+  Then $f(1) = 1$, while
+
+  $$
+  \ba
+  \tfrac{1}{2} f(1 - \smallconst) + \tfrac{1}{2} f(1 + \smallconst)
+  &= \tfrac{1}{2} (1 - \smallconst)^2 + \tfrac{1}{2} \cdot 1
+  && \text{(} 0 < 1 - \smallconst < 1 < 1 + \smallconst \text{)}
+  \\
+  &< \tfrac{1}{2} + \tfrac{1}{2}
+  && \text{(} (1 - \smallconst)^2 < 1 \text{)}
+  \\
+  &= 1,
+  && \text{(add)}
+  \ea
+  $$
+
+  so the defining inequality fails on every open ball around $1$.
+
+In @fig-convex-at, the [chord](algebra-sums.qmd#def-chord) from $1 - \smallconst$ to $1 + \smallconst$ passes below the [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) at $1$.
+
+{{< include mds/_subfiles/vector-calc/_fig-convex-at.qmd >}}
+
+:::
