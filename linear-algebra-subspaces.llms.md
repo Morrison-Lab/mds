@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-12 12:21:59 (PST)
+Last modified: 2026-11-12 13:27:38 (PST)
 
 # 1 Rank
 
@@ -89,6 +89,24 @@ Last modified: 2026-11-12 12:21:59 (PST)
 
 > **NOTE:**
 >
+> **Exercise 1 (Testing whether vectors with a nonnegative second entry are a subspace)** A constraint such as “this entry is at least $0$” cuts out a [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of vectors, and it is worth knowing whether that set is a [subspace](#def-subspace). Let
+>
+> $$\mathcal{H} = \mathopen{}\left\{(x, y) \in \mathbb{R}^2 : y \ge 0\right\}\mathclose{},$$
+>
+> the vectors whose second entry is nonnegative.
+>
+> Is $\mathcal{H}$ a subspace of $\mathbb{R}^2$?
+>
+> > **TIP:**
+> >
+> > Check condition 2 of [Definition 4](#def-subspace) with $c = -1$.
+
+> **NOTE:**
+>
+> *Solution 1*. No. The vector ${(0, 1)}^{\top}$ is in $\mathcal{H}$, but $(-1) \cdot{(0, 1)}^{\top} = {(0, -1)}^{\top}$ is not, because its second entry is negative. So $\mathcal{H}$ fails condition 2 of [Definition 4](#def-subspace), and it is not a [subspace](#def-subspace). $\mathcal{H}$ does satisfy condition 1, which shows that one condition alone is not enough.
+
+> **NOTE:**
+>
 > **Theorem 1 (Every subspace contains the zero vector)** If $\mathcal{S}$ is a subspace of $\mathbb{R}^p$ ([Definition 4](#def-subspace)), then $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\in \mathcal{S}$.
 
 > **NOTE:**
@@ -100,6 +118,22 @@ Last modified: 2026-11-12 12:21:59 (PST)
 > **Example 5 (Using the zero vector to rule out a subspace)** The plane $\mathopen{}\left\{(x, y, z) : x + y + z = 1\right\}\mathclose{}$ in $\mathbb{R}^3$ does not contain $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}= (0, 0, 0)$, because $0 + 0 + 0 = 0 \neq 1$. So, by [Theorem 1](#thm-subspace-zero), it is not a subspace. The line $\mathcal{T}$ in [Example 4](#exm-not-subspace) fails the same test: $(0, 0)$ is not in $\mathcal{T}$, because its second entry is not $1$.
 >
 > Containing $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ is necessary but not sufficient. The union of the two coordinate axes in $\mathbb{R}^2$, $\mathopen{}\left\{(x, 0) : x \in \mathbb{R}\right\}\mathclose{} \cup \mathopen{}\left\{(0, y) : y \in \mathbb{R}\right\}\mathclose{}$, contains $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, but $(1, 0) + (0, 1) = (1, 1)$ lies on neither axis, so the union is not closed under addition and is not a subspace.
+
+> **NOTE:**
+>
+> **Exercise 2 (Testing whether** $p_1 + p_2 = 1$ defines a subspace) A coin toss can land heads or tails, and the [probabilities](https://morrison-lab.github.io/pds/probability-basics.html#def-probability) $p_1$ and $p_2$ of those two results satisfy $p_1 + p_2 = 1$. That condition defines the [set](https://morrison-lab.github.io/mcs/sets.html#def-set)
+>
+> $$\mathcal{P} = \mathopen{}\left\{(p_1, p_2) \in \mathbb{R}^2 : p_1 + p_2 = 1\right\}\mathclose{}.$$
+>
+> Is $\mathcal{P}$ a [subspace](#def-subspace) of $\mathbb{R}^2$?
+>
+> > **TIP:**
+> >
+> > Use [Theorem 1](#thm-subspace-zero).
+
+> **NOTE:**
+>
+> *Solution 2*. No. The [zero vector](linear-algebra-vectors.llms.md#def-zero-vector) ${(0, 0)}^{\top}$ is not in $\mathcal{P}$, because $0 + 0 = 0 \neq 1$. By [Theorem 1](#thm-subspace-zero), every [subspace](#def-subspace) contains $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, so $\mathcal{P}$ is not a subspace.
 
 > **NOTE:**
 >
@@ -119,6 +153,26 @@ Last modified: 2026-11-12 12:21:59 (PST)
 >
 > - $\operatorname{span}\mathopen{}\left\{(1, 0, 0), (0, 1, 0)\right\}\mathclose{}$ is the set of vectors $(c_1, c_2, 0)$, the plane $z = 0$ in $\mathbb{R}^3$.
 > - $\operatorname{span}\mathopen{}\left\{(1, 2, 3), (2, 4, 6)\right\}\mathclose{}$ is only the line $\mathopen{}\left\{c\,(1, 2, 3) : c \in \mathbb{R}\right\}\mathclose{}$, because $(2, 4, 6) = 2\,(1, 2, 3)$, so $c_1 (1, 2, 3) + c_2 (2, 4, 6) = (c_1 + 2 c_2)\,(1, 2, 3)$. Adding a vector to a list does not always enlarge its span.
+
+> **NOTE:**
+>
+> **Exercise 3 (Testing whether a vector lies in the span of two others)** Whether a target can be written as a [linear combination](linear-algebra-vectors.llms.md#def-linear-combination) of a few given vectors is a question about a [span](#def-span). Let
+>
+> $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 = \begin{bmatrix}1 \\ 1 \\ 0\end{bmatrix},
+> \qquad
+> \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2 = \begin{bmatrix}0 \\ 1 \\ 1\end{bmatrix},
+> \qquad
+> \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \begin{bmatrix}3 \\ 5 \\ 2\end{bmatrix}.$$
+>
+> Is the vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ in $\operatorname{span}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2\right\}\mathclose{}$?
+>
+> > **TIP:**
+> >
+> > Look for numbers $c_1$ and $c_2$ with $c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 + c_2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2 = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$, one entry at a time.
+
+> **NOTE:**
+>
+> *Solution 3*. Yes. Entry by entry, $c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 + c_2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2 = {(c_1,\ c_1 + c_2,\ c_2)}^{\top}$. Matching $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$, the first entry gives $c_1 = 3$ and the third gives $c_2 = 2$. Then the second entry is $3 + 2 = 5$, which matches too, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = 3 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 + 2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2$ is in the [span](#def-span).
 
 > **NOTE:**
 >
@@ -158,6 +212,26 @@ Last modified: 2026-11-12 12:21:59 (PST)
 > **NOTE:**
 >
 > **Example 7 (The line in [Example 3](#exm-subspace) is a span)** The line $\mathcal{S} = \mathopen{}\left\{c\,(1, 2) : c \in \mathbb{R}\right\}\mathclose{}$ in [Example 3](#exm-subspace) is $\operatorname{span}\mathopen{}\left\{(1, 2)\right\}\mathclose{}$, so [Theorem 2](#thm-span-subspace) gives a second [proof](https://morrison-lab.github.io/mcs/proof-writing.html#def-proof) that it is a [subspace](#def-subspace). Likewise, the plane $z = 0$ in [Example 6](#exm-span) is a subspace of $\mathbb{R}^3$, because it is $\operatorname{span}\mathopen{}\left\{(1, 0, 0), (0, 1, 0)\right\}\mathclose{}$.
+
+> **NOTE:**
+>
+> **Exercise 4 (Recognizing a set of vectors as a span)** Describing a [set](https://morrison-lab.github.io/mcs/sets.html#def-set) by free parameters often shows that it is a [span](#def-span). Let
+>
+> $$\mathcal{S} = \mathopen{}\left\{(a + b,\ a - b,\ 2a) : a, b \in \mathbb{R}\right\}\mathclose{}.$$
+>
+> Is $\mathcal{S}$ a [subspace](#def-subspace) of $\mathbb{R}^3$?
+>
+> > **TIP:**
+> >
+> > Write $(a + b,\ a - b,\ 2a)$ as $a$ times one vector plus $b$ times another, then use [Theorem 2](#thm-span-subspace).
+
+> **NOTE:**
+>
+> *Solution 4*. Yes. For every $a, b \in \mathbb{R}$,
+>
+> $$\begin{bmatrix}a + b \\ a - b \\ 2a\end{bmatrix} = a \begin{bmatrix}1 \\ 1 \\ 2\end{bmatrix} + b \begin{bmatrix}1 \\ -1 \\ 0\end{bmatrix},$$
+>
+> so $\mathcal{S} = \operatorname{span}\mathopen{}\left\{{(1, 1, 2)}^{\top}, {(1, -1, 0)}^{\top}\right\}\mathclose{}$. By [Theorem 2](#thm-span-subspace), $\mathcal{S}$ is a [subspace](#def-subspace) of $\mathbb{R}^3$.
 
 > **NOTE:**
 >
