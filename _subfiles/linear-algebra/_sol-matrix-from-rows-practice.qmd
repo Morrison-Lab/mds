@@ -1,0 +1,22 @@
+:::{#sol-matrix-from-rows-practice}
+
+Stacking the three [row](#def-matrix-row)s from top to bottom gives
+
+$$
+\ba
+\matr{M}
+&= \begin{bmatrix} \matr{M}_{1,:} \\ \matr{M}_{2,:} \\ \matr{M}_{3,:} \end{bmatrix}
+&& \text{(@thm-matrix-column-of-rows)}
+\\
+&= \begin{bmatrix} 1 & 2 \\ 3 & -1 \\ 0 & 4 \end{bmatrix},
+&& \text{(substitute the rows)}
+\ea
+$$
+
+so the second [column of $\matr{M}$](#def-matrix-column) lists the second entry of each [row](#def-matrix-row):
+
+$$
+\matr{M}_{:,2} = \begin{bmatrix} 2 \\ -1 \\ 4 \end{bmatrix}.
+$$
+
+:::

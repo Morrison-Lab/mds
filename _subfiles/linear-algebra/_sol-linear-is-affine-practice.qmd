@@ -1,0 +1,14 @@
+:::{#sol-linear-is-affine-practice}
+
+Yes.
+By @cor-linear-is-affine,
+every [linear map](#def-linear-map) is an [affine map](#def-affine-map) with [offset](#def-affine-offset) $\vzero$.
+Here
+
+$$
+f(\vx) = \sbmat{1 & -4} \vx + 0,
+$$
+
+with the $1 \times 2$ [matrix](#def-matrix) $\sbmat{1 & -4}$ and offset $0$.
+
+:::

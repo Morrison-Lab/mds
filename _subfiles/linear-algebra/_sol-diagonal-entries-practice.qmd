@@ -1,0 +1,12 @@
+:::{#sol-diagonal-entries-practice}
+
+Write $f_{ij}$ for the entry of $\matr{F}$ in [row](#def-matrix-row) $i$ and [column](#def-matrix-column) $j$.
+$\matr{F}$ is $3 \times 3$,
+so its [diagonal entries](#def-diagonal-entry) are $f_{11} = 2$, $f_{22} = -3$ and $f_{33} = 6$,
+and adding them gives
+
+$$
+f_{11} + f_{22} + f_{33} = 2 + (-3) + 6 = 5.
+$$
+
+:::

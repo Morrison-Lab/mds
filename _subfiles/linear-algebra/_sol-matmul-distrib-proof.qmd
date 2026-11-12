@@ -1,0 +1,34 @@
+:::{#sol-matmul-distrib-proof}
+
+Both sides are $m \times n$ [matrices](#def-matrix),
+so they are [equal](#def-matrix-equality) when their $(i, j)$ entries agree for every $i$ and $j$.
+For each $i$ and $j$,
+
+$$
+\ba
+\sb{\matr{A}(\matr{B} + \matr{C})}_{ij}
+&= \sumto{s}{k} a_{is} (\matr{B} + \matr{C})_{sj}
+&& \text{(@def-matrix-mult)}
+\\
+&= \sumto{s}{k} a_{is} (b_{sj} + c_{sj})
+&& \text{(@def-matrix-addition)}
+\\
+&= \sumto{s}{k} \paren{a_{is} b_{sj} + a_{is} c_{sj}}
+&& \text{(multiplication of numbers distributes over addition)}
+\\
+&= \sumto{s}{k} a_{is} b_{sj} + \sumto{s}{k} a_{is} c_{sj}
+&& \text{(a sum of sums splits)}
+\\
+&= (\matr{A}\matr{B})_{ij} + (\matr{A}\matr{C})_{ij}
+&& \text{(@def-matrix-mult)}
+\\
+&= (\matr{A}\matr{B} + \matr{A}\matr{C})_{ij}.
+&& \text{(@def-matrix-addition)}
+\ea
+$$
+
+The third step uses that multiplication of numbers [distributes over](algebra.qmd#def-distributes-over) addition,
+and the fourth uses [the rule for a sum of sums](algebra-sums.qmd#thm-sum-of-sums).
+So $\matr{A}(\matr{B} + \matr{C}) = \matr{A}\matr{B} + \matr{A}\matr{C}$.
+
+:::

@@ -1,0 +1,19 @@
+:::{#exr-linear-operator-practice}
+#### Testing whether a projection is a linear operator
+
+Dropping the last coordinate of a point in $\reals^3$ projects it onto a plane,
+as a shadow does.
+Let $f: \reals^3 \to \reals^2$ be $f(\vx) = (x_1, x_2)$.
+This $f$ is a [linear map](#def-linear-map).
+
+Is $f$ a [linear operator](#def-linear-operator) on $\reals^3$?
+
+::: {.callout-tip}
+#### Hint
+
+Write $f$ as $f: \reals^p \to \reals^m$,
+and compare $p$ with $m$ as in @def-linear-operator.
+
+:::
+
+:::
