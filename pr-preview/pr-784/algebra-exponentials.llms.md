@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-11-12 12:12:59 (PST)
+Last modified: 2026-11-12 14:33:02 (PST)
 
 # 1 Polynomials
 
