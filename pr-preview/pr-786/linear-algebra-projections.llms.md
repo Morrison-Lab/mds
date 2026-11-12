@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-12 02:12:39 (PST)
+Last modified: 2026-11-12 12:42:10 (PST)
 
 # 1 Design Matrix
 
@@ -270,16 +270,16 @@ Last modified: 2026-11-12 02:12:39 (PST)
 > $$\begin{aligned}
 > ({\mathbf{Q}}^{\top} \mathbf{Q})_{ij}
 > &= \sum_{k=1}^{p} ({\mathbf{Q}}^{\top})_{ik}\, q_{kj}
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~9 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~10 in Matrices}}\text{)}
 > \\
 > &= \sum_{k=1}^{p} q_{ki}\, q_{kj}
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~5 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~6 in Matrices}}\text{)}
 > \\
 > &= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_i \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_j,
 > && \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~8 in Vectors}}\text{)}
 > \end{aligned}$$
 >
-> which is $1$ if $i = j$ and $0$ otherwise ([Definition 23 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)), so ${\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{I}_r$ ([Definition 14 in Matrices](linear-algebra-matrices.llms.md#def-identity-matrix)).
+> which is $1$ if $i = j$ and $0$ otherwise ([Definition 23 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)), so ${\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{I}_r$ ([Definition 15 in Matrices](linear-algebra-matrices.llms.md#def-identity-matrix)).
 >
 > **The split.** Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = \mathbf{Q} {\mathbf{Q}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$. $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = \mathbf{Q}\,({\mathbf{Q}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})$ ([Theorem 7 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc)) is in $\mathcal{C}(\mathbf{Q})$ ([Definition 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-column-space)), which is $\operatorname{span}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_r\right\}\mathclose{} = \mathcal{S}$ ([Theorem 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-column-space-span)). For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$,
 >
@@ -321,7 +321,7 @@ Last modified: 2026-11-12 02:12:39 (PST)
 > && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~19 in Matrices}}\text{)}
 > \\
 > &= \mathbf{Q} {\mathbf{Q}}^{\top},
-> && \text{(transposing twice, }\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~5 in Matrices}}\text{)}
+> && \text{(transposing twice, }\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~6 in Matrices}}\text{)}
 > \end{aligned}$$
 >
 > and
@@ -489,7 +489,7 @@ Last modified: 2026-11-12 02:12:39 (PST)
 > &= (c\,\mathbf{A})\,\mathbf{B}.
 > \end{aligned}$$
 >
-> In particular, $\mathbf{A}\,(\mathbf{B} - \mathbf{C}) = \mathbf{A} \mathbf{B} - \mathbf{A} \mathbf{C}$ and $(\mathbf{B} - \mathbf{C})\,\mathbf{D} = \mathbf{B} \mathbf{D} - \mathbf{C} \mathbf{D}$ for matrices of compatible sizes, where $\mathbf{B} - \mathbf{C} = \mathbf{B} + (-1)\,\mathbf{C}$ ([Theorem 6 in Matrices](linear-algebra-matrices.llms.md#thm-matadd-inverse), [Definition 8 in Matrices](linear-algebra-matrices.llms.md#def-scalar-mult)).
+> In particular, $\mathbf{A}\,(\mathbf{B} - \mathbf{C}) = \mathbf{A} \mathbf{B} - \mathbf{A} \mathbf{C}$ and $(\mathbf{B} - \mathbf{C})\,\mathbf{D} = \mathbf{B} \mathbf{D} - \mathbf{C} \mathbf{D}$ for matrices of compatible sizes, where $\mathbf{B} - \mathbf{C} = \mathbf{B} + (-1)\,\mathbf{C}$ ([Theorem 6 in Matrices](linear-algebra-matrices.llms.md#thm-matadd-inverse), [Definition 9 in Matrices](linear-algebra-matrices.llms.md#def-scalar-mult)).
 
 > **NOTE:**
 >
@@ -498,10 +498,10 @@ Last modified: 2026-11-12 02:12:39 (PST)
 > $$\begin{aligned}
 > \mathopen{}\left(\mathbf{A}\,(c\,\mathbf{B})\right)\mathclose{}_{ij}
 > &= \sum_{l=1}^{k} a_{il}\,(c\,\mathbf{B})_{lj}
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~9 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~10 in Matrices}}\text{)}
 > \\
 > &= \sum_{l=1}^{k} a_{il}\,(c\,b_{lj})
-> && \text{(}\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~8 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~9 in Matrices}}\text{)}
 > \\
 > &= \sum_{l=1}^{k} c\,(a_{il}\,b_{lj})
 > && \text{(reorder the product of numbers)}
@@ -510,10 +510,10 @@ Last modified: 2026-11-12 02:12:39 (PST)
 > && \text{(factor } c \text{ out of the sum)}
 > \\
 > &= c\,(\mathbf{A} \mathbf{B})_{ij}
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~9 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~10 in Matrices}}\text{)}
 > \\
 > &= \mathopen{}\left(c\,(\mathbf{A} \mathbf{B})\right)\mathclose{}_{ij}.
-> && \text{(}\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~8 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~9 in Matrices}}\text{)}
 > \end{aligned}$$
 >
 > $(c\,\mathbf{A})\,\mathbf{B} = c\,(\mathbf{A} \mathbf{B})$. For each entry $(i, j)$,
@@ -521,13 +521,13 @@ Last modified: 2026-11-12 02:12:39 (PST)
 > $$\begin{aligned}
 > \mathopen{}\left((c\,\mathbf{A})\,\mathbf{B}\right)\mathclose{}_{ij}
 > &= \sum_{l=1}^{k} (c\,a_{il})\,b_{lj}
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~9 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~8 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~10 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~9 in Matrices}}\text{)}
 > \\
 > &= c \sum_{l=1}^{k} a_{il}\,b_{lj}
 > && \text{(factor } c \text{ out of the sum)}
 > \\
 > &= \mathopen{}\left(c\,(\mathbf{A} \mathbf{B})\right)\mathclose{}_{ij}.
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~9 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~8 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~10 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~9 in Matrices}}\text{)}
 > \end{aligned}$$
 >
 > **Differences.**
@@ -581,10 +581,10 @@ Last modified: 2026-11-12 02:12:39 (PST)
 > $$\begin{aligned}
 > \mathbf{A} \mathbf{G} \mathbf{A}
 > &= \begin{bmatrix} g_{11} & g_{12} \\ 0 & 0 \end{bmatrix} \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~9 in Matrices}}\text{, for } \mathbf{A} \mathbf{G} \text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~10 in Matrices}}\text{, for } \mathbf{A} \mathbf{G} \text{)}
 > \\
 > &= \begin{bmatrix} g_{11} & 0 \\ 0 & 0 \end{bmatrix},
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~9 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~10 in Matrices}}\text{)}
 > \end{aligned}$$
 >
 > which equals $\mathbf{A}$ exactly when $g_{11} = 1$. So every matrix $\begin{bmatrix} 1 & g_{12} \\ g_{21} & g_{22} \end{bmatrix}$ is a generalized inverse of $\mathbf{A}$: a generalized inverse need not be unique. The zero matrix is not one, since its $(1, 1)$ entry is $0$.
@@ -862,7 +862,7 @@ Last modified: 2026-11-12 02:12:39 (PST)
 > &= {\mathbf{C}}^{\top} \mathbf{C}
 > \end{aligned}$$
 >
-> ([Theorem 19 in Matrices](linear-algebra-matrices.llms.md#thm-transpose-product), [Definition 5 in Matrices](linear-algebra-matrices.llms.md#def-matrix-transpose)), and likewise for $\mathbf{R} {\mathbf{R}}^{\top}$. Write $\mathbf{S} \stackrel{\text{def}}{=}(\mathbf{R} {\mathbf{R}}^{\top})^{-1}$ and $\mathbf{T} \stackrel{\text{def}}{=}({\mathbf{C}}^{\top} \mathbf{C})^{-1}$, both symmetric ([Corollary 1 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#cor-inverse-symmetric)), and $\mathbf{G} \stackrel{\text{def}}{=}{\mathbf{R}}^{\top} \mathbf{S} \mathbf{T} {\mathbf{C}}^{\top}$.
+> ([Theorem 19 in Matrices](linear-algebra-matrices.llms.md#thm-transpose-product), [Definition 6 in Matrices](linear-algebra-matrices.llms.md#def-matrix-transpose)), and likewise for $\mathbf{R} {\mathbf{R}}^{\top}$. Write $\mathbf{S} \stackrel{\text{def}}{=}(\mathbf{R} {\mathbf{R}}^{\top})^{-1}$ and $\mathbf{T} \stackrel{\text{def}}{=}({\mathbf{C}}^{\top} \mathbf{C})^{-1}$, both symmetric ([Corollary 1 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#cor-inverse-symmetric)), and $\mathbf{G} \stackrel{\text{def}}{=}{\mathbf{R}}^{\top} \mathbf{S} \mathbf{T} {\mathbf{C}}^{\top}$.
 >
 > **Two products.**
 >
@@ -913,7 +913,7 @@ Last modified: 2026-11-12 02:12:39 (PST)
 > && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~19 in Matrices}}\text{)}
 > \\
 > &= \mathbf{C}\,{\mathbf{T}}^{\top}\,{\mathbf{C}}^{\top}
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~5 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~6 in Matrices}}\text{)}
 > \\
 > &= \mathbf{C} \mathbf{T} {\mathbf{C}}^{\top},
 > && \text{(} \mathbf{T} \text{ is symmetric)}
@@ -934,7 +934,7 @@ Last modified: 2026-11-12 02:12:39 (PST)
 > && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~19 in Matrices}}\text{)}
 > \\
 > &= {\mathbf{R}}^{\top}\,{\mathbf{S}}^{\top}\,\mathbf{R}
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~5 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~6 in Matrices}}\text{)}
 > \\
 > &= {\mathbf{R}}^{\top} \mathbf{S} \mathbf{R}.
 > && \text{(} \mathbf{S} \text{ is symmetric)}
@@ -1291,11 +1291,11 @@ Last modified: 2026-11-12 02:12:39 (PST)
 
 > **NOTE:**
 >
-> **Definition 6 (Consistent linear system)** A linear system ([Definition 16 in Matrices](linear-algebra-matrices.llms.md#def-linear-system)) $\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$, with $\mathbf{A}$ an $m \times n$ matrix and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m$, is **consistent** [\[9\]](#ref-wikipedia_consistent_and_inconsistent_equations) if it has at least one solution $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \in \mathbb{R}^n$, and **inconsistent** otherwise.
+> **Definition 6 (Consistent linear system)** A linear system ([Definition 17 in Matrices](linear-algebra-matrices.llms.md#def-linear-system)) $\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$, with $\mathbf{A}$ an $m \times n$ matrix and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m$, is **consistent** [\[9\]](#ref-wikipedia_consistent_and_inconsistent_equations) if it has at least one solution $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \in \mathbb{R}^n$, and **inconsistent** otherwise.
 
 > **NOTE:**
 >
-> **Example 22 (A consistent system and an inconsistent one)** With $\mathbf{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$, $\mathbf{A}\,(x_1, x_2) = (x_1, 0)$ ([Definition 15 in Matrices](linear-algebra-matrices.llms.md#def-matvec-mult)).
+> **Example 22 (A consistent system and an inconsistent one)** With $\mathbf{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$, $\mathbf{A}\,(x_1, x_2) = (x_1, 0)$ ([Definition 16 in Matrices](linear-algebra-matrices.llms.md#def-matvec-mult)).
 >
 > - $\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (2, 0)$ is consistent: $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (2, 0)$ is a solution.
 > - $\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (2, 1)$ is inconsistent: the second entry of $\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is always $0$, never $1$.
@@ -1507,10 +1507,10 @@ Last modified: 2026-11-12 02:12:39 (PST)
 > $$\begin{aligned}
 > ({\mathbf{X}}^{\top} \mathbf{X})\,\mathbf{G}\,({\mathbf{X}}^{\top} \mathbf{X})
 > &= \begin{bmatrix} 1 & 0 \\ 1 & 0 \end{bmatrix} \begin{bmatrix} 2 & 2 \\ 2 & 2 \end{bmatrix}
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~9 in Matrices}}\text{, for the first product)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~10 in Matrices}}\text{, for the first product)}
 > \\
 > &= \begin{bmatrix} 2 & 2 \\ 2 & 2 \end{bmatrix}.
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~9 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~10 in Matrices}}\text{)}
 > \end{aligned}$$
 >
 > Then
@@ -1518,10 +1518,10 @@ Last modified: 2026-11-12 02:12:39 (PST)
 > $$\begin{aligned}
 > \mathbf{X}\mathbf{G} {\mathbf{X}}^{\top}
 > &= \begin{bmatrix} \frac{1}{2} & 0 \\ \frac{1}{2} & 0 \end{bmatrix} \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~9 in Matrices}}\text{, for } \mathbf{X}\mathbf{G} \text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~10 in Matrices}}\text{, for } \mathbf{X}\mathbf{G} \text{)}
 > \\
 > &= \begin{bmatrix} \frac{1}{2} & \frac{1}{2} \\ \frac{1}{2} & \frac{1}{2} \end{bmatrix},
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~9 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~10 in Matrices}}\text{)}
 > \end{aligned}$$
 >
 > the hat matrix of the intercept-only model ([Example 2](#exm-hat-matrix)). Another generalized inverse, $\mathbf{G}' = \begin{bmatrix} 0 & 0 \\ 0 & \frac{1}{2} \end{bmatrix}$, which is one because $({\mathbf{X}}^{\top} \mathbf{X})\,\mathbf{G}' = \begin{bmatrix} 0 & 1 \\ 0 & 1 \end{bmatrix}$ and that times ${\mathbf{X}}^{\top} \mathbf{X}$ is again $\begin{bmatrix} 2 & 2 \\ 2 & 2 \end{bmatrix}$, gives $\mathbf{X}\mathbf{G}' = \begin{bmatrix} 0 & \frac{1}{2} \\ 0 & \frac{1}{2} \end{bmatrix}$ and the same $\mathbf{X}\mathbf{G}' {\mathbf{X}}^{\top} = \begin{bmatrix} \frac{1}{2} & \frac{1}{2} \\ \frac{1}{2} & \frac{1}{2} \end{bmatrix}$, as [Theorem 18](#thm-projector-generalized-inverse) says it must. Both project onto $\mathcal{C}(\mathbf{X}) = \operatorname{span}\mathopen{}\left\{(1, 1)\right\}\mathclose{}$, the column space of the intercept-only design.
@@ -1572,7 +1572,7 @@ Last modified: 2026-11-12 02:12:39 (PST)
 > $$\begin{aligned}
 > b_i
 > &= \sum_{j=1}^nu_{ij}\,x_j
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~15 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~16 in Matrices}}\text{)}
 > \\
 > &= \sum_{j=i}^{n} u_{ij}\,x_j
 > && \text{(} u_{ij} = 0 \text{ for } j < i \text{)}
@@ -1638,7 +1638,7 @@ Last modified: 2026-11-12 02:12:39 (PST)
 > && \text{(normalize step: } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}'_i = \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}'_i\right\rVert\mathclose{}\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_i \text{)}
 > \end{aligned}$$
 >
-> Let $\mathbf{R}$ be the $n \times n$ matrix with $r_{ji} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_j \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_i$ for $j < i$, $r_{ii} = \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}'_i\right\rVert\mathclose{} > 0$, and $r_{ji} = 0$ for $j > i$; it is upper triangular with positive diagonal. Column $i$ of $\mathbf{Q} \mathbf{R}$ is $\mathbf{Q}$ times column $i$ of $\mathbf{R}$ ([Definition 9 in Matrices](linear-algebra-matrices.llms.md#def-matrix-mult)), and
+> Let $\mathbf{R}$ be the $n \times n$ matrix with $r_{ji} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_j \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_i$ for $j < i$, $r_{ii} = \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}'_i\right\rVert\mathclose{} > 0$, and $r_{ji} = 0$ for $j > i$; it is upper triangular with positive diagonal. Column $i$ of $\mathbf{Q} \mathbf{R}$ is $\mathbf{Q}$ times column $i$ of $\mathbf{R}$ ([Definition 10 in Matrices](linear-algebra-matrices.llms.md#def-matrix-mult)), and
 >
 > $$\begin{aligned}
 > \mathbf{Q}\,(r_{1i}, \ldots, r_{ni})
@@ -2015,7 +2015,7 @@ Last modified: 2026-11-12 02:12:39 (PST)
 
 > **NOTE:**
 >
-> **Example 35 (An LU factorization of a** $3 \times 3$ matrix) Let $\mathbf{A} = \begin{bmatrix} 2 & 1 & -1 \\ -3 & -1 & 2 \\ -2 & 1 & 2 \end{bmatrix}$, $\mathbf{L} = \begin{bmatrix} 1 & 0 & 0 \\ -\frac{3}{2} & 1 & 0 \\ -1 & 4 & 1 \end{bmatrix}$ (unit lower triangular) and $\mathbf{U} = \begin{bmatrix} 2 & 1 & -1 \\ 0 & \frac{1}{2} & \frac{1}{2} \\ 0 & 0 & -1 \end{bmatrix}$ (upper triangular). By [Definition 9 in Matrices](linear-algebra-matrices.llms.md#def-matrix-mult), entry $(i, j)$ of $\mathbf{L} \mathbf{U}$ is $\sum_k \ell_{ik}\,u_{kj}$, so row $i$ of $\mathbf{L} \mathbf{U}$ is $\sum_k \ell_{ik}$ times row $k$ of $\mathbf{U}$. Row 1 is $1 \cdot(2, 1, -1) = (2, 1, -1)$; row 2 is $-\tfrac{3}{2}\,(2, 1, -1) + (0, \tfrac{1}{2}, \tfrac{1}{2}) = (-3, -1, 2)$, and row 3 is $-(2, 1, -1) + 4\,(0, \tfrac{1}{2}, \tfrac{1}{2}) + (0, 0, -1) = (-2, 1, 2)$. These are the rows of $\mathbf{A}$, so $\mathbf{L} \mathbf{U} = \mathbf{A}$ is an LU factorization. The below-diagonal entries of $\mathbf{L}$ are the negatives of the multiples of earlier rows that Gaussian elimination adds to reduce $\mathbf{A}$ to $\mathbf{U}$.
+> **Example 35 (An LU factorization of a** $3 \times 3$ matrix) Let $\mathbf{A} = \begin{bmatrix} 2 & 1 & -1 \\ -3 & -1 & 2 \\ -2 & 1 & 2 \end{bmatrix}$, $\mathbf{L} = \begin{bmatrix} 1 & 0 & 0 \\ -\frac{3}{2} & 1 & 0 \\ -1 & 4 & 1 \end{bmatrix}$ (unit lower triangular) and $\mathbf{U} = \begin{bmatrix} 2 & 1 & -1 \\ 0 & \frac{1}{2} & \frac{1}{2} \\ 0 & 0 & -1 \end{bmatrix}$ (upper triangular). By [Definition 10 in Matrices](linear-algebra-matrices.llms.md#def-matrix-mult), entry $(i, j)$ of $\mathbf{L} \mathbf{U}$ is $\sum_k \ell_{ik}\,u_{kj}$, so row $i$ of $\mathbf{L} \mathbf{U}$ is $\sum_k \ell_{ik}$ times row $k$ of $\mathbf{U}$. Row 1 is $1 \cdot(2, 1, -1) = (2, 1, -1)$; row 2 is $-\tfrac{3}{2}\,(2, 1, -1) + (0, \tfrac{1}{2}, \tfrac{1}{2}) = (-3, -1, 2)$, and row 3 is $-(2, 1, -1) + 4\,(0, \tfrac{1}{2}, \tfrac{1}{2}) + (0, 0, -1) = (-2, 1, 2)$. These are the rows of $\mathbf{A}$, so $\mathbf{L} \mathbf{U} = \mathbf{A}$ is an LU factorization. The below-diagonal entries of $\mathbf{L}$ are the negatives of the multiples of earlier rows that Gaussian elimination adds to reduce $\mathbf{A}$ to $\mathbf{U}$.
 
 > **NOTE:**
 >
