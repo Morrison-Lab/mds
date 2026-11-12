@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-12 00:35:24 (PST)
+Last modified: 2026-11-12 01:42:42 (PST)
 
 > **NOTE:**
 >
@@ -1658,6 +1658,30 @@ Last modified: 2026-11-12 00:35:24 (PST)
 >
 > $g(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = 3 x_1 + 5 x_2 + 1$ is not linear, because $g(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}) = 1 \neq 0$ ([Theorem 11](#thm-linear-map-zero)).
 
+> **NOTE:**
+>
+> **Exercise 38 (Finding the weight vector of a linear score)** A linear score of $p$ measurements is a [dot product](linear-algebra-vectors.llms.md#def-dot-product) of the measurements with a vector of [weights](linear-algebra-vectors.llms.md#def-weight), by [Corollary 1](#cor-linear-scalar). Let $f: \mathbb{R}^3 \to \mathbb{R}$ be a [linear map](#def-linear-map) with
+>
+> $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1) = 2,
+> \qquad
+> f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2) = 0,
+> \qquad
+> f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3) = -1.$$
+>
+> Find the vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ with $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^3$.
+>
+> > **TIP:**
+> >
+> > [Corollary 1](#cor-linear-scalar) gives each entry $w_j$ of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$.
+
+> **NOTE:**
+>
+> *Solution 38*. By [Corollary 1](#cor-linear-scalar), $w_j = f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j)$ for each $j$, so
+>
+> $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \begin{bmatrix} 2 \\ 0 \\ -1 \end{bmatrix}.$$
+>
+> Then $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = 2 x_1 - x_3$ for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^3$.
+
 > **TIP:**
 >
 > Two chapters of the [*Essence of linear algebra*](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab) series by 3Blue1Brown show the results above geometrically:
@@ -1687,6 +1711,22 @@ Last modified: 2026-11-12 00:35:24 (PST)
 
 > **NOTE:**
 >
+> **Exercise 39 (Finding the translation that moves one point to another)** A [translation](#def-translation) moves every point by the same vector, so where it sends one point fixes the whole translation. A translation $t_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}}$ of $\mathbb{R}^2$ sends ${(2, 3)}^{\top}$ to ${(5, 1)}^{\top}$.
+>
+> Find $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$.
+>
+> > **TIP:**
+> >
+> > Solve ${(2, 3)}^{\top} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = {(5, 1)}^{\top}$ entry by entry.
+
+> **NOTE:**
+>
+> *Solution 39*. By [Definition 23](#def-translation), $t_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}}\mathopen{}\left({(2, 3)}^{\top}\right)\mathclose{} = {(2, 3)}^{\top} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$. Matching this vector with ${(5, 1)}^{\top}$ entry by entry gives
+>
+> $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \begin{bmatrix}5 - 2 \\ 1 - 3\end{bmatrix} = \begin{bmatrix}3 \\ -2\end{bmatrix}.$$
+
+> **NOTE:**
+>
 > **Definition 24**  
 >
 > #### Affine map, affine transformation, affine function
@@ -1701,6 +1741,32 @@ Last modified: 2026-11-12 00:35:24 (PST)
 
 > **NOTE:**
 >
+> **Exercise 40 (Testing whether a rescale-and-shift is an affine map)** Rescaling a measurement and then shifting it, as when converting units with a different zero point, is the typical [affine map](#def-affine-map). Let $f: \mathbb{R}^2 \to \mathbb{R}^2$ be
+>
+> $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = (2 x_1 + 1,\ x_2 - 3).$$
+>
+> Is $f$ an [affine map](#def-affine-map)?
+>
+> > **TIP:**
+> >
+> > Look for a $2 \times 2$ [matrix](#def-matrix) $\mathbf{A}$ and a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ with $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$.
+
+> **NOTE:**
+>
+> *Solution 40*. Yes. Let
+>
+> $$\mathbf{A} = \begin{bmatrix}2 & 0 \\ 0 & 1\end{bmatrix},
+> \qquad
+> \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \begin{bmatrix}1 \\ -3\end{bmatrix}.$$
+>
+> By [Definition 16](#def-matvec-mult), $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= {(2 x_1, x_2)}^{\top}$, so
+>
+> $$\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \begin{bmatrix}2 x_1 + 1 \\ x_2 - 3\end{bmatrix} = f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$$
+>
+> for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^2$. So $f$ is an [affine map](#def-affine-map).
+
+> **NOTE:**
+>
 > **Definition 25 (Offset of an affine map, intercept, bias)** In [Definition 24](#def-affine-map), the vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ is called the **offset** of $f$ (statistics also calls it the **intercept**, and machine learning the **bias**).
 
 > **NOTE:**
@@ -1708,6 +1774,24 @@ Last modified: 2026-11-12 00:35:24 (PST)
 > *Remark 6* (Real-valued affine maps). For a real-valued function ([Definition 4 in Vectors](linear-algebra-vectors.llms.md#def-real-vector-valued), $m = 1$), $\mathbf{A}$ is a single row, written $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top}$, and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ is a single number $b$, so an affine function is a linear function $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ ([Corollary 1](#cor-linear-scalar)) plus an offset:
 >
 > $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b, \qquad \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p, \quad b \in \mathbb{R} \tag{1}$$
+
+> **NOTE:**
+>
+> **Exercise 41 (Reading off the offset of an affine map)** In a fitted model, the [offset](#def-affine-offset) is the part of the output that does not depend on the input. Let $f: \mathbb{R}^2 \to \mathbb{R}^2$ be the [affine map](#def-affine-map)
+>
+> $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = (x_1 - x_2 + 4,\ 3 x_2 - 1).$$
+>
+> Find the [offset of](#def-affine-offset) $f$.
+>
+> > **TIP:**
+> >
+> > Write $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ as $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ as in [Definition 24](#def-affine-map).
+
+> **NOTE:**
+>
+> *Solution 41*. $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \begin{bmatrix}1 & -1 \\ 0 & 3\end{bmatrix} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \begin{bmatrix}4 \\ -1\end{bmatrix},$$
+>
+> so the [offset of](#def-affine-offset) $f$ is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = {(4, -1)}^{\top}$. Each entry of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ is the term with no $x_j$ in the matching entry of $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$.
 
 > **NOTE:**
 >
@@ -1731,6 +1815,26 @@ Last modified: 2026-11-12 00:35:24 (PST)
 > &= 4 \cdot 1 + 3 \cdot 2 + (-1) \cdot 5 \\
 > &= 5
 > \end{aligned}$$
+
+> **NOTE:**
+>
+> **Exercise 42 (Absorbing an offset into a dot product with the augmented vector)** The [augmented vector](#def-augmented-vector) lets software treat an [affine](#def-affine-map) score as a [dot product](linear-algebra-vectors.llms.md#def-dot-product), with the [offset](#def-affine-offset) as one more [weight](linear-algebra-vectors.llms.md#def-weight). Let $f: \mathbb{R}^2 \to \mathbb{R}$ be
+>
+> $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = 2 x_1 - x_2 + 5.$$
+>
+> Find the vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \in \mathbb{R}^3$ with $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \cdot {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{aug}}$ for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^2$.
+>
+> > **TIP:**
+> >
+> > Follow [Example 22](#exm-augmented-vector). The first entry of ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{aug}}$ is $1$.
+
+> **NOTE:**
+>
+> *Solution 42*. Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = {(5, 2, -1)}^{\top}$. Since ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{aug}} = {(1, x_1, x_2)}^{\top}$ by [Definition 26](#def-augmented-vector),
+>
+> $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \cdot {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{aug}} = 5 \cdot 1 + 2 x_1 + (-1) x_2 = f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}).$$
+>
+> The first entry of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ is the [offset](#def-affine-offset) $5$, and the other two are the numbers multiplying $x_1$ and $x_2$.
 
 > **NOTE:**
 >
@@ -1954,7 +2058,7 @@ Last modified: 2026-11-12 00:35:24 (PST)
 
 > **NOTE:**
 >
-> **Exercise 38 (Write a rule in matrix form)** A clinic scores a patient’s risk from three measurements.
+> **Exercise 43 (Write a rule in matrix form)** A clinic scores a patient’s risk from three measurements.
 >
 > | symbol | meaning                 | units    |
 > |--------|-------------------------|----------|
@@ -1970,7 +2074,7 @@ Last modified: 2026-11-12 00:35:24 (PST)
 
 > **NOTE:**
 >
-> *Solution 38*. Read the [coefficients](linear-algebra-vectors.llms.md#def-lincom-coefficient) straight off the rule. There are three inputs, so $p = 3$:
+> *Solution 43*. Read the [coefficients](linear-algebra-vectors.llms.md#def-lincom-coefficient) straight off the rule. There are three inputs, so $p = 3$:
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \begin{bmatrix} 0.4 \\ 0.2 \\ 1.5 \end{bmatrix},
 > \qquad b = -30$$
@@ -1979,11 +2083,11 @@ Last modified: 2026-11-12 00:35:24 (PST)
 
 > **NOTE:**
 >
-> **Exercise 39 (Score a patient)** Give the score from the rule in [Exercise 38](#exr-write-in-matrix-form) for a patient aged $50$ with blood pressure $130$ and BMI $28$.
+> **Exercise 44 (Score a patient)** Give the score from the rule in [Exercise 43](#exr-write-in-matrix-form) for a patient aged $50$ with blood pressure $130$ and BMI $28$.
 
 > **NOTE:**
 >
-> *Solution 39*. For the patient,
+> *Solution 44*. For the patient,
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix} 50 \\ 130 \\ 28 \end{bmatrix}$$
 >
@@ -2004,7 +2108,7 @@ Last modified: 2026-11-12 00:35:24 (PST)
 
 > **NOTE:**
 >
-> **Exercise 40 (Which of these are affine in** $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$?) Each of the five expressions is a function of the weights $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p$, with the data $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $y$ held fixed. Say which ones are affine ([Definition 24](#def-affine-map)), that is, have the form [Equation 1](#eq-linear-scalar) — an inner product plus an offset — and which of those are also linear ([Definition 20](#def-linear-map)).
+> **Exercise 45 (Which of these are affine in** $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$?) Each of the five expressions is a function of the weights $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p$, with the data $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $y$ held fixed. Say which ones are affine ([Definition 24](#def-affine-map)), that is, have the form [Equation 1](#eq-linear-scalar) — an inner product plus an offset — and which of those are also linear ([Definition 20](#def-linear-map)).
 >
 > 1.  $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$
 > 2.  $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- y$
@@ -2014,7 +2118,7 @@ Last modified: 2026-11-12 00:35:24 (PST)
 
 > **NOTE:**
 >
-> *Solution 40*.
+> *Solution 45*.
 >
 > 1.  **Affine, and linear.** It is [Equation 1](#eq-linear-scalar) with $b = 0$, which is a linear map by [Theorem 12](#thm-matrix-map-linear): the matrix ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}$ times $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$.
 > 2.  **Affine.** Still an inner product plus an offset; here the offset is $b = -y$, which is a constant because $y$ is held fixed. It is linear only when $y = 0$: otherwise $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ gives $-y \ne 0$, and a linear map sends $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ to $0$ ([Theorem 11](#thm-linear-map-zero)).
@@ -2104,7 +2208,7 @@ Last modified: 2026-11-12 00:35:24 (PST)
 
 > **NOTE:**
 >
-> **Exercise 41 (The order of the factors in a transposed square product)** [Remark 8](#rem-transpose-product-order) shows that, for factors that are not [square](#def-square-matrix), keeping the original order of the factors in the [transpose](#def-matrix-transpose) of a [product](#def-matrix-mult) can give an undefined product. For two [square matrices](#def-square-matrix) of the same size, both ${\mathbf{A}}^{\top}{\mathbf{B}}^{\top}$ and ${\mathbf{B}}^{\top}{\mathbf{A}}^{\top}$ are defined, so the shapes alone cannot settle which order gives ${(\mathbf{A}\mathbf{B})}^{\top}$. Let
+> **Exercise 46 (The order of the factors in a transposed square product)** [Remark 8](#rem-transpose-product-order) shows that, for factors that are not [square](#def-square-matrix), keeping the original order of the factors in the [transpose](#def-matrix-transpose) of a [product](#def-matrix-mult) can give an undefined product. For two [square matrices](#def-square-matrix) of the same size, both ${\mathbf{A}}^{\top}{\mathbf{B}}^{\top}$ and ${\mathbf{B}}^{\top}{\mathbf{A}}^{\top}$ are defined, so the shapes alone cannot settle which order gives ${(\mathbf{A}\mathbf{B})}^{\top}$. Let
 >
 > $$\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 0 & 1 \end{bmatrix},
 > \qquad
@@ -2118,7 +2222,7 @@ Last modified: 2026-11-12 00:35:24 (PST)
 
 > **NOTE:**
 >
-> *Solution 41*. No: the two [matrices](#def-matrix) differ, so keeping the order of the factors gives the wrong [transpose](#def-matrix-transpose).
+> *Solution 46*. No: the two [matrices](#def-matrix) differ, so keeping the order of the factors gives the wrong [transpose](#def-matrix-transpose).
 >
 > The [product](#def-matrix-mult) $\mathbf{A}\mathbf{B}$ and its transpose are
 >
