@@ -1,0 +1,16 @@
+:::{#sol-null-space-practice}
+
+For $\vecf{x} = (x_1, x_2, x_3)$,
+
+$$
+\matr{A}\vecf{x} = \sbmat{x_1 + 2 x_2 \\ x_3}.
+$$
+
+This vector is $\vzero_2$ exactly when $x_3 = 0$ and $x_1 = -2 x_2$.
+So $\vecf{x} = (-2 x_2, x_2, 0) = x_2\,(-2, 1, 0)$, and
+
+$$
+\mathcal{N}(\matr{A}) = \operatorname{span}\cb{(-2, 1, 0)}.
+$$
+
+:::

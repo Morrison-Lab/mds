@@ -1,0 +1,11 @@
+:::{#sol-matvec-linear-practice}
+
+By @thm-matvec-linear,
+
+$$
+\matr{A}\,(3 \vecf{z}_1 + 2 \vecf{z}_2)
+= 3 \sbmat{1 \\ 2} + 2 \sbmat{0 \\ -1}
+= \sbmat{3 \\ 4}.
+$$
+
+:::
