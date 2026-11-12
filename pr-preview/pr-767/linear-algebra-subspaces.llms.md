@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-11 12:13:18 (PST)
+Last modified: 2026-11-12 01:56:07 (PST)
 
 # 1 Rank
 
@@ -33,30 +33,6 @@ Last modified: 2026-11-11 12:13:18 (PST)
 
 > **NOTE:**
 >
-> **Exercise 1 (Testing whether two features and their total are linearly independent)** A table of data that stores two features and also their total holds redundant information, which the test below detects. Let
->
-> $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 = \begin{bmatrix}1 \\ 2 \\ 0\end{bmatrix},
-> \qquad
-> \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2 = \begin{bmatrix}0 \\ 1 \\ 1\end{bmatrix},
-> \qquad
-> \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_3 = \begin{bmatrix}1 \\ 3 \\ 1\end{bmatrix}.$$
->
-> Are $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_3$ [linearly independent](#def-linearly-independent)?
->
-> > **TIP:**
-> >
-> > Compare $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_3$ with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2$.
-
-> **NOTE:**
->
-> *Solution 1*. No. $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2 = {(1, 3, 1)}^{\top} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_3$, so
->
-> $$1 \cdot\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 + 1 \cdot\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2 + (-1) \cdot\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_3 = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}},$$
->
-> with numbers $c_1 = 1$, $c_2 = 1$ and $c_3 = -1$ that are not all $0$. By [Definition 1](#def-linearly-independent), the three vectors are [linearly dependent](#def-linearly-independent).
-
-> **NOTE:**
->
 > **Definition 2 (Rank)** The **rank** [\[2\]](#ref-wikipedia_rank_linear_algebra) of a matrix $\mathbf{A}$, written $\operatorname{rank}(\mathbf{A})$, is the largest number of columns of $\mathbf{A}$ that are linearly independent ([Definition 1](#def-linearly-independent)).
 
 > **NOTE:**
@@ -74,44 +50,6 @@ Last modified: 2026-11-11 12:13:18 (PST)
 > *Remark 1* (Full column rank needs at least as many rows as columns). In [Example 2](#exm-rank), the first matrix has full column rank: its rank is $2$, and it has $2$ columns. The second does not, because its rank is $1$.
 >
 > An $n \times p$ matrix can have full column rank only when $p \le n$, because more than $n$ vectors of length $n$ are never linearly independent. For example, the $2 \times 3$ matrix $\begin{bmatrix} 1 & 0 & 1 \\ 0 & 1 & 1 \end{bmatrix}$ has $3$ columns of length $2$, and $1 \cdot(1, 0) + 1 \cdot(0, 1) - 1 \cdot(1, 1) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, with coefficients that are not all zero. So its $3$ columns are not linearly independent, and its rank is less than $3$.
-
-> **NOTE:**
->
-> **Exercise 2 (Finding the rank of a matrix whose third column is a total)** The [rank](#def-rank) of a data [matrix](linear-algebra-matrices.llms.md#def-matrix) counts how many of its [columns](linear-algebra-matrices.llms.md#def-matrix-column) carry new information. Let
->
-> $$\mathbf{A} = \begin{bmatrix}1 & 0 & 1 \\ 0 & 1 & 1 \\ 2 & 1 & 3\end{bmatrix}.$$
->
-> Find $\operatorname{rank}(\mathbf{A})$.
->
-> > **TIP:**
-> >
-> > Add the first two [columns of](linear-algebra-matrices.llms.md#def-matrix-column) $\mathbf{A}$ and compare them with the third. Then check whether the first two are [linearly independent](#def-linearly-independent).
-
-> **NOTE:**
->
-> *Solution 2*. $\operatorname{rank}(\mathbf{A}) = 2$. The third [column of](linear-algebra-matrices.llms.md#def-matrix-column) $\mathbf{A}$ adds up the first two: ${(1, 0, 2)}^{\top} + {(0, 1, 1)}^{\top} = {(1, 1, 3)}^{\top}$, so the three are not [linearly independent](#def-linearly-independent). The first two are: if $c_1 {(1, 0, 2)}^{\top} + c_2 {(0, 1, 1)}^{\top} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, then the first entry gives $c_1 = 0$ and the second gives $c_2 = 0$. By [Definition 2](#def-rank), the [rank](#def-rank) is $2$.
-
-> **NOTE:**
->
-> **Exercise 3 (Testing whether an all-ones column and one feature have full column rank)** Regression software often puts an all-ones [column](linear-algebra-matrices.llms.md#def-matrix-column) in the input [matrix](linear-algebra-matrices.llms.md#def-matrix), beside the features. With one feature, measured at $2$, $4$ and $6$, the input matrix is
->
-> $$\mathbf{X} = \begin{bmatrix}1 & 2 \\ 1 & 4 \\ 1 & 6\end{bmatrix}.$$
->
-> Does $\mathbf{X}$ have [full column rank](#def-full-column-rank)?
->
-> > **TIP:**
-> >
-> > By [Definition 3](#def-full-column-rank), check whether the two [columns of](linear-algebra-matrices.llms.md#def-matrix-column) $\mathbf{X}$ are [linearly independent](#def-linearly-independent).
-
-> **NOTE:**
->
-> *Solution 3*. Yes. Suppose $c_1 {(1, 1, 1)}^{\top} + c_2 {(2, 4, 6)}^{\top} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$. The first two entries give
->
-> $$c_1 + 2 c_2 = 0
-> \quad \text{and} \quad
-> c_1 + 4 c_2 = 0.$$
->
-> Subtracting the first equation from the second gives $2 c_2 = 0$, so $c_2 = 0$, and then $c_1 = 0$. So the two [columns of](linear-algebra-matrices.llms.md#def-matrix-column) $\mathbf{X}$ are [linearly independent](#def-linearly-independent), the [rank](#def-rank) of $\mathbf{X}$ is $2$, and $\mathbf{X}$ has [full column rank](#def-full-column-rank).
 
 # 2 Subspaces
 
@@ -151,11 +89,11 @@ Last modified: 2026-11-11 12:13:18 (PST)
 
 > **NOTE:**
 >
-> **Exercise 4 (Testing whether the vectors with a nonnegative second entry form a subspace)** A constraint such as “every entry is at least $0$” cuts out a [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of vectors, and it is worth knowing whether that set is a [subspace](#def-subspace). Let
+> **Exercise 1 (Testing whether vectors with a nonnegative second entry are a subspace)** A constraint such as “this entry is at least $0$” cuts out a [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of vectors, and it is worth knowing whether that set is a [subspace](#def-subspace). Let
 >
 > $$\mathcal{H} = \mathopen{}\left\{(x, y) \in \mathbb{R}^2 : y \ge 0\right\}\mathclose{},$$
 >
-> the vectors whose second entry is nonnegative, so that they form the set $\mathcal{H}$.
+> the vectors whose second entry is nonnegative.
 >
 > Is $\mathcal{H}$ a subspace of $\mathbb{R}^2$?
 >
@@ -165,7 +103,7 @@ Last modified: 2026-11-11 12:13:18 (PST)
 
 > **NOTE:**
 >
-> *Solution 4*. No. The vector ${(0, 1)}^{\top}$ is in $\mathcal{H}$, but $(-1) \cdot{(0, 1)}^{\top} = {(0, -1)}^{\top}$ is not, because its second entry is negative. So $\mathcal{H}$ fails condition 2 of [Definition 4](#def-subspace), and it is not a [subspace](#def-subspace). $\mathcal{H}$ does satisfy condition 1, which shows that one condition alone is not enough.
+> *Solution 1*. No. The vector ${(0, 1)}^{\top}$ is in $\mathcal{H}$, but $(-1) \cdot{(0, 1)}^{\top} = {(0, -1)}^{\top}$ is not, because its second entry is negative. So $\mathcal{H}$ fails condition 2 of [Definition 4](#def-subspace), and it is not a [subspace](#def-subspace). $\mathcal{H}$ does satisfy condition 1, which shows that one condition alone is not enough.
 
 > **NOTE:**
 >
@@ -183,7 +121,7 @@ Last modified: 2026-11-11 12:13:18 (PST)
 
 > **NOTE:**
 >
-> **Exercise 5 (Testing whether** $p_1 + p_2 = 1$ defines a subspace) A coin toss can land heads or tails, and the [probabilities](https://morrison-lab.github.io/pds/probability-basics.html#def-probability) $p_1$ and $p_2$ of those two results satisfy $p_1 + p_2 = 1$. That condition defines the [set](https://morrison-lab.github.io/mcs/sets.html#def-set)
+> **Exercise 2 (Testing whether** $p_1 + p_2 = 1$ defines a subspace) A coin toss can land heads or tails, and the [probabilities](https://morrison-lab.github.io/pds/probability-basics.html#def-probability) $p_1$ and $p_2$ of those two results satisfy $p_1 + p_2 = 1$. That condition defines the [set](https://morrison-lab.github.io/mcs/sets.html#def-set)
 >
 > $$\mathcal{P} = \mathopen{}\left\{(p_1, p_2) \in \mathbb{R}^2 : p_1 + p_2 = 1\right\}\mathclose{}.$$
 >
@@ -195,7 +133,7 @@ Last modified: 2026-11-11 12:13:18 (PST)
 
 > **NOTE:**
 >
-> *Solution 5*. No. The [zero vector](linear-algebra-vectors.llms.md#def-zero-vector) ${(0, 0)}^{\top}$ is not in $\mathcal{P}$, because $0 + 0 = 0 \neq 1$. By [Theorem 1](#thm-subspace-zero), every [subspace](#def-subspace) contains $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, so $\mathcal{P}$ is not a subspace.
+> *Solution 2*. No. The [zero vector](linear-algebra-vectors.llms.md#def-zero-vector) ${(0, 0)}^{\top}$ is not in $\mathcal{P}$, because $0 + 0 = 0 \neq 1$. By [Theorem 1](#thm-subspace-zero), every [subspace](#def-subspace) contains $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, so $\mathcal{P}$ is not a subspace.
 
 > **NOTE:**
 >
@@ -218,7 +156,7 @@ Last modified: 2026-11-11 12:13:18 (PST)
 
 > **NOTE:**
 >
-> **Exercise 6 (Testing whether a vector lies in the span of two others)** Whether a target can be written as a [linear combination](linear-algebra-vectors.llms.md#def-linear-combination) of a few given vectors is a question about a [span](#def-span). Let
+> **Exercise 3 (Testing whether a vector lies in the span of two others)** Whether a target can be written as a [linear combination](linear-algebra-vectors.llms.md#def-linear-combination) of a few given vectors is a question about a [span](#def-span). Let
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 = \begin{bmatrix}1 \\ 1 \\ 0\end{bmatrix},
 > \qquad
@@ -234,7 +172,7 @@ Last modified: 2026-11-11 12:13:18 (PST)
 
 > **NOTE:**
 >
-> *Solution 6*. Yes. Entry by entry, $c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 + c_2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2 = {(c_1,\ c_1 + c_2,\ c_2)}^{\top}$. Matching $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$, the first entry gives $c_1 = 3$ and the third gives $c_2 = 2$. Then the second entry is $3 + 2 = 5$, which matches too, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = 3 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 + 2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2$ is in the [span](#def-span).
+> *Solution 3*. Yes. Entry by entry, $c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 + c_2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2 = {(c_1,\ c_1 + c_2,\ c_2)}^{\top}$. Matching $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$, the first entry gives $c_1 = 3$ and the third gives $c_2 = 2$. Then the second entry is $3 + 2 = 5$, which matches too, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = 3 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 + 2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2$ is in the [span](#def-span).
 
 > **NOTE:**
 >
@@ -277,7 +215,7 @@ Last modified: 2026-11-11 12:13:18 (PST)
 
 > **NOTE:**
 >
-> **Exercise 7 (Recognizing a set of vectors as a span)** Describing a [set](https://morrison-lab.github.io/mcs/sets.html#def-set) by free parameters often shows that it is a [span](#def-span). Let
+> **Exercise 4 (Recognizing a set of vectors as a span)** Describing a [set](https://morrison-lab.github.io/mcs/sets.html#def-set) by free parameters often shows that it is a [span](#def-span). Let
 >
 > $$\mathcal{S} = \mathopen{}\left\{(a + b,\ a - b,\ 2a) : a, b \in \mathbb{R}\right\}\mathclose{}.$$
 >
@@ -289,7 +227,7 @@ Last modified: 2026-11-11 12:13:18 (PST)
 
 > **NOTE:**
 >
-> *Solution 7*. Yes. For every $a, b \in \mathbb{R}$,
+> *Solution 4*. Yes. For every $a, b \in \mathbb{R}$,
 >
 > $$\begin{bmatrix}a + b \\ a - b \\ 2a\end{bmatrix} = a \begin{bmatrix}1 \\ 1 \\ 2\end{bmatrix} + b \begin{bmatrix}1 \\ -1 \\ 0\end{bmatrix},$$
 >

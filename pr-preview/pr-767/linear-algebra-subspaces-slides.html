@@ -302,7 +302,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-11 12:13:18 (PST)</p>
+  <p class="date">Last modified: 2026-11-12 01:56:07 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -339,43 +339,6 @@ c_1 &amp;= \cdots \\
 </section>
 <section class="slide level2">
 
-<div id="exr-linearly-independent-practice" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1 (Testing whether two features and their total are linearly independent)</strong></span> A table of data that stores two features and also their total holds redundant information, which the test below detects. Let</p>
-<p><span class="math display">\[
-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 = \begin{bmatrix}1 \\ 2 \\ 0\end{bmatrix},
-\qquad
-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2 = \begin{bmatrix}0 \\ 1 \\ 1\end{bmatrix},
-\qquad
-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_3 = \begin{bmatrix}1 \\ 3 \\ 1\end{bmatrix}.
-\]</span></p>
-<p>Are <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1\)</span>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_3\)</span> <a href="#/def-linearly-independent">linearly independent</a>?</p>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Hint</strong></p>
-</div>
-<div class="callout-content">
-<p>Compare <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_3\)</span> with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2\)</span>.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="sol-linearly-independent-practice" class="proof solution">
-<p><span class="proof-title"><em>Solution 1</em>. </span>No. <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2 = {(1, 3, 1)}^{\top} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_3\)</span>, so</p>
-<p><span class="math display">\[
-1 \cdot\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 + 1 \cdot\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2 + (-1) \cdot\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_3 = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}},
-\]</span></p>
-<p>with numbers <span class="math inline">\(c_1 = 1\)</span>, <span class="math inline">\(c_2 = 1\)</span> and <span class="math inline">\(c_3 = -1\)</span> that are not all <span class="math inline">\(0\)</span>. By <a href="#/def-linearly-independent" class="quarto-xref">Definition&nbsp;1</a>, the three vectors are <a href="#/def-linearly-independent">linearly dependent</a>.</p>
-</div>
-</section>
-<section class="slide level2">
-
 <div id="def-rank" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 2 (Rank)</strong></span> The <strong>rank</strong> <span class="citation" data-cites="wikipedia_rank_linear_algebra"><a href="#/references" role="doc-biblioref" onclick="">[2]</a></span> of a matrix <span class="math inline">\(\mathbf{A}\)</span>, written <span class="math inline">\(\operatorname{rank}(\mathbf{A})\)</span>, is the largest number of columns of <span class="math inline">\(\mathbf{A}\)</span> that are linearly independent (<a href="#/def-linearly-independent" class="quarto-xref">Definition&nbsp;1</a>).</p>
 </div>
@@ -398,70 +361,6 @@ c_1 &amp;= \cdots \\
 <div id="rem-full-column-rank-shape" class="proof remark">
 <p><span class="proof-title"><em>Remark 1</em> (Full column rank needs at least as many rows as columns). </span>In <a href="#/exm-rank" class="quarto-xref">Example&nbsp;2</a>, the first matrix has full column rank: its rank is <span class="math inline">\(2\)</span>, and it has <span class="math inline">\(2\)</span> columns. The second does not, because its rank is <span class="math inline">\(1\)</span>.</p>
 <p>An <span class="math inline">\(n \times p\)</span> matrix can have full column rank only when <span class="math inline">\(p \le n\)</span>, because more than <span class="math inline">\(n\)</span> vectors of length <span class="math inline">\(n\)</span> are never linearly independent. For example, the <span class="math inline">\(2 \times 3\)</span> matrix <span class="math inline">\(\begin{bmatrix} 1 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 1 \end{bmatrix}\)</span> has <span class="math inline">\(3\)</span> columns of length <span class="math inline">\(2\)</span>, and <span class="math inline">\(1 \cdot(1, 0) + 1 \cdot(0, 1) - 1 \cdot(1, 1) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, with coefficients that are not all zero. So its <span class="math inline">\(3\)</span> columns are not linearly independent, and its rank is less than <span class="math inline">\(3\)</span>.</p>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="exr-rank-practice" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 2 (Finding the rank of a matrix whose third column is a total)</strong></span> The <a href="#/def-rank">rank</a> of a data <a href="./linear-algebra-matrices.html#def-matrix">matrix</a> counts how many of its <a href="./linear-algebra-matrices.html#def-matrix-column">columns</a> carry new information. Let</p>
-<p><span class="math display">\[
-\mathbf{A} = \begin{bmatrix}1 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 1 \\ 2 &amp; 1 &amp; 3\end{bmatrix}.
-\]</span></p>
-<p>Find <span class="math inline">\(\operatorname{rank}(\mathbf{A})\)</span>.</p>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Hint</strong></p>
-</div>
-<div class="callout-content">
-<p>Add the first two <a href="./linear-algebra-matrices.html#def-matrix-column">columns of <span class="math inline">\(\mathbf{A}\)</span></a> and compare them with the third. Then check whether the first two are <a href="#/def-linearly-independent">linearly independent</a>.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="sol-rank-practice" class="proof solution">
-<p><span class="proof-title"><em>Solution 2</em>. </span><span class="math inline">\(\operatorname{rank}(\mathbf{A}) = 2\)</span>. The third <a href="./linear-algebra-matrices.html#def-matrix-column">column of <span class="math inline">\(\mathbf{A}\)</span></a> adds up the first two: <span class="math inline">\({(1, 0, 2)}^{\top} + {(0, 1, 1)}^{\top} = {(1, 1, 3)}^{\top}\)</span>, so the three are not <a href="#/def-linearly-independent">linearly independent</a>. The first two are: if <span class="math inline">\(c_1 {(1, 0, 2)}^{\top} + c_2 {(0, 1, 1)}^{\top} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, then the first entry gives <span class="math inline">\(c_1 = 0\)</span> and the second gives <span class="math inline">\(c_2 = 0\)</span>. By <a href="#/def-rank" class="quarto-xref">Definition&nbsp;2</a>, the <a href="#/def-rank">rank</a> is <span class="math inline">\(2\)</span>.</p>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="exr-full-column-rank-practice" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 3 (Testing whether an all-ones column and one feature have full column rank)</strong></span> Regression software often puts an all-ones <a href="./linear-algebra-matrices.html#def-matrix-column">column</a> in the input <a href="./linear-algebra-matrices.html#def-matrix">matrix</a>, beside the features. With one feature, measured at <span class="math inline">\(2\)</span>, <span class="math inline">\(4\)</span> and <span class="math inline">\(6\)</span>, the input matrix is</p>
-<p><span class="math display">\[
-\mathbf{X} = \begin{bmatrix}1 &amp; 2 \\ 1 &amp; 4 \\ 1 &amp; 6\end{bmatrix}.
-\]</span></p>
-<p>Does <span class="math inline">\(\mathbf{X}\)</span> have <a href="#/def-full-column-rank">full column rank</a>?</p>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Hint</strong></p>
-</div>
-<div class="callout-content">
-<p>By <a href="#/def-full-column-rank" class="quarto-xref">Definition&nbsp;3</a>, check whether the two <a href="./linear-algebra-matrices.html#def-matrix-column">columns of <span class="math inline">\(\mathbf{X}\)</span></a> are <a href="#/def-linearly-independent">linearly independent</a>.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="sol-full-column-rank-practice" class="proof solution">
-<p><span class="proof-title"><em>Solution 3</em>. </span>Yes. Suppose <span class="math inline">\(c_1 {(1, 1, 1)}^{\top} + c_2 {(2, 4, 6)}^{\top} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>. The first two entries give</p>
-<p><span class="math display">\[
-c_1 + 2 c_2 = 0
-\quad \text{and} \quad
-c_1 + 4 c_2 = 0.
-\]</span></p>
-<p>Subtracting the first equation from the second gives <span class="math inline">\(2 c_2 = 0\)</span>, so <span class="math inline">\(c_2 = 0\)</span>, and then <span class="math inline">\(c_1 = 0\)</span>. So the two <a href="./linear-algebra-matrices.html#def-matrix-column">columns of <span class="math inline">\(\mathbf{X}\)</span></a> are <a href="#/def-linearly-independent">linearly independent</a>, the <a href="#/def-rank">rank</a> of <span class="math inline">\(\mathbf{X}\)</span> is <span class="math inline">\(2\)</span>, and <span class="math inline">\(\mathbf{X}\)</span> has <a href="#/def-full-column-rank">full column rank</a>.</p>
 </div>
 </section>
 <section id="sec-subspaces" class="slide level2" data-number="2">
@@ -520,11 +419,11 @@ c_1 + 4 c_2 = 0.
 <section class="slide level2">
 
 <div id="exr-subspace-practice" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 4 (Testing whether the vectors with a nonnegative second entry form a subspace)</strong></span> A constraint such as “every entry is at least <span class="math inline">\(0\)</span>” cuts out a <a href="https://morrison-lab.github.io/mcs/sets.html#def-set">set</a> of vectors, and it is worth knowing whether that set is a <a href="#/def-subspace">subspace</a>. Let</p>
+<p><span class="theorem-title"><strong>Exercise 1 (Testing whether vectors with a nonnegative second entry are a subspace)</strong></span> A constraint such as “this entry is at least <span class="math inline">\(0\)</span>” cuts out a <a href="https://morrison-lab.github.io/mcs/sets.html#def-set">set</a> of vectors, and it is worth knowing whether that set is a <a href="#/def-subspace">subspace</a>. Let</p>
 <p><span class="math display">\[
 \mathcal{H} = \mathopen{}\left\{(x, y) \in \mathbb{R}^2 : y \ge 0\right\}\mathclose{},
 \]</span></p>
-<p>the vectors whose second entry is nonnegative, so that they form the set <span class="math inline">\(\mathcal{H}\)</span>.</p>
+<p>the vectors whose second entry is nonnegative.</p>
 <p>Is <span class="math inline">\(\mathcal{H}\)</span> a subspace of <span class="math inline">\(\mathbb{R}^2\)</span>?</p>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
@@ -544,7 +443,7 @@ c_1 + 4 c_2 = 0.
 <section class="slide level2">
 
 <div id="sol-subspace-practice" class="proof solution">
-<p><span class="proof-title"><em>Solution 4</em>. </span>No. The vector <span class="math inline">\({(0, 1)}^{\top}\)</span> is in <span class="math inline">\(\mathcal{H}\)</span>, but <span class="math inline">\((-1) \cdot{(0, 1)}^{\top} = {(0, -1)}^{\top}\)</span> is not, because its second entry is negative. So <span class="math inline">\(\mathcal{H}\)</span> fails condition 2 of <a href="#/def-subspace" class="quarto-xref">Definition&nbsp;4</a>, and it is not a <a href="#/def-subspace">subspace</a>. <span class="math inline">\(\mathcal{H}\)</span> does satisfy condition 1, which shows that one condition alone is not enough.</p>
+<p><span class="proof-title"><em>Solution 1</em>. </span>No. The vector <span class="math inline">\({(0, 1)}^{\top}\)</span> is in <span class="math inline">\(\mathcal{H}\)</span>, but <span class="math inline">\((-1) \cdot{(0, 1)}^{\top} = {(0, -1)}^{\top}\)</span> is not, because its second entry is negative. So <span class="math inline">\(\mathcal{H}\)</span> fails condition 2 of <a href="#/def-subspace" class="quarto-xref">Definition&nbsp;4</a>, and it is not a <a href="#/def-subspace">subspace</a>. <span class="math inline">\(\mathcal{H}\)</span> does satisfy condition 1, which shows that one condition alone is not enough.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -566,7 +465,7 @@ c_1 + 4 c_2 = 0.
 <section class="slide level2">
 
 <div id="exr-subspace-zero-practice" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 5 (Testing whether <span class="math inline">\(p_1 + p_2 = 1\)</span> defines a subspace)</strong></span> A coin toss can land heads or tails, and the <a href="https://morrison-lab.github.io/pds/probability-basics.html#def-probability">probabilities</a> <span class="math inline">\(p_1\)</span> and <span class="math inline">\(p_2\)</span> of those two results satisfy <span class="math inline">\(p_1 + p_2 = 1\)</span>. That condition defines the <a href="https://morrison-lab.github.io/mcs/sets.html#def-set">set</a></p>
+<p><span class="theorem-title"><strong>Exercise 2 (Testing whether <span class="math inline">\(p_1 + p_2 = 1\)</span> defines a subspace)</strong></span> A coin toss can land heads or tails, and the <a href="https://morrison-lab.github.io/pds/probability-basics.html#def-probability">probabilities</a> <span class="math inline">\(p_1\)</span> and <span class="math inline">\(p_2\)</span> of those two results satisfy <span class="math inline">\(p_1 + p_2 = 1\)</span>. That condition defines the <a href="https://morrison-lab.github.io/mcs/sets.html#def-set">set</a></p>
 <p><span class="math display">\[
 \mathcal{P} = \mathopen{}\left\{(p_1, p_2) \in \mathbb{R}^2 : p_1 + p_2 = 1\right\}\mathclose{}.
 \]</span></p>
@@ -589,7 +488,7 @@ c_1 + 4 c_2 = 0.
 <section class="slide level2">
 
 <div id="sol-subspace-zero-practice" class="proof solution">
-<p><span class="proof-title"><em>Solution 5</em>. </span>No. The <a href="./linear-algebra-vectors.html#def-zero-vector">zero vector</a> <span class="math inline">\({(0, 0)}^{\top}\)</span> is not in <span class="math inline">\(\mathcal{P}\)</span>, because <span class="math inline">\(0 + 0 = 0 \neq 1\)</span>. By <a href="#/thm-subspace-zero" class="quarto-xref">Theorem&nbsp;1</a>, every <a href="#/def-subspace">subspace</a> contains <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, so <span class="math inline">\(\mathcal{P}\)</span> is not a subspace.</p>
+<p><span class="proof-title"><em>Solution 2</em>. </span>No. The <a href="./linear-algebra-vectors.html#def-zero-vector">zero vector</a> <span class="math inline">\({(0, 0)}^{\top}\)</span> is not in <span class="math inline">\(\mathcal{P}\)</span>, because <span class="math inline">\(0 + 0 = 0 \neq 1\)</span>. By <a href="#/thm-subspace-zero" class="quarto-xref">Theorem&nbsp;1</a>, every <a href="#/def-subspace">subspace</a> contains <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, so <span class="math inline">\(\mathcal{P}\)</span> is not a subspace.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -618,7 +517,7 @@ c_1 + 4 c_2 = 0.
 <section class="slide level2">
 
 <div id="exr-span-practice" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 6 (Testing whether a vector lies in the span of two others)</strong></span> Whether a target can be written as a <a href="./linear-algebra-vectors.html#def-linear-combination">linear combination</a> of a few given vectors is a question about a <a href="#/def-span">span</a>. Let</p>
+<p><span class="theorem-title"><strong>Exercise 3 (Testing whether a vector lies in the span of two others)</strong></span> Whether a target can be written as a <a href="./linear-algebra-vectors.html#def-linear-combination">linear combination</a> of a few given vectors is a question about a <a href="#/def-span">span</a>. Let</p>
 <p><span class="math display">\[
 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 = \begin{bmatrix}1 \\ 1 \\ 0\end{bmatrix},
 \qquad
@@ -645,7 +544,7 @@ c_1 + 4 c_2 = 0.
 <section class="slide level2">
 
 <div id="sol-span-practice" class="proof solution">
-<p><span class="proof-title"><em>Solution 6</em>. </span>Yes. Entry by entry, <span class="math inline">\(c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 + c_2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2 = {(c_1,\ c_1 + c_2,\ c_2)}^{\top}\)</span>. Matching <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>, the first entry gives <span class="math inline">\(c_1 = 3\)</span> and the third gives <span class="math inline">\(c_2 = 2\)</span>. Then the second entry is <span class="math inline">\(3 + 2 = 5\)</span>, which matches too, so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = 3 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 + 2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2\)</span> is in the <a href="#/def-span">span</a>.</p>
+<p><span class="proof-title"><em>Solution 3</em>. </span>Yes. Entry by entry, <span class="math inline">\(c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 + c_2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2 = {(c_1,\ c_1 + c_2,\ c_2)}^{\top}\)</span>. Matching <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>, the first entry gives <span class="math inline">\(c_1 = 3\)</span> and the third gives <span class="math inline">\(c_2 = 2\)</span>. Then the second entry is <span class="math inline">\(3 + 2 = 5\)</span>, which matches too, so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = 3 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 + 2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2\)</span> is in the <a href="#/def-span">span</a>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -691,7 +590,7 @@ c\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphanto
 <section class="slide level2">
 
 <div id="exr-span-subspace-practice" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 7 (Recognizing a set of vectors as a span)</strong></span> Describing a <a href="https://morrison-lab.github.io/mcs/sets.html#def-set">set</a> by free parameters often shows that it is a <a href="#/def-span">span</a>. Let</p>
+<p><span class="theorem-title"><strong>Exercise 4 (Recognizing a set of vectors as a span)</strong></span> Describing a <a href="https://morrison-lab.github.io/mcs/sets.html#def-set">set</a> by free parameters often shows that it is a <a href="#/def-span">span</a>. Let</p>
 <p><span class="math display">\[
 \mathcal{S} = \mathopen{}\left\{(a + b,\ a - b,\ 2a) : a, b \in \mathbb{R}\right\}\mathclose{}.
 \]</span></p>
@@ -714,7 +613,7 @@ c\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphanto
 <section class="slide level2">
 
 <div id="sol-span-subspace-practice" class="proof solution">
-<p><span class="proof-title"><em>Solution 7</em>. </span>Yes. For every <span class="math inline">\(a, b \in \mathbb{R}\)</span>,</p>
+<p><span class="proof-title"><em>Solution 4</em>. </span>Yes. For every <span class="math inline">\(a, b \in \mathbb{R}\)</span>,</p>
 <p><span class="math display">\[
 \begin{bmatrix}a + b \\ a - b \\ 2a\end{bmatrix} = a \begin{bmatrix}1 \\ 1 \\ 2\end{bmatrix} + b \begin{bmatrix}1 \\ -1 \\ 0\end{bmatrix},
 \]</span></p>
