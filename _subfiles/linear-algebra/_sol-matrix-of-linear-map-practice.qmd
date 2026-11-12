@@ -1,0 +1,20 @@
+:::{#sol-matrix-of-linear-map-practice}
+
+The values of $f$ at the [indicator vectors](linear-algebra-vectors.qmd#def-indicator-vector) are
+
+$$
+f(\vecf{e}_1) = f\paren{\begin{bmatrix} 1 \\ 0 \end{bmatrix}} = \begin{bmatrix} 0 \\ 1 \\ 1 \end{bmatrix},
+\qquad
+f(\vecf{e}_2) = f\paren{\begin{bmatrix} 0 \\ 1 \end{bmatrix}} = \begin{bmatrix} 1 \\ 0 \\ -1 \end{bmatrix}.
+$$
+
+These values are the [columns](#def-matrix-column) of the [matrix of $f$](#def-matrix-of-linear-map):
+
+$$
+\matr{A} = \begin{bmatrix} 0 & 1 \\ 1 & 0 \\ 1 & -1 \end{bmatrix}.
+$$
+
+It is $3 \times 2$,
+since $f$ sends $\reals^2$ to $\reals^3$.
+
+:::

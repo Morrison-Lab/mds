@@ -1,0 +1,16 @@
+:::{#sol-affine-linear-iff-practice}
+
+Only for $c = 2$.
+The map is
+
+$$
+f(\vx) = \sbmat{1 & -1 \\ 3 & 0} \vx + \sbmat{c - 2 \\ c^2 - 4},
+$$
+
+so its [offset](#def-affine-offset) is $\tp{(c - 2,\ c^2 - 4)}$.
+By @thm-affine-linear-iff,
+$f$ is linear exactly when both entries are $0$.
+The first entry is $0$ only for $c = 2$,
+and then the second entry is $2^2 - 4 = 0$ too.
+
+:::

@@ -23,8 +23,6 @@ Let $f$ and $\vx$ be as in @def-hessian.
 
 {{< slidebreak >}}
 
-::: {.content-hidden when-format="revealjs"}
-
 ::: proof
 
 **Part 1.**
@@ -54,7 +52,5 @@ $$
 && \text{(} y_j = \deriv{x_j} f(\vx) \text{)}
 \ea
 $$
-
-:::
 
 :::

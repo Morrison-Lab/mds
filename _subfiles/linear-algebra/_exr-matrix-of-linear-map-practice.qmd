@@ -1,0 +1,21 @@
+:::{#exr-matrix-of-linear-map-practice}
+#### Finding the matrix of a linear map into $\reals^3$
+
+The [matrix of a linear map](#def-matrix-of-linear-map) turns the map into a table of numbers
+that software can store and multiply.
+Let $f: \reals^2 \to \reals^3$ be the [linear map](#def-linear-map)
+
+$$
+f(\vx) = (x_2,\ x_1,\ x_1 - x_2).
+$$
+
+Find the [matrix of $f$](#def-matrix-of-linear-map).
+
+::: {.callout-tip}
+#### Hint
+
+[Column $j$ of the matrix](#def-matrix-column) is $f(\vecf{e}_j)$.
+
+:::
+
+:::

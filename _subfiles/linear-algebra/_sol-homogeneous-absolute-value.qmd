@@ -1,0 +1,18 @@
+:::{#sol-homogeneous-absolute-value}
+
+No.
+Take $c = -1$ and $x = 1$.
+Then
+
+$$
+f(c x) = \abs{-1} = 1,
+\qquad
+c f(x) = -1 \cd \abs{1} = -1.
+$$
+
+These differ,
+so $f$ is not [homogeneous](#def-homogeneous-function).
+It does satisfy $f(c x) = c f(x)$ for every $c \ge 0$,
+since then $\abs{c x} = c \abs{x}$.
+
+:::

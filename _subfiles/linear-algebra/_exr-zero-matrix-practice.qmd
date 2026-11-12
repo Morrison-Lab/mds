@@ -1,0 +1,22 @@
+:::{#exr-zero-matrix-practice}
+#### Whether a matrix of zeros is a given zero matrix
+
+A [zero matrix](#def-zero-matrix) carries its shape in its subscript,
+because, as @exm-zero-matrix shows,
+[zero matrices](#def-zero-matrix) of different shapes are different [matrices](#def-matrix).
+Let
+
+$$
+\matr{Z} = \begin{bmatrix} 0 & 0 \\ 0 & 0 \\ 0 & 0 \end{bmatrix}.
+$$
+
+Is $\matr{Z} = \matr{0}_{2 \times 3}$?
+
+::: {.callout-tip}
+#### Hint
+
+Compare the shapes of the two [matrices](#def-matrix), using @def-matrix-equality.
+
+:::
+
+:::

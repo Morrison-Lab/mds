@@ -1,0 +1,22 @@
+:::{#sol-matrix-mult-practice}
+
+$\matr{A}$ has three [column](#def-matrix-column)s,
+and $\matr{B}$ has three [row](#def-matrix-row)s.
+So the [product](#def-matrix-mult) is defined and is $2 \times 2$.
+Its entries are
+
+$$
+\ba
+\matr{A}\matr{B}
+&= \begin{bmatrix}
+1 \cd 2 + 0 \cd 0 + 2 \cd 1 & 1 \cd 1 + 0 \cd (-1) + 2 \cd 4 \\
+(-1) \cd 2 + 3 \cd 0 + 1 \cd 1 & (-1) \cd 1 + 3 \cd (-1) + 1 \cd 4
+\end{bmatrix}
+&& \text{(@def-matrix-mult)}
+\\
+&= \begin{bmatrix} 4 & 9 \\ -1 & 0 \end{bmatrix}.
+&& \text{(multiply and add)}
+\ea
+$$
+
+:::
