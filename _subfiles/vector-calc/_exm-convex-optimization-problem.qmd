@@ -1,0 +1,41 @@
+:::{#exm-convex-optimization-problem}
+#### Minimizing over a line, and over a circle
+
+Let $f(\vx) = x_1^2 + x_2^2$.
+Its [Hessian](vector-calculus.qmd#def-hessian) is $2 \matr{I}_2$ at every $\vx$,
+which is [positive semidefinite](linear-algebra-special-matrices.qmd#def-positive-semidefinite),
+so $f$ is [convex](algebra-sums.qmd#def-convex-function) by part 1 of @thm-convex-hessian.
+
+- Minimizing $f$ subject to $3 x_1 + 4 x_2 = 5$,
+  as in [the example of a minimization problem](optimization-constrained.qmd#exm-minimization-problem),
+  is a [convex problem](#def-convex-optimization-problem).
+  Its [feasible set](optimization-constrained.qmd#def-feasible-set) $L = \cb{\vx \in \reals^2 : 3 x_1 + 4 x_2 = 5}$ is a [convex set](#def-convex-set):
+  for $\vx, \vy \in L$ and $t \in [0, 1]$,
+
+  $$
+  \ba
+  3 \paren{t x_1 + (1 - t) y_1} + 4 \paren{t x_2 + (1 - t) y_2}
+  &= t \paren{3 x_1 + 4 x_2} + (1 - t) \paren{3 y_1 + 4 y_2}
+  && \text{(distribute and regroup)}
+  \\
+  &= 5 t + 5 (1 - t)
+  && \text{(} \vx, \vy \in L \text{)}
+  \\
+  &= 5,
+  && \text{(arithmetic)}
+  \ea
+  $$
+
+  so $t \vx + (1 - t) \vy \in L$.
+- Minimizing the same $f$ subject to $x_1^2 + x_2^2 = 1$
+  is not a [convex problem](#def-convex-optimization-problem),
+  because its [feasible set](optimization-constrained.qmd#def-feasible-set), the [unit circle](algebra-trigonometry.qmd#def-unit-circle) $C$, is not a [convex set](#def-convex-set):
+  $\tp{(1, 0)}$ and $\tp{(-1, 0)}$ are in $C$,
+  but with $t = \tfrac{1}{2}$ the point $\vzero$ is not,
+  since $0^2 + 0^2 = 0 \ne 1$.
+
+@fig-convex-optimization-problem shows both feasible sets.
+
+{{< include mds/_subfiles/vector-calc/_fig-convex-optimization-problem.qmd >}}
+
+:::

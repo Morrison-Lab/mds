@@ -1,0 +1,85 @@
+::: {#fig-convex-at}
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: convex-at-r
+#| fig-alt: >-
+#|   The graph of f(x) = min(x^2, 1) for x from 0.4 to 1.6: rising as x^2 up
+#|   to x = 1, then flat at height 1. The open ball of radius 0.5 around 1,
+#|   the interval from 0.5 to 1.5, is shaded. A dashed vermilion chord joins
+#|   (0.75, 0.5625) and (1.25, 1) and passes through (1, 0.78125), below the
+#|   graph's value 1 at x = 1.
+#| fig-height: 3.5
+#| fig-width: 6
+ca_x_ca <- seq(0.4, 1.6, length.out = 241)
+ca_square_ca <- ca_x_ca^2
+ca_f_ca <- pmin(ca_square_ca, 1)
+ca_graph_ca <- tibble::tibble(x = ca_x_ca, f = ca_f_ca)
+ca_ends_ca <- c(0.75, 1.25)
+ca_end_squares_ca <- ca_ends_ca^2
+ca_end_f_ca <- pmin(ca_end_squares_ca, 1)
+ca_chord_ca <- tibble::tibble(x = ca_ends_ca, f = ca_end_f_ca)
+ca_chord_mid_ca <- mean(ca_end_f_ca)
+ca_mid_x_ca <- c(1, 1)
+ca_mid_f_ca <- c(ca_chord_mid_ca, 1)
+ca_mid_ca <- tibble::tibble(x = ca_mid_x_ca, f = ca_mid_f_ca)
+ca_mid_cols_ca <- c("#D55E00", "#0072B2")
+ca_graph_ca |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = x, y = f) +
+  ggplot2::annotate(
+    "rect",
+    xmin = 0.5, xmax = 1.5, ymin = -Inf, ymax = Inf,
+    fill = "#0072B2", alpha = 0.1
+  ) +
+  ggplot2::geom_line(colour = "#0072B2") +
+  ggplot2::geom_line(
+    data = ca_chord_ca, colour = "#D55E00", linetype = "dashed"
+  ) +
+  ggplot2::geom_point(data = ca_chord_ca, colour = "#D55E00", size = 2) +
+  ggplot2::geom_point(data = ca_mid_ca, colour = ca_mid_cols_ca, size = 2) +
+  ggplot2::labs(x = "x", y = "f(x)") +
+  ggplot2::theme_minimal()
+```
+
+### Python
+
+```{python}
+#| label: convex-at-python
+#| fig-alt: >-
+#|   The graph of f(x) = min(x^2, 1) for x from 0.4 to 1.6: rising as x^2 up
+#|   to x = 1, then flat at height 1. The open ball of radius 0.5 around 1,
+#|   the interval from 0.5 to 1.5, is shaded. A dashed vermilion chord joins
+#|   (0.75, 0.5625) and (1.25, 1) and passes through (1, 0.78125), below the
+#|   graph's value 1 at x = 1.
+#| fig-height: 3.5
+#| fig-width: 6
+import matplotlib.pyplot as plt
+import numpy as np
+
+ca_x_py = np.linspace(0.4, 1.6, 241)
+ca_f_py = np.minimum(ca_x_py**2, 1)
+ca_ends_py = np.array([0.75, 1.25])
+ca_end_f_py = np.minimum(ca_ends_py**2, 1)
+fig, ax = plt.subplots(figsize=(6, 3.5))
+ax.axvspan(0.5, 1.5, color="#0072B2", alpha=0.1)
+ax.plot(ca_x_py, ca_f_py, color="#0072B2")
+ax.plot(ca_ends_py, ca_end_f_py, "--o", color="#D55E00", markersize=4)
+ax.plot([1], [ca_end_f_py.mean()], "o", color="#D55E00", markersize=4)
+ax.plot([1], [1], "o", color="#0072B2", markersize=4)
+ax.set_xlabel("x")
+ax.set_ylabel("f(x)")
+plt.show();
+```
+
+:::
+
+The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $f(x) = \minf{x^2, 1}$ near $1$, from @exm-convex-at,
+with $r = \tfrac{1}{2}$ and $\smallconst = \tfrac{1}{4}$.
+The dashed [chord](algebra-sums.qmd#def-chord) from $\tfrac{3}{4}$ to $\tfrac{5}{4}$ stays inside the shaded [open ball](vector-calculus.qmd#def-ball) of radius $r$ around $1$,
+and is at $\tfrac{25}{32}$ above $x = 1$, below $f(1) = 1$.
+
+:::

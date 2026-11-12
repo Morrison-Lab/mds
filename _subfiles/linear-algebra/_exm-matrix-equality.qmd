@@ -14,4 +14,6 @@ The third pair lists the same four numbers in the same order,
 but one [matrix](#def-matrix) is $1 \times 4$ and the other $2 \times 2$,
 so the two are not [equal](#def-matrix-equality).
 
+<!-- no-figure: the displayed matrices are the whole example -->
+
 :::

@@ -1,0 +1,78 @@
+::: {#fig-convex-on}
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: convex-on-r
+#| fig-alt: >-
+#|   The graph of f(x) = min(x^2, 1) for x from -2 to 2.5: a parabola between
+#|   -1 and 1, flat at height 1 outside. The interval from -1 to 1 is shaded.
+#|   A dashed vermilion chord joins (0, 0) and (2, 1) and passes through
+#|   (1, 0.5), below the graph's value 1 at x = 1.
+#| fig-height: 3.5
+#| fig-width: 6
+co_x_co <- seq(-2, 2.5, length.out = 451)
+co_square_co <- co_x_co^2
+co_f_co <- pmin(co_square_co, 1)
+co_graph_co <- tibble::tibble(x = co_x_co, f = co_f_co)
+co_chord_x_co <- c(0, 2)
+co_chord_f_co <- c(0, 1)
+co_chord_co <- tibble::tibble(x = co_chord_x_co, f = co_chord_f_co)
+co_mid_x_co <- c(1, 1)
+co_mid_f_co <- c(0.5, 1)
+co_mid_co <- tibble::tibble(x = co_mid_x_co, f = co_mid_f_co)
+co_mid_cols_co <- c("#D55E00", "#0072B2")
+co_graph_co |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = x, y = f) +
+  ggplot2::annotate(
+    "rect",
+    xmin = -1, xmax = 1, ymin = -Inf, ymax = Inf,
+    fill = "#0072B2", alpha = 0.1
+  ) +
+  ggplot2::geom_line(colour = "#0072B2") +
+  ggplot2::geom_line(
+    data = co_chord_co, colour = "#D55E00", linetype = "dashed"
+  ) +
+  ggplot2::geom_point(data = co_chord_co, colour = "#D55E00", size = 2) +
+  ggplot2::geom_point(data = co_mid_co, colour = co_mid_cols_co, size = 2) +
+  ggplot2::labs(x = "x", y = "f(x)") +
+  ggplot2::theme_minimal()
+```
+
+### Python
+
+```{python}
+#| label: convex-on-python
+#| fig-alt: >-
+#|   The graph of f(x) = min(x^2, 1) for x from -2 to 2.5: a parabola between
+#|   -1 and 1, flat at height 1 outside. The interval from -1 to 1 is shaded.
+#|   A dashed vermilion chord joins (0, 0) and (2, 1) and passes through
+#|   (1, 0.5), below the graph's value 1 at x = 1.
+#| fig-height: 3.5
+#| fig-width: 6
+import matplotlib.pyplot as plt
+import numpy as np
+
+co_x_py = np.linspace(-2, 2.5, 451)
+co_f_py = np.minimum(co_x_py**2, 1)
+fig, ax = plt.subplots(figsize=(6, 3.5))
+ax.axvspan(-1, 1, color="#0072B2", alpha=0.1)
+ax.plot(co_x_py, co_f_py, color="#0072B2")
+ax.plot([0, 2], [0, 1], "--o", color="#D55E00", markersize=4)
+ax.plot([1], [0.5], "o", color="#D55E00", markersize=4)
+ax.plot([1], [1], "o", color="#0072B2", markersize=4)
+ax.set_xlabel("x")
+ax.set_ylabel("f(x)")
+plt.show();
+```
+
+:::
+
+The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $f(x) = \minf{x^2, 1}$ from @exm-convex-on.
+On the shaded [interval](https://morrison-lab.github.io/mcs/sets.html#def-interval) $[-1, 1]$, $f$ is $x^2$ and is [convex on](#def-convex-on) it.
+The dashed [chord](algebra-sums.qmd#def-chord) from $0$ to $2$ is at $\tfrac{1}{2}$ above $x = 1$, below $f(1) = 1$.
+
+:::
