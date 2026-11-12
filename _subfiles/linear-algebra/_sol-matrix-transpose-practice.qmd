@@ -1,0 +1,13 @@
+:::{#sol-matrix-transpose-practice}
+
+$\matr{B}$ is $3 \times 2$,
+so its [transpose](#def-matrix-transpose) is $2 \times 3$.
+The $i$th [row of $\tp{\matr{B}}$](#def-matrix-row) is the $i$th [column of $\matr{B}$](#def-matrix-column):
+
+$$
+\tp{\matr{B}} = \begin{bmatrix} 1 & 0 & 4 \\ -2 & 3 & 5 \end{bmatrix}.
+$$
+
+For instance, entry $(2, 3)$ of $\tp{\matr{B}}$ is $b_{32} = 5$.
+
+:::

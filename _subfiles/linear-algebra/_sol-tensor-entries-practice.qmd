@@ -1,0 +1,19 @@
+:::{#sol-tensor-entries-practice}
+
+An entry of $\mathcal{B}$ is picked by choosing $i_1$ from $10$ values,
+$i_2$ and $i_3$ from $32$ values each,
+and $i_4$ from $3$ values,
+so the number of entries is
+
+$$
+\ba
+n_1 \cd n_2 \cd n_3 \cd n_4
+&= 10 \cd 32 \cd 32 \cd 3
+&& \text{(substitute the index ranges)}
+\\
+&= 30720.
+&& \text{(multiply)}
+\ea
+$$
+
+:::

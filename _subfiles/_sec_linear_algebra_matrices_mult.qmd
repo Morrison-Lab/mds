@@ -8,11 +8,35 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_exr-matrix-mult-practice.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-matrix-mult-practice.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_thm-matmul-assoc.qmd >}}
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_exr-matmul-assoc-practice.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-matmul-assoc-practice.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_thm-matmul-distrib.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exr-matmul-distrib-proof.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-matmul-distrib-proof.qmd >}}
 
 {{< slidebreak >}}
 
@@ -21,6 +45,14 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_exm-matmul-product-of-sums.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exr-matmul-product-of-sums-practice.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-matmul-product-of-sums-practice.qmd >}}
 
 {{< slidebreak >}}
 

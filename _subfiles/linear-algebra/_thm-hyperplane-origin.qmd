@@ -14,8 +14,6 @@ Let $\mathcal{H} = \cb{\vx \in \reals^p : \dprod{\vec{w}}{\vx} + b = 0}$ be a hy
 
 {{< slidebreak >}}
 
-::: {.content-hidden when-format="revealjs"}
-
 ::: proof
 
 **Part 1.**
@@ -44,7 +42,5 @@ That vector is nonzero, and $\mathcal{H}_0 = \cb{t\,\vecf{v} : t \in \reals}$.
 
 For $p = 3$, $\mathcal{H}_0$ has dimension $2$, so it has a basis with two vectors $\vecf{v}_1$ and $\vecf{v}_2$.
 They are linearly independent, and $\mathcal{H}_0 = \cb{s\,\vecf{v}_1 + t\,\vecf{v}_2 : s, t \in \reals}$.
-
-:::
 
 :::

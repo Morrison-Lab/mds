@@ -1,7 +1,7 @@
 :::{#exr-transpose-practice}
 #### Writing one observation as a row vector
 
-A data table stores each observation as a row,
+A data table stores each observation on its own line,
 so an observation held as a [column vector](#def-column-vector)
 is written in the table as its [transpose](#def-transpose).
 Let
