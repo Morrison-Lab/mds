@@ -13,3 +13,11 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_def-linear-system.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exr-linear-system-check.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-linear-system-check.qmd >}}

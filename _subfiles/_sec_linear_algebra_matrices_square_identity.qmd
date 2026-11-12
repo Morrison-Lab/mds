@@ -42,6 +42,14 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_exr-identity-matrix-shape.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-identity-matrix-shape.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_rem-identity-matrix-kronecker-delta.qmd >}}
 
 {{< include mds/_subfiles/linear-algebra/_thm-identity.qmd >}}
