@@ -1,0 +1,22 @@
+:::{#exr-matrix-map-linear-practice}
+#### Recognizing a linear map as multiplication by a matrix
+
+@thm-matrix-map-linear saves checking additivity and homogeneity by hand:
+a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) that multiplies its input by a fixed [matrix](#def-matrix) is a [linear map](#def-linear-map).
+Let $f: \reals^2 \to \reals^2$ be
+
+$$
+f(\vx) = (x_1 + 2 x_2,\ 3 x_1 - x_2).
+$$
+
+Is $f$ a [linear map](#def-linear-map)?
+
+::: {.callout-tip}
+#### Hint
+
+Find a $2 \times 2$ [matrix](#def-matrix) $\matr{A}$ with $f(\vx) = \matr{A}\vx$,
+using @def-matvec-mult.
+
+:::
+
+:::
