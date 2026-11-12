@@ -10,6 +10,6 @@ $$
 
 for every $t$.
 Conversely, a point $(x_1, x_2)$ of $\mathcal{H}$ has $x_2 = 4 - 2 x_1$,
-so it equals $\vx_0 + t\,\vecf{v}$ with $t = 2 - x_1$.
+so it is $\vx_0 + t\,\vecf{v}$ with $t = 2 - x_1$.
 
 :::
