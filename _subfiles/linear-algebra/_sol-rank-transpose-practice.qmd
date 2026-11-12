@@ -2,7 +2,8 @@
 
 Both [rows of $\matr{A}$](linear-algebra-matrices.qmd#def-matrix-row), $(1, 0, 2)$ and $(0, 1, 1)$, are [linearly independent](linear-algebra-subspaces.qmd#def-linearly-independent):
 $c_1\,(1, 0, 2) + c_2\,(0, 1, 1) = (c_1, c_2, 2 c_1 + c_2)$
-is $\vzero_3$ only if $c_1 = c_2 = 0$.
+is $\vzero_3$
+only if $c_1 = c_2 = 0$.
 So $\rankf{\tp{\matr{A}}} = 2$,
 and by @thm-rank-transpose
 
