@@ -4,14 +4,14 @@ Code
 
 Published
 
-Last modified: 2026-11-12 01:58:01 (PST)
+Last modified: 2026-11-12 12:42:12 (PST)
 
 The optimization notes are split across these pages:
 
 - [Critical Points and Optimality Conditions](optimization-critical-points.llms.md): flat points and critical points, Fermat’s theorem, Taylor approximations, and the first- and second-order conditions in several variables.
 - [Convexity in Several Variables](optimization-convexity.llms.md): convex sets and functions, epigraphs, tangent planes, and the first-order and Hessian characterizations of convexity.
 - [Quadratic Minimization under Linear Constraints](optimization-constrained.llms.md): minimization problems, optimization algorithms, the Lagrangian, and the sensitivity of the minimum to the constraints.
-- [Newton’s Method](optimization-newton.llms.md): iterative methods, the quadratic model, and quadratic convergence.
+- [Newton’s Method](optimization-newton.llms.md): iterative methods, the quadratic approximation, and quadratic convergence.
 - [Gradient Descent](optimization-gradient-descent.llms.md): descent directions, line search, step lengths, and the failure modes of gradient descent on the Rosenbrock function, double wells, and plateaus.
 - [Quasi-Newton Methods](optimization-quasi-newton.llms.md): the secant condition, the BFGS update, and L-BFGS.
 

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-12 01:58:01 (PST)
+Last modified: 2026-11-12 12:42:12 (PST)
 
 # 1 Rank
 
@@ -308,7 +308,7 @@ Last modified: 2026-11-12 01:58:01 (PST)
 > $$\begin{aligned}
 > (\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})_i
 > &= a_{i1} x_1 + \cdots + a_{in} x_n
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~15 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~16 in Matrices}}\text{)}
 > \\
 > &= x_1 a_{i1} + \cdots + x_n a_{in}
 > && \text{(multiplication of numbers is commutative)}
@@ -373,7 +373,7 @@ Last modified: 2026-11-12 01:58:01 (PST)
 > $$\begin{aligned}
 > \mathbf{A}\,(2, -1)
 > &= (1 \cdot 2 + 2 \cdot(-1),\; 3 \cdot 2 + 4 \cdot(-1))
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~15 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~16 in Matrices}}\text{)}
 > \\
 > &= (0, 2)
 > && \text{(arithmetic)}
@@ -561,7 +561,7 @@ Last modified: 2026-11-12 01:58:01 (PST)
 
 > **NOTE:**
 >
-> **Exercise 12 (Counting the ways to write a vector in a basis)** [Theorem 6](#thm-basis-unique) is what makes [coordinates](#def-coordinates) well defined. The vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 = {(1, 1)}^{\top}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 = {(1, -1)}^{\top}$ form a [basis](#def-basis) of $\mathbb{R}^2$, and
+> **Exercise 12 (Counting the ways to write a vector in a basis)** The vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 = {(1, 1)}^{\top}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 = {(1, -1)}^{\top}$ form a [basis](#def-basis) of $\mathbb{R}^2$, and
 >
 > $$\begin{bmatrix}5 \\ 1\end{bmatrix} = 3 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 + 2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2.$$
 >
@@ -600,7 +600,7 @@ Last modified: 2026-11-12 01:58:01 (PST)
 
 > **NOTE:**
 >
-> **Exercise 13 (Finding coordinates in a basis other than the indicator vectors)** The [coordinates](#def-coordinates) of a vector depend on the [basis](#def-basis), and they equal its entries only in the basis of [indicator vectors](linear-algebra-vectors.llms.md#def-indicator-vector). The vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 = {(2, 0)}^{\top}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 = {(1, 1)}^{\top}$ form a basis of $\mathbb{R}^2$. Let
+> **Exercise 13 (Finding coordinates in a basis other than the indicator vectors)** The [coordinates](#def-coordinates) of a vector depend on the [basis](#def-basis), and they match its entries only in the basis of [indicator vectors](linear-algebra-vectors.llms.md#def-indicator-vector). The vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 = {(2, 0)}^{\top}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 = {(1, 1)}^{\top}$ form a basis of $\mathbb{R}^2$. Let
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \begin{bmatrix}7 \\ 3\end{bmatrix}.$$
 >
@@ -638,7 +638,7 @@ Last modified: 2026-11-12 01:58:01 (PST)
 >
 > *Proof*. Let $\mathbf{A}$ be the $p \times k$ matrix with columns $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_k$, and $\mathbf{B}$ the $p \times l$ matrix with columns $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}_l$.
 >
-> **Write** $\mathbf{A}$ in terms of $\mathbf{B}$. Each $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j$ is in $\mathcal{S}$, and the $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$’s span $\mathcal{S}$ ([Definition 5](#def-span)), so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j = \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_j$ for some $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_j \in \mathbb{R}^l$ ([Definition 15 in Matrices](linear-algebra-matrices.llms.md#def-matvec-mult)). Let $\mathbf{C}$ be the $l \times k$ matrix with columns $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_k$. Then $\underbrace{\mathbf{A}}_{p \times k}
+> **Write** $\mathbf{A}$ in terms of $\mathbf{B}$. Each $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j$ is in $\mathcal{S}$, and the $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$’s span $\mathcal{S}$ ([Definition 5](#def-span)), so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j = \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_j$ for some $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_j \in \mathbb{R}^l$ ([Definition 16 in Matrices](linear-algebra-matrices.llms.md#def-matvec-mult)). Let $\mathbf{C}$ be the $l \times k$ matrix with columns $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_k$. Then $\underbrace{\mathbf{A}}_{p \times k}
 > = \underbrace{\mathbf{B}}_{p \times l}\,\underbrace{\mathbf{C}}_{l \times k}$, because column $j$ of $\mathbf{B} \mathbf{C}$ is $\mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_j$.
 >
 > **The columns of** $\mathbf{C}$ are linearly independent. Suppose $\mathbf{C} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ for some $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \in \mathbb{R}^k$. Then
@@ -795,7 +795,7 @@ Last modified: 2026-11-12 01:58:01 (PST)
 
 > **NOTE:**
 >
-> *Solution 18*. One answer is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3$. The list $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1$ is [linearly independent](#def-linearly-independent), since $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$. $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2 = {(0, 1, 0)}^{\top}$ is not a multiple of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1$, whose first two entries are equal, so by [Theorem 8](#thm-add-outside-span) the list $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2$ is linearly independent. Every vector in its [span](#def-span) has third entry $0$, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3$ is outside it, and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3$ is linearly independent too. These three vectors span $\mathbb{R}^3$, because ${(x, y, z)}^{\top} = x \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 + (y - x) \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2 + z \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3$, so they form a [basis](#def-basis) of $\mathbb{R}^3$. The pair $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3$ works too.
+> *Solution 18*. One answer is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3$. The list $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1$ is [linearly independent](#def-linearly-independent), since $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$. $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2 = {(0, 1, 0)}^{\top}$ is not a multiple of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1$, whose first two entries match, so by [Theorem 8](#thm-add-outside-span) the list $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2$ is linearly independent. Every vector in its [span](#def-span) has third entry $0$, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3$ is outside it, and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3$ is linearly independent too. These three vectors span $\mathbb{R}^3$, because ${(x, y, z)}^{\top} = x \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 + (y - x) \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2 + z \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3$, so they form a [basis](#def-basis) of $\mathbb{R}^3$. The pair $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3$ works too.
 
 > **NOTE:**
 >
@@ -875,11 +875,11 @@ Last modified: 2026-11-12 01:58:01 (PST)
 
 > **NOTE:**
 >
-> **Exercise 20 (Showing that a span of two vectors is all of** $\mathbb{R}^2$) [Theorem 11](#thm-subspace-equal-dim) shows that two [subspaces](#def-subspace) are equal by comparing [dimensions](#def-dimension) instead of checking every vector. Let
+> **Exercise 20 (Showing that a span of two vectors is all of** $\mathbb{R}^2$) [Theorem 11](#thm-subspace-equal-dim) shows that two [subspaces](#def-subspace) coincide by comparing [dimensions](#def-dimension) instead of checking every vector. Let
 >
 > $$\mathcal{T} = \operatorname{span}\mathopen{}\left\{{(1, 2)}^{\top},\ {(3, 1)}^{\top}\right\}\mathclose{}.$$
 >
-> Is $\mathcal{T}$ equal to $\mathbb{R}^2$?
+> Is $\mathcal{T}$ all of $\mathbb{R}^2$?
 >
 > > **TIP:**
 > >
@@ -887,7 +887,7 @@ Last modified: 2026-11-12 01:58:01 (PST)
 
 > **NOTE:**
 >
-> *Solution 20*. Yes. The two vectors are [linearly independent](#def-linearly-independent): if $c_1 {(1, 2)}^{\top} + c_2 {(3, 1)}^{\top} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, then $c_1 + 3 c_2 = 0$ and $2 c_1 + c_2 = 0$. Subtracting twice the first equation from the second gives $-5 c_2 = 0$, so $c_2 = 0$ and then $c_1 = 0$. So they form a [basis](#def-basis) of $\mathcal{T}$, and $\dim(\mathcal{T}) = 2$. The [indicator vectors](linear-algebra-vectors.llms.md#def-indicator-vector) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2$ form a basis of $\mathbb{R}^2$, so $\dim(\mathbb{R}^2) = 2$. Since $\mathcal{T} \subseteq \mathbb{R}^2$ and the [dimensions](#def-dimension) are equal, [Theorem 11](#thm-subspace-equal-dim) gives $\mathcal{T} = \mathbb{R}^2$.
+> *Solution 20*. Yes. The two vectors are [linearly independent](#def-linearly-independent): if $c_1 {(1, 2)}^{\top} + c_2 {(3, 1)}^{\top} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, then $c_1 + 3 c_2 = 0$ and $2 c_1 + c_2 = 0$. Subtracting twice the first equation from the second gives $-5 c_2 = 0$, so $c_2 = 0$ and then $c_1 = 0$. So they form a [basis](#def-basis) of $\mathcal{T}$, and $\dim(\mathcal{T}) = 2$. The [indicator vectors](linear-algebra-vectors.llms.md#def-indicator-vector) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2$ form a basis of $\mathbb{R}^2$, so $\dim(\mathbb{R}^2) = 2$. Since $\mathcal{T} \subseteq \mathbb{R}^2$ and the [dimensions](#def-dimension) agree, [Theorem 11](#thm-subspace-equal-dim) gives $\mathcal{T} = \mathbb{R}^2$.
 
 # Definitions on this page
 

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-12 01:58:01 (PST)
+Last modified: 2026-11-12 12:42:12 (PST)
 
 # 1 Sums and direct sums
 
@@ -350,7 +350,7 @@ Last modified: 2026-11-12 01:58:01 (PST)
 > && \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~8 in Vectors}}\text{)}
 > \\
 > &= \sum_{i=1}^px_i\,(a u_i + b w_i)
-> && \text{(}\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~8 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-vector-addition}{\text{Definition~7 in Vectors}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~9 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-vector-addition}{\text{Definition~7 in Vectors}}\text{)}
 > \\
 > &= \sum_{i=1}^p\mathopen{}\left(x_i a u_i + x_i b w_i\right)\mathclose{}
 > && \text{(distribute each } x_i \text{)}
@@ -531,10 +531,10 @@ Last modified: 2026-11-12 01:58:01 (PST)
 > $$\begin{aligned}
 > ({\mathbf{A}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})_j
 > &= \sum_{i=1}^{m} ({\mathbf{A}}^{\top})_{ji}\, x_i
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~15 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~16 in Matrices}}\text{)}
 > \\
 > &= \sum_{i=1}^{m} a_{ij}\, x_i
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~5 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~6 in Matrices}}\text{)}
 > \\
 > &= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}.
 > && \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~8 in Vectors}}\text{)}
@@ -552,7 +552,7 @@ Last modified: 2026-11-12 01:58:01 (PST)
 > && \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~8 in Vectors}}\text{)}
 > \\
 > &= \sum_{i=1}^{m} \mathopen{}\left(\sum_{j=1}^na_{ij} z_j\right)\mathclose{}\, x_i
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~15 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~16 in Matrices}}\text{)}
 > \\
 > &= \sum_{i=1}^{m} \sum_{j=1}^na_{ij}\, z_j\, x_i
 > && \text{(distribute each } x_i \text{ over the inner sum)}
@@ -723,7 +723,7 @@ Last modified: 2026-11-12 01:58:01 (PST)
 
 > **NOTE:**
 >
-> **Example 16 (Back to the line)** In [Example 15](#exm-orthogonal-direct-sum), $\mathcal{S} = \operatorname{span}\mathopen{}\left\{(1, 1, 0)\right\}\mathclose{}$ and $\mathcal{S}^\perp = \operatorname{span}\mathopen{}\left\{(1, -1, 0), (0, 0, 1)\right\}\mathclose{}$. Put those two spanning vectors in the columns of the $3 \times 2$ matrix $\mathbf{B} = \begin{bmatrix} 1 & 0 \\ -1 & 0 \\ 0 & 1 \end{bmatrix}$, so $\mathcal{S}^\perp = \mathcal{C}(\mathbf{B})$ ([Theorem 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-column-space-span)) and $(\mathcal{S}^\perp)^\perp = \mathcal{N}({\mathbf{B}}^{\top})$ ([Theorem 7](#thm-complement-null-space)). Since ${\mathbf{B}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (w_1 - w_2,\ w_3)$ ([Definition 15 in Matrices](linear-algebra-matrices.llms.md#def-matvec-mult)), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in (\mathcal{S}^\perp)^\perp$ exactly when $w_1 - w_2 = 0$ and $w_3 = 0$. So
+> **Example 16 (Back to the line)** In [Example 15](#exm-orthogonal-direct-sum), $\mathcal{S} = \operatorname{span}\mathopen{}\left\{(1, 1, 0)\right\}\mathclose{}$ and $\mathcal{S}^\perp = \operatorname{span}\mathopen{}\left\{(1, -1, 0), (0, 0, 1)\right\}\mathclose{}$. Put those two spanning vectors in the columns of the $3 \times 2$ matrix $\mathbf{B} = \begin{bmatrix} 1 & 0 \\ -1 & 0 \\ 0 & 1 \end{bmatrix}$, so $\mathcal{S}^\perp = \mathcal{C}(\mathbf{B})$ ([Theorem 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-column-space-span)) and $(\mathcal{S}^\perp)^\perp = \mathcal{N}({\mathbf{B}}^{\top})$ ([Theorem 7](#thm-complement-null-space)). Since ${\mathbf{B}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (w_1 - w_2,\ w_3)$ ([Definition 16 in Matrices](linear-algebra-matrices.llms.md#def-matvec-mult)), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in (\mathcal{S}^\perp)^\perp$ exactly when $w_1 - w_2 = 0$ and $w_3 = 0$. So
 >
 > $$\begin{aligned}
 > (\mathcal{S}^\perp)^\perp &= \mathopen{}\left\{(a, a, 0) : a \in \mathbb{R}\right\}\mathclose{} \\
