@@ -1,9 +1,0 @@
-:::{#sol-basis-unique-practice}
-
-Exactly one,
-namely $c_1 = 3$ and $c_2 = 2$.
-By @thm-basis-unique,
-a vector in the [span](#def-span) of a [basis](#def-basis) has only one list of numbers,
-and $3, 2$ is a list that works.
-
-:::
