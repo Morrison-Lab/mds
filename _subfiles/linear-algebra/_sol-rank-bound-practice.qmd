@@ -1,9 +1,0 @@
-:::{#sol-rank-bound-practice}
-
-By @cor-rank-bound, the [rank](linear-algebra-subspaces.qmd#def-rank) is at most $\min\cb{5, 3} = 3$.
-A rank of $3$ is reached,
-for example by the $5 \times 3$ [matrix](linear-algebra-matrices.qmd#def-matrix)
-with [rows](linear-algebra-matrices.qmd#def-matrix-row) $\tp{\vecf{e}_1}, \tp{\vecf{e}_2}, \tp{\vecf{e}_3}, \tp{\vzero_3}, \tp{\vzero_3}$,
-whose three [columns](linear-algebra-matrices.qmd#def-matrix-column) are [linearly independent](linear-algebra-subspaces.qmd#def-linearly-independent).
-
-:::

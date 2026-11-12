@@ -1,9 +1,0 @@
-:::{#sol-rank-product-right-practice}
-
-Each of the two [columns of $\matr{B}$](linear-algebra-matrices.qmd#def-matrix-column) is $(1, 1)$,
-so its [column space](#def-column-space) is $\operatorname{span}\cb{(1, 1)}$,
-and @thm-rank-dim gives $\rankf{\matr{B}} = 1$.
-By @thm-rank-product-right, $\rankf{\matr{A}\matr{B}} \le 1$
-for every $3 \times 2$ [matrix](linear-algebra-matrices.qmd#def-matrix) $\matr{A}$.
-
-:::

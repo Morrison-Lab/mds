@@ -50,43 +50,11 @@
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/linear-algebra/_exr-rank-transpose-practice.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_sol-rank-transpose-practice.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_exr-rank-bound-practice.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_sol-rank-bound-practice.qmd >}}
-
-{{< slidebreak >}}
-
 {{< include mds/_subfiles/linear-algebra/_thm-rank-product-right.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/linear-algebra/_exr-rank-product-right-practice.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_sol-rank-product-right-practice.qmd >}}
-
-{{< slidebreak >}}
-
 {{< include mds/_subfiles/linear-algebra/_cor-rank-product-full-rank.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_exr-rank-product-full-rank-practice.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_sol-rank-product-full-rank-practice.qmd >}}
 
 {{< slidebreak >}}
 
