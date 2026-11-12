@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-11 17:54:32 (PST)
+Last modified: 2026-11-11 18:52:11 (PST)
 
 > **NOTE:**
 >
@@ -197,12 +197,68 @@ Last modified: 2026-11-11 17:54:32 (PST)
 
 > **NOTE:**
 >
+> **Exercise 6 (Placing columns side by side)** [Theorem 2](#thm-matrix-row-of-columns) says that a [matrix](#def-matrix) is determined by its [column](#def-matrix-column)s, so measurements recorded one quantity at a time can be assembled into a matrix by placing those lists side by side. Let $\mathbf{N}$ be the $2 \times 3$ matrix with
+>
+> $$\mathbf{N}_{:,1} = \begin{bmatrix} 2 \\ -1 \end{bmatrix},
+> \qquad
+> \mathbf{N}_{:,2} = \begin{bmatrix} 0 \\ 3 \end{bmatrix},
+> \qquad
+> \mathbf{N}_{:,3} = \begin{bmatrix} 4 \\ 1 \end{bmatrix}.$$
+>
+> What is $\mathbf{N}_{2,:}$, the second [row of](#def-matrix-row) $\mathbf{N}$?
+>
+> > **TIP:**
+> >
+> > Place the [column](#def-matrix-column)s from left to right, as in [Theorem 2](#thm-matrix-row-of-columns), then read across the second [row](#def-matrix-row).
+
+> **NOTE:**
+>
+> *Solution 6*. Placing the three [column](#def-matrix-column)s from left to right gives
+>
+> $$\begin{aligned}
+> \mathbf{N}
+> &= \begin{bmatrix} \mathbf{N}_{:,1} & \mathbf{N}_{:,2} & \mathbf{N}_{:,3} \end{bmatrix}
+> && \text{(}\href{#thm-matrix-row-of-columns}{\text{Theorem~2}}\text{)}
+> \\
+> &= \begin{bmatrix} 2 & 0 & 4 \\ -1 & 3 & 1 \end{bmatrix},
+> && \text{(substitute the columns)}
+> \end{aligned}$$
+>
+> so the second [row of](#def-matrix-row) $\mathbf{N}$ lists the second entry of each [column](#def-matrix-column):
+>
+> $$\mathbf{N}_{2,:} = \begin{bmatrix} -1 & 3 & 1 \end{bmatrix}.$$
+
+> **NOTE:**
+>
 > **Definition 5 (Tensor)** A **tensor** [\[2\]](#ref-wikipedia_tensor) of order $k \ge 1$ is an array of numbers with $k$ indices, $$\mathcal{A} = \mathopen{}\left(a_{i_1 i_2 \cdots i_k}\right)\mathclose{},
 > \quad i_1 = 1, \ldots, n_1, \ \ldots, \ i_k = 1, \ldots, n_k,$$ and its dimensions are $n_1 \times n_2 \times \cdots \times n_k$.
 
 > **NOTE:**
 >
 > **Example 3 (Vectors, matrices and images as tensors)** A vector of length $p$ is a tensor of order $1$, and an $m \times n$ [matrix](#def-matrix) is a tensor of order $2$. A $28 \times 28$ grayscale image is a matrix: the entry $a_{ij}$ is the brightness of the pixel in row $i$ and column $j$. A $28 \times 28$ color image stores three numbers per pixel (red, green, blue), so it is an order-3 tensor with dimensions $28 \times 28 \times 3$, and $a_{ijc}$ is the value of color channel $c$ at the pixel in row $i$ and column $j$. It has $28 \cdot 28 \cdot 3 = 2352$ entries.
+
+> **NOTE:**
+>
+> **Exercise 7 (Counting the entries of a batch of photos)** Software for neural networks often stores a batch of color photos as one [tensor](#def-tensor), with one index for the photo, two for the pixel’s position, and one for the color channel, and the software stores one number per entry, so the count of entries determines how much memory the batch needs. Let $\mathcal{B}$ be the order-4 tensor for a batch of $10$ color photos of $32 \times 32$ pixels, with $n_1 = 10$, $n_2 = 32$, $n_3 = 32$ and $n_4 = 3$.
+>
+> How many entries does $\mathcal{B}$ have?
+>
+> > **TIP:**
+> >
+> > Each index $i_r$ in [Definition 5](#def-tensor) takes $n_r$ values, and each choice of all four indices picks one entry, as in [Example 3](#exm-tensor).
+
+> **NOTE:**
+>
+> *Solution 7*. An entry of $\mathcal{B}$ is picked by choosing $i_1$ from $10$ values, $i_2$ and $i_3$ from $32$ values each, and $i_4$ from $3$ values, so the number of entries is
+>
+> $$\begin{aligned}
+> n_1 \cdot n_2 \cdot n_3 \cdot n_4
+> &= 10 \cdot 32 \cdot 32 \cdot 3
+> && \text{(substitute the index ranges)}
+> \\
+> &= 30720.
+> && \text{(multiply)}
+> \end{aligned}$$
 
 # 1 Matrix transpose
 
@@ -223,7 +279,7 @@ Last modified: 2026-11-11 17:54:32 (PST)
 
 > **NOTE:**
 >
-> **Exercise 6 (Transposing a** $3 \times 2$ matrix) The [transpose](#def-matrix-transpose) turns the [row](#def-matrix-row)s of a [matrix](#def-matrix) into [column](#def-matrix-column)s, just as the [transpose of a vector](linear-algebra-vectors.llms.md#def-transpose) turns a column into a row. Let
+> **Exercise 8 (Transposing a** $3 \times 2$ matrix) The [transpose](#def-matrix-transpose) turns the [row](#def-matrix-row)s of a [matrix](#def-matrix) into [column](#def-matrix-column)s, just as the [transpose of a vector](linear-algebra-vectors.llms.md#def-transpose) turns a column into a row. Let
 >
 > $$\mathbf{B} = \begin{bmatrix} 1 & -2 \\ 0 & 3 \\ 4 & 5 \end{bmatrix}.$$
 >
@@ -235,7 +291,7 @@ Last modified: 2026-11-11 17:54:32 (PST)
 
 > **NOTE:**
 >
-> *Solution 6*. $\mathbf{B}$ is $3 \times 2$, so its [transpose](#def-matrix-transpose) is $2 \times 3$. The $i$th [row of](#def-matrix-row) ${\mathbf{B}}^{\top}$ is the $i$th [column of](#def-matrix-column) $\mathbf{B}$:
+> *Solution 8*. $\mathbf{B}$ is $3 \times 2$, so its [transpose](#def-matrix-transpose) is $2 \times 3$. The $i$th [row of](#def-matrix-row) ${\mathbf{B}}^{\top}$ is the $i$th [column of](#def-matrix-column) $\mathbf{B}$:
 >
 > $${\mathbf{B}}^{\top} = \begin{bmatrix} 1 & 0 & 4 \\ -2 & 3 & 5 \end{bmatrix}.$$
 >
@@ -265,6 +321,22 @@ Last modified: 2026-11-11 17:54:32 (PST)
 
 > **NOTE:**
 >
+> **Exercise 9 (Whether a matrix of zeros is a given zero matrix)** A [zero matrix](#def-zero-matrix) carries its shape in its subscript, because, as [Example 5](#exm-zero-matrix) shows, [zero matrices](#def-zero-matrix) of different shapes are different [matrices](#def-matrix). Let
+>
+> $$\mathbf{Z} = \begin{bmatrix} 0 & 0 \\ 0 & 0 \\ 0 & 0 \end{bmatrix}.$$
+>
+> Is $\mathbf{Z} = \mathbf{0}_{2 \times 3}$?
+>
+> > **TIP:**
+> >
+> > Compare the shapes of the two [matrices](#def-matrix), using [Definition 2](#def-matrix-equality).
+
+> **NOTE:**
+>
+> *Solution 9*. No. $\mathbf{Z}$ has three [row](#def-matrix-row)s and two [column](#def-matrix-column)s, so it is $3 \times 2$. But $\mathbf{0}_{2 \times 3}$ is $2 \times 3$. Two [matrices](#def-matrix) of different shapes are not [equal](#def-matrix-equality), even when every entry of both is $0$. Instead, $\mathbf{Z}$ is the [zero matrix](#def-zero-matrix) $\mathbf{0}_{3 \times 2}$.
+
+> **NOTE:**
+>
 > **Definition 8 (Matrix addition)** Two matrices $\mathbf{A}$ and $\mathbf{B}$ of the same dimensions $m \times n$ can be added element-wise; their **matrix sum** [\[5\]](#ref-wikipedia_matrix_addition) is:
 >
 > $$(\mathbf{A} + \mathbf{B})_{ij} = a_{ij} + b_{ij}$$
@@ -285,7 +357,7 @@ Last modified: 2026-11-11 17:54:32 (PST)
 
 > **NOTE:**
 >
-> **Exercise 7 (Adding two** $2 \times 2$ matrices) A [matrix sum](#def-matrix-addition) combines two tables of the same shape entry by entry, such as two months of counts recorded in the same [row](#def-matrix-row)s and [column](#def-matrix-column)s. Let
+> **Exercise 10 (Adding two** $2 \times 2$ matrices) A [matrix sum](#def-matrix-addition) combines two tables of the same shape entry by entry, such as two months of counts recorded in the same [row](#def-matrix-row)s and [column](#def-matrix-column)s. Let
 >
 > $$\mathbf{A} = \begin{bmatrix} 1 & -1 \\ 2 & 0 \end{bmatrix},
 > \qquad
@@ -299,7 +371,7 @@ Last modified: 2026-11-11 17:54:32 (PST)
 
 > **NOTE:**
 >
-> *Solution 7*. Both [matrices](#def-matrix) are $2 \times 2$, so the [matrix sum](#def-matrix-addition) is defined:
+> *Solution 10*. Both [matrices](#def-matrix) are $2 \times 2$, so the [matrix sum](#def-matrix-addition) is defined:
 >
 > $$\begin{aligned}
 > \mathbf{A} + \mathbf{B}
@@ -352,7 +424,7 @@ Last modified: 2026-11-11 17:54:32 (PST)
 
 > **NOTE:**
 >
-> **Exercise 8 (Multiplying a matrix by a negative factor)** A [scalar multiple](#def-scalar-mult) rescales every entry of a [matrix](#def-matrix) by the same factor, as when a table of distances is converted from meters to centimeters. A negative factor flips the sign of every entry, and a factor between $-1$ and $1$ shrinks every entry toward $0$. Let
+> **Exercise 11 (Multiplying a matrix by a negative factor)** A [scalar multiple](#def-scalar-mult) rescales every entry of a [matrix](#def-matrix) by the same factor, as when a table of distances is converted from meters to centimeters. A negative factor flips the sign of every entry, and a factor between $-1$ and $1$ shrinks every entry toward $0$. Let
 >
 > $$\mathbf{C} = \begin{bmatrix} 4 & -2 \\ 0 & 6 \end{bmatrix}.$$
 >
@@ -364,7 +436,7 @@ Last modified: 2026-11-11 17:54:32 (PST)
 
 > **NOTE:**
 >
-> *Solution 8*. $$\begin{aligned}
+> *Solution 11*. $$\begin{aligned}
 > -\frac{1}{2} \mathbf{C}
 > &= \begin{bmatrix}
 > -\frac{1}{2} \cdot 4 & -\frac{1}{2} \cdot(-2) \\
@@ -497,7 +569,7 @@ Last modified: 2026-11-11 17:54:32 (PST)
 
 > **NOTE:**
 >
-> **Exercise 9 (Which of these products are defined?)** Let $\mathbf{A}$ be $4 \times 3$, let $\mathbf{B}$ be $3 \times 2$, and let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^3$. For each expression, say whether it is defined, and if so give the shape of the result:
+> **Exercise 12 (Which of these products are defined?)** Let $\mathbf{A}$ be $4 \times 3$, let $\mathbf{B}$ be $3 \times 2$, and let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^3$. For each expression, say whether it is defined, and if so give the shape of the result:
 >
 > 1.  $\mathbf{A}\mathbf{B}$
 > 2.  $\mathbf{B}\mathbf{A}$
@@ -507,7 +579,7 @@ Last modified: 2026-11-11 17:54:32 (PST)
 
 > **NOTE:**
 >
-> *Solution 9*. A vector in $\mathbb{R}^3$ is a $3 \times 1$ matrix, so the same rule settles every case.
+> *Solution 12*. A vector in $\mathbb{R}^3$ is a $3 \times 1$ matrix, so the same rule settles every case.
 >
 > 1.  $\mathbf{A}\mathbf{B}$: $(4 \times 3)(3 \times 2)$. The inner pair is $3$ and $3$, so it is defined, and the result is $4 \times 2$.
 > 2.  $\mathbf{B}\mathbf{A}$: $(3 \times 2)(4 \times 3)$. The inner pair is $2$ and $4$, which do not match, so it is **not defined**. Matrix multiplication is not commutative, and this is the blunt form of that: swapping the order can leave an expression that means nothing.
@@ -584,7 +656,7 @@ Last modified: 2026-11-11 17:54:32 (PST)
 
 > **NOTE:**
 >
-> **Exercise 10 (Multiplying by an identity matrix)** [Theorem 10](#thm-identity) says that an [identity matrix](#def-identity-matrix) of the right size leaves a [matrix](#def-matrix) unchanged under [matrix multiplication](#def-matrix-mult), just as multiplying a number by $1$ leaves it unchanged. Let
+> **Exercise 13 (Multiplying by an identity matrix)** [Theorem 10](#thm-identity) says that an [identity matrix](#def-identity-matrix) of the right size leaves a [matrix](#def-matrix) unchanged under [matrix multiplication](#def-matrix-mult), just as multiplying a number by $1$ leaves it unchanged. Let
 >
 > $$\mathbf{A} = \begin{bmatrix} 2 & 0 & -1 \\ 5 & 3 & 4 \end{bmatrix}.$$
 >
@@ -596,7 +668,7 @@ Last modified: 2026-11-11 17:54:32 (PST)
 
 > **NOTE:**
 >
-> *Solution 10*. $\mathbf{I}_2$ is $2 \times 2$ and $\mathbf{A}$ is $2 \times 3$, so the [product](#def-matrix-mult) is defined and is $2 \times 3$. The first [row of](#def-matrix-row) $\mathbf{I}_2$ is $\begin{bmatrix} 1 & 0 \end{bmatrix}$ and the second is $\begin{bmatrix} 0 & 1 \end{bmatrix}$, so by [Definition 10](#def-matrix-mult)
+> *Solution 13*. $\mathbf{I}_2$ is $2 \times 2$ and $\mathbf{A}$ is $2 \times 3$, so the [product](#def-matrix-mult) is defined and is $2 \times 3$. The first [row of](#def-matrix-row) $\mathbf{I}_2$ is $\begin{bmatrix} 1 & 0 \end{bmatrix}$ and the second is $\begin{bmatrix} 0 & 1 \end{bmatrix}$, so by [Definition 10](#def-matrix-mult)
 >
 > $$\begin{aligned}
 > \mathbf{I}_2 \mathbf{A}
@@ -637,7 +709,7 @@ Last modified: 2026-11-11 17:54:32 (PST)
 
 > **NOTE:**
 >
-> **Exercise 11 (A matrix-vector product with more columns than rows)** A [matrix-vector product](#def-matvec-mult) $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ computes one [weighted sum](linear-algebra-vectors.llms.md#def-weighted-sum) of the entries of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ for each [row of](#def-matrix-row) $\mathbf{A}$, so one multiplication computes several weighted sums at once. The [matrix](#def-matrix) $\mathbf{A}$ below has more [column](#def-matrix-column)s than [row](#def-matrix-row)s, so $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is shorter than $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$. Let
+> **Exercise 14 (A matrix-vector product with more columns than rows)** A [matrix-vector product](#def-matvec-mult) $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ computes one [weighted sum](linear-algebra-vectors.llms.md#def-weighted-sum) of the entries of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ for each [row of](#def-matrix-row) $\mathbf{A}$, so one multiplication computes several weighted sums at once. The [matrix](#def-matrix) $\mathbf{A}$ below has more [column](#def-matrix-column)s than [row](#def-matrix-row)s, so $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is shorter than $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$. Let
 >
 > $$\mathbf{A} = \begin{bmatrix} 2 & 0 & -1 \\ 5 & 3 & 4 \end{bmatrix},
 > \qquad
@@ -651,7 +723,7 @@ Last modified: 2026-11-11 17:54:32 (PST)
 
 > **NOTE:**
 >
-> *Solution 11*. $\mathbf{A}$ is $2 \times 3$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is $3 \times 1$, so the [matrix-vector product](#def-matvec-mult) is defined and is $2 \times 1$:
+> *Solution 14*. $\mathbf{A}$ is $2 \times 3$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is $3 \times 1$, so the [matrix-vector product](#def-matvec-mult) is defined and is $2 \times 1$:
 >
 > $$\begin{aligned}
 > \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
@@ -1288,7 +1360,7 @@ Last modified: 2026-11-11 17:54:32 (PST)
 
 > **NOTE:**
 >
-> **Exercise 12 (Write a rule in matrix form)** A clinic scores a patient’s risk from three measurements.
+> **Exercise 15 (Write a rule in matrix form)** A clinic scores a patient’s risk from three measurements.
 >
 > | symbol | meaning                 | units    |
 > |--------|-------------------------|----------|
@@ -1304,7 +1376,7 @@ Last modified: 2026-11-11 17:54:32 (PST)
 
 > **NOTE:**
 >
-> *Solution 12*. Read the [coefficients](linear-algebra-vectors.llms.md#def-lincom-coefficient) straight off the rule. There are three inputs, so $p = 3$:
+> *Solution 15*. Read the [coefficients](linear-algebra-vectors.llms.md#def-lincom-coefficient) straight off the rule. There are three inputs, so $p = 3$:
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \begin{bmatrix} 0.4 \\ 0.2 \\ 1.5 \end{bmatrix},
 > \qquad b = -30$$
@@ -1313,11 +1385,11 @@ Last modified: 2026-11-11 17:54:32 (PST)
 
 > **NOTE:**
 >
-> **Exercise 13 (Score a patient)** Give the score from the rule in [Exercise 12](#exr-write-in-matrix-form) for a patient aged $50$ with blood pressure $130$ and BMI $28$.
+> **Exercise 16 (Score a patient)** Give the score from the rule in [Exercise 15](#exr-write-in-matrix-form) for a patient aged $50$ with blood pressure $130$ and BMI $28$.
 
 > **NOTE:**
 >
-> *Solution 13*. For the patient,
+> *Solution 16*. For the patient,
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix} 50 \\ 130 \\ 28 \end{bmatrix}$$
 >
@@ -1338,7 +1410,7 @@ Last modified: 2026-11-11 17:54:32 (PST)
 
 > **NOTE:**
 >
-> **Exercise 14 (Which of these are affine in** $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$?) Each of the five expressions is a function of the weights $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p$, with the data $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $y$ held fixed. Say which ones are affine ([Definition 24](#def-affine-map)), that is, have the form [Equation 1](#eq-linear-scalar) — an inner product plus an offset — and which of those are also linear ([Definition 20](#def-linear-map)).
+> **Exercise 17 (Which of these are affine in** $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$?) Each of the five expressions is a function of the weights $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p$, with the data $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $y$ held fixed. Say which ones are affine ([Definition 24](#def-affine-map)), that is, have the form [Equation 1](#eq-linear-scalar) — an inner product plus an offset — and which of those are also linear ([Definition 20](#def-linear-map)).
 >
 > 1.  $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$
 > 2.  $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- y$
@@ -1348,7 +1420,7 @@ Last modified: 2026-11-11 17:54:32 (PST)
 
 > **NOTE:**
 >
-> *Solution 14*.
+> *Solution 17*.
 >
 > 1.  **Affine, and linear.** It is [Equation 1](#eq-linear-scalar) with $b = 0$, which is a linear map by [Theorem 12](#thm-matrix-map-linear): the matrix ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}$ times $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$.
 > 2.  **Affine.** Still an inner product plus an offset; here the offset is $b = -y$, which is a constant because $y$ is held fixed. It is linear only when $y = 0$: otherwise $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ gives $-y \ne 0$, and a linear map sends $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ to $0$ ([Theorem 11](#thm-linear-map-zero)).
@@ -1438,7 +1510,7 @@ Last modified: 2026-11-11 17:54:32 (PST)
 
 > **NOTE:**
 >
-> **Exercise 15 (The order of the factors in a transposed square product)** [Remark 8](#rem-transpose-product-order) shows that, for factors that are not [square](#def-square-matrix), keeping the original order of the factors in the [transpose](#def-matrix-transpose) of a [product](#def-matrix-mult) can give an undefined product. For two [square matrices](#def-square-matrix) of the same size, both ${\mathbf{A}}^{\top}{\mathbf{B}}^{\top}$ and ${\mathbf{B}}^{\top}{\mathbf{A}}^{\top}$ are defined, so the shapes alone cannot settle which order gives ${(\mathbf{A}\mathbf{B})}^{\top}$. Let
+> **Exercise 18 (The order of the factors in a transposed square product)** [Remark 8](#rem-transpose-product-order) shows that, for factors that are not [square](#def-square-matrix), keeping the original order of the factors in the [transpose](#def-matrix-transpose) of a [product](#def-matrix-mult) can give an undefined product. For two [square matrices](#def-square-matrix) of the same size, both ${\mathbf{A}}^{\top}{\mathbf{B}}^{\top}$ and ${\mathbf{B}}^{\top}{\mathbf{A}}^{\top}$ are defined, so the shapes alone cannot settle which order gives ${(\mathbf{A}\mathbf{B})}^{\top}$. Let
 >
 > $$\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 0 & 1 \end{bmatrix},
 > \qquad
@@ -1452,7 +1524,7 @@ Last modified: 2026-11-11 17:54:32 (PST)
 
 > **NOTE:**
 >
-> *Solution 15*. No: the two [matrices](#def-matrix) differ, so keeping the order of the factors gives the wrong [transpose](#def-matrix-transpose).
+> *Solution 18*. No: the two [matrices](#def-matrix) differ, so keeping the order of the factors gives the wrong [transpose](#def-matrix-transpose).
 >
 > The [product](#def-matrix-mult) $\mathbf{A}\mathbf{B}$ and its transpose are
 >

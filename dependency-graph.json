@@ -10952,6 +10952,15 @@
    "external": false
   },
   {
+   "id": "mds/optimization#def-convex-hull",
+   "site": "mds",
+   "page": "optimization",
+   "div": "def-convex-hull",
+   "kind": "def",
+   "title": "Convex hull, convex envelope",
+   "external": false
+  },
+  {
    "id": "mds/optimization#def-convex-on",
    "site": "mds",
    "page": "optimization",
@@ -11786,6 +11795,15 @@
    "div": "def-convex-at",
    "kind": "def",
    "title": "Function convex at a point",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-convexity#def-convex-hull",
+   "site": "mds",
+   "page": "optimization-convexity",
+   "div": "def-convex-hull",
+   "kind": "def",
+   "title": "Convex hull, convex envelope",
    "external": false
   },
   {
@@ -21887,6 +21905,14 @@
    "mds/vector-calculus#def-ball"
   ],
   [
+   "mds/optimization#def-convex-hull",
+   "mcs/sets#def-set"
+  ],
+  [
+   "mds/optimization#def-convex-hull",
+   "mds/optimization#def-convex-set"
+  ],
+  [
    "mds/optimization#def-convex-on",
    "mcs/proof-writing#def-universal-quantifier"
   ],
@@ -23017,6 +23043,14 @@
   [
    "mds/optimization-convexity#def-convex-at",
    "mds/vector-calculus#def-ball"
+  ],
+  [
+   "mds/optimization-convexity#def-convex-hull",
+   "mcs/sets#def-set"
+  ],
+  [
+   "mds/optimization-convexity#def-convex-hull",
+   "mds/optimization-convexity#def-convex-set"
   ],
   [
    "mds/optimization-convexity#def-convex-on",
