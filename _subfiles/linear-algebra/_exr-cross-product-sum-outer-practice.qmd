@@ -17,7 +17,8 @@ Compute $\tprod{\matr{A}}{\matr{B}}$ by adding two outer products.
 ::: {.callout-tip}
 #### Hint
 
-[Rows of $\matr{A}$](linear-algebra-matrices.qmd#def-matrix-row) are $(1, 2)$ and $(0, 1)$, and rows of $\matr{B}$ are $3$ and $1$.
+[Rows of $\matr{A}$](linear-algebra-matrices.qmd#def-matrix-row) are $(1, 2)$ and $(0, 1)$,
+and rows of $\matr{B}$ are $3$ and $1$.
 
 :::
 

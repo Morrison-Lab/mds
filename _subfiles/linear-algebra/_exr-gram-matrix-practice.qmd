@@ -2,7 +2,7 @@
 #### Computing a Gram matrix
 
 The [Gram matrix](#def-gram-matrix) holds the [dot products](linear-algebra-vectors.qmd#def-dot-product)
-of every pair of [columns of $\matr{A}$](linear-algebra-matrices.qmd#def-matrix-column).
+of every pair of [columns](linear-algebra-matrices.qmd#def-matrix-column) of a matrix $\matr{A}$.
 Let
 
 $$
@@ -14,7 +14,8 @@ Compute $\tp{\matr{A}}\matr{A}$.
 ::: {.callout-tip}
 #### Hint
 
-Entry $(i, j)$ is $\vecf{a}_i \cdot \vecf{a}_j$, so entries $(1, 2)$ and $(2, 1)$ agree.
+Entry $(i, j)$ is $\vecf{a}_i \cdot \vecf{a}_j$,
+so entries $(1, 2)$ and $(2, 1)$ agree.
 
 :::
 
