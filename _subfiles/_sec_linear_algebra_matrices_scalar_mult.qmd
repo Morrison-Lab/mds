@@ -1,0 +1,9 @@
+{{< include mds/_subfiles/linear-algebra/_def-scalar-mult.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exr-scalar-mult-practice.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-scalar-mult-practice.qmd >}}
