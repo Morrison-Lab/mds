@@ -1,0 +1,21 @@
+:::{#exr-normal-vector-practice}
+#### Finding a normal vector of a plane in $\reals^3$
+
+In $\reals^3$ a [hyperplane](#def-hyperplane) is a plane,
+and a [normal vector](#def-normal-vector) points straight out of it.
+Let $H$ be the hyperplane of points $\vx \in \reals^3$ with
+
+$$
+2 x_1 - x_2 + 4 x_3 = 7.
+$$
+
+Find a [normal vector of $H$](#def-normal-vector).
+
+::: {.callout-tip}
+#### Hint
+
+Rewrite the equation in the form of @def-hyperplane.
+
+:::
+
+:::

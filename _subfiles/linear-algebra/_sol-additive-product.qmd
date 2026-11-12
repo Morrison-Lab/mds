@@ -1,0 +1,17 @@
+:::{#sol-additive-product}
+
+No.
+For $\vx = (1, 0)$ and $\vy = (0, 1)$,
+$\vx + \vy = (1, 1)$, so
+
+$$
+f(\vx + \vy) = 1 \cd 1 = 1,
+\qquad
+f(\vx) + f(\vy) = 1 \cd 0 + 0 \cd 1 = 0.
+$$
+
+These differ,
+so $f$ does not satisfy @def-additive-function for this pair of inputs,
+and $f$ is not [additive](#def-additive-function).
+
+:::
