@@ -1,0 +1,21 @@
+:::{#sol-gram-matrix-practice}
+
+The [columns of $\matr{A}$](linear-algebra-matrices.qmd#def-matrix-column) are $\vecf{a}_1 = (1, 0, 1)$ and $\vecf{a}_2 = (2, 1, 0)$, so
+
+$$
+\ba
+\vecf{a}_1 \cdot \vecf{a}_1 &= 1 + 0 + 1 = 2,
+\\
+\vecf{a}_1 \cdot \vecf{a}_2 &= 2 + 0 + 0 = 2,
+\\
+\vecf{a}_2 \cdot \vecf{a}_2 &= 4 + 1 + 0 = 5,
+\ea
+$$
+
+and
+
+$$
+\tp{\matr{A}}\matr{A} = \sbmat{2 & 2 \\ 2 & 5}.
+$$
+
+:::
