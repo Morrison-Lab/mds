@@ -1,0 +1,20 @@
+:::{#exr-off-diagonal-count}
+#### Counting the off-diagonal entries of a square matrix
+
+In a table of pairwise comparisons among several items,
+the [off-diagonal entries](#def-off-diagonal-entry) are the comparisons between two different items,
+so counting them counts the ordered pairs of different items.
+Let $\matr{A}$ be a $5 \times 5$ [matrix](#def-matrix),
+so $\matr{A}$ is [square](#def-square-matrix).
+
+How many off-diagonal entries does $\matr{A}$ have?
+
+::: {.callout-tip}
+#### Hint
+
+Count all the entries,
+then subtract the [diagonal entries](#def-diagonal-entry).
+
+:::
+
+:::

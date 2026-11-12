@@ -1,0 +1,9 @@
+:::{#def-matrix-equality}
+#### Equal matrices
+
+Two [matrices](#def-matrix) $\matr{A}$ and $\matr{B}$ are **equal**,
+written $\matr{A} = \matr{B}$,
+if both are $m \times n$
+and $a_{ij} = b_{ij}$ for every $i = 1, \ldots, m$ and $j = 1, \ldots, n$.
+
+:::

@@ -1,0 +1,12 @@
+:::{#sol-matrix-row-practice}
+
+Write $d_{ij}$ for the entry of $\matr{D}$ in [row](#def-matrix-row) $i$ and [column](#def-matrix-column) $j$.
+$\matr{D}$ has $n = 3$ columns,
+so its third [row](#def-matrix-row) holds the three entries $d_{31}$, $d_{32}$ and $d_{33}$:
+
+$$
+\matr{D}_{3,:} = \begin{bmatrix} d_{31} & d_{32} & d_{33} \end{bmatrix}
+= \begin{bmatrix} 5 & 5 & -1 \end{bmatrix}.
+$$
+
+:::

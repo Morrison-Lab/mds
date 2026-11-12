@@ -34,7 +34,7 @@ The optimization notes are split across these pages:
   minimization problems, optimization algorithms, the Lagrangian, <!-- check-term-links: allow -->
   and the sensitivity of the minimum to the constraints. <!-- check-term-links: allow -->
 - [Newton's Method](optimization-newton.qmd):
-  iterative methods, the quadratic model, and quadratic convergence. <!-- check-term-links: allow -->
+  iterative methods, the quadratic approximation, and quadratic convergence. <!-- check-term-links: allow: a summary of the linked page, which defines these terms -->
 - [Gradient Descent](optimization-gradient-descent.qmd):
   descent directions, line search, step lengths, and the failure modes <!-- check-term-links: allow -->
   of gradient descent on the Rosenbrock function, double wells, and plateaus. <!-- check-term-links: allow -->

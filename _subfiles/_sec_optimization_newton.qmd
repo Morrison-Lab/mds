@@ -1,101 +1,17 @@
 {{< include mds/_subfiles/vector-calc/_prose-descent-attribution.qmd >}}
 
-{{< slidebreak >}}
+## Iterative methods {#sec-newton-iterative}
 
-{{< include mds/_subfiles/vector-calc/_def-iterative-method.qmd >}}
+{{< include mds/_subfiles/_sec_optimization_newton_iterative.qmd >}}
 
-{{< slidebreak >}}
+## Newton's method and the quadratic approximation {#sec-newton-quadratic-approximation}
 
-{{< include mds/_subfiles/vector-calc/_def-vector-sequence-limit.qmd >}}
+{{< include mds/_subfiles/_sec_optimization_newton_model.qmd >}}
 
-{{< slidebreak >}}
+## The Newton step as a root of the linear approximation of the gradient {#sec-newton-gradient-root}
 
-{{< include mds/_subfiles/vector-calc/_exm-vector-sequence-limit.qmd >}}
+{{< include mds/_subfiles/_sec_optimization_newton_root.qmd >}}
 
-{{< slidebreak >}}
+## Convergence {#sec-newton-convergence}
 
-{{< include mds/_subfiles/vector-calc/_def-newton-method.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/vector-calc/_def-quadratic-model.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/vector-calc/_exm-quadratic-model.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/vector-calc/_rem-quadratic-model-taylor.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/vector-calc/_thm-newton-model.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/vector-calc/_exm-newton-model.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/vector-calc/_fig-newton-model.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/vector-calc/_def-gradient-linear-approximation.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/vector-calc/_exm-gradient-linear-approximation.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/vector-calc/_exm-not-gradient-linear-approximation.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/vector-calc/_lem-gradient-linear-approximation.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/vector-calc/_exm-gradient-linear-approximation-quadratic.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/vector-calc/_thm-newton-linearized-gradient.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/vector-calc/_exm-newton-linearized-gradient.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/vector-calc/_rem-newton-root-vs-model.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/vector-calc/_def-quadratic-convergence.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/vector-calc/_exm-not-quadratic-convergence.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/vector-calc/_exm-newton-convergence.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/vector-calc/_fig-newton-convergence.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/vector-calc/_exm-newton-maximum.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/vector-calc/_thm-newton-quadratic.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/vector-calc/_exm-newton-quadratic.qmd >}}
+{{< include mds/_subfiles/_sec_optimization_newton_convergence.qmd >}}

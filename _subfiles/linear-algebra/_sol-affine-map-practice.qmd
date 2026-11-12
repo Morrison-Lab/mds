@@ -1,0 +1,23 @@
+:::{#sol-affine-map-practice}
+
+Yes.
+Let
+
+$$
+\matr{A} = \sbmat{2 & 0 \\ 0 & 1},
+\qquad
+\vec{b} = \sbmat{1 \\ -3}.
+$$
+
+By @def-matvec-mult,
+$\matr{A}\vx = \tp{(2 x_1, x_2)}$,
+so
+
+$$
+\matr{A}\vx + \vec{b} = \sbmat{2 x_1 + 1 \\ x_2 - 3} = f(\vx)
+$$
+
+for every $\vx \in \reals^2$.
+So $f$ is an [affine map](#def-affine-map).
+
+:::
