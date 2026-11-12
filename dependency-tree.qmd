@@ -25,7 +25,7 @@ and click it to open its page.
 
 These notes build on the
 [math for computer science notes](https://morrison-lab.github.io/mcs/dependency-tree.html),
-whose Math Reference pages define sets, functions, numbers and proofs.
+whose Math Reference pages define [sets](https://morrison-lab.github.io/mcs/sets.html#def-set), [functions](https://morrison-lab.github.io/mcs/functions.html#def-function), numbers and proofs.
 This tree joins both sets of notes:
 a box sits below each definition and [theorem](https://morrison-lab.github.io/mcs/proof-writing.html#def-theorem) it uses, in either one.
 Hover over a box to see its name
