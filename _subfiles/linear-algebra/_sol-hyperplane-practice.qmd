@@ -1,0 +1,14 @@
+:::{#sol-hyperplane-practice}
+
+Yes.
+Take $\vec{w} = \tp{(1, 0)} \ne \vzero$ and $b = -3$.
+Then
+
+$$
+\dprod{\vec{w}}{\vx} + b = x_1 - 3,
+$$
+
+which is $0$ exactly when $x_1 = 3$.
+So $L$ is the [hyperplane](#def-hyperplane) with these $\vec{w}$ and $b$.
+
+:::

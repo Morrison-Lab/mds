@@ -1,0 +1,63 @@
+:::{#exm-linear-approximation-vector}
+#### A linear approximation of a function of two variables
+
+Take $f(\vcoef) = 3 \coef{1} + 5 \coef{2}^2$ from @exm-vector-derivative,
+whose [gradient](#def-vector-derivative) at $\vcoef = \tp{(1, 2)}$ is $\gradf{f}(\vcoef) = \tp{(3, 20)}$.
+At that point,
+
+$$
+\ba
+f(\vcoef)
+&= 3 \cdot 1 + 5 \cdot 2^2
+&& \text{(substitute } \coef{1} = 1 \text{ and } \coef{2} = 2 \text{)}
+\\
+&= 23,
+&& \text{(} 3 + 20 = 23 \text{)}
+\ea
+$$
+
+so the [linear approximation](#def-linear-approximation-vector) at $\vcoef$ is
+
+$$
+\hat{f}_{\vcoef}(\stepvec) = 23 + 3 \step_1 + 20 \step_2.
+$$
+
+For the step $\stepvec = \tp{(0.1, 0.1)}$, the approximation is
+
+$$
+\ba
+\hat{f}_{\vcoef}(\stepvec)
+&= 23 + 3 \cdot 0.1 + 20 \cdot 0.1
+&& \text{(substitute } \step_1 = \step_2 = 0.1 \text{)}
+\\
+&= 25.3,
+&& \text{(} 23 + 0.3 + 2 = 25.3 \text{)}
+\ea
+$$
+
+and the value of $f$ at $\vcoef + \stepvec = \tp{(1.1, 2.1)}$ is
+
+$$
+\ba
+f(\vcoef + \stepvec)
+&= 3 \cdot 1.1 + 5 \cdot 2.1^2
+&& \text{(substitute } \coef{1} = 1.1 \text{ and } \coef{2} = 2.1 \text{)}
+\\
+&= 25.35.
+&& \text{(} 3.3 + 22.05 = 25.35 \text{)}
+\ea
+$$
+
+The approximation misses by $0.05$,
+which is $5 \step_2^2$,
+the second-order term of $f$ that the approximation leaves out.
+That term is never negative,
+and is zero
+only when $\step_2 = 0$,
+so the [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of the approximation in @fig-linear-approximation-vector
+is a plane that touches the graph of $f$ along the line $\coef{2} = 2$
+and lies below it everywhere else.
+
+{{< include mds/_subfiles/vector-calc/_fig-linear-approximation-vector.qmd >}}
+
+:::

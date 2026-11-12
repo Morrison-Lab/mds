@@ -1,0 +1,21 @@
+:::{#exr-affine-offset-practice}
+#### Reading off the offset of an affine map
+
+In a fitted model,
+the [offset](#def-affine-offset) is the part of the output that does not depend on the input.
+Let $f: \reals^2 \to \reals^2$ be the [affine map](#def-affine-map)
+
+$$
+f(\vx) = (x_1 - x_2 + 4,\ 3 x_2 - 1).
+$$
+
+Find the [offset of $f$](#def-affine-offset).
+
+::: {.callout-tip}
+#### Hint
+
+Write $f(\vx)$ as $\matr{A}\vx + \vec{b}$ as in @def-affine-map.
+
+:::
+
+:::

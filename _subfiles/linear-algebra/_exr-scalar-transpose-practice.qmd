@@ -1,0 +1,26 @@
+:::{#exr-scalar-transpose-practice}
+#### Evaluating a product of a vector, a matrix and a vector
+
+@thm-scalar-transpose turns $\tp{\vecf{v}}\,\tp{\matr{M}}\,\vecf{u}$ back into $\tp{\vecf{u}}\matr{M}\vecf{v}$,
+which can be the easier [product](#def-matrix-mult) of a vector, a [matrix](#def-matrix) and a vector to compute.
+Let
+
+$$
+\vecf{u} = \sbmat{1 \\ -1},
+\qquad
+\vecf{v} = \sbmat{2 \\ 3},
+\qquad
+\matr{M} = \sbmat{0 & 1 \\ 2 & 0}.
+$$
+
+Find $\tp{\vecf{v}}\,\tp{\matr{M}}\,\vecf{u}$.
+
+::: {.callout-tip}
+#### Hint
+
+By @thm-scalar-transpose,
+it is enough to compute $\tp{\vecf{u}}\matr{M}\vecf{v}$.
+
+:::
+
+:::

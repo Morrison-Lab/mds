@@ -1,0 +1,36 @@
+:::{#sol-matmul-assoc-practice}
+
+First,
+
+$$
+\ba
+\matr{B}\vx
+&= \begin{bmatrix} 2 \cd 1 + 0 \cd 2 \\ 1 \cd 1 + 1 \cd 2 \end{bmatrix}
+&& \text{(@def-matrix-mult)}
+\\
+&= \begin{bmatrix} 2 \\ 3 \end{bmatrix},
+&& \text{(multiply and add)}
+\ea
+$$
+
+so
+
+$$
+\ba
+\matr{A}\matr{B}\vx
+&= \matr{A}(\matr{B}\vx)
+&& \text{(@thm-matmul-assoc)}
+\\
+&= \begin{bmatrix} 1 \cd 2 + 1 \cd 3 \\ 0 \cd 2 + 1 \cd 3 \end{bmatrix}
+&& \text{(@def-matrix-mult)}
+\\
+&= \begin{bmatrix} 5 \\ 3 \end{bmatrix}.
+&& \text{(multiply and add)}
+\ea
+$$
+
+Grouping the other way gives the same answer:
+$\matr{A}\matr{B} = \begin{bmatrix} 3 & 1 \\ 1 & 1 \end{bmatrix}$,
+and $(\matr{A}\matr{B})\vx = \begin{bmatrix} 3 + 2 \\ 1 + 2 \end{bmatrix} = \begin{bmatrix} 5 \\ 3 \end{bmatrix}$.
+
+:::

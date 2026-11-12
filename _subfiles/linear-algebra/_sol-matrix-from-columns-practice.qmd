@@ -1,0 +1,22 @@
+:::{#sol-matrix-from-columns-practice}
+
+Placing the three [column](#def-matrix-column)s from left to right gives
+
+$$
+\ba
+\matr{N}
+&= \begin{bmatrix} \matr{N}_{:,1} & \matr{N}_{:,2} & \matr{N}_{:,3} \end{bmatrix}
+&& \text{(@thm-matrix-row-of-columns)}
+\\
+&= \begin{bmatrix} 2 & 0 & 4 \\ -1 & 3 & 1 \end{bmatrix},
+&& \text{(substitute the columns)}
+\ea
+$$
+
+so the second [row of $\matr{N}$](#def-matrix-row) lists the second entry of each [column](#def-matrix-column):
+
+$$
+\matr{N}_{2,:} = \begin{bmatrix} -1 & 3 & 1 \end{bmatrix}.
+$$
+
+:::

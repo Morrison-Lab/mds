@@ -1,0 +1,8 @@
+:::{#sol-off-diagonal-count}
+
+$\matr{A}$ has $5 \cd 5 = 25$ entries.
+Its [diagonal entries](#def-diagonal-entry) are the $5$ entries $a_{ii}$, $i = 1, \ldots, 5$,
+and every other entry has $i \ne j$,
+so $\matr{A}$ has $25 - 5 = 20$ [off-diagonal entries](#def-off-diagonal-entry).
+
+:::

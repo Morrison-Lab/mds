@@ -1,0 +1,23 @@
+:::{#exr-affine-map-practice}
+#### Testing whether a rescale-and-shift is an affine map
+
+Rescaling a measurement and then shifting it,
+as when converting units with a different zero point,
+is the typical [affine map](#def-affine-map).
+Let $f: \reals^2 \to \reals^2$ be
+
+$$
+f(\vx) = (2 x_1 + 1,\ x_2 - 3).
+$$
+
+Is $f$ an [affine map](#def-affine-map)?
+
+::: {.callout-tip}
+#### Hint
+
+Look for a $2 \times 2$ [matrix](#def-matrix) $\matr{A}$ and a vector $\vec{b}$
+with $f(\vx) = \matr{A}\vx + \vec{b}$.
+
+:::
+
+:::
