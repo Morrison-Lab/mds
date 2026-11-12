@@ -186,14 +186,6 @@
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/linear-algebra/_exr-closed-half-space-practice.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_sol-closed-half-space-practice.qmd >}}
-
-{{< slidebreak >}}
-
 {{< include mds/_subfiles/linear-algebra/_rem-half-space-sides.qmd >}}
 
 {{< slidebreak >}}
@@ -213,19 +205,3 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_def-rank-factorization.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_exr-rank-factorization-practice.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_sol-rank-factorization-practice.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_exr-rank-factorization-construct-practice.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_sol-rank-factorization-construct-practice.qmd >}}
