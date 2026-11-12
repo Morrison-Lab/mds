@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-11 10:50:39 (PST)
+Last modified: 2026-11-11 18:28:53 (PST)
 
 > **NOTE:**
 >
@@ -187,19 +187,127 @@ Last modified: 2026-11-11 10:50:39 (PST)
 
 > **NOTE:**
 >
-> **Definition 3 (Strictly convex function)** A function $f : \mathbb{R}^p \to \mathbb{R}$ is **strictly convex** if $f(t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ (1 - t) \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) < t f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) + (1 - t) f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})$ for all $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ in $\mathbb{R}^p$ and all $t \in (0, 1)$.
+> **Definition 3 (Convex hull, convex envelope)** The **convex hull** (or **convex envelope**) [\[3\]](#ref-wikipedia_convex_hull) of a [set](https://morrison-lab.github.io/mcs/sets.html#def-set) $S \subseteq \mathbb{R}^p$ is the set of points that lie in every [convex set](#def-convex-set) containing $S$:
+>
+> $$\operatorname{conv}(S) \stackrel{\text{def}}{=}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in K \text{ for every convex } K \subseteq \mathbb{R}^p \text{ with } S \subseteq K\right\}\mathclose{}.$$
 
 > **NOTE:**
 >
-> **Definition 4 (Concave function)** A function $f : \mathbb{R}^p \to \mathbb{R}$ is **concave** if $-f$ is [convex](algebra-sums.llms.md#def-convex-function).
+> **Example 5 (The convex hull of three points is a triangle)** Let $S = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2\right\}\mathclose{} \subseteq \mathbb{R}^2$, with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1 = {(1, 0)}^{\top}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2 = {(0, 1)}^{\top}$, and let $T = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^2 : x_1 \ge 0,\ x_2 \ge 0,\ x_1 + x_2 \le 1\right\}\mathclose{}$, the filled triangle with corners $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2$. Then $\operatorname{conv}(S) = T$: the [convex hull](#def-convex-hull) of $S$ is $T$.
+>
+> - **Inclusion** $\operatorname{conv}(S) \subseteq T$. $T$ is the [intersection](https://morrison-lab.github.io/mcs/sets.html#def-indexed-intersection) of three [half-planes](#def-half-space), with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}} = {(1, 0)}^{\top}$, ${(0, 1)}^{\top}$ and ${(-1, -1)}^{\top}$, and $c = 0$, $0$ and $-1$. Each half-plane $H = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}: \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \ge c\right\}\mathclose{}$ is [convex](#def-convex-set): for $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in H$ and $t \in [0, 1]$,
+>
+>   $$\begin{aligned}
+>   \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}} \cdot t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ (1 - t) \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}
+>   &= t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + (1 - t) \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}
+>   && \text{(the dot product is linear)}
+>   \\
+>   &\ge t c + (1 - t) c
+>   && \text{(} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in H \text{ and } t, 1 - t \ge 0 \text{)}
+>   \\
+>   &= c.
+>   && \text{(arithmetic)}
+>   \end{aligned}$$
+>
+>   So $T$ is convex, by [Theorem 1](#thm-convex-intersection) applied twice. $T$ contains $S$, so every point of $\operatorname{conv}(S)$ is in $T$.
+>
+> - **Inclusion** $T \subseteq \operatorname{conv}(S)$. Let $K$ be a [convex set](#def-convex-set) containing $S$, let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in T$, and let $s = x_1 + x_2$, so $0 \le s \le 1$. If $s = 0$, then $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\in K$. Otherwise $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{p}}\vphantom{p}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}/ s$ has $p_1 + p_2 = 1$ with $p_1, p_2 \ge 0$, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{p}}\vphantom{p}} = p_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1 + (1 - p_1) \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2$ is in $K$, by convexity with $t = p_1$. Then $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= s \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{p}}\vphantom{p}} + (1 - s) \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ is in $K$, by convexity with $t = s$. So $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is in every convex set containing $S$.
+>
+> [Figure 3](#fig-convex-hull) shows $S$, $T$ and the two steps for one point of $T$.
+>
+> > **NOTE:**
+> >
+> > Show code
+> >
+> > ``` downlit
+> > ch_corner_x1_fc <- c(0, 1, 0)
+> > ch_corner_x2_fc <- c(0, 0, 1)
+> > ch_corners_fc <- tibble::tibble(x1 = ch_corner_x1_fc, x2 = ch_corner_x2_fc)
+> > ch_path_x1_fc <- c(0, 0.2, 0.4)
+> > ch_path_x2_fc <- c(0, 0.3, 0.6)
+> > ch_path_fc <- tibble::tibble(x1 = ch_path_x1_fc, x2 = ch_path_x2_fc)
+> > ch_marks_x1_fc <- c(0.2, 0.4)
+> > ch_marks_x2_fc <- c(0.3, 0.6)
+> > ch_marks_label_fc <- c("x", "p")
+> > ch_marks_fc <- tibble::tibble(
+> >   x1 = ch_marks_x1_fc,
+> >   x2 = ch_marks_x2_fc,
+> >   label = ch_marks_label_fc
+> > )
+> > ch_aes_fc <- ggplot2::aes(x = x1, y = x2)
+> > ch_label_aes_fc <- ggplot2::aes(x = x1, y = x2, label = label)
+> > ggplot2::ggplot() +
+> >   ggplot2::geom_polygon(
+> >     data = ch_corners_fc, mapping = ch_aes_fc,
+> >     fill = "#0072B2", alpha = 0.15, colour = "#0072B2"
+> >   ) +
+> >   ggplot2::geom_point(
+> >     data = ch_corners_fc, mapping = ch_aes_fc,
+> >     colour = "#0072B2", size = 3
+> >   ) +
+> >   ggplot2::geom_line(
+> >     data = ch_path_fc, mapping = ch_aes_fc,
+> >     colour = "#D55E00", linetype = "dashed"
+> >   ) +
+> >   ggplot2::geom_point(
+> >     data = ch_marks_fc, mapping = ch_aes_fc,
+> >     colour = "#D55E00", size = 3
+> >   ) +
+> >   ggplot2::geom_text(
+> >     data = ch_marks_fc, mapping = ch_label_aes_fc,
+> >     colour = "#D55E00", nudge_x = 0.07
+> >   ) +
+> >   ggplot2::coord_fixed() +
+> >   ggplot2::labs(x = "x1", y = "x2")
+> > ```
+> >
+> > Show code
+> >
+> > ``` python
+> > import matplotlib.pyplot as plt
+> >
+> > ch_x1_fc = [0, 1, 0]
+> > ch_x2_fc = [0, 0, 1]
+> > fig, ax = plt.subplots(figsize=(4, 4), layout="constrained")
+> > ax.fill(ch_x1_fc, ch_x2_fc, color="#0072B2", alpha=0.15);
+> > ax.plot(ch_x1_fc + [0], ch_x2_fc + [0], "o-", color="#0072B2", markersize=8);
+> > ax.plot([0, 0.4], [0, 0.6], "--", color="#D55E00");
+> > ax.plot([0.2, 0.4], [0.3, 0.6], "o", color="#D55E00", markersize=8);
+> > ax.annotate("x", (0.2, 0.3), xytext=(6, 0), textcoords="offset points",
+> >             color="#D55E00");
+> > ax.annotate("p", (0.4, 0.6), xytext=(6, 0), textcoords="offset points",
+> >             color="#D55E00");
+> > ax.set_aspect("equal");
+> > ax.set_xlabel("x1");
+> > ax.set_ylabel("x2");
+> > plt.show();
+> > ```
+> >
+> > ## R
+> >
+> > [![A light blue filled triangle with blue corners at (0, 0), (1, 0) and (0, 1). A vermilion point p at (0.4, 0.6) sits on the edge from (1, 0) to (0, 1). A dashed vermilion segment runs from the origin to p, passing through a second vermilion point x at (0.2, 0.3), halfway along it.](optimization-convexity_files/figure-html/convex-hull-r-3.png)](optimization-convexity_files/figure-html/convex-hull-r-3.png "Figure 3: The three blue corners are the set S of Example 5. The shaded triangle T is its convex hull. The point \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= {(0.2, 0.3)}^{\top} has s = 0.5. The point \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{p}}\vphantom{p}} = {(0.4, 0.6)}^{\top} lies on the segment between \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1 and \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2, and \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} lies on the segment between \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} and \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{p}}\vphantom{p}}.")
+> >
+> > ## Python
+> >
+> > [![A light blue filled triangle with blue corners at (0, 0), (1, 0) and (0, 1). A vermilion point p at (0.4, 0.6) sits on the edge from (1, 0) to (0, 1). A dashed vermilion segment runs from the origin to p, passing through a second vermilion point x at (0.2, 0.3), halfway along it.](optimization-convexity_files/figure-html/convex-hull-python-1.png)](optimization-convexity_files/figure-html/convex-hull-python-1.png "Figure 3: The three blue corners are the set S of Example 5. The shaded triangle T is its convex hull. The point \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= {(0.2, 0.3)}^{\top} has s = 0.5. The point \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{p}}\vphantom{p}} = {(0.4, 0.6)}^{\top} lies on the segment between \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1 and \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2, and \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} lies on the segment between \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} and \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{p}}\vphantom{p}}.")
+> >
+> > Figure 3: The three blue corners are the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) $S$ of [Example 5](#exm-convex-hull). The shaded triangle $T$ is its [convex hull](#def-convex-hull). The point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= {(0.2, 0.3)}^{\top}$ has $s = 0.5$. The point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{p}}\vphantom{p}} = {(0.4, 0.6)}^{\top}$ lies on the segment between $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2$, and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ lies on the segment between $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{p}}\vphantom{p}}$.
 
 > **NOTE:**
 >
-> **Definition 5 (Strictly concave function)** A function $f : \mathbb{R}^p \to \mathbb{R}$ is **strictly concave** if $-f$ is strictly convex ([Definition 3](#def-strictly-convex)).
+> **Definition 4 (Strictly convex function)** A function $f : \mathbb{R}^p \to \mathbb{R}$ is **strictly convex** if $f(t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ (1 - t) \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) < t f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) + (1 - t) f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})$ for all $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ in $\mathbb{R}^p$ and all $t \in (0, 1)$.
 
 > **NOTE:**
 >
-> **Example 5 (Strictly convex, and convex but not strictly)**  
+> **Definition 5 (Concave function)** A function $f : \mathbb{R}^p \to \mathbb{R}$ is **concave** if $-f$ is [convex](algebra-sums.llms.md#def-convex-function).
+
+> **NOTE:**
+>
+> **Definition 6 (Strictly concave function)** A function $f : \mathbb{R}^p \to \mathbb{R}$ is **strictly concave** if $-f$ is strictly convex ([Definition 4](#def-strictly-convex)).
+
+> **NOTE:**
+>
+> **Example 6 (Strictly convex, and convex but not strictly)**  
 >
 > - $f(x) = x^2$ is strictly convex:
 >
@@ -228,7 +336,216 @@ Last modified: 2026-11-11 10:50:39 (PST)
 
 > **NOTE:**
 >
-> **Theorem 2 (The maximum of convex functions is convex)** If $f_1$ and $f_2$ are [convex](algebra-sums.llms.md#def-convex-function) functions on $\mathbb{R}^p$, then $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) \stackrel{\text{def}}{=}\max\mathopen{}\left\{f_1(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}), f_2(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\right\}\mathclose{}$ is convex.
+> **Theorem 2 (An open ball is convex)** Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 \in \mathbb{R}^p$ and $r > 0$. The [open ball](vector-calculus.llms.md#def-ball) of radius $r$ around $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0$ is a [convex set](#def-convex-set).
+
+> **NOTE:**
+>
+> *Proof*. Call the [open ball](vector-calculus.llms.md#def-ball) $B$, and let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in B$ and $t \in [0, 1]$. The [triangle inequality](linear-algebra-inner-products.llms.md#thm-triangle-inequality) and the [absolute homogeneity of the norm](linear-algebra-inner-products.llms.md#thm-norm-properties) give
+>
+> $$\begin{aligned}
+> \mathopen{}\left\lVert t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ (1 - t) \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0\right\rVert\mathclose{}
+> &= \mathopen{}\left\lVert t (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0) + (1 - t) (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0)\right\rVert\mathclose{}
+> && \text{(} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 = t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + (1 - t) \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 \text{)}
+> \\
+> &\le t \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0\right\rVert\mathclose{} + (1 - t) \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0\right\rVert\mathclose{}
+> && \text{(triangle inequality and } t, 1 - t \ge 0 \text{)}
+> \\
+> &< r,
+> && \text{(weighted mean of two numbers less than } r \text{)}
+> \end{aligned}$$
+>
+> so $t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ (1 - t) \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in B$.
+
+> **NOTE:**
+>
+> **Definition 7 (Convex function on a set)** Let $K \subseteq \mathbb{R}^p$ be a [convex set](#def-convex-set). A function $f : \mathbb{R}^p \to \mathbb{R}$ is **convex on** $K$ if
+>
+> $$f(t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ (1 - t) \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) \le t f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) + (1 - t) f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})$$
+>
+> [for all](https://morrison-lab.github.io/mcs/proof-writing.html#def-universal-quantifier) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in K$ and all $t \in [0, 1]$.
+
+> **NOTE:**
+>
+> **Example 7 (A function convex on an interval but not on the whole line)** Let $f(x) = {\min\mathopen{}\left(x^2, 1\right)\mathclose{}}$.
+>
+> - $f$ is [convex on](#def-convex-on) $[-1, 1]$, which is the [closed ball](vector-calculus.llms.md#def-closed-ball) of radius $1$ around $0$ and so [convex](#def-convex-set) by [Example 1](#exm-convex-set). For $x, y \in [-1, 1]$ and $t \in [0, 1]$, the point $t x + (1 - t) y$ is also in $[-1, 1]$, where $f$ agrees with $x^2$, so the defining [inequality](https://morrison-lab.github.io/mcs/proof-writing.html#def-inequality) of $f$ is the defining inequality of $x^2$, which holds by [Example 6](#exm-strictly-convex).
+>
+> - $f$ is not [convex](algebra-sums.llms.md#def-convex-function) on all of $\mathbb{R}$: with $x = 0$, $y = 2$ and $t = \tfrac{1}{2}$,
+>
+>   $$\begin{aligned}
+>   f\mathopen{}\left(\tfrac{1}{2} \cdot 0 + \tfrac{1}{2} \cdot 2\right)\mathclose{}
+>   &= f(1)
+>   && \text{(} \tfrac{1}{2} \cdot 0 + \tfrac{1}{2} \cdot 2 = 1 \text{)}
+>   \\
+>   &= 1,
+>   && \text{(} {\min\mathopen{}\left(1, 1\right)\mathclose{}} = 1 \text{)}
+>   \end{aligned}$$
+>
+>   which is greater than $\tfrac{1}{2} f(0) + \tfrac{1}{2} f(2) = \tfrac{1}{2}$, since $f(0) = 0$ and $f(2) = 1$.
+>
+> In [Figure 4](#fig-convex-on), the [chord](algebra-sums.llms.md#def-chord) from $0$ to $2$ passes below the [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) at $1$, while every chord with both ends in $[-1, 1]$ lies on or above it.
+>
+> > **NOTE:**
+> >
+> > Show code
+> >
+> > ``` downlit
+> > co_x_co <- seq(-2, 2.5, length.out = 451)
+> > co_square_co <- co_x_co^2
+> > co_f_co <- pmin(co_square_co, 1)
+> > co_graph_co <- tibble::tibble(x = co_x_co, f = co_f_co)
+> > co_chord_x_co <- c(0, 2)
+> > co_chord_f_co <- c(0, 1)
+> > co_chord_co <- tibble::tibble(x = co_chord_x_co, f = co_chord_f_co)
+> > co_mid_x_co <- c(1, 1)
+> > co_mid_f_co <- c(0.5, 1)
+> > co_mid_co <- tibble::tibble(x = co_mid_x_co, f = co_mid_f_co)
+> > co_mid_cols_co <- c("#D55E00", "#0072B2")
+> > co_graph_co |>
+> >   ggplot2::ggplot() +
+> >   ggplot2::aes(x = x, y = f) +
+> >   ggplot2::annotate(
+> >     "rect",
+> >     xmin = -1, xmax = 1, ymin = -Inf, ymax = Inf,
+> >     fill = "#0072B2", alpha = 0.1
+> >   ) +
+> >   ggplot2::geom_line(colour = "#0072B2") +
+> >   ggplot2::geom_line(
+> >     data = co_chord_co, colour = "#D55E00", linetype = "dashed"
+> >   ) +
+> >   ggplot2::geom_point(data = co_chord_co, colour = "#D55E00", size = 2) +
+> >   ggplot2::geom_point(data = co_mid_co, colour = co_mid_cols_co, size = 2) +
+> >   ggplot2::labs(x = "x", y = "f(x)") +
+> >   ggplot2::theme_minimal()
+> > ```
+> >
+> > Show code
+> >
+> > ``` python
+> > import matplotlib.pyplot as plt
+> > import numpy as np
+> >
+> > co_x_py = np.linspace(-2, 2.5, 451)
+> > co_f_py = np.minimum(co_x_py**2, 1)
+> > fig, ax = plt.subplots(figsize=(6, 3.5))
+> > ax.axvspan(-1, 1, color="#0072B2", alpha=0.1)
+> > ax.plot(co_x_py, co_f_py, color="#0072B2")
+> > ax.plot([0, 2], [0, 1], "--o", color="#D55E00", markersize=4)
+> > ax.plot([1], [0.5], "o", color="#D55E00", markersize=4)
+> > ax.plot([1], [1], "o", color="#0072B2", markersize=4)
+> > ax.set_xlabel("x")
+> > ax.set_ylabel("f(x)")
+> > plt.show();
+> > ```
+> >
+> > ## R
+> >
+> > [![The graph of f(x) = min(x^2, 1) for x from -2 to 2.5: a parabola between -1 and 1, flat at height 1 outside. The interval from -1 to 1 is shaded. A dashed vermilion chord joins (0, 0) and (2, 1) and passes through (1, 0.5), below the graph's value 1 at x = 1.](optimization-convexity_files/figure-html/convex-on-r-3.png)](optimization-convexity_files/figure-html/convex-on-r-3.png "Figure 4: The graph of f(x) = {\min\mathopen{}\left(x^2, 1\right)\mathclose{}} from Example 7. On the shaded interval [-1, 1], f is x^2 and is convex on it. The dashed chord from 0 to 2 is at \tfrac{1}{2} above x = 1, below f(1) = 1.")
+> >
+> > ## Python
+> >
+> > [![The graph of f(x) = min(x^2, 1) for x from -2 to 2.5: a parabola between -1 and 1, flat at height 1 outside. The interval from -1 to 1 is shaded. A dashed vermilion chord joins (0, 0) and (2, 1) and passes through (1, 0.5), below the graph's value 1 at x = 1.](optimization-convexity_files/figure-html/convex-on-python-1.png)](optimization-convexity_files/figure-html/convex-on-python-1.png "Figure 4: The graph of f(x) = {\min\mathopen{}\left(x^2, 1\right)\mathclose{}} from Example 7. On the shaded interval [-1, 1], f is x^2 and is convex on it. The dashed chord from 0 to 2 is at \tfrac{1}{2} above x = 1, below f(1) = 1.")
+> >
+> > Figure 4: The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $f(x) = {\min\mathopen{}\left(x^2, 1\right)\mathclose{}}$ from [Example 7](#exm-convex-on). On the shaded [interval](https://morrison-lab.github.io/mcs/sets.html#def-interval) $[-1, 1]$, $f$ is $x^2$ and is [convex on](#def-convex-on) it. The dashed [chord](algebra-sums.llms.md#def-chord) from $0$ to $2$ is at $\tfrac{1}{2}$ above $x = 1$, below $f(1) = 1$.
+
+> **NOTE:**
+>
+> **Definition 8 (Function convex at a point)** Let $f : \mathbb{R}^p \to \mathbb{R}$ and let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 \in \mathbb{R}^p$. $f$ is **convex at** $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0$ if there is an $r > 0$ such that $f$ is [convex on](#def-convex-on) the [open ball](vector-calculus.llms.md#def-ball) of radius $r$ around $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0$.
+
+> **NOTE:**
+>
+> **Example 8 (A function convex at one point and not at another)** Let $f(x) = {\min\mathopen{}\left(x^2, 1\right)\mathclose{}}$, as in [Example 7](#exm-convex-on).
+>
+> - $f$ is [convex at](#def-convex-at) $0$: the [open ball](vector-calculus.llms.md#def-ball) of radius $1$ around $0$ is $(-1, 1)$, a [subset](https://morrison-lab.github.io/mcs/sets.html#def-subset) of $[-1, 1]$, and $f$ is [convex on](#def-convex-on) $[-1, 1]$ by [Example 7](#exm-convex-on), so the defining [inequality](https://morrison-lab.github.io/mcs/proof-writing.html#def-inequality) holds [for all](https://morrison-lab.github.io/mcs/proof-writing.html#def-universal-quantifier) $x, y \in (-1, 1)$ as well.
+>
+> - $f$ is not convex at $1$. Take any $r > 0$, let $\varepsilon= \tfrac{1}{2} {\min\mathopen{}\left(r, 1\right)\mathclose{}}$, and take $x = 1 - \varepsilon$, $y = 1 + \varepsilon$ and $t = \tfrac{1}{2}$, so that $x$ and $y$ are in the open ball of radius $r$ around $1$ and $t x + (1 - t) y = 1$. Then $f(1) = 1$, while
+>
+>   $$\begin{aligned}
+>   \tfrac{1}{2} f(1 - \varepsilon) + \tfrac{1}{2} f(1 + \varepsilon)
+>   &= \tfrac{1}{2} (1 - \varepsilon)^2 + \tfrac{1}{2} \cdot 1
+>   && \text{(} 0 < 1 - \varepsilon< 1 < 1 + \varepsilon\text{)}
+>   \\
+>   &< \tfrac{1}{2} + \tfrac{1}{2}
+>   && \text{(} (1 - \varepsilon)^2 < 1 \text{)}
+>   \\
+>   &= 1,
+>   && \text{(add)}
+>   \end{aligned}$$
+>
+>   so the defining inequality fails on every open ball around $1$.
+>
+> In [Figure 5](#fig-convex-at), the [chord](algebra-sums.llms.md#def-chord) from $1 - \varepsilon$ to $1 + \varepsilon$ passes below the [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) at $1$.
+>
+> > **NOTE:**
+> >
+> > Show code
+> >
+> > ``` downlit
+> > ca_x_ca <- seq(0.4, 1.6, length.out = 241)
+> > ca_square_ca <- ca_x_ca^2
+> > ca_f_ca <- pmin(ca_square_ca, 1)
+> > ca_graph_ca <- tibble::tibble(x = ca_x_ca, f = ca_f_ca)
+> > ca_ends_ca <- c(0.75, 1.25)
+> > ca_end_squares_ca <- ca_ends_ca^2
+> > ca_end_f_ca <- pmin(ca_end_squares_ca, 1)
+> > ca_chord_ca <- tibble::tibble(x = ca_ends_ca, f = ca_end_f_ca)
+> > ca_chord_mid_ca <- mean(ca_end_f_ca)
+> > ca_mid_x_ca <- c(1, 1)
+> > ca_mid_f_ca <- c(ca_chord_mid_ca, 1)
+> > ca_mid_ca <- tibble::tibble(x = ca_mid_x_ca, f = ca_mid_f_ca)
+> > ca_mid_cols_ca <- c("#D55E00", "#0072B2")
+> > ca_graph_ca |>
+> >   ggplot2::ggplot() +
+> >   ggplot2::aes(x = x, y = f) +
+> >   ggplot2::annotate(
+> >     "rect",
+> >     xmin = 0.5, xmax = 1.5, ymin = -Inf, ymax = Inf,
+> >     fill = "#0072B2", alpha = 0.1
+> >   ) +
+> >   ggplot2::geom_line(colour = "#0072B2") +
+> >   ggplot2::geom_line(
+> >     data = ca_chord_ca, colour = "#D55E00", linetype = "dashed"
+> >   ) +
+> >   ggplot2::geom_point(data = ca_chord_ca, colour = "#D55E00", size = 2) +
+> >   ggplot2::geom_point(data = ca_mid_ca, colour = ca_mid_cols_ca, size = 2) +
+> >   ggplot2::labs(x = "x", y = "f(x)") +
+> >   ggplot2::theme_minimal()
+> > ```
+> >
+> > Show code
+> >
+> > ``` python
+> > import matplotlib.pyplot as plt
+> > import numpy as np
+> >
+> > ca_x_py = np.linspace(0.4, 1.6, 241)
+> > ca_f_py = np.minimum(ca_x_py**2, 1)
+> > ca_ends_py = np.array([0.75, 1.25])
+> > ca_end_f_py = np.minimum(ca_ends_py**2, 1)
+> > fig, ax = plt.subplots(figsize=(6, 3.5))
+> > ax.axvspan(0.5, 1.5, color="#0072B2", alpha=0.1)
+> > ax.plot(ca_x_py, ca_f_py, color="#0072B2")
+> > ax.plot(ca_ends_py, ca_end_f_py, "--o", color="#D55E00", markersize=4)
+> > ax.plot([1], [ca_end_f_py.mean()], "o", color="#D55E00", markersize=4)
+> > ax.plot([1], [1], "o", color="#0072B2", markersize=4)
+> > ax.set_xlabel("x")
+> > ax.set_ylabel("f(x)")
+> > plt.show();
+> > ```
+> >
+> > ## R
+> >
+> > [![The graph of f(x) = min(x^2, 1) for x from 0.4 to 1.6: rising as x^2 up to x = 1, then flat at height 1. The open ball of radius 0.5 around 1, the interval from 0.5 to 1.5, is shaded. A dashed vermilion chord joins (0.75, 0.5625) and (1.25, 1) and passes through (1, 0.78125), below the graph's value 1 at x = 1.](optimization-convexity_files/figure-html/convex-at-r-3.png)](optimization-convexity_files/figure-html/convex-at-r-3.png "Figure 5: The graph of f(x) = {\min\mathopen{}\left(x^2, 1\right)\mathclose{}} near 1, from Example 8, with r = \tfrac{1}{2} and \varepsilon= \tfrac{1}{4}. The dashed chord from \tfrac{3}{4} to \tfrac{5}{4} stays inside the shaded open ball of radius r around 1, and is at \tfrac{25}{32} above x = 1, below f(1) = 1.")
+> >
+> > ## Python
+> >
+> > [![The graph of f(x) = min(x^2, 1) for x from 0.4 to 1.6: rising as x^2 up to x = 1, then flat at height 1. The open ball of radius 0.5 around 1, the interval from 0.5 to 1.5, is shaded. A dashed vermilion chord joins (0.75, 0.5625) and (1.25, 1) and passes through (1, 0.78125), below the graph's value 1 at x = 1.](optimization-convexity_files/figure-html/convex-at-python-1.png)](optimization-convexity_files/figure-html/convex-at-python-1.png "Figure 5: The graph of f(x) = {\min\mathopen{}\left(x^2, 1\right)\mathclose{}} near 1, from Example 8, with r = \tfrac{1}{2} and \varepsilon= \tfrac{1}{4}. The dashed chord from \tfrac{3}{4} to \tfrac{5}{4} stays inside the shaded open ball of radius r around 1, and is at \tfrac{25}{32} above x = 1, below f(1) = 1.")
+> >
+> > Figure 5: The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $f(x) = {\min\mathopen{}\left(x^2, 1\right)\mathclose{}}$ near $1$, from [Example 8](#exm-convex-at), with $r = \tfrac{1}{2}$ and $\varepsilon= \tfrac{1}{4}$. The dashed [chord](algebra-sums.llms.md#def-chord) from $\tfrac{3}{4}$ to $\tfrac{5}{4}$ stays inside the shaded [open ball](vector-calculus.llms.md#def-ball) of radius $r$ around $1$, and is at $\tfrac{25}{32}$ above $x = 1$, below $f(1) = 1$.
+
+> **NOTE:**
+>
+> **Theorem 3 (The maximum of convex functions is convex)** If $f_1$ and $f_2$ are [convex](algebra-sums.llms.md#def-convex-function) functions on $\mathbb{R}^p$, then $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) \stackrel{\text{def}}{=}\max\mathopen{}\left\{f_1(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}), f_2(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\right\}\mathclose{}$ is convex.
 
 > **NOTE:**
 >
@@ -247,9 +564,9 @@ Last modified: 2026-11-11 10:50:39 (PST)
 
 > **NOTE:**
 >
-> **Example 6 (A maximum is convex; a minimum need not be)**  
+> **Example 9 (A maximum is convex; a minimum need not be)**  
 >
-> - $f_1(x) = x$ is convex, by the computation for $2x + 1$ in [Example 5](#exm-strictly-convex) with $2$ and $1$ replaced by $1$ and $0$, and $f_2(x) = x^2$ is convex by the same example, so $\max\mathopen{}\left\{x, x^2\right\}\mathclose{}$ is convex by [Theorem 2](#thm-convex-max).
+> - $f_1(x) = x$ is convex, by the computation for $2x + 1$ in [Example 6](#exm-strictly-convex) with $2$ and $1$ replaced by $1$ and $0$, and $f_2(x) = x^2$ is convex by the same example, so $\max\mathopen{}\left\{x, x^2\right\}\mathclose{}$ is convex by [Theorem 3](#thm-convex-max).
 >
 > - The minimum of two convex functions need not be convex: $g(x) = \min\mathopen{}\left\{x^2, (x - 2)^2\right\}\mathclose{}$ has
 >
@@ -340,17 +657,17 @@ Last modified: 2026-11-11 10:50:39 (PST)
 >
 > ## R
 >
-> [![Two panels over x. Left: the lines x and x squared in thin grey and their pointwise maximum in blue, a curve that is convex. Right: the curve g of x, the smaller of x squared and x minus 2 squared, in blue, a double dip with a peak of 1 at x of 1. A vermilion segment along the x-axis joins the points (0, 0) and (2, 0) on the curve, and a vermilion circle at (1, 1) lies above that segment.](optimization-convexity_files/figure-html/convex-max-r-3.png)](optimization-convexity_files/figure-html/convex-max-r-3.png "Figure 3: The functions of Example 6. The maximum of the two convex functions on the left is again one. The minimum on the right is not: g(1) = 1 is above \tfrac{1}{2} g(0) + \tfrac{1}{2} g(2) = 0, the height of the segment.")
+> [![Two panels over x. Left: the lines x and x squared in thin grey and their pointwise maximum in blue, a curve that is convex. Right: the curve g of x, the smaller of x squared and x minus 2 squared, in blue, a double dip with a peak of 1 at x of 1. A vermilion segment along the x-axis joins the points (0, 0) and (2, 0) on the curve, and a vermilion circle at (1, 1) lies above that segment.](optimization-convexity_files/figure-html/convex-max-r-3.png)](optimization-convexity_files/figure-html/convex-max-r-3.png "Figure 6: The functions of Example 9. The maximum of the two convex functions on the left is again one. The minimum on the right is not: g(1) = 1 is above \tfrac{1}{2} g(0) + \tfrac{1}{2} g(2) = 0, the height of the segment.")
 >
 > ## Python
 >
-> [![Two panels over x. Left: the lines x and x squared in thin grey and their pointwise maximum in blue, a curve that is convex. Right: the curve g of x, the smaller of x squared and x minus 2 squared, in blue, a double dip with a peak of 1 at x of 1. A vermilion segment along the x-axis joins the points (0, 0) and (2, 0) on the curve, and a vermilion circle at (1, 1) lies above that segment.](optimization-convexity_files/figure-html/convex-max-python-1.png)](optimization-convexity_files/figure-html/convex-max-python-1.png "Figure 3: The functions of Example 6. The maximum of the two convex functions on the left is again one. The minimum on the right is not: g(1) = 1 is above \tfrac{1}{2} g(0) + \tfrac{1}{2} g(2) = 0, the height of the segment.")
+> [![Two panels over x. Left: the lines x and x squared in thin grey and their pointwise maximum in blue, a curve that is convex. Right: the curve g of x, the smaller of x squared and x minus 2 squared, in blue, a double dip with a peak of 1 at x of 1. A vermilion segment along the x-axis joins the points (0, 0) and (2, 0) on the curve, and a vermilion circle at (1, 1) lies above that segment.](optimization-convexity_files/figure-html/convex-max-python-1.png)](optimization-convexity_files/figure-html/convex-max-python-1.png "Figure 6: The functions of Example 9. The maximum of the two convex functions on the left is again one. The minimum on the right is not: g(1) = 1 is above \tfrac{1}{2} g(0) + \tfrac{1}{2} g(2) = 0, the height of the segment.")
 >
-> Figure 3: The [functions](https://morrison-lab.github.io/mcs/functions.html#def-function) of [Example 6](#exm-convex-max). The [maximum](algebra-basics.llms.md#def-maximum) of the two [convex functions](algebra-sums.llms.md#def-convex-function) on the left is again one. The [minimum](algebra-basics.llms.md#def-minimum) on the right is not: $g(1) = 1$ is above $\tfrac{1}{2} g(0) + \tfrac{1}{2} g(2) = 0$, the height of the segment.
+> Figure 6: The [functions](https://morrison-lab.github.io/mcs/functions.html#def-function) of [Example 9](#exm-convex-max). The [maximum](algebra-basics.llms.md#def-maximum) of the two [convex functions](algebra-sums.llms.md#def-convex-function) on the left is again one. The [minimum](algebra-basics.llms.md#def-minimum) on the right is not: $g(1) = 1$ is above $\tfrac{1}{2} g(0) + \tfrac{1}{2} g(2) = 0$, the height of the segment.
 
 > **NOTE:**
 >
-> **Definition 6 (Epigraph)** The **epigraph** [\[3\]](#ref-wikipedia_epigraph_mathematics) of $f : \mathbb{R}^p \to \mathbb{R}$ is the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of points on or over its [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph),
+> **Definition 9 (Epigraph)** The **epigraph** [\[4\]](#ref-wikipedia_epigraph_mathematics) of $f : \mathbb{R}^p \to \mathbb{R}$ is the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of points on or over its [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph),
 >
 > $$\operatorname{epi} f \stackrel{\text{def}}{=}\mathopen{}\left\{(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, s) : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p,\ s \in \mathbb{R},\ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) \le s\right\}\mathclose{}.$$
 >
@@ -358,7 +675,7 @@ Last modified: 2026-11-11 10:50:39 (PST)
 
 > **NOTE:**
 >
-> **Example 7 (The epigraph of** $x^2$) For $f(x) = x^2$, $\operatorname{epi} f = \mathopen{}\left\{(x, s) : x^2 \le s\right\}\mathclose{}$, the points $(x, s)$ on the parabola $s = x^2$ or on the side of it where $s$ is larger. $(1, 2)$ is in it, since $1^2 \le 2$; $(2, 1)$ is not, since $2^2 > 1$.
+> **Example 10 (The epigraph of** $x^2$) For $f(x) = x^2$, $\operatorname{epi} f = \mathopen{}\left\{(x, s) : x^2 \le s\right\}\mathclose{}$, the points $(x, s)$ on the parabola $s = x^2$ or on the side of it where $s$ is larger. $(1, 2)$ is in it, since $1^2 \le 2$; $(2, 1)$ is not, since $2^2 > 1$.
 
 > **NOTE:**
 >
@@ -412,17 +729,17 @@ Last modified: 2026-11-11 10:50:39 (PST)
 >
 > ## R
 >
-> [![Plot of the parabola s equals x squared for x from -2 to 2. The region on and above the parabola is shaded light blue. A vermilion filled circle at (1, 2) lies in the shaded region, and a vermilion cross at (2, 1) lies below the parabola, outside it.](optimization-convexity_files/figure-html/epigraph-r-3.png)](optimization-convexity_files/figure-html/epigraph-r-3.png "Figure 4: The epigraph of f(x) = x^2 (Example 7): the shaded points on or above the parabola. (1, 2) is in it, and (2, 1) is not.")
+> [![Plot of the parabola s equals x squared for x from -2 to 2. The region on and above the parabola is shaded light blue. A vermilion filled circle at (1, 2) lies in the shaded region, and a vermilion cross at (2, 1) lies below the parabola, outside it.](optimization-convexity_files/figure-html/epigraph-r-3.png)](optimization-convexity_files/figure-html/epigraph-r-3.png "Figure 7: The epigraph of f(x) = x^2 (Example 10): the shaded points on or above the parabola. (1, 2) is in it, and (2, 1) is not.")
 >
 > ## Python
 >
-> [![Plot of the parabola s equals x squared for x from -2 to 2. The region on and above the parabola is shaded light blue. A vermilion filled circle at (1, 2) lies in the shaded region, and a vermilion cross at (2, 1) lies below the parabola, outside it.](optimization-convexity_files/figure-html/epigraph-python-1.png)](optimization-convexity_files/figure-html/epigraph-python-1.png "Figure 4: The epigraph of f(x) = x^2 (Example 7): the shaded points on or above the parabola. (1, 2) is in it, and (2, 1) is not.")
+> [![Plot of the parabola s equals x squared for x from -2 to 2. The region on and above the parabola is shaded light blue. A vermilion filled circle at (1, 2) lies in the shaded region, and a vermilion cross at (2, 1) lies below the parabola, outside it.](optimization-convexity_files/figure-html/epigraph-python-1.png)](optimization-convexity_files/figure-html/epigraph-python-1.png "Figure 7: The epigraph of f(x) = x^2 (Example 10): the shaded points on or above the parabola. (1, 2) is in it, and (2, 1) is not.")
 >
-> Figure 4: The [epigraph](#def-epigraph) of $f(x) = x^2$ ([Example 7](#exm-def-epigraph)): the shaded points on or above the [parabola](algebra-exponentials.llms.md#def-parabola). $(1, 2)$ is in it, and $(2, 1)$ is not.
+> Figure 7: The [epigraph](#def-epigraph) of $f(x) = x^2$ ([Example 10](#exm-def-epigraph)): the shaded points on or above the [parabola](algebra-exponentials.llms.md#def-parabola). $(1, 2)$ is in it, and $(2, 1)$ is not.
 
 > **NOTE:**
 >
-> **Theorem 3 (Convexity through the epigraph)** $f : \mathbb{R}^p \to \mathbb{R}$ is [convex](algebra-sums.llms.md#def-convex-function) if and only if its epigraph ([Definition 6](#def-epigraph)) is convex ([Definition 1](#def-convex-set)).
+> **Theorem 4 (Convexity through the epigraph)** $f : \mathbb{R}^p \to \mathbb{R}$ is [convex](algebra-sums.llms.md#def-convex-function) if and only if its epigraph ([Definition 9](#def-epigraph)) is convex ([Definition 1](#def-convex-set)).
 
 > **NOTE:**
 >
@@ -430,7 +747,7 @@ Last modified: 2026-11-11 10:50:39 (PST)
 >
 > $$t\,(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})) + (1 - t)\,(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}, f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})) = \mathopen{}\left(t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ (1 - t) \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}},\ t f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) + (1 - t) f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})\right)\mathclose{},$$
 >
-> and by [Definition 6](#def-epigraph) that membership means $f(t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ (1 - t) \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) \le t f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) + (1 - t) f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})$.
+> and by [Definition 9](#def-epigraph) that membership means $f(t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ (1 - t) \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) \le t f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) + (1 - t) f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})$.
 >
 > **Only if.** Let $(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, s)$ and $(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}, u)$ be in $\operatorname{epi} f$, so $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) \le s$ and $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) \le u$, and let $t \in [0, 1]$. Then
 >
@@ -447,14 +764,14 @@ Last modified: 2026-11-11 10:50:39 (PST)
 
 > **NOTE:**
 >
-> **Example 8 (Two epigraphs)**  
+> **Example 11 (Two epigraphs)**  
 >
-> - The epigraph of $f(x) = \mathopen{}\left|x\right|\mathclose{}$ is $\mathopen{}\left\{(x, s) : \mathopen{}\left|x\right|\mathclose{} \le s\right\}\mathclose{}$, a wedge. It is the intersection of the half-planes $\mathopen{}\left\{(x, s) : s - x \ge 0\right\}\mathclose{}$ and $\mathopen{}\left\{(x, s) : s + x \ge 0\right\}\mathclose{}$. Each half-plane is convex: if $s_1 - x_1 \ge 0$ and $s_2 - x_2 \ge 0$, then $(t s_1 + (1 - t) s_2) - (t x_1 + (1 - t) x_2) = t (s_1 - x_1) + (1 - t)(s_2 - x_2) \ge 0$, and the same with $+$ for the other. So the wedge is convex ([Theorem 1](#thm-convex-intersection)), and $\mathopen{}\left|x\right|\mathclose{}$ is convex by [Theorem 3](#thm-epigraph).
+> - The epigraph of $f(x) = \mathopen{}\left|x\right|\mathclose{}$ is $\mathopen{}\left\{(x, s) : \mathopen{}\left|x\right|\mathclose{} \le s\right\}\mathclose{}$, a wedge. It is the intersection of the half-planes $\mathopen{}\left\{(x, s) : s - x \ge 0\right\}\mathclose{}$ and $\mathopen{}\left\{(x, s) : s + x \ge 0\right\}\mathclose{}$. Each half-plane is convex: if $s_1 - x_1 \ge 0$ and $s_2 - x_2 \ge 0$, then $(t s_1 + (1 - t) s_2) - (t x_1 + (1 - t) x_2) = t (s_1 - x_1) + (1 - t)(s_2 - x_2) \ge 0$, and the same with $+$ for the other. So the wedge is convex ([Theorem 1](#thm-convex-intersection)), and $\mathopen{}\left|x\right|\mathclose{}$ is convex by [Theorem 4](#thm-epigraph).
 > - The epigraph of $g(x) = -x^2$ is not convex: $(-1, -1)$ and $(1, -1)$ are in it, since $g(\pm 1) = -1$, but their midpoint $(0, -1)$ is not, since $g(0) = 0 > -1$. So $-x^2$ is not convex.
 
 > **NOTE:**
 >
-> **Definition 7 (Tangent plane)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have a [gradient](vector-calculus.llms.md#def-vector-derivative) at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$. The **tangent plane** [\[4\]](#ref-wikipedia_tangent_space) to the [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $f$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ is the graph of the function
+> **Definition 10 (Tangent plane)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have a [gradient](vector-calculus.llms.md#def-vector-derivative) at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$. The **tangent plane** [\[5\]](#ref-wikipedia_tangent_space) to the [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $f$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ is the graph of the function
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\mapsto f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) + {\mathopen{}\left(\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})\right)\mathclose{}}^{\top} (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}),$$
 >
@@ -462,7 +779,7 @@ Last modified: 2026-11-11 10:50:39 (PST)
 
 > **NOTE:**
 >
-> **Example 9 (A tangent line and a tangent plane)**  
+> **Example 12 (A tangent line and a tangent plane)**  
 >
 > - For $f(x) = x^2$ at $y = 1$, $f(1) = 1$ and $f'(1) = 2$, so the tangent line is
 >
@@ -492,7 +809,7 @@ Last modified: 2026-11-11 10:50:39 (PST)
 >   && \text{(} 2 - 2 - 2 = -2 \text{)}
 >   \end{aligned}$$
 >
-> [Figure 5](#fig-tangent-plane) shows the tangent plane of the second bullet.
+> [Figure 8](#fig-tangent-plane) shows the tangent plane of the second bullet.
 >
 > > **NOTE:**
 > >
@@ -578,11 +895,11 @@ Last modified: 2026-11-11 10:50:39 (PST)
 > >
 > > ## R
 > >
-> > [![Surface plot of f(x) = x1^2 + x2^2 for x1 and x2 from -1 to 3, a bowl with its lowest point at the origin. A flat vermilion plane, the tangent plane 2 x1 + 2 x2 - 2, touches the bowl from below at the point (1, 1, 2), which is marked with a black point.](optimization-convexity_files/figure-html/tangent-plane-python-1.png)](optimization-convexity_files/figure-html/tangent-plane-python-1.png "Figure 5: The tangent plane (vermilion) of the bowl f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2 of Example 9 touches it at {(1, 1)}^{\top} and lies below it.")
+> > [![Surface plot of f(x) = x1^2 + x2^2 for x1 and x2 from -1 to 3, a bowl with its lowest point at the origin. A flat vermilion plane, the tangent plane 2 x1 + 2 x2 - 2, touches the bowl from below at the point (1, 1, 2), which is marked with a black point.](optimization-convexity_files/figure-html/tangent-plane-python-1.png)](optimization-convexity_files/figure-html/tangent-plane-python-1.png "Figure 8: The tangent plane (vermilion) of the bowl f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2 of Example 12 touches it at {(1, 1)}^{\top} and lies below it.")
 > >
 > > ## Python
 > >
-> > Figure 5: The [tangent plane](#def-tangent-plane) (vermilion) of the bowl $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2$ of [Example 9](#exm-tangent-plane) touches it at ${(1, 1)}^{\top}$ and lies below it.
+> > Figure 8: The [tangent plane](#def-tangent-plane) (vermilion) of the bowl $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2$ of [Example 12](#exm-tangent-plane) touches it at ${(1, 1)}^{\top}$ and lies below it.
 
 > **NOTE:**
 >
@@ -590,13 +907,13 @@ Last modified: 2026-11-11 10:50:39 (PST)
 
 > **NOTE:**
 >
-> **Theorem 4 (First-order characterization of convexity)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have first partial derivatives that are [continuous on](vector-calculus.llms.md#def-continuous-on) $\mathbb{R}^p$. Then $f$ is [convex](algebra-sums.llms.md#def-convex-function) if and only if
+> **Theorem 5 (First-order characterization of convexity)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have first partial derivatives that are [continuous on](vector-calculus.llms.md#def-continuous-on) $\mathbb{R}^p$. Then $f$ is [convex](algebra-sums.llms.md#def-convex-function) if and only if
 >
 > $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) \ge f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) + {\mathopen{}\left(\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})\right)\mathclose{}}^{\top} (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})
 > \qquad \text{for all } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p:
 > \tag{1}$$
 >
-> every tangent plane ([Definition 7](#def-tangent-plane)) lies on or under the graph. If the inequality is strict whenever $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$, then $f$ is strictly convex ([Definition 3](#def-strictly-convex)).
+> every tangent plane ([Definition 10](#def-tangent-plane)) lies on or under the graph. If the inequality is strict whenever $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$, then $f$ is strictly convex ([Definition 4](#def-strictly-convex)).
 
 > **NOTE:**
 >
@@ -664,7 +981,7 @@ Last modified: 2026-11-11 10:50:39 (PST)
 
 > **NOTE:**
 >
-> **Example 10 (Tangent lines under a parabola)** For $f(x) = x^2$, the right side of [Equation 1](#eq-supporting-hyperplane) is $y^2 + 2y (x - y) = 2xy - y^2$, and
+> **Example 13 (Tangent lines under a parabola)** For $f(x) = x^2$, the right side of [Equation 1](#eq-supporting-hyperplane) is $y^2 + 2y (x - y) = 2xy - y^2$, and
 >
 > $$\begin{aligned}
 > f(x) - (2xy - y^2)
@@ -714,20 +1031,20 @@ Last modified: 2026-11-11 10:50:39 (PST)
 >
 > ## R
 >
-> [![Plot of the parabola f of x equals x squared for x from -1 to 3, in blue, and the straight line s equals 2 x minus 1 in dashed vermilion. The line touches the parabola at the point (1, 1), marked by a vermilion circle, and lies below the parabola everywhere else.](optimization-convexity_files/figure-html/tangent-line-r-3.png)](optimization-convexity_files/figure-html/tangent-line-r-3.png "Figure 6: The tangent line s = 2x - 1 of f(x) = x^2 at y = 1 (Example 9). It touches the graph at (1, 1) and lies below it everywhere else, as in Example 10.")
+> [![Plot of the parabola f of x equals x squared for x from -1 to 3, in blue, and the straight line s equals 2 x minus 1 in dashed vermilion. The line touches the parabola at the point (1, 1), marked by a vermilion circle, and lies below the parabola everywhere else.](optimization-convexity_files/figure-html/tangent-line-r-3.png)](optimization-convexity_files/figure-html/tangent-line-r-3.png "Figure 9: The tangent line s = 2x - 1 of f(x) = x^2 at y = 1 (Example 12). It touches the graph at (1, 1) and lies below it everywhere else, as in Example 13.")
 >
 > ## Python
 >
-> [![Plot of the parabola f of x equals x squared for x from -1 to 3, in blue, and the straight line s equals 2 x minus 1 in dashed vermilion. The line touches the parabola at the point (1, 1), marked by a vermilion circle, and lies below the parabola everywhere else.](optimization-convexity_files/figure-html/tangent-line-python-1.png)](optimization-convexity_files/figure-html/tangent-line-python-1.png "Figure 6: The tangent line s = 2x - 1 of f(x) = x^2 at y = 1 (Example 9). It touches the graph at (1, 1) and lies below it everywhere else, as in Example 10.")
+> [![Plot of the parabola f of x equals x squared for x from -1 to 3, in blue, and the straight line s equals 2 x minus 1 in dashed vermilion. The line touches the parabola at the point (1, 1), marked by a vermilion circle, and lies below the parabola everywhere else.](optimization-convexity_files/figure-html/tangent-line-python-1.png)](optimization-convexity_files/figure-html/tangent-line-python-1.png "Figure 9: The tangent line s = 2x - 1 of f(x) = x^2 at y = 1 (Example 12). It touches the graph at (1, 1) and lies below it everywhere else, as in Example 13.")
 >
-> Figure 6: The [tangent line](calculus-derivatives.llms.md#def-tangent-line) $s = 2x - 1$ of $f(x) = x^2$ at $y = 1$ ([Example 9](#exm-tangent-plane)). It touches the [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) at $(1, 1)$ and lies below it everywhere else, as in [Example 10](#exm-convex-first-order).
+> Figure 9: The [tangent line](calculus-derivatives.llms.md#def-tangent-line) $s = 2x - 1$ of $f(x) = x^2$ at $y = 1$ ([Example 12](#exm-tangent-plane)). It touches the [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) at $(1, 1)$ and lies below it everywhere else, as in [Example 13](#exm-convex-first-order).
 
 > **NOTE:**
 >
-> **Theorem 5 (Second-derivative test for convexity)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have first and second partial derivatives that are [continuous on](vector-calculus.llms.md#def-continuous-on) $\mathbb{R}^p$.
+> **Theorem 6 (Second-derivative test for convexity)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have first and second partial derivatives that are [continuous on](vector-calculus.llms.md#def-continuous-on) $\mathbb{R}^p$.
 >
 > 1.  If $\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ is [positive semidefinite](linear-algebra-special-matrices.llms.md#def-positive-semidefinite) for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, then $f$ is [convex](algebra-sums.llms.md#def-convex-function).
-> 2.  If $\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ is [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite) for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, then $f$ is strictly convex ([Definition 3](#def-strictly-convex)).
+> 2.  If $\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ is [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite) for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, then $f$ is strictly convex ([Definition 4](#def-strictly-convex)).
 
 > **NOTE:**
 >
@@ -742,11 +1059,11 @@ Last modified: 2026-11-11 10:50:39 (PST)
 > && \text{(} \mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}) \text{ is positive semidefinite)}
 > \end{aligned}$$
 >
-> This inequality is [Equation 1](#eq-supporting-hyperplane), so $f$ is convex by [Theorem 4](#thm-convex-first-order). Under the hypothesis of part 2 and with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$, the quadratic-form term is positive, so the inequality is strict, and $f$ is strictly convex by the last sentence of [Theorem 4](#thm-convex-first-order).
+> This inequality is [Equation 1](#eq-supporting-hyperplane), so $f$ is convex by [Theorem 5](#thm-convex-first-order). Under the hypothesis of part 2 and with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$, the quadratic-form term is positive, so the inequality is strict, and $f$ is strictly convex by the last sentence of [Theorem 5](#thm-convex-first-order).
 
 > **NOTE:**
 >
-> **Example 11 (Using the Hessian to show convexity)**  
+> **Example 14 (Using the Hessian to show convexity)**  
 >
 > - For a symmetric positive semidefinite $\mathbf{A}$, $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ has [Hessian](vector-calculus.llms.md#def-hessian) $2 \mathbf{A}$ (by the [Hessian of a quadratic form](vector-calculus.llms.md#thm-hessian-quadratic)), which is positive semidefinite because ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}}^{\top} (2 \mathbf{A}) \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}} = 2\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}} \ge 0$; so $f$ is convex.
 >
@@ -813,13 +1130,13 @@ Last modified: 2026-11-11 10:50:39 (PST)
 >
 > ## R
 >
-> [![Contour plot of f(x) = exp(2 x1 + x2) - x1 for x1 from -1 to 1 and x2 from -3 to 3. The level curves are long parallel curves that run along the direction (1, -2), crowded together on the upper right and spread out on the lower left. A dashed vermilion line along that direction through the origin marks where f is linear.](optimization-convexity_files/figure-html/convex-hessian-fig-r-3.png)](optimization-convexity_files/figure-html/convex-hessian-fig-r-3.png "Figure 7: Level curves of the third function in Example 11. Along the dashed line through the origin in the direction {(1, -2)}^{\top} the function is linear, so the function is convex but not strictly convex.")
+> [![Contour plot of f(x) = exp(2 x1 + x2) - x1 for x1 from -1 to 1 and x2 from -3 to 3. The level curves are long parallel curves that run along the direction (1, -2), crowded together on the upper right and spread out on the lower left. A dashed vermilion line along that direction through the origin marks where f is linear.](optimization-convexity_files/figure-html/convex-hessian-fig-r-3.png)](optimization-convexity_files/figure-html/convex-hessian-fig-r-3.png "Figure 10: Level curves of the third function in Example 14. Along the dashed line through the origin in the direction {(1, -2)}^{\top} the function is linear, so the function is convex but not strictly convex.")
 >
 > ## Python
 >
-> [![Contour plot of f(x) = exp(2 x1 + x2) - x1 for x1 from -1 to 1 and x2 from -3 to 3. The level curves are long parallel curves that run along the direction (1, -2), crowded together on the upper right and spread out on the lower left. A dashed vermilion line along that direction through the origin marks where f is linear.](optimization-convexity_files/figure-html/convex-hessian-fig-python-1.png)](optimization-convexity_files/figure-html/convex-hessian-fig-python-1.png "Figure 7: Level curves of the third function in Example 11. Along the dashed line through the origin in the direction {(1, -2)}^{\top} the function is linear, so the function is convex but not strictly convex.")
+> [![Contour plot of f(x) = exp(2 x1 + x2) - x1 for x1 from -1 to 1 and x2 from -3 to 3. The level curves are long parallel curves that run along the direction (1, -2), crowded together on the upper right and spread out on the lower left. A dashed vermilion line along that direction through the origin marks where f is linear.](optimization-convexity_files/figure-html/convex-hessian-fig-python-1.png)](optimization-convexity_files/figure-html/convex-hessian-fig-python-1.png "Figure 10: Level curves of the third function in Example 14. Along the dashed line through the origin in the direction {(1, -2)}^{\top} the function is linear, so the function is convex but not strictly convex.")
 >
-> Figure 7: [Level curves](vector-calculus.llms.md#def-level-set) of the third [function](https://morrison-lab.github.io/mcs/functions.html#def-function) in [Example 11](#exm-convex-hessian). Along the dashed line through the origin in the [direction](vector-calculus.llms.md#def-direction) ${(1, -2)}^{\top}$ the function is [linear](algebra-exponentials.llms.md#def-linear-function), so the function is [convex](algebra-sums.llms.md#def-convex-function) but not [strictly convex](#def-strictly-convex).
+> Figure 10: [Level curves](vector-calculus.llms.md#def-level-set) of the third [function](https://morrison-lab.github.io/mcs/functions.html#def-function) in [Example 14](#exm-convex-hessian). Along the dashed line through the origin in the [direction](vector-calculus.llms.md#def-direction) ${(1, -2)}^{\top}$ the function is [linear](algebra-exponentials.llms.md#def-linear-function), so the function is [convex](algebra-sums.llms.md#def-convex-function) but not [strictly convex](#def-strictly-convex).
 
 > **NOTE:**
 >
@@ -934,11 +1251,11 @@ Last modified: 2026-11-11 10:50:39 (PST)
 >
 > ## Python
 >
-> Figure 8: The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of the third [function](https://morrison-lab.github.io/mcs/functions.html#def-function) in [Example 11](#exm-convex-hessian), the surface whose [level curves](vector-calculus.llms.md#def-level-set) are in [Figure 7](#fig-convex-hessian). Along the dashed line through the origin in the [direction](vector-calculus.llms.md#def-direction) ${(1, -2)}^{\top}$ the surface is a straight line, so the function is [linear](algebra-exponentials.llms.md#def-linear-function) there. The function is therefore [convex](algebra-sums.llms.md#def-convex-function) but not [strictly convex](#def-strictly-convex).
+> Figure 11: The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of the third [function](https://morrison-lab.github.io/mcs/functions.html#def-function) in [Example 14](#exm-convex-hessian), the surface whose [level curves](vector-calculus.llms.md#def-level-set) are in [Figure 10](#fig-convex-hessian). Along the dashed line through the origin in the [direction](vector-calculus.llms.md#def-direction) ${(1, -2)}^{\top}$ the surface is a straight line, so the function is [linear](algebra-exponentials.llms.md#def-linear-function) there. The function is therefore [convex](algebra-sums.llms.md#def-convex-function) but not [strictly convex](#def-strictly-convex).
 
 > **NOTE:**
 >
-> **Example 12 (Strictly convex with a singular Hessian)** Part 2 is sufficient but not necessary. $f(x) = x^4$ has
+> **Example 15 (Strictly convex with a singular Hessian)** Part 2 is sufficient but not necessary. $f(x) = x^4$ has
 >
 > $$\begin{aligned}
 > f''(0) &= 12 \cdot 0^2 \\
@@ -971,7 +1288,7 @@ Last modified: 2026-11-11 10:50:39 (PST)
 
 > **NOTE:**
 >
-> **Theorem 6 (A convex function has a positive semidefinite Hessian)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have first and [second partial derivatives](vector-calculus.llms.md#def-second-partial-derivative) that are [continuous on](vector-calculus.llms.md#def-continuous-on) $\mathbb{R}^p$. If $f$ is [convex](algebra-sums.llms.md#def-convex-function), then the Hessian $\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ is [positive semidefinite](linear-algebra-special-matrices.llms.md#def-positive-semidefinite) for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$.
+> **Theorem 7 (A convex function has a positive semidefinite Hessian)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have first and [second partial derivatives](vector-calculus.llms.md#def-second-partial-derivative) that are [continuous on](vector-calculus.llms.md#def-continuous-on) $\mathbb{R}^p$. If $f$ is [convex](algebra-sums.llms.md#def-convex-function), then the Hessian $\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ is [positive semidefinite](linear-algebra-special-matrices.llms.md#def-positive-semidefinite) for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$.
 
 > **NOTE:**
 >
@@ -1005,7 +1322,107 @@ Last modified: 2026-11-11 10:50:39 (PST)
 
 > **NOTE:**
 >
-> **Corollary 1 (Stationary points of a convex function are global minimizers)** If $f$ is as in [Theorem 4](#thm-convex-first-order) and convex, then every stationary point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*$ of $f$ ([Definition 4 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#def-stationary-point)) is a [global minimizer](algebra-basics.llms.md#def-global-minimizer).
+> **Corollary 1 (Convex if and only if the Hessian is positive semidefinite)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have first and [second partial derivatives](vector-calculus.llms.md#def-second-partial-derivative) that are [continuous on](vector-calculus.llms.md#def-continuous-on) $\mathbb{R}^p$. Then $f$ is [convex](algebra-sums.llms.md#def-convex-function) [if and only if](https://morrison-lab.github.io/mcs/proof-writing.html#def-iff) the [Hessian](vector-calculus.llms.md#def-hessian) $\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ is [positive semidefinite](linear-algebra-special-matrices.llms.md#def-positive-semidefinite) for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$.
+
+> **NOTE:**
+>
+> *Proof*. Part 1 of [Theorem 6](#thm-convex-hessian) proves that a [positive semidefinite](linear-algebra-special-matrices.llms.md#def-positive-semidefinite) [Hessian](vector-calculus.llms.md#def-hessian) at every point makes $f$ [convex](algebra-sums.llms.md#def-convex-function), and [Theorem 7](#thm-convex-hessian-converse) proves that a convex $f$ has a positive semidefinite Hessian at every point.
+
+> **NOTE:**
+>
+> **Theorem 8 (Second-derivative test for concavity)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have first and [second partial derivatives](vector-calculus.llms.md#def-second-partial-derivative) that are [continuous on](vector-calculus.llms.md#def-continuous-on) $\mathbb{R}^p$.
+>
+> 1.  $f$ is [concave](#def-concave) [if and only if](https://morrison-lab.github.io/mcs/proof-writing.html#def-iff) $-\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ is [positive semidefinite](linear-algebra-special-matrices.llms.md#def-positive-semidefinite) for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$.
+> 2.  If $-\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ is [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite) for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$, then $f$ is [strictly concave](#def-strictly-concave).
+
+> **NOTE:**
+>
+> *Proof*. Its negative $-f$ has the [second partial derivatives](vector-calculus.llms.md#def-second-partial-derivative) $-\frac{\partial}{\partial x_j}\frac{\partial}{\partial x_k} f$, which are [continuous on](vector-calculus.llms.md#def-continuous-on) $\mathbb{R}^p$, so its [Hessian](vector-calculus.llms.md#def-hessian) is $\mathbf{H}_{-f}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = -\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$.
+>
+> 1.  By [Definition 5](#def-concave), $f$ is [concave](#def-concave) [if and only if](https://morrison-lab.github.io/mcs/proof-writing.html#def-iff) $-f$ is [convex](algebra-sums.llms.md#def-convex-function). By [Corollary 1](#cor-convex-iff-hessian) applied to $-f$, that holds [if and only if](https://morrison-lab.github.io/mcs/proof-writing.html#def-iff) $-\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ is [positive semidefinite](linear-algebra-special-matrices.llms.md#def-positive-semidefinite) for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$.
+> 2.  Part 2 of [Theorem 6](#thm-convex-hessian), applied to $-f$, makes $-f$ [strictly convex](#def-strictly-convex), so $f$ is [strictly concave](#def-strictly-concave) by [Definition 6](#def-strictly-concave).
+
+> **NOTE:**
+>
+> **Example 16 (A strictly concave quadratic function)** Let $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = 1 - x_1^2 - x_2^2$ for $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= {(x_1, x_2)}^{\top}$. Its [Hessian](vector-calculus.llms.md#def-hessian) is $\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = -2 \mathbf{I}_2$ at every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, so $-\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = 2 \mathbf{I}_2$. For every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$,
+>
+> $$\begin{aligned}
+> {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top} \mathopen{}\left(2 \mathbf{I}_2\right)\mathclose{} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}
+> &= 2 {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}
+> && \text{(} \mathbf{I}_2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \text{)}
+> \\
+> &= 2 \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\right\rVert\mathclose{}^2
+> && \text{(} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\right\rVert\mathclose{}^2 \text{)}
+> \\
+> &> 0,
+> && \text{(} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\text{)}
+> \end{aligned}$$
+>
+> so $-\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ is [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite), and $f$ is [strictly concave](#def-strictly-concave) by part 2 of [Theorem 8](#thm-concave-hessian). [Figure 12](#fig-concave-hessian) shows the dome that its [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) forms.
+>
+> > **NOTE:**
+> >
+> > Show code
+> >
+> > ``` downlit
+> > cc_x_cc <- seq(-1.5, 1.5, length.out = 41)
+> > cc_square_cc <- cc_x_cc^2
+> > cc_sum_cc <- outer(cc_square_cc, cc_square_cc, "+")
+> > cc_dome_cc <- 1 - cc_sum_cc
+> > cc_stops_cc <- c(0, 1)
+> > cc_blue_cols_cc <- c("#CCE0F0", "#0072B2")
+> > cc_blue_cc <- list(cc_stops_cc, cc_blue_cols_cc)
+> > cc_eye_cc <- list(x = 1.6, y = -1.6, z = 0.9)
+> > cc_camera_cc <- list(eye = cc_eye_cc)
+> > cc_xaxis_cc <- list(title = "x1")
+> > cc_yaxis_cc <- list(title = "x2")
+> > cc_zaxis_cc <- list(title = "f(x)")
+> > cc_scene_cc <- list(
+> >   xaxis = cc_xaxis_cc,
+> >   yaxis = cc_yaxis_cc,
+> >   zaxis = cc_zaxis_cc,
+> >   camera = cc_camera_cc
+> > )
+> > plotly::plot_ly() |>
+> >   plotly::add_surface(
+> >     x = cc_x_cc,
+> >     y = cc_x_cc,
+> >     z = cc_dome_cc,
+> >     colorscale = cc_blue_cc,
+> >     showscale = FALSE
+> >   ) |>
+> >   plotly::layout(scene = cc_scene_cc)
+> > ```
+> >
+> > Show code
+> >
+> > ``` python
+> > import matplotlib.pyplot as plt
+> > import numpy as np
+> >
+> > cc_x1_py, cc_x2_py = np.meshgrid(np.linspace(-1.5, 1.5, 41),
+> >                                  np.linspace(-1.5, 1.5, 41))
+> > cc_dome_py = 1 - cc_x1_py**2 - cc_x2_py**2
+> > fig = plt.figure(figsize=(6, 4.5))
+> > ax = fig.add_subplot(projection="3d")
+> > ax.plot_surface(cc_x1_py, cc_x2_py, cc_dome_py, color="#0072B2", alpha=0.7)
+> > ax.set_xlabel("x1")
+> > ax.set_ylabel("x2")
+> > ax.set_zlabel("f(x)")
+> > plt.show();
+> > ```
+> >
+> > ## R
+> >
+> > [![Surface plot of f(x) = 1 - x1^2 - x2^2 for x1 and x2 from -1.5 to 1.5, a dome with its highest point, height 1, at the origin, falling off equally in every direction.](optimization-convexity_files/figure-html/concave-hessian-python-1.png)](optimization-convexity_files/figure-html/concave-hessian-python-1.png "Figure 12: The graph of the strictly concave function f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = 1 - x_1^2 - x_2^2 of Example 16 is a dome with its highest point at \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}.")
+> >
+> > ## Python
+> >
+> > Figure 12: The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of the [strictly concave function](#def-strictly-concave) $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = 1 - x_1^2 - x_2^2$ of [Example 16](#exm-concave-hessian) is a dome with its highest point at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$.
+
+> **NOTE:**
+>
+> **Corollary 2 (Stationary points of a convex function are global minimizers)** If $f$ is as in [Theorem 5](#thm-convex-first-order) and convex, then every stationary point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*$ of $f$ ([Definition 4 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#def-stationary-point)) is a [global minimizer](algebra-basics.llms.md#def-global-minimizer).
 
 > **NOTE:**
 >
@@ -1025,15 +1442,126 @@ Last modified: 2026-11-11 10:50:39 (PST)
 
 > **NOTE:**
 >
-> **Example 13 (A convex function, and a non-convex one)**  
+> **Example 17 (A convex function, and a non-convex one)**  
 >
-> - $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2 - 2 x_1$ is convex by [Theorem 5](#thm-convex-hessian), since its Hessian is $2 \mathbf{I}_2$ ([Example 16 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#exm-second-order-condition)), so its stationary point ${(1, 0)}^{\top}$ ([Example 8 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#exm-stationary-point)) is a global minimizer, as completing the square showed in [Example 9 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#exm-first-order-condition).
+> - $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2 - 2 x_1$ is convex by [Theorem 6](#thm-convex-hessian), since its Hessian is $2 \mathbf{I}_2$ ([Example 16 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#exm-second-order-condition)), so its stationary point ${(1, 0)}^{\top}$ ([Example 8 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#exm-stationary-point)) is a global minimizer, as completing the square showed in [Example 9 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#exm-first-order-condition).
 > - Without convexity, a stationary point need not be a minimizer at all: $x_1^2 - x_2^2$ has the stationary point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, which is not a minimizer ([Example 9 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#exm-first-order-condition)).
-> - The corollary says nothing about whether a minimizer exists: $e^{2x_1 + x_2} - x_1$ is convex ([Example 11](#exm-convex-hessian)) but has no stationary point, and so no local minimizer ([Example 9 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#exm-first-order-condition)).
+> - The corollary says nothing about whether a minimizer exists: $e^{2x_1 + x_2} - x_1$ is convex ([Example 14](#exm-convex-hessian)) but has no stationary point, and so no local minimizer ([Example 9 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#exm-first-order-condition)).
 
 > **NOTE:**
 >
-> **Theorem 7 (The exponential function lies above its tangent line at zero)** For every [real](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $x$,
+> **Definition 11 (Convex optimization problem, convex problem)** A [minimization problem](optimization-constrained.llms.md#def-minimization-problem) whose [objective function](optimization-constrained.llms.md#def-objective-function) is [convex](algebra-sums.llms.md#def-convex-function) and whose [feasible set](optimization-constrained.llms.md#def-feasible-set) is a [convex set](#def-convex-set) is a **convex optimization problem** (or **convex problem**) [\[6\]](#ref-wikipedia_convex_optimization).
+
+> **NOTE:**
+>
+> **Example 18 (Minimizing over a line, and over a circle)** Let $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2$. Its [Hessian](vector-calculus.llms.md#def-hessian) is $2 \mathbf{I}_2$ at every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, which is [positive semidefinite](linear-algebra-special-matrices.llms.md#def-positive-semidefinite), so $f$ is [convex](algebra-sums.llms.md#def-convex-function) by part 1 of [Theorem 6](#thm-convex-hessian).
+>
+> - Minimizing $f$ subject to $3 x_1 + 4 x_2 = 5$, as in [the example of a minimization problem](optimization-constrained.llms.md#exm-minimization-problem), is a [convex problem](#def-convex-optimization-problem). Its [feasible set](optimization-constrained.llms.md#def-feasible-set) $L = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^2 : 3 x_1 + 4 x_2 = 5\right\}\mathclose{}$ is a [convex set](#def-convex-set): for $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in L$ and $t \in [0, 1]$,
+>
+>   $$\begin{aligned}
+>   3 \mathopen{}\left(t x_1 + (1 - t) y_1\right)\mathclose{} + 4 \mathopen{}\left(t x_2 + (1 - t) y_2\right)\mathclose{}
+>   &= t \mathopen{}\left(3 x_1 + 4 x_2\right)\mathclose{} + (1 - t) \mathopen{}\left(3 y_1 + 4 y_2\right)\mathclose{}
+>   && \text{(distribute and regroup)}
+>   \\
+>   &= 5 t + 5 (1 - t)
+>   && \text{(} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in L \text{)}
+>   \\
+>   &= 5,
+>   && \text{(arithmetic)}
+>   \end{aligned}$$
+>
+>   so $t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ (1 - t) \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in L$.
+>
+> - Minimizing the same $f$ subject to $x_1^2 + x_2^2 = 1$ is not a [convex problem](#def-convex-optimization-problem), because its [feasible set](optimization-constrained.llms.md#def-feasible-set), the [unit circle](algebra-trigonometry.llms.md#def-unit-circle) $C$, is not a [convex set](#def-convex-set): ${(1, 0)}^{\top}$ and ${(-1, 0)}^{\top}$ are in $C$, but with $t = \tfrac{1}{2}$ the point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ is not, since $0^2 + 0^2 = 0 \ne 1$.
+>
+> [Figure 13](#fig-convex-optimization-problem) shows both feasible sets.
+>
+> > **NOTE:**
+> >
+> > Show code
+> >
+> > ``` downlit
+> > cop_x1_fc <- seq(-1.5, 2.5, length.out = 2)
+> > cop_x2_fc <- (5 - 3 * cop_x1_fc) / 4
+> > cop_line_fc <- tibble::tibble(x1 = cop_x1_fc, x2 = cop_x2_fc)
+> > cop_angle_fc <- seq(0, 2 * pi, length.out = 201)
+> > cop_cos_fc <- cos(cop_angle_fc)
+> > cop_sin_fc <- sin(cop_angle_fc)
+> > cop_circle_fc <- tibble::tibble(x1 = cop_cos_fc, x2 = cop_sin_fc)
+> > cop_line_pts_x1_fc <- c(-1, 1)
+> > cop_line_pts_x2_fc <- c(2, 0.5)
+> > cop_line_pts_fc <- tibble::tibble(
+> >   x1 = cop_line_pts_x1_fc,
+> >   x2 = cop_line_pts_x2_fc
+> > )
+> > cop_circle_pts_x1_fc <- c(-1, 1)
+> > cop_circle_pts_x2_fc <- c(0, 0)
+> > cop_circle_pts_fc <- tibble::tibble(
+> >   x1 = cop_circle_pts_x1_fc,
+> >   x2 = cop_circle_pts_x2_fc
+> > )
+> > cop_origin_fc <- tibble::tibble(x1 = 0, x2 = 0)
+> > cop_aes_fc <- ggplot2::aes(x = x1, y = x2)
+> > ggplot2::ggplot() +
+> >   ggplot2::geom_line(
+> >     data = cop_line_fc, mapping = cop_aes_fc, colour = "#0072B2"
+> >   ) +
+> >   ggplot2::geom_point(
+> >     data = cop_line_pts_fc, mapping = cop_aes_fc,
+> >     colour = "#0072B2", size = 3
+> >   ) +
+> >   ggplot2::geom_path(
+> >     data = cop_circle_fc, mapping = cop_aes_fc, colour = "#D55E00"
+> >   ) +
+> >   ggplot2::geom_line(
+> >     data = cop_circle_pts_fc, mapping = cop_aes_fc,
+> >     colour = "#D55E00", linetype = "dashed"
+> >   ) +
+> >   ggplot2::geom_point(
+> >     data = cop_circle_pts_fc, mapping = cop_aes_fc,
+> >     colour = "#D55E00", size = 3
+> >   ) +
+> >   ggplot2::geom_point(
+> >     data = cop_origin_fc, mapping = cop_aes_fc,
+> >     colour = "#D55E00", shape = 21, fill = "white", size = 3
+> >   ) +
+> >   ggplot2::coord_fixed() +
+> >   ggplot2::labs(x = "x1", y = "x2")
+> > ```
+> >
+> > Show code
+> >
+> > ``` python
+> > import matplotlib.pyplot as plt
+> > import numpy as np
+> >
+> > cop_x1_fc = np.array([-1.5, 2.5])
+> > cop_angle_fc = np.linspace(0, 2 * np.pi, 201)
+> > fig, ax = plt.subplots(figsize=(4.5, 4.5), layout="constrained")
+> > ax.plot(cop_x1_fc, (5 - 3 * cop_x1_fc) / 4, color="#0072B2");
+> > ax.plot([-1, 1], [2, 0.5], "o", color="#0072B2", markersize=8);
+> > ax.plot(np.cos(cop_angle_fc), np.sin(cop_angle_fc), color="#D55E00");
+> > ax.plot([-1, 1], [0, 0], "o--", color="#D55E00", markersize=8);
+> > ax.plot(0, 0, "o", color="#D55E00", markerfacecolor="white", markersize=8);
+> > ax.set_aspect("equal");
+> > ax.set_xlabel("x1");
+> > ax.set_ylabel("x2");
+> > plt.show();
+> > ```
+> >
+> > ## R
+> >
+> > [![Two feasible sets in the plane. A blue line, 3 x1 + 4 x2 = 5, holds two blue points, (-1, 2) and (1, 0.5), and the segment between them lies on the line. A vermilion unit circle holds two vermilion points, (1, 0) and (-1, 0); the dashed segment between them crosses the inside of the circle, through an open circle at the origin, which is not on the circle.](optimization-convexity_files/figure-html/convex-optimization-problem-r-3.png)](optimization-convexity_files/figure-html/convex-optimization-problem-r-3.png "Figure 13: The two feasible sets of Example 18. The segment between two points of the line stays on the line, so minimizing over the line is a convex problem. The segment between two points of the circle leaves it, through \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}, so minimizing over the circle is not.")
+> >
+> > ## Python
+> >
+> > [![Two feasible sets in the plane. A blue line, 3 x1 + 4 x2 = 5, holds two blue points, (-1, 2) and (1, 0.5), and the segment between them lies on the line. A vermilion unit circle holds two vermilion points, (1, 0) and (-1, 0); the dashed segment between them crosses the inside of the circle, through an open circle at the origin, which is not on the circle.](optimization-convexity_files/figure-html/convex-optimization-problem-python-1.png)](optimization-convexity_files/figure-html/convex-optimization-problem-python-1.png "Figure 13: The two feasible sets of Example 18. The segment between two points of the line stays on the line, so minimizing over the line is a convex problem. The segment between two points of the circle leaves it, through \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}, so minimizing over the circle is not.")
+> >
+> > Figure 13: The two [feasible sets](optimization-constrained.llms.md#def-feasible-set) of [Example 18](#exm-convex-optimization-problem). The segment between two points of the line stays on the line, so minimizing over the line is a [convex problem](#def-convex-optimization-problem). The segment between two points of the circle leaves it, through $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, so minimizing over the circle is not.
+
+> **NOTE:**
+>
+> **Theorem 9 (The exponential function lies above its tangent line at zero)** For every [real](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $x$,
 >
 > $${\operatorname{exp}\mathopen{}\left\{x\right\}\mathclose{}} \ge 1 + x,$$
 >
@@ -1041,13 +1569,13 @@ Last modified: 2026-11-11 10:50:39 (PST)
 
 > **NOTE:**
 >
-> *Proof*. Let $g(x) = {\operatorname{exp}\mathopen{}\left\{x\right\}\mathclose{}} - 1 - x$. The [exponential function](algebra-exponentials.llms.md#def-exponential-function) has [second derivative](calculus-derivatives.llms.md#def-second-derivative) ${\operatorname{exp}\mathopen{}\left\{x\right\}\mathclose{}} > 0$ at every $x$, so it is [convex](algebra-sums.llms.md#def-convex-function) by [Theorem 5](#thm-convex-hessian). The [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $g$ differs from it by a [linear function](algebra-exponentials.llms.md#def-linear-function), so $g$ is convex too. The [derivative](calculus-derivatives.llms.md#def-derivative) of $g$ is $\frac{d g(x)}{d x} = {\operatorname{exp}\mathopen{}\left\{x\right\}\mathclose{}} - 1$, which is $0$ at $x = 0$. By [Corollary 1](#cor-convex-stationary), $0$ is a [global minimizer](algebra-basics.llms.md#def-global-minimizer) of $g$, and $g(0) = 0$, so $g(x) \ge 0$ for every $x$.
+> *Proof*. Let $g(x) = {\operatorname{exp}\mathopen{}\left\{x\right\}\mathclose{}} - 1 - x$. The [exponential function](algebra-exponentials.llms.md#def-exponential-function) has [second derivative](calculus-derivatives.llms.md#def-second-derivative) ${\operatorname{exp}\mathopen{}\left\{x\right\}\mathclose{}} > 0$ at every $x$, so it is [convex](algebra-sums.llms.md#def-convex-function) by [Theorem 6](#thm-convex-hessian). The [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $g$ differs from it by a [linear function](algebra-exponentials.llms.md#def-linear-function), so $g$ is convex too. The [derivative](calculus-derivatives.llms.md#def-derivative) of $g$ is $\frac{d g(x)}{d x} = {\operatorname{exp}\mathopen{}\left\{x\right\}\mathclose{}} - 1$, which is $0$ at $x = 0$. By [Corollary 2](#cor-convex-stationary), $0$ is a [global minimizer](algebra-basics.llms.md#def-global-minimizer) of $g$, and $g(0) = 0$, so $g(x) \ge 0$ for every $x$.
 >
 > Suppose $g(x) = 0$ for some $x$. Then $x$ is also a global minimizer of $g$, and so a [local minimizer](algebra-basics.llms.md#def-local-minimizer). [Fermat’s theorem](optimization-critical-points.llms.md#thm-fermat) gives $\frac{d g(x)}{d x} = {\operatorname{exp}\mathopen{}\left\{x\right\}\mathclose{}} - 1 = 0$. Then ${\operatorname{exp}\mathopen{}\left\{x\right\}\mathclose{}} = 1 = {\operatorname{exp}\mathopen{}\left\{0\right\}\mathclose{}}$, which gives $x = 0$ because the exponential function is injective.
 
 > **NOTE:**
 >
-> **Corollary 2 (The natural logarithm lies below its tangent line at one)** For every $t > 0$,
+> **Corollary 3 (The natural logarithm lies below its tangent line at one)** For every $t > 0$,
 >
 > $${\operatorname{log}\mathopen{}\left\{t\right\}\mathclose{}} \le t - 1,$$
 >
@@ -1055,11 +1583,11 @@ Last modified: 2026-11-11 10:50:39 (PST)
 
 > **NOTE:**
 >
-> *Proof*. Put $x = {\operatorname{log}\mathopen{}\left\{t\right\}\mathclose{}}$, so that ${\operatorname{exp}\mathopen{}\left\{x\right\}\mathclose{}} = t$ by the [inverse relation of the logarithm and the exponential](algebra-exponentials.llms.md#thm-exp-log-inverse). By [Theorem 7](#thm-exp-above-tangent), $t = {\operatorname{exp}\mathopen{}\left\{x\right\}\mathclose{}} \ge 1 + x = 1 + {\operatorname{log}\mathopen{}\left\{t\right\}\mathclose{}}$, which is ${\operatorname{log}\mathopen{}\left\{t\right\}\mathclose{}} \le t - 1$. Equality holds exactly when $x = 0$, that is, when ${\operatorname{log}\mathopen{}\left\{t\right\}\mathclose{}} = 0$, that is, when $t = 1$.
+> *Proof*. Put $x = {\operatorname{log}\mathopen{}\left\{t\right\}\mathclose{}}$, so that ${\operatorname{exp}\mathopen{}\left\{x\right\}\mathclose{}} = t$ by the [inverse relation of the logarithm and the exponential](algebra-exponentials.llms.md#thm-exp-log-inverse). By [Theorem 9](#thm-exp-above-tangent), $t = {\operatorname{exp}\mathopen{}\left\{x\right\}\mathclose{}} \ge 1 + x = 1 + {\operatorname{log}\mathopen{}\left\{t\right\}\mathclose{}}$, which is ${\operatorname{log}\mathopen{}\left\{t\right\}\mathclose{}} \le t - 1$. Equality holds exactly when $x = 0$, that is, when ${\operatorname{log}\mathopen{}\left\{t\right\}\mathclose{}} = 0$, that is, when $t = 1$.
 
 > **NOTE:**
 >
-> **Example 14 (Two values of the bounds)**  
+> **Example 19 (Two values of the bounds)**  
 >
 > At $x = 1$, ${\operatorname{exp}\mathopen{}\left\{1\right\}\mathclose{}} = \text{e}\approx 2.718$, which is at least $1 + 1 = 2$. At $t = 2$, ${\operatorname{log}\mathopen{}\left\{2\right\}\mathclose{}} \approx 0.693$, which is at most $2 - 1 = 1$. Neither is an equality, because $x \ne 0$ and $t \ne 1$.
 
@@ -1067,11 +1595,15 @@ Last modified: 2026-11-11 10:50:39 (PST)
 
 - [Definition 1 (Convex set)](#def-convex-set)
 - [Definition 2 (Half-space)](#def-half-space)
-- [Definition 3 (Strictly convex function)](#def-strictly-convex)
-- [Definition 4 (Concave function)](#def-concave)
-- [Definition 5 (Strictly concave function)](#def-strictly-concave)
-- [Definition 6 (Epigraph)](#def-epigraph)
-- [Definition 7 (Tangent plane)](#def-tangent-plane)
+- [Definition 3 (Convex hull, convex envelope)](#def-convex-hull)
+- [Definition 4 (Strictly convex function)](#def-strictly-convex)
+- [Definition 5 (Concave function)](#def-concave)
+- [Definition 6 (Strictly concave function)](#def-strictly-concave)
+- [Definition 7 (Convex function on a set)](#def-convex-on)
+- [Definition 8 (Function convex at a point)](#def-convex-at)
+- [Definition 9 (Epigraph)](#def-epigraph)
+- [Definition 10 (Tangent plane)](#def-tangent-plane)
+- [Definition 11 (Convex optimization problem, convex problem)](#def-convex-optimization-problem)
 
 Back to top
 
@@ -1087,8 +1619,16 @@ Wikipedia contributors, “Convex set — Wikipedia, the free encyclopedia.” 2
 
 \[3\]
 
-Wikipedia contributors, “Epigraph (mathematics) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Epigraph_(mathematics)>
+Wikipedia contributors, “Convex hull — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Convex_hull>
 
 \[4\]
 
+Wikipedia contributors, “Epigraph (mathematics) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Epigraph_(mathematics)>
+
+\[5\]
+
 Wikipedia contributors, “Tangent space — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Tangent_space>
+
+\[6\]
+
+Wikipedia contributors, “Convex optimization — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Convex_optimization>
