@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-12 01:32:38 (PST)
+Last modified: 2026-11-12 12:11:37 (PST)
 
 # 1 Inner products
 
@@ -116,7 +116,7 @@ Last modified: 2026-11-12 01:32:38 (PST)
 > && \text{(definition of } {\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}}_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}} \text{)}
 > \\
 > &= \sum_{i=1}^pc_i\,(a x_i + b y_i)\,z_i
-> && \text{(}\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~8 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-vector-addition}{\text{Definition~7 in Vectors}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~9 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-vector-addition}{\text{Definition~7 in Vectors}}\text{)}
 > \\
 > &= \sum_{i=1}^p\mathopen{}\left(a\,c_i x_i z_i + b\,c_i y_i z_i\right)\mathclose{}
 > && \text{(distribute, and commute the factors in each product)}
@@ -272,7 +272,7 @@ Last modified: 2026-11-12 01:32:38 (PST)
 > $$\begin{aligned}
 > \mathopen{}\left\lVert c\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}
 > &= \sqrt{\sum_{i=1}^p(c\,x_i)^2}
-> && \text{(}\href{linear-algebra-vectors.qmd#eq-l2-norm}{\text{Equation~2 in Vectors}}\text{, and }\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~8 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-vectors.qmd#eq-l2-norm}{\text{Equation~2 in Vectors}}\text{, and }\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~9 in Matrices}}\text{)}
 > \\
 > &= \sqrt{\sum_{i=1}^pc^2 x_i^2}
 > && \text{(} (c\,x_i)^2 = c^2 x_i^2 \text{)}
@@ -1317,7 +1317,7 @@ Last modified: 2026-11-12 01:32:38 (PST)
 
 > **NOTE:**
 >
-> **Definition 16 (Outer product)** The **outer product** [\[14\]](#ref-wikipedia_outer_product) of a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ of length $m$ and a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ of length $n$ is the $m \times n$ matrix product ([Definition 9 in Matrices](linear-algebra-matrices.llms.md#def-matrix-mult)) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}$ of the column vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ with the row vector ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}$. Its entries are
+> **Definition 16 (Outer product)** The **outer product** [\[14\]](#ref-wikipedia_outer_product) of a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ of length $m$ and a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ of length $n$ is the $m \times n$ matrix product ([Definition 10 in Matrices](linear-algebra-matrices.llms.md#def-matrix-mult)) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}$ of the column vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ with the row vector ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}$. Its entries are
 >
 > $$\mathopen{}\left(\underbrace{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}_{m \times 1}\,\underbrace{{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}}_{1 \times n}\right)\mathclose{}_{ij}
 > = u_i v_j
@@ -1350,7 +1350,7 @@ Last modified: 2026-11-12 01:32:38 (PST)
 
 > **NOTE:**
 >
-> *Remark 6* (Outer product and dot product). The dot product ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ ([Example 7 in Matrices](linear-algebra-matrices.llms.md#exm-dot-product-matmul)) needs two vectors of the same length and gives a number. The outer product $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}$ takes vectors of any two lengths and gives a matrix [\[3, Ch. 1\]](#ref-banerjee2014linear), p. 11.
+> *Remark 6* (Outer product and dot product). The dot product ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ ([Example 8 in Matrices](linear-algebra-matrices.llms.md#exm-dot-product-matmul)) needs two vectors of the same length and gives a number. The outer product $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}$ takes vectors of any two lengths and gives a matrix [\[3, Ch. 1\]](#ref-banerjee2014linear), p. 11.
 >
 > For example, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = (1, 2, 3)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (4, 5)$ in [Example 27](#exm-outer-product) have different lengths, so they have no dot product, but their outer product is a $3 \times 2$ matrix. For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}} = (1, 2)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = (3, 4)$, which have the same length, both products exist:
 >
