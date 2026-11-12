@@ -11299,7 +11299,7 @@
    "page": "optimization",
    "div": "def-quadratic-model",
    "kind": "def",
-   "title": "Quadratic model, second-order Taylor polynomial",
+   "title": "Quadratic approximation, quadratic model, second-order Taylor polynomial",
    "external": false
   },
   {
@@ -11587,7 +11587,7 @@
    "page": "optimization",
    "div": "thm-newton-model",
    "kind": "thm",
-   "title": "The Newton step minimizes the quadratic model",
+   "title": "The Newton step minimizes the quadratic approximation",
    "external": false
   },
   {
@@ -12397,7 +12397,7 @@
    "page": "optimization-newton",
    "div": "def-quadratic-model",
    "kind": "def",
-   "title": "Quadratic model, second-order Taylor polynomial",
+   "title": "Quadratic approximation, quadratic model, second-order Taylor polynomial",
    "external": false
   },
   {
@@ -12433,7 +12433,7 @@
    "page": "optimization-newton",
    "div": "thm-newton-model",
    "kind": "thm",
-   "title": "The Newton step minimizes the quadratic model",
+   "title": "The Newton step minimizes the quadratic approximation",
    "external": false
   },
   {
