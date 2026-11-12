@@ -1,0 +1,21 @@
+:::{#exr-linear-map-zero-practice}
+#### Ruling out a linear map from its value at zero
+
+@thm-linear-map-zero gives a quick test:
+a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) that does not send $\vzero$ to $\vzero$ cannot be a [linear map](#def-linear-map).
+Let $g: \reals^2 \to \reals^2$ be
+
+$$
+g(\vx) = (x_1 + x_2,\ x_2 - 1).
+$$
+
+Is $g$ a [linear map](#def-linear-map)?
+
+::: {.callout-tip}
+#### Hint
+
+Compute $g(\vzero)$.
+
+:::
+
+:::

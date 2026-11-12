@@ -1,0 +1,23 @@
+:::{#exr-column-vector-practice}
+#### Reading one entry of a column vector of temperatures
+
+A week of daily readings is often stored as a [column vector](#def-column-vector),
+with the reading for day $i$ in entry $i$.
+The noon temperatures on the Celsius scale on the first four days of a week are
+
+$$
+\vx = \sbmat{12 \\ 15 \\ 9 \\ 11}.
+$$
+
+Find $x_3$.
+
+::: {.callout-tip}
+#### Hint
+
+In @def-column-vector,
+$x_i$ is the entry in position $i$,
+counting from the top.
+
+:::
+
+:::

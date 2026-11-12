@@ -1,0 +1,27 @@
+:::{#exr-matrix-from-rows-practice}
+#### Stacking rows into a matrix
+
+@thm-matrix-column-of-rows says that a [matrix](#def-matrix) is determined by its [row](#def-matrix-row)s,
+so data recorded one observation at a time
+can be assembled into a matrix by stacking those records.
+Let $\matr{M}$ be the $3 \times 2$ matrix with
+
+$$
+\matr{M}_{1,:} = \begin{bmatrix} 1 & 2 \end{bmatrix},
+\qquad
+\matr{M}_{2,:} = \begin{bmatrix} 3 & -1 \end{bmatrix},
+\qquad
+\matr{M}_{3,:} = \begin{bmatrix} 0 & 4 \end{bmatrix}.
+$$
+
+What is $\matr{M}_{:,2}$, the second [column of $\matr{M}$](#def-matrix-column)?
+
+::: {.callout-tip}
+#### Hint
+
+Stack the [row](#def-matrix-row)s from top to bottom, as in @thm-matrix-column-of-rows,
+then read down the second [column](#def-matrix-column).
+
+:::
+
+:::

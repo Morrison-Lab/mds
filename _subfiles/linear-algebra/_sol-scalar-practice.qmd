@@ -1,0 +1,9 @@
+:::{#sol-scalar-practice}
+
+The tallest student's height and the number of students are [scalars](#def-scalar):
+each is one [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers).
+The list of heights holds $30$ numbers,
+so it is a [column vector](#def-column-vector) in $\reals^{30}$,
+not a scalar.
+
+:::

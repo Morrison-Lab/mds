@@ -1,0 +1,8 @@
+:::{#sol-real-coordinate-space-practice}
+
+Yes.
+$\vecf{v}$ is a [column vector](#def-column-vector) with $3$ entries,
+and each of $\sqrt{2}$, $\pi$ and $-1$ is a [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers),
+so $\vecf{v} \in \reals^3$ by @def-real-coordinate-space.
+
+:::

@@ -1,0 +1,7 @@
+:::{#sol-column-vector-practice}
+
+$x_3 = 9$,
+the third entry from the top,
+so the noon temperature on day $3$ was $9$ on the Celsius scale.
+
+:::
