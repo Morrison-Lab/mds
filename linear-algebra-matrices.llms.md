@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-12 11:28:31 (PST)
+Last modified: 2026-11-12 12:21:59 (PST)
 
 > **NOTE:**
 >
@@ -2284,6 +2284,32 @@ Last modified: 2026-11-12 11:28:31 (PST)
 
 > **NOTE:**
 >
+> **Exercise 52 (Transposing a sum of two matrices)** [Theorem 18](#thm-transpose-sum) lets a [transpose](#def-matrix-transpose) be taken before or after adding, whichever is less work. Let
+>
+> $$\mathbf{A} = \begin{bmatrix}1 & 2 & 0 \\ 3 & -1 & 4\end{bmatrix},
+> \qquad
+> \mathbf{B} = \begin{bmatrix}0 & 1 & 1 \\ 2 & 2 & -3\end{bmatrix}.$$
+>
+> Find ${(\mathbf{A} + \mathbf{B})}^{\top}$.
+>
+> > **TIP:**
+> >
+> > Add first with [Definition 8](#def-matrix-addition), then take the [transpose](#def-matrix-transpose).
+
+> **NOTE:**
+>
+> *Solution 52*. Adding entry by entry,
+>
+> $$\mathbf{A} + \mathbf{B} = \begin{bmatrix}1 & 3 & 1 \\ 5 & 1 & 1\end{bmatrix},$$
+>
+> so
+>
+> $${(\mathbf{A} + \mathbf{B})}^{\top} = \begin{bmatrix}1 & 5 \\ 3 & 1 \\ 1 & 1\end{bmatrix}.$$
+>
+> By [Theorem 18](#thm-transpose-sum), adding ${\mathbf{A}}^{\top} = \begin{bmatrix}1 & 3 \\ 2 & -1 \\ 0 & 4\end{bmatrix}$ and ${\mathbf{B}}^{\top} = \begin{bmatrix}0 & 2 \\ 1 & 2 \\ 1 & -3\end{bmatrix}$ gives the same [matrix](#def-matrix).
+
+> **NOTE:**
+>
 > **Theorem 19 (Transpose of a product)** For an $m \times k$ matrix $\mathbf{A}$ and a $k \times n$ matrix $\mathbf{B}$:
 >
 > $$\underbrace{{(\mathbf{A}\mathbf{B})}^{\top}}_{n \times m}
@@ -2331,7 +2357,7 @@ Last modified: 2026-11-12 11:28:31 (PST)
 
 > **NOTE:**
 >
-> **Exercise 52 (The order of the factors in a transposed square product)** [Remark 8](#rem-transpose-product-order) shows that, for factors that are not [square](#def-square-matrix), keeping the original order of the factors in the [transpose](#def-matrix-transpose) of a [product](#def-matrix-mult) can give an undefined product. For two [square matrices](#def-square-matrix) of the same size, both ${\mathbf{A}}^{\top}{\mathbf{B}}^{\top}$ and ${\mathbf{B}}^{\top}{\mathbf{A}}^{\top}$ are defined, so the shapes alone cannot settle which order gives ${(\mathbf{A}\mathbf{B})}^{\top}$. Let
+> **Exercise 53 (The order of the factors in a transposed square product)** [Remark 8](#rem-transpose-product-order) shows that, for factors that are not [square](#def-square-matrix), keeping the original order of the factors in the [transpose](#def-matrix-transpose) of a [product](#def-matrix-mult) can give an undefined product. For two [square matrices](#def-square-matrix) of the same size, both ${\mathbf{A}}^{\top}{\mathbf{B}}^{\top}$ and ${\mathbf{B}}^{\top}{\mathbf{A}}^{\top}$ are defined, so the shapes alone cannot settle which order gives ${(\mathbf{A}\mathbf{B})}^{\top}$. Let
 >
 > $$\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 0 & 1 \end{bmatrix},
 > \qquad
@@ -2345,7 +2371,7 @@ Last modified: 2026-11-12 11:28:31 (PST)
 
 > **NOTE:**
 >
-> *Solution 52*. No: the two [matrices](#def-matrix) differ, so keeping the order of the factors gives the wrong [transpose](#def-matrix-transpose).
+> *Solution 53*. No: the two [matrices](#def-matrix) differ, so keeping the order of the factors gives the wrong [transpose](#def-matrix-transpose).
 >
 > The [product](#def-matrix-mult) $\mathbf{A}\mathbf{B}$ and its transpose are
 >
@@ -2419,6 +2445,34 @@ Last modified: 2026-11-12 11:28:31 (PST)
 > $${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}\,{\mathbf{M}}^{\top}\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = 3 \cdot 1 + (-1) \cdot 8 = -5.$$
 >
 > The two products are equal, as the theorem says. In least squares, this is why the two cross terms of ${(\mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})}^{\top}(\mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})$ are equal and can be combined.
+
+> **NOTE:**
+>
+> **Exercise 54 (Evaluating a product of a vector, a matrix and a vector)** [Theorem 20](#thm-scalar-transpose) turns ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}\,{\mathbf{M}}^{\top}\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ back into ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top}\mathbf{M}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$, which can be the easier [product](#def-matrix-mult) of a vector, a [matrix](#def-matrix) and a vector to compute. Let
+>
+> $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = \begin{bmatrix}1 \\ -1\end{bmatrix},
+> \qquad
+> \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \begin{bmatrix}2 \\ 3\end{bmatrix},
+> \qquad
+> \mathbf{M} = \begin{bmatrix}0 & 1 \\ 2 & 0\end{bmatrix}.$$
+>
+> Find ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}\,{\mathbf{M}}^{\top}\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$.
+>
+> > **TIP:**
+> >
+> > By [Theorem 20](#thm-scalar-transpose), it is enough to compute ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top}\mathbf{M}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$.
+
+> **NOTE:**
+>
+> *Solution 54*. By [Theorem 20](#thm-scalar-transpose), ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}\,{\mathbf{M}}^{\top}\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top}\mathbf{M}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$. By [Definition 16](#def-matvec-mult),
+>
+> $$\mathbf{M}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \begin{bmatrix}0 \cdot 2 + 1 \cdot 3 \\ 2 \cdot 2 + 0 \cdot 3\end{bmatrix} = \begin{bmatrix}3 \\ 4\end{bmatrix},$$
+>
+> so
+>
+> $${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top}\mathbf{M}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = 1 \cdot 3 + (-1) \cdot 4 = -1.$$
+>
+> The answer is $-1$.
 
 # Definitions on this page
 
