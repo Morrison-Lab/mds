@@ -370,7 +370,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-11 10:22:13 (PST)</p>
+  <p class="date">Last modified: 2026-11-11 15:55:50 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -434,6 +434,101 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 </section>
 <section class="slide level2">
 
+<div id="exr-matrix-column-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1 (Reading off a column of a matrix)</strong></span> When each <a href="#/def-matrix-row">row of a matrix</a> records one observation, each <a href="#/def-matrix-column">column</a> holds one measured quantity for every observation, so reading off a column extracts that quantity’s values. Let</p>
+<p><span class="math display">\[
+\mathbf{A} = \begin{bmatrix} 2 &amp; 0 &amp; -1 \\ 5 &amp; 3 &amp; 4 \end{bmatrix}.
+\]</span></p>
+<p>Find <span class="math inline">\(\mathbf{A}_{:,2}\)</span>, the second <a href="#/def-matrix-column">column of <span class="math inline">\(\mathbf{A}\)</span></a>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>The <span class="math inline">\(j\)</span>th <a href="#/def-matrix-column">column of an <span class="math inline">\(m \times n\)</span> matrix</a> lists the entries <span class="math inline">\(a_{1j}, \ldots, a_{mj}\)</span> from top to bottom, as in <a href="#/exm-matrix-rows-columns" class="quarto-xref">Example&nbsp;1</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-matrix-column-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 1</em>. </span><span class="math inline">\(\mathbf{A}\)</span> has <span class="math inline">\(m = 2\)</span> <a href="#/def-matrix-row">row</a>s, so its second <a href="#/def-matrix-column">column</a> holds the two entries <span class="math inline">\(a_{12}\)</span> and <span class="math inline">\(a_{22}\)</span>:</p>
+<p><span class="math display">\[
+\mathbf{A}_{:,2} = \begin{bmatrix} a_{12} \\ a_{22} \end{bmatrix}
+= \begin{bmatrix} 0 \\ 3 \end{bmatrix}.
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exr-matrix-size-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2 (Counting the rows and columns of a matrix)</strong></span> Data with one <a href="#/def-matrix-row">row</a> per observation and one <a href="#/def-matrix-column">column</a> per measured quantity is stored as a <a href="#/def-matrix">matrix</a>, so the matrix’s number of rows is the number of observations and its number of columns is the number of quantities. Let</p>
+<p><span class="math display">\[
+\mathbf{C} = \begin{bmatrix} 4 &amp; 0 \\ 1 &amp; -3 \\ 2 &amp; 7 \end{bmatrix}.
+\]</span></p>
+<p>Find <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> such that <span class="math inline">\(\mathbf{C}\)</span> is an <span class="math inline">\(m \times n\)</span> matrix.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>In <a href="#/def-matrix" class="quarto-xref">Definition&nbsp;1</a>, <span class="math inline">\(m\)</span> counts the <a href="#/def-matrix-row">row</a>s and <span class="math inline">\(n\)</span> counts the <a href="#/def-matrix-column">column</a>s.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-matrix-size-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 2</em>. </span><span class="math inline">\(\mathbf{C}\)</span> has three <a href="#/def-matrix-row">row</a>s, <span class="math inline">\(\begin{bmatrix} 4 &amp; 0 \end{bmatrix}\)</span>, <span class="math inline">\(\begin{bmatrix} 1 &amp; -3 \end{bmatrix}\)</span> and <span class="math inline">\(\begin{bmatrix} 2 &amp; 7 \end{bmatrix}\)</span>, and each row has two entries, so <span class="math inline">\(\mathbf{C}\)</span> has two <a href="#/def-matrix-column">column</a>s. So <span class="math inline">\(m = 3\)</span> and <span class="math inline">\(n = 2\)</span>: <span class="math inline">\(\mathbf{C}\)</span> is a <span class="math inline">\(3 \times 2\)</span> <a href="#/def-matrix">matrix</a>, with <span class="math inline">\(3 \cdot 2 = 6\)</span> entries.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exr-matrix-row-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 3 (Reading off a row of a matrix)</strong></span> When each <a href="#/def-matrix-row">row of a matrix</a> records one observation, reading off a <a href="#/def-matrix-row">row</a> extracts every measured quantity for that one observation. Let</p>
+<p><span class="math display">\[
+\mathbf{D} = \begin{bmatrix} 1 &amp; -4 &amp; 2 \\ 0 &amp; 6 &amp; 3 \\ 5 &amp; 5 &amp; -1 \end{bmatrix}.
+\]</span></p>
+<p>Find <span class="math inline">\(\mathbf{D}_{3,:}\)</span>, the third <a href="#/def-matrix-row">row of <span class="math inline">\(\mathbf{D}\)</span></a>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>A <a href="#/def-matrix-row">row of a matrix</a> lists the entries <span class="math inline">\(a_{i1}, \ldots, a_{in}\)</span> from left to right, as in <a href="#/exm-matrix-rows-columns" class="quarto-xref">Example&nbsp;1</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-matrix-row-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 3</em>. </span>Write <span class="math inline">\(d_{ij}\)</span> for the entry of <span class="math inline">\(\mathbf{D}\)</span> in <a href="#/def-matrix-row">row</a> <span class="math inline">\(i\)</span> and <a href="#/def-matrix-column">column</a> <span class="math inline">\(j\)</span>. <span class="math inline">\(\mathbf{D}\)</span> has <span class="math inline">\(n = 3\)</span> columns, so its third <a href="#/def-matrix-row">row</a> holds the three entries <span class="math inline">\(d_{31}\)</span>, <span class="math inline">\(d_{32}\)</span> and <span class="math inline">\(d_{33}\)</span>:</p>
+<p><span class="math display">\[
+\mathbf{D}_{3,:} = \begin{bmatrix} d_{31} &amp; d_{32} &amp; d_{33} \end{bmatrix}
+= \begin{bmatrix} 5 &amp; 5 &amp; -1 \end{bmatrix}.
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
 <div id="thm-matrix-column-of-rows" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 1 (A matrix is a column of its rows)</strong></span> An <span class="math inline">\(m \times n\)</span> <a href="#/def-matrix">matrix</a> <span class="math inline">\(\mathbf{A}\)</span> is the <a href="./linear-algebra-vectors.html#def-column-vector">column vector</a> whose entries are its <a href="#/def-matrix-row">rows</a>:</p>
 <p><span class="math display">\[
@@ -443,6 +538,53 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 \vdots \\
 \mathbf{A}_{m,:}
 \end{bmatrix}.
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exr-matrix-from-rows-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 4 (Stacking rows into a matrix)</strong></span> <a href="#/thm-matrix-column-of-rows" class="quarto-xref">Theorem&nbsp;1</a> says that a <a href="#/def-matrix">matrix</a> is determined by its <a href="#/def-matrix-row">row</a>s, so data recorded one observation at a time can be assembled into a matrix by stacking those records. Let <span class="math inline">\(\mathbf{M}\)</span> be the <span class="math inline">\(3 \times 2\)</span> matrix with</p>
+<p><span class="math display">\[
+\mathbf{M}_{1,:} = \begin{bmatrix} 1 &amp; 2 \end{bmatrix},
+\qquad
+\mathbf{M}_{2,:} = \begin{bmatrix} 3 &amp; -1 \end{bmatrix},
+\qquad
+\mathbf{M}_{3,:} = \begin{bmatrix} 0 &amp; 4 \end{bmatrix}.
+\]</span></p>
+<p>What is <span class="math inline">\(\mathbf{M}_{:,2}\)</span>, the second <a href="#/def-matrix-column">column of <span class="math inline">\(\mathbf{M}\)</span></a>?</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Stack the <a href="#/def-matrix-row">row</a>s from top to bottom, as in <a href="#/thm-matrix-column-of-rows" class="quarto-xref">Theorem&nbsp;1</a>, then read down the second <a href="#/def-matrix-column">column</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-matrix-from-rows-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 4</em>. </span>Stacking the three <a href="#/def-matrix-row">row</a>s from top to bottom gives</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathbf{M}
+&amp;= \begin{bmatrix} \mathbf{M}_{1,:} \\ \mathbf{M}_{2,:} \\ \mathbf{M}_{3,:} \end{bmatrix}
+&amp;&amp; \text{(}\href{#thm-matrix-column-of-rows}{\text{Theorem~1}}\text{)}
+\\
+&amp;= \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; -1 \\ 0 &amp; 4 \end{bmatrix},
+&amp;&amp; \text{(substitute the rows)}
+\end{aligned}
+\]</span></p>
+<p>so the second <a href="#/def-matrix-column">column of <span class="math inline">\(\mathbf{M}\)</span></a> lists the second entry of each <a href="#/def-matrix-row">row</a>:</p>
+<p><span class="math display">\[
+\mathbf{M}_{:,2} = \begin{bmatrix} 2 \\ -1 \\ 4 \end{bmatrix}.
 \]</span></p>
 </div>
 </section>
@@ -499,6 +641,39 @@ not taken from that page.
 <p>a <span class="math inline">\(3 \times 2\)</span> matrix. For instance, entry <span class="math inline">\((1, 2)\)</span> of the transpose is <span class="math inline">\(a_{21} = 4\)</span>.</p>
 </div>
 </section>
+<section class="slide level2">
+
+<div id="exr-matrix-transpose-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5 (Transposing a <span class="math inline">\(3 \times 2\)</span> matrix)</strong></span> The <a href="#/def-matrix-transpose">transpose</a> turns the <a href="#/def-matrix-row">row</a>s of a <a href="#/def-matrix">matrix</a> into <a href="#/def-matrix-column">column</a>s, just as the <a href="./linear-algebra-vectors.html#def-transpose">transpose of a vector</a> turns a column into a row. Let</p>
+<p><span class="math display">\[
+\mathbf{B} = \begin{bmatrix} 1 &amp; -2 \\ 0 &amp; 3 \\ 4 &amp; 5 \end{bmatrix}.
+\]</span></p>
+<p>Compute <span class="math inline">\({\mathbf{B}}^{\top}\)</span>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Entry <span class="math inline">\((i, j)\)</span> of the <a href="#/def-matrix-transpose">transpose</a> is entry <span class="math inline">\((j, i)\)</span> of the original <a href="#/def-matrix">matrix</a>, as in <a href="#/exm-matrix-transpose" class="quarto-xref">Example&nbsp;3</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-matrix-transpose-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 5</em>. </span><span class="math inline">\(\mathbf{B}\)</span> is <span class="math inline">\(3 \times 2\)</span>, so its <a href="#/def-matrix-transpose">transpose</a> is <span class="math inline">\(2 \times 3\)</span>. The <span class="math inline">\(i\)</span>th <a href="#/def-matrix-row">row of <span class="math inline">\({\mathbf{B}}^{\top}\)</span></a> is the <span class="math inline">\(i\)</span>th <a href="#/def-matrix-column">column of <span class="math inline">\(\mathbf{B}\)</span></a>:</p>
+<p><span class="math display">\[
+{\mathbf{B}}^{\top} = \begin{bmatrix} 1 &amp; 0 &amp; 4 \\ -2 &amp; 3 &amp; 5 \end{bmatrix}.
+\]</span></p>
+<p>For instance, entry <span class="math inline">\((2, 3)\)</span> of <span class="math inline">\({\mathbf{B}}^{\top}\)</span> is <span class="math inline">\(b_{32} = 5\)</span>.</p>
+</div>
+</section>
 <section id="matrix-addition" class="slide level2" data-number="2">
 <h2><span class="header-section-number">2</span> Matrix addition</h2>
 <div id="def-zero-matrix" class="theorem definition">
@@ -551,6 +726,47 @@ not taken from that page.
 </section>
 <section class="slide level2">
 
+<div id="exr-matrix-addition-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 6 (Adding two <span class="math inline">\(2 \times 2\)</span> matrices)</strong></span> A <a href="#/def-matrix-addition">matrix sum</a> combines two tables of the same shape entry by entry, such as two months of counts recorded in the same <a href="#/def-matrix-row">row</a>s and <a href="#/def-matrix-column">column</a>s. Let</p>
+<p><span class="math display">\[
+\mathbf{A} = \begin{bmatrix} 1 &amp; -1 \\ 2 &amp; 0 \end{bmatrix},
+\qquad
+\mathbf{B} = \begin{bmatrix} 3 &amp; 2 \\ -2 &amp; 5 \end{bmatrix}.
+\]</span></p>
+<p>Compute <span class="math inline">\(\mathbf{A} + \mathbf{B}\)</span>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Add the entries in the same position, as in <a href="#/exm-matrix-addition" class="quarto-xref">Example&nbsp;5</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-matrix-addition-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 6</em>. </span>Both <a href="#/def-matrix">matrices</a> are <span class="math inline">\(2 \times 2\)</span>, so the <a href="#/def-matrix-addition">matrix sum</a> is defined:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathbf{A} + \mathbf{B}
+&amp;= \begin{bmatrix} 1 + 3 &amp; -1 + 2 \\ 2 + (-2) &amp; 0 + 5 \end{bmatrix}
+&amp;&amp; \text{(add entry by entry)}
+\\
+&amp;= \begin{bmatrix} 4 &amp; 1 \\ 0 &amp; 5 \end{bmatrix}.
+&amp;&amp; \text{(add)}
+\end{aligned}
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
 <div id="thm-matadd-commutative" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 3 (Matrix addition is commutative)</strong></span> For <span class="math inline">\(m \times n\)</span> matrices <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span>, matrix addition is <a href="./algebra-sums.html#def-commutative">commutative</a>:</p>
 <p><span class="math display">\[\mathbf{A} + \mathbf{B} = \mathbf{B} + \mathbf{A}\]</span></p>
@@ -592,6 +808,47 @@ not taken from that page.
 3 \begin{bmatrix} 1 &amp; -2 \\ 0 &amp; 4 \end{bmatrix}
 &amp;= \begin{bmatrix} 3 \cdot 1 &amp; 3 \cdot(-2) \\ 3 \cdot 0 &amp; 3 \cdot 4 \end{bmatrix} \\
 &amp;= \begin{bmatrix} 3 &amp; -6 \\ 0 &amp; 12 \end{bmatrix}.
+\end{aligned}
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exr-scalar-mult-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 7 (Multiplying a matrix by a negative factor)</strong></span> A <a href="#/def-scalar-mult">scalar multiple</a> rescales every entry of a <a href="#/def-matrix">matrix</a> by the same factor, as when a table of distances is converted from meters to centimeters. A negative factor flips the sign of every entry, and a factor between <span class="math inline">\(-1\)</span> and <span class="math inline">\(1\)</span> shrinks every entry toward <span class="math inline">\(0\)</span>. Let</p>
+<p><span class="math display">\[
+\mathbf{C} = \begin{bmatrix} 4 &amp; -2 \\ 0 &amp; 6 \end{bmatrix}.
+\]</span></p>
+<p>Compute <span class="math inline">\(-\frac{1}{2} \mathbf{C}\)</span>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Multiply each entry by <span class="math inline">\(-\frac{1}{2}\)</span>, as in <a href="#/exm-scalar-mult" class="quarto-xref">Example&nbsp;6</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-scalar-mult-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 7</em>. </span><span class="math display">\[
+\begin{aligned}
+-\frac{1}{2} \mathbf{C}
+&amp;= \begin{bmatrix}
+-\frac{1}{2} \cdot 4 &amp; -\frac{1}{2} \cdot(-2) \\
+-\frac{1}{2} \cdot 0 &amp; -\frac{1}{2} \cdot 6
+\end{bmatrix}
+&amp;&amp; \text{(}\href{#def-scalar-mult}{\text{Definition~8}}\text{)}
+\\
+&amp;= \begin{bmatrix} -2 &amp; 1 \\ 0 &amp; -3 \end{bmatrix}.
+&amp;&amp; \text{(multiply)}
 \end{aligned}
 \]</span></p>
 </div>
@@ -730,7 +987,7 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 <section class="slide level2 scrollable">
 
 <div id="exr-shape-rule" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1 (Which of these products are defined?)</strong></span> Let <span class="math inline">\(\mathbf{A}\)</span> be <span class="math inline">\(4 \times 3\)</span>, let <span class="math inline">\(\mathbf{B}\)</span> be <span class="math inline">\(3 \times 2\)</span>, and let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^3\)</span>. For each expression, say whether it is defined, and if so give the shape of the result:</p>
+<p><span class="theorem-title"><strong>Exercise 8 (Which of these products are defined?)</strong></span> Let <span class="math inline">\(\mathbf{A}\)</span> be <span class="math inline">\(4 \times 3\)</span>, let <span class="math inline">\(\mathbf{B}\)</span> be <span class="math inline">\(3 \times 2\)</span>, and let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^3\)</span>. For each expression, say whether it is defined, and if so give the shape of the result:</p>
 <ol type="1">
 <li><span class="math inline">\(\mathbf{A}\mathbf{B}\)</span></li>
 <li><span class="math inline">\(\mathbf{B}\mathbf{A}\)</span></li>
@@ -740,7 +997,7 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 </ol>
 </div>
 <div id="sol-shape-rule" class="proof solution">
-<p><span class="proof-title"><em>Solution 1</em>. </span>A vector in <span class="math inline">\(\mathbb{R}^3\)</span> is a <span class="math inline">\(3 \times 1\)</span> matrix, so the same rule settles every case.</p>
+<p><span class="proof-title"><em>Solution 8</em>. </span>A vector in <span class="math inline">\(\mathbb{R}^3\)</span> is a <span class="math inline">\(3 \times 1\)</span> matrix, so the same rule settles every case.</p>
 <ol type="1">
 <li><span class="math inline">\(\mathbf{A}\mathbf{B}\)</span>: <span class="math inline">\((4 \times 3)(3 \times 2)\)</span>. The inner pair is <span class="math inline">\(3\)</span> and <span class="math inline">\(3\)</span>, so it is defined, and the result is <span class="math inline">\(4 \times 2\)</span>.</li>
 <li><span class="math inline">\(\mathbf{B}\mathbf{A}\)</span>: <span class="math inline">\((3 \times 2)(4 \times 3)\)</span>. The inner pair is <span class="math inline">\(2\)</span> and <span class="math inline">\(4\)</span>, which do not match, so it is <strong>not defined</strong>. Matrix multiplication is not commutative, and this is the blunt form of that: swapping the order can leave an expression that means nothing.</li>
@@ -832,6 +1089,51 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 <p><span class="math display">\[\mathbf{I}_m\,\mathbf{A} = \mathbf{A}\]</span></p>
 </div>
 </section>
+<section class="slide level2">
+
+<div id="exr-identity-product-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 9 (Multiplying by an identity matrix)</strong></span> <a href="#/thm-identity" class="quarto-xref">Theorem&nbsp;10</a> says that an <a href="#/def-identity-matrix">identity matrix</a> of the right size leaves a <a href="#/def-matrix">matrix</a> unchanged under <a href="#/def-matrix-mult">matrix multiplication</a>, just as multiplying a number by <span class="math inline">\(1\)</span> leaves it unchanged. Let</p>
+<p><span class="math display">\[
+\mathbf{A} = \begin{bmatrix} 2 &amp; 0 &amp; -1 \\ 5 &amp; 3 &amp; 4 \end{bmatrix}.
+\]</span></p>
+<p>Compute <span class="math inline">\(\mathbf{I}_2 \mathbf{A}\)</span> entry by entry, from the definition of matrix multiplication.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Entry <span class="math inline">\((i, j)\)</span> of <span class="math inline">\(\mathbf{I}_2 \mathbf{A}\)</span> is the <a href="./linear-algebra-vectors.html#def-dot-product">dot product</a> of the <span class="math inline">\(i\)</span>th <a href="#/def-matrix-row">row of <span class="math inline">\(\mathbf{I}_2\)</span></a> with the <span class="math inline">\(j\)</span>th <a href="#/def-matrix-column">column of <span class="math inline">\(\mathbf{A}\)</span></a>, as in <a href="#/exm-dot-product-matmul" class="quarto-xref">Example&nbsp;7</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-identity-product-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 9</em>. </span><span class="math inline">\(\mathbf{I}_2\)</span> is <span class="math inline">\(2 \times 2\)</span> and <span class="math inline">\(\mathbf{A}\)</span> is <span class="math inline">\(2 \times 3\)</span>, so the <a href="#/def-matrix-mult">product</a> is defined and is <span class="math inline">\(2 \times 3\)</span>. The first <a href="#/def-matrix-row">row of <span class="math inline">\(\mathbf{I}_2\)</span></a> is <span class="math inline">\(\begin{bmatrix} 1 &amp; 0 \end{bmatrix}\)</span> and the second is <span class="math inline">\(\begin{bmatrix} 0 &amp; 1 \end{bmatrix}\)</span>, so by <a href="#/def-matrix-mult" class="quarto-xref">Definition&nbsp;9</a></p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathbf{I}_2 \mathbf{A}
+&amp;= \begin{bmatrix}
+1 \cdot 2 + 0 \cdot 5 &amp; 1 \cdot 0 + 0 \cdot 3 &amp; 1 \cdot(-1) + 0 \cdot 4 \\
+0 \cdot 2 + 1 \cdot 5 &amp; 0 \cdot 0 + 1 \cdot 3 &amp; 0 \cdot(-1) + 1 \cdot 4
+\end{bmatrix}
+&amp;&amp; \text{(}\href{#def-matrix-mult}{\text{Definition~9}}\text{)}
+\\
+&amp;= \begin{bmatrix} 2 &amp; 0 &amp; -1 \\ 5 &amp; 3 &amp; 4 \end{bmatrix}
+&amp;&amp; \text{(multiply and add)}
+\\
+&amp;= \mathbf{A}.
+\end{aligned}
+\]</span></p>
+<p>Each row of <span class="math inline">\(\mathbf{I}_2\)</span> has a single <span class="math inline">\(1\)</span>, so entry <span class="math inline">\((i, j)\)</span> of the product picks out entry <span class="math inline">\((i, j)\)</span> of <span class="math inline">\(\mathbf{A}\)</span>, as <a href="#/thm-identity" class="quarto-xref">Theorem&nbsp;10</a> says.</p>
+</div>
+</section>
 <section id="matrix-vector-multiplication" class="slide level2" data-number="6">
 <h2><span class="header-section-number">6</span> Matrix-vector multiplication</h2>
 <div id="def-matvec-mult" class="theorem definition">
@@ -851,6 +1153,53 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 \begin{bmatrix} 1 \cdot 1 + 2 \cdot(-1) \\ 3 \cdot 1 + 4 \cdot(-1) \end{bmatrix} \\
 &amp;=
 \begin{bmatrix} -1 \\ -1 \end{bmatrix}.
+\end{aligned}
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exr-matvec-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 10 (A matrix-vector product with more columns than rows)</strong></span> A <a href="#/def-matvec-mult">matrix-vector product</a> <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> computes one <a href="./linear-algebra-vectors.html#def-weighted-sum">weighted sum</a> of the entries of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> for each <a href="#/def-matrix-row">row of <span class="math inline">\(\mathbf{A}\)</span></a>, so one multiplication computes several weighted sums at once. The <a href="#/def-matrix">matrix</a> <span class="math inline">\(\mathbf{A}\)</span> below has more <a href="#/def-matrix-column">column</a>s than <a href="#/def-matrix-row">row</a>s, so <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is shorter than <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>. Let</p>
+<p><span class="math display">\[
+\mathbf{A} = \begin{bmatrix} 2 &amp; 0 &amp; -1 \\ 5 &amp; 3 &amp; 4 \end{bmatrix},
+\qquad
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}.
+\]</span></p>
+<p>Compute <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Entry <span class="math inline">\(i\)</span> of <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is the <a href="./linear-algebra-vectors.html#def-dot-product">dot product</a> of the <span class="math inline">\(i\)</span>th <a href="#/def-matrix-row">row of <span class="math inline">\(\mathbf{A}\)</span></a> with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>, as in <a href="#/rem-matvec-row-dot-products" class="quarto-xref">Remark&nbsp;4</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-matvec-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 10</em>. </span><span class="math inline">\(\mathbf{A}\)</span> is <span class="math inline">\(2 \times 3\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is <span class="math inline">\(3 \times 1\)</span>, so the <a href="#/def-matvec-mult">matrix-vector product</a> is defined and is <span class="math inline">\(2 \times 1\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
+&amp;= \begin{bmatrix}
+2 \cdot 1 + 0 \cdot 2 + (-1) \cdot 3 \\
+5 \cdot 1 + 3 \cdot 2 + 4 \cdot 3
+\end{bmatrix}
+&amp;&amp; \text{(}\href{#def-matvec-mult}{\text{Definition~15}}\text{)}
+\\
+&amp;= \begin{bmatrix} 2 + 0 - 3 \\ 5 + 6 + 12 \end{bmatrix}
+&amp;&amp; \text{(multiply)}
+\\
+&amp;= \begin{bmatrix} -1 \\ 23 \end{bmatrix}.
+&amp;&amp; \text{(add)}
 \end{aligned}
 \]</span></p>
 </div>
@@ -1610,7 +1959,7 @@ Figure&nbsp;1: The <a href="https://morrison-lab.github.io/mcs/functions.html#de
 <section class="slide level2">
 
 <div id="exr-write-in-matrix-form" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 2 (Write a rule in matrix form)</strong></span> A clinic scores a patient’s risk from three measurements.</p>
+<p><span class="theorem-title"><strong>Exercise 11 (Write a rule in matrix form)</strong></span> A clinic scores a patient’s risk from three measurements.</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -1645,7 +1994,7 @@ Figure&nbsp;1: The <a href="https://morrison-lab.github.io/mcs/functions.html#de
 <section class="slide level2">
 
 <div id="sol-write-in-matrix-form" class="proof solution">
-<p><span class="proof-title"><em>Solution 2</em>. </span>Read the <a href="./linear-algebra-vectors.html#def-lincom-coefficient">coefficients</a> straight off the rule. There are three inputs, so <span class="math inline">\(p = 3\)</span>:</p>
+<p><span class="proof-title"><em>Solution 11</em>. </span>Read the <a href="./linear-algebra-vectors.html#def-lincom-coefficient">coefficients</a> straight off the rule. There are three inputs, so <span class="math inline">\(p = 3\)</span>:</p>
 <p><span class="math display">\[\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \begin{bmatrix} 0.4 \\ 0.2 \\ 1.5 \end{bmatrix},
 \qquad b = -30\]</span></p>
 <p>and the rule is <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ b\)</span>.</p>
@@ -1654,13 +2003,13 @@ Figure&nbsp;1: The <a href="https://morrison-lab.github.io/mcs/functions.html#de
 <section class="slide level2">
 
 <div id="exr-write-in-matrix-form-score" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 3 (Score a patient)</strong></span> Give the score from the rule in <a href="#/exr-write-in-matrix-form" class="quarto-xref">Exercise&nbsp;2</a> for a patient aged <span class="math inline">\(50\)</span> with blood pressure <span class="math inline">\(130\)</span> and BMI <span class="math inline">\(28\)</span>.</p>
+<p><span class="theorem-title"><strong>Exercise 12 (Score a patient)</strong></span> Give the score from the rule in <a href="#/exr-write-in-matrix-form" class="quarto-xref">Exercise&nbsp;11</a> for a patient aged <span class="math inline">\(50\)</span> with blood pressure <span class="math inline">\(130\)</span> and BMI <span class="math inline">\(28\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="sol-write-in-matrix-form-score" class="proof solution">
-<p><span class="proof-title"><em>Solution 3</em>. </span>For the patient,</p>
+<p><span class="proof-title"><em>Solution 12</em>. </span>For the patient,</p>
 <p><span class="math display">\[\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix} 50 \\ 130 \\ 28 \end{bmatrix}\]</span></p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -1683,7 +2032,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <section class="slide level2 scrollable">
 
 <div id="exr-which-are-linear" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 4 (Which of these are affine in <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>?)</strong></span> Each of the five expressions is a function of the weights <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p\)</span>, with the data <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and <span class="math inline">\(y\)</span> held fixed. Say which ones are affine (<a href="#/def-affine-map" class="quarto-xref">Definition&nbsp;23</a>), that is, have the form <a href="#/eq-linear-scalar" class="quarto-xref">Equation&nbsp;1</a> — an inner product plus an offset — and which of those are also linear (<a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;19</a>).</p>
+<p><span class="theorem-title"><strong>Exercise 13 (Which of these are affine in <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>?)</strong></span> Each of the five expressions is a function of the weights <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p\)</span>, with the data <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and <span class="math inline">\(y\)</span> held fixed. Say which ones are affine (<a href="#/def-affine-map" class="quarto-xref">Definition&nbsp;23</a>), that is, have the form <a href="#/eq-linear-scalar" class="quarto-xref">Equation&nbsp;1</a> — an inner product plus an offset — and which of those are also linear (<a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;19</a>).</p>
 <ol type="1">
 <li><span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span></li>
 <li><span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- y\)</span></li>
@@ -1693,7 +2042,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </ol>
 </div>
 <div id="sol-which-are-linear" class="proof solution">
-<p><span class="proof-title"><em>Solution 4</em>. </span></p>
+<p><span class="proof-title"><em>Solution 13</em>. </span></p>
 <ol type="1">
 <li><strong>Affine, and linear.</strong> It is <a href="#/eq-linear-scalar" class="quarto-xref">Equation&nbsp;1</a> with <span class="math inline">\(b = 0\)</span>, which is a linear map by <a href="#/thm-matrix-map-linear" class="quarto-xref">Theorem&nbsp;12</a>: the matrix <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\)</span> times <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>.</li>
 <li><strong>Affine.</strong> Still an inner product plus an offset; here the offset is <span class="math inline">\(b = -y\)</span>, which is a constant because <span class="math inline">\(y\)</span> is held fixed. It is linear only when <span class="math inline">\(y = 0\)</span>: otherwise <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> gives <span class="math inline">\(-y \ne 0\)</span>, and a linear map sends <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> to <span class="math inline">\(0\)</span> (<a href="#/thm-linear-map-zero" class="quarto-xref">Theorem&nbsp;11</a>).</li>
@@ -1783,6 +2132,69 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 = \begin{bmatrix} 3 &amp; 4 \\ 6 &amp; 8 \end{bmatrix}.
 \]</span></p>
 <p>If instead <span class="math inline">\(\mathbf{A}\)</span> is <span class="math inline">\(2 \times 3\)</span> and <span class="math inline">\(\mathbf{B}\)</span> is <span class="math inline">\(3 \times 1\)</span>, then <span class="math inline">\({\mathbf{B}}^{\top}\,{\mathbf{A}}^{\top}\)</span> is a <span class="math inline">\((1 \times 3)(3 \times 2)\)</span> product, but <span class="math inline">\({\mathbf{A}}^{\top}\,{\mathbf{B}}^{\top}\)</span> is a <span class="math inline">\((3 \times 2)(1 \times 3)\)</span> product, which is undefined.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exr-transpose-product-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 14 (The order of the factors in a transposed square product)</strong></span> <a href="#/rem-transpose-product-order" class="quarto-xref">Remark&nbsp;8</a> shows that, for factors that are not <a href="#/def-square-matrix">square</a>, keeping the original order of the factors in the <a href="#/def-matrix-transpose">transpose</a> of a <a href="#/def-matrix-mult">product</a> can give an undefined product. For two <a href="#/def-square-matrix">square matrices</a> of the same size, both <span class="math inline">\({\mathbf{A}}^{\top}{\mathbf{B}}^{\top}\)</span> and <span class="math inline">\({\mathbf{B}}^{\top}{\mathbf{A}}^{\top}\)</span> are defined, so the shapes alone cannot settle which order gives <span class="math inline">\({(\mathbf{A}\mathbf{B})}^{\top}\)</span>. Let</p>
+<p><span class="math display">\[
+\mathbf{A} = \begin{bmatrix} 1 &amp; 2 \\ 0 &amp; 1 \end{bmatrix},
+\qquad
+\mathbf{B} = \begin{bmatrix} 1 &amp; 0 \\ 1 &amp; 1 \end{bmatrix}.
+\]</span></p>
+<p>Does <span class="math inline">\({\mathbf{A}}^{\top}{\mathbf{B}}^{\top}\)</span> equal <span class="math inline">\({(\mathbf{A}\mathbf{B})}^{\top}\)</span> for these <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span>?</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Compute <span class="math inline">\(\mathbf{A}\mathbf{B}\)</span> with <a href="#/def-matrix-mult" class="quarto-xref">Definition&nbsp;9</a> and take its <a href="#/def-matrix-transpose">transpose</a>, then compute <span class="math inline">\({\mathbf{A}}^{\top}{\mathbf{B}}^{\top}\)</span> and compare the two entry by entry.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-transpose-product-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 14</em>. </span>No: the two <a href="#/def-matrix">matrices</a> differ, so keeping the order of the factors gives the wrong <a href="#/def-matrix-transpose">transpose</a>.</p>
+<p>The <a href="#/def-matrix-mult">product</a> <span class="math inline">\(\mathbf{A}\mathbf{B}\)</span> and its transpose are</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathbf{A}\mathbf{B}
+&amp;= \begin{bmatrix}
+1 \cdot 1 + 2 \cdot 1 &amp; 1 \cdot 0 + 2 \cdot 1 \\
+0 \cdot 1 + 1 \cdot 1 &amp; 0 \cdot 0 + 1 \cdot 1
+\end{bmatrix}
+&amp;&amp; \text{(}\href{#def-matrix-mult}{\text{Definition~9}}\text{)}
+\\
+&amp;= \begin{bmatrix} 3 &amp; 2 \\ 1 &amp; 1 \end{bmatrix},
+&amp;&amp; \text{(multiply and add)}
+\end{aligned}
+\]</span></p>
+<p>so <span class="math inline">\({(\mathbf{A}\mathbf{B})}^{\top} = \begin{bmatrix} 3 &amp; 1 \\ 2 &amp; 1 \end{bmatrix}\)</span>.</p>
+<p>The transposes are <span class="math inline">\({\mathbf{A}}^{\top} = \begin{bmatrix} 1 &amp; 0 \\ 2 &amp; 1 \end{bmatrix}\)</span> and <span class="math inline">\({\mathbf{B}}^{\top} = \begin{bmatrix} 1 &amp; 1 \\ 0 &amp; 1 \end{bmatrix}\)</span>, so</p>
+<p><span class="math display">\[
+\begin{aligned}
+{\mathbf{A}}^{\top}{\mathbf{B}}^{\top}
+&amp;= \begin{bmatrix}
+1 \cdot 1 + 0 \cdot 0 &amp; 1 \cdot 1 + 0 \cdot 1 \\
+2 \cdot 1 + 1 \cdot 0 &amp; 2 \cdot 1 + 1 \cdot 1
+\end{bmatrix}
+&amp;&amp; \text{(}\href{#def-matrix-mult}{\text{Definition~9}}\text{)}
+\\
+&amp;= \begin{bmatrix} 1 &amp; 1 \\ 2 &amp; 3 \end{bmatrix}.
+&amp;&amp; \text{(multiply and add)}
+\end{aligned}
+\]</span></p>
+<p>Entry <span class="math inline">\((1, 1)\)</span> is <span class="math inline">\(3\)</span> in <span class="math inline">\({(\mathbf{A}\mathbf{B})}^{\top}\)</span> and <span class="math inline">\(1\)</span> in <span class="math inline">\({\mathbf{A}}^{\top}{\mathbf{B}}^{\top}\)</span>. In the reversed order, as <a href="#/thm-transpose-product" class="quarto-xref">Theorem&nbsp;19</a> says, <span class="math inline">\({\mathbf{B}}^{\top}{\mathbf{A}}^{\top}
+= \begin{bmatrix} 1 \cdot 1 + 1 \cdot 2 &amp; 1 \cdot 0 + 1 \cdot 1 \\ 0 \cdot 1 + 1 \cdot 2 &amp; 0 \cdot 0 + 1 \cdot 1 \end{bmatrix}
+= \begin{bmatrix} 3 &amp; 1 \\ 2 &amp; 1 \end{bmatrix}\)</span>, which matches <span class="math inline">\({(\mathbf{A}\mathbf{B})}^{\top}\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
