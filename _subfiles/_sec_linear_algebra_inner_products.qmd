@@ -60,7 +60,15 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_exm-norm-sum-square.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_thm-cauchy-schwarz.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-cauchy-schwarz.qmd >}}
 
 {{< slidebreak >}}
 
