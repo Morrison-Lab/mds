@@ -7,8 +7,4 @@ is a normed vector space:
 - Positivity and absolute homogeneity hold by @thm-norm-properties.
 - The triangle inequality holds by @thm-triangle-inequality.
 
-Every inner product space $(\reals^p, \iprod{\cdot}{\cdot})$ (@def-inner-product-space)
-naturally defines an induced norm $\norm{\vx} \eqdef \sqrt{\iprod{\vx}{\vx}}$,
-which satisfies all three norm axioms.
-
 :::

@@ -1,0 +1,31 @@
+:::{#exm-induced-norm}
+#### The norm induced by the dot product
+
+In $\reals^p$ equipped with the [dot product](#def-dot-product) (@exm-inner-product-space),
+@eq-induced-norm gives $\norm{\vx} = \sqrt{\vx \cdot \vx}$.
+By @thm-norm-dot-product,
+this induced norm equals the [Euclidean norm](#def-euclidean-norm).
+For $\vx = (3, 4)$:
+
+$$
+\ba
+\sqrt{\vx \cdot \vx}
+&= \sqrt{3 \cdot 3 + 4 \cdot 4}
+&& \text{(@eq-inner-product)}
+\\
+&= \sqrt{25}
+&& \text{(multiply and add)}
+\\
+&= 5
+\ea
+$$
+
+which is the length that @exm-euclidean-norm found.
+
+Every inner product space $(\reals^p, \iprod{\cdot}{\cdot})$ (@def-inner-product-space)
+has an induced norm,
+which satisfies all three norm axioms of @def-norm.
+
+<!-- no-figure: the example computes one number, for the vector that @exm-euclidean-norm already uses -->
+
+:::
