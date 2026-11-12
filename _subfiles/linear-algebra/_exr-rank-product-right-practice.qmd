@@ -3,7 +3,8 @@
 
 @thm-rank-product-right shows how large the [rank](linear-algebra-subspaces.qmd#def-rank) of a [matrix product](linear-algebra-matrices.qmd#def-matrix-mult)
 can be, given the rank of its right factor.
-Let $\matr{A}$ be any $3 \times 2$ [matrix](linear-algebra-matrices.qmd#def-matrix), and let
+Let $\matr{A}$ be any $3 \times 2$ [matrix](linear-algebra-matrices.qmd#def-matrix),
+and let
 
 $$
 \matr{B} = \sbmat{1 & 1 \\ 1 & 1}.
