@@ -1,0 +1,18 @@
+:::{#exr-matadd-inverse-proof}
+#### Proving that a matrix plus its negation is zero
+
+@thm-matadd-inverse says that adding $-\matr{A}$ to a [matrix](#def-matrix) $\matr{A}$ gives the [zero matrix](#def-zero-matrix),
+just as adding $-a$ to a number $a$ gives $0$.
+Here $-\matr{A}$, the negation of $\matr{A}$, negates every entry of $\matr{A}$.
+
+Prove @thm-matadd-inverse.
+
+::: {.callout-tip}
+#### Hint
+
+Express the $(i, j)$ entry of $\matr{A} + (-\matr{A})$ with @def-matrix-addition,
+and use $(-\matr{A})_{ij} = -a_{ij}$ from @thm-matadd-inverse.
+
+:::
+
+:::

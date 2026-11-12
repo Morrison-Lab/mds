@@ -1,0 +1,21 @@
+:::{#exr-identity-matrix-shape}
+#### Whether a matrix with the identity pattern is an identity matrix
+
+An [identity matrix](#def-identity-matrix) has ones on its [main diagonal](#def-main-diagonal) and zeros elsewhere.
+The [matrix](#def-matrix) below has the same pattern of ones and zeros.
+Let
+
+$$
+\matr{J} = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \end{bmatrix}.
+$$
+
+Is $\matr{J}$ an identity matrix?
+
+::: {.callout-tip}
+#### Hint
+
+Compare the shape of $\matr{J}$ with the shape of $\matr{I}_p$ in @def-identity-matrix.
+
+:::
+
+:::

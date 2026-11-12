@@ -1,0 +1,11 @@
+:::{#sol-matrix-column-practice}
+
+$\matr{A}$ has $m = 2$ [row](#def-matrix-row)s,
+so its second [column](#def-matrix-column) holds the two entries $a_{12}$ and $a_{22}$:
+
+$$
+\matr{A}_{:,2} = \begin{bmatrix} a_{12} \\ a_{22} \end{bmatrix}
+= \begin{bmatrix} 0 \\ 3 \end{bmatrix}.
+$$
+
+:::

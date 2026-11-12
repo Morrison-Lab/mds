@@ -1,0 +1,18 @@
+:::{#exr-matadd-assoc-proof}
+#### Proving that matrix addition is associative
+
+@thm-matadd-assoc lets three [matrices](#def-matrix) be added without parentheses,
+just as three numbers can be
+([sums are associative](algebra-sums.qmd#thm-sum-assoc)).
+
+Prove @thm-matadd-assoc.
+
+::: {.callout-tip}
+#### Hint
+
+Two $m \times n$ [matrices](#def-matrix) are [equal](#def-matrix-equality) when their $(i, j)$ entries agree for every $i$ and $j$.
+Apply @def-matrix-addition twice on each side.
+
+:::
+
+:::

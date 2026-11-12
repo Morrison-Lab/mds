@@ -1,0 +1,22 @@
+:::{#exr-matrix-transpose-practice}
+#### Transposing a $3 \times 2$ matrix
+
+The [transpose](#def-matrix-transpose) turns the [row](#def-matrix-row)s of a [matrix](#def-matrix) into [column](#def-matrix-column)s,
+just as the [transpose of a vector](linear-algebra-vectors.qmd#def-transpose) turns a column into a row.
+Let
+
+$$
+\matr{B} = \begin{bmatrix} 1 & -2 \\ 0 & 3 \\ 4 & 5 \end{bmatrix}.
+$$
+
+Compute $\tp{\matr{B}}$.
+
+::: {.callout-tip}
+#### Hint
+
+Entry $(i, j)$ of the [transpose](#def-matrix-transpose) is entry $(j, i)$ of the original [matrix](#def-matrix),
+as in @exm-matrix-transpose.
+
+:::
+
+:::

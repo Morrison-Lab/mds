@@ -1,0 +1,10 @@
+:::{#sol-affine-offset-practice}
+
+$$
+f(\vx) = \sbmat{1 & -1 \\ 0 & 3} \vx + \sbmat{4 \\ -1},
+$$
+
+so the [offset of $f$](#def-affine-offset) is $\vec{b} = \tp{(4, -1)}$.
+Each entry of $\vec{b}$ is the term with no $x_j$ in the matching entry of $f(\vx)$.
+
+:::
