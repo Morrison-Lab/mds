@@ -3,7 +3,7 @@
 
 The **Euclidean norm**
 [@wikipedia_euclidean_vector]
-(or **length**, also called the **$L_2$ norm** and written $\norm{\vx}_2$) of a vector $\vx$ of length $p$ <!-- check-term-links: allow: "norm" here is part of the names this div defines -->
+(or **length**, also called the **$L_2$ norm** and written $\norm{\vx}_2$) of a vector $\vx$ of length $p$
 is the [square root](algebra.qmd#def-square-root) of the [sum](algebra.qmd#def-summation) of the [squares](algebra.qmd#def-square) of its entries:
 
 $$\norm{\vx} \eqdef \sqrt{\sumip x_i^2}$$ {#eq-l2-norm}
