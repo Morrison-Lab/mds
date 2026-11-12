@@ -15,7 +15,7 @@ Compute $\tprod{\matr{A}}{\matr{B}}$.
 ::: {.callout-tip}
 #### Hint
 
-Entry $i$ is the [dot product](linear-algebra-vectors.qmd#def-dot-product) of column $i$ of $\matr{A}$ with $(2, 3)$.
+Entry $i$ is the [dot product](linear-algebra-vectors.qmd#def-dot-product) of [column $i$ of](linear-algebra-matrices.qmd#def-matrix-column) $\matr{A}$ with $(2, 3)$.
 
 :::
 

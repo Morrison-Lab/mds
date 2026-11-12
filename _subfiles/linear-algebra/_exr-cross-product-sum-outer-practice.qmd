@@ -2,7 +2,7 @@
 #### Computing a cross-product matrix one row at a time
 
 @thm-cross-product-sum-outer builds a [cross-product matrix](#def-cross-product-matrix)
-by adding one [outer product](linear-algebra-inner-products.qmd#def-outer-product) per row,
+by adding one [outer product](linear-algebra-inner-products.qmd#def-outer-product) per [row](linear-algebra-matrices.qmd#def-matrix-row),
 which is how it can be updated as observations arrive.
 Let
 
