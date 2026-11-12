@@ -20,7 +20,7 @@ Which of the three candidates is the zero vector with $3$ entries?
 
 @def-zero-vector has two conditions:
 $3$ entries,
-and every entry equal to $0$.
+and $0$ in every entry.
 
 :::
 
