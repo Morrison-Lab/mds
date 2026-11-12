@@ -10,7 +10,7 @@ $$
 $$
 
 so $\vecf{y}$ is in $\mathcal{N}(\tp{\matr{A}})$.
-Here $\matr{A}$ equals its own [transpose](linear-algebra-matrices.qmd#def-matrix-transpose),
+Here $\matr{A}$ [equals](linear-algebra-matrices.qmd#def-matrix-equality) its own [transpose](linear-algebra-matrices.qmd#def-matrix-transpose),
 so $\vecf{y}$ is in $\mathcal{N}(\matr{A})$ as well.
 
 :::

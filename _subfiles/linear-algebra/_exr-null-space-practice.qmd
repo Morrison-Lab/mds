@@ -14,7 +14,7 @@ Find $\mathcal{N}(\matr{A})$ as a [span](linear-algebra-subspaces.qmd#def-span).
 ::: {.callout-tip}
 #### Hint
 
-Write out the two entries of $\matr{A}\vecf{x}$ and make each equal to $0$.
+Write out the two entries of $\matr{A}\vecf{x}$ and set each to $0$.
 
 :::
 
