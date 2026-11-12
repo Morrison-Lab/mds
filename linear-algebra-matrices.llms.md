@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-11 22:34:02 (PST)
+Last modified: 2026-11-11 23:39:51 (PST)
 
 > **NOTE:**
 >
@@ -1216,6 +1216,26 @@ Last modified: 2026-11-11 22:34:02 (PST)
 
 > **NOTE:**
 >
+> **Exercise 30 (Testing whether the absolute value is homogeneous)** A [homogeneous function](#def-homogeneous-function) turns a rescaled input into the same rescaling of its output, including a rescaling by a negative number. Let $f: \mathbb{R}\to \mathbb{R}$ be the [absolute value](algebra-basics.llms.md#def-absolute-value), $f(x) = \mathopen{}\left|x\right|\mathclose{}$.
+>
+> Is $f$ [homogeneous](#def-homogeneous-function)?
+>
+> > **TIP:**
+> >
+> > Try a negative $c$ in [Definition 19](#def-homogeneous-function).
+
+> **NOTE:**
+>
+> *Solution 30*. No. Take $c = -1$ and $x = 1$. Then
+>
+> $$f(c x) = \mathopen{}\left|-1\right|\mathclose{} = 1,
+> \qquad
+> c f(x) = -1 \cdot\mathopen{}\left|1\right|\mathclose{} = -1.$$
+>
+> These differ, so $f$ is not [homogeneous](#def-homogeneous-function). It does satisfy $f(c x) = c f(x)$ for every $c \ge 0$, since then $\mathopen{}\left|c x\right|\mathclose{} = c \mathopen{}\left|x\right|\mathclose{}$.
+
+> **NOTE:**
+>
 > **Definition 20 (Linear map, linear transformation, linear function)** A [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f: \mathbb{R}^p \to \mathbb{R}^m$ is a **linear map** [\[12\]](#ref-wikipedia_linear_map) (also called a **linear transformation** or **linear function**) if it is both [additive](#def-additive-function) and [homogeneous](#def-homogeneous-function).
 
 > **NOTE:**
@@ -1242,11 +1262,61 @@ Last modified: 2026-11-11 22:34:02 (PST)
 
 > **NOTE:**
 >
+> **Exercise 31 (Testing whether a difference of scaled measurements is a linear map)** A score that scales two measurements and takes their difference, such as $3 x_1 - x_2$, is a common building block of a model. Let $f: \mathbb{R}^2 \to \mathbb{R}$ be $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = 3 x_1 - x_2$.
+>
+> Is $f$ a [linear map](#def-linear-map)?
+>
+> > **TIP:**
+> >
+> > Check the two conditions in [Definition 20](#def-linear-map) one at a time, for any $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^2$ and $c \in \mathbb{R}$.
+
+> **NOTE:**
+>
+> *Solution 31*. Yes. For any $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^2$, $f$ is [additive](#def-additive-function):
+>
+> $$\begin{aligned}
+> f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})
+> &= 3 (x_1 + y_1) - (x_2 + y_2)
+> && \text{(}\href{linear-algebra-vectors.qmd#def-vector-addition}{\text{Definition~7 in Vectors}}\text{)}
+> \\&= (3 x_1 - x_2) + (3 y_1 - y_2)
+> && \text{(rearranging the terms)}
+> \\&= f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) + f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}).
+> \end{aligned}$$
+>
+> For any $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^2$ and $c \in \mathbb{R}$, $f$ is [homogeneous](#def-homogeneous-function):
+>
+> $$\begin{aligned}
+> f(c \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})
+> &= 3 c x_1 - c x_2
+> && \text{(}\href{#def-scalar-mult}{\text{Definition~9}}\text{)}
+> \\&= c (3 x_1 - x_2)
+> && \text{(factoring out } c \text{)}
+> \\&= c f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}).
+> \end{aligned}$$
+>
+> Since $f$ is both, it is a [linear map](#def-linear-map).
+
+> **NOTE:**
+>
 > **Definition 21 (Linear operator)** A **linear operator** on $\mathbb{R}^p$ is a linear map ([Definition 20](#def-linear-map)) from $\mathbb{R}^p$ to itself, that is, a linear map $f : \mathbb{R}^p \to \mathbb{R}^p$ whose input and output have the same length. Some authors use “operator” more loosely, for any linear map.
 
 > **NOTE:**
 >
 > **Example 17 (A linear operator, and a linear map that is not one)** The map $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = (2 x_1,\ x_1 + x_2)$ from [Example 16](#exm-linear-map) sends $\mathbb{R}^2$ to $\mathbb{R}^2$, so it is a linear operator on $\mathbb{R}^2$. The linear map $g(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1 + x_2$ sends $\mathbb{R}^2$ to $\mathbb{R}$, so it is linear but not an operator: its outputs have length $1$, not $2$.
+
+> **NOTE:**
+>
+> **Exercise 32 (Testing whether a projection is a linear operator)** Dropping the last coordinate of a point in $\mathbb{R}^3$ projects it onto a plane, as a shadow does. Let $f: \mathbb{R}^3 \to \mathbb{R}^2$ be $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = (x_1, x_2)$. This $f$ is a [linear map](#def-linear-map).
+>
+> Is $f$ a [linear operator](#def-linear-operator) on $\mathbb{R}^3$?
+>
+> > **TIP:**
+> >
+> > Write $f$ as $f: \mathbb{R}^p \to \mathbb{R}^m$, and compare $p$ with $m$ as in [Definition 21](#def-linear-operator).
+
+> **NOTE:**
+>
+> *Solution 32*. No. A [linear operator](#def-linear-operator) on $\mathbb{R}^3$ sends $\mathbb{R}^3$ to $\mathbb{R}^3$. The outputs of $f$ lie in $\mathbb{R}^2$, not $\mathbb{R}^3$, so $f$ is a [linear map](#def-linear-map) but not a linear operator.
 
 > **NOTE:**
 >
@@ -1271,6 +1341,26 @@ Last modified: 2026-11-11 22:34:02 (PST)
 > **Example 18 (Ruling out linearity at zero)** In [Example 16](#exm-linear-map), $g(x) = x + 1$ has $g(0) = 1 \neq 0$, so by [Theorem 11](#thm-linear-map-zero) it is not linear, without checking additivity or homogeneity.
 >
 > Sending $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ is necessary but not sufficient: $h(x) = x^2$ in the same example has $h(0) = 0$ and is still not linear.
+
+> **NOTE:**
+>
+> **Exercise 33 (Ruling out a linear map from its value at zero)** [Theorem 11](#thm-linear-map-zero) gives a quick test: a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) that does not send $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ cannot be a [linear map](#def-linear-map). Let $g: \mathbb{R}^2 \to \mathbb{R}^2$ be
+>
+> $$g(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = (x_1 + x_2,\ x_2 - 1).$$
+>
+> Is $g$ a [linear map](#def-linear-map)?
+>
+> > **TIP:**
+> >
+> > Compute $g(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}})$.
+
+> **NOTE:**
+>
+> *Solution 33*. No.
+>
+> $$g(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}) = (0 + 0,\ 0 - 1) = (0, -1) \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}.$$
+>
+> Every [linear map](#def-linear-map) sends $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ by [Theorem 11](#thm-linear-map-zero), so $g$ is not one.
 
 > **NOTE:**
 >
@@ -1758,7 +1848,7 @@ Last modified: 2026-11-11 22:34:02 (PST)
 
 > **NOTE:**
 >
-> **Exercise 30 (Write a rule in matrix form)** A clinic scores a patient’s risk from three measurements.
+> **Exercise 34 (Write a rule in matrix form)** A clinic scores a patient’s risk from three measurements.
 >
 > | symbol | meaning                 | units    |
 > |--------|-------------------------|----------|
@@ -1774,7 +1864,7 @@ Last modified: 2026-11-11 22:34:02 (PST)
 
 > **NOTE:**
 >
-> *Solution 30*. Read the [coefficients](linear-algebra-vectors.llms.md#def-lincom-coefficient) straight off the rule. There are three inputs, so $p = 3$:
+> *Solution 34*. Read the [coefficients](linear-algebra-vectors.llms.md#def-lincom-coefficient) straight off the rule. There are three inputs, so $p = 3$:
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \begin{bmatrix} 0.4 \\ 0.2 \\ 1.5 \end{bmatrix},
 > \qquad b = -30$$
@@ -1783,11 +1873,11 @@ Last modified: 2026-11-11 22:34:02 (PST)
 
 > **NOTE:**
 >
-> **Exercise 31 (Score a patient)** Give the score from the rule in [Exercise 30](#exr-write-in-matrix-form) for a patient aged $50$ with blood pressure $130$ and BMI $28$.
+> **Exercise 35 (Score a patient)** Give the score from the rule in [Exercise 34](#exr-write-in-matrix-form) for a patient aged $50$ with blood pressure $130$ and BMI $28$.
 
 > **NOTE:**
 >
-> *Solution 31*. For the patient,
+> *Solution 35*. For the patient,
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix} 50 \\ 130 \\ 28 \end{bmatrix}$$
 >
@@ -1808,7 +1898,7 @@ Last modified: 2026-11-11 22:34:02 (PST)
 
 > **NOTE:**
 >
-> **Exercise 32 (Which of these are affine in** $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$?) Each of the five expressions is a function of the weights $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p$, with the data $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $y$ held fixed. Say which ones are affine ([Definition 24](#def-affine-map)), that is, have the form [Equation 1](#eq-linear-scalar) — an inner product plus an offset — and which of those are also linear ([Definition 20](#def-linear-map)).
+> **Exercise 36 (Which of these are affine in** $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$?) Each of the five expressions is a function of the weights $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p$, with the data $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $y$ held fixed. Say which ones are affine ([Definition 24](#def-affine-map)), that is, have the form [Equation 1](#eq-linear-scalar) — an inner product plus an offset — and which of those are also linear ([Definition 20](#def-linear-map)).
 >
 > 1.  $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$
 > 2.  $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- y$
@@ -1818,7 +1908,7 @@ Last modified: 2026-11-11 22:34:02 (PST)
 
 > **NOTE:**
 >
-> *Solution 32*.
+> *Solution 36*.
 >
 > 1.  **Affine, and linear.** It is [Equation 1](#eq-linear-scalar) with $b = 0$, which is a linear map by [Theorem 12](#thm-matrix-map-linear): the matrix ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}$ times $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$.
 > 2.  **Affine.** Still an inner product plus an offset; here the offset is $b = -y$, which is a constant because $y$ is held fixed. It is linear only when $y = 0$: otherwise $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ gives $-y \ne 0$, and a linear map sends $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ to $0$ ([Theorem 11](#thm-linear-map-zero)).
@@ -1908,7 +1998,7 @@ Last modified: 2026-11-11 22:34:02 (PST)
 
 > **NOTE:**
 >
-> **Exercise 33 (The order of the factors in a transposed square product)** [Remark 8](#rem-transpose-product-order) shows that, for factors that are not [square](#def-square-matrix), keeping the original order of the factors in the [transpose](#def-matrix-transpose) of a [product](#def-matrix-mult) can give an undefined product. For two [square matrices](#def-square-matrix) of the same size, both ${\mathbf{A}}^{\top}{\mathbf{B}}^{\top}$ and ${\mathbf{B}}^{\top}{\mathbf{A}}^{\top}$ are defined, so the shapes alone cannot settle which order gives ${(\mathbf{A}\mathbf{B})}^{\top}$. Let
+> **Exercise 37 (The order of the factors in a transposed square product)** [Remark 8](#rem-transpose-product-order) shows that, for factors that are not [square](#def-square-matrix), keeping the original order of the factors in the [transpose](#def-matrix-transpose) of a [product](#def-matrix-mult) can give an undefined product. For two [square matrices](#def-square-matrix) of the same size, both ${\mathbf{A}}^{\top}{\mathbf{B}}^{\top}$ and ${\mathbf{B}}^{\top}{\mathbf{A}}^{\top}$ are defined, so the shapes alone cannot settle which order gives ${(\mathbf{A}\mathbf{B})}^{\top}$. Let
 >
 > $$\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 0 & 1 \end{bmatrix},
 > \qquad
@@ -1922,7 +2012,7 @@ Last modified: 2026-11-11 22:34:02 (PST)
 
 > **NOTE:**
 >
-> *Solution 33*. No: the two [matrices](#def-matrix) differ, so keeping the order of the factors gives the wrong [transpose](#def-matrix-transpose).
+> *Solution 37*. No: the two [matrices](#def-matrix) differ, so keeping the order of the factors gives the wrong [transpose](#def-matrix-transpose).
 >
 > The [product](#def-matrix-mult) $\mathbf{A}\mathbf{B}$ and its transpose are
 >
