@@ -1,0 +1,19 @@
+{{< include mds/_subfiles/linear-algebra/_thm-transpose-sum.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-transpose-product.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_note-thm-transpose-product.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exr-transpose-product-practice.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-transpose-product-practice.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-scalar-transpose.qmd >}}

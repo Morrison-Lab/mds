@@ -1,0 +1,15 @@
+{{< include mds/_subfiles/linear-algebra/_def-matvec-mult.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_note-def-matvec-mult.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exr-matvec-practice.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-matvec-practice.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-linear-system.qmd >}}
