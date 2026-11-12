@@ -361,7 +361,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-12 01:56:07 (PST)</p>
+  <p class="date">Last modified: 2026-11-12 12:27:14 (PST)</p>
 </section><section class="slide level2"><p><span id="vectors"></span></p>
 </section><section class="slide level2 scrollable"><div id="exr-list-as-vector" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 1 (Store a data point as one object)</strong></span> A house has a floor area of <span class="math inline">\(120\)</span> square meters, <span class="math inline">\(3\)</span> bedrooms, and an age of <span class="math inline">\(15\)</span> years.</p>
@@ -414,17 +414,88 @@ x_{p}
 </section><section class="slide level2"><div id="rem-vector-mark-placement" class="proof remark">
 <p><span class="proof-title"><em>Remark 2</em> (Why the vector mark sits under the symbol). </span>In these notes, the mark that shows a symbol is a vector is a tilde under the letter, as in <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>. Many books instead use a bold letter or an arrow over the letter. We chose a mark underneath because bold letters are hard to write by hand on a board, and because the space above a letter is already used by the hat that marks an estimated value, as in <span class="math inline">\(\hat{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}\)</span>. The <a href="https://morrison-lab.github.io/macros/notation-choices.html#sec-vector-mark">notation choices page</a> gives the full reasons and an example of an estimated vector.</p>
 </div>
+</section><section class="slide level2"><div id="exr-column-vector-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2 (Reading one entry of a column vector of temperatures)</strong></span> A week of daily readings is often stored as a <a href="#/def-column-vector">column vector</a>, with the reading for day <span class="math inline">\(i\)</span> in entry <span class="math inline">\(i\)</span>. The noon temperatures on the Celsius scale on the first four days of a week are</p>
+<p><span class="math display">\[
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix}12 \\ 15 \\ 9 \\ 11\end{bmatrix}.
+\]</span></p>
+<p>Find <span class="math inline">\(x_3\)</span>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>In <a href="#/def-column-vector" class="quarto-xref">Definition&nbsp;1</a>, <span class="math inline">\(x_i\)</span> is the entry in position <span class="math inline">\(i\)</span>, counting from the top.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide level2"><div id="sol-column-vector-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 2</em>. </span><span class="math inline">\(x_3 = 9\)</span>, the third entry from the top, so the noon temperature on day <span class="math inline">\(3\)</span> was <span class="math inline">\(9\)</span> on the Celsius scale.</p>
+</div>
 </section><section class="slide level2"><div id="def-real-coordinate-space" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 2 (The set <span class="math inline">\(\mathbb{R}^p\)</span>)</strong></span> For a <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-positive-integer">positive integer</a> <span class="math inline">\(p\)</span>, <span class="math inline">\(\mathbb{R}^p\)</span> is the set of all <a href="#/def-column-vector">column vectors</a> of length <span class="math inline">\(p\)</span> whose entries are <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers">real numbers</a>.</p>
 </div>
 </section><section class="slide level2"><div id="rem-real-coordinate-space-notation" class="proof remark">
 <p><span class="proof-title"><em>Remark 3</em> (Reading <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p\)</span>). </span>Writing <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p\)</span> says, in one symbol, that <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is a column vector with <span class="math inline">\(p\)</span> real entries. For example, <span class="math inline">\((1, -2, 0.5) \in \mathbb{R}^3\)</span>. The vector <span class="math inline">\((1, 2)\)</span> is not in <span class="math inline">\(\mathbb{R}^3\)</span>, because it has only <span class="math inline">\(2\)</span> entries; it is in <span class="math inline">\(\mathbb{R}^2\)</span>. In <a href="#/exr-list-as-vector" class="quarto-xref">Exercise&nbsp;1</a>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^3\)</span>.</p>
 </div>
+</section><section class="slide level2"><div id="exr-real-coordinate-space-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 3 (Testing whether a vector with entries <span class="math inline">\(\sqrt{2}\)</span> and <span class="math inline">\(\pi\)</span> lies in <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> Entries such as <span class="math inline">\(\sqrt{2}\)</span> and <span class="math inline">\(\pi\)</span> have no exact decimal form, but they are still <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers">real numbers</a>. Let</p>
+<p><span class="math display">\[
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \begin{bmatrix}\sqrt{2} \\ \pi \\ -1\end{bmatrix}.
+\]</span></p>
+<p>Is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> in <span class="math inline">\(\mathbb{R}^3\)</span>?</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p><a href="#/def-real-coordinate-space" class="quarto-xref">Definition&nbsp;2</a> has two conditions: the number of entries of the <a href="#/def-column-vector">column vector</a>, and the kind of number in each entry.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide level2"><div id="sol-real-coordinate-space-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 3</em>. </span>Yes. <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> is a <a href="#/def-column-vector">column vector</a> with <span class="math inline">\(3\)</span> entries, and each of <span class="math inline">\(\sqrt{2}\)</span>, <span class="math inline">\(\pi\)</span> and <span class="math inline">\(-1\)</span> is a <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers">real number</a>, so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \in \mathbb{R}^3\)</span> by <a href="#/def-real-coordinate-space" class="quarto-xref">Definition&nbsp;2</a>.</p>
+</div>
 </section><section class="slide level2"><div id="def-scalar" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 3 (Scalar)</strong></span> In linear algebra, a <strong>scalar</strong> <span class="citation" data-cites="wikipedia_scalar_mathematics"><a href="#/references" role="doc-biblioref" onclick="">[2]</a></span> is a single <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers">real number</a>, as opposed to a vector or a matrix, which holds several numbers.</p>
 </div>
 </section><section class="slide level2"><div id="exm-scalar" class="theorem example">
 <p><span class="theorem-title"><strong>Example 1 (Scalars and a vector)</strong></span> The numbers <span class="math inline">\(5\)</span> and <span class="math inline">\(-0.2\)</span> are scalars. The column vector <span class="math inline">\((5, -0.2)\)</span> is not a scalar: it has <span class="math inline">\(2\)</span> entries, so it is in <span class="math inline">\(\mathbb{R}^2\)</span> (<a href="#/def-real-coordinate-space" class="quarto-xref">Definition&nbsp;2</a>), and each of its <span class="math inline">\(2\)</span> entries is a scalar.</p>
+</div>
+</section><section class="slide level2"><div id="exr-scalar-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 4 (Picking out the scalars among class summaries)</strong></span> A summary of a class of <span class="math inline">\(30\)</span> students can report single numbers or whole lists of numbers. Consider these three quantities:</p>
+<ul>
+<li>the height of the tallest student in the class,</li>
+<li>the list of every student’s height,</li>
+<li>the number of students in the class.</li>
+</ul>
+<p>Which of these three quantities are <a href="#/def-scalar">scalars</a>?</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>By <a href="#/def-scalar" class="quarto-xref">Definition&nbsp;3</a>, a <a href="#/def-scalar">scalar</a> is one <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers">real number</a>. Count the numbers in each quantity.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide level2"><div id="sol-scalar-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 4</em>. </span>The tallest student’s height and the number of students are <a href="#/def-scalar">scalars</a>: each is one <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers">real number</a>. The list of heights holds <span class="math inline">\(30\)</span> numbers, so it is a <a href="#/def-column-vector">column vector</a> in <span class="math inline">\(\mathbb{R}^{30}\)</span>, not a scalar.</p>
 </div>
 </section><section class="slide level2"><div id="def-real-vector-valued" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 4 (Real-valued function, scalar-valued function)</strong></span> A <a href="https://morrison-lab.github.io/mcs/functions.html#def-function">function</a> <span class="math inline">\(f : A \to \mathbb{R}\)</span>, whose values are numbers, is <strong>real-valued</strong> (also called <strong>scalar-valued</strong>, since its values are <a href="#/def-scalar">scalars</a>).</p>
@@ -439,6 +510,29 @@ f\mathopen{}\left(\begin{bmatrix}3 \\ 4\end{bmatrix}\right)\mathclose{} = 3 + 4 
 \qquad
 g\mathopen{}\left(\begin{bmatrix}3 \\ 4\end{bmatrix}\right)\mathclose{} = \begin{bmatrix}3 + 4 \\ 3 - 4\end{bmatrix} = \begin{bmatrix}7 \\ -1\end{bmatrix}
 \]</span></p>
+</div>
+</section><section class="slide level2"><div id="exr-real-valued-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5 (Testing whether a price prediction is real-valued)</strong></span> A model predicts a house’s price from three of its features, stored in <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^3\)</span>, with the <a href="https://morrison-lab.github.io/mcs/functions.html#def-function">function</a></p>
+<p><span class="math display">\[
+f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = 2 x_1 + 5 x_2 - x_3.
+\]</span></p>
+<p>Is <span class="math inline">\(f\)</span> <a href="#/def-real-vector-valued">real-valued</a>?</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Evaluate <span class="math inline">\(f\)</span> at one point, and count the numbers in the result.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide level2"><div id="sol-real-valued-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 5</em>. </span>Yes. For every <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^3\)</span>, <span class="math inline">\(2 x_1 + 5 x_2 - x_3\)</span> is one <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers">real number</a>, so <span class="math inline">\(f : \mathbb{R}^3 \to \mathbb{R}\)</span> is <a href="#/def-real-vector-valued">real-valued</a>. For example, <span class="math inline">\(f\mathopen{}\left(\begin{bmatrix}1 \\ 1 \\ 1\end{bmatrix}\right)\mathclose{} = 2 + 5 - 1 = 6\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="def-transpose" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 6 (Transpose)</strong></span> The <strong>transpose</strong> of a column vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is the row vector with the same <a href="https://morrison-lab.github.io/mcs/functions.html#def-sequence">sequence</a> of entries, written horizontally:</p>
@@ -865,7 +959,7 @@ w_i \ge 0 \text{ for each } i
 \]</span></p>
 </div>
 </section><section class="slide level2 scrollable"><div id="exr-euclidean-distance" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 2 (How far apart are two points?)</strong></span> Let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 2)\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (4, 6)\)</span>.</p>
+<p><span class="theorem-title"><strong>Exercise 6 (How far apart are two points?)</strong></span> Let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 2)\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (4, 6)\)</span>.</p>
 <ol type="1">
 <li>Compute the vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span>.</li>
 <li>Compute the length of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span>, using the <a href="#/def-euclidean-norm">Euclidean norm</a>.</li>
@@ -873,7 +967,7 @@ w_i \ge 0 \text{ for each } i
 </ol>
 </div>
 </section><section class="slide level2 scrollable"><div id="sol-euclidean-distance" class="proof solution">
-<p><span class="proof-title"><em>Solution 2</em>. </span></p>
+<p><span class="proof-title"><em>Solution 6</em>. </span></p>
 <ol type="1">
 <li><p><span class="math display">\[
 \begin{aligned}
@@ -968,14 +1062,14 @@ d(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </ul>
 </div>
 </section><section class="slide level2"><div id="exr-inner-product" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 3 (Compute an inner product and a norm)</strong></span> Let</p>
+<p><span class="theorem-title"><strong>Exercise 7 (Compute an inner product and a norm)</strong></span> Let</p>
 <p><span class="math display">\[\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}= \begin{bmatrix} 3 \\ -1 \\ 2 \end{bmatrix},
 \qquad
 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \begin{bmatrix} 0 \\ 4 \\ -2 \end{bmatrix}\]</span></p>
 <p>Compute <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> and <span class="math inline">\(\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}\right\rVert\mathclose{}_2\)</span>.</p>
 </div>
 <div id="sol-inner-product" class="proof solution">
-<p><span class="proof-title"><em>Solution 3</em>. </span>Multiply entry by entry and add:</p>
+<p><span class="proof-title"><em>Solution 7</em>. </span>Multiply entry by entry and add:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}
@@ -1027,7 +1121,7 @@ d(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <p><strong>Video lecture</strong></p>
 </div>
 <div class="callout-content">
-<p>Hutchinson’s <a href="https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/#linear_function_basics">Linear Function Basics</a> (24 min) covers dot products and the Euclidean norm, and goes on to hyperplanes (<a href="./linear-algebra-matrices.html#def-hyperplane">Definition&nbsp;26 in Matrices</a>) and <a href="./vector-calculus.html#def-level-set">level sets</a> <span class="citation" data-cites="hutchinson_wwu_ml_videos"><a href="#/references" role="doc-biblioref" onclick="">[12]</a></span>. The login for the video site is posted <a href="https://wwu.instructure.com/courses/1906010/modules#module_3922392">on Canvas</a>.</p>
+<p>Hutchinson’s <a href="https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/#linear_function_basics">Linear Function Basics</a> (24 min) covers dot products and the Euclidean norm, and goes on to hyperplanes (<a href="./linear-algebra-matrices.html#def-hyperplane">Definition&nbsp;27 in Matrices</a>) and <a href="./vector-calculus.html#def-level-set">level sets</a> <span class="citation" data-cites="hutchinson_wwu_ml_videos"><a href="#/references" role="doc-biblioref" onclick="">[12]</a></span>. The login for the video site is posted <a href="https://wwu.instructure.com/courses/1906010/modules#module_3922392">on Canvas</a>.</p>
 </div>
 </div>
 </div>

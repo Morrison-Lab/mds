@@ -364,20 +364,20 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-12 01:56:07 (PST)</p>
+  <p class="date">Last modified: 2026-11-12 12:27:14 (PST)</p>
 </section><section class="slide level2"></section><section id="special-matrices" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Special Matrices</h2>
 </section><section class="slide level2"><p>Some special matrices appeared earlier:</p>
 <ul>
-<li>the zero matrix (<a href="./linear-algebra-matrices.html#def-zero-matrix">Definition&nbsp;6 in Matrices</a>), in the section on matrix addition</li>
-<li>square matrices (<a href="./linear-algebra-matrices.html#def-square-matrix">Definition&nbsp;10 in Matrices</a>), in the section on square and identity matrices</li>
-<li>the identity matrix (<a href="./linear-algebra-matrices.html#def-identity-matrix">Definition&nbsp;14 in Matrices</a>), in that same section</li>
+<li>the zero matrix (<a href="./linear-algebra-matrices.html#def-zero-matrix">Definition&nbsp;7 in Matrices</a>), in the section on matrix addition</li>
+<li>square matrices (<a href="./linear-algebra-matrices.html#def-square-matrix">Definition&nbsp;11 in Matrices</a>), in the section on square and identity matrices</li>
+<li>the identity matrix (<a href="./linear-algebra-matrices.html#def-identity-matrix">Definition&nbsp;15 in Matrices</a>), in that same section</li>
 </ul>
 <div id="def-matrix-order" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1 (Order of a square matrix)</strong></span> The <strong>order</strong> of a square matrix (<a href="./linear-algebra-matrices.html#def-square-matrix">Definition&nbsp;10 in Matrices</a>) is its number of rows, which equals its number of columns.</p>
+<p><span class="theorem-title"><strong>Definition 1 (Order of a square matrix)</strong></span> The <strong>order</strong> of a square matrix (<a href="./linear-algebra-matrices.html#def-square-matrix">Definition&nbsp;11 in Matrices</a>) is its number of rows, which equals its number of columns.</p>
 </div>
 </section><section class="slide level2"><div id="exm-matrix-order" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1 (Orders of square matrices)</strong></span> <span class="math inline">\(\begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix}\)</span> has order <span class="math inline">\(2\)</span>, and <span class="math inline">\([5]\)</span> has order <span class="math inline">\(1\)</span>. A <span class="math inline">\(2 \times 3\)</span> matrix has no order, since it is not square (<a href="./linear-algebra-matrices.html#exm-square-matrix">Example&nbsp;9 in Matrices</a>).</p>
+<p><span class="theorem-title"><strong>Example 1 (Orders of square matrices)</strong></span> <span class="math inline">\(\begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix}\)</span> has order <span class="math inline">\(2\)</span>, and <span class="math inline">\([5]\)</span> has order <span class="math inline">\(1\)</span>. A <span class="math inline">\(2 \times 3\)</span> matrix has no order, since it is not square (<a href="./linear-algebra-matrices.html#exm-square-matrix">Example&nbsp;10 in Matrices</a>).</p>
 </div>
 </section><section class="slide level2"><div id="def-matrix-power" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 2 (Matrix power)</strong></span> For a square matrix <span class="math inline">\(\mathbf{A}\)</span> of order <span class="math inline">\(p\)</span> and a positive integer <span class="math inline">\(k\)</span>, the <span class="math inline">\(k\)</span>-th <strong>power</strong> of <span class="math inline">\(\mathbf{A}\)</span> is:</p>
@@ -403,7 +403,7 @@
 &amp;&amp; \text{(multiply and add)}
 \end{aligned}
 \]</span></p>
-<p>A <span class="math inline">\(2 \times 3\)</span> matrix <span class="math inline">\(\mathbf{B}\)</span> is not square (<a href="./linear-algebra-matrices.html#def-square-matrix">Definition&nbsp;10 in Matrices</a>), so <span class="math inline">\(\mathbf{B}^2\)</span> is not defined; indeed <span class="math inline">\(\mathbf{B} \mathbf{B}\)</span> would multiply a matrix with <span class="math inline">\(3\)</span> columns by one with <span class="math inline">\(2\)</span> rows, which <a href="./linear-algebra-matrices.html#def-matrix-mult">Definition&nbsp;9 in Matrices</a> does not allow.</p>
+<p>A <span class="math inline">\(2 \times 3\)</span> matrix <span class="math inline">\(\mathbf{B}\)</span> is not square (<a href="./linear-algebra-matrices.html#def-square-matrix">Definition&nbsp;11 in Matrices</a>), so <span class="math inline">\(\mathbf{B}^2\)</span> is not defined; indeed <span class="math inline">\(\mathbf{B} \mathbf{B}\)</span> would multiply a matrix with <span class="math inline">\(3\)</span> columns by one with <span class="math inline">\(2\)</span> rows, which <a href="./linear-algebra-matrices.html#def-matrix-mult">Definition&nbsp;10 in Matrices</a> does not allow.</p>
 </div>
 </section><section class="slide level2"><div id="def-symmetric-matrix" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 3 (Symmetric matrix)</strong></span> A square matrix <span class="math inline">\(\mathbf{A}\)</span> is <strong>symmetric</strong> <span class="citation" data-cites="wikipedia_symmetric_matrix"><a href="#/references" role="doc-biblioref" onclick="">[1]</a></span> if <span class="math inline">\({\mathbf{A}}^{\top} = \mathbf{A}\)</span>, i.e., <span class="math inline">\(a_{ij} = a_{ji}\)</span> for all <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>.</p>
@@ -465,7 +465,7 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 &amp;= \mathbf{I}_p,
 \end{aligned}
 \]</span></p>
-<p>where <span class="math inline">\(\mathbf{I}_p\)</span> is the identity matrix (<a href="./linear-algebra-matrices.html#def-identity-matrix">Definition&nbsp;14 in Matrices</a>). A square matrix that is not invertible is <strong>singular</strong>.</p>
+<p>where <span class="math inline">\(\mathbf{I}_p\)</span> is the identity matrix (<a href="./linear-algebra-matrices.html#def-identity-matrix">Definition&nbsp;15 in Matrices</a>). A square matrix that is not invertible is <strong>singular</strong>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-invertible-matrix" class="theorem example">
 <p><span class="theorem-title"><strong>Example 5 (An invertible matrix and a singular one)</strong></span> The matrix <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 2 &amp; 1 \\ 0 &amp; 1 \end{bmatrix}\)</span> is invertible, with <span class="math inline">\(\mathbf{A}^{-1} = \begin{bmatrix} 0.5 &amp; -0.5 \\ 0 &amp; 1 \end{bmatrix}\)</span>: multiplying out gives</p>
@@ -680,7 +680,7 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 \qquad
 \mathbf{B} = \begin{bmatrix} 0 &amp; 0 \\ 0 &amp; 1 \end{bmatrix},
 \]</span></p>
-<p>neither matrix is the zero matrix (<a href="./linear-algebra-matrices.html#def-zero-matrix">Definition&nbsp;6 in Matrices</a>), but</p>
+<p>neither matrix is the zero matrix (<a href="./linear-algebra-matrices.html#def-zero-matrix">Definition&nbsp;7 in Matrices</a>), but</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathbf{A}\mathbf{B}
@@ -696,7 +696,7 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 <p><strong>Products.</strong> Matrix multiplication keeps three properties of multiplication of numbers: it is associative (<a href="./linear-algebra-matrices.html#thm-matmul-assoc">Theorem&nbsp;7 in Matrices</a>), it is distributive over addition (<a href="./linear-algebra-matrices.html#thm-matmul-distrib">Theorem&nbsp;8 in Matrices</a>), and it has an identity, <span class="math inline">\(\mathbf{I}_p\)</span> (<a href="./linear-algebra-matrices.html#thm-identity">Theorem&nbsp;10 in Matrices</a>). It differs from multiplication of numbers in four ways:</p>
 <ul>
 <li>
-<span class="math inline">\(\mathbf{A}\mathbf{B}\)</span> is defined only when the number of columns of <span class="math inline">\(\mathbf{A}\)</span> equals the number of rows of <span class="math inline">\(\mathbf{B}\)</span> (<a href="./linear-algebra-matrices.html#def-matrix-mult">Definition&nbsp;9 in Matrices</a>).</li>
+<span class="math inline">\(\mathbf{A}\mathbf{B}\)</span> is defined only when the number of columns of <span class="math inline">\(\mathbf{A}\)</span> equals the number of rows of <span class="math inline">\(\mathbf{B}\)</span> (<a href="./linear-algebra-matrices.html#def-matrix-mult">Definition&nbsp;10 in Matrices</a>).</li>
 <li>It is not commutative: <span class="math inline">\(\mathbf{A}\mathbf{B} \neq \mathbf{B}\mathbf{A}\)</span> in general (<a href="./linear-algebra-matrices.html#rem-matmul-not-commutative">Remark&nbsp;2 in Matrices</a>).</li>
 <li>A nonzero square matrix need not have an inverse (<a href="#/exm-invertible-matrix" class="quarto-xref">Example&nbsp;5</a>).</li>
 <li>
@@ -928,7 +928,7 @@ p_{ii}
 &amp;&amp; \text{(definition of the Euclidean norm)}
 \end{aligned}
 \]</span></p>
-<p>Both norms are nonnegative square roots, so equal squares give <span class="math inline">\(\mathopen{}\left\lVert\mathbf{Q}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{} = \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}\)</span>. The second step is <a href="./linear-algebra-matrices.html#exm-dot-product-matmul">Example&nbsp;7 in Matrices</a>, the third is <a href="./linear-algebra-matrices.html#thm-transpose-product">Theorem&nbsp;19 in Matrices</a>, and the fourth is <a href="./linear-algebra-matrices.html#thm-matmul-assoc">Theorem&nbsp;7 in Matrices</a>.</p>
+<p>Both norms are nonnegative square roots, so equal squares give <span class="math inline">\(\mathopen{}\left\lVert\mathbf{Q}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{} = \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}\)</span>. The second step is <a href="./linear-algebra-matrices.html#exm-dot-product-matmul">Example&nbsp;8 in Matrices</a>, the third is <a href="./linear-algebra-matrices.html#thm-transpose-product">Theorem&nbsp;19 in Matrices</a>, and the fourth is <a href="./linear-algebra-matrices.html#thm-matmul-assoc">Theorem&nbsp;7 in Matrices</a>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-orthogonal-norm" class="theorem example">
 <p><span class="theorem-title"><strong>Example 16 (Rotating a vector keeps its length)</strong></span> With <span class="math inline">\(\mathbf{Q}\)</span> from <a href="#/exm-orthogonal-matrix" class="quarto-xref">Example&nbsp;14</a> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (3, 4)\)</span> from <a href="./linear-algebra-vectors.html#exm-euclidean-norm">Example&nbsp;15 in Vectors</a>:</p>
@@ -2246,7 +2246,7 @@ v_1 &amp;= \lambda v_2 \\
 &amp;&amp; \text{(transposing twice changes nothing)}
 \end{aligned}
 \]</span></p>
-<p>The first step is <a href="./linear-algebra-matrices.html#thm-transpose-product">Theorem&nbsp;19 in Matrices</a>, and the second follows from <a href="./linear-algebra-matrices.html#def-matrix-transpose">Definition&nbsp;5 in Matrices</a>, which swaps rows and columns, so swapping them again restores <span class="math inline">\(\mathbf{A}\)</span>.</p>
+<p>The first step is <a href="./linear-algebra-matrices.html#thm-transpose-product">Theorem&nbsp;19 in Matrices</a>, and the second follows from <a href="./linear-algebra-matrices.html#def-matrix-transpose">Definition&nbsp;6 in Matrices</a>, which swaps rows and columns, so swapping them again restores <span class="math inline">\(\mathbf{A}\)</span>.</p>
 <p><strong>The factorization.</strong></p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -2474,7 +2474,7 @@ g_{ij} &amp;= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{
 </section><section class="slide level2"><div id="exm-positive-definite" class="theorem example">
 <p><span class="theorem-title"><strong>Example 33 (Positive definite, semidefinite, and neither)</strong></span> &nbsp;</p>
 <ul>
-<li><p>The identity matrix <span class="math inline">\(\mathbf{I}_p\)</span> (<a href="./linear-algebra-matrices.html#def-identity-matrix">Definition&nbsp;14 in Matrices</a>) is positive definite: <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{I}_p \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \sum_{i=1}^px_i^2\)</span>, which is positive unless every <span class="math inline">\(x_i\)</span> is <span class="math inline">\(0\)</span>.</p></li>
+<li><p>The identity matrix <span class="math inline">\(\mathbf{I}_p\)</span> (<a href="./linear-algebra-matrices.html#def-identity-matrix">Definition&nbsp;15 in Matrices</a>) is positive definite: <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{I}_p \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \sum_{i=1}^px_i^2\)</span>, which is positive unless every <span class="math inline">\(x_i\)</span> is <span class="math inline">\(0\)</span>.</p></li>
 <li>
 <p><span class="math inline">\(\mathbf{B} = \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 1 \end{bmatrix}\)</span> from <a href="#/exm-positive-semidefinite" class="quarto-xref">Example&nbsp;31</a> is positive semidefinite but not positive definite: at <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, -1) \neq \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>,</p>
 <p><span class="math display">\[
@@ -2912,13 +2912,13 @@ Figure&nbsp;1: The surface <span class="math inline">\(z = x_1^2 + x_2^2\)</span
 &amp;&amp; \text{(substitute vectors and matrix)}
 \\
 &amp;= \begin{bmatrix} 1 &amp; 2 \end{bmatrix} \begin{bmatrix} 2 \cdot 3 + 1 \cdot(-1) \\ 1 \cdot 3 + 2 \cdot(-1) \end{bmatrix}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~15 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~16 in Matrices}}\text{)}
 \\
 &amp;= \begin{bmatrix} 1 &amp; 2 \end{bmatrix} \begin{bmatrix} 5 \\ 1 \end{bmatrix}
 &amp;&amp; \text{(multiply and add)}
 \\
 &amp;= 1 \cdot 5 + 2 \cdot 1
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~15 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~16 in Matrices}}\text{)}
 \\
 &amp;= 7.
 &amp;&amp; \text{(multiply and add)}
@@ -2961,7 +2961,7 @@ A_{12} &amp;= A_{21} \\
 &amp;&amp; \text{(definition of } {\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}}_{\mathbf{A}} \text{)}
 \\
 &amp;= (a\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} + b\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}^{\top})\,\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-sum}{\text{Theorem~18 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~8 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~5 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-sum}{\text{Theorem~18 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~9 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~6 in Matrices}}\text{)}
 \\
 &amp;= a\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + b\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}^{\top}\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}
 &amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-distrib}{\text{Theorem~8 in Matrices}}\text{)}
@@ -3008,7 +3008,7 @@ A_{12} &amp;= A_{21} \\
 &amp;&amp; \text{(define } A_{ij} \stackrel{\text{def}}{=}{\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_i, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j\right\rangle\mathclose{}} \text{)}
 \\
 &amp;= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}.
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~15 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~16 in Matrices}}\text{)}
 \end{aligned}
 \]</span></p>
 <p>Symmetry of <span class="math inline">\({\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}}\)</span> ensures</p>
