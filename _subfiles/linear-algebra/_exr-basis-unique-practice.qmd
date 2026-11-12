@@ -1,7 +1,6 @@
 :::{#exr-basis-unique-practice}
 #### Counting the ways to write a vector in a basis
 
-@thm-basis-unique is what makes [coordinates](#def-coordinates) well defined.
 The vectors $\vecf{a}_1 = \tp{(1, 1)}$ and $\vecf{a}_2 = \tp{(1, -1)}$ form a [basis](#def-basis) of $\reals^2$,
 and
 
