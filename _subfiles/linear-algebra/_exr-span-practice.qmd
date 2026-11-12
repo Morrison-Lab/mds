@@ -1,0 +1,26 @@
+:::{#exr-span-practice}
+#### Testing whether a vector lies in the span of two others
+
+Whether a target can be written as a [linear combination](linear-algebra-vectors.qmd#def-linear-combination) of a few given vectors
+is a question about a [span](#def-span).
+Let
+
+$$
+\vecf{v}_1 = \sbmat{1 \\ 1 \\ 0},
+\qquad
+\vecf{v}_2 = \sbmat{0 \\ 1 \\ 1},
+\qquad
+\vecf{w} = \sbmat{3 \\ 5 \\ 2}.
+$$
+
+Is the vector $\vecf{w}$ in $\operatorname{span}\cb{\vecf{v}_1, \vecf{v}_2}$?
+
+::: {.callout-tip}
+#### Hint
+
+Look for numbers $c_1$ and $c_2$ with $c_1 \vecf{v}_1 + c_2 \vecf{v}_2 = \vecf{w}$,
+one entry at a time.
+
+:::
+
+:::

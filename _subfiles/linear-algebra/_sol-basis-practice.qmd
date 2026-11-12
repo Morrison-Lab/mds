@@ -1,0 +1,18 @@
+:::{#sol-basis-practice}
+
+Yes.
+They [span](#def-span) $\reals^2$:
+for every $\tp{(x, y)} \in \reals^2$,
+
+$$
+\frac{x + y}{2} \sbmat{1 \\ 1} + \frac{x - y}{2} \sbmat{1 \\ -1} = \sbmat{x \\ y}.
+$$
+
+They are [linearly independent](#def-linearly-independent):
+if $c_1 \vecf{a}_1 + c_2 \vecf{a}_2 = \vzero$,
+then $c_1 + c_2 = 0$ and $c_1 - c_2 = 0$,
+and adding the two equations gives $c_1 = 0$ and then $c_2 = 0$.
+By @def-basis,
+$\vecf{a}_1, \vecf{a}_2$ is a [basis](#def-basis) of $\reals^2$.
+
+:::

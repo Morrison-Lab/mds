@@ -1,0 +1,23 @@
+:::{#exr-ones-vector-practice}
+#### Adding one to every entry with the ones vector
+
+Adding the [ones vector](#def-ones-vector) to a vector raises every entry by $1$,
+for example to shift a list of counts that start at $0$ so that they start at $1$.
+Let
+
+$$
+\vx = \sbmat{2 \\ 0 \\ -1}.
+$$
+
+Find $\vx + \v1$,
+where $\v1$ has $3$ entries.
+
+::: {.callout-tip}
+#### Hint
+
+Write out $\v1$ with @def-ones-vector,
+then use @def-vector-addition.
+
+:::
+
+:::
