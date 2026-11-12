@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-12 12:51:47 (PST)
+Last modified: 2026-11-12 14:15:09 (PST)
 
 > **NOTE:**
 >
@@ -157,6 +157,26 @@ Last modified: 2026-11-12 12:51:47 (PST)
 
 > **NOTE:**
 >
+> **Exercise 6 (Evaluating a vector-valued function at one input)** A [vector-valued function](#def-vector-valued) returns several numbers for one input. Let $g : \mathbb{R}^2 \to \mathbb{R}^3$ be
+>
+> $$g(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \begin{bmatrix}x_1 + x_2 \\ x_1 x_2 \\ x_1 - x_2\end{bmatrix}.$$
+>
+> Find $g\mathopen{}\left(\begin{bmatrix}2 \\ 3\end{bmatrix}\right)\mathclose{}$.
+>
+> > **TIP:**
+> >
+> > Substitute $x_1 = 2$ and $x_2 = 3$ into each entry, as in [Example 2](#exm-real-vector-valued).
+
+> **NOTE:**
+>
+> *Solution 6*. Substituting $x_1 = 2$ and $x_2 = 3$,
+>
+> $$g\mathopen{}\left(\begin{bmatrix}2 \\ 3\end{bmatrix}\right)\mathclose{} = \begin{bmatrix}2 + 3 \\ 2 \cdot 3 \\ 2 - 3\end{bmatrix} = \begin{bmatrix}5 \\ 6 \\ -1\end{bmatrix},$$
+>
+> a [column vector](#def-column-vector) in $\mathbb{R}^3$.
+
+> **NOTE:**
+>
 > **Definition 6 (Transpose)** The **transpose** of a column vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is the row vector with the same [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) of entries, written horizontally:
 >
 > $${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \equiv \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}' \equiv [x_1,\; x_2,\; \ldots,\; x_p]$$
@@ -167,6 +187,24 @@ Last modified: 2026-11-12 12:51:47 (PST)
 >
 > $${\begin{bmatrix} 2 \\ -1 \\ 5 \end{bmatrix}}^{\top}
 > = [2,\; -1,\; 5].$$
+
+> **NOTE:**
+>
+> **Exercise 7 (Writing one observation as a row vector)** A data table stores each observation on its own line, so an observation held as a [column vector](#def-column-vector) is written in the table as its [transpose](#def-transpose). Let
+>
+> $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix}4 \\ -1 \\ 0\end{bmatrix}.$$
+>
+> Find ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}$.
+>
+> > **TIP:**
+> >
+> > By [Definition 6](#def-transpose), keep the entries in the same order and write them horizontally.
+
+> **NOTE:**
+>
+> *Solution 7*. By [Definition 6](#def-transpose),
+>
+> $${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} = [4,\; -1,\; 0].$$
 
 > **NOTE:**
 >
@@ -185,6 +223,28 @@ Last modified: 2026-11-12 12:51:47 (PST)
 > &=
 > \begin{bmatrix} 5 \\ 7 \\ 9 \end{bmatrix}
 > \end{aligned}$$
+
+> **NOTE:**
+>
+> **Exercise 8 (Adding two months of sales for three items)** A shop records how many units of each of three items it sells in a month, as a [column vector](#def-column-vector) in $\mathbb{R}^3$. In two months it sells
+>
+> $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix}12 \\ 5 \\ 8\end{bmatrix}
+> \quad \text{and} \quad
+> \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= \begin{bmatrix}10 \\ 7 \\ 3\end{bmatrix}$$
+>
+> units.
+>
+> Find $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$, the units of each item sold over both months.
+>
+> > **TIP:**
+> >
+> > Use [Definition 7](#def-vector-addition), as in [Example 4](#exm-vector-addition).
+
+> **NOTE:**
+>
+> *Solution 8*. By [Definition 7](#def-vector-addition),
+>
+> $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= \begin{bmatrix}12 + 10 \\ 5 + 7 \\ 8 + 3\end{bmatrix} = \begin{bmatrix}22 \\ 12 \\ 11\end{bmatrix}.$$
 
 > **NOTE:**
 >
@@ -341,6 +401,26 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
+> **Exercise 9 (Picking the zero vector with three entries from three candidates)** A [zero vector](#def-zero-vector) has a number of entries as well as zero entries, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\in \mathbb{R}^2$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\in \mathbb{R}^3$ are different vectors. Consider three candidates:
+>
+> $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}} = \begin{bmatrix}0 \\ 0\end{bmatrix},
+> \qquad
+> \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \begin{bmatrix}0 \\ 0 \\ 0\end{bmatrix},
+> \qquad
+> \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} = \begin{bmatrix}0 \\ 1 \\ 0\end{bmatrix}.$$
+>
+> Which of the three candidates is the zero vector with $3$ entries?
+>
+> > **TIP:**
+> >
+> > [Definition 14](#def-zero-vector) has two conditions: $3$ entries, and $0$ in every entry.
+
+> **NOTE:**
+>
+> *Solution 9*. Only $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$. $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}$ has only $2$ entries, so it is the [zero vector](#def-zero-vector) in $\mathbb{R}^2$, and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}$ has a nonzero second entry.
+
+> **NOTE:**
+>
 > **Definition 15 (Mean, average)** The **mean** [\[5\]](#ref-wikipedia_arithmetic_mean) (or **average**) of $n$ numbers $y_1, \ldots, y_n$ is their [sum](algebra-sums.llms.md#def-summation) divided by how many there are:
 >
 > $$\bar{y} \stackrel{\text{def}}{=}\frac{1}{n}\sum_{i=1}^ny_i$$
@@ -367,6 +447,24 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
+> **Exercise 10 (Finding the mean age of four siblings)** Four siblings are $3$, $7$, $10$ and $12$ years old.
+>
+> Find the [mean](#def-mean) of their ages.
+>
+> > **TIP:**
+> >
+> > Use [Definition 15](#def-mean) with $n = 4$, as in [Example 10](#exm-mean).
+
+> **NOTE:**
+>
+> *Solution 10*. By [Definition 15](#def-mean) with $n = 4$,
+>
+> $$\bar{y} = \frac{1}{4}\,\mathopen{}\left(3 + 7 + 10 + 12\right)\mathclose{} = \frac{32}{4} = 8,$$
+>
+> so the [mean](#def-mean) age is $8$ years.
+
+> **NOTE:**
+>
 > **Definition 16 (Ones vector)** The **ones vector** $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}}$ of length $p$ has all entries equal to one:
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}} =
@@ -376,6 +474,24 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 > \vdots \\
 > 1
 > \end{bmatrix}$$
+
+> **NOTE:**
+>
+> **Exercise 11 (Adding one to every entry with the ones vector)** Adding the [ones vector](#def-ones-vector) to a vector raises every entry by $1$, for example to shift a list of counts that start at $0$ so that they start at $1$. Let
+>
+> $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix}2 \\ 0 \\ -1\end{bmatrix}.$$
+>
+> Find $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}}$, where $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}}$ has $3$ entries.
+>
+> > **TIP:**
+> >
+> > Write out $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}}$ with [Definition 16](#def-ones-vector), then use [Definition 7](#def-vector-addition).
+
+> **NOTE:**
+>
+> *Solution 11*. By [Definition 16](#def-ones-vector), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}} = {(1, 1, 1)}^{\top}$, so by [Definition 7](#def-vector-addition)
+>
+> $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}} = \begin{bmatrix}2 + 1 \\ 0 + 1 \\ -1 + 1\end{bmatrix} = \begin{bmatrix}3 \\ 1 \\ 0\end{bmatrix}.$$
 
 > **NOTE:**
 >
@@ -397,6 +513,26 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 > &= 6.
 > && \text{(add)}
 > \end{aligned}$$
+
+> **NOTE:**
+>
+> **Exercise 12 (Totalling the units sold across three items)** A shop sells $22$, $12$ and $11$ units of three items over two months, stored as
+>
+> $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix}22 \\ 12 \\ 11\end{bmatrix}.$$
+>
+> Find ${s_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}}$, the [sum of the elements](#def-sum-of-elements) of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$.
+>
+> > **TIP:**
+> >
+> > Use [Definition 17](#def-sum-of-elements) with $p = 3$, as in [Example 11](#exm-sum-of-elements).
+
+> **NOTE:**
+>
+> *Solution 12*. By [Definition 17](#def-sum-of-elements),
+>
+> $${s_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}} = 22 + 12 + 11 = 45,$$
+>
+> so the shop sold $45$ units in all.
 
 > **NOTE:**
 >
@@ -606,7 +742,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Exercise 6 (How far apart are two points?)** Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 2)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (4, 6)$.
+> **Exercise 13 (How far apart are two points?)** Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 2)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (4, 6)$.
 >
 > 1.  Compute the vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$.
 > 2.  Compute the length of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$, using the [Euclidean norm](#def-euclidean-norm).
@@ -614,7 +750,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> *Solution 6*.
+> *Solution 13*.
 >
 > 1.  $$\begin{aligned}
 >     \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}&= (1 - 4, 2 - 6) \\
@@ -703,7 +839,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Exercise 7 (Compute an inner product and a norm)** Let
+> **Exercise 14 (Compute an inner product and a norm)** Let
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}= \begin{bmatrix} 3 \\ -1 \\ 2 \end{bmatrix},
 > \qquad
@@ -713,7 +849,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> *Solution 7*. Multiply entry by entry and add:
+> *Solution 14*. Multiply entry by entry and add:
 >
 > $$\begin{aligned}
 > \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}
