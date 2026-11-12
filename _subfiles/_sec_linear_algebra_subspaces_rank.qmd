@@ -1,0 +1,5 @@
+{{< include mds/_subfiles/linear-algebra/_def-linearly-independent.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-rank.qmd >}}
