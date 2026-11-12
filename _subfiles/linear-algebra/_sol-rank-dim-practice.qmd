@@ -1,6 +1,6 @@
 :::{#sol-rank-dim-practice}
 
-In $\matr{A}$, the second column is $(2, 4, 6) = 2\,(1, 2, 3)$,
+In $\matr{A}$, the second [column](linear-algebra-matrices.qmd#def-matrix-column) is $(2, 4, 6) = 2\,(1, 2, 3)$,
 so by @thm-column-space-span
 
 $$
