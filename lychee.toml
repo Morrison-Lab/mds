@@ -35,6 +35,9 @@ exclude = [
   # lychee reports "SSL certificate not trusted" for web.stanford.edu on every PR
   # since 2026-11-03 (mds#589, mds#593); remove once its chain verifies again
   "https://web.stanford.edu/~icard/phil150",
+  # catalog.wwu.edu's certificate expired on or before 2026-11-12 ("SSL certificate expired",
+  # mds#755), failing these two course links in optimization.qmd on every PR; remove once it is renewed
+  "^https://catalog\\.wwu\\.edu/preview_course_nopop\\.php\\?catoid=23&coid=(126769|126770)$",
 ]
 
 # `mds` is a symlink to the repository root, so include paths read

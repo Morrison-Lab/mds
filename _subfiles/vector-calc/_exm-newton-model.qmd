@@ -1,7 +1,7 @@
 :::{#exm-newton-model}
 #### The Newton step at $x = 2.5$
 
-For the model $\quadmodelf{\step} = f(2.5) + 2.25\,\step + 2.5\,\step^2$ of @exm-quadratic-model,
+For the [quadratic approximation](#def-quadratic-model) $\quadmodelf{\step} = f(2.5) + 2.25\,\step + 2.5\,\step^2$ of @exm-quadratic-model,
 $H = [5]$ is positive definite, so by @thm-newton-model its minimizer is
 
 $$
@@ -24,6 +24,6 @@ $$
 
 (@exm-newton-method).
 
-<!-- no-figure: the model and its minimizer are graphed in the figure included right after this example -->
+<!-- no-figure: the approximation and its minimizer are graphed in the figure included right after this example -->
 
 :::

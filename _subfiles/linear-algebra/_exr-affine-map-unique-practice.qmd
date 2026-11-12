@@ -1,0 +1,24 @@
+:::{#exr-affine-map-unique-practice}
+#### Matching the offsets of two formulas for one affine map
+
+@thm-affine-map-unique says that an [affine map](#def-affine-map) has only one [matrix](#def-matrix) and one [offset](#def-affine-offset),
+so two ways of writing the same map must agree term by term.
+For $c \in \reals$,
+suppose that
+
+$$
+\sbmat{1 & 0 \\ 2 & 1} \vx + \sbmat{3 \\ 1}
+= \sbmat{1 & 0 \\ 2 & 1} \vx + \sbmat{c \\ 1}
+\quad \text{for every } \vx \in \reals^2.
+$$
+
+Find $c$.
+
+::: {.callout-tip}
+#### Hint
+
+Compare the [offsets](#def-affine-offset) of the two sides.
+
+:::
+
+:::
