@@ -72,6 +72,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_exm-norm-euclidean.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-vector-p-norm.qmd >}}
 
 {{< slidebreak >}}
