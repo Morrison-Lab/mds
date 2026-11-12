@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-12 01:42:42 (PST)
+Last modified: 2026-11-12 02:46:13 (PST)
 
 This page moved to [Proof Writing](https://morrison-lab.github.io/mcs/proof-writing.html) in the Math for Computer Science notes.
 
