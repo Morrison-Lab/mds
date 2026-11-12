@@ -1,0 +1,23 @@
+:::{#exr-augmented-vector-practice}
+#### Absorbing an offset into a dot product with the augmented vector
+
+The [augmented vector](#def-augmented-vector) lets software treat an [affine](#def-affine-map) score
+as a [dot product](linear-algebra-vectors.qmd#def-dot-product),
+with the [offset](#def-affine-offset) as one more [weight](linear-algebra-vectors.qmd#def-weight).
+Let $f: \reals^2 \to \reals$ be
+
+$$
+f(\vx) = 2 x_1 - x_2 + 5.
+$$
+
+Find the vector $\vecf{v} \in \reals^3$ with $f(\vx) = \dprod{\vecf{v}}{\aug{\vx}}$ for every $\vx \in \reals^2$.
+
+::: {.callout-tip}
+#### Hint
+
+Follow @exm-augmented-vector.
+The first entry of $\aug{\vx}$ is $1$.
+
+:::
+
+:::

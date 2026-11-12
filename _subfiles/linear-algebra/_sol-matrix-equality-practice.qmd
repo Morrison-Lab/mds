@@ -1,0 +1,18 @@
+:::{#sol-matrix-equality-practice}
+
+Both [matrices](#def-matrix) are $2 \times 2$,
+so they are [equal](#def-matrix-equality) when their entries in each position agree.
+Three positions already agree,
+and the entries in position $(1, 2)$ give
+
+$$
+\ba
+x + 1 &= 4
+&& \text{(@def-matrix-equality)}
+\\
+x &= 3.
+&& \text{(subtract } 1 \text{ from both sides)}
+\ea
+$$
+
+:::

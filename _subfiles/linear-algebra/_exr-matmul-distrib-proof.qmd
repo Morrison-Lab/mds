@@ -1,0 +1,19 @@
+:::{#exr-matmul-distrib-proof}
+#### Proving that matrix multiplication distributes from the left
+
+@thm-matmul-distrib lets a [product](#def-matrix-mult) with a [matrix sum](#def-matrix-addition) be expanded term by term,
+just as multiplication of numbers [distributes over](algebra.qmd#def-distributes-over) addition.
+Let $\matr{A}$ be an $m \times k$ [matrix](#def-matrix),
+and let $\matr{B}$ and $\matr{C}$ be $k \times n$ matrices.
+
+Prove that $\matr{A}(\matr{B} + \matr{C}) = \matr{A}\matr{B} + \matr{A}\matr{C}$.
+
+::: {.callout-tip}
+#### Hint
+
+Express the $(i, j)$ entry of the left side with @def-matrix-mult and @def-matrix-addition,
+then split the result with [the rule for a sum of sums](algebra-sums.qmd#thm-sum-of-sums).
+
+:::
+
+:::
