@@ -302,7 +302,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-12 16:09:14 (PST)</p>
+  <p class="date">Last modified: 2026-11-12 16:47:53 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -1230,6 +1230,61 @@ c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphant
 </section>
 <section class="slide level2">
 
+<div id="exr-basis-size-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 15 (Testing whether two vectors can form a basis of <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> A list of two features cannot describe every point in <span class="math inline">\(\mathbb{R}^3\)</span>, and <a href="#/thm-basis-size" class="quarto-xref">Theorem&nbsp;7</a> says why in terms of <a href="#/def-basis">bases</a>. The <a href="./linear-algebra-vectors.html#def-indicator-vector">indicator vectors</a> <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1\)</span>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3\)</span> form a basis of <span class="math inline">\(\mathbb{R}^3\)</span>.</p>
+<p>Can a list of <span class="math inline">\(2\)</span> vectors be a basis of <span class="math inline">\(\mathbb{R}^3\)</span>?</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Use <a href="#/thm-basis-size" class="quarto-xref">Theorem&nbsp;7</a> with the <a href="#/def-basis">basis</a> <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-basis-size-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 15</em>. </span>No. <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3\)</span> is a <a href="#/def-basis">basis</a> of <span class="math inline">\(\mathbb{R}^3\)</span> with <span class="math inline">\(3\)</span> vectors, so by <a href="#/thm-basis-size" class="quarto-xref">Theorem&nbsp;7</a> every basis of <span class="math inline">\(\mathbb{R}^3\)</span> has <span class="math inline">\(3\)</span> vectors, not <span class="math inline">\(2\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exr-dimension-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 16 (Finding the dimension of a span that includes a multiple)</strong></span> The <a href="#/def-dimension">dimension</a> of a <a href="#/def-span">span</a> can be smaller than the number of vectors that span it, for example when one vector is a multiple of another. Let</p>
+<p><span class="math display">\[
+\mathcal{S} = \operatorname{span}\mathopen{}\left\{{(1, 2, 0)}^{\top},\ {(2, 4, 0)}^{\top},\ {(0, 0, 1)}^{\top}\right\}\mathclose{}.
+\]</span></p>
+<p>Find <span class="math inline">\(\dim(\mathcal{S})\)</span>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Look for a vector in the list that is a multiple of another, then check that the rest are <a href="#/def-linearly-independent">linearly independent</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-dimension-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 16</em>. </span><span class="math inline">\(\dim(\mathcal{S}) = 2\)</span>. Since <span class="math inline">\({(2, 4, 0)}^{\top} = 2 {(1, 2, 0)}^{\top}\)</span>, dropping <span class="math inline">\({(2, 4, 0)}^{\top}\)</span> leaves the <a href="#/def-span">span</a> unchanged, so <span class="math inline">\({(1, 2, 0)}^{\top}\)</span> and <span class="math inline">\({(0, 0, 1)}^{\top}\)</span> span <span class="math inline">\(\mathcal{S}\)</span>. They are <a href="#/def-linearly-independent">linearly independent</a>: if <span class="math inline">\(c_1 {(1, 2, 0)}^{\top} + c_2 {(0, 0, 1)}^{\top} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, the first entry gives <span class="math inline">\(c_1 = 0\)</span> and the third gives <span class="math inline">\(c_2 = 0\)</span>. So they form a <a href="#/def-basis">basis</a> of <span class="math inline">\(\mathcal{S}\)</span> with <span class="math inline">\(2\)</span> vectors, and by <a href="#/def-dimension" class="quarto-xref">Definition&nbsp;9</a> the <a href="#/def-dimension">dimension</a> is <span class="math inline">\(2\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
 <div id="thm-add-outside-span" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 8 (Adding a vector outside the span keeps a list independent)</strong></span> If <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_k\)</span> are linearly independent (<a href="#/def-linearly-independent" class="quarto-xref">Definition&nbsp;1</a>) and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> is not in <span class="math inline">\(\operatorname{span}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_k\right\}\mathclose{}\)</span> (<a href="#/def-span" class="quarto-xref">Definition&nbsp;5</a>), then <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_k, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> are linearly independent.</p>
 </div>
@@ -1257,6 +1312,39 @@ c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphant
 
 <div id="exm-add-outside-span" class="theorem example">
 <p><span class="theorem-title"><strong>Example 17 (Adding <span class="math inline">\((0, 0, 1)\)</span> to two independent vectors in <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> The vectors <span class="math inline">\((1, 0, 0)\)</span> and <span class="math inline">\((0, 1, 0)\)</span> are linearly independent, and their span is the plane <span class="math inline">\(z = 0\)</span> (<a href="#/exm-span" class="quarto-xref">Example&nbsp;6</a>). The vector <span class="math inline">\((0, 0, 1)\)</span> has third entry <span class="math inline">\(1\)</span>, so it is not in that plane, and by <a href="#/thm-add-outside-span" class="quarto-xref">Theorem&nbsp;8</a> the three vectors <span class="math inline">\((1, 0, 0)\)</span>, <span class="math inline">\((0, 1, 0)\)</span>, <span class="math inline">\((0, 0, 1)\)</span> are linearly independent. Adding <span class="math inline">\((1, 1, 0)\)</span> instead would not work: <span class="math inline">\((1, 1, 0)\)</span> is in the span, and <span class="math inline">\((1, 0, 0) + (0, 1, 0) - (1, 1, 0) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exr-add-outside-span-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 17 (Adding a third feature to an independent pair)</strong></span> Adding a new feature keeps a list of features <a href="#/def-linearly-independent">linearly independent</a> when the new one is not a combination of the old ones, which is what <a href="#/thm-add-outside-span" class="quarto-xref">Theorem&nbsp;8</a> says. Let</p>
+<p><span class="math display">\[
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 = \begin{bmatrix}1 \\ 0 \\ 0\end{bmatrix},
+\qquad
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2 = \begin{bmatrix}0 \\ 1 \\ 0\end{bmatrix},
+\qquad
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \begin{bmatrix}1 \\ 1 \\ 1\end{bmatrix}.
+\]</span></p>
+<p>Are <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1\)</span>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> linearly independent?</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Check whether <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> is in <span class="math inline">\(\operatorname{span}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2\right\}\mathclose{}\)</span>, then use <a href="#/thm-add-outside-span" class="quarto-xref">Theorem&nbsp;8</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-add-outside-span-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 17</em>. </span>Yes. <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2\)</span> are <a href="#/def-linearly-independent">linearly independent</a>: <span class="math inline">\(c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 + c_2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2 = {(c_1, c_2, 0)}^{\top}\)</span> is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> only for <span class="math inline">\(c_1 = c_2 = 0\)</span>. Every vector in their <a href="#/def-span">span</a> has third entry <span class="math inline">\(0\)</span>, and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> has third entry <span class="math inline">\(1\)</span>, so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> is not in the span. By <a href="#/thm-add-outside-span" class="quarto-xref">Theorem&nbsp;8</a>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1\)</span>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> are linearly independent.</p>
 </div>
 </section>
 <section class="slide level2">

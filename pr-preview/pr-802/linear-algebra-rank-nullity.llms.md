@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-11-12 16:09:14 (PST)
+Last modified: 2026-11-12 16:47:53 (PST)
 
 # 1 Column space and null space
 
@@ -423,6 +423,28 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 
 > **NOTE:**
 >
+> **Exercise 9 (Computing a cross-product matrix)** In R, `crossprod(A, B)` computes the [cross-product matrix](#def-cross-product-matrix) ${\mathbf{A}}^{\top} \mathbf{B}$. Let
+>
+> $$\mathbf{A} = \begin{bmatrix}1 & 0 \\ 1 & 1\end{bmatrix},
+> \qquad
+> \mathbf{B} = \begin{bmatrix}2 \\ 3\end{bmatrix}.$$
+>
+> Compute ${\mathbf{A}}^{\top} \mathbf{B}$.
+>
+> > **TIP:**
+> >
+> > Entry $i$ is the [dot product](linear-algebra-vectors.llms.md#def-dot-product) of [column](linear-algebra-matrices.llms.md#def-matrix-column) $i$ of $\mathbf{A}$ with $(2, 3)$.
+
+> **NOTE:**
+>
+> *Solution 9*. The [columns of](linear-algebra-matrices.llms.md#def-matrix-column) $\mathbf{A}$ are $(1, 1)$ and $(0, 1)$, so
+>
+> $${\mathbf{A}}^{\top} \mathbf{B}
+> = \begin{bmatrix}1 \cdot 2 + 1 \cdot 3 \\ 0 \cdot 2 + 1 \cdot 3\end{bmatrix}
+> = \begin{bmatrix}5 \\ 3\end{bmatrix}.$$
+
+> **NOTE:**
+>
 > *Remark 1* (Column-column products). Ordinary [matrix multiplication](linear-algebra-matrices.llms.md#def-matrix-mult) pairs a row of the left factor with a column of the right factor, which makes each entry a [row-by-column product](linear-algebra-matrices.llms.md#def-matrix-mult) [\[2, Sec. 2\]](#ref-northwestern_linalg_chap1). Each entry of a [cross-product matrix](#def-cross-product-matrix) instead pairs a column of $\mathbf{A}$ with a column of $\mathbf{B}$, so in these notes we call it a column-column [product](linear-algebra-vectors.llms.md#def-dot-product).
 
 > **NOTE:**
@@ -457,6 +479,34 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 > \end{aligned}$$
 >
 > is entry $(1, 2)$.
+
+> **NOTE:**
+>
+> **Exercise 10 (Computing a Gram matrix)** The [Gram matrix](#def-gram-matrix) holds the [dot products](linear-algebra-vectors.llms.md#def-dot-product) of every pair of [columns of](linear-algebra-matrices.llms.md#def-matrix-column) $\mathbf{A}$. Let
+>
+> $$\mathbf{A} = \begin{bmatrix}1 & 2 \\ 0 & 1 \\ 1 & 0\end{bmatrix}.$$
+>
+> Compute ${\mathbf{A}}^{\top}\mathbf{A}$.
+>
+> > **TIP:**
+> >
+> > Entry $(i, j)$ is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_i \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j$, so entries $(1, 2)$ and $(2, 1)$ agree.
+
+> **NOTE:**
+>
+> *Solution 10*. The [columns of](linear-algebra-matrices.llms.md#def-matrix-column) $\mathbf{A}$ are $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 = (1, 0, 1)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 = (2, 1, 0)$, so
+>
+> $$\begin{aligned}
+> \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 &= 1 + 0 + 1 = 2,
+> \\
+> \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 &= 2 + 0 + 0 = 2,
+> \\
+> \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 &= 4 + 1 + 0 = 5,
+> \end{aligned}$$
+>
+> and
+>
+> $${\mathbf{A}}^{\top}\mathbf{A} = \begin{bmatrix}2 & 2 \\ 2 & 5\end{bmatrix}.$$
 
 > **NOTE:**
 >
@@ -523,6 +573,31 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 
 > **NOTE:**
 >
+> **Exercise 11 (Computing a cross-product matrix one row at a time)** [Theorem 5](#thm-cross-product-sum-outer) builds a [cross-product matrix](#def-cross-product-matrix) by adding one [outer product](linear-algebra-inner-products.llms.md#def-outer-product) per [row](linear-algebra-matrices.llms.md#def-matrix-row), which is how it can be updated as observations arrive. Let
+>
+> $$\mathbf{A} = \begin{bmatrix}1 & 2 \\ 0 & 1\end{bmatrix},
+> \qquad
+> \mathbf{B} = \begin{bmatrix}3 \\ 1\end{bmatrix}.$$
+>
+> Compute ${\mathbf{A}}^{\top} \mathbf{B}$ by adding two outer products.
+>
+> > **TIP:**
+> >
+> > [Rows of](linear-algebra-matrices.llms.md#def-matrix-row) $\mathbf{A}$ are $(1, 2)$ and $(0, 1)$, and rows of $\mathbf{B}$ are $3$ and $1$.
+
+> **NOTE:**
+>
+> *Solution 11*. By [Theorem 5](#thm-cross-product-sum-outer),
+>
+> $${\mathbf{A}}^{\top} \mathbf{B}
+> = \begin{bmatrix}1 \\ 2\end{bmatrix} \begin{bmatrix}3\end{bmatrix} + \begin{bmatrix}0 \\ 1\end{bmatrix} \begin{bmatrix}1\end{bmatrix}
+> = \begin{bmatrix}3 \\ 6\end{bmatrix} + \begin{bmatrix}0 \\ 1\end{bmatrix}
+> = \begin{bmatrix}3 \\ 7\end{bmatrix}.$$
+>
+> Multiplying directly gives the same: ${\mathbf{A}}^{\top}\mathbf{B} = (1 \cdot 3 + 0 \cdot 1,\; 2 \cdot 3 + 1 \cdot 1) = (3, 7)$.
+
+> **NOTE:**
+>
 > **Theorem 6 (**${\mathbf{A}}^{\top} \mathbf{A}$ has the same null space as $\mathbf{A}$) For any $m \times n$ matrix $\mathbf{A}$,
 >
 > $$\mathcal{N}({\mathbf{A}}^{\top} \mathbf{A}) = \mathcal{N}(\mathbf{A}).$$
@@ -573,6 +648,24 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 > \end{aligned}$$
 >
 > Every row is a multiple of $(1, -2, -2)$, so ${\mathbf{A}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_3$ exactly when $x_1 - 2x_2 - 2x_3 = 0$, the same condition as for $\mathcal{N}(\mathbf{A})$ in [Example 3](#exm-null-space).
+
+> **NOTE:**
+>
+> **Exercise 12 (Finding the null space of a Gram matrix)** [Theorem 6](#thm-null-gram) lets the [null space](#def-null-space) of a [Gram matrix](#def-gram-matrix) be read off from the original [matrix](linear-algebra-matrices.llms.md#def-matrix). Let $\mathbf{A}$ be the $3 \times 2$ matrix whose every entry is $1$.
+>
+> Find $\mathcal{N}({\mathbf{A}}^{\top}\mathbf{A})$.
+>
+> > **TIP:**
+> >
+> > Find $\mathcal{N}(\mathbf{A})$ first. Each entry of $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is $x_1 + x_2$.
+
+> **NOTE:**
+>
+> *Solution 12*. Each entry of $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is $x_1 + x_2$, so $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_3$ exactly when $x_2 = -x_1$, and $\mathcal{N}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\{(1, -1)\right\}\mathclose{}$. By [Theorem 6](#thm-null-gram),
+>
+> $$\mathcal{N}({\mathbf{A}}^{\top}\mathbf{A}) = \operatorname{span}\mathopen{}\left\{(1, -1)\right\}\mathclose{}.$$
+>
+> As a check, ${\mathbf{A}}^{\top}\mathbf{A} = \begin{bmatrix}3 & 3 \\ 3 & 3\end{bmatrix}$, which sends $(1, -1)$ to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2$.
 
 # 2 Rank-nullity and rank factorization
 
@@ -1285,7 +1378,7 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 
 > **NOTE:**
 >
-> **Exercise 9 (Which side of the plane?)** Let $\mathcal{H}$ be the plane in $\mathbb{R}^3$ with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, 1, 1)$ and $b = -1$ ([Example 22](#exm-hyperplane-subspace)).
+> **Exercise 13 (Which side of the plane?)** Let $\mathcal{H}$ be the plane in $\mathbb{R}^3$ with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, 1, 1)$ and $b = -1$ ([Example 22](#exm-hyperplane-subspace)).
 >
 > 1.  For each point, say whether it is in $\mathcal{H}^+$, $\mathcal{H}$ or $\mathcal{H}^-$ ([Definition 9](#def-half-space)): $(0, 0, 0)$, $(1, 0, 0)$ and $(1, 1, 1)$.
 > 2.  Write the plane and its half-spaces using $-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ and $-b$. Which points from part 1 change sides?
@@ -1293,7 +1386,7 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 
 > **NOTE:**
 >
-> *Solution 9*.
+> *Solution 13*.
 >
 > 1.  Compute $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b = x_1 + x_2 + x_3 - 1$ at each point.
 >
