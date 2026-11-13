@@ -22,7 +22,7 @@ $$
 && \text{(@thm-matmul-distrib, @thm-scalar-matmul)}
 \\
 &= \qform{\matr{A}}{\vx} + \combwt\,\norm{\vx}^2
-&& \text{(@thm-identity, @eq-l2-norm, squared)}
+&& \text{(@thm-identity, @eq-norm-dot-product, squared)}
 \\
 &> 0.
 && \text{(} \qform{\matr{A}}{\vx} \ge 0, \; \combwt > 0, \; \vx \ne \vzero_p \text{)}

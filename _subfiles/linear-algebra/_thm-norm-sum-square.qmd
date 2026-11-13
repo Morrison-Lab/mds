@@ -21,7 +21,7 @@ $$
 \ba
 \norm{\vecf{x} + \vecf{y}}^2
 &= (\vecf{x} + \vecf{y}) \cdot (\vecf{x} + \vecf{y})
-&& \text{(square both sides of @eq-l2-norm)}
+&& \text{(square both sides of @eq-norm-dot-product)}
 \\
 &= \vecf{x} \cdot (\vecf{x} + \vecf{y}) + \vecf{y} \cdot (\vecf{x} + \vecf{y})
 && \text{(@thm-dot-linear, first slot, } a \text{ and } b \text{ both equal to } 1 \text{)}
@@ -36,7 +36,7 @@ $$
 && \text{(combine like terms)}
 \\
 &= \norm{\vecf{x}}^2 + 2\,(\vecf{x} \cdot \vecf{y}) + \norm{\vecf{y}}^2.
-&& \text{(@eq-l2-norm, squared)}
+&& \text{(@eq-norm-dot-product, squared)}
 \ea
 $$
 

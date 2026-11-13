@@ -134,7 +134,7 @@ that is, when $\vecf{x} = t\,\vecf{y}$.
   && \text{(} \abs{ab} = \abs{a}\,\abs{b} \text{)}
   \\
   &= \abs{s}\,\norm{\vecf{y}}^2
-  && \text{(} \vecf{y} \cdot \vecf{y} = \norm{\vecf{y}}^2 \ge 0 \text{, @eq-l2-norm)}
+  && \text{(} \vecf{y} \cdot \vecf{y} = \norm{\vecf{y}}^2 \ge 0 \text{, @eq-norm-dot-product)}
   \\
   &= \paren{\abs{s}\,\norm{\vecf{y}}}\,\norm{\vecf{y}}
   && \text{(regroup)}

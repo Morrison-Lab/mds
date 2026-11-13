@@ -42,7 +42,7 @@ $$
 && \text{(@thm-transpose-product)}
 \\
 &= \norm{\matr{A} \vx}^2
-&& \text{(@eq-l2-norm, squared)}
+&& \text{(@eq-norm-dot-product, squared)}
 \\
 &\ge 0.
 && \text{(a squared norm is nonnegative)}
