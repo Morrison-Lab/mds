@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-11-12 14:34:43 (PST)
+Last modified: 2026-11-12 15:24:40 (PST)
 
 # 1 Column space and null space
 
@@ -184,6 +184,31 @@ Last modified: 2026-11-12 14:34:43 (PST)
 
 > **NOTE:**
 >
+> **Exercise 5 (Testing whether a vector is in a left null space)** The [left null space](#def-left-null-space) of a [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{A}$ is the [null space](#def-null-space) of its [transpose](linear-algebra-matrices.llms.md#def-matrix-transpose). Let
+>
+> $$\mathbf{A} = \begin{bmatrix}1 & 2 \\ 2 & 4\end{bmatrix}$$
+>
+> and let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ be the [column vector](linear-algebra-vectors.llms.md#def-column-vector) $(2, -1)$.
+>
+> Decide whether $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ is in $\mathcal{N}({\mathbf{A}}^{\top})$.
+>
+> > **TIP:**
+> >
+> > Compute ${\mathbf{A}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$.
+
+> **NOTE:**
+>
+> *Solution 5*. Here
+>
+> $${\mathbf{A}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}
+> = \begin{bmatrix}1 & 2 \\ 2 & 4\end{bmatrix} \begin{bmatrix}2 \\ -1\end{bmatrix}
+> = \begin{bmatrix}2 - 2 \\ 4 - 4\end{bmatrix}
+> = \begin{bmatrix}0 \\ 0\end{bmatrix},$$
+>
+> so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ is in $\mathcal{N}({\mathbf{A}}^{\top})$. Here $\mathbf{A}$ [equals](linear-algebra-matrices.llms.md#def-matrix-equality) its own [transpose](linear-algebra-matrices.llms.md#def-matrix-transpose), so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ is in $\mathcal{N}(\mathbf{A})$ as well.
+
+> **NOTE:**
+>
 > **Theorem 2 (A null space is a subspace)** For any $m \times n$ matrix $\mathbf{A}$, $\mathcal{N}(\mathbf{A})$ ([Definition 3](#def-null-space)) is a subspace of $\mathbb{R}^n$ ([Definition 4 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-subspace)).
 
 > **NOTE:**
@@ -230,6 +255,24 @@ Last modified: 2026-11-12 14:34:43 (PST)
 
 > **NOTE:**
 >
+> **Exercise 6 (Showing that the solutions of two equations are a subspace)** [Theorem 2](#thm-null-space-subspace) turns a question about a [subspace](linear-algebra-subspaces.llms.md#def-subspace) into a question about a [null space](#def-null-space). Let $\mathcal{S}$ hold the [solutions](linear-algebra-matrices.llms.md#def-linear-system) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \in \mathbb{R}^3$ of the two equations $x_1 + x_2 - x_3 = 0$ and $x_2 = 2 x_3$.
+>
+> Show that $\mathcal{S}$ is a subspace of $\mathbb{R}^3$.
+>
+> > **TIP:**
+> >
+> > Write both equations as $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2$ for one $2 \times 3$ [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{A}$.
+
+> **NOTE:**
+>
+> *Solution 6*. Move every term to the left side: $x_1 + x_2 - x_3 = 0$ and $x_2 - 2 x_3 = 0$. With
+>
+> $$\mathbf{A} = \begin{bmatrix}1 & 1 & -1 \\ 0 & 1 & -2\end{bmatrix},$$
+>
+> the two equations say $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2$, so $\mathcal{S} = \mathcal{N}(\mathbf{A})$. By [Theorem 2](#thm-null-space-subspace), $\mathcal{S}$ is a [subspace](linear-algebra-subspaces.llms.md#def-subspace) of $\mathbb{R}^3$.
+
+> **NOTE:**
+>
 > **Theorem 3 (Independent columns exactly when the null space is trivial)** For an $m \times n$ matrix $\mathbf{A}$, the following are equivalent:
 >
 > 1.  The columns of $\mathbf{A}$ are linearly independent ([Definition 1 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-linearly-independent)).
@@ -256,6 +299,26 @@ Last modified: 2026-11-12 14:34:43 (PST)
 > This is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_3$ only if $x_2 = 0$ (subtract the first entry from the second), and then $x_1 = 0$. So $\mathcal{N}(\mathbf{A}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2\right\}\mathclose{}$ and the two columns are linearly independent.
 >
 > For $\mathbf{B} = \begin{bmatrix} 1 & 2 \\ 1 & 2 \\ 1 & 2 \end{bmatrix}$, $\mathbf{B} (2, -1) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_3$, so $\mathcal{N}(\mathbf{B})$ contains a nonzero vector and the columns of $\mathbf{B}$ are linearly dependent.
+
+> **NOTE:**
+>
+> **Exercise 7 (Testing independent columns through the null space)** [Theorem 3](#thm-independent-null-space) turns a question about independence into one about solving $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$. Let
+>
+> $$\mathbf{A} = \begin{bmatrix}1 & 2 \\ 2 & 4 \\ 0 & 1\end{bmatrix}.$$
+>
+> Decide whether the [columns of](linear-algebra-matrices.llms.md#def-matrix-column) $\mathbf{A}$ are [linearly independent](linear-algebra-subspaces.llms.md#def-linearly-independent).
+>
+> > **TIP:**
+> >
+> > Solve $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_3$, starting with the third entry.
+
+> **NOTE:**
+>
+> *Solution 7*. For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (x_1, x_2)$,
+>
+> $$\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \begin{bmatrix}x_1 + 2 x_2 \\ 2 x_1 + 4 x_2 \\ x_2\end{bmatrix}.$$
+>
+> The third entry gives $x_2 = 0$, and then the first gives $x_1 = 0$. So $\mathcal{N}(\mathbf{A}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2\right\}\mathclose{}$, and by [Theorem 3](#thm-independent-null-space) the [columns of](linear-algebra-matrices.llms.md#def-matrix-column) $\mathbf{A}$ are [linearly independent](linear-algebra-subspaces.llms.md#def-linearly-independent).
 
 > **NOTE:**
 >
@@ -306,6 +369,33 @@ Last modified: 2026-11-12 14:34:43 (PST)
 > \end{aligned}$$
 >
 > is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2$, that is, only if $c = 0$. So the two subspaces share only $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_3$.
+
+> **NOTE:**
+>
+> **Exercise 8 (Testing a row-space vector against the null space)** [Theorem 4](#thm-row-null-disjoint) says that a nonzero vector in the [row space](#def-row-space) is never in the [null space](#def-null-space). Let
+>
+> $$\mathbf{A} = \begin{bmatrix}1 & 1 & 0 \\ 0 & 1 & 1\end{bmatrix},
+> \qquad
+> \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \begin{bmatrix}1 \\ 2 \\ 1\end{bmatrix},$$
+>
+> so that $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (1, 1, 0) + (0, 1, 1)$ adds the two [rows of](linear-algebra-matrices.llms.md#def-matrix-row) $\mathbf{A}$.
+>
+> Check that $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ is not in $\mathcal{N}(\mathbf{A})$.
+>
+> > **TIP:**
+> >
+> > Multiply each [row of](linear-algebra-matrices.llms.md#def-matrix-row) $\mathbf{A}$ by $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$.
+
+> **NOTE:**
+>
+> *Solution 8*. Here
+>
+> $$\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}
+> = \begin{bmatrix}1 + 2 + 0 \\ 0 + 2 + 1\end{bmatrix}
+> = \begin{bmatrix}3 \\ 3\end{bmatrix}
+> \neq \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2,$$
+>
+> so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ is not in $\mathcal{N}(\mathbf{A})$, as [Theorem 4](#thm-row-null-disjoint) requires of a nonzero vector in the [row space](#def-row-space).
 
 > **NOTE:**
 >
@@ -1195,7 +1285,7 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 
 > **NOTE:**
 >
-> **Exercise 5 (Which side of the plane?)** Let $\mathcal{H}$ be the plane in $\mathbb{R}^3$ with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, 1, 1)$ and $b = -1$ ([Example 22](#exm-hyperplane-subspace)).
+> **Exercise 9 (Which side of the plane?)** Let $\mathcal{H}$ be the plane in $\mathbb{R}^3$ with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, 1, 1)$ and $b = -1$ ([Example 22](#exm-hyperplane-subspace)).
 >
 > 1.  For each point, say whether it is in $\mathcal{H}^+$, $\mathcal{H}$ or $\mathcal{H}^-$ ([Definition 9](#def-half-space)): $(0, 0, 0)$, $(1, 0, 0)$ and $(1, 1, 1)$.
 > 2.  Write the plane and its half-spaces using $-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ and $-b$. Which points from part 1 change sides?
@@ -1203,7 +1293,7 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 
 > **NOTE:**
 >
-> *Solution 5*.
+> *Solution 9*.
 >
 > 1.  Compute $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b = x_1 + x_2 + x_3 - 1$ at each point.
 >

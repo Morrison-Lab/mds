@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-12 14:34:43 (PST)
+Last modified: 2026-11-12 15:24:40 (PST)
 
 # 1 Rank
 
@@ -561,6 +561,22 @@ Last modified: 2026-11-12 14:34:43 (PST)
 
 > **NOTE:**
 >
+> **Exercise 12 (Counting the ways to write a vector in a basis)** The vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 = {(1, 1)}^{\top}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 = {(1, -1)}^{\top}$ form a [basis](#def-basis) of $\mathbb{R}^2$, and
+>
+> $$\begin{bmatrix}5 \\ 1\end{bmatrix} = 3 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 + 2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2.$$
+>
+> How many lists of numbers $c_1, c_2$ satisfy ${(5, 1)}^{\top} = c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 + c_2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2$?
+>
+> > **TIP:**
+> >
+> > Use [Theorem 6](#thm-basis-unique).
+
+> **NOTE:**
+>
+> *Solution 12*. Exactly one, namely $c_1 = 3$ and $c_2 = 2$. By [Theorem 6](#thm-basis-unique), a vector in the [span](#def-span) of a [basis](#def-basis) has only one list of numbers, and $3, 2$ is a list that works.
+
+> **NOTE:**
+>
 > **Definition 7 (Coordinates in a basis)** Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_k$ be a basis of a subspace $\mathcal{S}$ ([Definition 6](#def-basis)), and let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \in \mathcal{S}$. The **coordinates** [\[7\]](#ref-wikipedia_coordinate_vector) of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ in this basis are the numbers $c_1, \ldots, c_k$ with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 + \cdots + c_k \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_k$. By [Theorem 6](#thm-basis-unique) there is exactly one such list of numbers.
 
 > **NOTE:**
@@ -581,6 +597,38 @@ Last modified: 2026-11-12 14:34:43 (PST)
 > \end{aligned}$$
 >
 > In the basis $(1, 0), (0, 1)$, its coordinates are its entries, $4$ and $1$.
+
+> **NOTE:**
+>
+> **Exercise 13 (Finding coordinates in a basis other than the indicator vectors)** The [coordinates](#def-coordinates) of a vector depend on the [basis](#def-basis), and they match its entries only in the basis of [indicator vectors](linear-algebra-vectors.llms.md#def-indicator-vector). The vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 = {(2, 0)}^{\top}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 = {(1, 1)}^{\top}$ form a basis of $\mathbb{R}^2$. Let
+>
+> $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \begin{bmatrix}7 \\ 3\end{bmatrix}.$$
+>
+> Find the coordinates of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ in the basis $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2$.
+>
+> > **TIP:**
+> >
+> > Write $c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 + c_2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2$ entry by entry, and start from the second entry.
+
+> **NOTE:**
+>
+> *Solution 13*. The [coordinates](#def-coordinates) of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ are $2$ and $3$. Entry by entry, $c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 + c_2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 = {(2 c_1 + c_2,\ c_2)}^{\top}$. The second entry gives $c_2 = 3$, and then the first gives $2 c_1 + 3 = 7$, so $c_1 = 2$. As a check, $2 {(2, 0)}^{\top} + 3 {(1, 1)}^{\top} = {(7, 3)}^{\top}$.
+
+> **NOTE:**
+>
+> **Exercise 14 (Describing a point on a plane in** $\mathbb{R}^3$ with two numbers) A point on a plane through the origin in $\mathbb{R}^3$ needs only two numbers, its [coordinate vector](#def-coordinate-vector) in a [basis](#def-basis) of the plane. The vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 = {(1, 1, 0)}^{\top}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 = {(0, 1, 1)}^{\top}$ form a basis of a plane $\mathcal{S}$, which contains
+>
+> $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \begin{bmatrix}2 \\ 5 \\ 3\end{bmatrix}.$$
+>
+> Find the coordinate vector of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ in the basis $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2$.
+>
+> > **TIP:**
+> >
+> > Write $c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 + c_2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2$ entry by entry, then use [Definition 8](#def-coordinate-vector).
+
+> **NOTE:**
+>
+> *Solution 14*. Entry by entry, $c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 + c_2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 = {(c_1,\ c_1 + c_2,\ c_2)}^{\top}$. Matching $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ gives $c_1 = 2$ and $c_2 = 3$, and the second entry checks: $2 + 3 = 5$. By [Definition 8](#def-coordinate-vector), the [coordinate vector](#def-coordinate-vector) of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is ${(2, 3)}^{\top} \in \mathbb{R}^2$.
 
 > **NOTE:**
 >
