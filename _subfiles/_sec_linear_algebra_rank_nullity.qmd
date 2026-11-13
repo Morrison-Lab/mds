@@ -6,11 +6,43 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_exr-rank-dim-practice.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-rank-dim-practice.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_thm-rank-nullity.qmd >}}
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_exr-nullity-practice.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-nullity-practice.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exr-rank-nullity-practice.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-rank-nullity-practice.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_thm-rank-product.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exr-rank-product-practice.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-rank-product-practice.qmd >}}
 
 {{< slidebreak >}}
 
