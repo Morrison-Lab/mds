@@ -20,3 +20,15 @@ and click it to open its page.
 
 ::: {#dependency-graph-site}
 :::
+
+# With the prerequisites from math for computer science {.unnumbered}
+
+These notes build on the
+[math for computer science notes](https://morrison-lab.github.io/mcs/dependency-tree.html),
+whose Math Reference pages define [sets](https://morrison-lab.github.io/mcs/sets.html#def-set), [functions](https://morrison-lab.github.io/mcs/functions.html#def-function), numbers and proofs.
+This tree joins both sets of notes:
+a box sits below each definition and [theorem](https://morrison-lab.github.io/mcs/proof-writing.html#def-theorem) it uses, in either one,
+and hovering over a box also shows which notes it is in.
+
+::: {#dependency-graph-all data-json="https://morrison-lab.github.io/mcs/dependency-graph.json,https://morrison-lab.github.io/mds/dependency-graph.json"}
+:::

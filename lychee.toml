@@ -18,6 +18,9 @@ timeout = 20
 
 # Exclude template URLs that users should replace
 exclude = [
+  # Not a link: the data-json attribute of the joined tree in dependency-tree.qmd,
+  # a comma-separated list of graph files that lychee reads as one URL (each file is live)
+  "^https://morrison-lab\\.github\\.io/mcs/dependency-graph\\.json,https://morrison-lab\\.github\\.io/mds/dependency-graph\\.json$",
   "https://github.com/YOUR-USERNAME/.*",
   "https://YOUR-USERNAME.github.io/.*",
   "https://your-username.github.io/.*",
