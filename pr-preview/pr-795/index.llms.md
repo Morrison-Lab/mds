@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-12 12:56:52 (PST)
+Last modified: 2026-11-12 17:38:18 (PST)
 
 # Welcome
 
@@ -55,7 +55,7 @@ These resources cover related material.
 
 Course sites link to these pages by URL; they do not include this repository as a git submodule. A host site that keeps a copy of this repository at its root, named `mds`, can still include fragments with paths that start with `mds/`, for example `{{< include mds/_notation.qmd >}}`. This site includes its own fragments the same way, through a `mds` symlink that points at the repository root.
 
-Each page is a thin wrapper around one or more fragments:
+Each page’s content is in one or more fragments, which a host page can include, even where this site’s own page only lists its sub-pages:
 
 | Page | Fragment(s) to include |
 |----|----|

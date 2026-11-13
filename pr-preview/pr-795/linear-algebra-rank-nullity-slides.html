@@ -364,7 +364,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-12 12:56:52 (PST)</p>
+  <p class="date">Last modified: 2026-11-12 17:38:18 (PST)</p>
 </section><section class="slide level2"></section><section id="sec-column-null-space" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Column space and null space</h2>
 </section><section class="slide level2"><div id="def-column-space" class="theorem definition">
@@ -517,7 +517,7 @@
 </div>
 </div>
 </section><section class="slide level2"><div id="sol-column-space-span-practice" class="proof solution">
-<p><span class="proof-title"><em>Solution 3</em>. </span>By <a href="#/thm-column-space-span" class="quarto-xref">Theorem&nbsp;1</a>, <span class="math inline">\(\mathcal{C}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\{(1, 0), (0, 1), (1, 1)\right\}\mathclose{}\)</span>. Every <span class="math inline">\((b_1, b_2) \in \mathbb{R}^2\)</span> equals <span class="math inline">\(b_1\,(1, 0) + b_2\,(0, 1) + 0\,(1, 1)\)</span>, so it is in that <a href="./linear-algebra-subspaces.html#def-span">span</a>. The <a href="#/def-column-space">column space</a> also lies inside <span class="math inline">\(\mathbb{R}^2\)</span>, so <span class="math inline">\(\mathcal{C}(\mathbf{A}) = \mathbb{R}^2\)</span>.</p>
+<p><span class="proof-title"><em>Solution 3</em>. </span>By <a href="#/thm-column-space-span" class="quarto-xref">Theorem&nbsp;1</a>, <span class="math inline">\(\mathcal{C}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\{(1, 0), (0, 1), (1, 1)\right\}\mathclose{}\)</span>. Every <span class="math inline">\((b_1, b_2) \in \mathbb{R}^2\)</span> is <span class="math inline">\(b_1\,(1, 0) + b_2\,(0, 1) + 0\,(1, 1)\)</span>, so it is in that <a href="./linear-algebra-subspaces.html#def-span">span</a>. The <a href="#/def-column-space">column space</a> also lies inside <span class="math inline">\(\mathbb{R}^2\)</span>, so <span class="math inline">\(\mathcal{C}(\mathbf{A}) = \mathbb{R}^2\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exr-null-space-practice" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 4 (Finding a null space)</strong></span> The <a href="#/def-null-space">null space</a> of a <a href="./linear-algebra-matrices.html#def-matrix">matrix</a> <span class="math inline">\(\mathbf{A}\)</span> holds every <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> with <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>. Let</p>
@@ -534,7 +534,7 @@
 <p><strong>Hint</strong></p>
 </div>
 <div class="callout-content">
-<p>Write out the two entries of <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and make each equal to <span class="math inline">\(0\)</span>.</p>
+<p>Write out the two entries of <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and make each <span class="math inline">\(0\)</span>.</p>
 </div>
 </div>
 </div>
@@ -578,7 +578,7 @@
 = \begin{bmatrix}2 - 2 \\ 4 - 4\end{bmatrix}
 = \begin{bmatrix}0 \\ 0\end{bmatrix},
 \]</span></p>
-<p>so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> is in <span class="math inline">\(\mathcal{N}({\mathbf{A}}^{\top})\)</span>. Here <span class="math inline">\(\mathbf{A}\)</span> equals its own <a href="./linear-algebra-matrices.html#def-matrix-transpose">transpose</a>, so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> is in <span class="math inline">\(\mathcal{N}(\mathbf{A})\)</span> as well.</p>
+<p>so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> is in <span class="math inline">\(\mathcal{N}({\mathbf{A}}^{\top})\)</span>. Here <span class="math inline">\(\mathbf{A}\)</span> <a href="./linear-algebra-matrices.html#def-matrix-equality">equals</a> its own <a href="./linear-algebra-matrices.html#def-matrix-transpose">transpose</a>, so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> is in <span class="math inline">\(\mathcal{N}(\mathbf{A})\)</span> as well.</p>
 </div>
 </section><section class="slide level2"><div id="thm-null-space-subspace" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 2 (A null space is a subspace)</strong></span> For any <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span>, <span class="math inline">\(\mathcal{N}(\mathbf{A})\)</span> (<a href="#/def-null-space" class="quarto-xref">Definition&nbsp;3</a>) is a subspace of <span class="math inline">\(\mathbb{R}^n\)</span> (<a href="./linear-algebra-subspaces.html#def-subspace">Definition&nbsp;4 in Subspaces and Rank</a>).</p>
@@ -756,7 +756,7 @@
 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \begin{bmatrix}1 \\ 2 \\ 1\end{bmatrix},
 \]</span></p>
 <p>so that <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (1, 1, 0) + (0, 1, 1)\)</span> adds the two <a href="./linear-algebra-matrices.html#def-matrix-row">rows of <span class="math inline">\(\mathbf{A}\)</span></a>.</p>
-<p>Compute <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span>, and check that <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> is not in <span class="math inline">\(\mathcal{N}(\mathbf{A})\)</span>.</p>
+<p>Check that <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> is not in <span class="math inline">\(\mathcal{N}(\mathbf{A})\)</span>.</p>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -766,7 +766,7 @@
 <p><strong>Hint</strong></p>
 </div>
 <div class="callout-content">
-<p>Multiply each row of <span class="math inline">\(\mathbf{A}\)</span> by <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span>.</p>
+<p>Multiply each <a href="./linear-algebra-matrices.html#def-matrix-row">row of</a> <span class="math inline">\(\mathbf{A}\)</span> by <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span>.</p>
 </div>
 </div>
 </div>
@@ -829,7 +829,7 @@
 <p><strong>Hint</strong></p>
 </div>
 <div class="callout-content">
-<p>Entry <span class="math inline">\(i\)</span> is the <a href="./linear-algebra-vectors.html#def-dot-product">dot product</a> of column <span class="math inline">\(i\)</span> of <span class="math inline">\(\mathbf{A}\)</span> with <span class="math inline">\((2, 3)\)</span>.</p>
+<p>Entry <span class="math inline">\(i\)</span> is the <a href="./linear-algebra-vectors.html#def-dot-product">dot product</a> of <a href="./linear-algebra-matrices.html#def-matrix-column">column <span class="math inline">\(i\)</span> of</a> <span class="math inline">\(\mathbf{A}\)</span> with <span class="math inline">\((2, 3)\)</span>.</p>
 </div>
 </div>
 </div>
@@ -974,7 +974,7 @@
 <p>the same as in <a href="#/exm-cross-product-matrix" class="quarto-xref">Example&nbsp;7</a>.</p>
 </div>
 </section><section class="slide level2"><div id="exr-cross-product-sum-outer-practice" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 11 (Computing a cross-product matrix one row at a time)</strong></span> <a href="#/thm-cross-product-sum-outer" class="quarto-xref">Theorem&nbsp;5</a> builds a <a href="#/def-cross-product-matrix">cross-product matrix</a> by adding one <a href="./linear-algebra-inner-products.html#def-outer-product">outer product</a> per row, which is how it can be updated as observations arrive. Let</p>
+<p><span class="theorem-title"><strong>Exercise 11 (Computing a cross-product matrix one row at a time)</strong></span> <a href="#/thm-cross-product-sum-outer" class="quarto-xref">Theorem&nbsp;5</a> builds a <a href="#/def-cross-product-matrix">cross-product matrix</a> by adding one <a href="./linear-algebra-inner-products.html#def-outer-product">outer product</a> per <a href="./linear-algebra-matrices.html#def-matrix-row">row</a>, which is how it can be updated as observations arrive. Let</p>
 <p><span class="math display">\[
 \mathbf{A} = \begin{bmatrix}1 &amp; 2 \\ 0 &amp; 1\end{bmatrix},
 \qquad
@@ -1136,13 +1136,13 @@
 <p><strong>Hint</strong></p>
 </div>
 <div class="callout-content">
-<p>In <span class="math inline">\(\mathbf{A}\)</span>, the second column is a multiple of the first.</p>
+<p>In <span class="math inline">\(\mathbf{A}\)</span>, the second <a href="./linear-algebra-matrices.html#def-matrix-column">column</a> is a multiple of the first.</p>
 </div>
 </div>
 </div>
 </div>
 </section><section class="slide level2"><div id="sol-rank-dim-practice" class="proof solution">
-<p><span class="proof-title"><em>Solution 13</em>. </span>In <span class="math inline">\(\mathbf{A}\)</span>, the second column is <span class="math inline">\((2, 4, 6) = 2\,(1, 2, 3)\)</span>, so by <a href="#/thm-column-space-span" class="quarto-xref">Theorem&nbsp;1</a></p>
+<p><span class="proof-title"><em>Solution 13</em>. </span>In <span class="math inline">\(\mathbf{A}\)</span>, the second <a href="./linear-algebra-matrices.html#def-matrix-column">column</a> is <span class="math inline">\((2, 4, 6) = 2\,(1, 2, 3)\)</span>, so by <a href="#/thm-column-space-span" class="quarto-xref">Theorem&nbsp;1</a></p>
 <p><span class="math display">\[
 \mathcal{C}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\{(1, 2, 3), (2, 4, 6)\right\}\mathclose{} = \operatorname{span}\mathopen{}\left\{(1, 2, 3)\right\}\mathclose{}.
 \]</span></p>
@@ -1383,53 +1383,6 @@ c_1 &amp;= c_2 \\
 </section><section class="slide level2"><div id="exm-rank-bound" class="theorem example">
 <p><span class="theorem-title"><strong>Example 16 (A <span class="math inline">\(2 \times 3\)</span> matrix has rank at most <span class="math inline">\(2\)</span>)</strong></span> By <a href="#/cor-rank-bound" class="quarto-xref">Corollary&nbsp;1</a>, every <span class="math inline">\(2 \times 3\)</span> matrix has rank at most <span class="math inline">\(\min\mathopen{}\left\{2, 3\right\}\mathclose{} = 2\)</span>, even though it has <span class="math inline">\(3\)</span> columns. The matrix <span class="math inline">\(\begin{bmatrix} 1 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 1 \end{bmatrix}\)</span> of <a href="./linear-algebra-subspaces.html#rem-full-column-rank-shape">Remark&nbsp;1 in Subspaces and Rank</a> reaches that bound: its first two columns <span class="math inline">\((1, 0)\)</span> and <span class="math inline">\((0, 1)\)</span> are linearly independent, so its rank is <span class="math inline">\(2\)</span>.</p>
 </div>
-</section><section class="slide level2"><div id="exr-rank-transpose-practice" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 17 (Finding the rank of a Gram matrix without computing it)</strong></span> A <a href="#/def-gram-matrix">Gram matrix</a> can be larger than the <a href="./linear-algebra-matrices.html#def-matrix">matrix</a> it comes from, but <a href="#/thm-rank-transpose" class="quarto-xref">Theorem&nbsp;10</a> says it has the same <a href="./linear-algebra-subspaces.html#def-rank">rank</a>. Let</p>
-<p><span class="math display">\[
-\mathbf{A} = \begin{bmatrix}1 &amp; 0 &amp; 2 \\ 0 &amp; 1 &amp; 1\end{bmatrix}.
-\]</span></p>
-<p>Find <span class="math inline">\({\operatorname{rank}\mathopen{}\left({\mathbf{A}}^{\top}\mathbf{A}\right)\mathclose{}}\)</span> without computing <span class="math inline">\({\mathbf{A}}^{\top}\mathbf{A}\)</span>.</p>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Hint</strong></p>
-</div>
-<div class="callout-content">
-<p>Find <span class="math inline">\({\operatorname{rank}\mathopen{}\left(\mathbf{A}\right)\mathclose{}}\)</span> from its two <a href="./linear-algebra-matrices.html#def-matrix-row">rows</a>, using <a href="#/thm-rank-transpose" class="quarto-xref">Theorem&nbsp;10</a> once more.</p>
-</div>
-</div>
-</div>
-</div>
-</section><section class="slide level2"><div id="sol-rank-transpose-practice" class="proof solution">
-<p><span class="proof-title"><em>Solution 17</em>. </span>Both <a href="./linear-algebra-matrices.html#def-matrix-row">rows of <span class="math inline">\(\mathbf{A}\)</span></a>, <span class="math inline">\((1, 0, 2)\)</span> and <span class="math inline">\((0, 1, 1)\)</span>, are <a href="./linear-algebra-subspaces.html#def-linearly-independent">linearly independent</a>: <span class="math inline">\(c_1\,(1, 0, 2) + c_2\,(0, 1, 1) = (c_1, c_2, 2 c_1 + c_2)\)</span> is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_3\)</span> only if <span class="math inline">\(c_1 = c_2 = 0\)</span>. So <span class="math inline">\({\operatorname{rank}\mathopen{}\left({\mathbf{A}}^{\top}\right)\mathclose{}} = 2\)</span>, and by <a href="#/thm-rank-transpose" class="quarto-xref">Theorem&nbsp;10</a></p>
-<p><span class="math display">\[
-{\operatorname{rank}\mathopen{}\left({\mathbf{A}}^{\top}\mathbf{A}\right)\mathclose{}} = {\operatorname{rank}\mathopen{}\left(\mathbf{A}\right)\mathclose{}} = {\operatorname{rank}\mathopen{}\left({\mathbf{A}}^{\top}\right)\mathclose{}} = 2,
-\]</span></p>
-<p>even though <span class="math inline">\({\mathbf{A}}^{\top}\mathbf{A}\)</span> is <span class="math inline">\(3 \times 3\)</span>.</p>
-</div>
-</section><section class="slide level2"><div id="exr-rank-bound-practice" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 18 (Finding how large the rank of a tall matrix can be)</strong></span> A table of <span class="math inline">\(5\)</span> observations of <span class="math inline">\(3\)</span> features is a tall <span class="math inline">\(5 \times 3\)</span> <a href="./linear-algebra-matrices.html#def-matrix">matrix</a>. <a href="#/cor-rank-bound" class="quarto-xref">Corollary&nbsp;1</a> says how large its <a href="./linear-algebra-subspaces.html#def-rank">rank</a> can be.</p>
-<p>Find the largest rank that a <span class="math inline">\(5 \times 3\)</span> matrix can have.</p>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Hint</strong></p>
-</div>
-<div class="callout-content">
-<p>Use <a href="#/cor-rank-bound" class="quarto-xref">Corollary&nbsp;1</a> with <span class="math inline">\(m = 5\)</span> and <span class="math inline">\(n = 3\)</span>.</p>
-</div>
-</div>
-</div>
-</div>
-</section><section class="slide level2"><div id="sol-rank-bound-practice" class="proof solution">
-<p><span class="proof-title"><em>Solution 18</em>. </span>By <a href="#/cor-rank-bound" class="quarto-xref">Corollary&nbsp;1</a>, the <a href="./linear-algebra-subspaces.html#def-rank">rank</a> is at most <span class="math inline">\(\min\mathopen{}\left\{5, 3\right\}\mathclose{} = 3\)</span>. A rank of <span class="math inline">\(3\)</span> is reached, for example by the <span class="math inline">\(5 \times 3\)</span> <a href="./linear-algebra-matrices.html#def-matrix">matrix</a> with <a href="./linear-algebra-matrices.html#def-matrix-row">rows</a> <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1}^{\top}, {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2}^{\top}, {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3}^{\top}, {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_3}^{\top}, {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_3}^{\top}\)</span>, whose three <a href="./linear-algebra-matrices.html#def-matrix-column">columns</a> are <a href="./linear-algebra-subspaces.html#def-linearly-independent">linearly independent</a>.</p>
-</div>
 </section><section class="slide level2"><div id="thm-rank-product-right" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 11 (Multiplying on the left cannot increase the rank)</strong></span> If <span class="math inline">\(\mathbf{A}\)</span> is <span class="math inline">\(m \times n\)</span> and <span class="math inline">\(\mathbf{B}\)</span> is <span class="math inline">\(n \times k\)</span>, then</p>
 <p><span class="math display">\[
@@ -1467,29 +1420,6 @@ c_1 &amp;= c_2 \\
 \]</span></p>
 <p><span class="math inline">\(\mathbf{A}\)</span> has <a href="./linear-algebra-subspaces.html#def-rank">rank</a> <span class="math inline">\(2\)</span>, because its columns <span class="math inline">\((1, 0)\)</span> and <span class="math inline">\((1, 1)\)</span> are <a href="./linear-algebra-subspaces.html#def-linearly-independent">linearly independent</a>. <span class="math inline">\(\mathbf{B}\)</span> has rank <span class="math inline">\(1\)</span>, because its second column is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2\)</span> and its first is not, and <span class="math inline">\(\mathbf{A} \mathbf{B}\)</span> has rank <span class="math inline">\(1\)</span> for the same reason. So <span class="math inline">\(\operatorname{rank}(\mathbf{A} \mathbf{B}) = 1 \le \operatorname{rank}(\mathbf{B}) = 1\)</span> (<a href="#/thm-rank-product-right" class="quarto-xref">Theorem&nbsp;11</a>), and the bound of <a href="#/thm-rank-product" class="quarto-xref">Theorem&nbsp;9</a>, <span class="math inline">\(2\)</span>, is not the tighter one.</p>
 </div>
-</section><section class="slide level2"><div id="exr-rank-product-right-practice" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 19 (Finding how large the rank of a product can be from its right factor)</strong></span> <a href="#/thm-rank-product-right" class="quarto-xref">Theorem&nbsp;11</a> shows how large the <a href="./linear-algebra-subspaces.html#def-rank">rank</a> of a <a href="./linear-algebra-matrices.html#def-matrix-mult">matrix product</a> can be, given the rank of its right factor. Let <span class="math inline">\(\mathbf{A}\)</span> be any <span class="math inline">\(3 \times 2\)</span> <a href="./linear-algebra-matrices.html#def-matrix">matrix</a>, and let</p>
-<p><span class="math display">\[
-\mathbf{B} = \begin{bmatrix}1 &amp; 1 \\ 1 &amp; 1\end{bmatrix}.
-\]</span></p>
-<p>Find the number that, by <a href="#/thm-rank-product-right" class="quarto-xref">Theorem&nbsp;11</a>, <span class="math inline">\({\operatorname{rank}\mathopen{}\left(\mathbf{A}\mathbf{B}\right)\mathclose{}}\)</span> cannot exceed, whatever <span class="math inline">\(\mathbf{A}\)</span> is.</p>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Hint</strong></p>
-</div>
-<div class="callout-content">
-<p>Find <span class="math inline">\({\operatorname{rank}\mathopen{}\left(\mathbf{B}\right)\mathclose{}}\)</span> first.</p>
-</div>
-</div>
-</div>
-</div>
-</section><section class="slide level2"><div id="sol-rank-product-right-practice" class="proof solution">
-<p><span class="proof-title"><em>Solution 19</em>. </span>Each of the two <a href="./linear-algebra-matrices.html#def-matrix-column">columns of <span class="math inline">\(\mathbf{B}\)</span></a> is <span class="math inline">\((1, 1)\)</span>, so its <a href="#/def-column-space">column space</a> is <span class="math inline">\(\operatorname{span}\mathopen{}\left\{(1, 1)\right\}\mathclose{}\)</span>, and <a href="#/thm-rank-dim" class="quarto-xref">Theorem&nbsp;7</a> gives <span class="math inline">\({\operatorname{rank}\mathopen{}\left(\mathbf{B}\right)\mathclose{}} = 1\)</span>. By <a href="#/thm-rank-product-right" class="quarto-xref">Theorem&nbsp;11</a>, <span class="math inline">\({\operatorname{rank}\mathopen{}\left(\mathbf{A}\mathbf{B}\right)\mathclose{}} \le 1\)</span> for every <span class="math inline">\(3 \times 2\)</span> <a href="./linear-algebra-matrices.html#def-matrix">matrix</a> <span class="math inline">\(\mathbf{A}\)</span>.</p>
-</div>
 </section><section class="slide level2 scrollable"><div id="cor-rank-product-full-rank" class="theorem corollary">
 <p><span class="theorem-title"><strong>Corollary 2 (Multiplying by a matrix of full rank does not change the rank)</strong></span> Let <span class="math inline">\(\mathbf{A}\)</span> be <span class="math inline">\(m \times n\)</span> and <span class="math inline">\(\mathbf{B}\)</span> be <span class="math inline">\(n \times k\)</span>.</p>
 <ol type="1">
@@ -1515,34 +1445,6 @@ c_1 &amp;= c_2 \\
 <li>Part 1: <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 1 &amp; 1 \\ 0 &amp; 1 \\ 0 &amp; 0 \end{bmatrix}\)</span> has two <a href="./linear-algebra-subspaces.html#def-linearly-independent">linearly independent</a> columns, so it has <a href="./linear-algebra-subspaces.html#def-full-column-rank">full column rank</a>, and <span class="math inline">\(\mathbf{A} \mathbf{B} = \begin{bmatrix} 2 &amp; 0 \\ 1 &amp; 0 \\ 0 &amp; 0 \end{bmatrix}\)</span> has rank <span class="math inline">\(1 = \operatorname{rank}(\mathbf{B})\)</span>.</li>
 <li>Part 2: let <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 0 \end{bmatrix}\)</span>, which has rank <span class="math inline">\(1\)</span>, and let <span class="math inline">\(\mathbf{B} = \begin{bmatrix} 1 &amp; 1 \\ 0 &amp; 1 \end{bmatrix}\)</span>, which has rank <span class="math inline">\(2\)</span>. Then <span class="math inline">\(\mathbf{A} \mathbf{B} = \begin{bmatrix} 1 &amp; 1 \\ 0 &amp; 0 \end{bmatrix}\)</span> has rank <span class="math inline">\(1 = \operatorname{rank}(\mathbf{A})\)</span>.</li>
 </ul>
-</div>
-</section><section class="slide level2"><div id="exr-rank-product-full-rank-practice" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 20 (Finding the rank of a product with a full-column-rank factor)</strong></span> <a href="#/cor-rank-product-full-rank" class="quarto-xref">Corollary&nbsp;2</a> says that a left factor with <a href="./linear-algebra-subspaces.html#def-full-column-rank">full column rank</a> keeps the <a href="./linear-algebra-subspaces.html#def-rank">rank</a> of the right factor. Let</p>
-<p><span class="math display">\[
-\mathbf{A} = \begin{bmatrix}1 &amp; 0 \\ 0 &amp; 1 \\ 1 &amp; 1\end{bmatrix},
-\qquad
-\mathbf{B} = \begin{bmatrix}1 &amp; 2 \\ 2 &amp; 4\end{bmatrix}.
-\]</span></p>
-<p>Find <span class="math inline">\({\operatorname{rank}\mathopen{}\left(\mathbf{A}\mathbf{B}\right)\mathclose{}}\)</span> without multiplying.</p>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Hint</strong></p>
-</div>
-<div class="callout-content">
-<p>Check that <span class="math inline">\(\mathbf{A}\)</span> has <a href="./linear-algebra-subspaces.html#def-full-column-rank">full column rank</a>, and find <span class="math inline">\({\operatorname{rank}\mathopen{}\left(\mathbf{B}\right)\mathclose{}}\)</span>.</p>
-</div>
-</div>
-</div>
-</div>
-</section><section class="slide level2"><div id="sol-rank-product-full-rank-practice" class="proof solution">
-<p><span class="proof-title"><em>Solution 20</em>. </span><a href="./linear-algebra-matrices.html#def-matrix-column">Columns of <span class="math inline">\(\mathbf{A}\)</span></a>, <span class="math inline">\((1, 0, 1)\)</span> and <span class="math inline">\((0, 1, 1)\)</span>, are <a href="./linear-algebra-subspaces.html#def-linearly-independent">linearly independent</a>: the first two entries of <span class="math inline">\(c_1\,(1, 0, 1) + c_2\,(0, 1, 1)\)</span> are <span class="math inline">\(c_1\)</span> and <span class="math inline">\(c_2\)</span>. So <span class="math inline">\(\mathbf{A}\)</span> has <a href="./linear-algebra-subspaces.html#def-full-column-rank">full column rank</a>. The second column of <span class="math inline">\(\mathbf{B}\)</span> is twice the first, so <span class="math inline">\({\operatorname{rank}\mathopen{}\left(\mathbf{B}\right)\mathclose{}} = 1\)</span>. By part 1 of <a href="#/cor-rank-product-full-rank" class="quarto-xref">Corollary&nbsp;2</a>,</p>
-<p><span class="math display">\[
-{\operatorname{rank}\mathopen{}\left(\mathbf{A}\mathbf{B}\right)\mathclose{}} = {\operatorname{rank}\mathopen{}\left(\mathbf{B}\right)\mathclose{}} = 1.
-\]</span></p>
 </div>
 </section><section class="slide level2"><div id="thm-centered-data-rank" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 12 (A centered data matrix has rank at most <span class="math inline">\(n - 1\)</span>)</strong></span> Let <span class="math inline">\(\mathbf{X}\)</span> be an <span class="math inline">\(n \times p\)</span> matrix with rows <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_1}^{\top}, \ldots, {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n}^{\top}\)</span>, let <span class="math inline">\(\bar{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} = \frac{1}{n}\sum_{i=1}^n \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_i\)</span> be the mean of the rows, and let <span class="math inline">\(\mathbf{X}_c = \mathbf{X}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}}\,{\bar{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}}^{\top}\)</span> be the matrix whose row <span class="math inline">\(i\)</span> is <span class="math inline">\({(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_i - \bar{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}})}^{\top}\)</span>, where <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}}\)</span> is the ones vector of length <span class="math inline">\(n\)</span> (<a href="./linear-algebra-vectors.html#def-ones-vector">Definition&nbsp;16 in Vectors</a>). Then <span class="math inline">\(\operatorname{rank}(\mathbf{X}_c) \le n - 1\)</span>.</p>
@@ -1619,46 +1521,6 @@ c_1 &amp;= c_2 \\
 \]</span></p>
 <p>using <span class="math inline">\({\mathbf{X}_c}^{\top}\mathbf{X}_c = \mathbf{X}_c\)</span> (the centering matrix is a symmetric projection). Then <span class="math inline">\(\mathbf{S}\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_3\)</span> and <span class="math inline">\(\operatorname{rank}(\mathbf{S}) = 2 = n - 1 &lt; 3\)</span>. With one more point than dimensions (<span class="math inline">\(n = p + 1\)</span>), the rank bound allows <span class="math inline">\(\mathbf{S}\)</span> to have full rank <span class="math inline">\(p\)</span>.</p>
 </div>
-</section><section class="slide level2"><div id="exr-centered-data-rank-practice" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 21 (Finding how large the rank of centered data can be)</strong></span> Centering a data <a href="./linear-algebra-matrices.html#def-matrix">matrix</a> subtracts the <a href="./linear-algebra-vectors.html#def-mean">mean</a> row from every row, and <a href="#/thm-centered-data-rank" class="quarto-xref">Theorem&nbsp;12</a> shows how large the <a href="./linear-algebra-subspaces.html#def-rank">rank</a> of the result can be. Suppose that <span class="math inline">\(\mathbf{X}\)</span> holds <span class="math inline">\(3\)</span> observations of <span class="math inline">\(4\)</span> features, as a <span class="math inline">\(3 \times 4\)</span> matrix, and <span class="math inline">\(\mathbf{X}_c\)</span> is its centered version.</p>
-<p>Find the number that, by <a href="#/thm-centered-data-rank" class="quarto-xref">Theorem&nbsp;12</a>, <span class="math inline">\({\operatorname{rank}\mathopen{}\left(\mathbf{X}_c\right)\mathclose{}}\)</span> cannot exceed.</p>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Hint</strong></p>
-</div>
-<div class="callout-content">
-<p>Compare the number from <a href="#/thm-centered-data-rank" class="quarto-xref">Theorem&nbsp;12</a> with the one from <a href="#/cor-rank-bound" class="quarto-xref">Corollary&nbsp;1</a>.</p>
-</div>
-</div>
-</div>
-</div>
-</section><section class="slide level2"><div id="sol-centered-data-rank-practice" class="proof solution">
-<p><span class="proof-title"><em>Solution 21</em>. </span>By <a href="#/thm-centered-data-rank" class="quarto-xref">Theorem&nbsp;12</a> with <span class="math inline">\(n = 3\)</span>, <span class="math inline">\({\operatorname{rank}\mathopen{}\left(\mathbf{X}_c\right)\mathclose{}} \le 3 - 1 = 2\)</span>. That number is smaller than <span class="math inline">\(\min\mathopen{}\left\{3, 4\right\}\mathclose{} = 3\)</span> from <a href="#/cor-rank-bound" class="quarto-xref">Corollary&nbsp;1</a>: the three centered <a href="./linear-algebra-matrices.html#def-matrix-row">rows</a> add up to <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_4\)</span>, so they are <a href="./linear-algebra-subspaces.html#def-linearly-independent">linearly dependent</a>.</p>
-</div>
-</section><section class="slide level2"><div id="exr-sample-covariance-singular-practice" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 22 (Deciding whether a sample covariance matrix is invertible)</strong></span> A study records <span class="math inline">\(6\)</span> features for each of <span class="math inline">\(4\)</span> people, and forms the <span class="math inline">\(6 \times 6\)</span> sample covariance <a href="./linear-algebra-matrices.html#def-matrix">matrix</a> <span class="math inline">\(\mathbf{S}\)</span> defined in <a href="#/cor-sample-covariance-singular" class="quarto-xref">Corollary&nbsp;3</a>.</p>
-<p>Decide whether <span class="math inline">\(\mathbf{S}\)</span> is <a href="./linear-algebra-special-matrices.html#def-invertible-matrix">invertible</a>.</p>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Hint</strong></p>
-</div>
-<div class="callout-content">
-<p>Compare <span class="math inline">\(n\)</span> with <span class="math inline">\(p\)</span>.</p>
-</div>
-</div>
-</div>
-</div>
-</section><section class="slide level2"><div id="sol-sample-covariance-singular-practice" class="proof solution">
-<p><span class="proof-title"><em>Solution 22</em>. </span>Here <span class="math inline">\(n = 4\)</span> and <span class="math inline">\(p = 6\)</span>, so <span class="math inline">\(n \le p\)</span>. By <a href="#/cor-sample-covariance-singular" class="quarto-xref">Corollary&nbsp;3</a>, <span class="math inline">\({\operatorname{rank}\mathopen{}\left(\mathbf{S}\right)\mathclose{}} \le 4 - 1 = 3 &lt; 6\)</span>, so <span class="math inline">\(\mathbf{S}\)</span> is not <a href="./linear-algebra-special-matrices.html#def-invertible-matrix">invertible</a>.</p>
-</div>
 </section><section class="slide level2"><div id="def-affine-subspace" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 8 (Affine subspace)</strong></span> An <strong>affine subspace</strong> <span class="citation" data-cites="wikipedia_affine_space"><a href="#/references" role="doc-biblioref" onclick="">[6]</a></span> of <span class="math inline">\(\mathbb{R}^p\)</span> is a set of the form</p>
 <p><span class="math display">\[
@@ -1679,30 +1541,6 @@ c_1 &amp;= c_2 \\
 \end{aligned}
 \]</span></p>
 <p>and as <span class="math inline">\(c\)</span> ranges over <span class="math inline">\(\mathbb{R}\)</span>, <span class="math inline">\((c, 1)\)</span> ranges over all of <span class="math inline">\(\mathcal{T}\)</span>. Every subspace <span class="math inline">\(\mathcal{S}\)</span> is also an affine subspace, with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>.</p>
-</div>
-</section><section class="slide level2"><div id="exr-affine-subspace-practice" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 23 (Writing a line as an affine subspace)</strong></span> A line such as <span class="math inline">\(y = 2x + 3\)</span> in <span class="math inline">\(\mathbb{R}^2\)</span> misses the origin, so it is not a <a href="./linear-algebra-subspaces.html#def-subspace">subspace</a>, but it is an <a href="#/def-affine-subspace">affine subspace</a>. Let <span class="math inline">\(\mathcal{T} = \mathopen{}\left\{(x, 2x + 3) : x \in \mathbb{R}\right\}\mathclose{}\)</span>.</p>
-<p>Find a vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0\)</span> and a subspace <span class="math inline">\(\mathcal{S}\)</span> with <span class="math inline">\(\mathcal{T} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} \in \mathcal{S}\right\}\mathclose{}\)</span>.</p>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Hint</strong></p>
-</div>
-<div class="callout-content">
-<p>Take <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0\)</span> to be the point of <span class="math inline">\(\mathcal{T}\)</span> with <span class="math inline">\(x = 0\)</span>, and see what is left of <span class="math inline">\((x, 2x + 3)\)</span> once you subtract it.</p>
-</div>
-</div>
-</div>
-</div>
-</section><section class="slide level2"><div id="sol-affine-subspace-practice" class="proof solution">
-<p><span class="proof-title"><em>Solution 23</em>. </span>Take <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 = (0, 3)\)</span>, and let <span class="math inline">\(\mathcal{S} = \operatorname{span}\mathopen{}\left\{(1, 2)\right\}\mathclose{}\)</span> be the <a href="./linear-algebra-subspaces.html#def-span">span</a> of <span class="math inline">\((1, 2)\)</span>. For any <span class="math inline">\(c \in \mathbb{R}\)</span>,</p>
-<p><span class="math display">\[
-(0, 3) + c\,(1, 2) = (c, 2c + 3),
-\]</span></p>
-<p>so every <span class="math inline">\(c \in \mathbb{R}\)</span> gives a point <span class="math inline">\((c, 2c + 3)\)</span> of <span class="math inline">\(\mathcal{T}\)</span>, and every point of <span class="math inline">\(\mathcal{T}\)</span> arises this way.</p>
 </div>
 </section><section class="slide level2 scrollable"><div id="thm-hyperplane-subspace" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 13 (A hyperplane is a translated subspace of dimension <span class="math inline">\(p - 1\)</span>)</strong></span> Let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p\)</span> be nonzero, let <span class="math inline">\(b \in \mathbb{R}\)</span>, let <span class="math inline">\(\mathcal{H} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ b = 0\right\}\mathclose{}\)</span> be the hyperplane with normal vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> and offset <span class="math inline">\(b\)</span> (<a href="./linear-algebra-matrices.html#def-hyperplane">Definition&nbsp;27 in Matrices</a>), and let <span class="math inline">\(\mathcal{H}_0 = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= 0\right\}\mathclose{}\)</span> be the hyperplane with the same normal vector and offset <span class="math inline">\(0\)</span>.</p>
@@ -1800,30 +1638,6 @@ c_1 &amp;= c_2 \\
 </li>
 </ul>
 </div>
-</section><section class="slide level2"><div id="exr-hyperplane-subspace-practice" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 24 (Checking that a normal vector is orthogonal to a hyperplane)</strong></span> Part 3 of <a href="#/thm-hyperplane-subspace" class="quarto-xref">Theorem&nbsp;13</a> says that, for a <a href="./linear-algebra-matrices.html#def-hyperplane">hyperplane</a>, its <a href="./linear-algebra-matrices.html#def-normal-vector">normal vector</a> is <a href="./linear-algebra-vectors.html#def-orthogonal-vectors">orthogonal</a> to the difference of any two of its points. Let <span class="math inline">\(\mathcal{H} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^3 : 2 x_1 - x_2 + x_3 - 4 = 0\right\}\mathclose{}\)</span>, with normal vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (2, -1, 1)\)</span>. The points <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (2, 0, 0)\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (0, 0, 4)\)</span> are both in <span class="math inline">\(\mathcal{H}\)</span>.</p>
-<p>Check that <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) = 0\)</span>.</p>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Hint</strong></p>
-</div>
-<div class="callout-content">
-<p>Compute <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> first.</p>
-</div>
-</div>
-</div>
-</div>
-</section><section class="slide level2"><div id="sol-hyperplane-subspace-practice" class="proof solution">
-<p><span class="proof-title"><em>Solution 24</em>. </span>Here <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (2, 0, -4)\)</span>, and</p>
-<p><span class="math display">\[
-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) = 2 \cdot 2 + (-1) \cdot 0 + 1 \cdot(-4) = 0,
-\]</span></p>
-<p>as part 3 of <a href="#/thm-hyperplane-subspace" class="quarto-xref">Theorem&nbsp;13</a> says.</p>
-</div>
 </section><section class="slide level2 scrollable"><div id="thm-hyperplane-origin" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 14 (Where a hyperplane passes, and its shape in <span class="math inline">\(\mathbb{R}^2\)</span> and <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> Let <span class="math inline">\(\mathcal{H} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b = 0\right\}\mathclose{}\)</span> be a hyperplane (<a href="./linear-algebra-matrices.html#def-hyperplane">Definition&nbsp;27 in Matrices</a>).</p>
 <ol type="1">
@@ -1833,7 +1647,24 @@ c_1 &amp;= c_2 \\
 <li>If <span class="math inline">\(p = 3\)</span>, then <span class="math inline">\(\mathcal{H}\)</span> is a plane: <span class="math inline">\(\mathcal{H} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + s\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 + t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2 : s, t \in \mathbb{R}\right\}\mathclose{}\)</span> for some <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 \in \mathbb{R}^3\)</span> and some linearly independent <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2 \in \mathbb{R}^3\)</span>.</li>
 </ol>
 </div>
-</section><section class="slide level2"></section><section class="slide level2"><div id="exm-hyperplane-origin" class="theorem example">
+</section><section class="slide level2"><div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><strong>Part 1.</strong> Since <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} = 0\)</span>,</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} + b
+&amp;= 0 + b
+&amp;&amp; \text{(the dot product with } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\text{ is } 0 \text{)}
+\\
+&amp;= b,
+&amp;&amp; \text{(}\href{algebra-sums.qmd#thm-add-ident}{\text{Theorem~4 in Convexity, Infimum and Sums}}\text{)}
+\end{aligned}
+\]</span></p>
+<p>so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\in \mathcal{H}\)</span> exactly when <span class="math inline">\(b = 0\)</span>.</p>
+<p><strong>Parts 2 and 3.</strong> By <a href="#/thm-hyperplane-subspace" class="quarto-xref">Theorem&nbsp;13</a>, <span class="math inline">\(\mathcal{H} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} \in \mathcal{H}_0\right\}\mathclose{}\)</span> for any <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 \in \mathcal{H}\)</span>, where <span class="math inline">\(\mathcal{H}_0\)</span> is a subspace of <span class="math inline">\(\mathbb{R}^p\)</span> of dimension <span class="math inline">\(p - 1\)</span>.</p>
+<p>For <span class="math inline">\(p = 2\)</span>, <span class="math inline">\(\mathcal{H}_0\)</span> has dimension <span class="math inline">\(1\)</span>, so it has a basis (<a href="./linear-algebra-subspaces.html#def-basis">Definition&nbsp;6 in Subspaces and Rank</a>) with one vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span>. That vector is nonzero, and <span class="math inline">\(\mathcal{H}_0 = \mathopen{}\left\{t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} : t \in \mathbb{R}\right\}\mathclose{}\)</span>.</p>
+<p>For <span class="math inline">\(p = 3\)</span>, <span class="math inline">\(\mathcal{H}_0\)</span> has dimension <span class="math inline">\(2\)</span>, so it has a basis with two vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2\)</span>. They are linearly independent, and <span class="math inline">\(\mathcal{H}_0 = \mathopen{}\left\{s\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 + t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2 : s, t \in \mathbb{R}\right\}\mathclose{}\)</span>.</p>
+</div>
+</section><section class="slide level2"><div id="exm-hyperplane-origin" class="theorem example">
 <p><span class="theorem-title"><strong>Example 23 (A line in <span class="math inline">\(\mathbb{R}^2\)</span> and a plane in <span class="math inline">\(\mathbb{R}^3\)</span>, checked on a grid of points)</strong></span> In <span class="math inline">\(\mathbb{R}^2\)</span>, take <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, 1)\)</span> and <span class="math inline">\(b = -1\)</span>, the line of <a href="./linear-algebra-matrices.html#exm-hyperplane">Example&nbsp;24 in Matrices</a>. The point <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 = -\frac{b}{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}}\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> is on it, and the vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (-w_2, w_1)\)</span> is nonzero with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = 0\)</span>, so it spans the subspace <span class="math inline">\(\mathcal{H}_0\)</span> of <a href="#/thm-hyperplane-subspace" class="quarto-xref">Theorem&nbsp;13</a>. In <span class="math inline">\(\mathbb{R}^3\)</span>, take <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, 1, 1)\)</span> and <span class="math inline">\(b = -1\)</span>, the plane of <a href="#/exm-hyperplane-subspace" class="quarto-xref">Example&nbsp;22</a>, with the independent vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 = (1, -1, 0)\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2 = (0, 1, -1)\)</span> in <span class="math inline">\(\mathcal{H}_0\)</span>. The code evaluates <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b\)</span> at the origin and at points <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + s\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 + t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2\)</span>.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-label="1"></a>level <span class="ot">&lt;-</span> <span class="cf">function</span>(w, b, x) <span class="fu">sum</span>(w <span class="sc">*</span> x) <span class="sc">+</span> b</span>
@@ -1864,30 +1695,6 @@ c_1 &amp;= c_2 \\
 <span id="cb1-26"><a aria-label="26"></a><span class="co">#&gt;             -1             -1              0</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>At the origin the left side equals the offset, so the origin is on the line only if <span class="math inline">\(b\)</span> is <span class="math inline">\(0\)</span>: it gives -1 for the line and -1 for the plane, and 0 once the offset is changed to <span class="math inline">\(0\)</span>. All 5 points <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> on the line and all 25 points <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + s\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 + t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2\)</span> on the plane satisfy the equation up to rounding error: 30 of the 30 points have <span class="math inline">\(\mathopen{}\left|\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b\right|\mathclose{} &lt; 10^{-10}\)</span>.</p>
-</div>
-</section><section class="slide level2"><div id="exr-hyperplane-origin-practice" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 25 (Describing a line in <span class="math inline">\(\mathbb{R}^2\)</span> by a point and a vector)</strong></span> Part 2 of <a href="#/thm-hyperplane-origin" class="quarto-xref">Theorem&nbsp;14</a> says that a <a href="./linear-algebra-matrices.html#def-hyperplane">hyperplane</a> in <span class="math inline">\(\mathbb{R}^2\)</span> is a line <span class="math inline">\(\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} : t \in \mathbb{R}\right\}\mathclose{}\)</span> for a point <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0\)</span> and a nonzero vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span>. Let <span class="math inline">\(\mathcal{H} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^2 : 2 x_1 + x_2 - 4 = 0\right\}\mathclose{}\)</span>.</p>
-<p>Find a point <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0\)</span> and a nonzero vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> with <span class="math inline">\(\mathcal{H} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} : t \in \mathbb{R}\right\}\mathclose{}\)</span>.</p>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Hint</strong></p>
-</div>
-<div class="callout-content">
-<p>Find one point of <span class="math inline">\(\mathcal{H}\)</span> by setting <span class="math inline">\(x_2 = 0\)</span>, and take <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (-w_2, w_1)\)</span> as in <a href="#/exm-hyperplane-origin" class="quarto-xref">Example&nbsp;23</a>.</p>
-</div>
-</div>
-</div>
-</div>
-</section><section class="slide level2"><div id="sol-hyperplane-origin-practice" class="proof solution">
-<p><span class="proof-title"><em>Solution 25</em>. </span>Setting <span class="math inline">\(x_2 = 0\)</span> gives <span class="math inline">\(x_1 = 2\)</span>, so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 = (2, 0)\)</span> is in <span class="math inline">\(\mathcal{H}\)</span>. With <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (2, 1)\)</span>, take <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (-1, 2)\)</span>. Then <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (2 - t, 2t)\)</span>, and</p>
-<p><span class="math display">\[
-2\,(2 - t) + 2t - 4 = 0
-\]</span></p>
-<p>for every <span class="math inline">\(t\)</span>. Conversely, a point <span class="math inline">\((x_1, x_2)\)</span> of <span class="math inline">\(\mathcal{H}\)</span> has <span class="math inline">\(x_2 = 4 - 2 x_1\)</span>, so it equals <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> with <span class="math inline">\(t = 2 - x_1\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="thm-hyperplane-graph" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 15 (The graph of an affine function is a hyperplane)</strong></span> Let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\in \mathbb{R}^p\)</span>, <span class="math inline">\(b \in \mathbb{R}\)</span>. The <a href="https://morrison-lab.github.io/mcs/functions.html#def-graph">graph</a> of the <a href="https://morrison-lab.github.io/mcs/functions.html#def-function">function</a> <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\mapsto \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b\)</span> is the <a href="https://morrison-lab.github.io/mcs/sets.html#def-set">set</a></p>
@@ -1947,26 +1754,6 @@ Figure&nbsp;1: The graph of <span class="math inline">\(y = 2x + 1\)</span>, a l
 </div>
 </div>
 </div>
-</section><section class="slide level2"><div id="exr-hyperplane-graph-practice" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 26 (Finding the normal vector of the graph of a regression surface)</strong></span> <a href="#/thm-hyperplane-graph" class="quarto-xref">Theorem&nbsp;15</a> says that the <a href="https://morrison-lab.github.io/mcs/functions.html#def-graph">graph</a> of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\mapsto \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b\)</span> is a <a href="./linear-algebra-matrices.html#def-hyperplane">hyperplane</a> in <span class="math inline">\(\mathbb{R}^{p+1}\)</span>. Let <span class="math inline">\(f(x_1, x_2) = 3 x_1 - x_2 + 2\)</span>, a regression surface with two features.</p>
-<p>Find a <a href="./linear-algebra-matrices.html#def-normal-vector">normal vector</a> for the graph of <span class="math inline">\(f\)</span> in <span class="math inline">\(\mathbb{R}^3\)</span>.</p>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Hint</strong></p>
-</div>
-<div class="callout-content">
-<p>Read off <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> and use the <a href="./linear-algebra-matrices.html#def-normal-vector">normal vector</a> <span class="math inline">\(\begin{bmatrix}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\\ -1\end{bmatrix}\)</span> from <a href="#/thm-hyperplane-graph" class="quarto-xref">Theorem&nbsp;15</a>.</p>
-</div>
-</div>
-</div>
-</div>
-</section><section class="slide level2"><div id="sol-hyperplane-graph-practice" class="proof solution">
-<p><span class="proof-title"><em>Solution 26</em>. </span>Here <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}= (3, -1)\)</span> and <span class="math inline">\(b = 2\)</span>. By <a href="#/thm-hyperplane-graph" class="quarto-xref">Theorem&nbsp;15</a>, the <a href="https://morrison-lab.github.io/mcs/functions.html#def-graph">graph</a> of <span class="math inline">\(f\)</span> is a <a href="./linear-algebra-matrices.html#def-hyperplane">hyperplane</a> in <span class="math inline">\(\mathbb{R}^3\)</span> with <a href="./linear-algebra-matrices.html#def-normal-vector">normal vector</a> <span class="math inline">\((3, -1, -1)\)</span>: it holds the points <span class="math inline">\((x_1, x_2, y)\)</span> with <span class="math inline">\(3 x_1 - x_2 - y + 2 = 0\)</span>.</p>
-</div>
 </section><section class="slide level2"><div id="def-half-space" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 9 (Open half-space)</strong></span> Let <span class="math inline">\(\mathcal{H} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b = 0\right\}\mathclose{}\)</span> be a hyperplane (<a href="./linear-algebra-matrices.html#def-hyperplane">Definition&nbsp;27 in Matrices</a>). The two <strong>open half-spaces</strong> <span class="citation" data-cites="wikipedia_half_space_geometry"><a href="#/references" role="doc-biblioref" onclick="">[7]</a></span> of <span class="math inline">\(\mathcal{H}\)</span> are</p>
 <p><span id="eq-half-space"><span class="math display">\[
@@ -1997,46 +1784,6 @@ Figure&nbsp;1: The graph of <span class="math inline">\(y = 2x + 1\)</span>, a l
 <li>At <span class="math inline">\((2, 1)\)</span> it equals <span class="math inline">\(2 + 2 - 2 = 2 &gt; 0\)</span>, so <span class="math inline">\((2, 1) \in \mathcal{H}^+\)</span>.</li>
 </ul>
 <p>Moving from <span class="math inline">\((2, 0)\)</span> in the direction <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, 2)\)</span> gives <span class="math inline">\((3, 2)\)</span>, where the value is <span class="math inline">\(3 + 4 - 2 = 5 &gt; 0\)</span>. So the direction <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> leads into <span class="math inline">\(\mathcal{H}^+\)</span>.</p>
-</div>
-</section><section class="slide level2"><div id="exr-half-space-practice" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 27 (Finding which open half-space holds a point)</strong></span> The sign of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b\)</span> tells which <a href="#/def-half-space">open half-space</a> of a <a href="./linear-algebra-matrices.html#def-hyperplane">hyperplane</a> a point <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> lies in. Let <span class="math inline">\(\mathcal{H}\)</span> be the line in <span class="math inline">\(\mathbb{R}^2\)</span> with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (2, -1)\)</span> and <span class="math inline">\(b = -1\)</span>.</p>
-<p>Decide whether <span class="math inline">\((0, 0)\)</span> is in <span class="math inline">\(\mathcal{H}^+\)</span> or in <span class="math inline">\(\mathcal{H}^-\)</span>.</p>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Hint</strong></p>
-</div>
-<div class="callout-content">
-<p>Evaluate <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b\)</span> at <span class="math inline">\((0, 0)\)</span>.</p>
-</div>
-</div>
-</div>
-</div>
-</section><section class="slide level2"><div id="sol-half-space-practice" class="proof solution">
-<p><span class="proof-title"><em>Solution 27</em>. </span>At <span class="math inline">\((0, 0)\)</span>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b = 0 + 0 - 1 = -1 &lt; 0\)</span>, so <span class="math inline">\((0, 0)\)</span> is in the <a href="#/def-half-space">open half-space</a> <span class="math inline">\(\mathcal{H}^-\)</span>.</p>
-</div>
-</section><section class="slide level2"><div id="exr-closed-half-space-practice" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 28 (Testing whether a point is in a closed half-space)</strong></span> A <a href="#/def-closed-half-space">closed half-space</a> adds the <a href="./linear-algebra-matrices.html#def-hyperplane">hyperplane</a> itself to an <a href="#/def-half-space">open half-space</a>. Let <span class="math inline">\(\mathcal{H}\)</span> be the line in <span class="math inline">\(\mathbb{R}^2\)</span> with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (2, -1)\)</span> and <span class="math inline">\(b = -3\)</span>.</p>
-<p>Decide whether the point <span class="math inline">\((2, 1)\)</span> is in the closed half-space <span class="math inline">\(\mathcal{H}^+ \cup \mathcal{H}\)</span>.</p>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Hint</strong></p>
-</div>
-<div class="callout-content">
-<p>Evaluate <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b\)</span> at <span class="math inline">\((2, 1)\)</span>.</p>
-</div>
-</div>
-</div>
-</div>
-</section><section class="slide level2"><div id="sol-closed-half-space-practice" class="proof solution">
-<p><span class="proof-title"><em>Solution 28</em>. </span>At <span class="math inline">\((2, 1)\)</span>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b = 4 - 1 - 3 = 0\)</span>, so <span class="math inline">\((2, 1) \in \mathcal{H}\)</span>. It is therefore in the <a href="#/def-closed-half-space">closed half-space</a> <span class="math inline">\(\mathcal{H}^+ \cup \mathcal{H}\)</span>, though not in the <a href="#/def-half-space">open half-space</a> <span class="math inline">\(\mathcal{H}^+\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="rem-half-space-sides" class="proof remark">
 <p><span class="proof-title"><em>Remark 2</em> (The two sides of a hyperplane). </span>Every point of <span class="math inline">\(\mathbb{R}^p\)</span> is in exactly one of <span class="math inline">\(\mathcal{H}^+\)</span>, <span class="math inline">\(\mathcal{H}\)</span> and <span class="math inline">\(\mathcal{H}^-\)</span>, because the number <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b\)</span> is positive, zero or negative. The vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> points into <span class="math inline">\(\mathcal{H}^+\)</span>: the number <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b\)</span> goes up when <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> moves in the direction <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>.</p>
@@ -2119,7 +1866,7 @@ Figure&nbsp;2: Petal length and width of versicolor and virginica irises, with t
 <p>The vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> points toward the virginica side, so the positive half-space <span class="math inline">\(\mathcal{H}^+\)</span> holds 50 of the 100 flowers, and 47 of them are virginica. The line is a set of dimension <span class="math inline">\(p - 1 = 1\)</span>, and each side is a region of the plane of dimension <span class="math inline">\(p = 2\)</span> (<a href="#/thm-half-space-dimension" class="quarto-xref">Theorem&nbsp;16</a>).</p>
 </div>
 </section><section class="slide level2 scrollable"><div id="exr-half-space-sides" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 29 (Which side of the plane?)</strong></span> Let <span class="math inline">\(\mathcal{H}\)</span> be the plane in <span class="math inline">\(\mathbb{R}^3\)</span> with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, 1, 1)\)</span> and <span class="math inline">\(b = -1\)</span> (<a href="#/exm-hyperplane-subspace" class="quarto-xref">Example&nbsp;22</a>).</p>
+<p><span class="theorem-title"><strong>Exercise 17 (Which side of the plane?)</strong></span> Let <span class="math inline">\(\mathcal{H}\)</span> be the plane in <span class="math inline">\(\mathbb{R}^3\)</span> with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, 1, 1)\)</span> and <span class="math inline">\(b = -1\)</span> (<a href="#/exm-hyperplane-subspace" class="quarto-xref">Example&nbsp;22</a>).</p>
 <ol type="1">
 <li>For each point, say whether it is in <span class="math inline">\(\mathcal{H}^+\)</span>, <span class="math inline">\(\mathcal{H}\)</span> or <span class="math inline">\(\mathcal{H}^-\)</span> (<a href="#/def-half-space" class="quarto-xref">Definition&nbsp;9</a>): <span class="math inline">\((0, 0, 0)\)</span>, <span class="math inline">\((1, 0, 0)\)</span> and <span class="math inline">\((1, 1, 1)\)</span>.</li>
 <li>Write the plane and its half-spaces using <span class="math inline">\(-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> and <span class="math inline">\(-b\)</span>. Which points from part 1 change sides?</li>
@@ -2127,7 +1874,7 @@ Figure&nbsp;2: Petal length and width of versicolor and virginica irises, with t
 </ol>
 </div>
 <div id="sol-half-space-sides" class="proof solution">
-<p><span class="proof-title"><em>Solution 29</em>. </span></p>
+<p><span class="proof-title"><em>Solution 17</em>. </span></p>
 <ol type="1">
 <li>
 <p>Compute <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b = x_1 + x_2 + x_3 - 1\)</span> at each point.</p>
@@ -2177,78 +1924,8 @@ Figure&nbsp;2: Petal length and width of versicolor and virginica irises, with t
 \]</span></p>
 <p>so <span class="math inline">\(\mathbf{C} \mathbf{R} = \mathbf{A}\)</span>.</p>
 </div>
-</section><section class="slide level2"><div id="exm-rank-factorization-construct" class="theorem example">
+</section><section class="slide level2 smaller scrollable" id="references"><div id="exm-rank-factorization-construct" class="theorem example">
 <p><span class="theorem-title"><strong>Example 28 (Building a rank factorization from a basis)</strong></span> For <span class="math inline">\(\mathbf{A}\)</span> in <a href="#/exm-column-space" class="quarto-xref">Example&nbsp;1</a>, <span class="math inline">\((1, 3)\)</span> spans <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span> (<a href="#/exm-column-space-span" class="quarto-xref">Example&nbsp;2</a>), and it is linearly independent because it is nonzero (<span class="math inline">\(c\,(1, 3) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2\)</span> forces <span class="math inline">\(c = 0\)</span>), so it is a basis of <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span>. The columns of <span class="math inline">\(\mathbf{A}\)</span> are <span class="math inline">\((1, 3) = 1 \cdot(1, 3)\)</span>, <span class="math inline">\((-2, -6) = -2 \cdot(1, 3)\)</span> and <span class="math inline">\((-2, -6) = -2 \cdot(1, 3)\)</span>, so the construction in <a href="#/thm-rank-factorization" class="quarto-xref">Theorem&nbsp;17</a> gives <span class="math inline">\(\mathbf{C} = \begin{bmatrix} 1 \\ 3 \end{bmatrix}\)</span> and <span class="math inline">\(\mathbf{R} = \begin{bmatrix} 1 &amp; -2 &amp; -2 \end{bmatrix}\)</span>, the factorization in <a href="#/exm-rank-factorization" class="quarto-xref">Example&nbsp;27</a>.</p>
-</div>
-</section><section class="slide level2"><div id="exr-rank-factorization-practice" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 30 (Finding a rank factorization of a rank-one matrix)</strong></span> A <a href="#/def-rank-factorization">rank factorization</a> writes an <span class="math inline">\(m \times n\)</span> <a href="./linear-algebra-matrices.html#def-matrix">matrix</a> with <a href="./linear-algebra-subspaces.html#def-rank">rank</a> <span class="math inline">\(r\)</span> as a <a href="./linear-algebra-matrices.html#def-matrix-mult">matrix product</a> of an <span class="math inline">\(m \times r\)</span> and an <span class="math inline">\(r \times n\)</span> matrix. Let</p>
-<p><span class="math display">\[
-\mathbf{A} = \begin{bmatrix}2 &amp; 4 \\ 1 &amp; 2\end{bmatrix}.
-\]</span></p>
-<p>Find a rank factorization of <span class="math inline">\(\mathbf{A}\)</span>.</p>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Hint</strong></p>
-</div>
-<div class="callout-content">
-<p>In <span class="math inline">\(\mathbf{A}\)</span>, the second column is twice the first, so <span class="math inline">\({\operatorname{rank}\mathopen{}\left(\mathbf{A}\right)\mathclose{}} = 1\)</span>.</p>
-</div>
-</div>
-</div>
-</div>
-</section><section class="slide level2"><div id="sol-rank-factorization-practice" class="proof solution">
-<p><span class="proof-title"><em>Solution 30</em>. </span><a href="./linear-algebra-matrices.html#def-matrix-column">Columns of <span class="math inline">\(\mathbf{A}\)</span></a> are <span class="math inline">\((2, 1)\)</span> and <span class="math inline">\((4, 2) = 2\,(2, 1)\)</span>, so <span class="math inline">\({\operatorname{rank}\mathopen{}\left(\mathbf{A}\right)\mathclose{}} = 1\)</span>, and</p>
-<p><span class="math display">\[
-\begin{bmatrix}2 \\ 1\end{bmatrix} \begin{bmatrix}1 &amp; 2\end{bmatrix}
-= \begin{bmatrix}2 \cdot 1 &amp; 2 \cdot 2 \\ 1 \cdot 1 &amp; 1 \cdot 2\end{bmatrix}
-= \begin{bmatrix}2 &amp; 4 \\ 1 &amp; 2\end{bmatrix}
-= \mathbf{A}.
-\]</span></p>
-<p>So <span class="math inline">\(\mathbf{C} = \begin{bmatrix}2 \\ 1\end{bmatrix}\)</span> (<span class="math inline">\(2 \times 1\)</span>) and <span class="math inline">\(\mathbf{R} = \begin{bmatrix}1 &amp; 2\end{bmatrix}\)</span> (<span class="math inline">\(1 \times 2\)</span>) are a rank factorization.</p>
-</div>
-</section><section class="slide level2"><div id="exr-rank-factorization-construct-practice" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 31 (Building a rank factorization from a basis of the column space)</strong></span> <a href="#/thm-rank-factorization" class="quarto-xref">Theorem&nbsp;17</a> builds a <a href="#/def-rank-factorization">rank factorization</a> from a <a href="./linear-algebra-subspaces.html#def-basis">basis</a> of the <a href="#/def-column-space">column space</a>. Let</p>
-<p><span class="math display">\[
-\mathbf{A} = \begin{bmatrix}1 &amp; 2 &amp; 3 \\ 2 &amp; 4 &amp; 6 \\ 1 &amp; 0 &amp; 1\end{bmatrix},
-\]</span></p>
-<p>in which column <span class="math inline">\(3\)</span> equals column <span class="math inline">\(1\)</span> plus column <span class="math inline">\(2\)</span>.</p>
-<p>Find a rank factorization <span class="math inline">\(\mathbf{A} = \mathbf{C}\mathbf{R}\)</span> in which <span class="math inline">\(\mathbf{C}\)</span> holds <a href="./linear-algebra-matrices.html#def-matrix-column">columns 1 and 2 of <span class="math inline">\(\mathbf{A}\)</span></a>.</p>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Hint</strong></p>
-</div>
-<div class="callout-content">
-<p>Column <span class="math inline">\(j\)</span> of <span class="math inline">\(\mathbf{R}\)</span> says how much of column <span class="math inline">\(1\)</span> and of column <span class="math inline">\(2\)</span> of <span class="math inline">\(\mathbf{C}\)</span> add up to column <span class="math inline">\(j\)</span> of <span class="math inline">\(\mathbf{A}\)</span>.</p>
-</div>
-</div>
-</div>
-</div>
-</section><section class="slide level2 smaller scrollable" id="references"><div id="sol-rank-factorization-construct-practice" class="proof solution">
-<p><span class="proof-title"><em>Solution 31</em>. </span><a href="./linear-algebra-matrices.html#def-matrix-column">Columns 1 and 2 of <span class="math inline">\(\mathbf{A}\)</span></a>, <span class="math inline">\((1, 2, 1)\)</span> and <span class="math inline">\((2, 4, 0)\)</span>, are <a href="./linear-algebra-subspaces.html#def-linearly-independent">linearly independent</a>: the third entry of <span class="math inline">\(c_1\,(1, 2, 1) + c_2\,(2, 4, 0)\)</span> is <span class="math inline">\(c_1\)</span>, and then the first is <span class="math inline">\(2 c_2\)</span>. They <a href="./linear-algebra-subspaces.html#def-span">span</a> <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span>, since the third column equals the first plus the second, so <span class="math inline">\({\operatorname{rank}\mathopen{}\left(\mathbf{A}\right)\mathclose{}} = 2\)</span>. Each column of <span class="math inline">\(\mathbf{A}\)</span> in terms of them:</p>
-<p><span class="math display">\[
-\begin{aligned}
-(1, 2, 1) &amp;= 1 \cdot(1, 2, 1) + 0 \cdot(2, 4, 0),
-\\
-(2, 4, 0) &amp;= 0 \cdot(1, 2, 1) + 1 \cdot(2, 4, 0),
-\\
-(3, 6, 1) &amp;= 1 \cdot(1, 2, 1) + 1 \cdot(2, 4, 0).
-\end{aligned}
-\]</span></p>
-<p>So</p>
-<p><span class="math display">\[
-\mathbf{C} = \begin{bmatrix}1 &amp; 2 \\ 2 &amp; 4 \\ 1 &amp; 0\end{bmatrix},
-\qquad
-\mathbf{R} = \begin{bmatrix}1 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 1\end{bmatrix},
-\]</span></p>
-<p>and multiplying gives back <span class="math inline">\(\mathbf{A}\)</span>.</p>
 </div>
 
 
