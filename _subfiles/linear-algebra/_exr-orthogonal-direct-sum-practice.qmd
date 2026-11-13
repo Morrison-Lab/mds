@@ -1,0 +1,21 @@
+:::{#exr-orthogonal-direct-sum-practice}
+#### Splitting a vector into a piece in a line and an orthogonal piece
+
+By @thm-orthogonal-direct-sum, every vector of $\reals^p$ splits in only one way
+into a piece in a [subspace](linear-algebra-subspaces.qmd#def-subspace) $\mathcal{S}$
+and a piece in its [orthogonal complement](#def-orthogonal-complement).
+Let $\mathcal{S} = \operatorname{span}\cb{(1, 2)}$, a line in $\reals^2$,
+and let $\vecf{y} = (5, 0)$.
+
+Find $\vecf{u} \in \mathcal{S}$ and $\vecf{v} \in \mathcal{S}^\perp$ with $\vecf{y} = \vecf{u} + \vecf{v}$.
+
+::: {.callout-tip}
+#### Hint
+
+Take $\vecf{u} = t\,(1, 2)$,
+and choose $t$
+so that $\vecf{y} - \vecf{u}$ is [orthogonal](linear-algebra-vectors.qmd#def-orthogonal-vectors) to $(1, 2)$.
+
+:::
+
+:::
