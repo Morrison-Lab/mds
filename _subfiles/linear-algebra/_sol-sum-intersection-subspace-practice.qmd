@@ -1,0 +1,16 @@
+:::{#sol-sum-intersection-subspace-practice}
+
+A vector of $\mathcal{S}_2$ is $s\,(1, 1, 0) + t\,(0, 0, 1) = (s, s, t)$.
+It is in $\mathcal{S}_1$
+exactly when its third entry is $0$,
+that is, when $t = 0$.
+So
+
+$$
+\mathcal{S}_1 \cap \mathcal{S}_2 = \cb{(s, s, 0) : s \in \reals} = \operatorname{span}\cb{(1, 1, 0)},
+$$
+
+a line through the origin, which is a [subspace](linear-algebra-subspaces.qmd#def-subspace),
+as @thm-sum-intersection-subspace says.
+
+:::
