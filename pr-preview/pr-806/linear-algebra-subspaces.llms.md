@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-12 16:00:39 (PST)
+Last modified: 2026-11-12 21:28:54 (PST)
 
 # 1 Rank
 
@@ -681,6 +681,36 @@ Last modified: 2026-11-12 16:00:39 (PST)
 
 > **NOTE:**
 >
+> **Exercise 15 (Testing whether two vectors can form a basis of** $\mathbb{R}^3$) A list of two features cannot describe every point in $\mathbb{R}^3$, and [Theorem 7](#thm-basis-size) says why in terms of [bases](#def-basis). The [indicator vectors](linear-algebra-vectors.llms.md#def-indicator-vector) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3$ form a basis of $\mathbb{R}^3$.
+>
+> Can a list of $2$ vectors be a basis of $\mathbb{R}^3$?
+>
+> > **TIP:**
+> >
+> > Use [Theorem 7](#thm-basis-size) with the [basis](#def-basis) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3$.
+
+> **NOTE:**
+>
+> *Solution 15*. No. $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3$ is a [basis](#def-basis) of $\mathbb{R}^3$ with $3$ vectors, so by [Theorem 7](#thm-basis-size) every basis of $\mathbb{R}^3$ has $3$ vectors, not $2$.
+
+> **NOTE:**
+>
+> **Exercise 16 (Finding the dimension of a span that includes a multiple)** The [dimension](#def-dimension) of a [span](#def-span) can be smaller than the number of vectors that span it, for example when one vector is a multiple of another. Let
+>
+> $$\mathcal{S} = \operatorname{span}\mathopen{}\left\{{(1, 2, 0)}^{\top},\ {(2, 4, 0)}^{\top},\ {(0, 0, 1)}^{\top}\right\}\mathclose{}.$$
+>
+> Find $\dim(\mathcal{S})$.
+>
+> > **TIP:**
+> >
+> > Look for a vector in the list that is a multiple of another, then check that the rest are [linearly independent](#def-linearly-independent).
+
+> **NOTE:**
+>
+> *Solution 16*. $\dim(\mathcal{S}) = 2$. Since ${(2, 4, 0)}^{\top} = 2 {(1, 2, 0)}^{\top}$, dropping ${(2, 4, 0)}^{\top}$ leaves the [span](#def-span) unchanged, so ${(1, 2, 0)}^{\top}$ and ${(0, 0, 1)}^{\top}$ span $\mathcal{S}$. They are [linearly independent](#def-linearly-independent): if $c_1 {(1, 2, 0)}^{\top} + c_2 {(0, 0, 1)}^{\top} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, the first entry gives $c_1 = 0$ and the third gives $c_2 = 0$. So they form a [basis](#def-basis) of $\mathcal{S}$ with $2$ vectors, and by [Definition 9](#def-dimension) the [dimension](#def-dimension) is $2$.
+
+> **NOTE:**
+>
 > **Theorem 8 (Adding a vector outside the span keeps a list independent)** If $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_k$ are linearly independent ([Definition 1](#def-linearly-independent)) and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ is not in $\operatorname{span}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_k\right\}\mathclose{}$ ([Definition 5](#def-span)), then $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_k, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ are linearly independent.
 
 > **NOTE:**
@@ -711,6 +741,26 @@ Last modified: 2026-11-12 16:00:39 (PST)
 
 > **NOTE:**
 >
+> **Exercise 17 (Adding a third feature to an independent pair)** Adding a new feature keeps a list of features [linearly independent](#def-linearly-independent) when the new one is not a combination of the old ones, which is what [Theorem 8](#thm-add-outside-span) says. Let
+>
+> $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 = \begin{bmatrix}1 \\ 0 \\ 0\end{bmatrix},
+> \qquad
+> \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2 = \begin{bmatrix}0 \\ 1 \\ 0\end{bmatrix},
+> \qquad
+> \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \begin{bmatrix}1 \\ 1 \\ 1\end{bmatrix}.$$
+>
+> Are $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ linearly independent?
+>
+> > **TIP:**
+> >
+> > Check whether $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ is in $\operatorname{span}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2\right\}\mathclose{}$, then use [Theorem 8](#thm-add-outside-span).
+
+> **NOTE:**
+>
+> *Solution 17*. Yes. $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2$ are [linearly independent](#def-linearly-independent): $c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 + c_2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2 = {(c_1, c_2, 0)}^{\top}$ is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ only for $c_1 = c_2 = 0$. Every vector in their [span](#def-span) has third entry $0$, and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ has third entry $1$, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ is not in the span. By [Theorem 8](#thm-add-outside-span), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ are linearly independent.
+
+> **NOTE:**
+>
 > **Theorem 9 (An independent list extends to a basis)** If $\mathcal{S}$ is a subspace of $\mathbb{R}^p$ ([Definition 4](#def-subspace)) and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_k \in \mathcal{S}$ are linearly independent ([Definition 1](#def-linearly-independent)), then adding vectors of $\mathcal{S}$ to the list gives a basis of $\mathcal{S}$ ([Definition 6](#def-basis)). Starting from the empty list shows that every subspace has a basis.
 
 > **NOTE:**
@@ -730,6 +780,22 @@ Last modified: 2026-11-12 16:00:39 (PST)
 > 3.  The list $(1, 1, 0), (1, 0, 0), (0, 0, 1)$ spans $\mathbb{R}^3$: $(x, y, z) = y\,(1, 1, 0) + (x - y)\,(1, 0, 0) + z\,(0, 0, 1)$. Stop.
 >
 > The result is a basis of $\mathbb{R}^3$ that contains the starting vector.
+
+> **NOTE:**
+>
+> **Exercise 18 (Extending one vector to a basis of** $\mathbb{R}^3$) [Theorem 9](#thm-extend-basis) says that any [linearly independent](#def-linearly-independent) list can be completed to a [basis](#def-basis). Let
+>
+> $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 = \begin{bmatrix}1 \\ 1 \\ 0\end{bmatrix}.$$
+>
+> Find two [indicator vectors](linear-algebra-vectors.llms.md#def-indicator-vector) that extend $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1$ to a basis of $\mathbb{R}^3$.
+>
+> > **TIP:**
+> >
+> > Add [indicator vectors](linear-algebra-vectors.llms.md#def-indicator-vector) one at a time, each outside the [span](#def-span) of the list so far, as [Theorem 8](#thm-add-outside-span) allows.
+
+> **NOTE:**
+>
+> *Solution 18*. One answer is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3$. The list $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1$ is [linearly independent](#def-linearly-independent), since $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$. $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2 = {(0, 1, 0)}^{\top}$ is not a multiple of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1$, whose first two entries match, so by [Theorem 8](#thm-add-outside-span) the list $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2$ is linearly independent. Every vector in its [span](#def-span) has third entry $0$, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3$ is outside it, and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3$ is linearly independent too. These three vectors span $\mathbb{R}^3$, because ${(x, y, z)}^{\top} = x \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 + (y - x) \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2 + z \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3$, so they form a [basis](#def-basis) of $\mathbb{R}^3$. The pair $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3$ works too.
 
 > **NOTE:**
 >
@@ -779,6 +845,20 @@ Last modified: 2026-11-12 16:00:39 (PST)
 
 > **NOTE:**
 >
+> **Exercise 19 (Testing whether four independent vectors fit in a three-dimensional subspace)** [Theorem 10](#thm-dim-bound) caps how many [linearly independent vectors](#def-linearly-independent) a [subspace](#def-subspace) can hold. Let $\mathcal{S}$ be a subspace of $\mathbb{R}^5$ with [dimension](#def-dimension) $3$.
+>
+> Can $\mathcal{S}$ contain $4$ linearly independent vectors?
+>
+> > **TIP:**
+> >
+> > Use part 1 of [Theorem 10](#thm-dim-bound) with $d = 3$.
+
+> **NOTE:**
+>
+> *Solution 19*. No. By part 1 of [Theorem 10](#thm-dim-bound), a [linearly independent](#def-linearly-independent) list of vectors in $\mathcal{S}$ has at most $\dim(\mathcal{S}) = 3$ vectors, so it cannot have $4$.
+
+> **NOTE:**
+>
 > **Theorem 11 (A subspace inside another of the same dimension equals it)** If $\mathcal{T}$ and $\mathcal{S}$ are subspaces of $\mathbb{R}^p$ with $\mathcal{T} \subseteq \mathcal{S}$ and $\dim(\mathcal{T}) = \dim(\mathcal{S})$ ([Definition 9](#def-dimension)), then $\mathcal{T} = \mathcal{S}$.
 
 > **NOTE:**
@@ -792,6 +872,22 @@ Last modified: 2026-11-12 16:00:39 (PST)
 > **NOTE:**
 >
 > **Example 21 (Equal dimensions without containment)** The lines $\operatorname{span}\mathopen{}\left\{(1, 0, 0)\right\}\mathclose{}$ and $\operatorname{span}\mathopen{}\left\{(0, 1, 0)\right\}\mathclose{}$ in $\mathbb{R}^3$ both have dimension $1$, but they are not equal: $(1, 0, 0)$ is in the first and not the second. [Theorem 11](#thm-subspace-equal-dim) does not apply, because neither line contains the other.
+
+> **NOTE:**
+>
+> **Exercise 20 (Showing that a span of two vectors is all of** $\mathbb{R}^2$) [Theorem 11](#thm-subspace-equal-dim) shows that two [subspaces](#def-subspace) coincide by comparing [dimensions](#def-dimension) instead of checking every vector. Let
+>
+> $$\mathcal{T} = \operatorname{span}\mathopen{}\left\{{(1, 2)}^{\top},\ {(3, 1)}^{\top}\right\}\mathclose{}.$$
+>
+> Is $\mathcal{T}$ all of $\mathbb{R}^2$?
+>
+> > **TIP:**
+> >
+> > Find $\dim(\mathcal{T})$ and $\dim(\mathbb{R}^2)$, then use [Theorem 11](#thm-subspace-equal-dim) with $\mathcal{S} = \mathbb{R}^2$.
+
+> **NOTE:**
+>
+> *Solution 20*. Yes. The two vectors are [linearly independent](#def-linearly-independent): if $c_1 {(1, 2)}^{\top} + c_2 {(3, 1)}^{\top} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, then $c_1 + 3 c_2 = 0$ and $2 c_1 + c_2 = 0$. Subtracting twice the first equation from the second gives $-5 c_2 = 0$, so $c_2 = 0$ and then $c_1 = 0$. So they form a [basis](#def-basis) of $\mathcal{T}$, and $\dim(\mathcal{T}) = 2$. The [indicator vectors](linear-algebra-vectors.llms.md#def-indicator-vector) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2$ form a basis of $\mathbb{R}^2$, so $\dim(\mathbb{R}^2) = 2$. Since $\mathcal{T} \subseteq \mathbb{R}^2$ and the [dimensions](#def-dimension) agree, [Theorem 11](#thm-subspace-equal-dim) gives $\mathcal{T} = \mathbb{R}^2$.
 
 # Definitions on this page
 

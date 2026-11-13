@@ -228,6 +228,16 @@ cookieconsent.run({
 })();
 </script>
 <style>
+div.callout-remark.callout {
+  border-left-color: #AD1457;
+}
+div.callout-remark.callout-style-default .callout-header {
+  background-color: rgba(173, 20, 87, 0.13);
+}
+div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-lem.callout {
   border-left-color: #1565C0;
 }
@@ -238,35 +248,15 @@ div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-prp.callout {
-  border-left-color: #827717;
+div.callout-cor.callout {
+  border-left-color: #00838F;
 }
-div.callout-prp.callout-style-default .callout-header {
-  background-color: rgba(130, 119, 23, 0.13);
+div.callout-cor.callout-style-default .callout-header {
+  background-color: rgba(0, 131, 143, 0.13);
 }
-div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-proof.callout {
-  border-left-color: #37474F;
-}
-div.callout-proof.callout-style-default .callout-header {
-  background-color: rgba(55, 71, 79, 0.13);
-}
-div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cnj.callout {
-  border-left-color: #558B2F;
-}
-div.callout-cnj.callout-style-default .callout-header {
-  background-color: rgba(85, 139, 47, 0.13);
-}
-div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-tbl.callout {
   border-left-color: #757575;
@@ -278,15 +268,15 @@ div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-fig.callout {
-  border-left-color: #757575;
+div.callout-exr.callout {
+  border-left-color: #FFA500;
 }
-div.callout-fig.callout-style-default .callout-header {
-  background-color: rgba(117, 117, 117, 0.13);
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
 }
-div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-def.callout {
   border-left-color: #1B5E20;
@@ -298,15 +288,25 @@ div.callout-def .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-remark.callout {
-  border-left-color: #AD1457;
+div.callout-prp.callout {
+  border-left-color: #827717;
 }
-div.callout-remark.callout-style-default .callout-header {
-  background-color: rgba(173, 20, 87, 0.13);
+div.callout-prp.callout-style-default .callout-header {
+  background-color: rgba(130, 119, 23, 0.13);
 }
-div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
+}
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
+}
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-exm.callout {
   border-left-color: #6A1B9A;
@@ -318,15 +318,15 @@ div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-exr.callout {
-  border-left-color: #FFA500;
+div.callout-fig.callout {
+  border-left-color: #757575;
 }
-div.callout-exr.callout-style-default .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
+div.callout-fig.callout-style-default .callout-header {
+  background-color: rgba(117, 117, 117, 0.13);
 }
-div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-solution.callout {
   border-left-color: #4E342E;
@@ -338,15 +338,15 @@ div.callout-solution .callout-toggle::before {  background-image: url('data:imag
 div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-cor.callout {
-  border-left-color: #00838F;
+div.callout-proof.callout {
+  border-left-color: #37474F;
 }
-div.callout-cor.callout-style-default .callout-header {
-  background-color: rgba(0, 131, 143, 0.13);
+div.callout-proof.callout-style-default .callout-header {
+  background-color: rgba(55, 71, 79, 0.13);
 }
-div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 
@@ -1138,7 +1138,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-11-12 16:00:39 (PST)</p>
+      <p class="date">Last modified: 2026-11-12 21:28:54 (PST)</p>
     </div>
   </div>
   
@@ -2906,8 +2906,111 @@ c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphant
 </div>
 </div>
 </div>
+<div class="callouty-titled callout callout-style-default callout-exr callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-85-contents" aria-controls="callout-85" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exr</span><a href="#exr-basis-size-practice" class="quarto-xref">Exercise&nbsp;15</a> (Testing whether two vectors can form a basis of <span class="math inline">\(\mathbb{R}^3\)</span>)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-85" class="callout-85-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div id="exr-basis-size-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 15 (Testing whether two vectors can form a basis of <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> A list of two features cannot describe every point in <span class="math inline">\(\mathbb{R}^3\)</span>, and <a href="#thm-basis-size" class="quarto-xref">Theorem&nbsp;7</a> says why in terms of <a href="#def-basis">bases</a>. The <a href="./linear-algebra-vectors.html#def-indicator-vector">indicator vectors</a> <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1\)</span>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3\)</span> form a basis of <span class="math inline">\(\mathbb{R}^3\)</span>.</p>
+<p>Can a list of <span class="math inline">\(2\)</span> vectors be a basis of <span class="math inline">\(\mathbb{R}^3\)</span>?</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Hint
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Use <a href="#thm-basis-size" class="quarto-xref">Theorem&nbsp;7</a> with the <a href="#def-basis">basis</a> <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-86-contents" aria-controls="callout-86" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Solution</span><a href="#sol-basis-size-practice" class="quarto-xref">Solution&nbsp;15</a>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-86" class="callout-86-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="sol-basis-size-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 15</em>. </span>No. <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3\)</span> is a <a href="#def-basis">basis</a> of <span class="math inline">\(\mathbb{R}^3\)</span> with <span class="math inline">\(3\)</span> vectors, so by <a href="#thm-basis-size" class="quarto-xref">Theorem&nbsp;7</a> every basis of <span class="math inline">\(\mathbb{R}^3\)</span> has <span class="math inline">\(3\)</span> vectors, not <span class="math inline">\(2\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callouty-titled callout callout-style-default callout-exr callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-88-contents" aria-controls="callout-88" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exr</span><a href="#exr-dimension-practice" class="quarto-xref">Exercise&nbsp;16</a> (Finding the dimension of a span that includes a multiple)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-88" class="callout-88-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div id="exr-dimension-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 16 (Finding the dimension of a span that includes a multiple)</strong></span> The <a href="#def-dimension">dimension</a> of a <a href="#def-span">span</a> can be smaller than the number of vectors that span it, for example when one vector is a multiple of another. Let</p>
+<p><span class="math display">\[
+\mathcal{S} = \operatorname{span}\mathopen{}\left\{{(1, 2, 0)}^{\top},\ {(2, 4, 0)}^{\top},\ {(0, 0, 1)}^{\top}\right\}\mathclose{}.
+\]</span></p>
+<p>Find <span class="math inline">\(\dim(\mathcal{S})\)</span>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Hint
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Look for a vector in the list that is a multiple of another, then check that the rest are <a href="#def-linearly-independent">linearly independent</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-89-contents" aria-controls="callout-89" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Solution</span><a href="#sol-dimension-practice" class="quarto-xref">Solution&nbsp;16</a>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-89" class="callout-89-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="sol-dimension-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 16</em>. </span><span class="math inline">\(\dim(\mathcal{S}) = 2\)</span>. Since <span class="math inline">\({(2, 4, 0)}^{\top} = 2 {(1, 2, 0)}^{\top}\)</span>, dropping <span class="math inline">\({(2, 4, 0)}^{\top}\)</span> leaves the <a href="#def-span">span</a> unchanged, so <span class="math inline">\({(1, 2, 0)}^{\top}\)</span> and <span class="math inline">\({(0, 0, 1)}^{\top}\)</span> span <span class="math inline">\(\mathcal{S}\)</span>. They are <a href="#def-linearly-independent">linearly independent</a>: if <span class="math inline">\(c_1 {(1, 2, 0)}^{\top} + c_2 {(0, 0, 1)}^{\top} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, the first entry gives <span class="math inline">\(c_1 = 0\)</span> and the third gives <span class="math inline">\(c_2 = 0\)</span>. So they form a <a href="#def-basis">basis</a> of <span class="math inline">\(\mathcal{S}\)</span> with <span class="math inline">\(2\)</span> vectors, and by <a href="#def-dimension" class="quarto-xref">Definition&nbsp;9</a> the <a href="#def-dimension">dimension</a> is <span class="math inline">\(2\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
 <div class="callouty-titled callout callout-style-default callout-lem callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-84-contents" aria-controls="callout-84" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-90-contents" aria-controls="callout-90" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2916,7 +3019,7 @@ c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphant
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-84" class="callout-84-contents callout-collapse collapse show">
+<div id="callout-90" class="callout-90-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="thm-add-outside-span" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 8 (Adding a vector outside the span keeps a list independent)</strong></span> If <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_k\)</span> are linearly independent (<a href="#def-linearly-independent" class="quarto-xref">Definition&nbsp;1</a>) and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> is not in <span class="math inline">\(\operatorname{span}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_k\right\}\mathclose{}\)</span> (<a href="#def-span" class="quarto-xref">Definition&nbsp;5</a>), then <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_k, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> are linearly independent.</p>
@@ -2925,7 +3028,7 @@ c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphant
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-85-contents" aria-controls="callout-85" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-91-contents" aria-controls="callout-91" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2934,7 +3037,7 @@ c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphant
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-85" class="callout-85-contents callout-collapse collapse">
+<div id="callout-91" class="callout-91-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Suppose <span class="math inline">\(c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 + \cdots + c_k \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_k + d\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>.</p>
@@ -2959,7 +3062,7 @@ c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphant
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-86-contents" aria-controls="callout-86" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-92-contents" aria-controls="callout-92" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2968,7 +3071,7 @@ c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphant
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-86" class="callout-86-contents callout-collapse collapse show">
+<div id="callout-92" class="callout-92-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-add-outside-span" class="theorem example">
 <p><span class="theorem-title"><strong>Example 17 (Adding <span class="math inline">\((0, 0, 1)\)</span> to two independent vectors in <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> The vectors <span class="math inline">\((1, 0, 0)\)</span> and <span class="math inline">\((0, 1, 0)\)</span> are linearly independent, and their span is the plane <span class="math inline">\(z = 0\)</span> (<a href="#exm-span" class="quarto-xref">Example&nbsp;6</a>). The vector <span class="math inline">\((0, 0, 1)\)</span> has third entry <span class="math inline">\(1\)</span>, so it is not in that plane, and by <a href="#thm-add-outside-span" class="quarto-xref">Theorem&nbsp;8</a> the three vectors <span class="math inline">\((1, 0, 0)\)</span>, <span class="math inline">\((0, 1, 0)\)</span>, <span class="math inline">\((0, 0, 1)\)</span> are linearly independent. Adding <span class="math inline">\((1, 1, 0)\)</span> instead would not work: <span class="math inline">\((1, 1, 0)\)</span> is in the span, and <span class="math inline">\((1, 0, 0) + (0, 1, 0) - (1, 1, 0) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>.</p>
@@ -2976,8 +3079,65 @@ c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphant
 </div>
 </div>
 </div>
+<div class="callouty-titled callout callout-style-default callout-exr callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-94-contents" aria-controls="callout-94" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exr</span><a href="#exr-add-outside-span-practice" class="quarto-xref">Exercise&nbsp;17</a> (Adding a third feature to an independent pair)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-94" class="callout-94-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div id="exr-add-outside-span-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 17 (Adding a third feature to an independent pair)</strong></span> Adding a new feature keeps a list of features <a href="#def-linearly-independent">linearly independent</a> when the new one is not a combination of the old ones, which is what <a href="#thm-add-outside-span" class="quarto-xref">Theorem&nbsp;8</a> says. Let</p>
+<p><span class="math display">\[
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 = \begin{bmatrix}1 \\ 0 \\ 0\end{bmatrix},
+\qquad
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2 = \begin{bmatrix}0 \\ 1 \\ 0\end{bmatrix},
+\qquad
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \begin{bmatrix}1 \\ 1 \\ 1\end{bmatrix}.
+\]</span></p>
+<p>Are <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1\)</span>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> linearly independent?</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Hint
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Check whether <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> is in <span class="math inline">\(\operatorname{span}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2\right\}\mathclose{}\)</span>, then use <a href="#thm-add-outside-span" class="quarto-xref">Theorem&nbsp;8</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-95-contents" aria-controls="callout-95" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Solution</span><a href="#sol-add-outside-span-practice" class="quarto-xref">Solution&nbsp;17</a>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-95" class="callout-95-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="sol-add-outside-span-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 17</em>. </span>Yes. <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2\)</span> are <a href="#def-linearly-independent">linearly independent</a>: <span class="math inline">\(c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 + c_2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2 = {(c_1, c_2, 0)}^{\top}\)</span> is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> only for <span class="math inline">\(c_1 = c_2 = 0\)</span>. Every vector in their <a href="#def-span">span</a> has third entry <span class="math inline">\(0\)</span>, and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> has third entry <span class="math inline">\(1\)</span>, so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> is not in the span. By <a href="#thm-add-outside-span" class="quarto-xref">Theorem&nbsp;8</a>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1\)</span>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> are linearly independent.</p>
+</div>
+</div>
+</div>
+</div>
 <div class="callouty-titled callout callout-style-default callout-lem callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-87-contents" aria-controls="callout-87" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-96-contents" aria-controls="callout-96" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2986,7 +3146,7 @@ c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphant
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-87" class="callout-87-contents callout-collapse collapse show">
+<div id="callout-96" class="callout-96-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="thm-extend-basis" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 9 (An independent list extends to a basis)</strong></span> If <span class="math inline">\(\mathcal{S}\)</span> is a subspace of <span class="math inline">\(\mathbb{R}^p\)</span> (<a href="#def-subspace" class="quarto-xref">Definition&nbsp;4</a>) and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_k \in \mathcal{S}\)</span> are linearly independent (<a href="#def-linearly-independent" class="quarto-xref">Definition&nbsp;1</a>), then adding vectors of <span class="math inline">\(\mathcal{S}\)</span> to the list gives a basis of <span class="math inline">\(\mathcal{S}\)</span> (<a href="#def-basis" class="quarto-xref">Definition&nbsp;6</a>). Starting from the empty list shows that every subspace has a basis.</p>
@@ -2995,7 +3155,7 @@ c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphant
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-88-contents" aria-controls="callout-88" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-97-contents" aria-controls="callout-97" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3004,7 +3164,7 @@ c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphant
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-88" class="callout-88-contents callout-collapse collapse">
+<div id="callout-97" class="callout-97-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Repeat the following step. If the current list spans <span class="math inline">\(\mathcal{S}\)</span>, stop: it is linearly independent and spans <span class="math inline">\(\mathcal{S}\)</span>, so it is a basis. Otherwise, some <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathcal{S}\)</span> is not in the span of the current list; add <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> to the list, which stays linearly independent by <a href="#thm-add-outside-span" class="quarto-xref">Theorem&nbsp;8</a>.</p>
@@ -3015,7 +3175,7 @@ c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphant
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-89-contents" aria-controls="callout-89" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-98-contents" aria-controls="callout-98" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3024,7 +3184,7 @@ c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphant
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-89" class="callout-89-contents callout-collapse collapse show">
+<div id="callout-98" class="callout-98-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-extend-basis" class="theorem example">
 <p><span class="theorem-title"><strong>Example 18 (Extending <span class="math inline">\((1, 1, 0)\)</span> to a basis of <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> Start with the single vector <span class="math inline">\((1, 1, 0)\)</span>.</p>
@@ -3038,8 +3198,61 @@ c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphant
 </div>
 </div>
 </div>
+<div class="callouty-titled callout callout-style-default callout-exr callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-100-contents" aria-controls="callout-100" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exr</span><a href="#exr-extend-basis-practice" class="quarto-xref">Exercise&nbsp;18</a> (Extending one vector to a basis of <span class="math inline">\(\mathbb{R}^3\)</span>)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-100" class="callout-100-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div id="exr-extend-basis-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 18 (Extending one vector to a basis of <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> <a href="#thm-extend-basis" class="quarto-xref">Theorem&nbsp;9</a> says that any <a href="#def-linearly-independent">linearly independent</a> list can be completed to a <a href="#def-basis">basis</a>. Let</p>
+<p><span class="math display">\[
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 = \begin{bmatrix}1 \\ 1 \\ 0\end{bmatrix}.
+\]</span></p>
+<p>Find two <a href="./linear-algebra-vectors.html#def-indicator-vector">indicator vectors</a> that extend <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1\)</span> to a basis of <span class="math inline">\(\mathbb{R}^3\)</span>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Hint
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Add <a href="./linear-algebra-vectors.html#def-indicator-vector">indicator vectors</a> one at a time, each outside the <a href="#def-span">span</a> of the list so far, as <a href="#thm-add-outside-span" class="quarto-xref">Theorem&nbsp;8</a> allows.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-101-contents" aria-controls="callout-101" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Solution</span><a href="#sol-extend-basis-practice" class="quarto-xref">Solution&nbsp;18</a>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-101" class="callout-101-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="sol-extend-basis-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 18</em>. </span>One answer is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3\)</span>. The list <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1\)</span> is <a href="#def-linearly-independent">linearly independent</a>, since <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>. <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2 = {(0, 1, 0)}^{\top}\)</span> is not a multiple of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1\)</span>, whose first two entries match, so by <a href="#thm-add-outside-span" class="quarto-xref">Theorem&nbsp;8</a> the list <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2\)</span> is linearly independent. Every vector in its <a href="#def-span">span</a> has third entry <span class="math inline">\(0\)</span>, so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3\)</span> is outside it, and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3\)</span> is linearly independent too. These three vectors span <span class="math inline">\(\mathbb{R}^3\)</span>, because <span class="math inline">\({(x, y, z)}^{\top} = x \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 + (y - x) \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2 + z \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3\)</span>, so they form a <a href="#def-basis">basis</a> of <span class="math inline">\(\mathbb{R}^3\)</span>. The pair <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3\)</span> works too.</p>
+</div>
+</div>
+</div>
+</div>
 <div class="callouty-titled callout callout-style-default callout-lem callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-90-contents" aria-controls="callout-90" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-102-contents" aria-controls="callout-102" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3048,7 +3261,7 @@ c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphant
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-90" class="callout-90-contents callout-collapse collapse show">
+<div id="callout-102" class="callout-102-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="thm-dim-bound" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 10 (An independent list in a subspace has at most <span class="math inline">\(\dim\)</span> vectors)</strong></span> Let <span class="math inline">\(\mathcal{S}\)</span> be a subspace of <span class="math inline">\(\mathbb{R}^p\)</span> with <span class="math inline">\(\dim(\mathcal{S}) = d\)</span> (<a href="#def-dimension" class="quarto-xref">Definition&nbsp;9</a>).</p>
@@ -3061,7 +3274,7 @@ c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphant
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-91-contents" aria-controls="callout-91" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-103-contents" aria-controls="callout-103" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3070,7 +3283,7 @@ c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphant
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-91" class="callout-91-contents callout-collapse collapse">
+<div id="callout-103" class="callout-103-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><strong>Part 1.</strong> If <span class="math inline">\(d = 0\)</span>, then <span class="math inline">\(\mathcal{S} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}\)</span>, so every vector in a nonempty list from <span class="math inline">\(\mathcal{S}\)</span> is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, and <span class="math inline">\(1 \cdot\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> shows the list is not linearly independent; only the empty list, with <span class="math inline">\(0 = d\)</span> vectors, is. Now let <span class="math inline">\(d \ge 1\)</span>, and let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_d\)</span> be a basis of <span class="math inline">\(\mathcal{S}\)</span>, and let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_k \in \mathcal{S}\)</span> be linearly independent. Each <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_j\)</span> is in <span class="math inline">\(\mathcal{S}\)</span>, so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_j = c_{1j} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 + \cdots + c_{dj} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_d\)</span> for some coordinate vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_j = (c_{1j}, \ldots, c_{dj}) \in \mathbb{R}^d\)</span>. Suppose <span class="math inline">\(k &gt; d\)</span>. Then <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_k\)</span> are <span class="math inline">\(k &gt; d\)</span> vectors in <span class="math inline">\(\mathbb{R}^d\)</span>, so some <span class="math inline">\(x_1, \ldots, x_k\)</span>, not all zero, satisfy <span class="math inline">\(x_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_1 + \cdots + x_k \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_k = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_d\)</span> (<a href="#thm-many-vectors-dependent" class="quarto-xref">Theorem&nbsp;5</a>); entry <span class="math inline">\(i\)</span> of that equation says <span class="math inline">\(\sum_{j=1}^{k} x_j c_{ij} = 0\)</span>. Then</p>
@@ -3103,7 +3316,7 @@ c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphant
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-92-contents" aria-controls="callout-92" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-104-contents" aria-controls="callout-104" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3112,7 +3325,7 @@ c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphant
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-92" class="callout-92-contents callout-collapse collapse show">
+<div id="callout-104" class="callout-104-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-dim-bound" class="theorem example">
 <p><span class="theorem-title"><strong>Example 19 (Subspaces of a plane have dimension at most two)</strong></span> The plane <span class="math inline">\(\mathcal{S} = \mathopen{}\left\{(x, y, 0) : x, y \in \mathbb{R}\right\}\mathclose{}\)</span> in <span class="math inline">\(\mathbb{R}^3\)</span> has dimension <span class="math inline">\(2\)</span> (<a href="#exm-dimension" class="quarto-xref">Example&nbsp;16</a>). By <a href="#thm-dim-bound" class="quarto-xref">Theorem&nbsp;10</a>, no three vectors with third entry <span class="math inline">\(0\)</span> are linearly independent; for instance, <span class="math inline">\((1, 0, 0) + (0, 1, 0) - (1, 1, 0) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>. The line <span class="math inline">\(\mathcal{T} = \operatorname{span}\mathopen{}\left\{(1, 1, 0)\right\}\mathclose{}\)</span> lies in <span class="math inline">\(\mathcal{S}\)</span>, and</p>
@@ -3127,8 +3340,58 @@ c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphant
 </div>
 </div>
 </div>
+<div class="callouty-titled callout callout-style-default callout-exr callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-106-contents" aria-controls="callout-106" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exr</span><a href="#exr-dim-bound-practice" class="quarto-xref">Exercise&nbsp;19</a> (Testing whether four independent vectors fit in a three-dimensional subspace)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-106" class="callout-106-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div id="exr-dim-bound-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 19 (Testing whether four independent vectors fit in a three-dimensional subspace)</strong></span> <a href="#thm-dim-bound" class="quarto-xref">Theorem&nbsp;10</a> caps how many <a href="#def-linearly-independent">linearly independent vectors</a> a <a href="#def-subspace">subspace</a> can hold. Let <span class="math inline">\(\mathcal{S}\)</span> be a subspace of <span class="math inline">\(\mathbb{R}^5\)</span> with <a href="#def-dimension">dimension</a> <span class="math inline">\(3\)</span>.</p>
+<p>Can <span class="math inline">\(\mathcal{S}\)</span> contain <span class="math inline">\(4\)</span> linearly independent vectors?</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Hint
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Use part 1 of <a href="#thm-dim-bound" class="quarto-xref">Theorem&nbsp;10</a> with <span class="math inline">\(d = 3\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-107-contents" aria-controls="callout-107" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Solution</span><a href="#sol-dim-bound-practice" class="quarto-xref">Solution&nbsp;19</a>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-107" class="callout-107-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="sol-dim-bound-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 19</em>. </span>No. By part 1 of <a href="#thm-dim-bound" class="quarto-xref">Theorem&nbsp;10</a>, a <a href="#def-linearly-independent">linearly independent</a> list of vectors in <span class="math inline">\(\mathcal{S}\)</span> has at most <span class="math inline">\(\dim(\mathcal{S}) = 3\)</span> vectors, so it cannot have <span class="math inline">\(4\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
 <div class="callouty-titled callout callout-style-default callout-lem callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-93-contents" aria-controls="callout-93" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-108-contents" aria-controls="callout-108" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3137,7 +3400,7 @@ c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphant
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-93" class="callout-93-contents callout-collapse collapse show">
+<div id="callout-108" class="callout-108-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="thm-subspace-equal-dim" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 11 (A subspace inside another of the same dimension equals it)</strong></span> If <span class="math inline">\(\mathcal{T}\)</span> and <span class="math inline">\(\mathcal{S}\)</span> are subspaces of <span class="math inline">\(\mathbb{R}^p\)</span> with <span class="math inline">\(\mathcal{T} \subseteq \mathcal{S}\)</span> and <span class="math inline">\(\dim(\mathcal{T}) = \dim(\mathcal{S})\)</span> (<a href="#def-dimension" class="quarto-xref">Definition&nbsp;9</a>), then <span class="math inline">\(\mathcal{T} = \mathcal{S}\)</span>.</p>
@@ -3146,7 +3409,7 @@ c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphant
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-94-contents" aria-controls="callout-94" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-109-contents" aria-controls="callout-109" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3155,7 +3418,7 @@ c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphant
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-94" class="callout-94-contents callout-collapse collapse">
+<div id="callout-109" class="callout-109-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(d = \dim(\mathcal{S})\)</span>, and let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{t}}\vphantom{t}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{t}}\vphantom{t}}_d\)</span> be a basis of <span class="math inline">\(\mathcal{T}\)</span> (<a href="#thm-extend-basis" class="quarto-xref">Theorem&nbsp;9</a>); it has <span class="math inline">\(d\)</span> vectors because <span class="math inline">\(\dim(\mathcal{T}) = d\)</span>. (When <span class="math inline">\(d = 0\)</span> it is the empty list, whose span is <span class="math inline">\(\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}\)</span> by the convention in <a href="#def-span" class="quarto-xref">Definition&nbsp;5</a>, and the argument is unchanged.) Suppose some <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} \in \mathcal{S}\)</span> is not in <span class="math inline">\(\operatorname{span}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{t}}\vphantom{t}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{t}}\vphantom{t}}_d\right\}\mathclose{} = \mathcal{T}\)</span>. Then <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{t}}\vphantom{t}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{t}}\vphantom{t}}_d, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}\)</span> are linearly independent (<a href="#thm-add-outside-span" class="quarto-xref">Theorem&nbsp;8</a>), and they are <span class="math inline">\(d + 1\)</span> vectors of <span class="math inline">\(\mathcal{S}\)</span>, which contradicts part 1 of <a href="#thm-dim-bound" class="quarto-xref">Theorem&nbsp;10</a>. So every vector of <span class="math inline">\(\mathcal{S}\)</span> is in <span class="math inline">\(\mathcal{T}\)</span>, that is, <span class="math inline">\(\mathcal{S} \subseteq \mathcal{T}\)</span>. Together with <span class="math inline">\(\mathcal{T} \subseteq \mathcal{S}\)</span>, this inclusion gives <span class="math inline">\(\mathcal{T} = \mathcal{S}\)</span>.</p>
@@ -3164,7 +3427,7 @@ c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphant
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-95-contents" aria-controls="callout-95" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-110-contents" aria-controls="callout-110" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3173,7 +3436,7 @@ c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphant
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-95" class="callout-95-contents callout-collapse collapse show">
+<div id="callout-110" class="callout-110-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-subspace-equal-dim" class="theorem example">
 <p><span class="theorem-title"><strong>Example 20 (Two independent vectors in a plane span it)</strong></span> Let <span class="math inline">\(\mathcal{S} = \mathopen{}\left\{(x, y, 0) : x, y \in \mathbb{R}\right\}\mathclose{}\)</span>, the plane <span class="math inline">\(z = 0\)</span>, which has dimension <span class="math inline">\(2\)</span> (<a href="#exm-dimension" class="quarto-xref">Example&nbsp;16</a>), and let <span class="math inline">\(\mathcal{T} = \operatorname{span}\mathopen{}\left\{(1, 0, 0), (1, 1, 0)\right\}\mathclose{}\)</span>. Both vectors have third entry <span class="math inline">\(0\)</span>, so <span class="math inline">\(\mathcal{T} \subseteq \mathcal{S}\)</span>. They are linearly independent: <span class="math inline">\(c_1 (1, 0, 0) + c_2 (1, 1, 0) = (c_1 + c_2, c_2, 0)\)</span>, which is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> only if <span class="math inline">\(c_2 = 0\)</span> and then <span class="math inline">\(c_1 = 0\)</span>. So <span class="math inline">\(\dim(\mathcal{T}) = 2\)</span>, and <a href="#thm-subspace-equal-dim" class="quarto-xref">Theorem&nbsp;11</a> gives <span class="math inline">\(\mathcal{T} = \mathcal{S}\)</span> without solving for any coefficients. As a check, <span class="math inline">\((x, y, 0) = (x - y)\,(1, 0, 0) + y\,(1, 1, 0)\)</span>.</p>
@@ -3182,7 +3445,7 @@ c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphant
 </div>
 </div>
 <div class="callouty-titled callout callout-style-default callout-exm callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-96-contents" aria-controls="callout-96" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-111-contents" aria-controls="callout-111" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3191,10 +3454,63 @@ c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphant
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-96" class="callout-96-contents callout-collapse collapse show">
+<div id="callout-111" class="callout-111-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-subspace-equal-dim-fails" class="theorem example">
 <p><span class="theorem-title"><strong>Example 21 (Equal dimensions without containment)</strong></span> The lines <span class="math inline">\(\operatorname{span}\mathopen{}\left\{(1, 0, 0)\right\}\mathclose{}\)</span> and <span class="math inline">\(\operatorname{span}\mathopen{}\left\{(0, 1, 0)\right\}\mathclose{}\)</span> in <span class="math inline">\(\mathbb{R}^3\)</span> both have dimension <span class="math inline">\(1\)</span>, but they are not equal: <span class="math inline">\((1, 0, 0)\)</span> is in the first and not the second. <a href="#thm-subspace-equal-dim" class="quarto-xref">Theorem&nbsp;11</a> does not apply, because neither line contains the other.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callouty-titled callout callout-style-default callout-exr callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-113-contents" aria-controls="callout-113" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exr</span><a href="#exr-subspace-equal-dim-practice" class="quarto-xref">Exercise&nbsp;20</a> (Showing that a span of two vectors is all of <span class="math inline">\(\mathbb{R}^2\)</span>)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-113" class="callout-113-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div id="exr-subspace-equal-dim-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 20 (Showing that a span of two vectors is all of <span class="math inline">\(\mathbb{R}^2\)</span>)</strong></span> <a href="#thm-subspace-equal-dim" class="quarto-xref">Theorem&nbsp;11</a> shows that two <a href="#def-subspace">subspaces</a> coincide by comparing <a href="#def-dimension">dimensions</a> instead of checking every vector. Let</p>
+<p><span class="math display">\[
+\mathcal{T} = \operatorname{span}\mathopen{}\left\{{(1, 2)}^{\top},\ {(3, 1)}^{\top}\right\}\mathclose{}.
+\]</span></p>
+<p>Is <span class="math inline">\(\mathcal{T}\)</span> all of <span class="math inline">\(\mathbb{R}^2\)</span>?</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Hint
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Find <span class="math inline">\(\dim(\mathcal{T})\)</span> and <span class="math inline">\(\dim(\mathbb{R}^2)\)</span>, then use <a href="#thm-subspace-equal-dim" class="quarto-xref">Theorem&nbsp;11</a> with <span class="math inline">\(\mathcal{S} = \mathbb{R}^2\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-114-contents" aria-controls="callout-114" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Solution</span><a href="#sol-subspace-equal-dim-practice" class="quarto-xref">Solution&nbsp;20</a>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-114" class="callout-114-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="sol-subspace-equal-dim-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 20</em>. </span>Yes. The two vectors are <a href="#def-linearly-independent">linearly independent</a>: if <span class="math inline">\(c_1 {(1, 2)}^{\top} + c_2 {(3, 1)}^{\top} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, then <span class="math inline">\(c_1 + 3 c_2 = 0\)</span> and <span class="math inline">\(2 c_1 + c_2 = 0\)</span>. Subtracting twice the first equation from the second gives <span class="math inline">\(-5 c_2 = 0\)</span>, so <span class="math inline">\(c_2 = 0\)</span> and then <span class="math inline">\(c_1 = 0\)</span>. So they form a <a href="#def-basis">basis</a> of <span class="math inline">\(\mathcal{T}\)</span>, and <span class="math inline">\(\dim(\mathcal{T}) = 2\)</span>. The <a href="./linear-algebra-vectors.html#def-indicator-vector">indicator vectors</a> <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2\)</span> form a basis of <span class="math inline">\(\mathbb{R}^2\)</span>, so <span class="math inline">\(\dim(\mathbb{R}^2) = 2\)</span>. Since <span class="math inline">\(\mathcal{T} \subseteq \mathbb{R}^2\)</span> and the <a href="#def-dimension">dimensions</a> agree, <a href="#thm-subspace-equal-dim" class="quarto-xref">Theorem&nbsp;11</a> gives <span class="math inline">\(\mathcal{T} = \mathbb{R}^2\)</span>.</p>
 </div>
 </div>
 </div>
@@ -3457,7 +3773,7 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
 
 <script>
 (function () {
-  var moved = {"a-2-times-3-matrix-has-rank-at-most-2":"linear-algebra-rank-nullity.html","a-centered-data-matrix-has-rank-at-most-n---1":"linear-algebra-rank-nullity.html","a-cross-product-matrix":"linear-algebra-rank-nullity.html","a-gram-matrix-and-its-entries":"linear-algebra-rank-nullity.html","a-hyperplane-is-a-translated-subspace-of-dimension-p---1":"linear-algebra-rank-nullity.html","a-line-in-reals2-and-a-plane-in-reals3-checked-on-a-grid-of-points":"linear-algebra-rank-nullity.html","a-line-that-misses-the-origin-is-an-affine-subspace":"linear-algebra-rank-nullity.html","a-null-space-is-a-subspace":"linear-algebra-rank-nullity.html","a-product-can-lose-rank":"linear-algebra-rank-nullity.html","a-product-of-rank-1-with-a-factor-of-rank-2":"linear-algebra-rank-nullity.html","a-rank-factorization-of-a-rank-one-matrix":"linear-algebra-rank-nullity.html","a-sample-covariance-matrix-from-n-le-p-points-is-singular":"linear-algebra-rank-nullity.html","a-set-that-is-not-a-subspace-does-not-come-back":"linear-algebra-direct-sums.html","a-subspace-and-its-orthogonal-complement-make-up-the-whole-space":"linear-algebra-direct-sums.html","affine-subspace":"linear-algebra-rank-nullity.html","an-orthogonal-complement-is-a-subspace":"linear-algebra-direct-sums.html","as-many-points-as-dimensions":"linear-algebra-rank-nullity.html","back-to-the-line":"linear-algebra-direct-sums.html","building-a-rank-factorization-from-a-basis":"linear-algebra-rank-nullity.html","checking-independence-through-the-null-space":"linear-algebra-rank-nullity.html","checking-rank-nullity-on-the-matrix-in-exm-column-space":"linear-algebra-rank-nullity.html","checking-the-three-statements":"linear-algebra-direct-sums.html","closed-half-space":"linear-algebra-rank-nullity.html","column-column-products":"linear-algebra-rank-nullity.html","column-space-range-image":"linear-algebra-rank-nullity.html","complementary-subspaces":"linear-algebra-direct-sums.html","cor-dim-subadditive":"linear-algebra-direct-sums.html","cor-rank-bound":"linear-algebra-rank-nullity.html","cor-rank-product-full-rank":"linear-algebra-rank-nullity.html","cor-sample-covariance-singular":"linear-algebra-rank-nullity.html","cross-product-matrix":"linear-algebra-rank-nullity.html","def-affine-subspace":"linear-algebra-rank-nullity.html","def-closed-half-space":"linear-algebra-rank-nullity.html","def-column-space":"linear-algebra-rank-nullity.html","def-complementary-subspaces":"linear-algebra-direct-sums.html","def-cross-product-matrix":"linear-algebra-rank-nullity.html","def-direct-sum":"linear-algebra-direct-sums.html","def-gram-matrix":"linear-algebra-rank-nullity.html","def-half-space":"linear-algebra-rank-nullity.html","def-left-null-space":"linear-algebra-rank-nullity.html","def-null-space":"linear-algebra-rank-nullity.html","def-nullity":"linear-algebra-rank-nullity.html","def-orthogonal-complement":"linear-algebra-direct-sums.html","def-projection":"linear-algebra-direct-sums.html","def-rank-factorization":"linear-algebra-rank-nullity.html","def-row-space":"linear-algebra-rank-nullity.html","def-subspace-sum":"linear-algebra-direct-sums.html","differences-of-points-in-a-hyperplane-and-in-a-half-space":"linear-algebra-rank-nullity.html","direct-sum":"linear-algebra-direct-sums.html","eq-half-space":"linear-algebra-rank-nullity.html","equality-and-strict-inequality":"linear-algebra-direct-sums.html","every-nonzero-matrix-has-a-rank-factorization":"linear-algebra-rank-nullity.html","exm-affine-subspace":"linear-algebra-rank-nullity.html","exm-centered-data-rank":"linear-algebra-rank-nullity.html","exm-column-space":"linear-algebra-rank-nullity.html","exm-column-space-span":"linear-algebra-rank-nullity.html","exm-complement-null-space":"linear-algebra-direct-sums.html","exm-cross-product-matrix":"linear-algebra-rank-nullity.html","exm-cross-product-sum-outer":"linear-algebra-rank-nullity.html","exm-dim-subadditive":"linear-algebra-direct-sums.html","exm-dim-sum":"linear-algebra-direct-sums.html","exm-direct-sum":"linear-algebra-direct-sums.html","exm-direct-sum-equiv":"linear-algebra-direct-sums.html","exm-dot-linear":"linear-algebra-direct-sums.html","exm-double-complement":"linear-algebra-direct-sums.html","exm-double-complement-fails":"linear-algebra-direct-sums.html","exm-fundamental-subspaces":"linear-algebra-direct-sums.html","exm-gram-matrix":"linear-algebra-rank-nullity.html","exm-half-space-iris":"linear-algebra-rank-nullity.html","exm-half-space-plane":"linear-algebra-rank-nullity.html","exm-hyperplane-graph":"linear-algebra-rank-nullity.html","exm-hyperplane-origin":"linear-algebra-rank-nullity.html","exm-hyperplane-subspace":"linear-algebra-rank-nullity.html","exm-independent-null-space":"linear-algebra-rank-nullity.html","exm-not-direct-sum":"linear-algebra-direct-sums.html","exm-null-gram":"linear-algebra-rank-nullity.html","exm-null-space":"linear-algebra-rank-nullity.html","exm-null-space-subspace":"linear-algebra-rank-nullity.html","exm-nullity":"linear-algebra-rank-nullity.html","exm-orthogonal-complement":"linear-algebra-direct-sums.html","exm-orthogonal-complement-subspace":"linear-algebra-direct-sums.html","exm-orthogonal-direct-sum":"linear-algebra-direct-sums.html","exm-projection":"linear-algebra-direct-sums.html","exm-rank-bound":"linear-algebra-rank-nullity.html","exm-rank-dim":"linear-algebra-rank-nullity.html","exm-rank-factorization":"linear-algebra-rank-nullity.html","exm-rank-factorization-construct":"linear-algebra-rank-nullity.html","exm-rank-nullity":"linear-algebra-rank-nullity.html","exm-rank-product":"linear-algebra-rank-nullity.html","exm-rank-product-full-rank":"linear-algebra-rank-nullity.html","exm-rank-product-right":"linear-algebra-rank-nullity.html","exm-rank-subadditive":"linear-algebra-direct-sums.html","exm-rank-transpose":"linear-algebra-rank-nullity.html","exm-row-null-disjoint":"linear-algebra-rank-nullity.html","exm-sample-covariance-singular":"linear-algebra-rank-nullity.html","exm-subspace-sum":"linear-algebra-direct-sums.html","exm-sum-intersection-subspace":"linear-algebra-direct-sums.html","exm-sum-not-union":"linear-algebra-direct-sums.html","exr-column-space-practice":"linear-algebra-rank-nullity.html","exr-column-space-span-practice":"linear-algebra-rank-nullity.html","exr-half-space-sides":"linear-algebra-rank-nullity.html","exr-independent-null-space-practice":"linear-algebra-rank-nullity.html","exr-left-null-space-practice":"linear-algebra-rank-nullity.html","exr-null-space-practice":"linear-algebra-rank-nullity.html","exr-null-space-subspace-practice":"linear-algebra-rank-nullity.html","exr-row-null-disjoint-practice":"linear-algebra-rank-nullity.html","exr-row-space-practice":"linear-algebra-rank-nullity.html","fig-half-space-iris":"linear-algebra-rank-nullity.html","fig-hyperplane-graph":"linear-algebra-rank-nullity.html","finding-a-null-space":"linear-algebra-rank-nullity.html","four-equal-ranks":"linear-algebra-rank-nullity.html","fundamental-theorem-of-linear-algebra":"linear-algebra-direct-sums.html","fundamental-theorem-of-ranks":"linear-algebra-rank-nullity.html","gram-matrix":"linear-algebra-rank-nullity.html","half-space-iris-table":"linear-algebra-rank-nullity.html","half-spaces-of-a-line-in-the-plane":"linear-algebra-rank-nullity.html","hyperplane-origin":"linear-algebra-rank-nullity.html","independent-columns-exactly-when-the-null-space-is-trivial":"linear-algebra-rank-nullity.html","left-null-space":"linear-algebra-rank-nullity.html","multiplying-by-a-matrix-of-full-rank-does-not-change-the-rank":"linear-algebra-rank-nullity.html","multiplying-on-the-left-cannot-increase-the-rank":"linear-algebra-rank-nullity.html","multiplying-on-the-right-cannot-increase-the-rank":"linear-algebra-rank-nullity.html","null-space-kernel":"linear-algebra-rank-nullity.html","nullity":"linear-algebra-rank-nullity.html","open-half-space":"linear-algebra-rank-nullity.html","orthogonal-complement":"linear-algebra-direct-sums.html","orthogonal-complements-in-reals3":"linear-algebra-direct-sums.html","projection-onto-a-subspace-along-a-complement":"linear-algebra-direct-sums.html","rank-factorization":"linear-algebra-rank-nullity.html","rank-is-subadditive":"linear-algebra-direct-sums.html","rank-nullity-theorem":"linear-algebra-rank-nullity.html","ranks-of-products-with-a-full-rank-factor":"linear-algebra-rank-nullity.html","reading-off-the-column-space-and-row-space-from-the-columns-and-rows":"linear-algebra-rank-nullity.html","reals3-is-a-plane-plus-a-line":"linear-algebra-direct-sums.html","rem-column-column-product":"linear-algebra-rank-nullity.html","rem-half-space-sides":"linear-algebra-rank-nullity.html","rem-orthogonal-complement-any-set":"linear-algebra-direct-sums.html","row-space":"linear-algebra-rank-nullity.html","sec-column-null-space":"linear-algebra-rank-nullity.html","sec-direct-sums":"linear-algebra-direct-sums.html","sec-fundamental-theorem":"linear-algebra-direct-sums.html","sec-orthogonal-complements":"linear-algebra-direct-sums.html","sec-rank-nullity":"linear-algebra-rank-nullity.html","showing-that-a-column-space-is-all-of-reals2":"linear-algebra-rank-nullity.html","showing-that-the-solutions-of-two-equations-are-a-subspace":"linear-algebra-rank-nullity.html","sol-column-space-practice":"linear-algebra-rank-nullity.html","sol-column-space-span-practice":"linear-algebra-rank-nullity.html","sol-half-space-sides":"linear-algebra-rank-nullity.html","sol-independent-null-space-practice":"linear-algebra-rank-nullity.html","sol-left-null-space-practice":"linear-algebra-rank-nullity.html","sol-null-space-practice":"linear-algebra-rank-nullity.html","sol-null-space-subspace-practice":"linear-algebra-rank-nullity.html","sol-row-null-disjoint-practice":"linear-algebra-rank-nullity.html","sol-row-space-practice":"linear-algebra-rank-nullity.html","source":"linear-algebra-rank-nullity.html","splitting-a-dot-product":"linear-algebra-direct-sums.html","splitting-a-vector-of-reals3-along-a-line-and-its-complement":"linear-algebra-direct-sums.html","subadditivity-with-equality-and-without":"linear-algebra-direct-sums.html","sum-of-subspaces":"linear-algebra-direct-sums.html","sums-and-intersections-of-subspaces-are-subspaces":"linear-algebra-direct-sums.html","testing-a-row-space-vector-against-the-null-space":"linear-algebra-rank-nullity.html","testing-independent-columns-through-the-null-space":"linear-algebra-rank-nullity.html","testing-whether-a-vector-is-in-a-column-space":"linear-algebra-rank-nullity.html","testing-whether-a-vector-is-in-a-left-null-space":"linear-algebra-rank-nullity.html","testing-whether-a-vector-is-in-a-row-space":"linear-algebra-rank-nullity.html","the-column-space-is-the-span-of-the-columns":"linear-algebra-rank-nullity.html","the-column-space-of-a-rank-one-matrix":"linear-algebra-rank-nullity.html","the-complement-of-a-single-vector-is-a-line":"linear-algebra-direct-sums.html","the-complement-of-the-column-space-in-exm-column-space":"linear-algebra-direct-sums.html","the-cross-product-matrix-is-the-sum-of-the-outer-products-of-the-rows":"linear-algebra-rank-nullity.html","the-dimension-of-a-sum-is-at-most-the-sum-of-the-dimensions":"linear-algebra-direct-sums.html","the-dimension-of-a-sum-of-subspaces":"linear-algebra-direct-sums.html","the-dot-product-is-linear-in-each-slot":"linear-algebra-direct-sums.html","the-four-subspaces-of-the-matrix-in-exm-column-space":"linear-algebra-direct-sums.html","the-gram-matrix-and-a-cross-product-as-sums-of-outer-products":"linear-algebra-rank-nullity.html","the-graph-of-a-line-is-a-line-in-the-plane":"linear-algebra-rank-nullity.html","the-graph-of-an-affine-function-is-a-hyperplane":"linear-algebra-rank-nullity.html","the-null-space-and-left-null-space-of-a-rank-one-matrix":"linear-algebra-rank-nullity.html","the-null-space-of-a-gram-matrix":"linear-algebra-rank-nullity.html","the-nullity-of-the-matrix-in-exm-column-space":"linear-algebra-rank-nullity.html","the-orthogonal-complement-of-a-column-space-is-a-null-space":"linear-algebra-direct-sums.html","the-orthogonal-complement-of-a-set-that-is-not-a-subspace":"linear-algebra-direct-sums.html","the-orthogonal-complement-of-the-orthogonal-complement":"linear-algebra-direct-sums.html","the-plane-x_1-x_2-x_3-1-in-reals3":"linear-algebra-rank-nullity.html","the-projection-depends-on-the-complement":"linear-algebra-direct-sums.html","the-rank-is-at-most-the-smaller-dimension":"linear-algebra-rank-nullity.html","the-rank-is-the-dimension-of-the-column-space":"linear-algebra-rank-nullity.html","the-rank-of-the-matrix-in-exm-column-space":"linear-algebra-rank-nullity.html","the-row-space-and-null-space-in-exm-null-space":"linear-algebra-rank-nullity.html","the-row-space-and-null-space-share-only-the-zero-vector":"linear-algebra-rank-nullity.html","the-solutions-of-matra-vecfx-vecfb-with-vecfb-neq-vzero-are-not-a-subspace":"linear-algebra-rank-nullity.html","the-sum-is-not-the-union":"linear-algebra-direct-sums.html","the-two-sides-of-a-hyperplane":"linear-algebra-rank-nullity.html","thm-centered-data-rank":"linear-algebra-rank-nullity.html","thm-column-space-span":"linear-algebra-rank-nullity.html","thm-complement-null-space":"linear-algebra-direct-sums.html","thm-cross-product-sum-outer":"linear-algebra-rank-nullity.html","thm-dim-sum":"linear-algebra-direct-sums.html","thm-direct-sum-equiv":"linear-algebra-direct-sums.html","thm-dot-linear":"linear-algebra-direct-sums.html","thm-double-complement":"linear-algebra-direct-sums.html","thm-fundamental-subspaces":"linear-algebra-direct-sums.html","thm-half-space-dimension":"linear-algebra-rank-nullity.html","thm-hyperplane-graph":"linear-algebra-rank-nullity.html","thm-hyperplane-origin":"linear-algebra-rank-nullity.html","thm-hyperplane-subspace":"linear-algebra-rank-nullity.html","thm-independent-null-space":"linear-algebra-rank-nullity.html","thm-null-gram":"linear-algebra-rank-nullity.html","thm-null-space-subspace":"linear-algebra-rank-nullity.html","thm-orthogonal-complement-subspace":"linear-algebra-direct-sums.html","thm-orthogonal-direct-sum":"linear-algebra-direct-sums.html","thm-rank-dim":"linear-algebra-rank-nullity.html","thm-rank-factorization":"linear-algebra-rank-nullity.html","thm-rank-nullity":"linear-algebra-rank-nullity.html","thm-rank-product":"linear-algebra-rank-nullity.html","thm-rank-product-right":"linear-algebra-rank-nullity.html","thm-rank-subadditive":"linear-algebra-direct-sums.html","thm-rank-transpose":"linear-algebra-rank-nullity.html","thm-row-null-disjoint":"linear-algebra-rank-nullity.html","thm-sum-intersection-subspace":"linear-algebra-direct-sums.html","three-ways-to-recognize-a-direct-sum":"linear-algebra-direct-sums.html","tpmatra-matra-has-the-same-null-space-as-matra":"linear-algebra-rank-nullity.html","two-iris-species-on-either-side-of-a-line":"linear-algebra-rank-nullity.html","two-lines-sum-to-a-plane":"linear-algebra-direct-sums.html","two-planes-in-reals3":"linear-algebra-direct-sums.html","two-planes-in-reals3-by-dimension":"linear-algebra-direct-sums.html","two-planes-that-sum-to-reals3-but-not-directly":"linear-algebra-direct-sums.html","two-points-in-three-dimensions":"linear-algebra-rank-nullity.html","where-a-hyperplane-passes-and-its-shape-in-reals2-and-reals3":"linear-algebra-rank-nullity.html","which-side-of-the-plane":"linear-algebra-rank-nullity.html"};
+  var moved = {"a-2-times-3-matrix-has-rank-at-most-2":"linear-algebra-rank-nullity.html","a-centered-data-matrix-has-rank-at-most-n---1":"linear-algebra-rank-nullity.html","a-cross-product-matrix":"linear-algebra-rank-nullity.html","a-gram-matrix-and-its-entries":"linear-algebra-rank-nullity.html","a-hyperplane-is-a-translated-subspace-of-dimension-p---1":"linear-algebra-rank-nullity.html","a-line-in-reals2-and-a-plane-in-reals3-checked-on-a-grid-of-points":"linear-algebra-rank-nullity.html","a-line-that-misses-the-origin-is-an-affine-subspace":"linear-algebra-rank-nullity.html","a-null-space-is-a-subspace":"linear-algebra-rank-nullity.html","a-product-can-lose-rank":"linear-algebra-rank-nullity.html","a-product-of-rank-1-with-a-factor-of-rank-2":"linear-algebra-rank-nullity.html","a-rank-factorization-of-a-rank-one-matrix":"linear-algebra-rank-nullity.html","a-sample-covariance-matrix-from-n-le-p-points-is-singular":"linear-algebra-rank-nullity.html","a-set-that-is-not-a-subspace-does-not-come-back":"linear-algebra-direct-sums.html","a-subspace-and-its-orthogonal-complement-make-up-the-whole-space":"linear-algebra-direct-sums.html","affine-subspace":"linear-algebra-rank-nullity.html","an-orthogonal-complement-is-a-subspace":"linear-algebra-direct-sums.html","as-many-points-as-dimensions":"linear-algebra-rank-nullity.html","back-to-the-line":"linear-algebra-direct-sums.html","building-a-rank-factorization-from-a-basis":"linear-algebra-rank-nullity.html","building-a-rank-factorization-from-a-basis-of-the-column-space":"linear-algebra-rank-nullity.html","checking-independence-through-the-null-space":"linear-algebra-rank-nullity.html","checking-rank-nullity-on-the-matrix-in-exm-column-space":"linear-algebra-rank-nullity.html","checking-subadditivity-of-rank-on-two-rank-one-matrices":"linear-algebra-direct-sums.html","checking-that-a-normal-vector-is-orthogonal-to-a-hyperplane":"linear-algebra-rank-nullity.html","checking-the-three-statements":"linear-algebra-direct-sums.html","closed-half-space":"linear-algebra-rank-nullity.html","column-column-products":"linear-algebra-rank-nullity.html","column-space-range-image":"linear-algebra-rank-nullity.html","complementary-subspaces":"linear-algebra-direct-sums.html","computing-a-cross-product-matrix":"linear-algebra-rank-nullity.html","computing-a-cross-product-matrix-one-row-at-a-time":"linear-algebra-rank-nullity.html","computing-a-gram-matrix":"linear-algebra-rank-nullity.html","cor-dim-subadditive":"linear-algebra-direct-sums.html","cor-rank-bound":"linear-algebra-rank-nullity.html","cor-rank-product-full-rank":"linear-algebra-rank-nullity.html","cor-sample-covariance-singular":"linear-algebra-rank-nullity.html","cross-product-matrix":"linear-algebra-rank-nullity.html","deciding-whether-a-sample-covariance-matrix-is-invertible":"linear-algebra-rank-nullity.html","def-affine-subspace":"linear-algebra-rank-nullity.html","def-closed-half-space":"linear-algebra-rank-nullity.html","def-column-space":"linear-algebra-rank-nullity.html","def-complementary-subspaces":"linear-algebra-direct-sums.html","def-cross-product-matrix":"linear-algebra-rank-nullity.html","def-direct-sum":"linear-algebra-direct-sums.html","def-gram-matrix":"linear-algebra-rank-nullity.html","def-half-space":"linear-algebra-rank-nullity.html","def-left-null-space":"linear-algebra-rank-nullity.html","def-null-space":"linear-algebra-rank-nullity.html","def-nullity":"linear-algebra-rank-nullity.html","def-orthogonal-complement":"linear-algebra-direct-sums.html","def-projection":"linear-algebra-direct-sums.html","def-rank-factorization":"linear-algebra-rank-nullity.html","def-row-space":"linear-algebra-rank-nullity.html","def-subspace-sum":"linear-algebra-direct-sums.html","describing-a-line-in-reals2-by-a-point-and-a-vector":"linear-algebra-rank-nullity.html","differences-of-points-in-a-hyperplane-and-in-a-half-space":"linear-algebra-rank-nullity.html","direct-sum":"linear-algebra-direct-sums.html","eq-half-space":"linear-algebra-rank-nullity.html","equality-and-strict-inequality":"linear-algebra-direct-sums.html","every-nonzero-matrix-has-a-rank-factorization":"linear-algebra-rank-nullity.html","exm-affine-subspace":"linear-algebra-rank-nullity.html","exm-centered-data-rank":"linear-algebra-rank-nullity.html","exm-column-space":"linear-algebra-rank-nullity.html","exm-column-space-span":"linear-algebra-rank-nullity.html","exm-complement-null-space":"linear-algebra-direct-sums.html","exm-cross-product-matrix":"linear-algebra-rank-nullity.html","exm-cross-product-sum-outer":"linear-algebra-rank-nullity.html","exm-dim-subadditive":"linear-algebra-direct-sums.html","exm-dim-sum":"linear-algebra-direct-sums.html","exm-direct-sum":"linear-algebra-direct-sums.html","exm-direct-sum-equiv":"linear-algebra-direct-sums.html","exm-dot-linear":"linear-algebra-direct-sums.html","exm-double-complement":"linear-algebra-direct-sums.html","exm-double-complement-fails":"linear-algebra-direct-sums.html","exm-fundamental-subspaces":"linear-algebra-direct-sums.html","exm-gram-matrix":"linear-algebra-rank-nullity.html","exm-half-space-iris":"linear-algebra-rank-nullity.html","exm-half-space-plane":"linear-algebra-rank-nullity.html","exm-hyperplane-graph":"linear-algebra-rank-nullity.html","exm-hyperplane-origin":"linear-algebra-rank-nullity.html","exm-hyperplane-subspace":"linear-algebra-rank-nullity.html","exm-independent-null-space":"linear-algebra-rank-nullity.html","exm-not-direct-sum":"linear-algebra-direct-sums.html","exm-null-gram":"linear-algebra-rank-nullity.html","exm-null-space":"linear-algebra-rank-nullity.html","exm-null-space-subspace":"linear-algebra-rank-nullity.html","exm-nullity":"linear-algebra-rank-nullity.html","exm-orthogonal-complement":"linear-algebra-direct-sums.html","exm-orthogonal-complement-subspace":"linear-algebra-direct-sums.html","exm-orthogonal-direct-sum":"linear-algebra-direct-sums.html","exm-projection":"linear-algebra-direct-sums.html","exm-rank-bound":"linear-algebra-rank-nullity.html","exm-rank-dim":"linear-algebra-rank-nullity.html","exm-rank-factorization":"linear-algebra-rank-nullity.html","exm-rank-factorization-construct":"linear-algebra-rank-nullity.html","exm-rank-nullity":"linear-algebra-rank-nullity.html","exm-rank-product":"linear-algebra-rank-nullity.html","exm-rank-product-full-rank":"linear-algebra-rank-nullity.html","exm-rank-product-right":"linear-algebra-rank-nullity.html","exm-rank-subadditive":"linear-algebra-direct-sums.html","exm-rank-transpose":"linear-algebra-rank-nullity.html","exm-row-null-disjoint":"linear-algebra-rank-nullity.html","exm-sample-covariance-singular":"linear-algebra-rank-nullity.html","exm-subspace-sum":"linear-algebra-direct-sums.html","exm-sum-intersection-subspace":"linear-algebra-direct-sums.html","exm-sum-not-union":"linear-algebra-direct-sums.html","exr-affine-subspace-practice":"linear-algebra-rank-nullity.html","exr-centered-data-rank-practice":"linear-algebra-rank-nullity.html","exr-closed-half-space-practice":"linear-algebra-rank-nullity.html","exr-column-space-practice":"linear-algebra-rank-nullity.html","exr-column-space-span-practice":"linear-algebra-rank-nullity.html","exr-complement-null-space-practice":"linear-algebra-direct-sums.html","exr-complementary-subspaces-practice":"linear-algebra-direct-sums.html","exr-cross-product-matrix-practice":"linear-algebra-rank-nullity.html","exr-cross-product-sum-outer-practice":"linear-algebra-rank-nullity.html","exr-dim-subadditive-practice":"linear-algebra-direct-sums.html","exr-dim-sum-practice":"linear-algebra-direct-sums.html","exr-direct-sum-equiv-practice":"linear-algebra-direct-sums.html","exr-direct-sum-practice":"linear-algebra-direct-sums.html","exr-dot-linear-practice":"linear-algebra-direct-sums.html","exr-double-complement-practice":"linear-algebra-direct-sums.html","exr-fundamental-subspaces-practice":"linear-algebra-direct-sums.html","exr-gram-matrix-practice":"linear-algebra-rank-nullity.html","exr-half-space-practice":"linear-algebra-rank-nullity.html","exr-half-space-sides":"linear-algebra-rank-nullity.html","exr-hyperplane-graph-practice":"linear-algebra-rank-nullity.html","exr-hyperplane-origin-practice":"linear-algebra-rank-nullity.html","exr-hyperplane-subspace-practice":"linear-algebra-rank-nullity.html","exr-independent-null-space-practice":"linear-algebra-rank-nullity.html","exr-left-null-space-practice":"linear-algebra-rank-nullity.html","exr-null-gram-practice":"linear-algebra-rank-nullity.html","exr-null-space-practice":"linear-algebra-rank-nullity.html","exr-null-space-subspace-practice":"linear-algebra-rank-nullity.html","exr-nullity-practice":"linear-algebra-rank-nullity.html","exr-orthogonal-complement-practice":"linear-algebra-direct-sums.html","exr-orthogonal-complement-subspace-practice":"linear-algebra-direct-sums.html","exr-orthogonal-direct-sum-practice":"linear-algebra-direct-sums.html","exr-projection-practice":"linear-algebra-direct-sums.html","exr-rank-bound-practice":"linear-algebra-rank-nullity.html","exr-rank-dim-practice":"linear-algebra-rank-nullity.html","exr-rank-factorization-construct-practice":"linear-algebra-rank-nullity.html","exr-rank-factorization-practice":"linear-algebra-rank-nullity.html","exr-rank-nullity-practice":"linear-algebra-rank-nullity.html","exr-rank-product-full-rank-practice":"linear-algebra-rank-nullity.html","exr-rank-product-practice":"linear-algebra-rank-nullity.html","exr-rank-product-right-practice":"linear-algebra-rank-nullity.html","exr-rank-subadditive-practice":"linear-algebra-direct-sums.html","exr-rank-transpose-practice":"linear-algebra-rank-nullity.html","exr-row-null-disjoint-practice":"linear-algebra-rank-nullity.html","exr-row-space-practice":"linear-algebra-rank-nullity.html","exr-sample-covariance-singular-practice":"linear-algebra-rank-nullity.html","exr-subspace-sum-practice":"linear-algebra-direct-sums.html","exr-sum-intersection-subspace-practice":"linear-algebra-direct-sums.html","fig-half-space-iris":"linear-algebra-rank-nullity.html","fig-hyperplane-graph":"linear-algebra-rank-nullity.html","finding-a-dot-product-from-two-known-dot-products":"linear-algebra-direct-sums.html","finding-a-null-space":"linear-algebra-rank-nullity.html","finding-a-nullity-from-a-rank":"linear-algebra-rank-nullity.html","finding-a-rank-factorization-of-a-rank-one-matrix":"linear-algebra-rank-nullity.html","finding-a-rank-from-the-column-space":"linear-algebra-rank-nullity.html","finding-how-large-the-rank-of-a-matrix-product-can-be":"linear-algebra-rank-nullity.html","finding-how-large-the-rank-of-a-product-can-be-from-its-right-factor":"linear-algebra-rank-nullity.html","finding-how-large-the-rank-of-a-tall-matrix-can-be":"linear-algebra-rank-nullity.html","finding-how-large-the-rank-of-centered-data-can-be":"linear-algebra-rank-nullity.html","finding-the-dimension-of-a-sum-of-subspaces-that-meet-only-at-the-origin":"linear-algebra-direct-sums.html","finding-the-dimension-of-a-sum-of-two-planes-in-reals4":"linear-algebra-direct-sums.html","finding-the-intersection-of-two-planes":"linear-algebra-direct-sums.html","finding-the-normal-vector-of-the-graph-of-a-regression-surface":"linear-algebra-rank-nullity.html","finding-the-null-space-of-a-gram-matrix":"linear-algebra-rank-nullity.html","finding-the-nullity-of-a-3-times-3-matrix":"linear-algebra-rank-nullity.html","finding-the-orthogonal-complement-of-a-column-space":"linear-algebra-direct-sums.html","finding-the-orthogonal-complement-of-two-vectors":"linear-algebra-direct-sums.html","finding-the-rank-of-a-gram-matrix-without-computing-it":"linear-algebra-rank-nullity.html","finding-the-rank-of-a-product-with-a-full-column-rank-factor":"linear-algebra-rank-nullity.html","finding-which-open-half-space-holds-a-point":"linear-algebra-rank-nullity.html","four-equal-ranks":"linear-algebra-rank-nullity.html","fundamental-theorem-of-linear-algebra":"linear-algebra-direct-sums.html","fundamental-theorem-of-ranks":"linear-algebra-rank-nullity.html","gram-matrix":"linear-algebra-rank-nullity.html","half-space-iris-table":"linear-algebra-rank-nullity.html","half-spaces-of-a-line-in-the-plane":"linear-algebra-rank-nullity.html","hint-20":"linear-algebra-rank-nullity.html","hint-21":"linear-algebra-rank-nullity.html","hint-22":"linear-algebra-rank-nullity.html","hint-23":"linear-algebra-rank-nullity.html","hint-24":"linear-algebra-rank-nullity.html","hint-25":"linear-algebra-rank-nullity.html","hint-26":"linear-algebra-rank-nullity.html","hint-27":"linear-algebra-rank-nullity.html","hint-28":"linear-algebra-rank-nullity.html","hint-29":"linear-algebra-rank-nullity.html","hyperplane-origin":"linear-algebra-rank-nullity.html","independent-columns-exactly-when-the-null-space-is-trivial":"linear-algebra-rank-nullity.html","left-null-space":"linear-algebra-rank-nullity.html","multiplying-by-a-matrix-of-full-rank-does-not-change-the-rank":"linear-algebra-rank-nullity.html","multiplying-on-the-left-cannot-increase-the-rank":"linear-algebra-rank-nullity.html","multiplying-on-the-right-cannot-increase-the-rank":"linear-algebra-rank-nullity.html","null-space-kernel":"linear-algebra-rank-nullity.html","nullity":"linear-algebra-rank-nullity.html","open-half-space":"linear-algebra-rank-nullity.html","orthogonal-complement":"linear-algebra-direct-sums.html","orthogonal-complements-in-reals3":"linear-algebra-direct-sums.html","projecting-onto-an-axis-along-a-diagonal-line":"linear-algebra-direct-sums.html","projection-onto-a-subspace-along-a-complement":"linear-algebra-direct-sums.html","rank-factorization":"linear-algebra-rank-nullity.html","rank-is-subadditive":"linear-algebra-direct-sums.html","rank-nullity-theorem":"linear-algebra-rank-nullity.html","ranks-of-products-with-a-full-rank-factor":"linear-algebra-rank-nullity.html","reading-off-the-column-space-and-row-space-from-the-columns-and-rows":"linear-algebra-rank-nullity.html","reals3-is-a-plane-plus-a-line":"linear-algebra-direct-sums.html","recognizing-a-direct-sum-by-counting-dimensions":"linear-algebra-direct-sums.html","rem-column-column-product":"linear-algebra-rank-nullity.html","rem-half-space-sides":"linear-algebra-rank-nullity.html","rem-orthogonal-complement-any-set":"linear-algebra-direct-sums.html","row-space":"linear-algebra-rank-nullity.html","sec-column-null-space":"linear-algebra-rank-nullity.html","sec-direct-sums":"linear-algebra-direct-sums.html","sec-fundamental-theorem":"linear-algebra-direct-sums.html","sec-orthogonal-complements":"linear-algebra-direct-sums.html","sec-rank-nullity":"linear-algebra-rank-nullity.html","showing-that-a-column-space-is-all-of-reals2":"linear-algebra-rank-nullity.html","showing-that-the-solutions-of-two-equations-are-a-subspace":"linear-algebra-rank-nullity.html","sol-affine-subspace-practice":"linear-algebra-rank-nullity.html","sol-centered-data-rank-practice":"linear-algebra-rank-nullity.html","sol-closed-half-space-practice":"linear-algebra-rank-nullity.html","sol-column-space-practice":"linear-algebra-rank-nullity.html","sol-column-space-span-practice":"linear-algebra-rank-nullity.html","sol-complement-null-space-practice":"linear-algebra-direct-sums.html","sol-complementary-subspaces-practice":"linear-algebra-direct-sums.html","sol-cross-product-matrix-practice":"linear-algebra-rank-nullity.html","sol-cross-product-sum-outer-practice":"linear-algebra-rank-nullity.html","sol-dim-subadditive-practice":"linear-algebra-direct-sums.html","sol-dim-sum-practice":"linear-algebra-direct-sums.html","sol-direct-sum-equiv-practice":"linear-algebra-direct-sums.html","sol-direct-sum-practice":"linear-algebra-direct-sums.html","sol-dot-linear-practice":"linear-algebra-direct-sums.html","sol-double-complement-practice":"linear-algebra-direct-sums.html","sol-fundamental-subspaces-practice":"linear-algebra-direct-sums.html","sol-gram-matrix-practice":"linear-algebra-rank-nullity.html","sol-half-space-practice":"linear-algebra-rank-nullity.html","sol-half-space-sides":"linear-algebra-rank-nullity.html","sol-hyperplane-graph-practice":"linear-algebra-rank-nullity.html","sol-hyperplane-origin-practice":"linear-algebra-rank-nullity.html","sol-hyperplane-subspace-practice":"linear-algebra-rank-nullity.html","sol-independent-null-space-practice":"linear-algebra-rank-nullity.html","sol-left-null-space-practice":"linear-algebra-rank-nullity.html","sol-null-gram-practice":"linear-algebra-rank-nullity.html","sol-null-space-practice":"linear-algebra-rank-nullity.html","sol-null-space-subspace-practice":"linear-algebra-rank-nullity.html","sol-nullity-practice":"linear-algebra-rank-nullity.html","sol-orthogonal-complement-practice":"linear-algebra-direct-sums.html","sol-orthogonal-complement-subspace-practice":"linear-algebra-direct-sums.html","sol-orthogonal-direct-sum-practice":"linear-algebra-direct-sums.html","sol-projection-practice":"linear-algebra-direct-sums.html","sol-rank-bound-practice":"linear-algebra-rank-nullity.html","sol-rank-dim-practice":"linear-algebra-rank-nullity.html","sol-rank-factorization-construct-practice":"linear-algebra-rank-nullity.html","sol-rank-factorization-practice":"linear-algebra-rank-nullity.html","sol-rank-nullity-practice":"linear-algebra-rank-nullity.html","sol-rank-product-full-rank-practice":"linear-algebra-rank-nullity.html","sol-rank-product-practice":"linear-algebra-rank-nullity.html","sol-rank-product-right-practice":"linear-algebra-rank-nullity.html","sol-rank-subadditive-practice":"linear-algebra-direct-sums.html","sol-rank-transpose-practice":"linear-algebra-rank-nullity.html","sol-row-null-disjoint-practice":"linear-algebra-rank-nullity.html","sol-row-space-practice":"linear-algebra-rank-nullity.html","sol-sample-covariance-singular-practice":"linear-algebra-rank-nullity.html","sol-subspace-sum-practice":"linear-algebra-direct-sums.html","sol-sum-intersection-subspace-practice":"linear-algebra-direct-sums.html","source":"linear-algebra-rank-nullity.html","splitting-a-dot-product":"linear-algebra-direct-sums.html","splitting-a-vector-into-a-piece-in-a-line-and-an-orthogonal-piece":"linear-algebra-direct-sums.html","splitting-a-vector-of-reals3-along-a-line-and-its-complement":"linear-algebra-direct-sums.html","subadditivity-with-equality-and-without":"linear-algebra-direct-sums.html","sum-of-subspaces":"linear-algebra-direct-sums.html","sums-and-intersections-of-subspaces-are-subspaces":"linear-algebra-direct-sums.html","taking-the-orthogonal-complement-twice":"linear-algebra-direct-sums.html","testing-a-row-space-vector-against-the-null-space":"linear-algebra-rank-nullity.html","testing-independent-columns-through-the-null-space":"linear-algebra-rank-nullity.html","testing-whether-a-linear-system-has-a-solution-through-the-left-null-space":"linear-algebra-direct-sums.html","testing-whether-a-point-is-in-a-closed-half-space":"linear-algebra-rank-nullity.html","testing-whether-a-vector-is-in-a-column-space":"linear-algebra-rank-nullity.html","testing-whether-a-vector-is-in-a-left-null-space":"linear-algebra-rank-nullity.html","testing-whether-a-vector-is-in-a-row-space":"linear-algebra-rank-nullity.html","testing-whether-a-vector-is-in-a-sum-of-two-lines":"linear-algebra-direct-sums.html","testing-whether-a-vector-is-in-an-orthogonal-complement":"linear-algebra-direct-sums.html","testing-whether-reals3-is-the-direct-sum-of-a-plane-and-a-tilted-line":"linear-algebra-direct-sums.html","testing-whether-two-lines-are-complementary-in-reals2":"linear-algebra-direct-sums.html","the-column-space-is-the-span-of-the-columns":"linear-algebra-rank-nullity.html","the-column-space-of-a-rank-one-matrix":"linear-algebra-rank-nullity.html","the-complement-of-a-single-vector-is-a-line":"linear-algebra-direct-sums.html","the-complement-of-the-column-space-in-exm-column-space":"linear-algebra-direct-sums.html","the-cross-product-matrix-is-the-sum-of-the-outer-products-of-the-rows":"linear-algebra-rank-nullity.html","the-dimension-of-a-sum-is-at-most-the-sum-of-the-dimensions":"linear-algebra-direct-sums.html","the-dimension-of-a-sum-of-subspaces":"linear-algebra-direct-sums.html","the-dot-product-is-linear-in-each-slot":"linear-algebra-direct-sums.html","the-four-subspaces-of-the-matrix-in-exm-column-space":"linear-algebra-direct-sums.html","the-gram-matrix-and-a-cross-product-as-sums-of-outer-products":"linear-algebra-rank-nullity.html","the-graph-of-a-line-is-a-line-in-the-plane":"linear-algebra-rank-nullity.html","the-graph-of-an-affine-function-is-a-hyperplane":"linear-algebra-rank-nullity.html","the-null-space-and-left-null-space-of-a-rank-one-matrix":"linear-algebra-rank-nullity.html","the-null-space-of-a-gram-matrix":"linear-algebra-rank-nullity.html","the-nullity-of-the-matrix-in-exm-column-space":"linear-algebra-rank-nullity.html","the-orthogonal-complement-of-a-column-space-is-a-null-space":"linear-algebra-direct-sums.html","the-orthogonal-complement-of-a-set-that-is-not-a-subspace":"linear-algebra-direct-sums.html","the-orthogonal-complement-of-the-orthogonal-complement":"linear-algebra-direct-sums.html","the-plane-x_1-x_2-x_3-1-in-reals3":"linear-algebra-rank-nullity.html","the-projection-depends-on-the-complement":"linear-algebra-direct-sums.html","the-rank-is-at-most-the-smaller-dimension":"linear-algebra-rank-nullity.html","the-rank-is-the-dimension-of-the-column-space":"linear-algebra-rank-nullity.html","the-rank-of-the-matrix-in-exm-column-space":"linear-algebra-rank-nullity.html","the-row-space-and-null-space-in-exm-null-space":"linear-algebra-rank-nullity.html","the-row-space-and-null-space-share-only-the-zero-vector":"linear-algebra-rank-nullity.html","the-solutions-of-matra-vecfx-vecfb-with-vecfb-neq-vzero-are-not-a-subspace":"linear-algebra-rank-nullity.html","the-sum-is-not-the-union":"linear-algebra-direct-sums.html","the-two-sides-of-a-hyperplane":"linear-algebra-rank-nullity.html","thm-centered-data-rank":"linear-algebra-rank-nullity.html","thm-column-space-span":"linear-algebra-rank-nullity.html","thm-complement-null-space":"linear-algebra-direct-sums.html","thm-cross-product-sum-outer":"linear-algebra-rank-nullity.html","thm-dim-sum":"linear-algebra-direct-sums.html","thm-direct-sum-equiv":"linear-algebra-direct-sums.html","thm-dot-linear":"linear-algebra-direct-sums.html","thm-double-complement":"linear-algebra-direct-sums.html","thm-fundamental-subspaces":"linear-algebra-direct-sums.html","thm-half-space-dimension":"linear-algebra-rank-nullity.html","thm-hyperplane-graph":"linear-algebra-rank-nullity.html","thm-hyperplane-origin":"linear-algebra-rank-nullity.html","thm-hyperplane-subspace":"linear-algebra-rank-nullity.html","thm-independent-null-space":"linear-algebra-rank-nullity.html","thm-null-gram":"linear-algebra-rank-nullity.html","thm-null-space-subspace":"linear-algebra-rank-nullity.html","thm-orthogonal-complement-subspace":"linear-algebra-direct-sums.html","thm-orthogonal-direct-sum":"linear-algebra-direct-sums.html","thm-rank-dim":"linear-algebra-rank-nullity.html","thm-rank-factorization":"linear-algebra-rank-nullity.html","thm-rank-nullity":"linear-algebra-rank-nullity.html","thm-rank-product":"linear-algebra-rank-nullity.html","thm-rank-product-right":"linear-algebra-rank-nullity.html","thm-rank-subadditive":"linear-algebra-direct-sums.html","thm-rank-transpose":"linear-algebra-rank-nullity.html","thm-row-null-disjoint":"linear-algebra-rank-nullity.html","thm-sum-intersection-subspace":"linear-algebra-direct-sums.html","three-ways-to-recognize-a-direct-sum":"linear-algebra-direct-sums.html","tpmatra-matra-has-the-same-null-space-as-matra":"linear-algebra-rank-nullity.html","two-iris-species-on-either-side-of-a-line":"linear-algebra-rank-nullity.html","two-lines-sum-to-a-plane":"linear-algebra-direct-sums.html","two-planes-in-reals3":"linear-algebra-direct-sums.html","two-planes-in-reals3-by-dimension":"linear-algebra-direct-sums.html","two-planes-that-sum-to-reals3-but-not-directly":"linear-algebra-direct-sums.html","two-points-in-three-dimensions":"linear-algebra-rank-nullity.html","where-a-hyperplane-passes-and-its-shape-in-reals2-and-reals3":"linear-algebra-rank-nullity.html","which-side-of-the-plane":"linear-algebra-rank-nullity.html","writing-a-line-as-an-affine-subspace":"linear-algebra-rank-nullity.html"};
   function follow() {
     var id = decodeURIComponent(location.hash.slice(1));
     if (id && !document.getElementById(id) && moved[id]) {

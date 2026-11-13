@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-12 16:00:39 (PST)
+Last modified: 2026-11-12 21:28:54 (PST)
 
 # 1 Special Matrices
 
@@ -2151,7 +2151,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 > && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~19 in Matrices}}\text{)}
 > \\
 > &= \mathopen{}\left\lVert\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}^2
-> && \text{(}\href{linear-algebra-vectors.qmd#eq-l2-norm}{\text{Equation~2 in Vectors}}\text{, squared)}
+> && \text{(}\href{linear-algebra-vectors.qmd#eq-norm-dot-product}{\text{Equation~3 in Vectors}}\text{, squared)}
 > \\
 > &\ge 0.
 > && \text{(a squared norm is nonnegative)}
