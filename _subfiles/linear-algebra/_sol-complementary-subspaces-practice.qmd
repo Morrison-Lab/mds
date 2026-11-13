@@ -1,0 +1,12 @@
+:::{#sol-complementary-subspaces-practice}
+
+If $a\,(1, 0) = b\,(1, 1)$,
+then $(a, 0) = (b, b)$,
+so $b = 0$ and then $a = 0$.
+So $\mathcal{S}_1 \cap \mathcal{S}_2 = \cb{\vzero}$.
+Any $(x, y) \in \reals^2$ is $(x - y)\,(1, 0) + y\,(1, 1)$,
+so $\mathcal{S}_1 + \mathcal{S}_2 = \reals^2$.
+Both conditions hold,
+so $\mathcal{S}_1$ and $\mathcal{S}_2$ are [complementary](#def-complementary-subspaces) in $\reals^2$.
+
+:::
