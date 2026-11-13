@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-12 17:38:05 (PST)
+Last modified: 2026-11-12 18:38:22 (PST)
 
 # 1 Special Matrices
 
@@ -2321,9 +2321,9 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 > print(sv_mcn)
 > #> [2.0050125 0.0049875]
 > print(sv_mcn[0] / sv_mcn[1])
-> #> 402.0075124842952
+> #> 402.0075124842948
 > print(sv_mcn_scaled[0] / sv_mcn_scaled[1])
-> #> 402.00751248429384
+> #> 402.00751248429236
 > ```
 >
 > The [singular values](#def-singular-values) are 2.005 and 0.005, so $\kappa(\mathbf{A}) =$ 402. Multiplying every entry by $1000$ multiplies both singular values by $1000$, so the [condition number](#def-matrix-condition-number) is still 402.
@@ -2372,9 +2372,9 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 > kappa_a_cng = sv_mcn[0] / sv_mcn[1]
 > sv_gram_cng = np.linalg.svd(gram_cng, compute_uv=False)
 > print(sv_gram_cng[0] / sv_gram_cng[1])
-> #> 161610.04009142585
+> #> 161610.0400912735
 > print(kappa_a_cng ** 2)
-> #> 161610.04009381076
+> #> 161610.04009381044
 > ```
 >
 > The [condition number](#def-matrix-condition-number) of ${\mathbf{A}}^{\top}\mathbf{A}$ is 161610, and $\kappa(\mathbf{A})^2 =$ 161610, as [Theorem 19](#thm-condition-number-gram) says.
