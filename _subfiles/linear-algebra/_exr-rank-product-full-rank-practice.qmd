@@ -16,7 +16,8 @@ Find $\rankf{\matr{A}\matr{B}}$ without multiplying.
 ::: {.callout-tip}
 #### Hint
 
-Check that $\matr{A}$ has [full column rank](linear-algebra-subspaces.qmd#def-full-column-rank), and find $\rankf{\matr{B}}$.
+Check that $\matr{A}$ has [full column rank](linear-algebra-subspaces.qmd#def-full-column-rank),
+and find $\rankf{\matr{B}}$.
 
 :::
 

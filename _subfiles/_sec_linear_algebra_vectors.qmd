@@ -79,13 +79,37 @@ reticulate::py_require("numpy")
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_exr-vector-valued-practice.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-vector-valued-practice.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-transpose.qmd >}}
 
 {{< include mds/_subfiles/linear-algebra/_note-def-transpose.qmd >}}
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_exr-transpose-practice.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-transpose-practice.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-vector-addition.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exr-vector-addition-practice.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-vector-addition-practice.qmd >}}
 
 {{< slidebreak >}}
 

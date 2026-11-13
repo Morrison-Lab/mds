@@ -1,0 +1,22 @@
+:::{#exr-euclidean-norm-practice}
+#### Finding the norm of a vector with four entries
+
+The [Euclidean norm](#def-euclidean-norm) works the same way in $\reals^4$ as in the plane,
+although there is no picture to draw.
+Let $\vx$ be the vector
+
+$$
+\vx = \sbmat{1 \\ 2 \\ 2 \\ 4}.
+$$
+
+Find $\norm{\vx}$.
+
+::: {.callout-tip}
+#### Hint
+
+Use @def-euclidean-norm with $p = 4$,
+as in @exm-euclidean-norm.
+
+:::
+
+:::
