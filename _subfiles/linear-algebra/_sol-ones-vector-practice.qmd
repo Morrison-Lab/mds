@@ -1,0 +1,11 @@
+:::{#sol-ones-vector-practice}
+
+By @def-ones-vector,
+$\v1 = \tp{(1, 1, 1)}$,
+so by @def-vector-addition
+
+$$
+\vx + \v1 = \sbmat{2 + 1 \\ 0 + 1 \\ -1 + 1} = \sbmat{3 \\ 1 \\ 0}.
+$$
+
+:::

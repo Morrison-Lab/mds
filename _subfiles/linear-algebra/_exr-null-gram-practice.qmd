@@ -1,0 +1,18 @@
+:::{#exr-null-gram-practice}
+#### Finding the null space of a Gram matrix
+
+@thm-null-gram lets the [null space](#def-null-space) of a [Gram matrix](#def-gram-matrix)
+be read off from the original [matrix](linear-algebra-matrices.qmd#def-matrix).
+Let $\matr{A}$ be the $3 \times 2$ matrix whose every entry is $1$.
+
+Find $\mathcal{N}(\tp{\matr{A}}\matr{A})$.
+
+::: {.callout-tip}
+#### Hint
+
+Find $\mathcal{N}(\matr{A})$ first.
+Each entry of $\matr{A}\vecf{x}$ is $x_1 + x_2$.
+
+:::
+
+:::

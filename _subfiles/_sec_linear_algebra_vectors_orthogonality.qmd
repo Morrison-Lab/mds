@@ -4,7 +4,23 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_exr-orthogonal-vectors-practice.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-orthogonal-vectors-practice.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-euclidean-norm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exr-euclidean-norm-practice.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-euclidean-norm-practice.qmd >}}
 
 {{< slidebreak >}}
 
@@ -25,6 +41,14 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_rem-distance-from-origin.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exr-euclidean-distance-practice.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-euclidean-distance-practice.qmd >}}
 
 {{< slidebreak >}}
 
