@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-12 14:10:37 (PST)
+Last modified: 2026-11-12 16:47:32 (PST)
 
 # 1 Rank
 
@@ -334,6 +334,29 @@ Last modified: 2026-11-12 14:10:37 (PST)
 
 > **NOTE:**
 >
+> **Exercise 8 (Computing a matrix-vector product as a combination of columns)** A linear model’s predictions for every observation at once are a [matrix-vector product](linear-algebra-matrices.llms.md#def-matvec-mult) $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, and [Theorem 3](#thm-matvec-columns) writes it as a combination of the [columns of](linear-algebra-matrices.llms.md#def-matrix-column) $\mathbf{A}$. Let
+>
+> $$\mathbf{A} = \begin{bmatrix}2 & 1 \\ 0 & 3 \\ 1 & -1\end{bmatrix},
+> \qquad
+> \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \begin{bmatrix}3 \\ 2\end{bmatrix}.$$
+>
+> Find $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ with [Theorem 3](#thm-matvec-columns).
+>
+> > **TIP:**
+> >
+> > Use [Theorem 3](#thm-matvec-columns) with $x_1 = 3$ and $x_2 = 2$.
+
+> **NOTE:**
+>
+> *Solution 8*. By [Theorem 3](#thm-matvec-columns),
+>
+> $$\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
+> = 3 \begin{bmatrix}2 \\ 0 \\ 1\end{bmatrix} + 2 \begin{bmatrix}1 \\ 3 \\ -1\end{bmatrix}
+> = \begin{bmatrix}6 + 2 \\ 0 + 6 \\ 3 - 2\end{bmatrix}
+> = \begin{bmatrix}8 \\ 6 \\ 1\end{bmatrix}.$$
+
+> **NOTE:**
+>
 > **Theorem 4 (A matrix maps a combination to the same combination of images)** If $\mathbf{A}$ is an $m \times n$ matrix, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}_k \in \mathbb{R}^n$ and $c_1, \ldots, c_k \in \mathbb{R}$, then
 >
 > $$\mathbf{A}\,(c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}_1 + \cdots + c_k \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}_k)
@@ -360,6 +383,28 @@ Last modified: 2026-11-12 14:10:37 (PST)
 > \end{aligned}$$
 >
 > which is $2\,\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}_1 - \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}_2$, as [Theorem 4](#thm-matvec-linear) says.
+
+> **NOTE:**
+>
+> **Exercise 9 (Applying a matrix to a combination without knowing the matrix)** [Theorem 4](#thm-matvec-linear) lets a [matrix-vector product](linear-algebra-matrices.llms.md#def-matvec-mult) of a combination be found from the matrix-vector product of each part, even when the [matrix](linear-algebra-matrices.llms.md#def-matrix) itself is not known. Suppose that a matrix $\mathbf{A}$ satisfies
+>
+> $$\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}_1 = \begin{bmatrix}1 \\ 2\end{bmatrix},
+> \qquad
+> \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}_2 = \begin{bmatrix}0 \\ -1\end{bmatrix}.$$
+>
+> Find $\mathbf{A}\,(3 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}_1 + 2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}_2)$.
+>
+> > **TIP:**
+> >
+> > Use [Theorem 4](#thm-matvec-linear) with $c_1 = 3$ and $c_2 = 2$.
+
+> **NOTE:**
+>
+> *Solution 9*. By [Theorem 4](#thm-matvec-linear),
+>
+> $$\mathbf{A}\,(3 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}_1 + 2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}_2)
+> = 3 \begin{bmatrix}1 \\ 2\end{bmatrix} + 2 \begin{bmatrix}0 \\ -1\end{bmatrix}
+> = \begin{bmatrix}3 \\ 4\end{bmatrix}.$$
 
 > **NOTE:**
 >
@@ -406,6 +451,28 @@ Last modified: 2026-11-12 14:10:37 (PST)
 
 > **NOTE:**
 >
+> **Exercise 10 (Testing four vectors in** $\mathbb{R}^3$ for linear independence) A table of data with more features than observations has more [columns](linear-algebra-matrices.llms.md#def-matrix-column) than each column has entries, and [Theorem 5](#thm-many-vectors-dependent) settles such cases without any arithmetic. Let
+>
+> $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 = \begin{bmatrix}1 \\ 2 \\ 3\end{bmatrix},
+> \quad
+> \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2 = \begin{bmatrix}4 \\ 5 \\ 6\end{bmatrix},
+> \quad
+> \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_3 = \begin{bmatrix}7 \\ 8 \\ 10\end{bmatrix},
+> \quad
+> \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_4 = \begin{bmatrix}1 \\ 0 \\ 1\end{bmatrix}.$$
+>
+> Are these four vectors in $\mathbb{R}^3$ [linearly independent](#def-linearly-independent)?
+>
+> > **TIP:**
+> >
+> > Compare the number of vectors with $p = 3$ in [Theorem 5](#thm-many-vectors-dependent).
+
+> **NOTE:**
+>
+> *Solution 10*. No. There are $k = 4$ vectors in $\mathbb{R}^3$, and $4 > 3$, so by [Theorem 5](#thm-many-vectors-dependent) they are [linearly dependent](#def-linearly-independent).
+
+> **NOTE:**
+>
 > **Definition 6 (Basis)** A **basis** [\[6\]](#ref-wikipedia_basis_linear_algebra) of a subspace $\mathcal{S}$ ([Definition 4](#def-subspace)) is a list of vectors that are linearly independent ([Definition 1](#def-linearly-independent)) and span $\mathcal{S}$ ([Definition 5](#def-span)).
 
 > **NOTE:**
@@ -421,6 +488,28 @@ Last modified: 2026-11-12 14:10:37 (PST)
 >
 > - $(1, 0)$ and $(2, 0)$ are not a basis of $\mathbb{R}^2$. They are not linearly independent, since $2\,(1, 0) - (2, 0) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, and they do not span $\mathbb{R}^2$: every combination $c_1 (1, 0) + c_2 (2, 0)$ has second entry $0$, so $(0, 1)$ is not in their span.
 > - $(1, 0)$, $(0, 1)$ and $(1, 1)$ span $\mathbb{R}^2$, but they are not a basis: $(1, 0) + (0, 1) - (1, 1) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, so they are not linearly independent.
+
+> **NOTE:**
+>
+> **Exercise 11 (Testing whether** $(1, 1)$ and $(1, -1)$ form a basis of $\mathbb{R}^2$) Describing every vector in $\mathbb{R}^2$ through $(1, 1)$ and $(1, -1)$ instead of the axes works only if those two vectors form a [basis](#def-basis). Let
+>
+> $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 = \begin{bmatrix}1 \\ 1\end{bmatrix},
+> \qquad
+> \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 = \begin{bmatrix}1 \\ -1\end{bmatrix}.$$
+>
+> Is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2$ a basis of $\mathbb{R}^2$?
+>
+> > **TIP:**
+> >
+> > Check both conditions of [Definition 6](#def-basis). For spanning, look for $c_1$ and $c_2$ with $c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 + c_2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 = {(x, y)}^{\top}$.
+
+> **NOTE:**
+>
+> *Solution 11*. Yes. They [span](#def-span) $\mathbb{R}^2$: for every ${(x, y)}^{\top} \in \mathbb{R}^2$,
+>
+> $$\frac{x + y}{2} \begin{bmatrix}1 \\ 1\end{bmatrix} + \frac{x - y}{2} \begin{bmatrix}1 \\ -1\end{bmatrix} = \begin{bmatrix}x \\ y\end{bmatrix}.$$
+>
+> They are [linearly independent](#def-linearly-independent): if $c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 + c_2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, then $c_1 + c_2 = 0$ and $c_1 - c_2 = 0$, and adding the two equations gives $c_1 = 0$ and then $c_2 = 0$. By [Definition 6](#def-basis), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2$ is a [basis](#def-basis) of $\mathbb{R}^2$.
 
 > **NOTE:**
 >
@@ -472,6 +561,22 @@ Last modified: 2026-11-12 14:10:37 (PST)
 
 > **NOTE:**
 >
+> **Exercise 12 (Counting the ways to write a vector in a basis)** The vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 = {(1, 1)}^{\top}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 = {(1, -1)}^{\top}$ form a [basis](#def-basis) of $\mathbb{R}^2$, and
+>
+> $$\begin{bmatrix}5 \\ 1\end{bmatrix} = 3 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 + 2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2.$$
+>
+> How many lists of numbers $c_1, c_2$ satisfy ${(5, 1)}^{\top} = c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 + c_2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2$?
+>
+> > **TIP:**
+> >
+> > Use [Theorem 6](#thm-basis-unique).
+
+> **NOTE:**
+>
+> *Solution 12*. Exactly one, namely $c_1 = 3$ and $c_2 = 2$. By [Theorem 6](#thm-basis-unique), a vector in the [span](#def-span) of a [basis](#def-basis) has only one list of numbers, and $3, 2$ is a list that works.
+
+> **NOTE:**
+>
 > **Definition 7 (Coordinates in a basis)** Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_k$ be a basis of a subspace $\mathcal{S}$ ([Definition 6](#def-basis)), and let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \in \mathcal{S}$. The **coordinates** [\[7\]](#ref-wikipedia_coordinate_vector) of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ in this basis are the numbers $c_1, \ldots, c_k$ with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 + \cdots + c_k \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_k$. By [Theorem 6](#thm-basis-unique) there is exactly one such list of numbers.
 
 > **NOTE:**
@@ -492,6 +597,38 @@ Last modified: 2026-11-12 14:10:37 (PST)
 > \end{aligned}$$
 >
 > In the basis $(1, 0), (0, 1)$, its coordinates are its entries, $4$ and $1$.
+
+> **NOTE:**
+>
+> **Exercise 13 (Finding coordinates in a basis other than the indicator vectors)** The [coordinates](#def-coordinates) of a vector depend on the [basis](#def-basis), and they match its entries only in the basis of [indicator vectors](linear-algebra-vectors.llms.md#def-indicator-vector). The vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 = {(2, 0)}^{\top}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 = {(1, 1)}^{\top}$ form a basis of $\mathbb{R}^2$. Let
+>
+> $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \begin{bmatrix}7 \\ 3\end{bmatrix}.$$
+>
+> Find the coordinates of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ in the basis $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2$.
+>
+> > **TIP:**
+> >
+> > Write $c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 + c_2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2$ entry by entry, and start from the second entry.
+
+> **NOTE:**
+>
+> *Solution 13*. The [coordinates](#def-coordinates) of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ are $2$ and $3$. Entry by entry, $c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 + c_2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 = {(2 c_1 + c_2,\ c_2)}^{\top}$. The second entry gives $c_2 = 3$, and then the first gives $2 c_1 + 3 = 7$, so $c_1 = 2$. As a check, $2 {(2, 0)}^{\top} + 3 {(1, 1)}^{\top} = {(7, 3)}^{\top}$.
+
+> **NOTE:**
+>
+> **Exercise 14 (Describing a point on a plane in** $\mathbb{R}^3$ with two numbers) A point on a plane through the origin in $\mathbb{R}^3$ needs only two numbers, its [coordinate vector](#def-coordinate-vector) in a [basis](#def-basis) of the plane. The vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 = {(1, 1, 0)}^{\top}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 = {(0, 1, 1)}^{\top}$ form a basis of a plane $\mathcal{S}$, which contains
+>
+> $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \begin{bmatrix}2 \\ 5 \\ 3\end{bmatrix}.$$
+>
+> Find the coordinate vector of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ in the basis $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2$.
+>
+> > **TIP:**
+> >
+> > Write $c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 + c_2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2$ entry by entry, then use [Definition 8](#def-coordinate-vector).
+
+> **NOTE:**
+>
+> *Solution 14*. Entry by entry, $c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 + c_2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 = {(c_1,\ c_1 + c_2,\ c_2)}^{\top}$. Matching $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ gives $c_1 = 2$ and $c_2 = 3$, and the second entry checks: $2 + 3 = 5$. By [Definition 8](#def-coordinate-vector), the [coordinate vector](#def-coordinate-vector) of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is ${(2, 3)}^{\top} \in \mathbb{R}^2$.
 
 > **NOTE:**
 >
@@ -544,6 +681,36 @@ Last modified: 2026-11-12 14:10:37 (PST)
 
 > **NOTE:**
 >
+> **Exercise 15 (Testing whether two vectors can form a basis of** $\mathbb{R}^3$) A list of two features cannot describe every point in $\mathbb{R}^3$, and [Theorem 7](#thm-basis-size) says why in terms of [bases](#def-basis). The [indicator vectors](linear-algebra-vectors.llms.md#def-indicator-vector) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3$ form a basis of $\mathbb{R}^3$.
+>
+> Can a list of $2$ vectors be a basis of $\mathbb{R}^3$?
+>
+> > **TIP:**
+> >
+> > Use [Theorem 7](#thm-basis-size) with the [basis](#def-basis) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3$.
+
+> **NOTE:**
+>
+> *Solution 15*. No. $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3$ is a [basis](#def-basis) of $\mathbb{R}^3$ with $3$ vectors, so by [Theorem 7](#thm-basis-size) every basis of $\mathbb{R}^3$ has $3$ vectors, not $2$.
+
+> **NOTE:**
+>
+> **Exercise 16 (Finding the dimension of a span that includes a multiple)** The [dimension](#def-dimension) of a [span](#def-span) can be smaller than the number of vectors that span it, for example when one vector is a multiple of another. Let
+>
+> $$\mathcal{S} = \operatorname{span}\mathopen{}\left\{{(1, 2, 0)}^{\top},\ {(2, 4, 0)}^{\top},\ {(0, 0, 1)}^{\top}\right\}\mathclose{}.$$
+>
+> Find $\dim(\mathcal{S})$.
+>
+> > **TIP:**
+> >
+> > Look for a vector in the list that is a multiple of another, then check that the rest are [linearly independent](#def-linearly-independent).
+
+> **NOTE:**
+>
+> *Solution 16*. $\dim(\mathcal{S}) = 2$. Since ${(2, 4, 0)}^{\top} = 2 {(1, 2, 0)}^{\top}$, dropping ${(2, 4, 0)}^{\top}$ leaves the [span](#def-span) unchanged, so ${(1, 2, 0)}^{\top}$ and ${(0, 0, 1)}^{\top}$ span $\mathcal{S}$. They are [linearly independent](#def-linearly-independent): if $c_1 {(1, 2, 0)}^{\top} + c_2 {(0, 0, 1)}^{\top} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, the first entry gives $c_1 = 0$ and the third gives $c_2 = 0$. So they form a [basis](#def-basis) of $\mathcal{S}$ with $2$ vectors, and by [Definition 9](#def-dimension) the [dimension](#def-dimension) is $2$.
+
+> **NOTE:**
+>
 > **Theorem 8 (Adding a vector outside the span keeps a list independent)** If $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_k$ are linearly independent ([Definition 1](#def-linearly-independent)) and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ is not in $\operatorname{span}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_k\right\}\mathclose{}$ ([Definition 5](#def-span)), then $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_k, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ are linearly independent.
 
 > **NOTE:**
@@ -571,6 +738,26 @@ Last modified: 2026-11-12 14:10:37 (PST)
 > **NOTE:**
 >
 > **Example 17 (Adding** $(0, 0, 1)$ to two independent vectors in $\mathbb{R}^3$) The vectors $(1, 0, 0)$ and $(0, 1, 0)$ are linearly independent, and their span is the plane $z = 0$ ([Example 6](#exm-span)). The vector $(0, 0, 1)$ has third entry $1$, so it is not in that plane, and by [Theorem 8](#thm-add-outside-span) the three vectors $(1, 0, 0)$, $(0, 1, 0)$, $(0, 0, 1)$ are linearly independent. Adding $(1, 1, 0)$ instead would not work: $(1, 1, 0)$ is in the span, and $(1, 0, 0) + (0, 1, 0) - (1, 1, 0) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$.
+
+> **NOTE:**
+>
+> **Exercise 17 (Adding a third feature to an independent pair)** Adding a new feature keeps a list of features [linearly independent](#def-linearly-independent) when the new one is not a combination of the old ones, which is what [Theorem 8](#thm-add-outside-span) says. Let
+>
+> $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 = \begin{bmatrix}1 \\ 0 \\ 0\end{bmatrix},
+> \qquad
+> \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2 = \begin{bmatrix}0 \\ 1 \\ 0\end{bmatrix},
+> \qquad
+> \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \begin{bmatrix}1 \\ 1 \\ 1\end{bmatrix}.$$
+>
+> Are $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ linearly independent?
+>
+> > **TIP:**
+> >
+> > Check whether $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ is in $\operatorname{span}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2\right\}\mathclose{}$, then use [Theorem 8](#thm-add-outside-span).
+
+> **NOTE:**
+>
+> *Solution 17*. Yes. $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2$ are [linearly independent](#def-linearly-independent): $c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 + c_2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2 = {(c_1, c_2, 0)}^{\top}$ is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ only for $c_1 = c_2 = 0$. Every vector in their [span](#def-span) has third entry $0$, and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ has third entry $1$, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ is not in the span. By [Theorem 8](#thm-add-outside-span), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ are linearly independent.
 
 > **NOTE:**
 >

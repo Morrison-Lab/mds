@@ -364,7 +364,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-12 14:10:37 (PST)</p>
+  <p class="date">Last modified: 2026-11-12 16:47:32 (PST)</p>
 </section><section class="slide level2"></section><section id="sec-column-null-space" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Column space and null space</h2>
 </section><section class="slide level2"><div id="def-column-space" class="theorem definition">
@@ -429,6 +429,157 @@
 <p>shows <span class="math inline">\(\mathcal{N}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\{(2, 1, 0), (2, 0, 1)\right\}\mathclose{}\)</span>, a plane in <span class="math inline">\(\mathbb{R}^3\)</span>.</p>
 <p>For the left null space, <span class="math inline">\({\mathbf{A}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = (y_1 + 3y_2,\; -2\,(y_1 + 3y_2),\; -2\,(y_1 + 3y_2))\)</span>, which is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_3\)</span> exactly when <span class="math inline">\(y_1 = -3y_2\)</span>, so <span class="math inline">\(\mathcal{N}({\mathbf{A}}^{\top}) = \operatorname{span}\mathopen{}\left\{(-3, 1)\right\}\mathclose{}\)</span>, a line in <span class="math inline">\(\mathbb{R}^2\)</span>.</p>
 </div>
+</section><section class="slide level2"><div id="exr-column-space-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1 (Testing whether a vector is in a column space)</strong></span> A vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> is in the <a href="#/def-column-space">column space</a> of a <a href="./linear-algebra-matrices.html#def-matrix">matrix</a> <span class="math inline">\(\mathbf{A}\)</span> exactly when some <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> gives <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>. Let</p>
+<p><span class="math display">\[
+\mathbf{A} = \begin{bmatrix}1 &amp; 2 \\ 3 &amp; 6\end{bmatrix},
+\qquad
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \begin{bmatrix}2 \\ 6\end{bmatrix}.
+\]</span></p>
+<p>Decide whether <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> is in <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Try <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (x_1, 0)\)</span> and solve for <span class="math inline">\(x_1\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide level2"><div id="sol-column-space-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 1</em>. </span>Take <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (2, 0)\)</span>. Then</p>
+<p><span class="math display">\[
+\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
+= \begin{bmatrix}1 \cdot 2 + 2 \cdot 0 \\ 3 \cdot 2 + 6 \cdot 0\end{bmatrix}
+= \begin{bmatrix}2 \\ 6\end{bmatrix}
+= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}},
+\]</span></p>
+<p>so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> is in <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span>.</p>
+</div>
+</section><section class="slide level2"><div id="exr-row-space-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2 (Testing whether a vector is in a row space)</strong></span> The <a href="#/def-row-space">row space</a> of a <a href="./linear-algebra-matrices.html#def-matrix">matrix</a> <span class="math inline">\(\mathbf{A}\)</span> is the <a href="#/def-column-space">column space</a> of its <a href="./linear-algebra-matrices.html#def-matrix-transpose">transpose</a>. Let</p>
+<p><span class="math display">\[
+\mathbf{A} = \begin{bmatrix}1 &amp; 2 \\ 3 &amp; 6\end{bmatrix}
+\]</span></p>
+<p>and let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> be the <a href="./linear-algebra-vectors.html#def-column-vector">column vector</a> <span class="math inline">\((1, 2)\)</span>.</p>
+<p>Decide whether <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> is in the row space <span class="math inline">\(\mathcal{C}({\mathbf{A}}^{\top})\)</span>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Write out <span class="math inline">\({\mathbf{A}}^{\top}\)</span> and look for <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span> with <span class="math inline">\({\mathbf{A}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide level2"><div id="sol-row-space-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 2</em>. </span>Here</p>
+<p><span class="math display">\[
+{\mathbf{A}}^{\top} = \begin{bmatrix}1 &amp; 3 \\ 2 &amp; 6\end{bmatrix}.
+\]</span></p>
+<p>Take <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = (1, 0)\)</span>. Then</p>
+<p><span class="math display">\[
+{\mathbf{A}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}
+= \begin{bmatrix}1 \cdot 1 + 3 \cdot 0 \\ 2 \cdot 1 + 6 \cdot 0\end{bmatrix}
+= \begin{bmatrix}1 \\ 2\end{bmatrix}
+= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}},
+\]</span></p>
+<p>so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> is in the <a href="#/def-row-space">row space</a>.</p>
+</div>
+</section><section class="slide level2"><div id="exr-column-space-span-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 3 (Showing that a column space is all of <span class="math inline">\(\mathbb{R}^2\)</span>)</strong></span> <a href="#/thm-column-space-span" class="quarto-xref">Theorem&nbsp;1</a> describes a <a href="#/def-column-space">column space</a> as the <a href="./linear-algebra-subspaces.html#def-span">span</a> of the <a href="./linear-algebra-matrices.html#def-matrix-column">columns of <span class="math inline">\(\mathbf{A}\)</span></a>. Let</p>
+<p><span class="math display">\[
+\mathbf{A} = \begin{bmatrix}1 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 1\end{bmatrix}.
+\]</span></p>
+<p>Show that <span class="math inline">\(\mathcal{C}(\mathbf{A}) = \mathbb{R}^2\)</span>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Two of the <a href="./linear-algebra-matrices.html#def-matrix-column">columns of <span class="math inline">\(\mathbf{A}\)</span></a> are the <a href="./linear-algebra-vectors.html#def-indicator-vector">indicator vectors</a> <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide level2"><div id="sol-column-space-span-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 3</em>. </span>By <a href="#/thm-column-space-span" class="quarto-xref">Theorem&nbsp;1</a>, <span class="math inline">\(\mathcal{C}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\{(1, 0), (0, 1), (1, 1)\right\}\mathclose{}\)</span>. Every <span class="math inline">\((b_1, b_2) \in \mathbb{R}^2\)</span> is <span class="math inline">\(b_1\,(1, 0) + b_2\,(0, 1) + 0\,(1, 1)\)</span>, so it is in that <a href="./linear-algebra-subspaces.html#def-span">span</a>. The <a href="#/def-column-space">column space</a> also lies inside <span class="math inline">\(\mathbb{R}^2\)</span>, so <span class="math inline">\(\mathcal{C}(\mathbf{A}) = \mathbb{R}^2\)</span>.</p>
+</div>
+</section><section class="slide level2"><div id="exr-null-space-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 4 (Finding a null space)</strong></span> The <a href="#/def-null-space">null space</a> of a <a href="./linear-algebra-matrices.html#def-matrix">matrix</a> <span class="math inline">\(\mathbf{A}\)</span> holds every <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> with <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>. Let</p>
+<p><span class="math display">\[
+\mathbf{A} = \begin{bmatrix}1 &amp; 2 &amp; 0 \\ 0 &amp; 0 &amp; 1\end{bmatrix}.
+\]</span></p>
+<p>Find <span class="math inline">\(\mathcal{N}(\mathbf{A})\)</span> as a <a href="./linear-algebra-subspaces.html#def-span">span</a>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Write out the two entries of <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and make each <span class="math inline">\(0\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide level2"><div id="sol-null-space-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 4</em>. </span>For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (x_1, x_2, x_3)\)</span>,</p>
+<p><span class="math display">\[
+\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \begin{bmatrix}x_1 + 2 x_2 \\ x_3\end{bmatrix}.
+\]</span></p>
+<p>This vector is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2\)</span> exactly when <span class="math inline">\(x_3 = 0\)</span> and <span class="math inline">\(x_1 = -2 x_2\)</span>. So <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (-2 x_2, x_2, 0) = x_2\,(-2, 1, 0)\)</span>, and</p>
+<p><span class="math display">\[
+\mathcal{N}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\{(-2, 1, 0)\right\}\mathclose{}.
+\]</span></p>
+</div>
+</section><section class="slide level2"><div id="exr-left-null-space-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5 (Testing whether a vector is in a left null space)</strong></span> The <a href="#/def-left-null-space">left null space</a> of a <a href="./linear-algebra-matrices.html#def-matrix">matrix</a> <span class="math inline">\(\mathbf{A}\)</span> is the <a href="#/def-null-space">null space</a> of its <a href="./linear-algebra-matrices.html#def-matrix-transpose">transpose</a>. Let</p>
+<p><span class="math display">\[
+\mathbf{A} = \begin{bmatrix}1 &amp; 2 \\ 2 &amp; 4\end{bmatrix}
+\]</span></p>
+<p>and let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> be the <a href="./linear-algebra-vectors.html#def-column-vector">column vector</a> <span class="math inline">\((2, -1)\)</span>.</p>
+<p>Decide whether <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> is in <span class="math inline">\(\mathcal{N}({\mathbf{A}}^{\top})\)</span>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Compute <span class="math inline">\({\mathbf{A}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide level2"><div id="sol-left-null-space-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 5</em>. </span>Here</p>
+<p><span class="math display">\[
+{\mathbf{A}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}
+= \begin{bmatrix}1 &amp; 2 \\ 2 &amp; 4\end{bmatrix} \begin{bmatrix}2 \\ -1\end{bmatrix}
+= \begin{bmatrix}2 - 2 \\ 4 - 4\end{bmatrix}
+= \begin{bmatrix}0 \\ 0\end{bmatrix},
+\]</span></p>
+<p>so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> is in <span class="math inline">\(\mathcal{N}({\mathbf{A}}^{\top})\)</span>. Here <span class="math inline">\(\mathbf{A}\)</span> <a href="./linear-algebra-matrices.html#def-matrix-equality">equals</a> its own <a href="./linear-algebra-matrices.html#def-matrix-transpose">transpose</a>, so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> is in <span class="math inline">\(\mathcal{N}(\mathbf{A})\)</span> as well.</p>
+</div>
 </section><section class="slide level2"><div id="thm-null-space-subspace" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 2 (A null space is a subspace)</strong></span> For any <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span>, <span class="math inline">\(\mathcal{N}(\mathbf{A})\)</span> (<a href="#/def-null-space" class="quarto-xref">Definition&nbsp;3</a>) is a subspace of <span class="math inline">\(\mathbb{R}^n\)</span> (<a href="./linear-algebra-subspaces.html#def-subspace">Definition&nbsp;4 in Subspaces and Rank</a>).</p>
 </div>
@@ -472,6 +623,30 @@
 </section><section class="slide level2"><div id="exm-null-space-subspace" class="theorem example">
 <p><span class="theorem-title"><strong>Example 4 (The solutions of <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \neq \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> are not a subspace)</strong></span> In <a href="#/exm-null-space" class="quarto-xref">Example&nbsp;3</a>, <span class="math inline">\((2, 1, 0)\)</span> and <span class="math inline">\((2, 0, 1)\)</span> are in <span class="math inline">\(\mathcal{N}(\mathbf{A})\)</span>, and so is their sum <span class="math inline">\((4, 1, 1)\)</span>, since <span class="math inline">\(4 - 2 \cdot 1 - 2 \cdot 1 = 0\)</span>. By contrast, the solutions of <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (1, 3)\)</span> for the same <span class="math inline">\(\mathbf{A}\)</span> are the vectors with <span class="math inline">\(x_1 - 2x_2 - 2x_3 = 1\)</span>. That set does not contain <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_3\)</span>, so by <a href="./linear-algebra-subspaces.html#thm-subspace-zero">Theorem&nbsp;1 in Subspaces and Rank</a> it is not a subspace.</p>
 </div>
+</section><section class="slide level2"><div id="exr-null-space-subspace-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 6 (Showing that the solutions of two equations are a subspace)</strong></span> <a href="#/thm-null-space-subspace" class="quarto-xref">Theorem&nbsp;2</a> turns a question about a <a href="./linear-algebra-subspaces.html#def-subspace">subspace</a> into a question about a <a href="#/def-null-space">null space</a>. Let <span class="math inline">\(\mathcal{S}\)</span> hold the <a href="./linear-algebra-matrices.html#def-linear-system">solutions</a> <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \in \mathbb{R}^3\)</span> of the two equations <span class="math inline">\(x_1 + x_2 - x_3 = 0\)</span> and <span class="math inline">\(x_2 = 2 x_3\)</span>.</p>
+<p>Show that <span class="math inline">\(\mathcal{S}\)</span> is a subspace of <span class="math inline">\(\mathbb{R}^3\)</span>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Write both equations as <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2\)</span> for one <span class="math inline">\(2 \times 3\)</span> <a href="./linear-algebra-matrices.html#def-matrix">matrix</a> <span class="math inline">\(\mathbf{A}\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide level2"><div id="sol-null-space-subspace-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 6</em>. </span>Move every term to the left side: <span class="math inline">\(x_1 + x_2 - x_3 = 0\)</span> and <span class="math inline">\(x_2 - 2 x_3 = 0\)</span>. With</p>
+<p><span class="math display">\[
+\mathbf{A} = \begin{bmatrix}1 &amp; 1 &amp; -1 \\ 0 &amp; 1 &amp; -2\end{bmatrix},
+\]</span></p>
+<p>the two equations say <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2\)</span>, so <span class="math inline">\(\mathcal{S} = \mathcal{N}(\mathbf{A})\)</span>. By <a href="#/thm-null-space-subspace" class="quarto-xref">Theorem&nbsp;2</a>, <span class="math inline">\(\mathcal{S}\)</span> is a <a href="./linear-algebra-subspaces.html#def-subspace">subspace</a> of <span class="math inline">\(\mathbb{R}^3\)</span>.</p>
+</div>
 </section><section class="slide level2 scrollable"><div id="thm-independent-null-space" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 3 (Independent columns exactly when the null space is trivial)</strong></span> For an <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span>, the following are equivalent:</p>
 <ol type="1">
@@ -498,6 +673,33 @@
 \]</span></p>
 <p>This is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_3\)</span> only if <span class="math inline">\(x_2 = 0\)</span> (subtract the first entry from the second), and then <span class="math inline">\(x_1 = 0\)</span>. So <span class="math inline">\(\mathcal{N}(\mathbf{A}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2\right\}\mathclose{}\)</span> and the two columns are linearly independent.</p>
 <p>For <span class="math inline">\(\mathbf{B} = \begin{bmatrix} 1 &amp; 2 \\ 1 &amp; 2 \\ 1 &amp; 2 \end{bmatrix}\)</span>, <span class="math inline">\(\mathbf{B} (2, -1) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_3\)</span>, so <span class="math inline">\(\mathcal{N}(\mathbf{B})\)</span> contains a nonzero vector and the columns of <span class="math inline">\(\mathbf{B}\)</span> are linearly dependent.</p>
+</div>
+</section><section class="slide level2"><div id="exr-independent-null-space-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 7 (Testing independent columns through the null space)</strong></span> <a href="#/thm-independent-null-space" class="quarto-xref">Theorem&nbsp;3</a> turns a question about independence into one about solving <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>. Let</p>
+<p><span class="math display">\[
+\mathbf{A} = \begin{bmatrix}1 &amp; 2 \\ 2 &amp; 4 \\ 0 &amp; 1\end{bmatrix}.
+\]</span></p>
+<p>Decide whether the <a href="./linear-algebra-matrices.html#def-matrix-column">columns of <span class="math inline">\(\mathbf{A}\)</span></a> are <a href="./linear-algebra-subspaces.html#def-linearly-independent">linearly independent</a>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Solve <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_3\)</span>, starting with the third entry.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide level2"><div id="sol-independent-null-space-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 7</em>. </span>For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (x_1, x_2)\)</span>,</p>
+<p><span class="math display">\[
+\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \begin{bmatrix}x_1 + 2 x_2 \\ 2 x_1 + 4 x_2 \\ x_2\end{bmatrix}.
+\]</span></p>
+<p>The third entry gives <span class="math inline">\(x_2 = 0\)</span>, and then the first gives <span class="math inline">\(x_1 = 0\)</span>. So <span class="math inline">\(\mathcal{N}(\mathbf{A}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2\right\}\mathclose{}\)</span>, and by <a href="#/thm-independent-null-space" class="quarto-xref">Theorem&nbsp;3</a> the <a href="./linear-algebra-matrices.html#def-matrix-column">columns of <span class="math inline">\(\mathbf{A}\)</span></a> are <a href="./linear-algebra-subspaces.html#def-linearly-independent">linearly independent</a>.</p>
 </div>
 </section><section class="slide level2"><div id="thm-row-null-disjoint" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 4 (The row space and null space share only the zero vector)</strong></span> For any <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span>,</p>
@@ -546,6 +748,39 @@
 \]</span></p>
 <p>is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2\)</span>, that is, only if <span class="math inline">\(c = 0\)</span>. So the two subspaces share only <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_3\)</span>.</p>
 </div>
+</section><section class="slide level2"><div id="exr-row-null-disjoint-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 8 (Testing a row-space vector against the null space)</strong></span> <a href="#/thm-row-null-disjoint" class="quarto-xref">Theorem&nbsp;4</a> says that a nonzero vector in the <a href="#/def-row-space">row space</a> is never in the <a href="#/def-null-space">null space</a>. Let</p>
+<p><span class="math display">\[
+\mathbf{A} = \begin{bmatrix}1 &amp; 1 &amp; 0 \\ 0 &amp; 1 &amp; 1\end{bmatrix},
+\qquad
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \begin{bmatrix}1 \\ 2 \\ 1\end{bmatrix},
+\]</span></p>
+<p>so that <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (1, 1, 0) + (0, 1, 1)\)</span> adds the two <a href="./linear-algebra-matrices.html#def-matrix-row">rows of <span class="math inline">\(\mathbf{A}\)</span></a>.</p>
+<p>Check that <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> is not in <span class="math inline">\(\mathcal{N}(\mathbf{A})\)</span>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Multiply each <a href="./linear-algebra-matrices.html#def-matrix-row">row of</a> <span class="math inline">\(\mathbf{A}\)</span> by <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide level2"><div id="sol-row-null-disjoint-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 8</em>. </span>Here</p>
+<p><span class="math display">\[
+\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}
+= \begin{bmatrix}1 + 2 + 0 \\ 0 + 2 + 1\end{bmatrix}
+= \begin{bmatrix}3 \\ 3\end{bmatrix}
+\neq \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2,
+\]</span></p>
+<p>so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> is not in <span class="math inline">\(\mathcal{N}(\mathbf{A})\)</span>, as <a href="#/thm-row-null-disjoint" class="quarto-xref">Theorem&nbsp;4</a> requires of a nonzero vector in the <a href="#/def-row-space">row space</a>.</p>
+</div>
 </section><section class="slide level2"><div id="def-cross-product-matrix" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 5 (Cross-product matrix)</strong></span> Let <span class="math inline">\(\mathbf{A}\)</span> be an <span class="math inline">\(m \times n\)</span> matrix with columns <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_n\)</span> and <span class="math inline">\(\mathbf{B}\)</span> an <span class="math inline">\(m \times q\)</span> matrix with columns <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}_q\)</span>. The <strong>cross-product matrix</strong> of <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span> is the <span class="math inline">\(n \times q\)</span> matrix <span class="math inline">\({\mathbf{A}}^{\top} \mathbf{B}\)</span>, whose entry <span class="math inline">\((i, j)\)</span> is the dot product <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_i \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}_j\)</span>.</p>
 </div>
@@ -575,6 +810,36 @@
 &amp;= \begin{bmatrix} 3 \\ 5 \end{bmatrix}.
 &amp;&amp; \text{(add)}
 \end{aligned}
+\]</span></p>
+</div>
+</section><section class="slide level2"><div id="exr-cross-product-matrix-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 9 (Computing a cross-product matrix)</strong></span> In R, <code>crossprod(A, B)</code> computes the <a href="#/def-cross-product-matrix">cross-product matrix</a> <span class="math inline">\({\mathbf{A}}^{\top} \mathbf{B}\)</span>. Let</p>
+<p><span class="math display">\[
+\mathbf{A} = \begin{bmatrix}1 &amp; 0 \\ 1 &amp; 1\end{bmatrix},
+\qquad
+\mathbf{B} = \begin{bmatrix}2 \\ 3\end{bmatrix}.
+\]</span></p>
+<p>Compute <span class="math inline">\({\mathbf{A}}^{\top} \mathbf{B}\)</span>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Entry <span class="math inline">\(i\)</span> is the <a href="./linear-algebra-vectors.html#def-dot-product">dot product</a> of <a href="./linear-algebra-matrices.html#def-matrix-column">column <span class="math inline">\(i\)</span> of</a> <span class="math inline">\(\mathbf{A}\)</span> with <span class="math inline">\((2, 3)\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide level2"><div id="sol-cross-product-matrix-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 9</em>. </span>The <a href="./linear-algebra-matrices.html#def-matrix-column">columns of <span class="math inline">\(\mathbf{A}\)</span></a> are <span class="math inline">\((1, 1)\)</span> and <span class="math inline">\((0, 1)\)</span>, so</p>
+<p><span class="math display">\[
+{\mathbf{A}}^{\top} \mathbf{B}
+= \begin{bmatrix}1 \cdot 2 + 1 \cdot 3 \\ 0 \cdot 2 + 1 \cdot 3\end{bmatrix}
+= \begin{bmatrix}5 \\ 3\end{bmatrix}.
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="rem-column-column-product" class="proof remark">
@@ -610,6 +875,42 @@
 \end{aligned}
 \]</span></p>
 <p>is entry <span class="math inline">\((1, 2)\)</span>.</p>
+</div>
+</section><section class="slide level2"><div id="exr-gram-matrix-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 10 (Computing a Gram matrix)</strong></span> The <a href="#/def-gram-matrix">Gram matrix</a> holds the <a href="./linear-algebra-vectors.html#def-dot-product">dot products</a> of every pair of <a href="./linear-algebra-matrices.html#def-matrix-column">columns of <span class="math inline">\(\mathbf{A}\)</span></a>. Let</p>
+<p><span class="math display">\[
+\mathbf{A} = \begin{bmatrix}1 &amp; 2 \\ 0 &amp; 1 \\ 1 &amp; 0\end{bmatrix}.
+\]</span></p>
+<p>Compute <span class="math inline">\({\mathbf{A}}^{\top}\mathbf{A}\)</span>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Entry <span class="math inline">\((i, j)\)</span> is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_i \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j\)</span>, so entries <span class="math inline">\((1, 2)\)</span> and <span class="math inline">\((2, 1)\)</span> agree.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide level2"><div id="sol-gram-matrix-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 10</em>. </span>The <a href="./linear-algebra-matrices.html#def-matrix-column">columns of <span class="math inline">\(\mathbf{A}\)</span></a> are <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 = (1, 0, 1)\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 = (2, 1, 0)\)</span>, so</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 &amp;= 1 + 0 + 1 = 2,
+\\
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 &amp;= 2 + 0 + 0 = 2,
+\\
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 &amp;= 4 + 1 + 0 = 5,
+\end{aligned}
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+{\mathbf{A}}^{\top}\mathbf{A} = \begin{bmatrix}2 &amp; 2 \\ 2 &amp; 5\end{bmatrix}.
+\]</span></p>
 </div>
 </section><section class="slide level2"><div id="thm-cross-product-sum-outer" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 5 (The cross-product matrix is the sum of the outer products of the rows)</strong></span> Let <span class="math inline">\(\mathbf{A}\)</span> be an <span class="math inline">\(m \times n\)</span> <a href="./linear-algebra-matrices.html#def-matrix">matrix</a> with rows <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{r}}\vphantom{r}}_1}^{\top}, \ldots, {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{r}}\vphantom{r}}_m}^{\top}\)</span>. Let <span class="math inline">\(\mathbf{B}\)</span> be an <span class="math inline">\(m \times q\)</span> matrix with rows <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}_1}^{\top}, \ldots, {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}_m}^{\top}\)</span>. Then the <a href="#/def-cross-product-matrix">cross-product matrix</a> of <span class="math inline">\(\mathbf{A}\)</span> with <span class="math inline">\(\mathbf{B}\)</span> is</p>
@@ -672,6 +973,38 @@
 \]</span></p>
 <p>the same as in <a href="#/exm-cross-product-matrix" class="quarto-xref">Example&nbsp;7</a>.</p>
 </div>
+</section><section class="slide level2"><div id="exr-cross-product-sum-outer-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 11 (Computing a cross-product matrix one row at a time)</strong></span> <a href="#/thm-cross-product-sum-outer" class="quarto-xref">Theorem&nbsp;5</a> builds a <a href="#/def-cross-product-matrix">cross-product matrix</a> by adding one <a href="./linear-algebra-inner-products.html#def-outer-product">outer product</a> per <a href="./linear-algebra-matrices.html#def-matrix-row">row</a>, which is how it can be updated as observations arrive. Let</p>
+<p><span class="math display">\[
+\mathbf{A} = \begin{bmatrix}1 &amp; 2 \\ 0 &amp; 1\end{bmatrix},
+\qquad
+\mathbf{B} = \begin{bmatrix}3 \\ 1\end{bmatrix}.
+\]</span></p>
+<p>Compute <span class="math inline">\({\mathbf{A}}^{\top} \mathbf{B}\)</span> by adding two outer products.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p><a href="./linear-algebra-matrices.html#def-matrix-row">Rows of <span class="math inline">\(\mathbf{A}\)</span></a> are <span class="math inline">\((1, 2)\)</span> and <span class="math inline">\((0, 1)\)</span>, and rows of <span class="math inline">\(\mathbf{B}\)</span> are <span class="math inline">\(3\)</span> and <span class="math inline">\(1\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide level2"><div id="sol-cross-product-sum-outer-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 11</em>. </span>By <a href="#/thm-cross-product-sum-outer" class="quarto-xref">Theorem&nbsp;5</a>,</p>
+<p><span class="math display">\[
+{\mathbf{A}}^{\top} \mathbf{B}
+= \begin{bmatrix}1 \\ 2\end{bmatrix} \begin{bmatrix}3\end{bmatrix} + \begin{bmatrix}0 \\ 1\end{bmatrix} \begin{bmatrix}1\end{bmatrix}
+= \begin{bmatrix}3 \\ 6\end{bmatrix} + \begin{bmatrix}0 \\ 1\end{bmatrix}
+= \begin{bmatrix}3 \\ 7\end{bmatrix}.
+\]</span></p>
+<p>Multiplying directly gives the same: <span class="math inline">\({\mathbf{A}}^{\top}\mathbf{B} = (1 \cdot 3 + 0 \cdot 1,\; 2 \cdot 3 + 1 \cdot 1) = (3, 7)\)</span>.</p>
+</div>
 </section><section class="slide level2"><div id="thm-null-gram" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 6 (<span class="math inline">\({\mathbf{A}}^{\top} \mathbf{A}\)</span> has the same null space as <span class="math inline">\(\mathbf{A}\)</span>)</strong></span> For any <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span>,</p>
 <p><span class="math display">\[
@@ -722,6 +1055,30 @@
 \end{aligned}
 \]</span></p>
 <p>Every row is a multiple of <span class="math inline">\((1, -2, -2)\)</span>, so <span class="math inline">\({\mathbf{A}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_3\)</span> exactly when <span class="math inline">\(x_1 - 2x_2 - 2x_3 = 0\)</span>, the same condition as for <span class="math inline">\(\mathcal{N}(\mathbf{A})\)</span> in <a href="#/exm-null-space" class="quarto-xref">Example&nbsp;3</a>.</p>
+</div>
+</section><section class="slide level2"><div id="exr-null-gram-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 12 (Finding the null space of a Gram matrix)</strong></span> <a href="#/thm-null-gram" class="quarto-xref">Theorem&nbsp;6</a> lets the <a href="#/def-null-space">null space</a> of a <a href="#/def-gram-matrix">Gram matrix</a> be read off from the original <a href="./linear-algebra-matrices.html#def-matrix">matrix</a>. Let <span class="math inline">\(\mathbf{A}\)</span> be the <span class="math inline">\(3 \times 2\)</span> matrix whose every entry is <span class="math inline">\(1\)</span>.</p>
+<p>Find <span class="math inline">\(\mathcal{N}({\mathbf{A}}^{\top}\mathbf{A})\)</span>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Find <span class="math inline">\(\mathcal{N}(\mathbf{A})\)</span> first. Each entry of <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is <span class="math inline">\(x_1 + x_2\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide level2"><div id="sol-null-gram-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 12</em>. </span>Each entry of <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is <span class="math inline">\(x_1 + x_2\)</span>, so <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_3\)</span> exactly when <span class="math inline">\(x_2 = -x_1\)</span>, and <span class="math inline">\(\mathcal{N}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\{(1, -1)\right\}\mathclose{}\)</span>. By <a href="#/thm-null-gram" class="quarto-xref">Theorem&nbsp;6</a>,</p>
+<p><span class="math display">\[
+\mathcal{N}({\mathbf{A}}^{\top}\mathbf{A}) = \operatorname{span}\mathopen{}\left\{(1, -1)\right\}\mathclose{}.
+\]</span></p>
+<p>As a check, <span class="math inline">\({\mathbf{A}}^{\top}\mathbf{A} = \begin{bmatrix}3 &amp; 3 \\ 3 &amp; 3\end{bmatrix}\)</span>, which sends <span class="math inline">\((1, -1)\)</span> to <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2\)</span>.</p>
 </div>
 </section><section id="sec-rank-nullity" class="slide level2" data-number="2"><h2>
 <span class="header-section-number">2</span> Rank-nullity and rank factorization</h2>
@@ -1411,7 +1768,7 @@ Figure&nbsp;2: Petal length and width of versicolor and virginica irises, with t
 <p>The vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> points toward the virginica side, so the positive half-space <span class="math inline">\(\mathcal{H}^+\)</span> holds 50 of the 100 flowers, and 47 of them are virginica. The line is a set of dimension <span class="math inline">\(p - 1 = 1\)</span>, and each side is a region of the plane of dimension <span class="math inline">\(p = 2\)</span> (<a href="#/thm-half-space-dimension" class="quarto-xref">Theorem&nbsp;16</a>).</p>
 </div>
 </section><section class="slide level2 scrollable"><div id="exr-half-space-sides" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1 (Which side of the plane?)</strong></span> Let <span class="math inline">\(\mathcal{H}\)</span> be the plane in <span class="math inline">\(\mathbb{R}^3\)</span> with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, 1, 1)\)</span> and <span class="math inline">\(b = -1\)</span> (<a href="#/exm-hyperplane-subspace" class="quarto-xref">Example&nbsp;22</a>).</p>
+<p><span class="theorem-title"><strong>Exercise 13 (Which side of the plane?)</strong></span> Let <span class="math inline">\(\mathcal{H}\)</span> be the plane in <span class="math inline">\(\mathbb{R}^3\)</span> with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, 1, 1)\)</span> and <span class="math inline">\(b = -1\)</span> (<a href="#/exm-hyperplane-subspace" class="quarto-xref">Example&nbsp;22</a>).</p>
 <ol type="1">
 <li>For each point, say whether it is in <span class="math inline">\(\mathcal{H}^+\)</span>, <span class="math inline">\(\mathcal{H}\)</span> or <span class="math inline">\(\mathcal{H}^-\)</span> (<a href="#/def-half-space" class="quarto-xref">Definition&nbsp;9</a>): <span class="math inline">\((0, 0, 0)\)</span>, <span class="math inline">\((1, 0, 0)\)</span> and <span class="math inline">\((1, 1, 1)\)</span>.</li>
 <li>Write the plane and its half-spaces using <span class="math inline">\(-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> and <span class="math inline">\(-b\)</span>. Which points from part 1 change sides?</li>
@@ -1419,7 +1776,7 @@ Figure&nbsp;2: Petal length and width of versicolor and virginica irises, with t
 </ol>
 </div>
 <div id="sol-half-space-sides" class="proof solution">
-<p><span class="proof-title"><em>Solution 1</em>. </span></p>
+<p><span class="proof-title"><em>Solution 13</em>. </span></p>
 <ol type="1">
 <li>
 <p>Compute <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b = x_1 + x_2 + x_3 - 1\)</span> at each point.</p>
