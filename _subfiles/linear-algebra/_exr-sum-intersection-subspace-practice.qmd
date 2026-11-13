@@ -10,7 +10,8 @@ Find $\mathcal{S}_1 \cap \mathcal{S}_2$.
 ::: {.callout-tip}
 #### Hint
 
-Express a vector of $\mathcal{S}_2$ as $s\,(1, 1, 0) + t\,(0, 0, 1)$, and ask when its third entry is $0$.
+Express a vector of $\mathcal{S}_2$ as $s\,(1, 1, 0) + t\,(0, 0, 1)$,
+and ask when its third entry is $0$.
 
 :::
 
