@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-12 20:25:49 (PST)
+Last modified: 2026-11-12 21:47:31 (PST)
 
 # 1 Similarity and diagonalization
 
@@ -689,7 +689,7 @@ Last modified: 2026-11-12 20:25:49 (PST)
 > && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~19 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~7 in Matrices}}\text{)}
 > \\
 > &= \mathopen{}\left\lVert\mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}^2
-> && \text{(}\href{linear-algebra-vectors.qmd#eq-l2-norm}{\text{Equation~2 in Vectors}}\text{, squared)}
+> && \text{(}\href{linear-algebra-vectors.qmd#eq-norm-dot-product}{\text{Equation~3 in Vectors}}\text{, squared)}
 > \\
 > &\ge 0.
 > && \text{(}\href{linear-algebra-inner-products.qmd#thm-norm-properties}{\text{Theorem~1 in Inner Products and Orthogonality}}\text{)}
@@ -837,7 +837,7 @@ Last modified: 2026-11-12 20:25:49 (PST)
 > && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-distrib}{\text{Theorem~8 in Matrices}}\text{, }\href{linear-algebra-projections.qmd#thm-scalar-matmul}{\text{Theorem~7 in Projections and Linear Systems}}\text{)}
 > \\
 > &= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + \alpha\,\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}^2
-> && \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~10 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#eq-l2-norm}{\text{Equation~2 in Vectors}}\text{, squared)}
+> && \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~10 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#eq-norm-dot-product}{\text{Equation~3 in Vectors}}\text{, squared)}
 > \\
 > &> 0.
 > && \text{(} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \ge 0, \; \alpha> 0, \; \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_p \text{)}

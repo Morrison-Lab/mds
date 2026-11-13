@@ -5246,6 +5246,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra-vectors#thm-norm-dot-product",
+   "site": "mds",
+   "page": "linear-algebra-vectors",
+   "div": "thm-norm-dot-product",
+   "kind": "thm",
+   "title": "Euclidean norm from the dot product",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra-vectors#thm-standard-basis-expansion",
    "site": "mds",
    "page": "linear-algebra-vectors",
@@ -9801,6 +9810,14 @@
   [
    "mds/linear-algebra-vectors#def-weighted-sum",
    "mds/linear-algebra-vectors#def-linear-combination"
+  ],
+  [
+   "mds/linear-algebra-vectors#thm-norm-dot-product",
+   "mds/linear-algebra-vectors#def-dot-product"
+  ],
+  [
+   "mds/linear-algebra-vectors#thm-norm-dot-product",
+   "mds/linear-algebra-vectors#def-euclidean-norm"
   ],
   [
    "mds/linear-algebra-vectors#thm-standard-basis-expansion",
