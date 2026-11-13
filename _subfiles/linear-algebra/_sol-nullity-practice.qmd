@@ -1,0 +1,10 @@
+:::{#sol-nullity-practice}
+
+For $\vecf{x} = (x_1, x_2, x_3)$,
+$\matr{A}\vecf{x} = (2 x_1, 0, 5 x_3)$,
+which is $\vzero_3$ exactly when $x_1 = 0$ and $x_3 = 0$.
+So $\mathcal{N}(\matr{A}) = \cb{(0, x_2, 0) : x_2 \in \reals} = \operatorname{span}\cb{\vecf{e}_2}$.
+The single nonzero vector $\vecf{e}_2$ is a [basis](linear-algebra-subspaces.qmd#def-basis) of it,
+so $\operatorname{nullity}(\matr{A}) = 1$.
+
+:::
