@@ -30,5 +30,5 @@ This tree joins both sets of notes:
 a box sits below each definition and [theorem](https://morrison-lab.github.io/mcs/proof-writing.html#def-theorem) it uses, in either one,
 and hovering over a box also shows which notes it is in.
 
-::: {#dependency-graph-all data-json="https://morrison-lab.github.io/mcs/dependency-graph.json,https://morrison-lab.github.io/mds/dependency-graph.json"}
+::: {#dependency-graph-all data-json="https://morrison-lab.github.io/mcs/dependency-graph.json,dependency-graph.json"}
 :::
