@@ -1,0 +1,17 @@
+:::{#exr-basis-size-practice}
+#### Testing whether two vectors can form a basis of $\reals^3$
+
+A list of two features cannot describe every point in $\reals^3$,
+and @thm-basis-size says why in terms of [bases](#def-basis).
+The [indicator vectors](linear-algebra-vectors.qmd#def-indicator-vector) $\vecf{e}_1$, $\vecf{e}_2$ and $\vecf{e}_3$ form a basis of $\reals^3$.
+
+Can a list of $2$ vectors be a basis of $\reals^3$?
+
+::: {.callout-tip}
+#### Hint
+
+Use @thm-basis-size with the [basis](#def-basis) $\vecf{e}_1, \vecf{e}_2, \vecf{e}_3$.
+
+:::
+
+:::

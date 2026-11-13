@@ -1,0 +1,16 @@
+:::{#sol-subspace-equal-dim-practice}
+
+Yes.
+The two vectors are [linearly independent](#def-linearly-independent):
+if $c_1 \tp{(1, 2)} + c_2 \tp{(3, 1)} = \vzero$,
+then $c_1 + 3 c_2 = 0$ and $2 c_1 + c_2 = 0$.
+Subtracting twice the first equation from the second gives $-5 c_2 = 0$,
+so $c_2 = 0$ and then $c_1 = 0$.
+So they form a [basis](#def-basis) of $\mathcal{T}$,
+and $\dim(\mathcal{T}) = 2$.
+The [indicator vectors](linear-algebra-vectors.qmd#def-indicator-vector) $\vecf{e}_1, \vecf{e}_2$ form a basis of $\reals^2$,
+so $\dim(\reals^2) = 2$.
+Since $\mathcal{T} \subseteq \reals^2$ and the [dimensions](#def-dimension) agree,
+@thm-subspace-equal-dim gives $\mathcal{T} = \reals^2$.
+
+:::
