@@ -1,0 +1,25 @@
+:::{#exr-basis-practice}
+#### Testing whether $(1, 1)$ and $(1, -1)$ form a basis of $\reals^2$
+
+Describing every vector in $\reals^2$ through $(1, 1)$ and $(1, -1)$ instead of the axes
+works only if those two vectors form a [basis](#def-basis).
+Let
+
+$$
+\vecf{a}_1 = \sbmat{1 \\ 1},
+\qquad
+\vecf{a}_2 = \sbmat{1 \\ -1}.
+$$
+
+Is $\vecf{a}_1, \vecf{a}_2$ a basis of $\reals^2$?
+
+::: {.callout-tip}
+#### Hint
+
+Check both conditions of @def-basis.
+For spanning,
+look for $c_1$ and $c_2$ with $c_1 \vecf{a}_1 + c_2 \vecf{a}_2 = \tp{(x, y)}$.
+
+:::
+
+:::
