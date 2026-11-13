@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-11-12 21:47:31 (PST)
+Last modified: 2026-11-12 22:41:43 (PST)
 
 # 1 Column space and null space
 
@@ -527,7 +527,7 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 > && \text{(entries of the rows)}
 > \\
 > &= \sum_{i=1}^{m} \mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{r}}\vphantom{r}}_i\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}_i}^{\top}\right)\mathclose{}_{jk}
-> && \text{(}\href{linear-algebra-inner-products.qmd#def-outer-product}{\text{Definition~16 in Inner Products and Orthogonality}}\text{)}
+> && \text{(}\href{linear-algebra-inner-products.qmd#def-outer-product}{\text{Definition~17 in Inner Products and Orthogonality}}\text{)}
 > \\
 > &= \mathopen{}\left(\sum_{i=1}^{m} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{r}}\vphantom{r}}_i\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}_i}^{\top}\right)\mathclose{}_{jk}.
 > && \text{(entries of a sum)}
@@ -547,7 +547,7 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 > &= \begin{bmatrix}1 & 0 \\ 0 & 0\end{bmatrix}
 > + \begin{bmatrix}1 & 1 \\ 1 & 1\end{bmatrix}
 > + \begin{bmatrix}0 & 0 \\ 0 & 1\end{bmatrix}
-> && \text{(}\href{linear-algebra-inner-products.qmd#def-outer-product}{\text{Definition~16 in Inner Products and Orthogonality}}\text{)}
+> && \text{(}\href{linear-algebra-inner-products.qmd#def-outer-product}{\text{Definition~17 in Inner Products and Orthogonality}}\text{)}
 > \\
 > &= \begin{bmatrix}2 & 1 \\ 1 & 2\end{bmatrix}.
 > && \text{(add)}

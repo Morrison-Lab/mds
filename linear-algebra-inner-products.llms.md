@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-12 21:47:31 (PST)
+Last modified: 2026-11-12 22:41:43 (PST)
 
 # 1 Inner products
 
@@ -319,7 +319,7 @@ Last modified: 2026-11-12 21:47:31 (PST)
 > *Proof*. $$\begin{aligned}
 > \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rVert\mathclose{}^2
 > &= (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) \cdot (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})
-> && \text{(square both sides of }\href{linear-algebra-vectors.qmd#eq-l2-norm}{\text{Equation~2 in Vectors}}\text{)}
+> && \text{(square both sides of }\href{linear-algebra-vectors.qmd#eq-norm-dot-product}{\text{Equation~3 in Vectors}}\text{)}
 > \\
 > &= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} \cdot (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})
 > && \text{(}\href{linear-algebra-direct-sums.qmd#thm-dot-linear}{\text{Theorem~5 in Direct Sums and Orthogonal Complements}}\text{, first slot, } a \text{ and } b \text{ both equal to } 1 \text{)}
@@ -334,7 +334,7 @@ Last modified: 2026-11-12 21:47:31 (PST)
 > && \text{(combine like terms)}
 > \\
 > &= \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}^2 + 2\,(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) + \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rVert\mathclose{}^2.
-> && \text{(}\href{linear-algebra-vectors.qmd#eq-l2-norm}{\text{Equation~2 in Vectors}}\text{, squared)}
+> && \text{(}\href{linear-algebra-vectors.qmd#eq-norm-dot-product}{\text{Equation~3 in Vectors}}\text{, squared)}
 > \end{aligned}$$
 >
 > If $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \perp \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$, then $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = 0$, and the middle term drops out.
@@ -464,7 +464,7 @@ Last modified: 2026-11-12 21:47:31 (PST)
 >   && \text{(} \mathopen{}\left|ab\right|\mathclose{} = \mathopen{}\left|a\right|\mathclose{}\,\mathopen{}\left|b\right|\mathclose{} \text{)}
 >   \\
 >   &= \mathopen{}\left|s\right|\mathclose{}\,\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rVert\mathclose{}^2
->   && \text{(} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rVert\mathclose{}^2 \ge 0 \text{, }\href{linear-algebra-vectors.qmd#eq-l2-norm}{\text{Equation~2 in Vectors}}\text{)}
+>   && \text{(} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rVert\mathclose{}^2 \ge 0 \text{, }\href{linear-algebra-vectors.qmd#eq-norm-dot-product}{\text{Equation~3 in Vectors}}\text{)}
 >   \\
 >   &= \mathopen{}\left(\mathopen{}\left|s\right|\mathclose{}\,\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rVert\mathclose{}\right)\mathclose{}\,\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rVert\mathclose{}
 >   && \text{(regroup)}
@@ -581,12 +581,35 @@ Last modified: 2026-11-12 21:47:31 (PST)
 >
 > - Positivity and absolute homogeneity hold by [Theorem 1](#thm-norm-properties).
 > - The triangle inequality holds by [Theorem 4](#thm-triangle-inequality).
->
-> Every inner product space $(\mathbb{R}^p, {\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}})$ ([Definition 6](#def-inner-product-space)) naturally defines an induced norm $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{} \stackrel{\text{def}}{=}\sqrt{{\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rangle\mathclose{}}}$, which satisfies all three norm axioms.
 
 > **NOTE:**
 >
-> **Definition 9 (Vector** $p$-norm ($\ell_p$ norm, $\ell_1$ norm, taxicab norm, Manhattan norm, $\ell_2$ norm, infinity norm)) For a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (x_1, \ldots, x_p) \in \mathbb{R}^p$ and any real number $k \ge 1$, the **vector** $p$-norm [\[9\]](#ref-wikipedia_lp_space) (or $\ell_p$ norm, traditionally named with parameter $p$ but denoted here with exponent $k$ to avoid clashing with the ambient vector dimension $p$) is:
+> **Definition 9 (Induced norm (norm induced by an inner product))** In an [inner product space](#def-inner-product-space) $(V, {\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}})$, the **induced norm** (or **norm induced by** ${\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}}$) is the [function](https://morrison-lab.github.io/mcs/functions.html#def-function) that assigns to each vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in V$ the [square root](algebra-basics.llms.md#def-square-root) of the [inner product](#def-inner-product) of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ with itself:
+>
+> $$\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{} \stackrel{\text{def}}{=}\sqrt{{\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rangle\mathclose{}}} \tag{2}$$
+
+> **NOTE:**
+>
+> **Example 11 (The norm induced by the dot product)** In $\mathbb{R}^p$ [equipped with](#def-inner-product-space) the [dot product](linear-algebra-vectors.llms.md#def-dot-product) ([Example 2](#exm-inner-product-space)), [Equation 2](#eq-induced-norm) gives $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{} = \sqrt{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}$. By [Theorem 5 in Vectors](linear-algebra-vectors.llms.md#thm-norm-dot-product), this [induced norm](#def-induced-norm) is the same as the [Euclidean norm](linear-algebra-vectors.llms.md#def-euclidean-norm). For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (3, 4)$:
+>
+> $$\begin{aligned}
+> \sqrt{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}
+> &= \sqrt{3 \cdot 3 + 4 \cdot 4}
+> && \text{(}\href{linear-algebra-vectors.qmd#eq-inner-product}{\text{Equation~1 in Vectors}}\text{)}
+> \\
+> &= \sqrt{25}
+> && \text{(multiply and add)}
+> \\
+> &= 5
+> \end{aligned}$$
+>
+> which is the [length](linear-algebra-vectors.llms.md#def-euclidean-norm) that [Example 15 in Vectors](linear-algebra-vectors.llms.md#exm-euclidean-norm) found.
+>
+> Every [inner product space](#def-inner-product-space) $(V, {\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}})$ has an induced norm, which satisfies all three axioms of a [norm](#def-norm).
+
+> **NOTE:**
+>
+> **Definition 10 (Vector** $p$-norm ($\ell_p$ norm, $\ell_1$ norm, taxicab norm, Manhattan norm, $\ell_2$ norm, infinity norm)) For a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (x_1, \ldots, x_p) \in \mathbb{R}^p$ and any real number $k \ge 1$, the **vector** $p$-norm [\[9\]](#ref-wikipedia_lp_space) (or $\ell_p$ norm, traditionally named with parameter $p$ but denoted here with exponent $k$ to avoid clashing with the ambient vector dimension $p$) is:
 >
 > $$\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}_k \stackrel{\text{def}}{=}\mathopen{}\left(\sum_{i=1}^p\mathopen{}\left|x_i\right|\mathclose{}^k\right)\mathclose{}^{1/k}.$$
 >
@@ -594,7 +617,7 @@ Last modified: 2026-11-12 21:47:31 (PST)
 
 > **NOTE:**
 >
-> **Example 11 (Calculating** $\ell_1$, $\ell_2$, and $\ell_\infty$ norms) For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (3, -4) \in \mathbb{R}^2$:
+> **Example 12 (Calculating** $\ell_1$, $\ell_2$, and $\ell_\infty$ norms) For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (3, -4) \in \mathbb{R}^2$:
 >
 > - $\ell_1$ norm:
 >
@@ -636,7 +659,7 @@ Last modified: 2026-11-12 21:47:31 (PST)
 
 > **NOTE:**
 >
-> **Definition 10 (Infinity norm (**$\ell_\infty$ norm, maximum norm, Chebyshev norm)) For a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (x_1, \ldots, x_p) \in \mathbb{R}^p$, the **infinity norm** [\[10\]](#ref-wikipedia_uniform_norm) (also the $\ell_\infty$ norm, **maximum norm**, or **Chebyshev norm**) is defined separately from the $p$-norms ([Definition 9](#def-vector-p-norm)) by
+> **Definition 11 (Infinity norm (**$\ell_\infty$ norm, maximum norm, Chebyshev norm)) For a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (x_1, \ldots, x_p) \in \mathbb{R}^p$, the **infinity norm** [\[10\]](#ref-wikipedia_uniform_norm) (also the $\ell_\infty$ norm, **maximum norm**, or **Chebyshev norm**) is defined separately from the $p$-norms ([Definition 10](#def-vector-p-norm)) by
 >
 > $$\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}_\infty \stackrel{\text{def}}{=}\max_{1 \le i \le p} \mathopen{}\left|x_i\right|\mathclose{}.$$
 
@@ -650,7 +673,7 @@ Last modified: 2026-11-12 21:47:31 (PST)
 
 > **NOTE:**
 >
-> *Proof*. **Part 1.** Setting $k = 1$ in [Definition 9](#def-vector-p-norm) gives $\mathopen{}\left(\sum_{i=1}^p\mathopen{}\left|x_i\right|\mathclose{}\right)\mathclose{}^{1/1} = \sum_{i=1}^p\mathopen{}\left|x_i\right|\mathclose{}$. Setting $k = 2$ gives $\mathopen{}\left(\sum_{i=1}^p\mathopen{}\left|x_i\right|\mathclose{}^2\right)\mathclose{}^{1/2}$, and $\mathopen{}\left|x_i\right|\mathclose{}^2 = x_i^2$ for every real number $x_i$.
+> *Proof*. **Part 1.** Setting $k = 1$ in [Definition 10](#def-vector-p-norm) gives $\mathopen{}\left(\sum_{i=1}^p\mathopen{}\left|x_i\right|\mathclose{}\right)\mathclose{}^{1/1} = \sum_{i=1}^p\mathopen{}\left|x_i\right|\mathclose{}$. Setting $k = 2$ gives $\mathopen{}\left(\sum_{i=1}^p\mathopen{}\left|x_i\right|\mathclose{}^2\right)\mathclose{}^{1/2}$, and $\mathopen{}\left|x_i\right|\mathclose{}^2 = x_i^2$ for every real number $x_i$.
 >
 > **Part 2.** If $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, every $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}_k$ is $0$, and so is $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}_\infty$. Otherwise, let $M \stackrel{\text{def}}{=}\max_i \mathopen{}\left|x_i\right|\mathclose{} > 0$, and pick $j$ with $\mathopen{}\left|x_j\right|\mathclose{} = M$. Every term of $\sum_{i=1}^p\mathopen{}\left|x_i\right|\mathclose{}^k$ is at most $M^k$, and the $j$th term equals $M^k$, so
 >
@@ -716,7 +739,7 @@ Last modified: 2026-11-12 21:47:31 (PST)
 
 > **NOTE:**
 >
-> **Example 12 (The** $\ell_k$ norm approaches the maximum norm as $k$ grows) Take $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (3, -4)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (-1, 5)$ in $\mathbb{R}^2$. The code computes $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}_k$ for several values of $k$, including $k = \infty$ as the maximum, and checks the triangle inequality for $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ at each of them.
+> **Example 13 (The** $\ell_k$ norm approaches the maximum norm as $k$ grows) Take $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (3, -4)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (-1, 5)$ in $\mathbb{R}^2$. The code computes $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}_k$ for several values of $k$, including $k = \infty$ as the maximum, and checks the triangle inequality for $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ at each of them.
 >
 > ``` downlit
 > lk_norm <- function(x, k) {
@@ -738,13 +761,13 @@ Last modified: 2026-11-12 21:47:31 (PST)
 
 > **NOTE:**
 >
-> **Definition 11 (Cosine similarity)** The **cosine similarity** [\[11\]](#ref-wikipedia_cosine_similarity) between two nonzero vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p$ is their dot product divided by the product of their lengths:
+> **Definition 12 (Cosine similarity)** The **cosine similarity** [\[11\]](#ref-wikipedia_cosine_similarity) between two nonzero vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p$ is their dot product divided by the product of their lengths:
 >
 > $$\operatorname{cossim}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) \stackrel{\text{def}}{=}\frac{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}{\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}\,\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rVert\mathclose{}}.$$
 
 > **NOTE:**
 >
-> **Example 13 (Cosine similarity of parallel, orthogonal, and arbitrary vectors)** For vectors in $\mathbb{R}^2$:
+> **Example 14 (Cosine similarity of parallel, orthogonal, and arbitrary vectors)** For vectors in $\mathbb{R}^2$:
 >
 > - Parallel vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 2)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (2, 4)$:
 >
@@ -773,7 +796,7 @@ Last modified: 2026-11-12 21:47:31 (PST)
 
 > **NOTE:**
 >
-> **Definition 12 (Angle between two vectors)** The **angle** between two nonzero vectors, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} \in \mathbb{R}^p$, is
+> **Definition 13 (Angle between two vectors)** The **angle** between two nonzero vectors, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} \in \mathbb{R}^p$, is
 >
 > $$\theta\stackrel{\text{def}}{=}\arccos\mathopen{}\left(\operatorname{cossim}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})\right)\mathclose{}.$$
 >
@@ -785,7 +808,7 @@ Last modified: 2026-11-12 21:47:31 (PST)
 
 > **NOTE:**
 >
-> **Corollary 1 (A right angle means orthogonal)** For nonzero vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} \in \mathbb{R}^p$ with angle $\theta$ ([Definition 12](#def-angle)),
+> **Corollary 1 (A right angle means orthogonal)** For nonzero vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} \in \mathbb{R}^p$ with angle $\theta$ ([Definition 13](#def-angle)),
 >
 > $$\theta= \frac{\pi}{2}
 > \quad\Longleftrightarrow\quad
@@ -795,11 +818,11 @@ Last modified: 2026-11-12 21:47:31 (PST)
 
 > **NOTE:**
 >
-> *Proof*. Since $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}\,\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rVert\mathclose{} > 0$ ([Theorem 1](#thm-norm-properties)), $\operatorname{cossim}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) = 0$ exactly when $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = 0$ ([Definition 11](#def-cosine-similarity)), so $\cos\theta= 0$ exactly when $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = 0$ ([Remark 4](#rem-angle-well-defined)). On $[0, \pi]$, $\cos$ vanishes only at $\pi/2$.
+> *Proof*. Since $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}\,\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rVert\mathclose{} > 0$ ([Theorem 1](#thm-norm-properties)), $\operatorname{cossim}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) = 0$ exactly when $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = 0$ ([Definition 12](#def-cosine-similarity)), so $\cos\theta= 0$ exactly when $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = 0$ ([Remark 4](#rem-angle-well-defined)). On $[0, \pi]$, $\cos$ vanishes only at $\pi/2$.
 
 > **NOTE:**
 >
-> **Example 14 (Some angles in the plane)**  
+> **Example 15 (Some angles in the plane)**  
 >
 > - $(1, 0)$ and $(1, 1)$: $\cos\theta= \frac{1}{1 \cdot\sqrt{2}}$, so $\theta= \pi/4$.
 >
@@ -841,13 +864,13 @@ Last modified: 2026-11-12 21:47:31 (PST)
 
 > **NOTE:**
 >
-> **Example 15 (The sign of the inner product in the plane)**  
+> **Example 16 (The sign of the inner product in the plane)**  
 >
 > - $(1, 0)$ and $(1, 1)$ have [inner product](#def-inner-product) $1 > 0$ and [angle](#def-angle) $\pi/4 < \pi/2$.
 > - $(1, 2)$ and $(-2, 1)$ have inner product $-2 + 2 = 0$ and angle $\pi/2$.
 > - $(1, 0)$ and $(-3, 0)$ have inner product $-3 < 0$ and angle $\pi > \pi/2$.
 >
-> These are the pairs of [Example 14](#exm-angle).
+> These are the pairs of [Example 15](#exm-angle).
 
 > **NOTE:**
 >
@@ -855,7 +878,7 @@ Last modified: 2026-11-12 21:47:31 (PST)
 
 > **NOTE:**
 >
-> **Definition 13 (Cosine similarity in an inner product space)** In a general real inner product space ([Definition 6](#def-inner-product-space)) with inner product ${\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}}$ and induced norm $\mathopen{}\left\lVert\cdot\right\rVert\mathclose{}$, the **cosine similarity** is
+> **Definition 14 (Cosine similarity in an inner product space)** In a general real inner product space ([Definition 6](#def-inner-product-space)) with inner product ${\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}}$ and [induced norm](#def-induced-norm) $\mathopen{}\left\lVert\cdot\right\rVert\mathclose{}$, the **cosine similarity** is
 >
 > $$\operatorname{cossim}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) \stackrel{\text{def}}{=}\frac{{\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rangle\mathclose{}}}{\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}\,\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rVert\mathclose{}}.$$
 
@@ -867,13 +890,13 @@ Last modified: 2026-11-12 21:47:31 (PST)
 
 > **NOTE:**
 >
-> *Proof*. Both norms in the denominator of [Definition 13](#def-cosine-similarity-inner-product-space) equal $1$, so
+> *Proof*. Both norms in the denominator of [Definition 14](#def-cosine-similarity-inner-product-space) equal $1$, so
 >
 > $$\operatorname{cossim}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) = \frac{{\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rangle\mathclose{}}}{1 \cdot 1} = {\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rangle\mathclose{}}.$$
 
 > **NOTE:**
 >
-> **Theorem 7 (Pearson correlation is the cosine similarity of the centered vectors)** Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^n$ be two vectors that are not constant, with means $\bar{x} = \frac{1}{n}\sum_{i=1}^nx_i$ and $\bar{y} = \frac{1}{n}\sum_{i=1}^ny_i$. Write ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{c}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \bar{x}\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}}$ and ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}^{\mathrm{c}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \bar{y}\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}}$ for the **centered** vectors, whose means are zero. Then the [Pearson correlation coefficient](https://morrison-lab.github.io/sds/exploratory-descriptive.html#def-pearson-r) $r$ of the $n$ pairs $(x_i, y_i)$ is the cosine similarity ([Definition 11](#def-cosine-similarity)) of the centered vectors:
+> **Theorem 7 (Pearson correlation is the cosine similarity of the centered vectors)** Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^n$ be two vectors that are not constant, with means $\bar{x} = \frac{1}{n}\sum_{i=1}^nx_i$ and $\bar{y} = \frac{1}{n}\sum_{i=1}^ny_i$. Write ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{c}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \bar{x}\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}}$ and ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}^{\mathrm{c}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \bar{y}\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}}$ for the **centered** vectors, whose means are zero. Then the [Pearson correlation coefficient](https://morrison-lab.github.io/sds/exploratory-descriptive.html#def-pearson-r) $r$ of the $n$ pairs $(x_i, y_i)$ is the cosine similarity ([Definition 12](#def-cosine-similarity)) of the centered vectors:
 >
 > $$r = \operatorname{cossim}({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{c}}, {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}^{\mathrm{c}}).$$
 
@@ -891,7 +914,7 @@ Last modified: 2026-11-12 21:47:31 (PST)
 
 > **NOTE:**
 >
-> **Example 16 (Centering changes the cosine similarity)** Take $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 2, 3)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (1, 3, 2)$. Their means are $\bar{x} = \bar{y} = 2$, so ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{c}} = (-1, 0, 1)$ and ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}^{\mathrm{c}} = (-1, 1, 0)$. Then
+> **Example 17 (Centering changes the cosine similarity)** Take $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 2, 3)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (1, 3, 2)$. Their means are $\bar{x} = \bar{y} = 2$, so ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{c}} = (-1, 0, 1)$ and ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}^{\mathrm{c}} = (-1, 1, 0)$. Then
 >
 > $$\begin{aligned}
 > {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{c}} \cdot {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}^{\mathrm{c}} &= 1 + 0 + 0 = 1, \\
@@ -910,11 +933,11 @@ Last modified: 2026-11-12 21:47:31 (PST)
 
 > **NOTE:**
 >
-> *Proof*. By [Theorem 7](#thm-pearson-cosine-centered), $r = \operatorname{cossim}({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{c}}, {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}^{\mathrm{c}})$. By [Definition 12](#def-angle), $\theta= \arccos\mathopen{}\left(\operatorname{cossim}({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{c}}, {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}^{\mathrm{c}})\right)\mathclose{}$, so $\cos\theta= \operatorname{cossim}({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{c}}, {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}^{\mathrm{c}})$ ([Remark 4](#rem-angle-well-defined)).
+> *Proof*. By [Theorem 7](#thm-pearson-cosine-centered), $r = \operatorname{cossim}({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{c}}, {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}^{\mathrm{c}})$. By [Definition 13](#def-angle), $\theta= \arccos\mathopen{}\left(\operatorname{cossim}({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{c}}, {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}^{\mathrm{c}})\right)\mathclose{}$, so $\cos\theta= \operatorname{cossim}({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{c}}, {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}^{\mathrm{c}})$ ([Remark 4](#rem-angle-well-defined)).
 
 > **NOTE:**
 >
-> **Example 17 (A correlation of one half is an angle of sixty degrees)** In [Example 16](#exm-pearson-cosine-centered), the correlation is $r = 1/2$, for the data vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 2, 3)$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (1, 3, 2)$. By [Corollary 3](#cor-pearson-angle), the [angle](#def-angle) $\theta$ between the centered vectors ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{c}} = (-1, 0, 1)$, ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}^{\mathrm{c}} = (-1, 1, 0)$ satisfies
+> **Example 18 (A correlation of one half is an angle of sixty degrees)** In [Example 17](#exm-pearson-cosine-centered), the correlation is $r = 1/2$, for the data vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 2, 3)$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (1, 3, 2)$. By [Corollary 3](#cor-pearson-angle), the [angle](#def-angle) $\theta$ between the centered vectors ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{c}} = (-1, 0, 1)$, ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}^{\mathrm{c}} = (-1, 1, 0)$ satisfies
 >
 > $$\cos\theta= \frac{1}{2},$$
 >
@@ -960,7 +983,7 @@ Last modified: 2026-11-12 21:47:31 (PST)
 
 > **NOTE:**
 >
-> **Example 18 (Dotting with a combination of three vectors)** Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (1, 2, 3)$ and take the combination $2\,(1, 0, 0) - (0, 1, 0) + 4\,(0, 0, 1) = (2, -1, 4)$. Directly,
+> **Example 19 (Dotting with a combination of three vectors)** Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (1, 2, 3)$ and take the combination $2\,(1, 0, 0) - (0, 1, 0) + 4\,(0, 0, 1) = (2, -1, 4)$. Directly,
 >
 > $$\begin{aligned}
 > \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot (2, -1, 4) &= 2 - 2 + 12 \\
@@ -996,7 +1019,7 @@ Last modified: 2026-11-12 21:47:31 (PST)
 
 > **NOTE:**
 >
-> **Example 19 (Three orthonormal vectors in** $\mathbb{R}^3$) Let
+> **Example 20 (Three orthonormal vectors in** $\mathbb{R}^3$) Let
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1 = (0, 0, 1), \quad
 > \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_2 = \tfrac{1}{\sqrt{2}}\,(1, 1, 0), \quad
@@ -1022,26 +1045,26 @@ Last modified: 2026-11-12 21:47:31 (PST)
 
 > **NOTE:**
 >
-> **Definition 14 (Orthonormal basis)** An **orthonormal basis** [\[12\]](#ref-wikipedia_orthonormal_basis) of a subspace $\mathcal{S}$ of $\mathbb{R}^p$ is a basis of $\mathcal{S}$ ([Definition 6 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-basis)) whose vectors are orthonormal ([Definition 23 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)).
+> **Definition 15 (Orthonormal basis)** An **orthonormal basis** [\[12\]](#ref-wikipedia_orthonormal_basis) of a subspace $\mathcal{S}$ of $\mathbb{R}^p$ is a basis of $\mathcal{S}$ ([Definition 6 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-basis)) whose vectors are orthonormal ([Definition 23 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)).
 
 > **NOTE:**
 >
-> **Example 20 (Orthonormal bases of** $\mathbb{R}^3$)  
+> **Example 21 (Orthonormal bases of** $\mathbb{R}^3$)  
 >
 > - The indicator vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3$ are orthonormal
 >   2.  and a basis of $\mathbb{R}^3$ ([Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension)).
-> - The vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_2, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_3$ of [Example 19](#exm-orthonormal-independent) are orthonormal and linearly independent, so they are a basis of their span ([Definition 6 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-basis)), which therefore has dimension $3$ ([Definition 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)) and is all of $\mathbb{R}^3$ ([Theorem 11 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-subspace-equal-dim), [Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension)). So they are an orthonormal basis of $\mathbb{R}^3$ too.
+> - The vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_2, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_3$ of [Example 20](#exm-orthonormal-independent) are orthonormal and linearly independent, so they are a basis of their span ([Definition 6 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-basis)), which therefore has dimension $3$ ([Definition 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)) and is all of $\mathbb{R}^3$ ([Theorem 11 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-subspace-equal-dim), [Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension)). So they are an orthonormal basis of $\mathbb{R}^3$ too.
 
 > **NOTE:**
 >
-> **Example 21 (Bases that are not orthonormal, and orthonormal lists that are not bases)**  
+> **Example 22 (Bases that are not orthonormal, and orthonormal lists that are not bases)**  
 >
 > - $(1, 0), (1, 1)$ is a basis of $\mathbb{R}^2$ ([Example 11 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-basis)). It is not an orthonormal basis, since $(1, 0) \cdot (1, 1) = 1$.
 > - $(1, 0, 0), (0, 1, 0)$ is orthonormal but not a basis of $\mathbb{R}^3$: its span is the plane $z = 0$ ([Example 6 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-span)), which does not contain $(0, 0, 1)$.
 
 > **NOTE:**
 >
-> **Theorem 10 (Coordinates in an orthonormal basis are dot products)** If $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_k$ is an orthonormal basis of a subspace $\mathcal{S}$ ([Definition 14](#def-orthonormal-basis)), then every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \in \mathcal{S}$ satisfies
+> **Theorem 10 (Coordinates in an orthonormal basis are dot products)** If $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_k$ is an orthonormal basis of a subspace $\mathcal{S}$ ([Definition 15](#def-orthonormal-basis)), then every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \in \mathcal{S}$ satisfies
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \sum_{i=1}^{k} (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_i \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_i.$$
 
@@ -1065,7 +1088,7 @@ Last modified: 2026-11-12 21:47:31 (PST)
 
 > **NOTE:**
 >
-> **Example 22 (Expanding a vector in an orthonormal basis)** With the orthonormal basis $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_2, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_3$ of $\mathbb{R}^3$ from [Example 20](#exm-orthonormal-basis) and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (1, 2, 3)$: $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1 \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = 3$,
+> **Example 23 (Expanding a vector in an orthonormal basis)** With the orthonormal basis $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_2, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_3$ of $\mathbb{R}^3$ from [Example 21](#exm-orthonormal-basis) and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (1, 2, 3)$: $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1 \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = 3$,
 >
 > $$\begin{aligned}
 > \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_2 \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} &= \tfrac{1}{\sqrt{2}}\,(1 + 2) \\
@@ -1098,7 +1121,7 @@ Last modified: 2026-11-12 21:47:31 (PST)
 
 > **NOTE:**
 >
-> **Definition 15 (Gram-Schmidt process)** The **Gram-Schmidt process** [\[13\]](#ref-wikipedia_gram_schmidt_process) takes vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_k \in \mathbb{R}^p$ and, for $i = 1, 2, \ldots, k$ in turn:
+> **Definition 16 (Gram-Schmidt process)** The **Gram-Schmidt process** [\[13\]](#ref-wikipedia_gram_schmidt_process) takes vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_k \in \mathbb{R}^p$ and, for $i = 1, 2, \ldots, k$ in turn:
 >
 > 1.  **Orthogonalize:** $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}'_i \stackrel{\text{def}}{=}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_i - \sum_{j=1}^{i-1} (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_j \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_i)\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_j$ (for $i = 1$ the sum is empty, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}'_1 = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1$);
 > 2.  **Test:** if $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}'_i = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, stop;
@@ -1108,7 +1131,7 @@ Last modified: 2026-11-12 21:47:31 (PST)
 
 > **NOTE:**
 >
-> **Example 23 (Two steps of Gram-Schmidt in** $\mathbb{R}^3$) Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 = (1, 1, 0)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 = (1, 0, 1)$.
+> **Example 24 (Two steps of Gram-Schmidt in** $\mathbb{R}^3$) Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 = (1, 1, 0)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 = (1, 0, 1)$.
 >
 > - **Step 1.** $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}'_1 = (1, 1, 0)$, with norm $\sqrt{2}$, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1 = \tfrac{1}{\sqrt{2}}\,(1, 1, 0)$.
 >
@@ -1149,7 +1172,7 @@ Last modified: 2026-11-12 21:47:31 (PST)
 
 > **NOTE:**
 >
-> **Example 24 (Gram-Schmidt stops on dependent vectors)** Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 = (1, 2)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 = (2, 4)$. Step 1 gives $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1 = \tfrac{1}{\sqrt{5}}\,(1, 2)$. In step 2,
+> **Example 25 (Gram-Schmidt stops on dependent vectors)** Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 = (1, 2)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 = (2, 4)$. Step 1 gives $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1 = \tfrac{1}{\sqrt{5}}\,(1, 2)$. In step 2,
 >
 > $$\begin{aligned}
 > \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1 \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 &= \tfrac{1}{\sqrt{5}}\,(2 + 8) \\
@@ -1169,12 +1192,12 @@ Last modified: 2026-11-12 21:47:31 (PST)
 
 > **NOTE:**
 >
-> **Theorem 11 (What Gram-Schmidt produces)** Run the Gram-Schmidt process ([Definition 15](#def-gram-schmidt)) on $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_k \in \mathbb{R}^p$.
+> **Theorem 11 (What Gram-Schmidt produces)** Run the Gram-Schmidt process ([Definition 16](#def-gram-schmidt)) on $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_k \in \mathbb{R}^p$.
 >
 > 1.  If it has produced $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_i$ without stopping, then $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_i$ are orthonormal and $\operatorname{span}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_i\right\}\mathclose{}
 >     = \operatorname{span}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_i\right\}\mathclose{}$.
 > 2.  If it reaches step $i$ (that is, it did not stop at steps $1, \ldots, i - 1$), it stops there exactly when $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_i \in \operatorname{span}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_{i-1}\right\}\mathclose{}$.
-> 3.  It completes all $k$ steps exactly when $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_k$ are linearly independent; then $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_k$ is an orthonormal basis of $\operatorname{span}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_k\right\}\mathclose{}$ ([Definition 14](#def-orthonormal-basis)).
+> 3.  It completes all $k$ steps exactly when $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_k$ are linearly independent; then $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_k$ is an orthonormal basis of $\operatorname{span}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_k\right\}\mathclose{}$ ([Definition 15](#def-orthonormal-basis)).
 
 > **NOTE:**
 >
@@ -1192,7 +1215,7 @@ Last modified: 2026-11-12 21:47:31 (PST)
 > $$\begin{aligned}
 > \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_l \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}'_i
 > &= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_l \cdot \mathopen{}\left(1\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_i + \sum_{j=1}^{i-1} \mathopen{}\left(-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_j \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_i\right)\mathclose{}\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_j\right)\mathclose{}
-> && \text{(}\href{#def-gram-schmidt}{\text{Definition~15}}\text{, as a linear combination)}
+> && \text{(}\href{#def-gram-schmidt}{\text{Definition~16}}\text{, as a linear combination)}
 > \\
 > &= 1\,(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_l \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_i) + \sum_{j=1}^{i-1} \mathopen{}\left(-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_j \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_i\right)\mathclose{}\,(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_l \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_j)
 > && \text{(}\href{#thm-dot-linear-sum}{\text{Theorem~8}}\text{)}
@@ -1232,7 +1255,7 @@ Last modified: 2026-11-12 21:47:31 (PST)
 
 > **NOTE:**
 >
-> **Example 25 (Finishing an orthonormal basis of** $\mathbb{R}^3$) Continue [Example 23](#exm-gram-schmidt) with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_3 = (0, 1, 1)$. $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1 \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_3 = \tfrac{1}{\sqrt{2}}$ and
+> **Example 26 (Finishing an orthonormal basis of** $\mathbb{R}^3$) Continue [Example 24](#exm-gram-schmidt) with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_3 = (0, 1, 1)$. $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1 \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_3 = \tfrac{1}{\sqrt{2}}$ and
 >
 > $$\begin{aligned}
 > \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_2 \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_3 &= \tfrac{1}{\sqrt{6}}\,(0 - 1 + 2) \\
@@ -1272,7 +1295,7 @@ Last modified: 2026-11-12 21:47:31 (PST)
 
 > **NOTE:**
 >
-> **Corollary 4 (Every subspace has an orthonormal basis)** Let $\mathcal{S}$ be a subspace of $\mathbb{R}^p$. Every orthonormal list of vectors in $\mathcal{S}$ extends to an orthonormal basis of $\mathcal{S}$ ([Definition 14](#def-orthonormal-basis)). Starting from the empty list shows that $\mathcal{S}$ has an orthonormal basis.
+> **Corollary 4 (Every subspace has an orthonormal basis)** Let $\mathcal{S}$ be a subspace of $\mathbb{R}^p$. Every orthonormal list of vectors in $\mathcal{S}$ extends to an orthonormal basis of $\mathcal{S}$ ([Definition 15](#def-orthonormal-basis)). Starting from the empty list shows that $\mathcal{S}$ has an orthonormal basis.
 
 > **NOTE:**
 >
@@ -1296,7 +1319,7 @@ Last modified: 2026-11-12 21:47:31 (PST)
 
 > **NOTE:**
 >
-> **Example 26 (Extending one unit vector to an orthonormal basis of** $\mathbb{R}^3$) Start from the unit vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_1 = \tfrac{1}{\sqrt{2}}\,(1, 1, 0)$. Extend it to a basis of $\mathbb{R}^3$ as in [Example 18 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-extend-basis), starting from the empty list: $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_1$ is not in the span of the empty list, $\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}$, because $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_1\right\rVert\mathclose{} = 1$; $(1, 0, 0)$ is not in $\operatorname{span}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_1\right\}\mathclose{}$, because every multiple of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_1$ has equal first and second entries, and $(0, 0, 1)$ is not in $\operatorname{span}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_1, (1, 0, 0)\right\}\mathclose{}$, because every combination of those two vectors has third entry $0$. So $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_1, (1, 0, 0), (0, 0, 1)$ are linearly independent ([Theorem 8 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-add-outside-span)), and three linearly independent vectors in $\mathbb{R}^3$ are a basis of it (they are a basis of their span, which has dimension $3$ ([Definition 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)) and so is $\mathbb{R}^3$ ([Theorem 11 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-subspace-equal-dim), [Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension))). Gram-Schmidt on $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_1, (1, 0, 0), (0, 0, 1)$:
+> **Example 27 (Extending one unit vector to an orthonormal basis of** $\mathbb{R}^3$) Start from the unit vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_1 = \tfrac{1}{\sqrt{2}}\,(1, 1, 0)$. Extend it to a basis of $\mathbb{R}^3$ as in [Example 18 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-extend-basis), starting from the empty list: $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_1$ is not in the span of the empty list, $\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}$, because $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_1\right\rVert\mathclose{} = 1$; $(1, 0, 0)$ is not in $\operatorname{span}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_1\right\}\mathclose{}$, because every multiple of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_1$ has equal first and second entries, and $(0, 0, 1)$ is not in $\operatorname{span}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_1, (1, 0, 0)\right\}\mathclose{}$, because every combination of those two vectors has third entry $0$. So $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_1, (1, 0, 0), (0, 0, 1)$ are linearly independent ([Theorem 8 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-add-outside-span)), and three linearly independent vectors in $\mathbb{R}^3$ are a basis of it (they are a basis of their span, which has dimension $3$ ([Definition 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)) and so is $\mathbb{R}^3$ ([Theorem 11 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-subspace-equal-dim), [Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension))). Gram-Schmidt on $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_1, (1, 0, 0), (0, 0, 1)$:
 >
 > 1.  $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1 = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_1$.
 >
@@ -1311,13 +1334,13 @@ Last modified: 2026-11-12 21:47:31 (PST)
 >
 > 3.  $(0, 0, 1)$ is orthogonal to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_2$, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}'_3 = (0, 0, 1)$, which already has norm $1$, and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_3 = (0, 0, 1)$.
 >
-> The result is the orthonormal basis of [Example 20](#exm-orthonormal-basis), in a different order.
+> The result is the orthonormal basis of [Example 21](#exm-orthonormal-basis), in a different order.
 
 # 4 Outer product
 
 > **NOTE:**
 >
-> **Definition 16 (Outer product)** The **outer product** [\[14\]](#ref-wikipedia_outer_product) of a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ of length $m$ and a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ of length $n$ is the $m \times n$ matrix product ([Definition 10 in Matrices](linear-algebra-matrices.llms.md#def-matrix-mult)) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}$ of the column vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ with the row vector ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}$. Its entries are
+> **Definition 17 (Outer product)** The **outer product** [\[14\]](#ref-wikipedia_outer_product) of a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ of length $m$ and a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ of length $n$ is the $m \times n$ matrix product ([Definition 10 in Matrices](linear-algebra-matrices.llms.md#def-matrix-mult)) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}$ of the column vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ with the row vector ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}$. Its entries are
 >
 > $$\mathopen{}\left(\underbrace{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}_{m \times 1}\,\underbrace{{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}}_{1 \times n}\right)\mathclose{}_{ij}
 > = u_i v_j
@@ -1325,7 +1348,7 @@ Last modified: 2026-11-12 21:47:31 (PST)
 
 > **NOTE:**
 >
-> **Example 27 (An outer product)** For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = (1, 2, 3)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (4, 5)$:
+> **Example 28 (An outer product)** For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = (1, 2, 3)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (4, 5)$:
 >
 > $$\begin{aligned}
 > \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}
@@ -1352,7 +1375,7 @@ Last modified: 2026-11-12 21:47:31 (PST)
 >
 > *Remark 6* (Outer product and dot product). The dot product ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ ([Example 8 in Matrices](linear-algebra-matrices.llms.md#exm-dot-product-matmul)) needs two vectors of the same length and gives a number. The outer product $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}$ takes vectors of any two lengths and gives a matrix [\[3, Ch. 1\]](#ref-banerjee2014linear), p. 11.
 >
-> For example, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = (1, 2, 3)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (4, 5)$ in [Example 27](#exm-outer-product) have different lengths, so they have no dot product, but their outer product is a $3 \times 2$ matrix. For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}} = (1, 2)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = (3, 4)$, which have the same length, both products exist:
+> For example, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = (1, 2, 3)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (4, 5)$ in [Example 28](#exm-outer-product) have different lengths, so they have no dot product, but their outer product is a $3 \times 2$ matrix. For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}} = (1, 2)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = (3, 4)$, which have the same length, both products exist:
 >
 > $$\begin{aligned}
 > {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}
@@ -1398,13 +1421,13 @@ Last modified: 2026-11-12 21:47:31 (PST)
 
 > **NOTE:**
 >
-> **Example 28 (The rank of an outer product)** In [Example 27](#exm-outer-product), the second column $(5, 10, 15)$ of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}$ is $\frac{5}{4}$ times the first column $(4, 8, 12)$, because the columns are $v_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = 4\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ and $v_2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = 5\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$. So the two columns are not linearly independent, and the $3 \times 2$ matrix has rank $1$.
+> **Example 29 (The rank of an outer product)** In [Example 28](#exm-outer-product), the second column $(5, 10, 15)$ of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}$ is $\frac{5}{4}$ times the first column $(4, 8, 12)$, because the columns are $v_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = 4\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ and $v_2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = 5\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$. So the two columns are not linearly independent, and the $3 \times 2$ matrix has rank $1$.
 
 # 5 Kronecker product
 
 > **NOTE:**
 >
-> **Definition 17 (Kronecker product)** The **Kronecker product** of an $m \times n$ [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{A}$ and a $p \times q$ matrix $\mathbf{B}$ is the $mp \times nq$ [block matrix](linear-algebra-diagonalization.llms.md#def-block-matrix) whose block in row $i$ and column $j$ is $a_{ij} \mathbf{B}$, where $a_{ij}$ is the $(i, j)$ entry of $\mathbf{A}$:
+> **Definition 18 (Kronecker product)** The **Kronecker product** of an $m \times n$ [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{A}$ and a $p \times q$ matrix $\mathbf{B}$ is the $mp \times nq$ [block matrix](linear-algebra-diagonalization.llms.md#def-block-matrix) whose block in row $i$ and column $j$ is $a_{ij} \mathbf{B}$, where $a_{ij}$ is the $(i, j)$ entry of $\mathbf{A}$:
 >
 > $$\mathbf{A} \otimes \mathbf{B}
 > = \begin{bmatrix}
@@ -1415,7 +1438,7 @@ Last modified: 2026-11-12 21:47:31 (PST)
 
 > **NOTE:**
 >
-> **Example 29 (A Kronecker product)** For $\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$ and $\mathbf{B} = \begin{bmatrix} 0 & 1 \end{bmatrix}$:
+> **Example 30 (A Kronecker product)** For $\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$ and $\mathbf{B} = \begin{bmatrix} 0 & 1 \end{bmatrix}$:
 >
 > $$\begin{aligned}
 > \mathbf{A} \otimes \mathbf{B}
@@ -1437,7 +1460,7 @@ Last modified: 2026-11-12 21:47:31 (PST)
 
 > **NOTE:**
 >
-> **Definition 18 (Cauchy sequence)** A [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) $(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n)$ of vectors in a [real inner product space](linear-algebra-inner-products.llms.md#def-inner-product-space) $V$ is a **Cauchy sequence** [\[15\]](#ref-wikipedia_cauchy_sequence) if for every $\varepsilon> 0$ there is a [natural number](https://morrison-lab.github.io/mcs/number-systems.html#def-natural-numbers) $N$ such that
+> **Definition 19 (Cauchy sequence)** A [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) $(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n)$ of vectors in a [real inner product space](linear-algebra-inner-products.llms.md#def-inner-product-space) $V$ is a **Cauchy sequence** [\[15\]](#ref-wikipedia_cauchy_sequence) if for every $\varepsilon> 0$ there is a [natural number](https://morrison-lab.github.io/mcs/number-systems.html#def-natural-numbers) $N$ such that
 >
 > $$\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_m - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n\right\rVert\mathclose{} < \varepsilon\quad \text{for all } m, n \ge N,$$
 >
@@ -1445,25 +1468,25 @@ Last modified: 2026-11-12 21:47:31 (PST)
 
 > **NOTE:**
 >
-> **Example 30 (A Cauchy sequence of real numbers)** The [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $\mathbb{R}$ with the [inner product](linear-algebra-inner-products.llms.md#def-inner-product) ${\mathopen{}\left\langle x, y\right\rangle\mathclose{}} = x\,y$ form an [inner product space](linear-algebra-inner-products.llms.md#def-inner-product-space), and $\mathopen{}\left\lVert x\right\rVert\mathclose{} = \mathopen{}\left|x\right|\mathclose{}$ in it. The [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) $x_n = \frac{1}{n}$ is a [Cauchy sequence](#def-cauchy-sequence). Given $\varepsilon> 0$, take $N$ to be any [natural number](https://morrison-lab.github.io/mcs/number-systems.html#def-natural-numbers) larger than $\frac{1}{\varepsilon}$. [For all](https://morrison-lab.github.io/mcs/proof-writing.html#def-universal-quantifier) $m, n \ge N$, both $\frac{1}{m}$ and $\frac{1}{n}$ lie in $(0, \frac{1}{N}]$, so $\mathopen{}\left|\frac{1}{m} - \frac{1}{n}\right|\mathclose{} < \frac{1}{N} < \varepsilon$. For example, with $\varepsilon= 0.01$, take $N = 101$: all $m, n \ge 101$ have $\mathopen{}\left|\frac{1}{m} - \frac{1}{n}\right|\mathclose{} < \frac{1}{101} < 0.01$.
+> **Example 31 (A Cauchy sequence of real numbers)** The [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $\mathbb{R}$ with the [inner product](linear-algebra-inner-products.llms.md#def-inner-product) ${\mathopen{}\left\langle x, y\right\rangle\mathclose{}} = x\,y$ form an [inner product space](linear-algebra-inner-products.llms.md#def-inner-product-space), and $\mathopen{}\left\lVert x\right\rVert\mathclose{} = \mathopen{}\left|x\right|\mathclose{}$ in it. The [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) $x_n = \frac{1}{n}$ is a [Cauchy sequence](#def-cauchy-sequence). Given $\varepsilon> 0$, take $N$ to be any [natural number](https://morrison-lab.github.io/mcs/number-systems.html#def-natural-numbers) larger than $\frac{1}{\varepsilon}$. [For all](https://morrison-lab.github.io/mcs/proof-writing.html#def-universal-quantifier) $m, n \ge N$, both $\frac{1}{m}$ and $\frac{1}{n}$ lie in $(0, \frac{1}{N}]$, so $\mathopen{}\left|\frac{1}{m} - \frac{1}{n}\right|\mathclose{} < \frac{1}{N} < \varepsilon$. For example, with $\varepsilon= 0.01$, take $N = 101$: all $m, n \ge 101$ have $\mathopen{}\left|\frac{1}{m} - \frac{1}{n}\right|\mathclose{} < \frac{1}{101} < 0.01$.
 
 > **NOTE:**
 >
-> **Definition 19 (Complete inner product space)** A [real inner product space](linear-algebra-inner-products.llms.md#def-inner-product-space) $V$ is **complete** [\[16\]](#ref-wikipedia_complete_metric_space) if for every [Cauchy sequence](#def-cauchy-sequence) $(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n)$ in $V$ there is a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in V$ such that for every $\varepsilon> 0$ there is a [natural number](https://morrison-lab.github.io/mcs/number-systems.html#def-natural-numbers) $N$ with
+> **Definition 20 (Complete inner product space)** A [real inner product space](linear-algebra-inner-products.llms.md#def-inner-product-space) $V$ is **complete** [\[16\]](#ref-wikipedia_complete_metric_space) if for every [Cauchy sequence](#def-cauchy-sequence) $(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n)$ in $V$ there is a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in V$ such that for every $\varepsilon> 0$ there is a [natural number](https://morrison-lab.github.io/mcs/number-systems.html#def-natural-numbers) $N$ with
 >
 > $$\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rVert\mathclose{} < \varepsilon\quad \text{for every } n \ge N.$$
 
 > **NOTE:**
 >
-> **Example 31 (Polynomials are not complete)** Let $V$ be the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of [polynomials](algebra-exponentials.llms.md#def-polynomial) on $[0, 1]$, with the [inner product](linear-algebra-inner-products.llms.md#def-inner-product) ${\mathopen{}\left\langle f, g\right\rangle\mathclose{}} = \int_0^1 f(t)\,g(t)\,dt$. The [partial sums](algebra-exponentials.llms.md#def-partial-sum) $p_n(t) = \sum_{k=0}^{n} \frac{t^k}{k!}$ are a [Cauchy sequence](#def-cauchy-sequence) in $V$, because they [converge](algebra-exponentials.llms.md#def-convergent-sequence) uniformly on $[0, 1]$ to $\text{e}^{t}$. The only candidate for a [limit](algebra-exponentials.llms.md#def-sequence-limit) is $\text{e}^{t}$, which is not a [polynomial](algebra-exponentials.llms.md#def-polynomial), so no polynomial $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in V$ satisfies the condition of [Definition 19](#def-complete-inner-product-space), and $V$ is not [complete](#def-complete-inner-product-space).
+> **Example 32 (Polynomials are not complete)** Let $V$ be the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of [polynomials](algebra-exponentials.llms.md#def-polynomial) on $[0, 1]$, with the [inner product](linear-algebra-inner-products.llms.md#def-inner-product) ${\mathopen{}\left\langle f, g\right\rangle\mathclose{}} = \int_0^1 f(t)\,g(t)\,dt$. The [partial sums](algebra-exponentials.llms.md#def-partial-sum) $p_n(t) = \sum_{k=0}^{n} \frac{t^k}{k!}$ are a [Cauchy sequence](#def-cauchy-sequence) in $V$, because they [converge](algebra-exponentials.llms.md#def-convergent-sequence) uniformly on $[0, 1]$ to $\text{e}^{t}$. The only candidate for a [limit](algebra-exponentials.llms.md#def-sequence-limit) is $\text{e}^{t}$, which is not a [polynomial](algebra-exponentials.llms.md#def-polynomial), so no polynomial $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in V$ satisfies the condition of [Definition 20](#def-complete-inner-product-space), and $V$ is not [complete](#def-complete-inner-product-space).
 
 > **NOTE:**
 >
-> **Definition 20 (Hilbert space)** A **Hilbert space** [\[17\]](#ref-wikipedia_hilbert_space) is a [complete](#def-complete-inner-product-space) [real inner product space](linear-algebra-inner-products.llms.md#def-inner-product-space) [\[3, Sec. 16.8\]](#ref-banerjee2014linear), Definition 16.8, p. 547.
+> **Definition 21 (Hilbert space)** A **Hilbert space** [\[17\]](#ref-wikipedia_hilbert_space) is a [complete](#def-complete-inner-product-space) [real inner product space](linear-algebra-inner-products.llms.md#def-inner-product-space) [\[3, Sec. 16.8\]](#ref-banerjee2014linear), Definition 16.8, p. 547.
 
 > **NOTE:**
 >
-> **Example 32 (Real coordinate space is a Hilbert space)** The Euclidean [space](linear-algebra-vectors.llms.md#def-real-coordinate-space) $\mathbb{R}^2$ with the [dot product](linear-algebra-vectors.llms.md#def-dot-product) ([Example 2](#exm-inner-product-space)) is a [Hilbert space](#def-hilbert-space). Let $(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n)$ with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n = (x_{n,1}, x_{n,2})$ be a [Cauchy sequence](#def-cauchy-sequence) in it. Each coordinate [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) is a Cauchy sequence of [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers), because $\mathopen{}\left|x_{m,j} - x_{n,j}\right|\mathclose{} \le \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_m - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n\right\rVert\mathclose{}$ for $j = 1, 2$. Each coordinate sequence then [converges](algebra-exponentials.llms.md#def-convergent-sequence) to a [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $y_j$, because every Cauchy sequence of real numbers converges [\[16\]](#ref-wikipedia_complete_metric_space), and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (y_1, y_2)$ satisfies the condition of [Definition 19](#def-complete-inner-product-space). For example, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n = (\frac{1}{n}, 1 + \frac{1}{n})$ is a Cauchy sequence with [limit](algebra-exponentials.llms.md#def-sequence-limit) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (0, 1)$.
+> **Example 33 (Real coordinate space is a Hilbert space)** The Euclidean [space](linear-algebra-vectors.llms.md#def-real-coordinate-space) $\mathbb{R}^2$ with the [dot product](linear-algebra-vectors.llms.md#def-dot-product) ([Example 2](#exm-inner-product-space)) is a [Hilbert space](#def-hilbert-space). Let $(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n)$ with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n = (x_{n,1}, x_{n,2})$ be a [Cauchy sequence](#def-cauchy-sequence) in it. Each coordinate [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) is a Cauchy sequence of [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers), because $\mathopen{}\left|x_{m,j} - x_{n,j}\right|\mathclose{} \le \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_m - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n\right\rVert\mathclose{}$ for $j = 1, 2$. Each coordinate sequence then [converges](algebra-exponentials.llms.md#def-convergent-sequence) to a [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $y_j$, because every Cauchy sequence of real numbers converges [\[16\]](#ref-wikipedia_complete_metric_space), and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (y_1, y_2)$ satisfies the condition of [Definition 20](#def-complete-inner-product-space). For example, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n = (\frac{1}{n}, 1 + \frac{1}{n})$ is a Cauchy sequence with [limit](algebra-exponentials.llms.md#def-sequence-limit) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (0, 1)$.
 
 # Definitions on this page
 
@@ -1475,18 +1498,19 @@ Last modified: 2026-11-12 21:47:31 (PST)
 - [Definition 6 (Inner product space)](#def-inner-product-space)
 - [Definition 7 (Orthogonality in an inner product space)](#def-orthogonal-inner-product)
 - [Definition 8 (Norm (normed vector space, normed space))](#def-norm)
-- [Definition 9 (Vector](#def-vector-p-norm) $p$-norm ($\ell_p$ norm, $\ell_1$ norm, taxicab norm, Manhattan norm, $\ell_2$ norm, infinity norm))
-- [Definition 10 (Infinity norm (](#def-infinity-norm)$\ell_\infty$ norm, maximum norm, Chebyshev norm))
-- [Definition 11 (Cosine similarity)](#def-cosine-similarity)
-- [Definition 12 (Angle between two vectors)](#def-angle)
-- [Definition 13 (Cosine similarity in an inner product space)](#def-cosine-similarity-inner-product-space)
-- [Definition 14 (Orthonormal basis)](#def-orthonormal-basis)
-- [Definition 15 (Gram-Schmidt process)](#def-gram-schmidt)
-- [Definition 16 (Outer product)](#def-outer-product)
-- [Definition 17 (Kronecker product)](#def-kronecker-product)
-- [Definition 18 (Cauchy sequence)](#def-cauchy-sequence)
-- [Definition 19 (Complete inner product space)](#def-complete-inner-product-space)
-- [Definition 20 (Hilbert space)](#def-hilbert-space)
+- [Definition 9 (Induced norm (norm induced by an inner product))](#def-induced-norm)
+- [Definition 10 (Vector](#def-vector-p-norm) $p$-norm ($\ell_p$ norm, $\ell_1$ norm, taxicab norm, Manhattan norm, $\ell_2$ norm, infinity norm))
+- [Definition 11 (Infinity norm (](#def-infinity-norm)$\ell_\infty$ norm, maximum norm, Chebyshev norm))
+- [Definition 12 (Cosine similarity)](#def-cosine-similarity)
+- [Definition 13 (Angle between two vectors)](#def-angle)
+- [Definition 14 (Cosine similarity in an inner product space)](#def-cosine-similarity-inner-product-space)
+- [Definition 15 (Orthonormal basis)](#def-orthonormal-basis)
+- [Definition 16 (Gram-Schmidt process)](#def-gram-schmidt)
+- [Definition 17 (Outer product)](#def-outer-product)
+- [Definition 18 (Kronecker product)](#def-kronecker-product)
+- [Definition 19 (Cauchy sequence)](#def-cauchy-sequence)
+- [Definition 20 (Complete inner product space)](#def-complete-inner-product-space)
+- [Definition 21 (Hilbert space)](#def-hilbert-space)
 
 Back to top
 

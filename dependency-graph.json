@@ -3005,6 +3005,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra-inner-products#def-induced-norm",
+   "site": "mds",
+   "page": "linear-algebra-inner-products",
+   "div": "def-induced-norm",
+   "kind": "def",
+   "title": "Induced norm (norm induced by an inner product)",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra-inner-products#def-infinity-norm",
    "site": "mds",
    "page": "linear-algebra-inner-products",
@@ -8229,6 +8238,10 @@
   ],
   [
    "mds/linear-algebra-inner-products#def-cosine-similarity-inner-product-space",
+   "mds/linear-algebra-inner-products#def-induced-norm"
+  ],
+  [
+   "mds/linear-algebra-inner-products#def-cosine-similarity-inner-product-space",
    "mds/linear-algebra-inner-products#def-inner-product-space"
   ],
   [
@@ -8237,6 +8250,18 @@
   ],
   [
    "mds/linear-algebra-inner-products#def-hilbert-space",
+   "mds/linear-algebra-inner-products#def-inner-product-space"
+  ],
+  [
+   "mds/linear-algebra-inner-products#def-induced-norm",
+   "mcs/functions#def-function"
+  ],
+  [
+   "mds/linear-algebra-inner-products#def-induced-norm",
+   "mds/linear-algebra-inner-products#def-inner-product"
+  ],
+  [
+   "mds/linear-algebra-inner-products#def-induced-norm",
    "mds/linear-algebra-inner-products#def-inner-product-space"
   ],
   [
