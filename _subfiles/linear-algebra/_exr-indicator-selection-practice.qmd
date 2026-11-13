@@ -1,0 +1,22 @@
+:::{#exr-indicator-selection-practice}
+#### Selecting one entry with an indicator vector
+
+@thm-indicator-selection turns reading one entry of a vector
+into a [dot product](#def-dot-product).
+Let
+
+$$
+\vx = \sbmat{5 \\ -1 \\ 8 \\ 2}.
+$$
+
+Find $\vecf{e}_3 \cdot \vx$,
+where $\vecf{e}_3$ is the [indicator vector](#def-indicator-vector) with $4$ entries.
+
+::: {.callout-tip}
+#### Hint
+
+Use @thm-indicator-selection with $j = 3$.
+
+:::
+
+:::

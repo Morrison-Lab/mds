@@ -1,0 +1,21 @@
+:::{#sol-row-space-practice}
+
+Here
+
+$$
+\tp{\matr{A}} = \sbmat{1 & 3 \\ 2 & 6}.
+$$
+
+Take $\vecf{u} = (1, 0)$.
+Then
+
+$$
+\tp{\matr{A}}\vecf{u}
+= \sbmat{1 \cd 1 + 3 \cd 0 \\ 2 \cd 1 + 6 \cd 0}
+= \sbmat{1 \\ 2}
+= \vecf{v},
+$$
+
+so $\vecf{v}$ is in the [row space](#def-row-space).
+
+:::
