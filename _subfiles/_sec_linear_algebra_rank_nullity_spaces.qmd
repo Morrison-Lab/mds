@@ -130,6 +130,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_exm-null-gram.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_exr-null-gram-practice.qmd >}}
 
 {{< slidebreak >}}

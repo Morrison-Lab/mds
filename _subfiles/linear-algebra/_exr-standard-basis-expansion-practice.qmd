@@ -1,0 +1,24 @@
+:::{#exr-standard-basis-expansion-practice}
+#### Writing a vector as a linear combination of indicator vectors
+
+By @thm-standard-basis-expansion,
+every vector in $\reals^3$ is a [linear combination](#def-linear-combination)
+of the [indicator vectors](#def-indicator-vector) $\vecf{e}_1$, $\vecf{e}_2$ and $\vecf{e}_3$.
+Let
+
+$$
+\vx = \sbmat{-3 \\ 0 \\ 6}.
+$$
+
+Find the numbers $c_1$, $c_2$ and $c_3$
+with $\vx = c_1 \vecf{e}_1 + c_2 \vecf{e}_2 + c_3 \vecf{e}_3$.
+
+::: {.callout-tip}
+#### Hint
+
+Use @thm-standard-basis-expansion,
+as in @exm-standard-basis-expansion.
+
+:::
+
+:::

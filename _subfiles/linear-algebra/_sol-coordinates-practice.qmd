@@ -1,0 +1,12 @@
+:::{#sol-coordinates-practice}
+
+The [coordinates](#def-coordinates) of $\vecf{x}$ are $2$ and $3$.
+Entry by entry,
+$c_1 \vecf{a}_1 + c_2 \vecf{a}_2 = \tp{(2 c_1 + c_2,\ c_2)}$.
+The second entry gives $c_2 = 3$,
+and then the first gives $2 c_1 + 3 = 7$,
+so $c_1 = 2$.
+As a check,
+$2 \tp{(2, 0)} + 3 \tp{(1, 1)} = \tp{(7, 3)}$.
+
+:::

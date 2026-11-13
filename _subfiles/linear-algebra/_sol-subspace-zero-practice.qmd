@@ -1,0 +1,10 @@
+:::{#sol-subspace-zero-practice}
+
+No.
+The [zero vector](linear-algebra-vectors.qmd#def-zero-vector) $\tp{(0, 0)}$ is not in $\mathcal{P}$,
+because $0 + 0 = 0 \neq 1$.
+By @thm-subspace-zero,
+every [subspace](#def-subspace) contains $\vzero$,
+so $\mathcal{P}$ is not a subspace.
+
+:::

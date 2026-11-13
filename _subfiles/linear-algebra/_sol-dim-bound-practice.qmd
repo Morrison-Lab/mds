@@ -1,0 +1,8 @@
+:::{#sol-dim-bound-practice}
+
+No.
+By part 1 of @thm-dim-bound,
+a [linearly independent](#def-linearly-independent) list of vectors in $\mathcal{S}$ has at most $\dim(\mathcal{S}) = 3$ vectors,
+so it cannot have $4$.
+
+:::

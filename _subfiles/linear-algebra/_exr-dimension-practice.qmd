@@ -1,0 +1,22 @@
+:::{#exr-dimension-practice}
+#### Finding the dimension of a span that includes a multiple
+
+The [dimension](#def-dimension) of a [span](#def-span) can be smaller than the number of vectors that span it,
+for example when one vector is a multiple of another.
+Let
+
+$$
+\mathcal{S} = \operatorname{span}\cb{\tp{(1, 2, 0)},\ \tp{(2, 4, 0)},\ \tp{(0, 0, 1)}}.
+$$
+
+Find $\dim(\mathcal{S})$.
+
+::: {.callout-tip}
+#### Hint
+
+Look for a vector in the list that is a multiple of another,
+then check that the rest are [linearly independent](#def-linearly-independent).
+
+:::
+
+:::
