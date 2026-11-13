@@ -361,7 +361,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-12 12:56:42 (PST)</p>
+  <p class="date">Last modified: 2026-11-12 17:37:59 (PST)</p>
 </section><section class="slide level2"><p><span id="vectors"></span></p>
 </section><section class="slide level2 scrollable"><div id="exr-list-as-vector" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 1 (Store a data point as one object)</strong></span> A house has a floor area of <span class="math inline">\(120\)</span> square meters, <span class="math inline">\(3\)</span> bedrooms, and an age of <span class="math inline">\(15\)</span> years.</p>
@@ -534,6 +534,33 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </section><section class="slide level2"><div id="sol-real-valued-practice" class="proof solution">
 <p><span class="proof-title"><em>Solution 5</em>. </span>Yes. For every <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^3\)</span>, <span class="math inline">\(2 x_1 + 5 x_2 - x_3\)</span> is one <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers">real number</a>, so <span class="math inline">\(f : \mathbb{R}^3 \to \mathbb{R}\)</span> is <a href="#/def-real-vector-valued">real-valued</a>. For example, <span class="math inline">\(f\mathopen{}\left(\begin{bmatrix}1 \\ 1 \\ 1\end{bmatrix}\right)\mathclose{} = 2 + 5 - 1 = 6\)</span>.</p>
 </div>
+</section><section class="slide level2"><div id="exr-vector-valued-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 6 (Evaluating a vector-valued function at one input)</strong></span> A <a href="#/def-vector-valued">vector-valued function</a> returns several numbers for one input. Let <span class="math inline">\(g : \mathbb{R}^2 \to \mathbb{R}^3\)</span> be</p>
+<p><span class="math display">\[
+g(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \begin{bmatrix}x_1 + x_2 \\ x_1 x_2 \\ x_1 - x_2\end{bmatrix}.
+\]</span></p>
+<p>Find <span class="math inline">\(g\mathopen{}\left(\begin{bmatrix}2 \\ 3\end{bmatrix}\right)\mathclose{}\)</span>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Substitute <span class="math inline">\(x_1 = 2\)</span> and <span class="math inline">\(x_2 = 3\)</span> into each entry, as in <a href="#/exm-real-vector-valued" class="quarto-xref">Example&nbsp;2</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide level2"><div id="sol-vector-valued-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 6</em>. </span>Substituting <span class="math inline">\(x_1 = 2\)</span> and <span class="math inline">\(x_2 = 3\)</span>,</p>
+<p><span class="math display">\[
+g\mathopen{}\left(\begin{bmatrix}2 \\ 3\end{bmatrix}\right)\mathclose{} = \begin{bmatrix}2 + 3 \\ 2 \cdot 3 \\ 2 - 3\end{bmatrix} = \begin{bmatrix}5 \\ 6 \\ -1\end{bmatrix},
+\]</span></p>
+<p>a <a href="#/def-column-vector">column vector</a> in <span class="math inline">\(\mathbb{R}^3\)</span>.</p>
+</div>
 </section><section class="slide level2"><div id="def-transpose" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 6 (Transpose)</strong></span> The <strong>transpose</strong> of a column vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is the row vector with the same <a href="https://morrison-lab.github.io/mcs/functions.html#def-sequence">sequence</a> of entries, written horizontally:</p>
 <p><span class="math display">\[
@@ -545,6 +572,32 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <p><span class="math display">\[
 {\begin{bmatrix} 2 \\ -1 \\ 5 \end{bmatrix}}^{\top}
 = [2,\; -1,\; 5].
+\]</span></p>
+</div>
+</section><section class="slide level2"><div id="exr-transpose-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 7 (Writing one observation as a row vector)</strong></span> A data table stores each observation on its own line, so an observation held as a <a href="#/def-column-vector">column vector</a> is written in the table as its <a href="#/def-transpose">transpose</a>. Let</p>
+<p><span class="math display">\[
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix}4 \\ -1 \\ 0\end{bmatrix}.
+\]</span></p>
+<p>Find <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\)</span>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>By <a href="#/def-transpose" class="quarto-xref">Definition&nbsp;6</a>, keep the entries in the same order and write them horizontally.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide level2"><div id="sol-transpose-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 7</em>. </span>By <a href="#/def-transpose" class="quarto-xref">Definition&nbsp;6</a>,</p>
+<p><span class="math display">\[
+{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} = [4,\; -1,\; 0].
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="def-vector-addition" class="theorem definition">
@@ -562,6 +615,35 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 &amp;=
 \begin{bmatrix} 5 \\ 7 \\ 9 \end{bmatrix}
 \end{aligned}
+\]</span></p>
+</div>
+</section><section class="slide level2"><div id="exr-vector-addition-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 8 (Adding two months of sales for three items)</strong></span> A shop records how many units of each of three items it sells in a month, as a <a href="#/def-column-vector">column vector</a> in <span class="math inline">\(\mathbb{R}^3\)</span>. In two months it sells</p>
+<p><span class="math display">\[
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix}12 \\ 5 \\ 8\end{bmatrix}
+\quad \text{and} \quad
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= \begin{bmatrix}10 \\ 7 \\ 3\end{bmatrix}
+\]</span></p>
+<p>units.</p>
+<p>Find <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span>, the units of each item sold over both months.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Use <a href="#/def-vector-addition" class="quarto-xref">Definition&nbsp;7</a>, as in <a href="#/exm-vector-addition" class="quarto-xref">Example&nbsp;4</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide level2"><div id="sol-vector-addition-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 8</em>. </span>By <a href="#/def-vector-addition" class="quarto-xref">Definition&nbsp;7</a>,</p>
+<p><span class="math display">\[
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= \begin{bmatrix}12 + 10 \\ 5 + 7 \\ 8 + 3\end{bmatrix} = \begin{bmatrix}22 \\ 12 \\ 11\end{bmatrix}.
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="def-dot-product" class="theorem definition">
@@ -709,6 +791,33 @@ w_i \ge 0 \text{ for each } i
 \end{aligned}
 \]</span></p>
 </div>
+</section><section class="slide level2"><div id="exr-zero-vector-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 9 (Picking the zero vector with three entries from three candidates)</strong></span> A <a href="#/def-zero-vector">zero vector</a> has a number of entries as well as zero entries, so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\in \mathbb{R}^2\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\in \mathbb{R}^3\)</span> are different vectors. Consider three candidates:</p>
+<p><span class="math display">\[
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}} = \begin{bmatrix}0 \\ 0\end{bmatrix},
+\qquad
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \begin{bmatrix}0 \\ 0 \\ 0\end{bmatrix},
+\qquad
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} = \begin{bmatrix}0 \\ 1 \\ 0\end{bmatrix}.
+\]</span></p>
+<p>Which of the three candidates is the zero vector with <span class="math inline">\(3\)</span> entries?</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p><a href="#/def-zero-vector" class="quarto-xref">Definition&nbsp;14</a> has two conditions: <span class="math inline">\(3\)</span> entries, and <span class="math inline">\(0\)</span> in every entry.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide level2"><div id="sol-zero-vector-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 9</em>. </span>Only <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>. <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}\)</span> has only <span class="math inline">\(2\)</span> entries, so it is the <a href="#/def-zero-vector">zero vector</a> in <span class="math inline">\(\mathbb{R}^2\)</span>, and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}\)</span> has a nonzero second entry.</p>
+</div>
 </section><section class="slide level2"><div id="def-mean" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 15 (Mean, average)</strong></span> The <strong>mean</strong> <span class="citation" data-cites="wikipedia_arithmetic_mean"><a href="#/references" role="doc-biblioref" onclick="">[5]</a></span> (or <strong>average</strong>) of <span class="math inline">\(n\)</span> numbers <span class="math inline">\(y_1, \ldots, y_n\)</span> is their <a href="./algebra-sums.html#def-summation">sum</a> divided by how many there are:</p>
 <p><span class="math display">\[\bar{y} \stackrel{\text{def}}{=}\frac{1}{n}\sum_{i=1}^ny_i\]</span></p>
@@ -732,6 +841,30 @@ w_i \ge 0 \text{ for each } i
 </section><section class="slide level2"><div id="rem-mean-sample-mean" class="proof remark">
 <p><span class="proof-title"><em>Remark 6</em> (The sample mean estimates the population mean). </span>When the numbers are observed data values, <span class="math inline">\(\bar{y}\)</span> is also called the sample mean, an estimator of the <a href="https://morrison-lab.github.io/pds/expectation.html#def-expectation">population mean</a>.</p>
 </div>
+</section><section class="slide level2"><div id="exr-mean-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 10 (Finding the mean age of four siblings)</strong></span> Four siblings are <span class="math inline">\(3\)</span>, <span class="math inline">\(7\)</span>, <span class="math inline">\(10\)</span> and <span class="math inline">\(12\)</span> years old.</p>
+<p>Find the <a href="#/def-mean">mean</a> of their ages.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Use <a href="#/def-mean" class="quarto-xref">Definition&nbsp;15</a> with <span class="math inline">\(n = 4\)</span>, as in <a href="#/exm-mean" class="quarto-xref">Example&nbsp;10</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide level2"><div id="sol-mean-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 10</em>. </span>By <a href="#/def-mean" class="quarto-xref">Definition&nbsp;15</a> with <span class="math inline">\(n = 4\)</span>,</p>
+<p><span class="math display">\[
+\bar{y} = \frac{1}{4}\,\mathopen{}\left(3 + 7 + 10 + 12\right)\mathclose{} = \frac{32}{4} = 8,
+\]</span></p>
+<p>so the <a href="#/def-mean">mean</a> age is <span class="math inline">\(8\)</span> years.</p>
+</div>
 </section><section class="slide level2"><div id="def-ones-vector" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 16 (Ones vector)</strong></span> The <strong>ones vector</strong> <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}}\)</span> of length <span class="math inline">\(p\)</span> has all entries equal to one:</p>
 <p><span class="math display">\[
@@ -742,6 +875,32 @@ w_i \ge 0 \text{ for each } i
 \vdots \\
 1
 \end{bmatrix}
+\]</span></p>
+</div>
+</section><section class="slide level2"><div id="exr-ones-vector-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 11 (Adding one to every entry with the ones vector)</strong></span> Adding the <a href="#/def-ones-vector">ones vector</a> to a vector raises every entry by <span class="math inline">\(1\)</span>, for example to shift a list of counts that start at <span class="math inline">\(0\)</span> so that they start at <span class="math inline">\(1\)</span>. Let</p>
+<p><span class="math display">\[
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix}2 \\ 0 \\ -1\end{bmatrix}.
+\]</span></p>
+<p>Find <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}}\)</span>, where <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}}\)</span> has <span class="math inline">\(3\)</span> entries.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Write out <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}}\)</span> with <a href="#/def-ones-vector" class="quarto-xref">Definition&nbsp;16</a>, then use <a href="#/def-vector-addition" class="quarto-xref">Definition&nbsp;7</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide level2"><div id="sol-ones-vector-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 11</em>. </span>By <a href="#/def-ones-vector" class="quarto-xref">Definition&nbsp;16</a>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}} = {(1, 1, 1)}^{\top}\)</span>, so by <a href="#/def-vector-addition" class="quarto-xref">Definition&nbsp;7</a></p>
+<p><span class="math display">\[
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}} = \begin{bmatrix}2 + 1 \\ 0 + 1 \\ -1 + 1\end{bmatrix} = \begin{bmatrix}3 \\ 1 \\ 0\end{bmatrix}.
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="def-sum-of-elements" class="theorem definition">
@@ -763,6 +922,33 @@ w_i \ge 0 \text{ for each } i
 &amp;&amp; \text{(add)}
 \end{aligned}
 \]</span></p>
+</div>
+</section><section class="slide level2"><div id="exr-sum-of-elements-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 12 (Totalling the units sold across three items)</strong></span> A shop sells <span class="math inline">\(22\)</span>, <span class="math inline">\(12\)</span> and <span class="math inline">\(11\)</span> units of three items over two months, stored as</p>
+<p><span class="math display">\[
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix}22 \\ 12 \\ 11\end{bmatrix}.
+\]</span></p>
+<p>Find <span class="math inline">\({s_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}}\)</span>, the <a href="#/def-sum-of-elements">sum of the elements</a> of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Use <a href="#/def-sum-of-elements" class="quarto-xref">Definition&nbsp;17</a> with <span class="math inline">\(p = 3\)</span>, as in <a href="#/exm-sum-of-elements" class="quarto-xref">Example&nbsp;11</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide level2"><div id="sol-sum-of-elements-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 12</em>. </span>By <a href="#/def-sum-of-elements" class="quarto-xref">Definition&nbsp;17</a>,</p>
+<p><span class="math display">\[
+{s_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}} = 22 + 12 + 11 = 45,
+\]</span></p>
+<p>so the shop sold <span class="math inline">\(45\)</span> units in all.</p>
 </div>
 </section><section class="slide level2"><div id="thm-sum-dot-ones" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 2 (The ones vector sums the entries)</strong></span> For every <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p\)</span>, the <a href="#/def-sum-of-elements">sum of the elements</a> of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is the <a href="#/def-dot-product">dot product</a> of the <a href="#/def-ones-vector">ones vector</a> with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>:</p>
@@ -799,6 +985,33 @@ w_i \ge 0 \text{ for each } i
 \]</span></p>
 <p>which is <span class="math inline">\({s_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}}\)</span>, as in <a href="#/exm-sum-of-elements" class="quarto-xref">Example&nbsp;11</a>. Dividing by <span class="math inline">\(p = 3\)</span> gives the <a href="#/def-mean">mean</a> of the entries, <span class="math inline">\(6 / 3 = 2\)</span>.</p>
 </div>
+</section><section class="slide level2"><div id="exr-sum-dot-ones-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 13 (Summing entries with a dot product against the ones vector)</strong></span> Software that computes <a href="#/def-dot-product">dot products</a> quickly can total the entries of a vector through <a href="#/thm-sum-dot-ones" class="quarto-xref">Theorem&nbsp;2</a>. Let</p>
+<p><span class="math display">\[
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix}4 \\ -2 \\ 7 \\ 1\end{bmatrix},
+\]</span></p>
+<p>and let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}}\)</span> be the <a href="#/def-ones-vector">ones vector</a> with <span class="math inline">\(4\)</span> entries.</p>
+<p>Find <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>By <a href="#/thm-sum-dot-ones" class="quarto-xref">Theorem&nbsp;2</a>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is the <a href="#/def-sum-of-elements">sum of the elements</a> of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide level2"><div id="sol-sum-dot-ones-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 13</em>. </span>By <a href="#/thm-sum-dot-ones" class="quarto-xref">Theorem&nbsp;2</a>,</p>
+<p><span class="math display">\[
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= {s_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}} = 4 + (-2) + 7 + 1 = 10.
+\]</span></p>
+</div>
 </section><section class="slide level2"><div id="def-indicator-vector" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 18 (Indicator vector, standard basis vector)</strong></span> The <span class="math inline">\(j\)</span>-th <strong>indicator vector</strong> (or <strong>standard basis vector</strong> <span class="citation" data-cites="wikipedia_standard_basis"><a href="#/references" role="doc-biblioref" onclick="">[6]</a></span> ) <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j\)</span> of length <span class="math inline">\(p\)</span> has a <span class="math inline">\(1\)</span> in position <span class="math inline">\(j\)</span> and <span class="math inline">\(0\)</span>s elsewhere:</p>
 <p><span class="math display">\[
@@ -824,6 +1037,29 @@ w_i \ge 0 \text{ for each } i
 </section><section class="slide level2"><div id="rem-indicator-vector-weighted-sums" class="proof remark">
 <p><span class="proof-title"><em>Remark 7</em> (Indicator vectors build every vector). </span>For <span class="math inline">\(p = 3\)</span>, the indicator vectors are <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1 = (1, 0, 0)\)</span>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2 = (0, 1, 0)\)</span>, and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3 = (0, 0, 1)\)</span>. Every vector of length <span class="math inline">\(3\)</span> is a weighted sum <span class="math inline">\(c_1\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1 + c_2\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2 + c_3\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3\)</span> of them, with weights equal to its entries; for example, <span class="math inline">\((2, -1, 5) = 2\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1 - 1\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2 + 5\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3\)</span>. No other weights work: entry <span class="math inline">\(j\)</span> of <span class="math inline">\(c_1\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1 + c_2\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2 + c_3\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3\)</span> is <span class="math inline">\(c_j\)</span>, so each weight <span class="math inline">\(c_j\)</span> must equal entry <span class="math inline">\(j\)</span> of the vector.</p>
 </div>
+</section><section class="slide level2"><div id="exr-indicator-vector-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 14 (Encoding the second of four categories as an indicator vector)</strong></span> One-hot encoding stores a value that falls in one of <span class="math inline">\(p\)</span> categories as the <a href="#/def-indicator-vector">indicator vector</a> of its category. A survey answer falls in the second of <span class="math inline">\(4\)</span> categories.</p>
+<p>Find <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2\)</span> with <span class="math inline">\(4\)</span> entries, the one-hot encoding of that answer.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>By <a href="#/def-indicator-vector" class="quarto-xref">Definition&nbsp;18</a>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2\)</span> has a <span class="math inline">\(1\)</span> in position <span class="math inline">\(2\)</span> and <span class="math inline">\(0\)</span>s elsewhere.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide level2"><div id="sol-indicator-vector-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 14</em>. </span>By <a href="#/def-indicator-vector" class="quarto-xref">Definition&nbsp;18</a> with <span class="math inline">\(j = 2\)</span> and <span class="math inline">\(p = 4\)</span>,</p>
+<p><span class="math display">\[
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2 = \begin{bmatrix}0 \\ 1 \\ 0 \\ 0\end{bmatrix}.
+\]</span></p>
+</div>
 </section><section class="slide level2"><div id="thm-indicator-selection" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 3 (Indicator vectors select entries)</strong></span> For any vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> of length <span class="math inline">\(p\)</span> and any <span class="math inline">\(j \in \{1, \ldots, p\}\)</span>:</p>
 <p><span class="math display">\[\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= x_j\]</span></p>
@@ -844,6 +1080,32 @@ w_i \ge 0 \text{ for each } i
 \\&amp;= x_j
 &amp;&amp; \text{(only the } i = j \text{ term is nonzero)}
 \end{aligned}
+\]</span></p>
+</div>
+</section><section class="slide level2"><div id="exr-indicator-selection-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 15 (Selecting one entry with an indicator vector)</strong></span> <a href="#/thm-indicator-selection" class="quarto-xref">Theorem&nbsp;3</a> turns reading one entry of a vector into a <a href="#/def-dot-product">dot product</a>. Let</p>
+<p><span class="math display">\[
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix}5 \\ -1 \\ 8 \\ 2\end{bmatrix}.
+\]</span></p>
+<p>Find <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3 \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>, where <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3\)</span> is the <a href="#/def-indicator-vector">indicator vector</a> with <span class="math inline">\(4\)</span> entries.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Use <a href="#/thm-indicator-selection" class="quarto-xref">Theorem&nbsp;3</a> with <span class="math inline">\(j = 3\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide level2"><div id="sol-indicator-selection-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 15</em>. </span>By <a href="#/thm-indicator-selection" class="quarto-xref">Theorem&nbsp;3</a> with <span class="math inline">\(j = 3\)</span>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3 \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= x_3 = 8\)</span>. Computing the <a href="#/def-dot-product">dot product</a> directly gives the same answer:</p>
+<p><span class="math display">\[
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3 \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= 0 \cdot 5 + 0 \cdot(-1) + 1 \cdot 8 + 0 \cdot 2 = 8.
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="thm-standard-basis-expansion" class="theorem">
@@ -881,6 +1143,32 @@ w_i \ge 0 \text{ for each } i
 \end{aligned}
 \]</span></p>
 </div>
+</section><section class="slide level2"><div id="exr-standard-basis-expansion-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 16 (Writing a vector as a linear combination of indicator vectors)</strong></span> By <a href="#/thm-standard-basis-expansion" class="quarto-xref">Theorem&nbsp;4</a>, every vector in <span class="math inline">\(\mathbb{R}^3\)</span> is a <a href="#/def-linear-combination">linear combination</a> of the <a href="#/def-indicator-vector">indicator vectors</a> <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1\)</span>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3\)</span>. Let</p>
+<p><span class="math display">\[
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix}-3 \\ 0 \\ 6\end{bmatrix}.
+\]</span></p>
+<p>Find the numbers <span class="math inline">\(c_1\)</span>, <span class="math inline">\(c_2\)</span> and <span class="math inline">\(c_3\)</span> with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= c_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1 + c_2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2 + c_3 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3\)</span>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Use <a href="#/thm-standard-basis-expansion" class="quarto-xref">Theorem&nbsp;4</a>, as in <a href="#/exm-standard-basis-expansion" class="quarto-xref">Example&nbsp;13</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide level2"><div id="sol-standard-basis-expansion-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 16</em>. </span>By <a href="#/thm-standard-basis-expansion" class="quarto-xref">Theorem&nbsp;4</a>, the numbers <span class="math inline">\(c_j\)</span> are the entries of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>: <span class="math inline">\(c_1 = -3\)</span>, <span class="math inline">\(c_2 = 0\)</span> and <span class="math inline">\(c_3 = 6\)</span>. As a check,</p>
+<p><span class="math display">\[
+-3 \begin{bmatrix}1 \\ 0 \\ 0\end{bmatrix} + 0 \begin{bmatrix}0 \\ 1 \\ 0\end{bmatrix} + 6 \begin{bmatrix}0 \\ 0 \\ 1\end{bmatrix} = \begin{bmatrix}-3 \\ 0 \\ 6\end{bmatrix}.
+\]</span></p>
+</div>
 </section><section id="orthogonality" class="slide level2" data-number="2"><h2>
 <span class="header-section-number">2</span> Orthogonality</h2>
 <div id="def-orthogonal-vectors" class="theorem definition">
@@ -907,6 +1195,45 @@ w_i \ge 0 \text{ for each } i
 \]</span></p>
 <p>so <span class="math inline">\((1, 2)\)</span> and <span class="math inline">\((1, 1)\)</span> are not orthogonal.</p>
 </div>
+</section><section class="slide level2"><div id="exr-orthogonal-vectors-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 17 (Choosing <span class="math inline">\(c\)</span> to make two vectors orthogonal)</strong></span> Principal component analysis describes data along <a href="#/def-orthogonal-vectors">orthogonal vectors</a>, so testing for orthogonality comes up often. For <span class="math inline">\(c \in \mathbb{R}\)</span>, let</p>
+<p><span class="math display">\[
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix}2 \\ c \\ 1\end{bmatrix},
+\qquad
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= \begin{bmatrix}1 \\ 3 \\ -5\end{bmatrix}.
+\]</span></p>
+<p>Find the value of <span class="math inline">\(c\)</span> for which <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\perp \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>By <a href="#/def-orthogonal-vectors" class="quarto-xref">Definition&nbsp;19</a>, solve <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= 0\)</span> for <span class="math inline">\(c\)</span>, using <a href="#/def-dot-product" class="quarto-xref">Definition&nbsp;8</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide level2"><div id="sol-orthogonal-vectors-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 17</em>. </span><span class="math inline">\(c = 1\)</span>. By <a href="#/def-orthogonal-vectors" class="quarto-xref">Definition&nbsp;19</a>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\perp \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> exactly when</p>
+<p><span class="math display">\[
+\begin{aligned}
+0
+&amp;= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}
+&amp;&amp; \text{(}\href{#def-orthogonal-vectors}{\text{Definition~19}}\text{)}
+\\
+&amp;= 2 \cdot 1 + c \cdot 3 + 1 \cdot(-5)
+&amp;&amp; \text{(}\href{#def-dot-product}{\text{Definition~8}}\text{)}
+\\
+&amp;= 3c - 3,
+&amp;&amp; \text{(multiply and collect terms)}
+\end{aligned}
+\]</span></p>
+<p>which holds only for <span class="math inline">\(c = 1\)</span>.</p>
+</div>
 </section><section class="slide level2"><div id="def-euclidean-norm" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 20 (Euclidean norm (length, <span class="math inline">\(L_2\)</span> norm))</strong></span> The <strong>Euclidean norm</strong> <span class="citation" data-cites="wikipedia_euclidean_vector"><a href="#/references" role="doc-biblioref" onclick="">[8]</a></span> (or <strong>length</strong>, also called the <strong><span class="math inline">\(L_2\)</span> norm</strong> and written <span class="math inline">\(\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}_2\)</span>) of a vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> of length <span class="math inline">\(p\)</span> is</p>
 <p><span id="eq-l2-norm"><span class="math display">\[\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{} \stackrel{\text{def}}{=}\sqrt{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} = \sqrt{\sum_{i=1}^px_i^2} \tag{2}\]</span></span></p>
@@ -927,6 +1254,32 @@ w_i \ge 0 \text{ for each } i
 \end{aligned}
 \]</span></p>
 <p>The vector <span class="math inline">\((0.6, 0.8)\)</span> has norm <span class="math inline">\(\sqrt{0.36 + 0.64} = 1\)</span>.</p>
+</div>
+</section><section class="slide level2"><div id="exr-euclidean-norm-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 18 (Finding the norm of a vector with four entries)</strong></span> The <a href="#/def-euclidean-norm">Euclidean norm</a> works the same way in <span class="math inline">\(\mathbb{R}^4\)</span> as in the plane, although there is no picture to draw. Let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> be the vector</p>
+<p><span class="math display">\[
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix}1 \\ 2 \\ 2 \\ 4\end{bmatrix}.
+\]</span></p>
+<p>Find <span class="math inline">\(\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}\)</span>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Use <a href="#/def-euclidean-norm" class="quarto-xref">Definition&nbsp;20</a> with <span class="math inline">\(p = 4\)</span>, as in <a href="#/exm-euclidean-norm" class="quarto-xref">Example&nbsp;15</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide level2"><div id="sol-euclidean-norm-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 18</em>. </span>By <a href="#/def-euclidean-norm" class="quarto-xref">Definition&nbsp;20</a>,</p>
+<p><span class="math display">\[
+\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{} = \sqrt{1^2 + 2^2 + 2^2 + 4^2} = \sqrt{25} = 5.
+\]</span></p>
 </div>
 </section><section class="slide level2"><div id="def-unit-vector" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 21 (Unit vector)</strong></span> A <strong>unit vector</strong> <span class="citation" data-cites="wikipedia_unit_vector"><a href="#/references" role="doc-biblioref" onclick="">[9]</a></span> is a vector whose Euclidean norm (<a href="#/def-euclidean-norm" class="quarto-xref">Definition&nbsp;20</a>) is <span class="math inline">\(1\)</span>. A unit vector is said to have <em>unit length</em>.</p>
@@ -959,7 +1312,7 @@ w_i \ge 0 \text{ for each } i
 \]</span></p>
 </div>
 </section><section class="slide level2 scrollable"><div id="exr-euclidean-distance" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 6 (How far apart are two points?)</strong></span> Let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 2)\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (4, 6)\)</span>.</p>
+<p><span class="theorem-title"><strong>Exercise 19 (How far apart are two points?)</strong></span> Let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 2)\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (4, 6)\)</span>.</p>
 <ol type="1">
 <li>Compute the vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span>.</li>
 <li>Compute the length of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span>, using the <a href="#/def-euclidean-norm">Euclidean norm</a>.</li>
@@ -967,7 +1320,7 @@ w_i \ge 0 \text{ for each } i
 </ol>
 </div>
 </section><section class="slide level2 scrollable"><div id="sol-euclidean-distance" class="proof solution">
-<p><span class="proof-title"><em>Solution 6</em>. </span></p>
+<p><span class="proof-title"><em>Solution 19</em>. </span></p>
 <ol type="1">
 <li><p><span class="math display">\[
 \begin{aligned}
@@ -1014,6 +1367,44 @@ d(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 \]</span></p>
 <p><span class="citation" data-cites="goodfellow2016deep"><a href="#/references" role="doc-biblioref" onclick="">[11, p. 39]</a></span>.</p>
 <p>For example, the distance from <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> to <span class="math inline">\((3, 4)\)</span> is <span class="math inline">\(\mathopen{}\left\lVert(3, 4)\right\rVert\mathclose{} = 5\)</span>, as in <a href="#/exm-euclidean-norm" class="quarto-xref">Example&nbsp;15</a>.</p>
+</div>
+</section><section class="slide level2"><div id="exr-euclidean-distance-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 20 (Finding the distance between two customers’ feature vectors)</strong></span> A nearest-neighbour method compares two customers through the <a href="#/def-euclidean-distance">Euclidean distance</a> between their feature vectors. Two customers have feature vectors</p>
+<p><span class="math display">\[
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix}1 \\ 0 \\ 3\end{bmatrix},
+\qquad
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= \begin{bmatrix}3 \\ 1 \\ 1\end{bmatrix}.
+\]</span></p>
+<p>Find <span class="math inline">\(d(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})\)</span>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Use <a href="#/def-euclidean-distance" class="quarto-xref">Definition&nbsp;22</a> with <span class="math inline">\(p = 3\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide level2"><div id="sol-euclidean-distance-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 20</em>. </span>By <a href="#/def-euclidean-distance" class="quarto-xref">Definition&nbsp;22</a>,</p>
+<p><span class="math display">\[
+\begin{aligned}
+d(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})
+&amp;= \sqrt{(1 - 3)^2 + (0 - 1)^2 + (3 - 1)^2}
+&amp;&amp; \text{(}\href{#def-euclidean-distance}{\text{Definition~22}}\text{)}
+\\
+&amp;= \sqrt{4 + 1 + 4}
+&amp;&amp; \text{(subtract and square)}
+\\
+&amp;= 3.
+&amp;&amp; \text{(add and take the square root)}
+\end{aligned}
+\]</span></p>
 </div>
 </section><section class="slide level2"><div id="def-orthonormal-vectors" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 23 (Orthonormal vectors)</strong></span> A set of vectors <span class="math inline">\(\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_2, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_k\}\)</span> is <strong>orthonormal</strong> if the vectors are mutually orthogonal (<a href="#/def-orthogonal-vectors" class="quarto-xref">Definition&nbsp;19</a>) and each has norm <span class="math inline">\(1\)</span> (<a href="#/def-euclidean-norm" class="quarto-xref">Definition&nbsp;20</a>), that is, <a href="#/def-unit-vector">unit length</a>:</p>
@@ -1062,14 +1453,14 @@ d(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </ul>
 </div>
 </section><section class="slide level2"><div id="exr-inner-product" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 7 (Compute an inner product and a norm)</strong></span> Let</p>
+<p><span class="theorem-title"><strong>Exercise 21 (Compute an inner product and a norm)</strong></span> Let</p>
 <p><span class="math display">\[\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}= \begin{bmatrix} 3 \\ -1 \\ 2 \end{bmatrix},
 \qquad
 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \begin{bmatrix} 0 \\ 4 \\ -2 \end{bmatrix}\]</span></p>
 <p>Compute <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> and <span class="math inline">\(\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}\right\rVert\mathclose{}_2\)</span>.</p>
 </div>
 <div id="sol-inner-product" class="proof solution">
-<p><span class="proof-title"><em>Solution 7</em>. </span>Multiply entry by entry and add:</p>
+<p><span class="proof-title"><em>Solution 21</em>. </span>Multiply entry by entry and add:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}
