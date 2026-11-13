@@ -84,6 +84,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_exm-pd-gram.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_thm-pd-operations.qmd >}}
 
 {{< slidebreak >}}
@@ -93,6 +97,10 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_thm-psd-plus-multiple-identity.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-psd-plus-multiple-identity.qmd >}}
 
 {{< slidebreak >}}
 
