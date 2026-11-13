@@ -1,0 +1,19 @@
+:::{#exr-orthogonal-complement-subspace-practice}
+#### Finding the orthogonal complement of two vectors
+
+@thm-orthogonal-complement-subspace says that an [orthogonal complement](#def-orthogonal-complement)
+is always a [subspace](linear-algebra-subspaces.qmd#def-subspace),
+even when the original [set](https://morrison-lab.github.io/mcs/sets.html#def-set) is not.
+Let $\mathcal{X} = \cb{(1, 0, 1), (1, 0, -1)}$, a set of two vectors in $\reals^3$.
+
+Find $\mathcal{X}^\perp$ as a [span](linear-algebra-subspaces.qmd#def-span).
+
+::: {.callout-tip}
+#### Hint
+
+A vector $\vecf{u}$ is in $\mathcal{X}^\perp$
+when $u_1 + u_3 = 0$ and $u_1 - u_3 = 0$.
+
+:::
+
+:::

@@ -1,0 +1,20 @@
+:::{#exr-complementary-subspaces-practice}
+#### Testing whether two lines are complementary in $\reals^2$
+
+Two [subspaces](linear-algebra-subspaces.qmd#def-subspace) are [complementary](#def-complementary-subspaces) in $\mathcal{V}$
+when their [sum](#def-subspace-sum) is $\mathcal{V}$
+and they share only $\vzero$.
+Let $\mathcal{S}_1 = \operatorname{span}\cb{(1, 0)}$
+and $\mathcal{S}_2 = \operatorname{span}\cb{(1, 1)}$.
+
+Decide whether $\mathcal{S}_1$ and $\mathcal{S}_2$ are complementary in $\reals^2$.
+
+::: {.callout-tip}
+#### Hint
+
+Solve $a\,(1, 0) = b\,(1, 1)$,
+and express $(x, y)$ as $a\,(1, 0) + b\,(1, 1)$.
+
+:::
+
+:::

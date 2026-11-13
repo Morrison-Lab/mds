@@ -24,7 +24,17 @@
 
 {{< include mds/_subfiles/_sec_linear_algebra_rank_nullity.qmd >}}
 
+# Sums and direct sums {#sec-direct-sums}
+
 {{< include mds/_subfiles/_sec_linear_algebra_direct_sums.qmd >}}
+
+# Orthogonal complements {#sec-orthogonal-complements}
+
+{{< include mds/_subfiles/_sec_linear_algebra_direct_sums_complements.qmd >}}
+
+# The fundamental theorem of linear algebra {#sec-fundamental-theorem}
+
+{{< include mds/_subfiles/_sec_linear_algebra_direct_sums_fundamental.qmd >}}
 
 {{< include mds/_subfiles/_sec_linear_algebra_inner_products.qmd >}}
 

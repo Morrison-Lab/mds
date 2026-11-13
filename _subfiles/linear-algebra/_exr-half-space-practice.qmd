@@ -1,0 +1,17 @@
+:::{#exr-half-space-practice}
+#### Finding which open half-space holds a point
+
+The sign of $\dprod{\vec{w}}{\vx} + b$ tells which [open half-space](#def-half-space)
+of a [hyperplane](linear-algebra-matrices.qmd#def-hyperplane) a point $\vx$ lies in.
+Let $\mathcal{H}$ be the line in $\reals^2$ with $\vec{w} = (2, -1)$ and $b = -1$.
+
+Decide whether $(0, 0)$ is in $\mathcal{H}^+$ or in $\mathcal{H}^-$.
+
+::: {.callout-tip}
+#### Hint
+
+Evaluate $\dprod{\vec{w}}{\vx} + b$ at $(0, 0)$.
+
+:::
+
+:::

@@ -1,0 +1,18 @@
+:::{#exr-dot-linear-practice}
+#### Finding a dot product from two known dot products
+
+@thm-dot-linear lets a [dot product](linear-algebra-vectors.qmd#def-dot-product) with a combination
+be found from the dot products with its parts.
+Suppose that $\vecf{x} \cdot \vecf{u} = 3$
+and $\vecf{x} \cdot \vecf{w} = -1$.
+
+Find $\vecf{x} \cdot (2\,\vecf{u} + 5\,\vecf{w})$.
+
+::: {.callout-tip}
+#### Hint
+
+Use @thm-dot-linear with $a = 2$ and $b = 5$.
+
+:::
+
+:::

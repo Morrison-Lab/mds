@@ -1,0 +1,21 @@
+:::{#sol-complement-null-space-practice}
+
+By @thm-complement-null-space, $\mathcal{C}(\matr{A})^\perp = \mathcal{N}(\tp{\matr{A}})$.
+For $\vecf{y} = (y_1, y_2, y_3)$,
+
+$$
+\tp{\matr{A}}\vecf{y} = \sbmat{1 & 0 & 1 \\ 0 & 1 & 1} \sbmat{y_1 \\ y_2 \\ y_3} = \sbmat{y_1 + y_3 \\ y_2 + y_3},
+$$
+
+which is $\vzero_2$ exactly when $y_1 = y_2 = -y_3$.
+So
+
+$$
+\mathcal{C}(\matr{A})^\perp = \operatorname{span}\cb{(-1, -1, 1)}.
+$$
+
+As a check, $(-1, -1, 1)$ is [orthogonal](linear-algebra-vectors.qmd#def-orthogonal-vectors)
+to both [columns of $\matr{A}$](linear-algebra-matrices.qmd#def-matrix-column):
+$-1 + 0 + 1 = 0$ and $0 - 1 + 1 = 0$.
+
+:::

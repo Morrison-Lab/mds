@@ -1,0 +1,15 @@
+:::{#sol-dim-subadditive-practice}
+
+Here $\mathcal{S}_1 \cap \mathcal{S}_2 = \cb{\vzero}$,
+so @cor-dim-subadditive holds with equality:
+
+$$
+\dim(\mathcal{S}_1 + \mathcal{S}_2) = 2 + 3 = 5.
+$$
+
+Since $\mathcal{S}_1 + \mathcal{S}_2 \subseteq \reals^5$
+and both have [dimension](linear-algebra-subspaces.qmd#def-dimension) $5$,
+[the two are equal](linear-algebra-subspaces.qmd#thm-subspace-equal-dim):
+$\mathcal{S}_1 + \mathcal{S}_2 = \reals^5$.
+
+:::
