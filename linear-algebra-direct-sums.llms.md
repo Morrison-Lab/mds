@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-12 18:25:55 (PST)
+Last modified: 2026-11-12 19:25:17 (PST)
 
 # 1 Sums and direct sums
 
@@ -27,6 +27,20 @@ Last modified: 2026-11-12 18:25:55 (PST)
 > **NOTE:**
 >
 > **Example 2 (The sum is not the union)** For the two lines in [Example 1](#exm-subspace-sum), the union $\mathcal{S}_1 \cup \mathcal{S}_2$ contains $(1, 0, 0)$ and $(0, 1, 0)$ but not their sum $(1, 1, 0)$: every multiple of $(1, 0, 0)$ has second entry $0$, and every multiple of $(0, 1, 0)$ has first entry $0$. So the union is not closed under addition and is not a subspace, while the sum, the whole plane $z = 0$, is.
+
+> **NOTE:**
+>
+> **Exercise 1 (Testing whether a vector is in a sum of two lines)** A vector is in the [sum of two subspaces](#def-subspace-sum) when it splits into one piece from each. Let $\mathcal{S}_1 = \operatorname{span}\mathopen{}\left\{(1, 0, 1)\right\}\mathclose{}$ and $\mathcal{S}_2 = \operatorname{span}\mathopen{}\left\{(0, 1, 1)\right\}\mathclose{}$, two lines in $\mathbb{R}^3$.
+>
+> Decide whether the vector $(2, 3, 5)$ is in $\mathcal{S}_1 + \mathcal{S}_2$.
+>
+> > **TIP:**
+> >
+> > Look for $a$ and $b$ with $a\,(1, 0, 1) + b\,(0, 1, 1) = (2, 3, 5)$, starting with the first two entries.
+
+> **NOTE:**
+>
+> *Solution 1*. Here $a\,(1, 0, 1) + b\,(0, 1, 1) = (a, b, a + b)$, whose first two entries give $a = 2$ and $b = 3$, and then the third entry is $2 + 3 = 5$. So $(2, 3, 5) = 2\,(1, 0, 1) + 3\,(0, 1, 1)$, with $2\,(1, 0, 1) \in \mathcal{S}_1$ and $3\,(0, 1, 1) \in \mathcal{S}_2$, and $(2, 3, 5)$ is in $\mathcal{S}_1 + \mathcal{S}_2$.
 
 > **NOTE:**
 >
@@ -68,6 +82,24 @@ Last modified: 2026-11-12 18:25:55 (PST)
 >
 > - **Intersection:** a vector in both has third entry $0$ and first entry $0$, so $\mathcal{S}_1 \cap \mathcal{S}_2 = \mathopen{}\left\{(0, b, 0) : b \in \mathbb{R}\right\}\mathclose{}$, the $y$-axis, which is a line through the origin.
 > - **Sum:** $(a, b, 0) + (0, b', c) = (a, b + b', c)$, and any $(x, y, z)$ arises this way, with $a = x$, $b = y$, $b' = 0$ and $c = z$. So $\mathcal{S}_1 + \mathcal{S}_2 = \mathbb{R}^3$.
+
+> **NOTE:**
+>
+> **Exercise 2 (Finding the intersection of two planes)** [Theorem 1](#thm-sum-intersection-subspace) says that two [subspaces](linear-algebra-subspaces.llms.md#def-subspace) meet in a subspace. Let $\mathcal{S}_1 = \mathopen{}\left\{(a, b, 0) : a, b \in \mathbb{R}\right\}\mathclose{}$, the plane $z = 0$ in $\mathbb{R}^3$, and $\mathcal{S}_2 = \operatorname{span}\mathopen{}\left\{(1, 1, 0), (0, 0, 1)\right\}\mathclose{}$.
+>
+> Find $\mathcal{S}_1 \cap \mathcal{S}_2$.
+>
+> > **TIP:**
+> >
+> > Express a vector of $\mathcal{S}_2$ as $s\,(1, 1, 0) + t\,(0, 0, 1)$, and ask when its third entry is $0$.
+
+> **NOTE:**
+>
+> *Solution 2*. A vector of $\mathcal{S}_2$ is $s\,(1, 1, 0) + t\,(0, 0, 1) = (s, s, t)$. It is in $\mathcal{S}_1$ exactly when its third entry is $0$, that is, when $t = 0$. So
+>
+> $$\mathcal{S}_1 \cap \mathcal{S}_2 = \mathopen{}\left\{(s, s, 0) : s \in \mathbb{R}\right\}\mathclose{} = \operatorname{span}\mathopen{}\left\{(1, 1, 0)\right\}\mathclose{},$$
+>
+> a line through the origin, which is a [subspace](linear-algebra-subspaces.llms.md#def-subspace), as [Theorem 1](#thm-sum-intersection-subspace) says.
 
 > **NOTE:**
 >
@@ -165,6 +197,22 @@ Last modified: 2026-11-12 18:25:55 (PST)
 >   \end{aligned}$$
 >
 >   the sum is the same line, because $a\,(1, 0, 0) + b\,(1, 0, 0) = (a + b)\,(1, 0, 0)$, so $\dim(\mathcal{S}_1 + \mathcal{S}_2) = 1 < 1 + 1$, a [strict inequality](algebra-basics.llms.md#def-strict-inequality).
+
+> **NOTE:**
+>
+> **Exercise 3 (Finding the dimension of a sum of two planes in** $\mathbb{R}^4$) [Theorem 2](#thm-dim-sum) finds the [dimension](linear-algebra-subspaces.llms.md#def-dimension) of a [sum of two subspaces](#def-subspace-sum) without describing it. Let $\mathcal{S}_1 = \operatorname{span}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2\right\}\mathclose{}$ and $\mathcal{S}_2 = \operatorname{span}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3\right\}\mathclose{}$, two planes in $\mathbb{R}^4$, where $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_4$ are the [indicator vectors](linear-algebra-vectors.llms.md#def-indicator-vector) of $\mathbb{R}^4$.
+>
+> Find $\dim(\mathcal{S}_1 + \mathcal{S}_2)$ from [Theorem 2](#thm-dim-sum).
+>
+> > **TIP:**
+> >
+> > First find $\mathcal{S}_1 \cap \mathcal{S}_2$ by comparing entries.
+
+> **NOTE:**
+>
+> *Solution 3*. A vector of $\mathcal{S}_1$ is $(a, b, 0, 0)$, and a vector of $\mathcal{S}_2$ is $(0, c, d, 0)$. They coincide exactly when $a = 0$, $d = 0$ and $b = c$, so $\mathcal{S}_1 \cap \mathcal{S}_2 = \operatorname{span}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2\right\}\mathclose{}$, of [dimension](linear-algebra-subspaces.llms.md#def-dimension) $1$. Each plane has dimension $2$, since two distinct [indicator vectors](linear-algebra-vectors.llms.md#def-indicator-vector) are [linearly independent](linear-algebra-subspaces.llms.md#def-linearly-independent). By [Theorem 2](#thm-dim-sum),
+>
+> $$\dim(\mathcal{S}_1 + \mathcal{S}_2) = 2 + 2 - 1 = 3.$$
 
 > **NOTE:**
 >
