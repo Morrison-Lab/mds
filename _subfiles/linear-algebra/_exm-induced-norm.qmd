@@ -22,7 +22,7 @@ $$
 
 which is the [length](#def-euclidean-norm) that @exm-euclidean-norm found.
 
-Every inner product space $(\reals^p, \iprod{\cdot}{\cdot})$ (@def-inner-product-space)
+Every inner product space $(V, \iprod{\cdot}{\cdot})$ (@def-inner-product-space)
 has an induced norm,
 which satisfies all three axioms of a [norm](#def-norm).
 
