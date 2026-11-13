@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-11-12 17:38:32 (PST)
+Last modified: 2026-11-12 18:37:10 (PST)
 
 # 1 Column space and null space
 
@@ -951,6 +951,40 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 
 > **NOTE:**
 >
+> **Exercise 17 (Finding the rank of a Gram matrix without computing it)** A [Gram matrix](#def-gram-matrix) can be larger than the [matrix](linear-algebra-matrices.llms.md#def-matrix) it comes from, but [Theorem 10](#thm-rank-transpose) says it has the same [rank](linear-algebra-subspaces.llms.md#def-rank). Let
+>
+> $$\mathbf{A} = \begin{bmatrix}1 & 0 & 2 \\ 0 & 1 & 1\end{bmatrix}.$$
+>
+> Find ${\operatorname{rank}\mathopen{}\left({\mathbf{A}}^{\top}\mathbf{A}\right)\mathclose{}}$ without computing ${\mathbf{A}}^{\top}\mathbf{A}$.
+>
+> > **TIP:**
+> >
+> > Find ${\operatorname{rank}\mathopen{}\left(\mathbf{A}\right)\mathclose{}}$ from its two [rows](linear-algebra-matrices.llms.md#def-matrix-row), using [Theorem 10](#thm-rank-transpose) once more.
+
+> **NOTE:**
+>
+> *Solution 17*. Both [rows of](linear-algebra-matrices.llms.md#def-matrix-row) $\mathbf{A}$, $(1, 0, 2)$ and $(0, 1, 1)$, are [linearly independent](linear-algebra-subspaces.llms.md#def-linearly-independent): $c_1\,(1, 0, 2) + c_2\,(0, 1, 1) = (c_1, c_2, 2 c_1 + c_2)$ is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_3$ only if $c_1 = c_2 = 0$. So ${\operatorname{rank}\mathopen{}\left({\mathbf{A}}^{\top}\right)\mathclose{}} = 2$, and by [Theorem 10](#thm-rank-transpose)
+>
+> $${\operatorname{rank}\mathopen{}\left({\mathbf{A}}^{\top}\mathbf{A}\right)\mathclose{}} = {\operatorname{rank}\mathopen{}\left(\mathbf{A}\right)\mathclose{}} = {\operatorname{rank}\mathopen{}\left({\mathbf{A}}^{\top}\right)\mathclose{}} = 2,$$
+>
+> even though ${\mathbf{A}}^{\top}\mathbf{A}$ is $3 \times 3$.
+
+> **NOTE:**
+>
+> **Exercise 18 (Finding how large the rank of a tall matrix can be)** A table of $5$ observations of $3$ features is a tall $5 \times 3$ [matrix](linear-algebra-matrices.llms.md#def-matrix). [Corollary 1](#cor-rank-bound) says how large its [rank](linear-algebra-subspaces.llms.md#def-rank) can be.
+>
+> Find the largest rank that a $5 \times 3$ matrix can have.
+>
+> > **TIP:**
+> >
+> > Use [Corollary 1](#cor-rank-bound) with $m = 5$ and $n = 3$.
+
+> **NOTE:**
+>
+> *Solution 18*. By [Corollary 1](#cor-rank-bound), the [rank](linear-algebra-subspaces.llms.md#def-rank) is at most $\min\mathopen{}\left\{5, 3\right\}\mathclose{} = 3$. A rank of $3$ is reached, for example by the $5 \times 3$ [matrix](linear-algebra-matrices.llms.md#def-matrix) with [rows](linear-algebra-matrices.llms.md#def-matrix-row) ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1}^{\top}, {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2}^{\top}, {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3}^{\top}, {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_3}^{\top}, {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_3}^{\top}$, whose three [columns](linear-algebra-matrices.llms.md#def-matrix-column) are [linearly independent](linear-algebra-subspaces.llms.md#def-linearly-independent).
+
+> **NOTE:**
+>
 > **Theorem 11 (Multiplying on the left cannot increase the rank)** If $\mathbf{A}$ is $m \times n$ and $\mathbf{B}$ is $n \times k$, then
 >
 > $$\operatorname{rank}(\mathbf{A} \mathbf{B}) \le \operatorname{rank}(\mathbf{B}).$$
@@ -988,6 +1022,22 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 
 > **NOTE:**
 >
+> **Exercise 19 (Finding how large the rank of a product can be from its right factor)** [Theorem 11](#thm-rank-product-right) shows how large the [rank](linear-algebra-subspaces.llms.md#def-rank) of a [matrix product](linear-algebra-matrices.llms.md#def-matrix-mult) can be, given the rank of its right factor. Let $\mathbf{A}$ be any $3 \times 2$ [matrix](linear-algebra-matrices.llms.md#def-matrix), and let
+>
+> $$\mathbf{B} = \begin{bmatrix}1 & 1 \\ 1 & 1\end{bmatrix}.$$
+>
+> Find the number that, by [Theorem 11](#thm-rank-product-right), ${\operatorname{rank}\mathopen{}\left(\mathbf{A}\mathbf{B}\right)\mathclose{}}$ cannot exceed, whatever $\mathbf{A}$ is.
+>
+> > **TIP:**
+> >
+> > Find ${\operatorname{rank}\mathopen{}\left(\mathbf{B}\right)\mathclose{}}$ first.
+
+> **NOTE:**
+>
+> *Solution 19*. Each of the two [columns of](linear-algebra-matrices.llms.md#def-matrix-column) $\mathbf{B}$ is $(1, 1)$, so its [column space](#def-column-space) is $\operatorname{span}\mathopen{}\left\{(1, 1)\right\}\mathclose{}$, and [Theorem 7](#thm-rank-dim) gives ${\operatorname{rank}\mathopen{}\left(\mathbf{B}\right)\mathclose{}} = 1$. By [Theorem 11](#thm-rank-product-right), ${\operatorname{rank}\mathopen{}\left(\mathbf{A}\mathbf{B}\right)\mathclose{}} \le 1$ for every $3 \times 2$ [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{A}$.
+
+> **NOTE:**
+>
 > **Corollary 2 (Multiplying by a matrix of full rank does not change the rank)** Let $\mathbf{A}$ be $m \times n$ and $\mathbf{B}$ be $n \times k$.
 >
 > 1.  If $\mathbf{A}$ has full column rank ([Definition 3 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-full-column-rank)), then $\operatorname{rank}(\mathbf{A} \mathbf{B}) = \operatorname{rank}(\mathbf{B})$.
@@ -1013,6 +1063,26 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 >
 > - Part 1: $\mathbf{A} = \begin{bmatrix} 1 & 1 \\ 0 & 1 \\ 0 & 0 \end{bmatrix}$ has two [linearly independent](linear-algebra-subspaces.llms.md#def-linearly-independent) columns, so it has [full column rank](linear-algebra-subspaces.llms.md#def-full-column-rank), and $\mathbf{A} \mathbf{B} = \begin{bmatrix} 2 & 0 \\ 1 & 0 \\ 0 & 0 \end{bmatrix}$ has rank $1 = \operatorname{rank}(\mathbf{B})$.
 > - Part 2: let $\mathbf{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$, which has rank $1$, and let $\mathbf{B} = \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix}$, which has rank $2$. Then $\mathbf{A} \mathbf{B} = \begin{bmatrix} 1 & 1 \\ 0 & 0 \end{bmatrix}$ has rank $1 = \operatorname{rank}(\mathbf{A})$.
+
+> **NOTE:**
+>
+> **Exercise 20 (Finding the rank of a product with a full-column-rank factor)** [Corollary 2](#cor-rank-product-full-rank) says that a left factor with [full column rank](linear-algebra-subspaces.llms.md#def-full-column-rank) keeps the [rank](linear-algebra-subspaces.llms.md#def-rank) of the right factor. Let
+>
+> $$\mathbf{A} = \begin{bmatrix}1 & 0 \\ 0 & 1 \\ 1 & 1\end{bmatrix},
+> \qquad
+> \mathbf{B} = \begin{bmatrix}1 & 2 \\ 2 & 4\end{bmatrix}.$$
+>
+> Find ${\operatorname{rank}\mathopen{}\left(\mathbf{A}\mathbf{B}\right)\mathclose{}}$ without multiplying.
+>
+> > **TIP:**
+> >
+> > Check that $\mathbf{A}$ has [full column rank](linear-algebra-subspaces.llms.md#def-full-column-rank), and find ${\operatorname{rank}\mathopen{}\left(\mathbf{B}\right)\mathclose{}}$.
+
+> **NOTE:**
+>
+> *Solution 20*. [Columns of](linear-algebra-matrices.llms.md#def-matrix-column) $\mathbf{A}$, $(1, 0, 1)$ and $(0, 1, 1)$, are [linearly independent](linear-algebra-subspaces.llms.md#def-linearly-independent): the first two entries of $c_1\,(1, 0, 1) + c_2\,(0, 1, 1)$ are $c_1$ and $c_2$. So $\mathbf{A}$ has [full column rank](linear-algebra-subspaces.llms.md#def-full-column-rank). The second [column of](linear-algebra-matrices.llms.md#def-matrix-column) $\mathbf{B}$ is twice the first, so ${\operatorname{rank}\mathopen{}\left(\mathbf{B}\right)\mathclose{}} = 1$. By part 1 of [Corollary 2](#cor-rank-product-full-rank),
+>
+> $${\operatorname{rank}\mathopen{}\left(\mathbf{A}\mathbf{B}\right)\mathclose{}} = {\operatorname{rank}\mathopen{}\left(\mathbf{B}\right)\mathclose{}} = 1.$$
 
 > **NOTE:**
 >
@@ -1448,7 +1518,7 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 
 > **NOTE:**
 >
-> **Exercise 17 (Which side of the plane?)** Let $\mathcal{H}$ be the plane in $\mathbb{R}^3$ with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, 1, 1)$ and $b = -1$ ([Example 22](#exm-hyperplane-subspace)).
+> **Exercise 21 (Which side of the plane?)** Let $\mathcal{H}$ be the plane in $\mathbb{R}^3$ with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, 1, 1)$ and $b = -1$ ([Example 22](#exm-hyperplane-subspace)).
 >
 > 1.  For each point, say whether it is in $\mathcal{H}^+$, $\mathcal{H}$ or $\mathcal{H}^-$ ([Definition 9](#def-half-space)): $(0, 0, 0)$, $(1, 0, 0)$ and $(1, 1, 1)$.
 > 2.  Write the plane and its half-spaces using $-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ and $-b$. Which points from part 1 change sides?
@@ -1456,7 +1526,7 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 
 > **NOTE:**
 >
-> *Solution 17*.
+> *Solution 21*.
 >
 > 1.  Compute $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b = x_1 + x_2 + x_3 - 1$ at each point.
 >
