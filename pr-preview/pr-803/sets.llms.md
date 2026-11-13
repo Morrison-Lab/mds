@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-12 18:01:49 (PST)
+Last modified: 2026-11-12 18:57:20 (PST)
 
 This page moved to [Sets](https://morrison-lab.github.io/mcs/sets.html) in the Math for Computer Science notes.
 
