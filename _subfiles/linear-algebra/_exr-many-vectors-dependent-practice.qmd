@@ -1,0 +1,28 @@
+:::{#exr-many-vectors-dependent-practice}
+#### Testing four vectors in $\reals^3$ for linear independence
+
+A table of data with more features than observations
+has more [columns](linear-algebra-matrices.qmd#def-matrix-column) than each column has entries,
+and @thm-many-vectors-dependent settles such cases without any arithmetic.
+Let
+
+$$
+\vecf{v}_1 = \sbmat{1 \\ 2 \\ 3},
+\quad
+\vecf{v}_2 = \sbmat{4 \\ 5 \\ 6},
+\quad
+\vecf{v}_3 = \sbmat{7 \\ 8 \\ 10},
+\quad
+\vecf{v}_4 = \sbmat{1 \\ 0 \\ 1}.
+$$
+
+Are these four vectors in $\reals^3$ [linearly independent](#def-linearly-independent)?
+
+::: {.callout-tip}
+#### Hint
+
+Compare the number of vectors with $p = 3$ in @thm-many-vectors-dependent.
+
+:::
+
+:::

@@ -1,0 +1,8 @@
+:::{#sol-many-vectors-dependent-practice}
+
+No.
+There are $k = 4$ vectors in $\reals^3$,
+and $4 > 3$,
+so by @thm-many-vectors-dependent they are [linearly dependent](#def-linearly-independent).
+
+:::
