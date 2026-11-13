@@ -22,4 +22,4 @@ format:
 
 # The fundamental theorem of linear algebra {#sec-fundamental-theorem}
 
-{{< include mds/_subfiles/linear-algebra/_thm-fundamental-subspaces.qmd >}}
+{{< include mds/_subfiles/_sec_linear_algebra_direct_sums_fundamental.qmd >}}
