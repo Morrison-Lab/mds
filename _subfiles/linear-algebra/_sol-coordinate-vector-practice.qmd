@@ -1,0 +1,10 @@
+:::{#sol-coordinate-vector-practice}
+
+Entry by entry,
+$c_1 \vecf{a}_1 + c_2 \vecf{a}_2 = \tp{(c_1,\ c_1 + c_2,\ c_2)}$.
+Matching $\vecf{x}$ gives $c_1 = 2$ and $c_2 = 3$,
+and the second entry checks: $2 + 3 = 5$.
+By @def-coordinate-vector,
+the [coordinate vector](#def-coordinate-vector) of $\vecf{x}$ is $\tp{(2, 3)} \in \reals^2$.
+
+:::

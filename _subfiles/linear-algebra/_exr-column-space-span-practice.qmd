@@ -1,0 +1,21 @@
+:::{#exr-column-space-span-practice}
+#### Showing that a column space is all of $\reals^2$
+
+@thm-column-space-span describes a [column space](#def-column-space) as the [span](linear-algebra-subspaces.qmd#def-span)
+of the [columns of $\matr{A}$](linear-algebra-matrices.qmd#def-matrix-column).
+Let
+
+$$
+\matr{A} = \sbmat{1 & 0 & 1 \\ 0 & 1 & 1}.
+$$
+
+Show that $\mathcal{C}(\matr{A}) = \reals^2$.
+
+::: {.callout-tip}
+#### Hint
+
+Two of the [columns of $\matr{A}$](linear-algebra-matrices.qmd#def-matrix-column) are the [indicator vectors](linear-algebra-vectors.qmd#def-indicator-vector) $\vecf{e}_1$ and $\vecf{e}_2$.
+
+:::
+
+:::
