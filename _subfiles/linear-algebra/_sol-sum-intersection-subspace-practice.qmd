@@ -10,7 +10,8 @@ $$
 \mathcal{S}_1 \cap \mathcal{S}_2 = \cb{(s, s, 0) : s \in \reals} = \operatorname{span}\cb{(1, 1, 0)},
 $$
 
-a line through the origin, which is a [subspace](linear-algebra-subspaces.qmd#def-subspace),
+a line through the origin,
+which is a [subspace](linear-algebra-subspaces.qmd#def-subspace),
 as @thm-sum-intersection-subspace says.
 
 :::
