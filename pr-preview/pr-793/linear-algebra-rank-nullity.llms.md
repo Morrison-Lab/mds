@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-11-12 12:51:51 (PST)
+Last modified: 2026-11-12 18:38:21 (PST)
 
 # 1 Column space and null space
 
@@ -158,7 +158,7 @@ Last modified: 2026-11-12 12:51:51 (PST)
 
 > **NOTE:**
 >
-> *Solution 3*. By [Theorem 1](#thm-column-space-span), $\mathcal{C}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\{(1, 0), (0, 1), (1, 1)\right\}\mathclose{}$. Every $(b_1, b_2) \in \mathbb{R}^2$ equals $b_1\,(1, 0) + b_2\,(0, 1) + 0\,(1, 1)$, so it is in that [span](linear-algebra-subspaces.llms.md#def-span). The [column space](#def-column-space) also lies inside $\mathbb{R}^2$, so $\mathcal{C}(\mathbf{A}) = \mathbb{R}^2$.
+> *Solution 3*. By [Theorem 1](#thm-column-space-span), $\mathcal{C}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\{(1, 0), (0, 1), (1, 1)\right\}\mathclose{}$. Every $(b_1, b_2) \in \mathbb{R}^2$ is $b_1\,(1, 0) + b_2\,(0, 1) + 0\,(1, 1)$, so it is in that [span](linear-algebra-subspaces.llms.md#def-span). The [column space](#def-column-space) also lies inside $\mathbb{R}^2$, so $\mathcal{C}(\mathbf{A}) = \mathbb{R}^2$.
 
 > **NOTE:**
 >
@@ -170,7 +170,7 @@ Last modified: 2026-11-12 12:51:51 (PST)
 >
 > > **TIP:**
 > >
-> > Write out the two entries of $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and make each equal to $0$.
+> > Write out the two entries of $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and make each $0$.
 
 > **NOTE:**
 >
@@ -205,7 +205,7 @@ Last modified: 2026-11-12 12:51:51 (PST)
 > = \begin{bmatrix}2 - 2 \\ 4 - 4\end{bmatrix}
 > = \begin{bmatrix}0 \\ 0\end{bmatrix},$$
 >
-> so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ is in $\mathcal{N}({\mathbf{A}}^{\top})$. Here $\mathbf{A}$ equals its own [transpose](linear-algebra-matrices.llms.md#def-matrix-transpose), so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ is in $\mathcal{N}(\mathbf{A})$ as well.
+> so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ is in $\mathcal{N}({\mathbf{A}}^{\top})$. Here $\mathbf{A}$ [equals](linear-algebra-matrices.llms.md#def-matrix-equality) its own [transpose](linear-algebra-matrices.llms.md#def-matrix-transpose), so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ is in $\mathcal{N}(\mathbf{A})$ as well.
 
 > **NOTE:**
 >
@@ -380,11 +380,11 @@ Last modified: 2026-11-12 12:51:51 (PST)
 >
 > so that $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (1, 1, 0) + (0, 1, 1)$ adds the two [rows of](linear-algebra-matrices.llms.md#def-matrix-row) $\mathbf{A}$.
 >
-> Compute $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$, and check that $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ is not in $\mathcal{N}(\mathbf{A})$.
+> Check that $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ is not in $\mathcal{N}(\mathbf{A})$.
 >
 > > **TIP:**
 > >
-> > Multiply each row of $\mathbf{A}$ by $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$.
+> > Multiply each [row of](linear-algebra-matrices.llms.md#def-matrix-row) $\mathbf{A}$ by $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$.
 
 > **NOTE:**
 >
@@ -433,7 +433,7 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 >
 > > **TIP:**
 > >
-> > Entry $i$ is the [dot product](linear-algebra-vectors.llms.md#def-dot-product) of column $i$ of $\mathbf{A}$ with $(2, 3)$.
+> > Entry $i$ is the [dot product](linear-algebra-vectors.llms.md#def-dot-product) of [column](linear-algebra-matrices.llms.md#def-matrix-column) $i$ of $\mathbf{A}$ with $(2, 3)$.
 
 > **NOTE:**
 >
@@ -573,7 +573,7 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 
 > **NOTE:**
 >
-> **Exercise 11 (Computing a cross-product matrix one row at a time)** [Theorem 5](#thm-cross-product-sum-outer) builds a [cross-product matrix](#def-cross-product-matrix) by adding one [outer product](linear-algebra-inner-products.llms.md#def-outer-product) per row, which is how it can be updated as observations arrive. Let
+> **Exercise 11 (Computing a cross-product matrix one row at a time)** [Theorem 5](#thm-cross-product-sum-outer) builds a [cross-product matrix](#def-cross-product-matrix) by adding one [outer product](linear-algebra-inner-products.llms.md#def-outer-product) per [row](linear-algebra-matrices.llms.md#def-matrix-row), which is how it can be updated as observations arrive. Let
 >
 > $$\mathbf{A} = \begin{bmatrix}1 & 2 \\ 0 & 1\end{bmatrix},
 > \qquad
@@ -710,11 +710,11 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 >
 > > **TIP:**
 > >
-> > In $\mathbf{A}$, the second column is a multiple of the first.
+> > In $\mathbf{A}$, the second [column](linear-algebra-matrices.llms.md#def-matrix-column) is a multiple of the first.
 
 > **NOTE:**
 >
-> *Solution 13*. In $\mathbf{A}$, the second column is $(2, 4, 6) = 2\,(1, 2, 3)$, so by [Theorem 1](#thm-column-space-span)
+> *Solution 13*. In $\mathbf{A}$, the second [column](linear-algebra-matrices.llms.md#def-matrix-column) is $(2, 4, 6) = 2\,(1, 2, 3)$, so by [Theorem 1](#thm-column-space-span)
 >
 > $$\mathcal{C}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\{(1, 2, 3), (2, 4, 6)\right\}\mathclose{} = \operatorname{span}\mathopen{}\left\{(1, 2, 3)\right\}\mathclose{}.$$
 >
@@ -1080,7 +1080,7 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 
 > **NOTE:**
 >
-> *Solution 20*. [Columns of](linear-algebra-matrices.llms.md#def-matrix-column) $\mathbf{A}$, $(1, 0, 1)$ and $(0, 1, 1)$, are [linearly independent](linear-algebra-subspaces.llms.md#def-linearly-independent): the first two entries of $c_1\,(1, 0, 1) + c_2\,(0, 1, 1)$ are $c_1$ and $c_2$. So $\mathbf{A}$ has [full column rank](linear-algebra-subspaces.llms.md#def-full-column-rank). The second column of $\mathbf{B}$ is twice the first, so ${\operatorname{rank}\mathopen{}\left(\mathbf{B}\right)\mathclose{}} = 1$. By part 1 of [Corollary 2](#cor-rank-product-full-rank),
+> *Solution 20*. [Columns of](linear-algebra-matrices.llms.md#def-matrix-column) $\mathbf{A}$, $(1, 0, 1)$ and $(0, 1, 1)$, are [linearly independent](linear-algebra-subspaces.llms.md#def-linearly-independent): the first two entries of $c_1\,(1, 0, 1) + c_2\,(0, 1, 1)$ are $c_1$ and $c_2$. So $\mathbf{A}$ has [full column rank](linear-algebra-subspaces.llms.md#def-full-column-rank). The second [column of](linear-algebra-matrices.llms.md#def-matrix-column) $\mathbf{B}$ is twice the first, so ${\operatorname{rank}\mathopen{}\left(\mathbf{B}\right)\mathclose{}} = 1$. By part 1 of [Corollary 2](#cor-rank-product-full-rank),
 >
 > $${\operatorname{rank}\mathopen{}\left(\mathbf{A}\mathbf{B}\right)\mathclose{}} = {\operatorname{rank}\mathopen{}\left(\mathbf{B}\right)\mathclose{}} = 1.$$
 
@@ -1165,7 +1165,7 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 
 > **NOTE:**
 >
-> **Exercise 21 (Finding how large the rank of centered data can be)** Centering a data [matrix](linear-algebra-matrices.llms.md#def-matrix) subtracts the [mean](linear-algebra-vectors.llms.md#def-mean) row from every row, and [Theorem 12](#thm-centered-data-rank) shows how large the [rank](linear-algebra-subspaces.llms.md#def-rank) of the result can be. Suppose that $\mathbf{X}$ holds $3$ observations of $4$ features, as a $3 \times 4$ matrix, and $\mathbf{X}_c$ is its centered version.
+> **Exercise 21 (Finding how large the rank of centered data can be)** Centering a data [matrix](linear-algebra-matrices.llms.md#def-matrix) subtracts the [mean](linear-algebra-vectors.llms.md#def-mean) vector from every [row](linear-algebra-matrices.llms.md#def-matrix-row), and [Theorem 12](#thm-centered-data-rank) shows how large the [rank](linear-algebra-subspaces.llms.md#def-rank) of the result can be. Suppose that $\mathbf{X}$ holds $3$ observations of $4$ features, as a $3 \times 4$ matrix, and $\mathbf{X}_c$ is its centered version.
 >
 > Find the number that, by [Theorem 12](#thm-centered-data-rank), ${\operatorname{rank}\mathopen{}\left(\mathbf{X}_c\right)\mathclose{}}$ cannot exceed.
 >
@@ -1424,7 +1424,7 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 >
 > $$2\,(2 - t) + 2t - 4 = 0$$
 >
-> for every $t$. Conversely, a point $(x_1, x_2)$ of $\mathcal{H}$ has $x_2 = 4 - 2 x_1$, so it equals $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ with $t = 2 - x_1$.
+> for every $t$. Conversely, a point $(x_1, x_2)$ of $\mathcal{H}$ has $x_2 = 4 - 2 x_1$, so it is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ with $t = 2 - x_1$.
 
 > **NOTE:**
 >
