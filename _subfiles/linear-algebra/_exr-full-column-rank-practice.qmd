@@ -1,0 +1,23 @@
+:::{#exr-full-column-rank-practice}
+#### Testing whether an all-ones column and one feature have full column rank
+
+Regression software often puts an all-ones [column](linear-algebra-matrices.qmd#def-matrix-column) in the input [matrix](linear-algebra-matrices.qmd#def-matrix),
+beside the features.
+With one feature, measured at $2$, $4$ and $6$,
+the input matrix is
+
+$$
+\matr{X} = \sbmat{1 & 2 \\ 1 & 4 \\ 1 & 6}.
+$$
+
+Does $\matr{X}$ have [full column rank](#def-full-column-rank)?
+
+::: {.callout-tip}
+#### Hint
+
+By @def-full-column-rank,
+check whether the two [columns of $\matr{X}$](linear-algebra-matrices.qmd#def-matrix-column) are [linearly independent](#def-linearly-independent).
+
+:::
+
+:::

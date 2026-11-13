@@ -1,0 +1,22 @@
+:::{#exr-row-space-practice}
+#### Testing whether a vector is in a row space
+
+The [row space](#def-row-space) of a [matrix](linear-algebra-matrices.qmd#def-matrix) $\matr{A}$ is the [column space](#def-column-space) of its [transpose](linear-algebra-matrices.qmd#def-matrix-transpose).
+Let
+
+$$
+\matr{A} = \sbmat{1 & 2 \\ 3 & 6}
+$$
+
+and let $\vecf{v}$ be the [column vector](linear-algebra-vectors.qmd#def-column-vector) $(1, 2)$.
+
+Decide whether $\vecf{v}$ is in the row space $\mathcal{C}(\tp{\matr{A}})$.
+
+::: {.callout-tip}
+#### Hint
+
+Write out $\tp{\matr{A}}$ and look for $\vecf{u}$ with $\tp{\matr{A}}\vecf{u} = \vecf{v}$.
+
+:::
+
+:::
