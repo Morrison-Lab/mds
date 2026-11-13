@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-12 02:19:51 (PST)
+Last modified: 2026-11-12 17:38:30 (PST)
 
 # 1 Sums and direct sums
 
@@ -210,13 +210,13 @@ Last modified: 2026-11-12 02:19:51 (PST)
 
 > **NOTE:**
 >
-> *Solution 3*. A vector of $\mathcal{S}_1$ is $(a, b, 0, 0)$, and a vector of $\mathcal{S}_2$ is $(0, c, d, 0)$. They are equal exactly when $a = 0$, $d = 0$ and $b = c$, so $\mathcal{S}_1 \cap \mathcal{S}_2 = \operatorname{span}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2\right\}\mathclose{}$, of [dimension](linear-algebra-subspaces.llms.md#def-dimension) $1$. Each plane has dimension $2$, since two distinct [indicator vectors](linear-algebra-vectors.llms.md#def-indicator-vector) are [linearly independent](linear-algebra-subspaces.llms.md#def-linearly-independent). By [Theorem 2](#thm-dim-sum),
+> *Solution 3*. A vector of $\mathcal{S}_1$ is $(a, b, 0, 0)$, and a vector of $\mathcal{S}_2$ is $(0, c, d, 0)$. They coincide exactly when $a = 0$, $d = 0$ and $b = c$, so $\mathcal{S}_1 \cap \mathcal{S}_2 = \operatorname{span}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2\right\}\mathclose{}$, of [dimension](linear-algebra-subspaces.llms.md#def-dimension) $1$. Each plane has dimension $2$, since two distinct [indicator vectors](linear-algebra-vectors.llms.md#def-indicator-vector) are [linearly independent](linear-algebra-subspaces.llms.md#def-linearly-independent). By [Theorem 2](#thm-dim-sum),
 >
 > $$\dim(\mathcal{S}_1 + \mathcal{S}_2) = 2 + 2 - 1 = 3.$$
 
 > **NOTE:**
 >
-> **Exercise 4 (Finding the dimension of a sum of subspaces that meet only at the origin)** [Corollary 1](#cor-dim-subadditive) says when the [dimension](linear-algebra-subspaces.llms.md#def-dimension) of a [sum](#def-subspace-sum) equals the sum of the dimensions. Let $\mathcal{S}_1$ and $\mathcal{S}_2$ be [subspaces](linear-algebra-subspaces.llms.md#def-subspace) of $\mathbb{R}^5$ with $\dim(\mathcal{S}_1) = 2$, $\dim(\mathcal{S}_2) = 3$ and $\mathcal{S}_1 \cap \mathcal{S}_2 = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}$, so that they meet only at the origin.
+> **Exercise 4 (Finding the dimension of a sum of subspaces that meet only at the origin)** [Corollary 1](#cor-dim-subadditive) says when the [dimension](linear-algebra-subspaces.llms.md#def-dimension) of a [sum](#def-subspace-sum) matches the total of the dimensions. Let $\mathcal{S}_1$ and $\mathcal{S}_2$ be [subspaces](linear-algebra-subspaces.llms.md#def-subspace) of $\mathbb{R}^5$ with $\dim(\mathcal{S}_1) = 2$, $\dim(\mathcal{S}_2) = 3$ and $\mathcal{S}_1 \cap \mathcal{S}_2 = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}$, so that they meet only at the origin.
 >
 > Find $\dim(\mathcal{S}_1 + \mathcal{S}_2)$.
 >
@@ -283,7 +283,7 @@ Last modified: 2026-11-12 02:19:51 (PST)
 
 > **NOTE:**
 >
-> *Solution 5*. In $\mathbf{A}$, the second column is twice the first, so ${\operatorname{rank}\mathopen{}\left(\mathbf{A}\right)\mathclose{}} = 1$. In $\mathbf{B}$, the first column is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2$ and the second is not, so ${\operatorname{rank}\mathopen{}\left(\mathbf{B}\right)\mathclose{}} = 1$. Then
+> *Solution 5*. In $\mathbf{A}$, the second [column](linear-algebra-matrices.llms.md#def-matrix-column) is twice the first, so ${\operatorname{rank}\mathopen{}\left(\mathbf{A}\right)\mathclose{}} = 1$. In $\mathbf{B}$, the first column is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2$ and the second is not, so ${\operatorname{rank}\mathopen{}\left(\mathbf{B}\right)\mathclose{}} = 1$. Then
 >
 > $$\mathbf{A} + \mathbf{B} = \begin{bmatrix}1 & 3 \\ 2 & 7\end{bmatrix}.$$
 >
@@ -335,7 +335,7 @@ Last modified: 2026-11-12 02:19:51 (PST)
 
 > **NOTE:**
 >
-> *Solution 6*. If $a\,(1, 0) = b\,(1, 1)$, then $(a, 0) = (b, b)$, so $b = 0$ and then $a = 0$. So $\mathcal{S}_1 \cap \mathcal{S}_2 = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}$. Any $(x, y) \in \mathbb{R}^2$ equals $(x - y)\,(1, 0) + y\,(1, 1)$, so $\mathcal{S}_1 + \mathcal{S}_2 = \mathbb{R}^2$. Both conditions hold, so $\mathcal{S}_1$ and $\mathcal{S}_2$ are [complementary](#def-complementary-subspaces) in $\mathbb{R}^2$.
+> *Solution 6*. If $a\,(1, 0) = b\,(1, 1)$, then $(a, 0) = (b, b)$, so $b = 0$ and then $a = 0$. So $\mathcal{S}_1 \cap \mathcal{S}_2 = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}$. Any $(x, y) \in \mathbb{R}^2$ is $(x - y)\,(1, 0) + y\,(1, 1)$, so $\mathcal{S}_1 + \mathcal{S}_2 = \mathbb{R}^2$. Both conditions hold, so $\mathcal{S}_1$ and $\mathcal{S}_2$ are [complementary](#def-complementary-subspaces) in $\mathbb{R}^2$.
 
 > **NOTE:**
 >
@@ -349,7 +349,7 @@ Last modified: 2026-11-12 02:19:51 (PST)
 
 > **NOTE:**
 >
-> *Solution 7*. Any $(x, y, z)$ equals $(x - z, y - z, 0) + z\,(1, 1, 1)$, with the first term in $\mathcal{S}_1$ and the second in $\mathcal{S}_2$, so $\mathcal{S}_1 + \mathcal{S}_2 = \mathbb{R}^3$. Also, $c\,(1, 1, 1)$ is in $\mathcal{S}_1$ only if its third entry $c$ is $0$, so $\mathcal{S}_1 \cap \mathcal{S}_2 = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}$. So $\mathcal{S}_1$ and $\mathcal{S}_2$ are [complementary](#def-complementary-subspaces) in $\mathbb{R}^3$, and $\mathbb{R}^3 = \mathcal{S}_1 \oplus \mathcal{S}_2$.
+> *Solution 7*. Any $(x, y, z)$ is $(x - z, y - z, 0) + z\,(1, 1, 1)$, with the first term in $\mathcal{S}_1$ and the second in $\mathcal{S}_2$, so $\mathcal{S}_1 + \mathcal{S}_2 = \mathbb{R}^3$. Also, $c\,(1, 1, 1)$ is in $\mathcal{S}_1$ only if its third entry $c$ is $0$, so $\mathcal{S}_1 \cap \mathcal{S}_2 = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}$. So $\mathcal{S}_1$ and $\mathcal{S}_2$ are [complementary](#def-complementary-subspaces) in $\mathbb{R}^3$, and $\mathbb{R}^3 = \mathcal{S}_1 \oplus \mathcal{S}_2$.
 
 > **NOTE:**
 >
@@ -498,7 +498,7 @@ Last modified: 2026-11-12 02:19:51 (PST)
 > && \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~8 in Vectors}}\text{)}
 > \\
 > &= \sum_{i=1}^px_i\,(a u_i + b w_i)
-> && \text{(}\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~8 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-vector-addition}{\text{Definition~7 in Vectors}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~9 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-vector-addition}{\text{Definition~7 in Vectors}}\text{)}
 > \\
 > &= \sum_{i=1}^p\mathopen{}\left(x_i a u_i + x_i b w_i\right)\mathclose{}
 > && \text{(distribute each } x_i \text{)}
@@ -679,10 +679,10 @@ Last modified: 2026-11-12 02:19:51 (PST)
 > $$\begin{aligned}
 > ({\mathbf{A}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})_j
 > &= \sum_{i=1}^{m} ({\mathbf{A}}^{\top})_{ji}\, x_i
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~15 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~16 in Matrices}}\text{)}
 > \\
 > &= \sum_{i=1}^{m} a_{ij}\, x_i
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~5 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~6 in Matrices}}\text{)}
 > \\
 > &= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}.
 > && \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~8 in Vectors}}\text{)}
@@ -700,7 +700,7 @@ Last modified: 2026-11-12 02:19:51 (PST)
 > && \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~8 in Vectors}}\text{)}
 > \\
 > &= \sum_{i=1}^{m} \mathopen{}\left(\sum_{j=1}^na_{ij} z_j\right)\mathclose{}\, x_i
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~15 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~16 in Matrices}}\text{)}
 > \\
 > &= \sum_{i=1}^{m} \sum_{j=1}^na_{ij}\, z_j\, x_i
 > && \text{(distribute each } x_i \text{ over the inner sum)}
@@ -871,7 +871,7 @@ Last modified: 2026-11-12 02:19:51 (PST)
 
 > **NOTE:**
 >
-> **Example 16 (Back to the line)** In [Example 15](#exm-orthogonal-direct-sum), $\mathcal{S} = \operatorname{span}\mathopen{}\left\{(1, 1, 0)\right\}\mathclose{}$ and $\mathcal{S}^\perp = \operatorname{span}\mathopen{}\left\{(1, -1, 0), (0, 0, 1)\right\}\mathclose{}$. Put those two spanning vectors in the columns of the $3 \times 2$ matrix $\mathbf{B} = \begin{bmatrix} 1 & 0 \\ -1 & 0 \\ 0 & 1 \end{bmatrix}$, so $\mathcal{S}^\perp = \mathcal{C}(\mathbf{B})$ ([Theorem 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-column-space-span)) and $(\mathcal{S}^\perp)^\perp = \mathcal{N}({\mathbf{B}}^{\top})$ ([Theorem 7](#thm-complement-null-space)). Since ${\mathbf{B}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (w_1 - w_2,\ w_3)$ ([Definition 15 in Matrices](linear-algebra-matrices.llms.md#def-matvec-mult)), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in (\mathcal{S}^\perp)^\perp$ exactly when $w_1 - w_2 = 0$ and $w_3 = 0$. So
+> **Example 16 (Back to the line)** In [Example 15](#exm-orthogonal-direct-sum), $\mathcal{S} = \operatorname{span}\mathopen{}\left\{(1, 1, 0)\right\}\mathclose{}$ and $\mathcal{S}^\perp = \operatorname{span}\mathopen{}\left\{(1, -1, 0), (0, 0, 1)\right\}\mathclose{}$. Put those two spanning vectors in the columns of the $3 \times 2$ matrix $\mathbf{B} = \begin{bmatrix} 1 & 0 \\ -1 & 0 \\ 0 & 1 \end{bmatrix}$, so $\mathcal{S}^\perp = \mathcal{C}(\mathbf{B})$ ([Theorem 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-column-space-span)) and $(\mathcal{S}^\perp)^\perp = \mathcal{N}({\mathbf{B}}^{\top})$ ([Theorem 7](#thm-complement-null-space)). Since ${\mathbf{B}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (w_1 - w_2,\ w_3)$ ([Definition 16 in Matrices](linear-algebra-matrices.llms.md#def-matvec-mult)), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in (\mathcal{S}^\perp)^\perp$ exactly when $w_1 - w_2 = 0$ and $w_3 = 0$. So
 >
 > $$\begin{aligned}
 > (\mathcal{S}^\perp)^\perp &= \mathopen{}\left\{(a, a, 0) : a \in \mathbb{R}\right\}\mathclose{} \\
