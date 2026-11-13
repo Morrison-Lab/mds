@@ -5,9 +5,9 @@ on:
   push:
     branches:
       - main
+  # No branch filter: a stacked PR (base = another PR's branch) runs this too
+  # (mds#808).
   pull_request:
-    branches:
-      - main
 
 jobs:
   check:
