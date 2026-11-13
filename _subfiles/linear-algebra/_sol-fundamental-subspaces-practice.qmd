@@ -1,0 +1,16 @@
+:::{#sol-fundamental-subspaces-practice}
+
+Here $\tp{\matr{A}}\vecf{y} = (y_1 + y_2, y_1 + y_2)$,
+so $(1, -1, 0)$ is in $\mathcal{N}(\tp{\matr{A}})$.
+But
+
+$$
+\vecf{b} \cdot (1, -1, 0) = 1 - 2 + 0 = -1 \neq 0,
+$$
+
+so $\vecf{b}$ is not in $\mathcal{N}(\tp{\matr{A}})^\perp = \mathcal{C}(\matr{A})$,
+and $\matr{A}\vecf{x} = \vecf{b}$ has no solution.
+Directly, the first two entries of $\matr{A}\vecf{x}$ are both $x_1 + x_2$,
+while those of $\vecf{b}$ are $1$ and $2$.
+
+:::

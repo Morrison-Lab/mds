@@ -1,0 +1,9 @@
+{{< include mds/_subfiles/linear-algebra/_thm-fundamental-subspaces.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exr-fundamental-subspaces-practice.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-fundamental-subspaces-practice.qmd >}}

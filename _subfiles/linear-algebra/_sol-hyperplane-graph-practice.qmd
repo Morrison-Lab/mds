@@ -1,0 +1,9 @@
+:::{#sol-hyperplane-graph-practice}
+
+Here $\vw = (3, -1)$ and $b = 2$.
+By @thm-hyperplane-graph, the [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $f$
+is a [hyperplane](linear-algebra-matrices.qmd#def-hyperplane) in $\reals^3$
+with [normal vector](linear-algebra-matrices.qmd#def-normal-vector) $(3, -1, -1)$:
+it holds the points $(x_1, x_2, y)$ with $3 x_1 - x_2 - y + 2 = 0$.
+
+:::

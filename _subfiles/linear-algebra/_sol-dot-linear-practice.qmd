@@ -1,0 +1,12 @@
+:::{#sol-dot-linear-practice}
+
+By @thm-dot-linear,
+
+$$
+\vecf{x} \cdot (2\,\vecf{u} + 5\,\vecf{w})
+= 2\,(\vecf{x} \cdot \vecf{u}) + 5\,(\vecf{x} \cdot \vecf{w})
+= 2 \cd 3 + 5 \cd (-1)
+= 1.
+$$
+
+:::

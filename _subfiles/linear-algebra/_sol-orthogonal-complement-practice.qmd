@@ -1,0 +1,16 @@
+:::{#sol-orthogonal-complement-practice}
+
+Here
+
+$$
+\ba
+(1, 2, 0) \cdot (2, -1, 3) &= 2 - 2 + 0 = 0,
+\\
+(0, 3, 1) \cdot (2, -1, 3) &= 0 - 3 + 3 = 0,
+\ea
+$$
+
+so $(2, -1, 3)$ is [orthogonal](linear-algebra-vectors.qmd#def-orthogonal-vectors) to both vectors of $\mathcal{X}$,
+and it is in $\mathcal{X}^\perp$.
+
+:::

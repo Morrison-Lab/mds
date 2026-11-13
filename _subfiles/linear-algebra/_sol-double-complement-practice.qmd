@@ -1,0 +1,14 @@
+:::{#sol-double-complement-practice}
+
+A vector $\vecf{w}$ is in $(\mathcal{S}^\perp)^\perp$
+exactly when $c\,(-2, 1) \cdot \vecf{w} = c\,(-2 w_1 + w_2) = 0$ for every $c$,
+that is, when $w_2 = 2 w_1$.
+So
+
+$$
+(\mathcal{S}^\perp)^\perp = \cb{(w_1, 2 w_1) : w_1 \in \reals} = \operatorname{span}\cb{(1, 2)} = \mathcal{S},
+$$
+
+as @thm-double-complement says.
+
+:::
