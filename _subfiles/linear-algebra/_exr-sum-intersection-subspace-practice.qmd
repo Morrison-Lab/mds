@@ -1,0 +1,18 @@
+:::{#exr-sum-intersection-subspace-practice}
+#### Finding the intersection of two planes
+
+@thm-sum-intersection-subspace says that two [subspaces](linear-algebra-subspaces.qmd#def-subspace) meet in a subspace.
+Let $\mathcal{S}_1 = \cb{(a, b, 0) : a, b \in \reals}$, the plane $z = 0$ in $\reals^3$,
+and $\mathcal{S}_2 = \operatorname{span}\cb{(1, 1, 0), (0, 0, 1)}$.
+
+Find $\mathcal{S}_1 \cap \mathcal{S}_2$.
+
+::: {.callout-tip}
+#### Hint
+
+Express a vector of $\mathcal{S}_2$ as $s\,(1, 1, 0) + t\,(0, 0, 1)$,
+and ask when its third entry is $0$.
+
+:::
+
+:::
