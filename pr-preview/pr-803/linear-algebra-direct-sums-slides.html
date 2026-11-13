@@ -302,7 +302,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-12 18:57:20 (PST)</p>
+  <p class="date">Last modified: 2026-11-12 21:12:08 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -354,6 +354,32 @@
 </section>
 <section class="slide level2">
 
+<div id="exr-subspace-sum-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1 (Testing whether a vector is in a sum of two lines)</strong></span> A vector is in the <a href="#/def-subspace-sum">sum of two subspaces</a> when it splits into one piece from each. Let <span class="math inline">\(\mathcal{S}_1 = \operatorname{span}\mathopen{}\left\{(1, 0, 1)\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathcal{S}_2 = \operatorname{span}\mathopen{}\left\{(0, 1, 1)\right\}\mathclose{}\)</span>, two lines in <span class="math inline">\(\mathbb{R}^3\)</span>.</p>
+<p>Decide whether the vector <span class="math inline">\((2, 3, 5)\)</span> is in <span class="math inline">\(\mathcal{S}_1 + \mathcal{S}_2\)</span>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Look for <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> with <span class="math inline">\(a\,(1, 0, 1) + b\,(0, 1, 1) = (2, 3, 5)\)</span>, starting with the first two entries.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-subspace-sum-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 1</em>. </span>Here <span class="math inline">\(a\,(1, 0, 1) + b\,(0, 1, 1) = (a, b, a + b)\)</span>, whose first two entries give <span class="math inline">\(a = 2\)</span> and <span class="math inline">\(b = 3\)</span>, and then the third entry is <span class="math inline">\(2 + 3 = 5\)</span>. So <span class="math inline">\((2, 3, 5) = 2\,(1, 0, 1) + 3\,(0, 1, 1)\)</span>, with <span class="math inline">\(2\,(1, 0, 1) \in \mathcal{S}_1\)</span> and <span class="math inline">\(3\,(0, 1, 1) \in \mathcal{S}_2\)</span>, and <span class="math inline">\((2, 3, 5)\)</span> is in <span class="math inline">\(\mathcal{S}_1 + \mathcal{S}_2\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
 <div id="thm-sum-intersection-subspace" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 1 (Sums and intersections of subspaces are subspaces)</strong></span> If <span class="math inline">\(\mathcal{S}_1\)</span> and <span class="math inline">\(\mathcal{S}_2\)</span> are subspaces of <span class="math inline">\(\mathbb{R}^p\)</span> (<a href="./linear-algebra-subspaces.html#def-subspace">Definition&nbsp;4 in Subspaces and Rank</a>), then <span class="math inline">\(\mathcal{S}_1 + \mathcal{S}_2\)</span> (<a href="#/def-subspace-sum" class="quarto-xref">Definition&nbsp;1</a>) and <span class="math inline">\(\mathcal{S}_1 \cap \mathcal{S}_2\)</span> are subspaces of <span class="math inline">\(\mathbb{R}^p\)</span>.</p>
 </div>
@@ -393,6 +419,36 @@ c\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphanto
 <li><strong>Intersection:</strong> a vector in both has third entry <span class="math inline">\(0\)</span> and first entry <span class="math inline">\(0\)</span>, so <span class="math inline">\(\mathcal{S}_1 \cap \mathcal{S}_2 = \mathopen{}\left\{(0, b, 0) : b \in \mathbb{R}\right\}\mathclose{}\)</span>, the <span class="math inline">\(y\)</span>-axis, which is a line through the origin.</li>
 <li><strong>Sum:</strong> <span class="math inline">\((a, b, 0) + (0, b', c) = (a, b + b', c)\)</span>, and any <span class="math inline">\((x, y, z)\)</span> arises this way, with <span class="math inline">\(a = x\)</span>, <span class="math inline">\(b = y\)</span>, <span class="math inline">\(b' = 0\)</span> and <span class="math inline">\(c = z\)</span>. So <span class="math inline">\(\mathcal{S}_1 + \mathcal{S}_2 = \mathbb{R}^3\)</span>.</li>
 </ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exr-sum-intersection-subspace-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2 (Finding the intersection of two planes)</strong></span> <a href="#/thm-sum-intersection-subspace" class="quarto-xref">Theorem&nbsp;1</a> says that two <a href="./linear-algebra-subspaces.html#def-subspace">subspaces</a> meet in a subspace. Let <span class="math inline">\(\mathcal{S}_1 = \mathopen{}\left\{(a, b, 0) : a, b \in \mathbb{R}\right\}\mathclose{}\)</span>, the plane <span class="math inline">\(z = 0\)</span> in <span class="math inline">\(\mathbb{R}^3\)</span>, and <span class="math inline">\(\mathcal{S}_2 = \operatorname{span}\mathopen{}\left\{(1, 1, 0), (0, 0, 1)\right\}\mathclose{}\)</span>.</p>
+<p>Find <span class="math inline">\(\mathcal{S}_1 \cap \mathcal{S}_2\)</span>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Express a vector of <span class="math inline">\(\mathcal{S}_2\)</span> as <span class="math inline">\(s\,(1, 1, 0) + t\,(0, 0, 1)\)</span>, and ask when its third entry is <span class="math inline">\(0\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-sum-intersection-subspace-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 2</em>. </span>A vector of <span class="math inline">\(\mathcal{S}_2\)</span> is <span class="math inline">\(s\,(1, 1, 0) + t\,(0, 0, 1) = (s, s, t)\)</span>. It is in <span class="math inline">\(\mathcal{S}_1\)</span> exactly when its third entry is <span class="math inline">\(0\)</span>, that is, when <span class="math inline">\(t = 0\)</span>. So</p>
+<p><span class="math display">\[
+\mathcal{S}_1 \cap \mathcal{S}_2 = \mathopen{}\left\{(s, s, 0) : s \in \mathbb{R}\right\}\mathclose{} = \operatorname{span}\mathopen{}\left\{(1, 1, 0)\right\}\mathclose{},
+\]</span></p>
+<p>a line through the origin, which is a <a href="./linear-algebra-subspaces.html#def-subspace">subspace</a>, as <a href="#/thm-sum-intersection-subspace" class="quarto-xref">Theorem&nbsp;1</a> says.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -497,6 +553,65 @@ a &amp;= b \\
 </section>
 <section class="slide level2">
 
+<div id="exr-dim-sum-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 3 (Finding the dimension of a sum of two planes in <span class="math inline">\(\mathbb{R}^4\)</span>)</strong></span> <a href="#/thm-dim-sum" class="quarto-xref">Theorem&nbsp;2</a> finds the <a href="./linear-algebra-subspaces.html#def-dimension">dimension</a> of a <a href="#/def-subspace-sum">sum of two subspaces</a> without describing it. Let <span class="math inline">\(\mathcal{S}_1 = \operatorname{span}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathcal{S}_2 = \operatorname{span}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3\right\}\mathclose{}\)</span>, two planes in <span class="math inline">\(\mathbb{R}^4\)</span>, where <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_4\)</span> are the <a href="./linear-algebra-vectors.html#def-indicator-vector">indicator vectors</a> of <span class="math inline">\(\mathbb{R}^4\)</span>.</p>
+<p>Find <span class="math inline">\(\dim(\mathcal{S}_1 + \mathcal{S}_2)\)</span> from <a href="#/thm-dim-sum" class="quarto-xref">Theorem&nbsp;2</a>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>First find <span class="math inline">\(\mathcal{S}_1 \cap \mathcal{S}_2\)</span> by comparing entries.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-dim-sum-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 3</em>. </span>A vector of <span class="math inline">\(\mathcal{S}_1\)</span> is <span class="math inline">\((a, b, 0, 0)\)</span>, and a vector of <span class="math inline">\(\mathcal{S}_2\)</span> is <span class="math inline">\((0, c, d, 0)\)</span>. They coincide exactly when <span class="math inline">\(a = 0\)</span>, <span class="math inline">\(d = 0\)</span> and <span class="math inline">\(b = c\)</span>, so <span class="math inline">\(\mathcal{S}_1 \cap \mathcal{S}_2 = \operatorname{span}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2\right\}\mathclose{}\)</span>, of <a href="./linear-algebra-subspaces.html#def-dimension">dimension</a> <span class="math inline">\(1\)</span>. Each plane has dimension <span class="math inline">\(2\)</span>, since two distinct <a href="./linear-algebra-vectors.html#def-indicator-vector">indicator vectors</a> are <a href="./linear-algebra-subspaces.html#def-linearly-independent">linearly independent</a>. By <a href="#/thm-dim-sum" class="quarto-xref">Theorem&nbsp;2</a>,</p>
+<p><span class="math display">\[
+\dim(\mathcal{S}_1 + \mathcal{S}_2) = 2 + 2 - 1 = 3.
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exr-dim-subadditive-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 4 (Finding the dimension of a sum of subspaces that meet only at the origin)</strong></span> <a href="#/cor-dim-subadditive" class="quarto-xref">Corollary&nbsp;1</a> says when the <a href="./linear-algebra-subspaces.html#def-dimension">dimension</a> of a <a href="#/def-subspace-sum">sum</a> matches the total of the dimensions. Let <span class="math inline">\(\mathcal{S}_1\)</span> and <span class="math inline">\(\mathcal{S}_2\)</span> be <a href="./linear-algebra-subspaces.html#def-subspace">subspaces</a> of <span class="math inline">\(\mathbb{R}^5\)</span> with <span class="math inline">\(\dim(\mathcal{S}_1) = 2\)</span>, <span class="math inline">\(\dim(\mathcal{S}_2) = 3\)</span> and <span class="math inline">\(\mathcal{S}_1 \cap \mathcal{S}_2 = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}\)</span>, so that they meet only at the origin.</p>
+<p>Find <span class="math inline">\(\dim(\mathcal{S}_1 + \mathcal{S}_2)\)</span>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Use the equality case of <a href="#/cor-dim-subadditive" class="quarto-xref">Corollary&nbsp;1</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-dim-subadditive-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 4</em>. </span>Here <span class="math inline">\(\mathcal{S}_1 \cap \mathcal{S}_2 = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}\)</span>, so <a href="#/cor-dim-subadditive" class="quarto-xref">Corollary&nbsp;1</a> holds with equality:</p>
+<p><span class="math display">\[
+\dim(\mathcal{S}_1 + \mathcal{S}_2) = 2 + 3 = 5.
+\]</span></p>
+<p>Since <span class="math inline">\(\mathcal{S}_1 + \mathcal{S}_2 \subseteq \mathbb{R}^5\)</span> and both have <a href="./linear-algebra-subspaces.html#def-dimension">dimension</a> <span class="math inline">\(5\)</span>, <a href="./linear-algebra-subspaces.html#thm-subspace-equal-dim">the two are equal</a>: <span class="math inline">\(\mathcal{S}_1 + \mathcal{S}_2 = \mathbb{R}^5\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
 <div id="thm-rank-subadditive" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 3 (Rank is subadditive)</strong></span> For <span class="math inline">\(m \times n\)</span> matrices <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span>,</p>
 <p><span class="math display">\[
@@ -533,6 +648,41 @@ a &amp;= b \\
 <li><span class="math inline">\(\mathbf{A} + \mathbf{B}\)</span> is the <span class="math inline">\(2 \times 2\)</span> identity matrix, which has rank <span class="math inline">\(2\)</span> (<a href="./linear-algebra-rank-nullity.html#exm-rank-nullity">Example&nbsp;13 in Column Space, Null Space and Rank-Nullity</a>), so the bound <span class="math inline">\(2 \le 1 + 1\)</span> holds with equality.</li>
 <li><span class="math inline">\(\mathbf{A} + (-\mathbf{A})\)</span> is the <span class="math inline">\(2 \times 2\)</span> zero matrix, which has rank <span class="math inline">\(0\)</span>: any nonempty list of its columns contains <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2\)</span>, and <span class="math inline">\(1 \cdot\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2 = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2\)</span>. So the bound <span class="math inline">\(0 \le \operatorname{rank}(\mathbf{A}) + \operatorname{rank}(-\mathbf{A}) = 1 + 1\)</span> is strict.</li>
 </ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exr-rank-subadditive-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5 (Checking subadditivity of rank on two rank-one matrices)</strong></span> <a href="#/thm-rank-subadditive" class="quarto-xref">Theorem&nbsp;3</a> says that <span class="math inline">\({\operatorname{rank}\mathopen{}\left(\mathbf{A} + \mathbf{B}\right)\mathclose{}} \le {\operatorname{rank}\mathopen{}\left(\mathbf{A}\right)\mathclose{}} + {\operatorname{rank}\mathopen{}\left(\mathbf{B}\right)\mathclose{}}\)</span> for <a href="./linear-algebra-matrices.html#def-matrix">matrices</a> of the same size. Let</p>
+<p><span class="math display">\[
+\mathbf{A} = \begin{bmatrix}1 &amp; 2 \\ 2 &amp; 4\end{bmatrix},
+\qquad
+\mathbf{B} = \begin{bmatrix}0 &amp; 1 \\ 0 &amp; 3\end{bmatrix}.
+\]</span></p>
+<p>Find <span class="math inline">\({\operatorname{rank}\mathopen{}\left(\mathbf{A} + \mathbf{B}\right)\mathclose{}}\)</span>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Each of <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span> has <a href="./linear-algebra-subspaces.html#def-rank">rank</a> <span class="math inline">\(1\)</span>, so <a href="#/thm-rank-subadditive" class="quarto-xref">Theorem&nbsp;3</a> allows at most <span class="math inline">\(2\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-rank-subadditive-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 5</em>. </span>In <span class="math inline">\(\mathbf{A}\)</span>, the second <a href="./linear-algebra-matrices.html#def-matrix-column">column</a> is twice the first, so <span class="math inline">\({\operatorname{rank}\mathopen{}\left(\mathbf{A}\right)\mathclose{}} = 1\)</span>. In <span class="math inline">\(\mathbf{B}\)</span>, the first column is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2\)</span> and the second is not, so <span class="math inline">\({\operatorname{rank}\mathopen{}\left(\mathbf{B}\right)\mathclose{}} = 1\)</span>. Then</p>
+<p><span class="math display">\[
+\mathbf{A} + \mathbf{B} = \begin{bmatrix}1 &amp; 3 \\ 2 &amp; 7\end{bmatrix}.
+\]</span></p>
+<p>Its <a href="./linear-algebra-matrices.html#def-matrix-column">columns</a> are <a href="./linear-algebra-subspaces.html#def-linearly-independent">linearly independent</a>: <span class="math inline">\(c_1\,(1, 2) + c_2\,(3, 7) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2\)</span> gives <span class="math inline">\(c_1 = -3 c_2\)</span> from the first entry, and then <span class="math inline">\(-6 c_2 + 7 c_2 = c_2 = 0\)</span> from the second. So <span class="math inline">\({\operatorname{rank}\mathopen{}\left(\mathbf{A} + \mathbf{B}\right)\mathclose{}} = 2 = 1 + 1\)</span>, and <a href="#/thm-rank-subadditive" class="quarto-xref">Theorem&nbsp;3</a> holds with equality.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -575,6 +725,58 @@ a &amp;= b \\
 \end{aligned}
 \]</span></p>
 <p>with the first term in the plane <span class="math inline">\(z = 0\)</span> and the second in the plane <span class="math inline">\(x = 0\)</span> both times.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exr-complementary-subspaces-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 6 (Testing whether two lines are complementary in <span class="math inline">\(\mathbb{R}^2\)</span>)</strong></span> Two <a href="./linear-algebra-subspaces.html#def-subspace">subspaces</a> are <a href="#/def-complementary-subspaces">complementary</a> in <span class="math inline">\(\mathcal{V}\)</span> when their <a href="#/def-subspace-sum">sum</a> is <span class="math inline">\(\mathcal{V}\)</span> and they share only <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>. Let <span class="math inline">\(\mathcal{S}_1 = \operatorname{span}\mathopen{}\left\{(1, 0)\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathcal{S}_2 = \operatorname{span}\mathopen{}\left\{(1, 1)\right\}\mathclose{}\)</span>.</p>
+<p>Decide whether <span class="math inline">\(\mathcal{S}_1\)</span> and <span class="math inline">\(\mathcal{S}_2\)</span> are complementary in <span class="math inline">\(\mathbb{R}^2\)</span>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Solve <span class="math inline">\(a\,(1, 0) = b\,(1, 1)\)</span>, and express <span class="math inline">\((x, y)\)</span> as <span class="math inline">\(a\,(1, 0) + b\,(1, 1)\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-complementary-subspaces-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 6</em>. </span>If <span class="math inline">\(a\,(1, 0) = b\,(1, 1)\)</span>, then <span class="math inline">\((a, 0) = (b, b)\)</span>, so <span class="math inline">\(b = 0\)</span> and then <span class="math inline">\(a = 0\)</span>. So <span class="math inline">\(\mathcal{S}_1 \cap \mathcal{S}_2 = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}\)</span>. Any <span class="math inline">\((x, y) \in \mathbb{R}^2\)</span> is <span class="math inline">\((x - y)\,(1, 0) + y\,(1, 1)\)</span>, so <span class="math inline">\(\mathcal{S}_1 + \mathcal{S}_2 = \mathbb{R}^2\)</span>. Both conditions hold, so <span class="math inline">\(\mathcal{S}_1\)</span> and <span class="math inline">\(\mathcal{S}_2\)</span> are <a href="#/def-complementary-subspaces">complementary</a> in <span class="math inline">\(\mathbb{R}^2\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exr-direct-sum-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 7 (Testing whether <span class="math inline">\(\mathbb{R}^3\)</span> is the direct sum of a plane and a tilted line)</strong></span> The <a href="#/def-direct-sum">direct sum</a> <span class="math inline">\(\mathcal{S}_1 \oplus \mathcal{S}_2\)</span> needs the two <a href="./linear-algebra-subspaces.html#def-subspace">subspaces</a> to be <a href="#/def-complementary-subspaces">complementary</a>. Let <span class="math inline">\(\mathcal{S}_1 = \mathopen{}\left\{(a, b, 0) : a, b \in \mathbb{R}\right\}\mathclose{}\)</span>, the plane <span class="math inline">\(z = 0\)</span>, and <span class="math inline">\(\mathcal{S}_2 = \operatorname{span}\mathopen{}\left\{(1, 1, 1)\right\}\mathclose{}\)</span>, a tilted line.</p>
+<p>Decide whether <span class="math inline">\(\mathbb{R}^3 = \mathcal{S}_1 \oplus \mathcal{S}_2\)</span>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>To write <span class="math inline">\((x, y, z)\)</span> as a vector of <span class="math inline">\(\mathcal{S}_1\)</span> plus <span class="math inline">\(c\,(1, 1, 1)\)</span>, the third entry fixes <span class="math inline">\(c\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-direct-sum-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 7</em>. </span>Any <span class="math inline">\((x, y, z)\)</span> is <span class="math inline">\((x - z, y - z, 0) + z\,(1, 1, 1)\)</span>, with the first term in <span class="math inline">\(\mathcal{S}_1\)</span> and the second in <span class="math inline">\(\mathcal{S}_2\)</span>, so <span class="math inline">\(\mathcal{S}_1 + \mathcal{S}_2 = \mathbb{R}^3\)</span>. Also, <span class="math inline">\(c\,(1, 1, 1)\)</span> is in <span class="math inline">\(\mathcal{S}_1\)</span> only if its third entry <span class="math inline">\(c\)</span> is <span class="math inline">\(0\)</span>, so <span class="math inline">\(\mathcal{S}_1 \cap \mathcal{S}_2 = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}\)</span>. So <span class="math inline">\(\mathcal{S}_1\)</span> and <span class="math inline">\(\mathcal{S}_2\)</span> are <a href="#/def-complementary-subspaces">complementary</a> in <span class="math inline">\(\mathbb{R}^3\)</span>, and <span class="math inline">\(\mathbb{R}^3 = \mathcal{S}_1 \oplus \mathcal{S}_2\)</span>.</p>
 </div>
 </section>
 <section class="slide level2 scrollable">
@@ -650,6 +852,36 @@ a &amp;= b \\
 </section>
 <section class="slide level2">
 
+<div id="exr-direct-sum-equiv-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 8 (Recognizing a direct sum by counting dimensions)</strong></span> Statement 2 of <a href="#/thm-direct-sum-equiv" class="quarto-xref">Theorem&nbsp;4</a> recognizes a <a href="#/def-direct-sum">direct sum</a> from <a href="./linear-algebra-subspaces.html#def-dimension">dimensions</a> alone. Let <span class="math inline">\(\mathcal{S}_1 = \operatorname{span}\mathopen{}\left\{(1, 0, 0), (0, 1, 0)\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathcal{S}_2 = \operatorname{span}\mathopen{}\left\{(0, 1, 1)\right\}\mathclose{}\)</span>, and suppose that you have already checked that <span class="math inline">\(\mathcal{S}_1 + \mathcal{S}_2 = \mathbb{R}^3\)</span>.</p>
+<p>Decide whether <span class="math inline">\(\mathbb{R}^3 = \mathcal{S}_1 \oplus \mathcal{S}_2\)</span>, using statement 2 of <a href="#/thm-direct-sum-equiv" class="quarto-xref">Theorem&nbsp;4</a>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Find <span class="math inline">\(\dim(\mathcal{S}_1)\)</span> and <span class="math inline">\(\dim(\mathcal{S}_2)\)</span>, add them, and compare the total with <span class="math inline">\(\dim(\mathbb{R}^3) = 3\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-direct-sum-equiv-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 8</em>. </span>Both <span class="math inline">\((1, 0, 0)\)</span> and <span class="math inline">\((0, 1, 0)\)</span> lie in <span class="math inline">\(\mathcal{S}_1\)</span>, and they are <a href="./linear-algebra-subspaces.html#def-linearly-independent">linearly independent</a>, so they are a <a href="./linear-algebra-subspaces.html#def-basis">basis</a> of <span class="math inline">\(\mathcal{S}_1\)</span> and <span class="math inline">\(\dim(\mathcal{S}_1) = 2\)</span>. The single nonzero vector <span class="math inline">\((0, 1, 1)\)</span> is a basis of <span class="math inline">\(\mathcal{S}_2\)</span>, so <span class="math inline">\(\dim(\mathcal{S}_2) = 1\)</span>. Then</p>
+<p><span class="math display">\[
+\dim(\mathcal{S}_1) + \dim(\mathcal{S}_2) = 2 + 1 = 3 = \dim(\mathbb{R}^3),
+\]</span></p>
+<p>so by statement 2 of <a href="#/thm-direct-sum-equiv" class="quarto-xref">Theorem&nbsp;4</a>, <span class="math inline">\(\mathbb{R}^3 = \mathcal{S}_1 \oplus \mathcal{S}_2\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
 <div id="def-projection" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 4 (Projection onto a subspace along a complement)</strong></span> Let <span class="math inline">\(\mathcal{S}\)</span> and <span class="math inline">\(\mathcal{T}\)</span> be subspaces of <span class="math inline">\(\mathbb{R}^p\)</span> with <span class="math inline">\(\mathbb{R}^p = \mathcal{S} \oplus \mathcal{T}\)</span> (<a href="#/def-direct-sum" class="quarto-xref">Definition&nbsp;3</a>), and let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} \in \mathbb{R}^p\)</span>. By <a href="#/thm-direct-sum-equiv" class="quarto-xref">Theorem&nbsp;4</a>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> for exactly one <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \in \mathcal{S}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \in \mathcal{T}\)</span>. The vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span> is the <strong>projection</strong> <span class="citation" data-cites="wikipedia_projection_linear_algebra"><a href="#/references" role="doc-biblioref" onclick="">[3]</a></span> of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> onto <span class="math inline">\(\mathcal{S}\)</span> along <span class="math inline">\(\mathcal{T}\)</span> <span class="citation" data-cites="banerjee2014linear"><a href="#/references" role="doc-biblioref" onclick="">[4]</a>, Definition 6.3, p.&nbsp;163</span>.</p>
 </div>
@@ -670,6 +902,32 @@ a &amp;= b \\
 \end{aligned}
 \]</span></p>
 <p>(<a href="#/def-direct-sum" class="quarto-xref">Definition&nbsp;3</a>, <a href="#/thm-direct-sum-equiv" class="quarto-xref">Theorem&nbsp;4</a>). The same vector has a different projection onto the same subspace when the complement changes.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exr-projection-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 9 (Projecting onto an axis along a diagonal line)</strong></span> <a href="#/def-projection">A projection onto <span class="math inline">\(\mathcal{S}\)</span> along <span class="math inline">\(\mathcal{T}\)</span></a> keeps the piece of a vector that lies in <span class="math inline">\(\mathcal{S}\)</span> when the vector is split along a <a href="#/def-direct-sum">direct sum</a>. Let <span class="math inline">\(\mathcal{S} = \operatorname{span}\mathopen{}\left\{(1, 0)\right\}\mathclose{}\)</span>, the horizontal axis in <span class="math inline">\(\mathbb{R}^2\)</span>, let <span class="math inline">\(\mathcal{T} = \operatorname{span}\mathopen{}\left\{(1, 1)\right\}\mathclose{}\)</span>, a diagonal line, and let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = (4, 3)\)</span>.</p>
+<p>Find the <a href="#/def-projection">projection of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> onto <span class="math inline">\(\mathcal{S}\)</span> along <span class="math inline">\(\mathcal{T}\)</span></a>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Split <span class="math inline">\((4, 3)\)</span> as <span class="math inline">\((a, 0) + c\,(1, 1)\)</span>, and use the second entry first.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-projection-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 9</em>. </span>Split <span class="math inline">\((4, 3)\)</span> as <span class="math inline">\((a, 0) + c\,(1, 1) = (a + c, c)\)</span>. The second entry gives <span class="math inline">\(c = 3\)</span>, and then the first gives <span class="math inline">\(a = 1\)</span>. So <span class="math inline">\((4, 3) = (1, 0) + (3, 3)\)</span>, with <span class="math inline">\((1, 0) \in \mathcal{S}\)</span> and <span class="math inline">\((3, 3) \in \mathcal{T}\)</span>, and the <a href="#/def-projection">projection of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> onto <span class="math inline">\(\mathcal{S}\)</span> along <span class="math inline">\(\mathcal{T}\)</span></a> is <span class="math inline">\((1, 0)\)</span>.</p>
 </div>
 </section>
 <section id="sec-orthogonal-complements" class="slide level2" data-number="2">
@@ -762,6 +1020,38 @@ a\,(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphant
 </section>
 <section class="slide level2">
 
+<div id="exr-dot-linear-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 10 (Finding a dot product from two known dot products)</strong></span> <a href="#/thm-dot-linear" class="quarto-xref">Theorem&nbsp;5</a> lets a <a href="./linear-algebra-vectors.html#def-dot-product">dot product</a> with a combination be found from the dot products with its parts. Suppose that <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = 3\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = -1\)</span>.</p>
+<p>Find <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot (2\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + 5\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}})\)</span>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Use <a href="#/thm-dot-linear" class="quarto-xref">Theorem&nbsp;5</a> with <span class="math inline">\(a = 2\)</span> and <span class="math inline">\(b = 5\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-dot-linear-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 10</em>. </span>By <a href="#/thm-dot-linear" class="quarto-xref">Theorem&nbsp;5</a>,</p>
+<p><span class="math display">\[
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot (2\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + 5\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}})
+= 2\,(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}) + 5\,(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}})
+= 2 \cdot 3 + 5 \cdot(-1)
+= 1.
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
 <div id="def-orthogonal-complement" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 5 (Orthogonal complement)</strong></span> The <strong>orthogonal complement</strong> <span class="citation" data-cites="wikipedia_orthogonal_complement"><a href="#/references" role="doc-biblioref" onclick="">[5]</a></span> of a set <span class="math inline">\(\mathcal{X}\)</span> of vectors in <span class="math inline">\(\mathbb{R}^p\)</span> is the set of vectors orthogonal (<a href="./linear-algebra-vectors.html#def-orthogonal-vectors">Definition&nbsp;19 in Vectors</a>) to every vector of <span class="math inline">\(\mathcal{X}\)</span>:</p>
 <p><span class="math display">\[
@@ -802,6 +1092,40 @@ u_1 &amp;= u_2 \\
 \]</span></p>
 <p>forces <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>.</p></li>
 </ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exr-orthogonal-complement-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 11 (Testing whether a vector is in an orthogonal complement)</strong></span> A vector is in the <a href="#/def-orthogonal-complement">orthogonal complement</a> of a <a href="https://morrison-lab.github.io/mcs/sets.html#def-set">set</a> when it is <a href="./linear-algebra-vectors.html#def-orthogonal-vectors">orthogonal</a> to every vector of the set. Let <span class="math inline">\(\mathcal{X} = \mathopen{}\left\{(1, 2, 0), (0, 3, 1)\right\}\mathclose{}\)</span>, a set of two vectors in <span class="math inline">\(\mathbb{R}^3\)</span>.</p>
+<p>Decide whether the vector <span class="math inline">\((2, -1, 3)\)</span> is in <span class="math inline">\(\mathcal{X}^\perp\)</span>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Take the <a href="./linear-algebra-vectors.html#def-dot-product">dot product</a> of <span class="math inline">\((2, -1, 3)\)</span> with each vector of <span class="math inline">\(\mathcal{X}\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-orthogonal-complement-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 11</em>. </span>Here</p>
+<p><span class="math display">\[
+\begin{aligned}
+(1, 2, 0) \cdot (2, -1, 3) &amp;= 2 - 2 + 0 = 0,
+\\
+(0, 3, 1) \cdot (2, -1, 3) &amp;= 0 - 3 + 3 = 0,
+\end{aligned}
+\]</span></p>
+<p>so <span class="math inline">\((2, -1, 3)\)</span> is <a href="./linear-algebra-vectors.html#def-orthogonal-vectors">orthogonal</a> to both vectors of <span class="math inline">\(\mathcal{X}\)</span>, and it is in <span class="math inline">\(\mathcal{X}^\perp\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -878,6 +1202,36 @@ u_1 &amp;= u_2 \\
 </section>
 <section class="slide level2">
 
+<div id="exr-orthogonal-complement-subspace-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 12 (Finding the orthogonal complement of two vectors)</strong></span> <a href="#/thm-orthogonal-complement-subspace" class="quarto-xref">Theorem&nbsp;6</a> says that an <a href="#/def-orthogonal-complement">orthogonal complement</a> is always a <a href="./linear-algebra-subspaces.html#def-subspace">subspace</a>, even when the original <a href="https://morrison-lab.github.io/mcs/sets.html#def-set">set</a> is not. Let <span class="math inline">\(\mathcal{X} = \mathopen{}\left\{(1, 0, 1), (1, 0, -1)\right\}\mathclose{}\)</span>, a set of two vectors in <span class="math inline">\(\mathbb{R}^3\)</span>.</p>
+<p>Find <span class="math inline">\(\mathcal{X}^\perp\)</span> as a <a href="./linear-algebra-subspaces.html#def-span">span</a>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>A vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span> is in <span class="math inline">\(\mathcal{X}^\perp\)</span> when <span class="math inline">\(u_1 + u_3 = 0\)</span> and <span class="math inline">\(u_1 - u_3 = 0\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-orthogonal-complement-subspace-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 12</em>. </span>A vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span> is in <span class="math inline">\(\mathcal{X}^\perp\)</span> exactly when <span class="math inline">\((1, 0, 1) \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = u_1 + u_3 = 0\)</span> and <span class="math inline">\((1, 0, -1) \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = u_1 - u_3 = 0\)</span>. Adding the two equations gives <span class="math inline">\(u_1 = 0\)</span>, and then <span class="math inline">\(u_3 = 0\)</span>, while <span class="math inline">\(u_2\)</span> is free. So</p>
+<p><span class="math display">\[
+\mathcal{X}^\perp = \mathopen{}\left\{(0, u_2, 0) : u_2 \in \mathbb{R}\right\}\mathclose{} = \operatorname{span}\mathopen{}\left\{(0, 1, 0)\right\}\mathclose{},
+\]</span></p>
+<p>the second coordinate axis, which is a <a href="./linear-algebra-subspaces.html#def-subspace">subspace</a>, as <a href="#/thm-orthogonal-complement-subspace" class="quarto-xref">Theorem&nbsp;6</a> says.</p>
+</div>
+</section>
+<section class="slide level2">
+
 <div id="thm-complement-null-space" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 7 (The orthogonal complement of a column space is a null space)</strong></span> For any <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span>,</p>
 <p><span class="math display">\[
@@ -950,6 +1304,43 @@ u_1 &amp;= u_2 \\
 &amp;&amp; \text{(arithmetic)}
 \end{aligned}
 \]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exr-complement-null-space-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 13 (Finding the orthogonal complement of a column space)</strong></span> <a href="#/thm-complement-null-space" class="quarto-xref">Theorem&nbsp;7</a> turns the <a href="#/def-orthogonal-complement">orthogonal complement</a> of a <a href="./linear-algebra-rank-nullity.html#def-column-space">column space</a> into a <a href="./linear-algebra-rank-nullity.html#def-null-space">null space</a>, which a <a href="./linear-algebra-matrices.html#def-linear-system">linear system</a> describes. Let</p>
+<p><span class="math display">\[
+\mathbf{A} = \begin{bmatrix}1 &amp; 0 \\ 0 &amp; 1 \\ 1 &amp; 1\end{bmatrix}.
+\]</span></p>
+<p>Find <span class="math inline">\(\mathcal{C}(\mathbf{A})^\perp\)</span> as a <a href="./linear-algebra-subspaces.html#def-span">span</a>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Solve <span class="math inline">\({\mathbf{A}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-complement-null-space-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 13</em>. </span>By <a href="#/thm-complement-null-space" class="quarto-xref">Theorem&nbsp;7</a>, <span class="math inline">\(\mathcal{C}(\mathbf{A})^\perp = \mathcal{N}({\mathbf{A}}^{\top})\)</span>. For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = (y_1, y_2, y_3)\)</span>,</p>
+<p><span class="math display">\[
+{\mathbf{A}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \begin{bmatrix}1 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 1\end{bmatrix} \begin{bmatrix}y_1 \\ y_2 \\ y_3\end{bmatrix} = \begin{bmatrix}y_1 + y_3 \\ y_2 + y_3\end{bmatrix},
+\]</span></p>
+<p>which is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2\)</span> exactly when <span class="math inline">\(y_1 = y_2 = -y_3\)</span>. So</p>
+<p><span class="math display">\[
+\mathcal{C}(\mathbf{A})^\perp = \operatorname{span}\mathopen{}\left\{(-1, -1, 1)\right\}\mathclose{}.
+\]</span></p>
+<p>As a check, <span class="math inline">\((-1, -1, 1)\)</span> is <a href="./linear-algebra-vectors.html#def-orthogonal-vectors">orthogonal</a> to both <a href="./linear-algebra-matrices.html#def-matrix-column">columns of <span class="math inline">\(\mathbf{A}\)</span></a>: <span class="math inline">\(-1 + 0 + 1 = 0\)</span> and <span class="math inline">\(0 - 1 + 1 = 0\)</span>.</p>
 </div>
 </section>
 <section class="slide level2 scrollable">
@@ -1059,6 +1450,36 @@ a &amp;= c \\
 </section>
 <section class="slide level2">
 
+<div id="exr-orthogonal-direct-sum-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 14 (Splitting a vector into a piece in a line and an orthogonal piece)</strong></span> By <a href="#/thm-orthogonal-direct-sum" class="quarto-xref">Theorem&nbsp;8</a>, every vector of <span class="math inline">\(\mathbb{R}^p\)</span> splits in only one way into a piece in a <a href="./linear-algebra-subspaces.html#def-subspace">subspace</a> <span class="math inline">\(\mathcal{S}\)</span> and a piece in its <a href="#/def-orthogonal-complement">orthogonal complement</a>. Let <span class="math inline">\(\mathcal{S} = \operatorname{span}\mathopen{}\left\{(1, 2)\right\}\mathclose{}\)</span>, a line in <span class="math inline">\(\mathbb{R}^2\)</span>, and let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = (5, 0)\)</span>.</p>
+<p>Find <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \in \mathcal{S}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \in \mathcal{S}^\perp\)</span> with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Take <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = t\,(1, 2)\)</span>, and choose <span class="math inline">\(t\)</span> so that <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span> is <a href="./linear-algebra-vectors.html#def-orthogonal-vectors">orthogonal</a> to <span class="math inline">\((1, 2)\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-orthogonal-direct-sum-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 14</em>. </span>Take <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = t\,(1, 2)\)</span>. Then <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = (5 - t, -2t)\)</span> is in <span class="math inline">\(\mathcal{S}^\perp\)</span> exactly when</p>
+<p><span class="math display">\[
+(1, 2) \cdot (5 - t, -2t) = 5 - t - 4t = 5 - 5t = 0,
+\]</span></p>
+<p>so <span class="math inline">\(t = 1\)</span>. Then <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = (1, 2)\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (4, -2)\)</span>, with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (5, 0)\)</span> and <span class="math inline">\((1, 2) \cdot (4, -2) = 4 - 4 = 0\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
 <div id="thm-double-complement" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 9 (The orthogonal complement of the orthogonal complement)</strong></span> For any subspace <span class="math inline">\(\mathcal{S}\)</span> of <span class="math inline">\(\mathbb{R}^p\)</span>,</p>
 <p><span class="math display">\[
@@ -1100,6 +1521,36 @@ a &amp;= c \\
 
 <div id="exm-double-complement-fails" class="theorem example">
 <p><span class="theorem-title"><strong>Example 17 (A set that is not a subspace does not come back)</strong></span> The one-element set <span class="math inline">\(\mathcal{X} = \mathopen{}\left\{(1, 1, 0)\right\}\mathclose{}\)</span> is not a subspace. Its orthogonal complement is the same as that of <span class="math inline">\(\mathcal{S}\)</span> in <a href="#/exm-double-complement" class="quarto-xref">Example&nbsp;16</a>, since both are defined by the single condition <span class="math inline">\(u_1 + u_2 = 0\)</span>, so <span class="math inline">\((\mathcal{X}^\perp)^\perp = \operatorname{span}\mathopen{}\left\{(1, 1, 0)\right\}\mathclose{}\)</span>, which contains <span class="math inline">\((2, 2, 0) \notin \mathcal{X}\)</span>. <a href="#/thm-double-complement" class="quarto-xref">Theorem&nbsp;9</a> needs <span class="math inline">\(\mathcal{S}\)</span> to be a subspace.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exr-double-complement-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 15 (Taking the orthogonal complement twice)</strong></span> <a href="#/thm-double-complement" class="quarto-xref">Theorem&nbsp;9</a> says that taking the <a href="#/def-orthogonal-complement">orthogonal complement</a> of a <a href="./linear-algebra-subspaces.html#def-subspace">subspace</a> twice gives back the subspace. Let <span class="math inline">\(\mathcal{S} = \operatorname{span}\mathopen{}\left\{(1, 2)\right\}\mathclose{}\)</span> in <span class="math inline">\(\mathbb{R}^2\)</span>, whose orthogonal complement is <span class="math inline">\(\mathcal{S}^\perp = \operatorname{span}\mathopen{}\left\{(-2, 1)\right\}\mathclose{}\)</span>.</p>
+<p>Find <span class="math inline">\((\mathcal{S}^\perp)^\perp\)</span> directly from <span class="math inline">\(\mathcal{S}^\perp = \operatorname{span}\mathopen{}\left\{(-2, 1)\right\}\mathclose{}\)</span>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>A vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> is <a href="./linear-algebra-vectors.html#def-orthogonal-vectors">orthogonal</a> to every multiple of <span class="math inline">\((-2, 1)\)</span> exactly when <span class="math inline">\(-2 w_1 + w_2 = 0\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-double-complement-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 15</em>. </span>A vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> is in <span class="math inline">\((\mathcal{S}^\perp)^\perp\)</span> exactly when <span class="math inline">\(c\,(-2, 1) \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = c\,(-2 w_1 + w_2) = 0\)</span> for every <span class="math inline">\(c\)</span>, that is, when <span class="math inline">\(w_2 = 2 w_1\)</span>. So</p>
+<p><span class="math display">\[
+(\mathcal{S}^\perp)^\perp = \mathopen{}\left\{(w_1, 2 w_1) : w_1 \in \mathbb{R}\right\}\mathclose{} = \operatorname{span}\mathopen{}\left\{(1, 2)\right\}\mathclose{} = \mathcal{S},
+\]</span></p>
+<p>as <a href="#/thm-double-complement" class="quarto-xref">Theorem&nbsp;9</a> says.</p>
 </div>
 </section>
 <section id="sec-fundamental-theorem" class="slide level2" data-number="3">
@@ -1149,7 +1600,7 @@ a &amp;= c \\
 <p><strong>Part 4.</strong> <span class="math inline">\(\dim\mathopen{}\left(\mathcal{C}(\mathbf{A})\right)\mathclose{} = r\)</span> by <a href="./linear-algebra-rank-nullity.html#thm-rank-dim">Theorem&nbsp;7 in Column Space, Null Space and Rank-Nullity</a>. <span class="math inline">\(\dim\mathopen{}\left(\mathcal{C}({\mathbf{A}}^{\top})\right)\mathclose{} = \operatorname{rank}({\mathbf{A}}^{\top})\)</span> by <a href="./linear-algebra-rank-nullity.html#thm-rank-dim">Theorem&nbsp;7 in Column Space, Null Space and Rank-Nullity</a>, and that is <span class="math inline">\(r\)</span> by <a href="./linear-algebra-rank-nullity.html#thm-rank-transpose">Theorem&nbsp;10 in Column Space, Null Space and Rank-Nullity</a>. <span class="math inline">\(\mathbf{A}\)</span> has <span class="math inline">\(n\)</span> columns, so <span class="math inline">\(\dim\mathopen{}\left(\mathcal{N}(\mathbf{A})\right)\mathclose{} = n - r\)</span> (<a href="./linear-algebra-rank-nullity.html#def-nullity">Definition&nbsp;7 in Column Space, Null Space and Rank-Nullity</a>, <a href="./linear-algebra-rank-nullity.html#thm-rank-nullity">Theorem&nbsp;8 in Column Space, Null Space and Rank-Nullity</a>). <span class="math inline">\({\mathbf{A}}^{\top}\)</span> has <span class="math inline">\(m\)</span> columns and rank <span class="math inline">\(r\)</span>, so <span class="math inline">\(\dim\mathopen{}\left(\mathcal{N}({\mathbf{A}}^{\top})\right)\mathclose{} = m - r\)</span> in the same way.</p>
 </div>
 </section>
-<section class="slide level2 smaller scrollable" id="references">
+<section class="slide level2 scrollable">
 
 <div id="exm-fundamental-subspaces" class="theorem example">
 <p><span class="theorem-title"><strong>Example 18 (The four subspaces of the matrix in <a href="./linear-algebra-rank-nullity.html#exm-column-space">Example&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>)</strong></span> For <span class="math inline">\(\mathbf{A}\)</span> in <a href="./linear-algebra-rank-nullity.html#exm-column-space">Example&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>, <span class="math inline">\(m = 2\)</span>, <span class="math inline">\(n = 3\)</span> and <span class="math inline">\(r = 1\)</span> (<a href="./linear-algebra-rank-nullity.html#exm-rank-dim">Example&nbsp;11 in Column Space, Null Space and Rank-Nullity</a>).</p>
@@ -1195,6 +1646,41 @@ a &amp;= c \\
 \]</span></p>
 <p>so <span class="math inline">\(t = \frac{1}{9}\)</span>. The row-space part is <span class="math inline">\(\mathopen{}\left(\frac{1}{9}, -\frac{2}{9}, -\frac{2}{9}\right)\mathclose{}\)</span> and the null-space part is <span class="math inline">\(\mathopen{}\left(\frac{8}{9}, \frac{2}{9}, \frac{2}{9}\right)\mathclose{}\)</span>; as a check, row 1 of <span class="math inline">\(\mathbf{A}\)</span> gives <span class="math inline">\(\frac{8}{9} - 2 \cdot\frac{2}{9} - 2 \cdot\frac{2}{9} = 0\)</span>, and row 2 is <span class="math inline">\(3\)</span> times row 1, so <span class="math inline">\(\mathbf{A}\)</span> sends the null-space part to <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2\)</span>.</p>
 <p>These four statements are the fundamental theorem of linear algebra <span class="citation" data-cites="wikipedia_fundamental_theorem_of_linear_algebra"><a href="#/references" role="doc-biblioref" onclick="">[6]</a></span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exr-fundamental-subspaces-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 16 (Testing whether a linear system has a solution through the left null space)</strong></span> Part 2 of <a href="#/thm-fundamental-subspaces" class="quarto-xref">Theorem&nbsp;10</a> says that <span class="math inline">\(\mathcal{C}(\mathbf{A}) = \mathcal{N}({\mathbf{A}}^{\top})^\perp\)</span>, so a <a href="./linear-algebra-matrices.html#def-linear-system">linear system</a> <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> has a solution exactly when <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> is <a href="./linear-algebra-vectors.html#def-orthogonal-vectors">orthogonal</a> to every vector of the <a href="./linear-algebra-rank-nullity.html#def-left-null-space">left null space</a>. Let</p>
+<p><span class="math display">\[
+\mathbf{A} = \begin{bmatrix}1 &amp; 1 \\ 1 &amp; 1 \\ 0 &amp; 0\end{bmatrix},
+\qquad
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \begin{bmatrix}1 \\ 2 \\ 0\end{bmatrix}.
+\]</span></p>
+<p>Decide whether <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> has a solution, by testing <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> against <span class="math inline">\(\mathcal{N}({\mathbf{A}}^{\top})\)</span>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Find one nonzero vector of <span class="math inline">\(\mathcal{N}({\mathbf{A}}^{\top})\)</span> whose third entry is <span class="math inline">\(0\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2 smaller scrollable" id="references">
+
+<div id="sol-fundamental-subspaces-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 16</em>. </span>Here <span class="math inline">\({\mathbf{A}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = (y_1 + y_2, y_1 + y_2)\)</span>, so <span class="math inline">\((1, -1, 0)\)</span> is in <span class="math inline">\(\mathcal{N}({\mathbf{A}}^{\top})\)</span>. But</p>
+<p><span class="math display">\[
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \cdot (1, -1, 0) = 1 - 2 + 0 = -1 \neq 0,
+\]</span></p>
+<p>so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> is not in <span class="math inline">\(\mathcal{N}({\mathbf{A}}^{\top})^\perp = \mathcal{C}(\mathbf{A})\)</span>, and <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> has no solution. Directly, the first two entries of <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> are both <span class="math inline">\(x_1 + x_2\)</span>, while those of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> are <span class="math inline">\(1\)</span> and <span class="math inline">\(2\)</span>.</p>
 </div>
 
 

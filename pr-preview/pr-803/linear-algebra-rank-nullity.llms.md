@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-11-12 18:57:20 (PST)
+Last modified: 2026-11-12 21:12:08 (PST)
 
 # 1 Column space and null space
 
@@ -1165,6 +1165,34 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 
 > **NOTE:**
 >
+> **Exercise 21 (Finding how large the rank of centered data can be)** Centering a data [matrix](linear-algebra-matrices.llms.md#def-matrix) subtracts the [mean](linear-algebra-vectors.llms.md#def-mean) vector from every [row](linear-algebra-matrices.llms.md#def-matrix-row), and [Theorem 12](#thm-centered-data-rank) shows how large the [rank](linear-algebra-subspaces.llms.md#def-rank) of the result can be. Suppose that $\mathbf{X}$ holds $3$ observations of $4$ features, as a $3 \times 4$ matrix, and $\mathbf{X}_c$ is its centered version.
+>
+> Find the number that, by [Theorem 12](#thm-centered-data-rank), ${\operatorname{rank}\mathopen{}\left(\mathbf{X}_c\right)\mathclose{}}$ cannot exceed.
+>
+> > **TIP:**
+> >
+> > Compare the number from [Theorem 12](#thm-centered-data-rank) with the one from [Corollary 1](#cor-rank-bound).
+
+> **NOTE:**
+>
+> *Solution 21*. By [Theorem 12](#thm-centered-data-rank) with $n = 3$, ${\operatorname{rank}\mathopen{}\left(\mathbf{X}_c\right)\mathclose{}} \le 3 - 1 = 2$. That number is smaller than $\min\mathopen{}\left\{3, 4\right\}\mathclose{} = 3$ from [Corollary 1](#cor-rank-bound): the three centered [rows](linear-algebra-matrices.llms.md#def-matrix-row) add up to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_4$, so they are [linearly dependent](linear-algebra-subspaces.llms.md#def-linearly-independent).
+
+> **NOTE:**
+>
+> **Exercise 22 (Deciding whether a sample covariance matrix is invertible)** A study records $6$ features for each of $4$ people, and forms the $6 \times 6$ sample covariance [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{S}$ defined in [Corollary 3](#cor-sample-covariance-singular).
+>
+> Decide whether $\mathbf{S}$ is [invertible](linear-algebra-special-matrices.llms.md#def-invertible-matrix).
+>
+> > **TIP:**
+> >
+> > Compare $n$ with $p$.
+
+> **NOTE:**
+>
+> *Solution 22*. Here $n = 4$ and $p = 6$, so $n \le p$. By [Corollary 3](#cor-sample-covariance-singular), ${\operatorname{rank}\mathopen{}\left(\mathbf{S}\right)\mathclose{}} \le 4 - 1 = 3 < 6$, so $\mathbf{S}$ is not [invertible](linear-algebra-special-matrices.llms.md#def-invertible-matrix).
+
+> **NOTE:**
+>
 > **Definition 8 (Affine subspace)** An **affine subspace** [\[6\]](#ref-wikipedia_affine_space) of $\mathbb{R}^p$ is a set of the form
 >
 > $$\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} \in \mathcal{S}\right\}\mathclose{}$$
@@ -1185,6 +1213,24 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 > \end{aligned}$$
 >
 > and as $c$ ranges over $\mathbb{R}$, $(c, 1)$ ranges over all of $\mathcal{T}$. Every subspace $\mathcal{S}$ is also an affine subspace, with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$.
+
+> **NOTE:**
+>
+> **Exercise 23 (Writing a line as an affine subspace)** A line such as $y = 2x + 3$ in $\mathbb{R}^2$ misses the origin, so it is not a [subspace](linear-algebra-subspaces.llms.md#def-subspace), but it is an [affine subspace](#def-affine-subspace). Let $\mathcal{T} = \mathopen{}\left\{(x, 2x + 3) : x \in \mathbb{R}\right\}\mathclose{}$.
+>
+> Find a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0$ and a subspace $\mathcal{S}$ with $\mathcal{T} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} \in \mathcal{S}\right\}\mathclose{}$.
+>
+> > **TIP:**
+> >
+> > Take $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0$ to be the point of $\mathcal{T}$ with $x = 0$, and see what is left of $(x, 2x + 3)$ once you subtract it.
+
+> **NOTE:**
+>
+> *Solution 23*. Take $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 = (0, 3)$, and let $\mathcal{S} = \operatorname{span}\mathopen{}\left\{(1, 2)\right\}\mathclose{}$ be the [span](linear-algebra-subspaces.llms.md#def-span) of $(1, 2)$. For any $c \in \mathbb{R}$,
+>
+> $$(0, 3) + c\,(1, 2) = (c, 2c + 3),$$
+>
+> so every $c \in \mathbb{R}$ gives a point $(c, 2c + 3)$ of $\mathcal{T}$, and every point of $\mathcal{T}$ arises this way.
 
 > **NOTE:**
 >
@@ -1282,6 +1328,24 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 
 > **NOTE:**
 >
+> **Exercise 24 (Checking that a normal vector is orthogonal to a hyperplane)** Part 3 of [Theorem 13](#thm-hyperplane-subspace) says that, for a [hyperplane](linear-algebra-matrices.llms.md#def-hyperplane), its [normal vector](linear-algebra-matrices.llms.md#def-normal-vector) is [orthogonal](linear-algebra-vectors.llms.md#def-orthogonal-vectors) to the difference of any two of its points. Let $\mathcal{H} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^3 : 2 x_1 - x_2 + x_3 - 4 = 0\right\}\mathclose{}$, with normal vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (2, -1, 1)$. The points $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (2, 0, 0)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (0, 0, 4)$ are both in $\mathcal{H}$.
+>
+> Check that $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) = 0$.
+>
+> > **TIP:**
+> >
+> > Compute $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ first.
+
+> **NOTE:**
+>
+> *Solution 24*. Here $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (2, 0, -4)$, and
+>
+> $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) = 2 \cdot 2 + (-1) \cdot 0 + 1 \cdot(-4) = 0,$$
+>
+> as part 3 of [Theorem 13](#thm-hyperplane-subspace) says.
+
+> **NOTE:**
+>
 > **Theorem 14 (Where a hyperplane passes, and its shape in** $\mathbb{R}^2$ and $\mathbb{R}^3$) Let $\mathcal{H} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b = 0\right\}\mathclose{}$ be a hyperplane ([Definition 27 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)).
 >
 > 1.  $\mathcal{H}$ contains the origin $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ exactly when $b = 0$.
@@ -1346,6 +1410,24 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 
 > **NOTE:**
 >
+> **Exercise 25 (Describing a line in** $\mathbb{R}^2$ by a point and a vector) Part 2 of [Theorem 14](#thm-hyperplane-origin) says that a [hyperplane](linear-algebra-matrices.llms.md#def-hyperplane) in $\mathbb{R}^2$ is a line $\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} : t \in \mathbb{R}\right\}\mathclose{}$ for a point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0$ and a nonzero vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$. Let $\mathcal{H} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^2 : 2 x_1 + x_2 - 4 = 0\right\}\mathclose{}$.
+>
+> Find a point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0$ and a nonzero vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ with $\mathcal{H} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} : t \in \mathbb{R}\right\}\mathclose{}$.
+>
+> > **TIP:**
+> >
+> > Find one point of $\mathcal{H}$ by setting $x_2 = 0$, and take $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (-w_2, w_1)$ as in [Example 23](#exm-hyperplane-origin).
+
+> **NOTE:**
+>
+> *Solution 25*. Setting $x_2 = 0$ gives $x_1 = 2$, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 = (2, 0)$ is in $\mathcal{H}$. With $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (2, 1)$, take $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (-1, 2)$. Then $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (2 - t, 2t)$, and
+>
+> $$2\,(2 - t) + 2t - 4 = 0$$
+>
+> for every $t$. Conversely, a point $(x_1, x_2)$ of $\mathcal{H}$ has $x_2 = 4 - 2 x_1$, so it is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ with $t = 2 - x_1$.
+
+> **NOTE:**
+>
 > **Theorem 15 (The graph of an affine function is a hyperplane)** Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\in \mathbb{R}^p$, $b \in \mathbb{R}$. The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of the [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\mapsto \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b$ is the [set](https://morrison-lab.github.io/mcs/sets.html#def-set)
 >
 > $$\mathopen{}\left\{\begin{bmatrix}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\\ y\end{bmatrix} \in \mathbb{R}^{p+1} : y = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b\right\}\mathclose{}.$$
@@ -1406,6 +1488,20 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 
 > **NOTE:**
 >
+> **Exercise 26 (Finding the normal vector of the graph of a regression surface)** [Theorem 15](#thm-hyperplane-graph) says that the [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\mapsto \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b$ is a [hyperplane](linear-algebra-matrices.llms.md#def-hyperplane) in $\mathbb{R}^{p+1}$. Let $f(x_1, x_2) = 3 x_1 - x_2 + 2$, a regression surface with two features.
+>
+> Find a [normal vector](linear-algebra-matrices.llms.md#def-normal-vector) for the graph of $f$ in $\mathbb{R}^3$.
+>
+> > **TIP:**
+> >
+> > Read off $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ and use the [normal vector](linear-algebra-matrices.llms.md#def-normal-vector) $\begin{bmatrix}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\\ -1\end{bmatrix}$ from [Theorem 15](#thm-hyperplane-graph).
+
+> **NOTE:**
+>
+> *Solution 26*. Here $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}= (3, -1)$ and $b = 2$. By [Theorem 15](#thm-hyperplane-graph), the [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $f$ is a [hyperplane](linear-algebra-matrices.llms.md#def-hyperplane) in $\mathbb{R}^3$ with [normal vector](linear-algebra-matrices.llms.md#def-normal-vector) $(3, -1, -1)$: it holds the points $(x_1, x_2, y)$ with $3 x_1 - x_2 - y + 2 = 0$.
+
+> **NOTE:**
+>
 > **Definition 9 (Open half-space)** Let $\mathcal{H} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b = 0\right\}\mathclose{}$ be a hyperplane ([Definition 27 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)). The two **open half-spaces** [\[7\]](#ref-wikipedia_half_space_geometry) of $\mathcal{H}$ are
 >
 > $$\mathcal{H}^+ \stackrel{\text{def}}{=}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b > 0\right\}\mathclose{}
@@ -1430,6 +1526,34 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 > - At $(2, 1)$ it equals $2 + 2 - 2 = 2 > 0$, so $(2, 1) \in \mathcal{H}^+$.
 >
 > Moving from $(2, 0)$ in the direction $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, 2)$ gives $(3, 2)$, where the value is $3 + 4 - 2 = 5 > 0$. So the direction $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ leads into $\mathcal{H}^+$.
+
+> **NOTE:**
+>
+> **Exercise 27 (Finding which open half-space holds a point)** The sign of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b$ tells which [open half-space](#def-half-space) of a [hyperplane](linear-algebra-matrices.llms.md#def-hyperplane) a point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ lies in. Let $\mathcal{H}$ be the line in $\mathbb{R}^2$ with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (2, -1)$ and $b = -1$.
+>
+> Decide whether $(0, 0)$ is in $\mathcal{H}^+$ or in $\mathcal{H}^-$.
+>
+> > **TIP:**
+> >
+> > Evaluate $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b$ at $(0, 0)$.
+
+> **NOTE:**
+>
+> *Solution 27*. At $(0, 0)$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b = 0 + 0 - 1 = -1 < 0$, so $(0, 0)$ is in the [open half-space](#def-half-space) $\mathcal{H}^-$.
+
+> **NOTE:**
+>
+> **Exercise 28 (Testing whether a point is in a closed half-space)** A [closed half-space](#def-closed-half-space) adds the [hyperplane](linear-algebra-matrices.llms.md#def-hyperplane) itself to an [open half-space](#def-half-space). Let $\mathcal{H}$ be the line in $\mathbb{R}^2$ with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (2, -1)$ and $b = -3$.
+>
+> Decide whether the point $(2, 1)$ is in the closed half-space $\mathcal{H}^+ \cup \mathcal{H}$.
+>
+> > **TIP:**
+> >
+> > Evaluate $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b$ at $(2, 1)$.
+
+> **NOTE:**
+>
+> *Solution 28*. At $(2, 1)$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b = 4 - 1 - 3 = 0$, so $(2, 1) \in \mathcal{H}$. It is therefore in the [closed half-space](#def-closed-half-space) $\mathcal{H}^+ \cup \mathcal{H}$, though not in the [open half-space](#def-half-space) $\mathcal{H}^+$.
 
 > **NOTE:**
 >
@@ -1518,7 +1642,7 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 
 > **NOTE:**
 >
-> **Exercise 21 (Which side of the plane?)** Let $\mathcal{H}$ be the plane in $\mathbb{R}^3$ with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, 1, 1)$ and $b = -1$ ([Example 22](#exm-hyperplane-subspace)).
+> **Exercise 29 (Which side of the plane?)** Let $\mathcal{H}$ be the plane in $\mathbb{R}^3$ with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, 1, 1)$ and $b = -1$ ([Example 22](#exm-hyperplane-subspace)).
 >
 > 1.  For each point, say whether it is in $\mathcal{H}^+$, $\mathcal{H}$ or $\mathcal{H}^-$ ([Definition 9](#def-half-space)): $(0, 0, 0)$, $(1, 0, 0)$ and $(1, 1, 1)$.
 > 2.  Write the plane and its half-spaces using $-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ and $-b$. Which points from part 1 change sides?
@@ -1526,7 +1650,7 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 
 > **NOTE:**
 >
-> *Solution 21*.
+> *Solution 29*.
 >
 > 1.  Compute $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b = x_1 + x_2 + x_3 - 1$ at each point.
 >
@@ -1580,6 +1704,63 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 > **NOTE:**
 >
 > **Example 28 (Building a rank factorization from a basis)** For $\mathbf{A}$ in [Example 1](#exm-column-space), $(1, 3)$ spans $\mathcal{C}(\mathbf{A})$ ([Example 2](#exm-column-space-span)), and it is linearly independent because it is nonzero ($c\,(1, 3) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2$ forces $c = 0$), so it is a basis of $\mathcal{C}(\mathbf{A})$. The columns of $\mathbf{A}$ are $(1, 3) = 1 \cdot(1, 3)$, $(-2, -6) = -2 \cdot(1, 3)$ and $(-2, -6) = -2 \cdot(1, 3)$, so the construction in [Theorem 17](#thm-rank-factorization) gives $\mathbf{C} = \begin{bmatrix} 1 \\ 3 \end{bmatrix}$ and $\mathbf{R} = \begin{bmatrix} 1 & -2 & -2 \end{bmatrix}$, the factorization in [Example 27](#exm-rank-factorization).
+
+> **NOTE:**
+>
+> **Exercise 30 (Finding a rank factorization of a rank-one matrix)** A [rank factorization](#def-rank-factorization) writes an $m \times n$ [matrix](linear-algebra-matrices.llms.md#def-matrix) with [rank](linear-algebra-subspaces.llms.md#def-rank) $r$ as a [matrix product](linear-algebra-matrices.llms.md#def-matrix-mult) of an $m \times r$ and an $r \times n$ matrix. Let
+>
+> $$\mathbf{A} = \begin{bmatrix}2 & 4 \\ 1 & 2\end{bmatrix}.$$
+>
+> Find a rank factorization of $\mathbf{A}$.
+>
+> > **TIP:**
+> >
+> > In $\mathbf{A}$, the second [column](linear-algebra-matrices.llms.md#def-matrix-column) is twice the first, so ${\operatorname{rank}\mathopen{}\left(\mathbf{A}\right)\mathclose{}} = 1$.
+
+> **NOTE:**
+>
+> *Solution 30*. [Columns of](linear-algebra-matrices.llms.md#def-matrix-column) $\mathbf{A}$ are $(2, 1)$ and $(4, 2) = 2\,(2, 1)$, so ${\operatorname{rank}\mathopen{}\left(\mathbf{A}\right)\mathclose{}} = 1$, and
+>
+> $$\begin{bmatrix}2 \\ 1\end{bmatrix} \begin{bmatrix}1 & 2\end{bmatrix}
+> = \begin{bmatrix}2 \cdot 1 & 2 \cdot 2 \\ 1 \cdot 1 & 1 \cdot 2\end{bmatrix}
+> = \begin{bmatrix}2 & 4 \\ 1 & 2\end{bmatrix}
+> = \mathbf{A}.$$
+>
+> So $\mathbf{C} = \begin{bmatrix}2 \\ 1\end{bmatrix}$ ($2 \times 1$) and $\mathbf{R} = \begin{bmatrix}1 & 2\end{bmatrix}$ ($1 \times 2$) are a rank factorization.
+
+> **NOTE:**
+>
+> **Exercise 31 (Building a rank factorization from a basis of the column space)** [Theorem 17](#thm-rank-factorization) builds a [rank factorization](#def-rank-factorization) from a [basis](linear-algebra-subspaces.llms.md#def-basis) of the [column space](#def-column-space). Let
+>
+> $$\mathbf{A} = \begin{bmatrix}1 & 2 & 3 \\ 2 & 4 & 6 \\ 1 & 0 & 1\end{bmatrix},$$
+>
+> in which [column](linear-algebra-matrices.llms.md#def-matrix-column) $3$ is column $1$ plus column $2$.
+>
+> Find a rank factorization $\mathbf{A} = \mathbf{C}\mathbf{R}$ in which $\mathbf{C}$ holds [columns 1 and 2 of](linear-algebra-matrices.llms.md#def-matrix-column) $\mathbf{A}$.
+>
+> > **TIP:**
+> >
+> > [Column](linear-algebra-matrices.llms.md#def-matrix-column) $j$ of $\mathbf{R}$ says how much of [column](linear-algebra-matrices.llms.md#def-matrix-column) $1$ and of column $2$ of $\mathbf{C}$ add up to column $j$ of $\mathbf{A}$.
+
+> **NOTE:**
+>
+> *Solution 31*. [Columns 1 and 2 of](linear-algebra-matrices.llms.md#def-matrix-column) $\mathbf{A}$, $(1, 2, 1)$ and $(2, 4, 0)$, are [linearly independent](linear-algebra-subspaces.llms.md#def-linearly-independent): the third entry of $c_1\,(1, 2, 1) + c_2\,(2, 4, 0)$ is $c_1$, and then the first is $2 c_2$. They [span](linear-algebra-subspaces.llms.md#def-span) $\mathcal{C}(\mathbf{A})$, since the third [column](linear-algebra-matrices.llms.md#def-matrix-column) is the first plus the second, so ${\operatorname{rank}\mathopen{}\left(\mathbf{A}\right)\mathclose{}} = 2$. Each [column of](linear-algebra-matrices.llms.md#def-matrix-column) $\mathbf{A}$ in terms of them:
+>
+> $$\begin{aligned}
+> (1, 2, 1) &= 1 \cdot(1, 2, 1) + 0 \cdot(2, 4, 0),
+> \\
+> (2, 4, 0) &= 0 \cdot(1, 2, 1) + 1 \cdot(2, 4, 0),
+> \\
+> (3, 6, 1) &= 1 \cdot(1, 2, 1) + 1 \cdot(2, 4, 0).
+> \end{aligned}$$
+>
+> So
+>
+> $$\mathbf{C} = \begin{bmatrix}1 & 2 \\ 2 & 4 \\ 1 & 0\end{bmatrix},
+> \qquad
+> \mathbf{R} = \begin{bmatrix}1 & 0 & 1 \\ 0 & 1 & 1\end{bmatrix},$$
+>
+> and multiplying gives back $\mathbf{A}$.
 
 # Definitions on this page
 
