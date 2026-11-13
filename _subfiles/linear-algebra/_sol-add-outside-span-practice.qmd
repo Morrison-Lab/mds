@@ -1,0 +1,12 @@
+:::{#sol-add-outside-span-practice}
+
+Yes.
+$\vecf{v}_1$ and $\vecf{v}_2$ are [linearly independent](#def-linearly-independent):
+$c_1 \vecf{v}_1 + c_2 \vecf{v}_2 = \tp{(c_1, c_2, 0)}$ is $\vzero$ only for $c_1 = c_2 = 0$.
+Every vector in their [span](#def-span) has third entry $0$,
+and $\vecf{w}$ has third entry $1$,
+so $\vecf{w}$ is not in the span.
+By @thm-add-outside-span,
+$\vecf{v}_1$, $\vecf{v}_2$ and $\vecf{w}$ are linearly independent.
+
+:::
