@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-12 12:51:49 (PST)
+Last modified: 2026-11-12 17:37:58 (PST)
 
 The linear algebra notes are split across these pages:
 
@@ -27,7 +27,7 @@ A link to a section, theorem or definition on this page from before the split go
 
 > **NOTE:**
 >
-> **Example 1 (Eigenvalues of a small matrix)** The [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ has the [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) $3$ and $1$. Finding these eigenvalues is a question about $\mathbf{A}$ alone, so it is a topic of [matrix analysis](#def-matrix-analysis).
+> **Example 1 (Eigenvalues of a small matrix)** The [matrix](linear-algebra-matrices.llms.md#def-matrix) $\matr{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ has the [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) $3$ and $1$. Finding these eigenvalues is a question about $\matr{A}$ alone, so it is a topic of [matrix analysis](#def-matrix-analysis).
 
 > **NOTE:**
 >
