@@ -1,0 +1,24 @@
+:::{#exr-rank-subadditive-practice}
+#### Checking subadditivity of rank on two rank-one matrices
+
+@thm-rank-subadditive says that $\rankf{\matr{A} + \matr{B}} \le \rankf{\matr{A}} + \rankf{\matr{B}}$
+for [matrices](linear-algebra-matrices.qmd#def-matrix) of the same size.
+Let
+
+$$
+\matr{A} = \sbmat{1 & 2 \\ 2 & 4},
+\qquad
+\matr{B} = \sbmat{0 & 1 \\ 0 & 3}.
+$$
+
+Find $\rankf{\matr{A} + \matr{B}}$.
+
+::: {.callout-tip}
+#### Hint
+
+Each of $\matr{A}$ and $\matr{B}$ has [rank](linear-algebra-subspaces.qmd#def-rank) $1$,
+so @thm-rank-subadditive allows at most $2$.
+
+:::
+
+:::
