@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-11-13 15:52:10 (PST)
+Last modified: 2026-11-13 18:15:31 (PST)
 
 # 1 Column space and null space
 
@@ -631,7 +631,7 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 > && \text{(}\href{linear-algebra-matrices.qmd#exm-dot-product-matmul}{\text{Example~8 in Matrices}}\text{)}
 > \\
 > &= \mathopen{}\left\lVert\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}^2.
-> && \text{(square both sides of }\href{linear-algebra-vectors.qmd#eq-l2-norm}{\text{Equation~4 in Vectors}}\text{)}
+> && \text{(square both sides of }\href{linear-algebra-vectors.qmd#eq-norm-dot-product}{\text{Equation~5 in Vectors}}\text{)}
 > \end{aligned}$$
 >
 > A vector whose Euclidean norm is $0$ has every entry $0$, so $\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_m$.

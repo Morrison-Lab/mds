@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-13 15:52:10 (PST)
+Last modified: 2026-11-13 18:15:31 (PST)
 
 > **NOTE:**
 >
@@ -106,7 +106,7 @@ Last modified: 2026-11-13 15:52:10 (PST)
 
 > **NOTE:**
 >
-> **Example 3 (The model at** $x = 2.5$) For $f(x) = \tfrac{1}{3} x^3 - 4x$ at $x = 2.5$ ([Example 2](#exm-newton-method)),
+> **Example 3 (The quadratic approximation at** $x = 2.5$) For $f(x) = \tfrac{1}{3} x^3 - 4x$ at $x = 2.5$ ([Example 2](#exm-newton-method)),
 >
 > $$\begin{aligned}
 > g &= 2.5^2 - 4 \\
@@ -120,7 +120,7 @@ Last modified: 2026-11-13 15:52:10 (PST)
 > &= [5],
 > \end{aligned}$$
 >
-> so ${q\mathopen{}\left(\delta\right)\mathclose{}} = f(2.5) + 2.25\,\delta+ 2.5\,\delta^2$. For $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)$, whose Hessian is $\begin{bmatrix} 1 & 0 \\ 0 & 3 \end{bmatrix}$ at every point, the model at any $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ equals $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}})$ exactly ([Example 12 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#exm-taylor-mv) with $\mathbf{S} = \begin{bmatrix} 1/2 & 0 \\ 0 & 3/2 \end{bmatrix}$).
+> so ${q\mathopen{}\left(\delta\right)\mathclose{}} = f(2.5) + 2.25\,\delta+ 2.5\,\delta^2$. For $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)$, whose Hessian is $\begin{bmatrix} 1 & 0 \\ 0 & 3 \end{bmatrix}$ at every point, the [quadratic approximation](#def-quadratic-model) at any $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ equals $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}})$ exactly ([Example 12 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#exm-taylor-mv) with $\mathbf{S} = \begin{bmatrix} 1/2 & 0 \\ 0 & 3/2 \end{bmatrix}$).
 
 > **NOTE:**
 >
@@ -169,7 +169,7 @@ Last modified: 2026-11-13 15:52:10 (PST)
 
 > **NOTE:**
 >
-> **Example 4 (The Newton step at** $x = 2.5$) For the model ${q\mathopen{}\left(\delta\right)\mathclose{}} = f(2.5) + 2.25\,\delta+ 2.5\,\delta^2$ of [Example 3](#exm-quadratic-model), $H = [5]$ is positive definite, so by [Theorem 1](#thm-newton-model) its minimizer is
+> **Example 4 (The Newton step at** $x = 2.5$) For the [quadratic approximation](#def-quadratic-model) ${q\mathopen{}\left(\delta\right)\mathclose{}} = f(2.5) + 2.25\,\delta+ 2.5\,\delta^2$ of [Example 3](#exm-quadratic-model), $H = [5]$ is positive definite, so by [Theorem 1](#thm-newton-model) its minimizer is
 >
 > $$\begin{aligned}
 > \delta^* &= -H^{-1} g \\
@@ -244,13 +244,13 @@ Last modified: 2026-11-13 15:52:10 (PST)
 >
 > ## R
 >
-> [![Plot of the cubic f of x equals x cubed over 3 minus 4 x for x from 0.5 to 4, in blue, and its quadratic model at x equal to 2.5 in dashed vermilion. The model touches the cubic at 2.5, is a parabola opening upward, and has its lowest point at 2.05, marked by a vermilion triangle. A vermilion circle marks the starting point 2.5, and a blue square marks the minimizer 2 of the cubic.](optimization-newton_files/figure-html/newton-model-r-1.png)](optimization-newton_files/figure-html/newton-model-r-1.png "Figure 1: The cubic f(x) = \tfrac{1}{3} x^3 - 4x (blue) and its quadratic model at x = 2.5 (dashed). The model touches f at 2.5 (circle), and its minimizer 2.05 (triangle) is the iterate after one Newton step from 2.5 (Example 4). It lies close to the minimizer 2 of f (blue marker).")
+> [![Plot of the cubic f of x equals x cubed over 3 minus 4 x for x from 0.5 to 4, in blue, and its quadratic approximation at x equal to 2.5 in dashed vermilion. The approximation touches the cubic at 2.5, is a parabola opening upward, and has its lowest point at 2.05, marked by a vermilion triangle. A vermilion circle marks the starting point 2.5, and a blue square marks the minimizer 2 of the cubic.](optimization-newton_files/figure-html/newton-model-r-1.png)](optimization-newton_files/figure-html/newton-model-r-1.png "Figure 1: The cubic f(x) = \tfrac{1}{3} x^3 - 4x (blue) and its quadratic approximation at x = 2.5 (dashed). The approximation touches f at 2.5 (circle), and its minimizer 2.05 (triangle) is the iterate after one Newton step from 2.5 (Example 4). It lies close to the minimizer 2 of f (blue marker).")
 >
 > ## Python
 >
-> [![Plot of the cubic f of x equals x cubed over 3 minus 4 x for x from 0.5 to 4, in blue, and its quadratic model at x equal to 2.5 in dashed vermilion. The model touches the cubic at 2.5, is a parabola opening upward, and has its lowest point at 2.05, marked by a vermilion triangle. A vermilion circle marks the starting point 2.5, and a blue square marks the minimizer 2 of the cubic.](optimization-newton_files/figure-html/newton-model-python-1.png)](optimization-newton_files/figure-html/newton-model-python-1.png "Figure 1: The cubic f(x) = \tfrac{1}{3} x^3 - 4x (blue) and its quadratic model at x = 2.5 (dashed). The model touches f at 2.5 (circle), and its minimizer 2.05 (triangle) is the iterate after one Newton step from 2.5 (Example 4). It lies close to the minimizer 2 of f (blue marker).")
+> [![Plot of the cubic f of x equals x cubed over 3 minus 4 x for x from 0.5 to 4, in blue, and its quadratic approximation at x equal to 2.5 in dashed vermilion. The approximation touches the cubic at 2.5, is a parabola opening upward, and has its lowest point at 2.05, marked by a vermilion triangle. A vermilion circle marks the starting point 2.5, and a blue square marks the minimizer 2 of the cubic.](optimization-newton_files/figure-html/newton-model-python-1.png)](optimization-newton_files/figure-html/newton-model-python-1.png "Figure 1: The cubic f(x) = \tfrac{1}{3} x^3 - 4x (blue) and its quadratic approximation at x = 2.5 (dashed). The approximation touches f at 2.5 (circle), and its minimizer 2.05 (triangle) is the iterate after one Newton step from 2.5 (Example 4). It lies close to the minimizer 2 of f (blue marker).")
 >
-> Figure 1: The [cubic](algebra-exponentials.llms.md#def-cubic-polynomial) $f(x) = \tfrac{1}{3} x^3 - 4x$ (blue) and its [quadratic model](#def-quadratic-model) at $x = 2.5$ (dashed). The model touches $f$ at $2.5$ (circle), and its [minimizer](algebra-basics.llms.md#def-global-minimizer) $2.05$ (triangle) is the [iterate](#def-iterate) after one [Newton step](#def-newton-step) from $2.5$ ([Example 4](#exm-newton-model)). It lies close to the minimizer $2$ of $f$ (blue marker).
+> Figure 1: The [cubic](algebra-exponentials.llms.md#def-cubic-polynomial) $f(x) = \tfrac{1}{3} x^3 - 4x$ (blue) and its [quadratic approximation](#def-quadratic-model) at $x = 2.5$ (dashed). The approximation touches $f$ at $2.5$ (circle), and its [minimizer](algebra-basics.llms.md#def-global-minimizer) $2.05$ (triangle) is the [iterate](#def-iterate) after one [Newton step](#def-newton-step) from $2.5$ ([Example 4](#exm-newton-model)). It lies close to the minimizer $2$ of $f$ (blue marker).
 
 # 3 The Newton step as a root of the linear approximation of the gradient
 
@@ -523,13 +523,13 @@ Last modified: 2026-11-13 15:52:10 (PST)
 > nc_err_ax = [x - 2 for x in nc_x_ax]
 > fig, ax = plt.subplots(figsize=(5, 3.5), layout="constrained")
 > ax.semilogy(range(4), nc_err_ax, "o-", color="#0072B2")
-> #> [<matplotlib.lines.Line2D object at 0x7ff6677920d0>]
+> #> [<matplotlib.lines.Line2D object at 0x7f2ea2cf1e50>]
 > ax.set_xlabel("iteration t")
 > #> Text(0.5, 0, 'iteration t')
 > ax.set_ylabel("error of the iterate")
 > #> Text(0, 0.5, 'error of the iterate')
 > ax.set_xticks(range(4))
-> #> [<matplotlib.axis.XTick object at 0x7ff6677cc410>, <matplotlib.axis.XTick object at 0x7ff667791f90>, <matplotlib.axis.XTick object at 0x7ff667792710>, <matplotlib.axis.XTick object at 0x7ff667792e90>]
+> #> [<matplotlib.axis.XTick object at 0x7f2ea2ccf890>, <matplotlib.axis.XTick object at 0x7f2ea2cf1f90>, <matplotlib.axis.XTick object at 0x7f2ea2cf2710>, <matplotlib.axis.XTick object at 0x7f2ea2cf2e90>]
 > plt.show();
 > ```
 >
@@ -545,9 +545,9 @@ Last modified: 2026-11-13 15:52:10 (PST)
 
 > **NOTE:**
 >
-> **Example 11 (Newton’s method can find a maximum)** From $x^{(0)} = -2.5$ the same iteration gives $-2.05$, $-2.000610$, $-2.0000001$, approaching $-2$. But $-2$ is not a minimizer of $f$: it is a [stationary point](optimization-critical-points.llms.md#def-stationary-point) of $-f$, whose [second derivative](calculus-derivatives.llms.md#def-second-derivative) at $-2$ is $-f''(-2) = 4 > 0$, so it is a strict local minimizer of $-f$ ([Theorem 7 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#thm-second-order-condition)), that is, $f$ is strictly larger at $-2$ than at all nearby points. [Newton’s method](#def-newton-method) looks only for a stationary point. In this example, the [Hessian](vector-calculus.llms.md#def-hessian) $H = f''(x) = 2x$ is negative at every [iterate](#def-iterate). If $H < 0$, then [Theorem 1](#thm-newton-model) does not apply, because it requires a [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite) Hessian. Instead, the [model](#def-quadratic-model) ${q\mathopen{}\left(\delta\right)\mathclose{}} = f + g\,\delta+ \tfrac{1}{2} H \delta^2$ tends to $-\infty$ as $\mathopen{}\left|\delta\right|\mathclose{} \to \infty$, so it has no minimizer.
+> **Example 11 (Newton’s method can find a maximum)** From $x^{(0)} = -2.5$ the same iteration gives $-2.05$, $-2.000610$, $-2.0000001$, approaching $-2$. But $-2$ is not a minimizer of $f$: it is a [stationary point](optimization-critical-points.llms.md#def-stationary-point) of $-f$, whose [second derivative](calculus-derivatives.llms.md#def-second-derivative) at $-2$ is $-f''(-2) = 4 > 0$, so it is a strict local minimizer of $-f$ ([Theorem 7 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#thm-second-order-condition)), that is, $f$ is strictly larger at $-2$ than at all nearby points. [Newton’s method](#def-newton-method) looks only for a stationary point. In this example, the [Hessian](vector-calculus.llms.md#def-hessian) $H = f''(x) = 2x$ is negative at every [iterate](#def-iterate). If $H < 0$, then [Theorem 1](#thm-newton-model) does not apply, because it requires a [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite) Hessian. Instead, the [quadratic approximation](#def-quadratic-model) ${q\mathopen{}\left(\delta\right)\mathclose{}} = f + g\,\delta+ \tfrac{1}{2} H \delta^2$ tends to $-\infty$ as $\mathopen{}\left|\delta\right|\mathclose{} \to \infty$, so it has no minimizer.
 >
-> [Figure 4](#fig-newton-maximum) shows the [cubic](algebra-exponentials.llms.md#def-cubic-polynomial) and its model.
+> [Figure 4](#fig-newton-maximum) shows the [cubic](algebra-exponentials.llms.md#def-cubic-polynomial) and its quadratic approximation.
 >
 > > **NOTE:**
 > >
@@ -601,15 +601,15 @@ Last modified: 2026-11-13 15:52:10 (PST)
 > > nx_f_max_py = (-2)**3 / 3 - 4 * (-2)
 > > fig, ax = plt.subplots(figsize=(6, 4), layout="constrained")
 > > ax.plot(nx_x_py, nx_f_py, color="#0072B2")
-> > #> [<matplotlib.lines.Line2D object at 0x7ff665200cd0>]
+> > #> [<matplotlib.lines.Line2D object at 0x7f2ea2c9b750>]
 > > ax.plot(nx_x_py, nx_q_py, "--", color="#D55E00")
-> > #> [<matplotlib.lines.Line2D object at 0x7ff665200e10>]
+> > #> [<matplotlib.lines.Line2D object at 0x7f2ea2c9a710>]
 > > ax.plot([-2.5], [nx_f0_py], "o", color="#D55E00")
-> > #> [<matplotlib.lines.Line2D object at 0x7ff665200f50>]
+> > #> [<matplotlib.lines.Line2D object at 0x7f2ea2c9a5d0>]
 > > ax.plot([-2.05], [nx_q_step_py], "^", color="#D55E00")
-> > #> [<matplotlib.lines.Line2D object at 0x7ff665201090>]
+> > #> [<matplotlib.lines.Line2D object at 0x7f2ea2c9a490>]
 > > ax.plot([-2], [nx_f_max_py], "s", color="#0072B2")
-> > #> [<matplotlib.lines.Line2D object at 0x7ff6652011d0>]
+> > #> [<matplotlib.lines.Line2D object at 0x7f2ea2c9a350>]
 > > ax.set_ylim(-2, 6.5)
 > > #> (-2.0, 6.5)
 > > ax.set_xlabel("x")
@@ -621,13 +621,13 @@ Last modified: 2026-11-13 15:52:10 (PST)
 > >
 > > ## R
 > >
-> > [![Plot of the cubic f of x equals x cubed over 3 minus 4 x for x from -4 to -0.5, in blue, with a local maximum at x equal to -2, marked by a blue square. A dashed vermilion parabola opening downward is the quadratic model at the start -2.5. It touches the cubic at -2.5 and has its highest point at -2.05, marked by a vermilion triangle. A vermilion circle marks the start -2.5.](optimization-newton_files/figure-html/newton-maximum-r-3.png)](optimization-newton_files/figure-html/newton-maximum-r-3.png "Figure 4: The cubic f(x) = x^3 / 3 - 4x of Example 11 is blue, and its quadratic model at the start -2.5 is dashed vermilion. The model opens downward, so its stationary point -2.05 (triangle) is the point where the model is largest, and the Newton step moves uphill. The iterates approach the local maximum at -2 (blue marker).")
+> > [![Plot of the cubic f of x equals x cubed over 3 minus 4 x for x from -4 to -0.5, in blue, with a local maximum at x equal to -2, marked by a blue square. A dashed vermilion parabola opening downward is the quadratic approximation at the start -2.5. It touches the cubic at -2.5 and has its highest point at -2.05, marked by a vermilion triangle. A vermilion circle marks the start -2.5.](optimization-newton_files/figure-html/newton-maximum-r-3.png)](optimization-newton_files/figure-html/newton-maximum-r-3.png "Figure 4: The cubic f(x) = x^3 / 3 - 4x of Example 11 is blue, and its quadratic approximation at the start -2.5 is dashed vermilion. The approximation opens downward, so its stationary point -2.05 (triangle) is the point where the approximation is largest, and the Newton step moves uphill. The iterates approach the local maximum at -2 (blue marker).")
 > >
 > > ## Python
 > >
-> > [![Plot of the cubic f of x equals x cubed over 3 minus 4 x for x from -4 to -0.5, in blue, with a local maximum at x equal to -2, marked by a blue square. A dashed vermilion parabola opening downward is the quadratic model at the start -2.5. It touches the cubic at -2.5 and has its highest point at -2.05, marked by a vermilion triangle. A vermilion circle marks the start -2.5.](optimization-newton_files/figure-html/newton-maximum-python-1.png)](optimization-newton_files/figure-html/newton-maximum-python-1.png "Figure 4: The cubic f(x) = x^3 / 3 - 4x of Example 11 is blue, and its quadratic model at the start -2.5 is dashed vermilion. The model opens downward, so its stationary point -2.05 (triangle) is the point where the model is largest, and the Newton step moves uphill. The iterates approach the local maximum at -2 (blue marker).")
+> > [![Plot of the cubic f of x equals x cubed over 3 minus 4 x for x from -4 to -0.5, in blue, with a local maximum at x equal to -2, marked by a blue square. A dashed vermilion parabola opening downward is the quadratic approximation at the start -2.5. It touches the cubic at -2.5 and has its highest point at -2.05, marked by a vermilion triangle. A vermilion circle marks the start -2.5.](optimization-newton_files/figure-html/newton-maximum-python-1.png)](optimization-newton_files/figure-html/newton-maximum-python-1.png "Figure 4: The cubic f(x) = x^3 / 3 - 4x of Example 11 is blue, and its quadratic approximation at the start -2.5 is dashed vermilion. The approximation opens downward, so its stationary point -2.05 (triangle) is the point where the approximation is largest, and the Newton step moves uphill. The iterates approach the local maximum at -2 (blue marker).")
 > >
-> > Figure 4: The [cubic](algebra-exponentials.llms.md#def-cubic-polynomial) $f(x) = x^3 / 3 - 4x$ of [Example 11](#exm-newton-maximum) is blue, and its [quadratic model](#def-quadratic-model) at the start $-2.5$ is dashed vermilion. The model opens downward, so its [stationary point](optimization-critical-points.llms.md#def-stationary-point) $-2.05$ (triangle) is the point where the model is largest, and the [Newton step](#def-newton-step) moves uphill. The [iterates](#def-iterate) approach the [local maximum](optimization-critical-points.llms.md#def-local-maximizer) at $-2$ (blue marker).
+> > Figure 4: The [cubic](algebra-exponentials.llms.md#def-cubic-polynomial) $f(x) = x^3 / 3 - 4x$ of [Example 11](#exm-newton-maximum) is blue, and its [quadratic approximation](#def-quadratic-model) at the start $-2.5$ is dashed vermilion. The approximation opens downward, so its [stationary point](optimization-critical-points.llms.md#def-stationary-point) $-2.05$ (triangle) is the point where the approximation is largest, and the [Newton step](#def-newton-step) moves uphill. The [iterates](#def-iterate) approach the [local maximum](optimization-critical-points.llms.md#def-local-maximizer) at $-2$ (blue marker).
 
 > **NOTE:**
 >
@@ -723,7 +723,7 @@ Last modified: 2026-11-13 15:52:10 (PST)
 > > nq_z_py = (nq_xx_py**2 + 3 * nq_yy_py**2) / 2
 > > fig, ax = plt.subplots(figsize=(6, 3.5), layout="constrained")
 > > ax.contour(nq_xx_py, nq_yy_py, nq_z_py, levels=10, colors="#0072B2")
-> > #> <matplotlib.contour.QuadContourSet object at 0x7ff6800b1e80>
+> > #> <matplotlib.contour.QuadContourSet object at 0x7f2ea2dbd940>
 > > ax.annotate("", xy=(0.764, -1.236), xytext=(3, 1),
 > >             arrowprops={"arrowstyle": "->", "color": "grey"})
 > > #> Text(3, 1, '')
@@ -731,7 +731,7 @@ Last modified: 2026-11-13 15:52:10 (PST)
 > >             arrowprops={"arrowstyle": "->", "color": "#D55E00"})
 > > #> Text(3, 1, '')
 > > ax.plot([3], [1], "ko")
-> > #> [<matplotlib.lines.Line2D object at 0x7ff6653b9950>]
+> > #> [<matplotlib.lines.Line2D object at 0x7f2ea08b2710>]
 > > ax.set_aspect("equal")
 > > ax.set_xlabel("x1")
 > > #> Text(0.5, 0, 'x1')
@@ -826,11 +826,11 @@ Last modified: 2026-11-13 15:52:10 (PST)
 > > fig = plt.figure(figsize=(6, 4.5))
 > > ax = fig.add_subplot(projection="3d")
 > > ax.plot_surface(nq_x1_3d, nq_x2_3d, nq_z_3d, color="#0072B2", alpha=0.6)
-> > #> <mpl_toolkits.mplot3d.art3d.Poly3DCollection object at 0x7ff667a6e120>
+> > #> <mpl_toolkits.mplot3d.art3d.Poly3DCollection object at 0x7f2ea2dbf4d0>
 > > ax.scatter([3], [1], [6], color="#D55E00", label="start")
-> > #> <mpl_toolkits.mplot3d.art3d.Path3DCollection object at 0x7ff667a6de80>
+> > #> <mpl_toolkits.mplot3d.art3d.Path3DCollection object at 0x7f2ea2dbf620>
 > > ax.scatter([0], [0], [0], color="black", label="minimizer")
-> > #> <mpl_toolkits.mplot3d.art3d.Path3DCollection object at 0x7ff66526de50>
+> > #> <mpl_toolkits.mplot3d.art3d.Path3DCollection object at 0x7f2ea06aac10>
 > > ax.set_xlabel("x1")
 > > #> Text(0.5, 0, 'x1')
 > > ax.set_ylabel("x2")
@@ -838,7 +838,7 @@ Last modified: 2026-11-13 15:52:10 (PST)
 > > ax.set_zlabel("f(x)")
 > > #> Text(0.5, 0, 'f(x)')
 > > ax.legend(loc="upper right")
-> > #> <matplotlib.legend.Legend object at 0x7ff667a6dfd0>
+> > #> <matplotlib.legend.Legend object at 0x7f2ea2dbf770>
 > > plt.show();
 > > ```
 > >

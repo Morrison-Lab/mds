@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-13 15:52:10 (PST)
+Last modified: 2026-11-13 18:15:31 (PST)
 
 # 1 Special Matrices
 
@@ -2151,7 +2151,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 > && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~19 in Matrices}}\text{)}
 > \\
 > &= \mathopen{}\left\lVert\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}^2
-> && \text{(}\href{linear-algebra-vectors.qmd#eq-l2-norm}{\text{Equation~4 in Vectors}}\text{, squared)}
+> && \text{(}\href{linear-algebra-vectors.qmd#eq-norm-dot-product}{\text{Equation~5 in Vectors}}\text{, squared)}
 > \\
 > &\ge 0.
 > && \text{(a squared norm is nonnegative)}
@@ -2321,9 +2321,9 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 > print(sv_mcn)
 > #> [2.0050125 0.0049875]
 > print(sv_mcn[0] / sv_mcn[1])
-> #> 402.0075124842952
+> #> 402.0075124842948
 > print(sv_mcn_scaled[0] / sv_mcn_scaled[1])
-> #> 402.00751248429384
+> #> 402.00751248429236
 > ```
 >
 > The [singular values](#def-singular-values) are 2.005 and 0.005, so $\kappa(\mathbf{A}) =$ 402. Multiplying every entry by $1000$ multiplies both singular values by $1000$, so the [condition number](#def-matrix-condition-number) is still 402.
@@ -2372,9 +2372,9 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 > kappa_a_cng = sv_mcn[0] / sv_mcn[1]
 > sv_gram_cng = np.linalg.svd(gram_cng, compute_uv=False)
 > print(sv_gram_cng[0] / sv_gram_cng[1])
-> #> 161610.04009142585
+> #> 161610.0400912735
 > print(kappa_a_cng ** 2)
-> #> 161610.04009381076
+> #> 161610.04009381044
 > ```
 >
 > The [condition number](#def-matrix-condition-number) of ${\mathbf{A}}^{\top}\mathbf{A}$ is 161610, and $\kappa(\mathbf{A})^2 =$ 161610, as [Theorem 19](#thm-condition-number-gram) says.
