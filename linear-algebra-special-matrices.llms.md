@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-13 01:11:21 (PST)
+Last modified: 2026-11-13 15:52:10 (PST)
 
 # 1 Special Matrices
 
@@ -563,7 +563,7 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> *Remark 6* (The columns of an orthogonal matrix are orthonormal). Entry $(i, j)$ of ${\mathbf{Q}}^{\top}\mathbf{Q}$ is the dot product of column $i$ and column $j$ of $\mathbf{Q}$, so ${\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}_p$ says that the columns of $\mathbf{Q}$ are orthonormal ([Definition 23 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)). For a square matrix, ${\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}_p$ also implies $\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}_p$, so $\mathbf{Q}^{-1} = {\mathbf{Q}}^{\top}$ ([Definition 5](#def-matrix-inverse)) [\[6, Ch. 8\]](#ref-banerjee2014linear), Theorem 8.1 and Definition 8.1, p. 209.
+> *Remark 6* (The columns of an orthogonal matrix are orthonormal). Entry $(i, j)$ of ${\mathbf{Q}}^{\top}\mathbf{Q}$ is the dot product of column $i$ and column $j$ of $\mathbf{Q}$, so ${\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}_p$ says that the columns of $\mathbf{Q}$ are orthonormal ([Definition 24 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)). For a square matrix, ${\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}_p$ also implies $\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}_p$, so $\mathbf{Q}^{-1} = {\mathbf{Q}}^{\top}$ ([Definition 5](#def-matrix-inverse)) [\[6, Ch. 8\]](#ref-banerjee2014linear), Theorem 8.1 and Definition 8.1, p. 209.
 >
 > For example, the columns of $\mathbf{Q}$ in [Example 14](#exm-orthogonal-matrix) are $(0.6, 0.8)$ and $(-0.8, 0.6)$. The diagonal entries $0.36 + 0.64 = 1$ of ${\mathbf{Q}}^{\top}\mathbf{Q}$ are their squared norms, and the off-diagonal entries $-0.48 + 0.48 = 0$ are their dot product. Multiplying in the other order also gives $\mathbf{I}_2$:
 >
@@ -621,7 +621,7 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> **Example 16 (Rotating a vector keeps its length)** With $\mathbf{Q}$ from [Example 14](#exm-orthogonal-matrix) and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (3, 4)$ from [Example 15 in Vectors](linear-algebra-vectors.llms.md#exm-euclidean-norm):
+> **Example 16 (Rotating a vector keeps its length)** With $\mathbf{Q}$ from [Example 14](#exm-orthogonal-matrix) and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (3, 4)$ from [Example 16 in Vectors](linear-algebra-vectors.llms.md#exm-euclidean-norm):
 >
 > $$\begin{aligned}
 > \mathbf{Q}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
@@ -1086,7 +1086,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 
 > **NOTE:**
 >
-> *Remark 10* (The Frobenius norm is the Euclidean norm of the entries). By [Theorem 11](#thm-matrix-inner-product-entries), $\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}_F^2 = \sum_{i=1}^n\sum_{j=1}^pa_{ij}^2$, a sum of squares, so the square root is always defined. $\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}_F$ is the Euclidean norm ([Definition 20 in Vectors](linear-algebra-vectors.llms.md#def-euclidean-norm)) of the entries of $\mathbf{A}$, listed as one vector of length $np$ [\[6, Ch. 15\]](#ref-banerjee2014linear), Definition 15.4, p. 492.
+> *Remark 10* (The Frobenius norm is the Euclidean norm of the entries). By [Theorem 11](#thm-matrix-inner-product-entries), $\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}_F^2 = \sum_{i=1}^n\sum_{j=1}^pa_{ij}^2$, a sum of squares, so the square root is always defined. $\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}_F$ is the Euclidean norm ([Definition 21 in Vectors](linear-algebra-vectors.llms.md#def-euclidean-norm)) of the entries of $\mathbf{A}$, listed as one vector of length $np$ [\[6, Ch. 15\]](#ref-banerjee2014linear), Definition 15.4, p. 492.
 >
 > For example, listing the entries of $\mathbf{A}$ in [Example 23](#exm-frobenius-norm) row by row gives the vector $(1, 2, 3, 4)$ of length $2 \cdot 2 = 4$, and
 >
@@ -1115,7 +1115,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 > && \text{(swap the order of two finite sums)}
 > \\
 > &= \sum_{j=1}^p\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j\right\rVert\mathclose{}^2
-> && \text{(}\href{linear-algebra-vectors.qmd#def-euclidean-norm}{\text{Definition~20 in Vectors}}\text{, applied to each column)}
+> && \text{(}\href{linear-algebra-vectors.qmd#def-euclidean-norm}{\text{Definition~21 in Vectors}}\text{, applied to each column)}
 > \end{aligned}$$
 
 > **NOTE:**
@@ -1353,7 +1353,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 
 > **NOTE:**
 >
-> **Theorem 14 (Eigenvectors of a symmetric matrix for distinct eigenvalues are orthogonal)** Let $\mathbf{A}$ be a symmetric $p \times p$ matrix ([Definition 3](#def-symmetric-matrix)), and let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ be [eigenvectors](linear-algebra-special-matrices.llms.md#def-eigenvector) of $\mathbf{A}$ ([Definition 17](#def-eigenvector)) for [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) $\lambda_1 \ne \lambda_2$. Then $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \perp \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ ([Definition 19 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors)).
+> **Theorem 14 (Eigenvectors of a symmetric matrix for distinct eigenvalues are orthogonal)** Let $\mathbf{A}$ be a symmetric $p \times p$ matrix ([Definition 3](#def-symmetric-matrix)), and let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ be [eigenvectors](linear-algebra-special-matrices.llms.md#def-eigenvector) of $\mathbf{A}$ ([Definition 17](#def-eigenvector)) for [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) $\lambda_1 \ne \lambda_2$. Then $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \perp \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ ([Definition 20 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors)).
 
 > **NOTE:**
 >
@@ -1402,7 +1402,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 
 > **NOTE:**
 >
-> **Example 28 (An eigendecomposition of a** $2 \times 2$ symmetric matrix) For $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$, [Example 25](#exm-eigenvalue) found the eigenvectors $(1, 1)$ for $3$ and $(1, -1)$ for $1$. They are orthogonal ([Definition 19 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors)):
+> **Example 28 (An eigendecomposition of a** $2 \times 2$ symmetric matrix) For $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$, [Example 25](#exm-eigenvalue) found the eigenvectors $(1, 1)$ for $3$ and $(1, -1)$ for $1$. They are orthogonal ([Definition 20 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors)):
 >
 > $$\begin{aligned}
 > (1, 1) \cdot (1, -1)
@@ -1416,7 +1416,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 > && \text{(add)}
 > \end{aligned}$$
 >
-> Each has norm $\sqrt{1^2 + 1^2} = \sqrt{2}$ ([Definition 20 in Vectors](linear-algebra-vectors.llms.md#def-euclidean-norm)), so dividing each by $\sqrt{2}$ gives two orthonormal eigenvectors ([Definition 23 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)). Put them in the columns of $\mathbf{Q}$, and the matching eigenvalues on the diagonal of $\mathbf{\Lambda}$:
+> Each has norm $\sqrt{1^2 + 1^2} = \sqrt{2}$ ([Definition 21 in Vectors](linear-algebra-vectors.llms.md#def-euclidean-norm)), so dividing each by $\sqrt{2}$ gives two orthonormal eigenvectors ([Definition 24 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)). Put them in the columns of $\mathbf{Q}$, and the matching eigenvalues on the diagonal of $\mathbf{\Lambda}$:
 >
 > $$\mathbf{Q} = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
 > \qquad
@@ -2012,7 +2012,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 >
 > For $i > r$, every term is $0$, so $\lambda_i = 0$.
 >
-> **The eigenvectors.** Write $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_i$ for column $i$ of $\mathbf{V}$, and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_i$ for the indicator vector ([Definition 18 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)) of length $p$. Column $i$ of ${\mathbf{V}}^{\top}\mathbf{V} = \mathbf{I}_p$ says ${\mathbf{V}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_i = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_i$. Then
+> **The eigenvectors.** Write $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_i$ for column $i$ of $\mathbf{V}$, and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_i$ for the indicator vector ([Definition 19 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)) of length $p$. Column $i$ of ${\mathbf{V}}^{\top}\mathbf{V} = \mathbf{I}_p$ says ${\mathbf{V}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_i = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_i$. Then
 >
 > $$\begin{aligned}
 > {\mathbf{A}}^{\top}\mathbf{A}\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_i
@@ -2151,7 +2151,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 > && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~19 in Matrices}}\text{)}
 > \\
 > &= \mathopen{}\left\lVert\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}^2
-> && \text{(}\href{linear-algebra-vectors.qmd#eq-l2-norm}{\text{Equation~2 in Vectors}}\text{, squared)}
+> && \text{(}\href{linear-algebra-vectors.qmd#eq-l2-norm}{\text{Equation~4 in Vectors}}\text{, squared)}
 > \\
 > &\ge 0.
 > && \text{(a squared norm is nonnegative)}
@@ -2643,7 +2643,7 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 >
 > Taking $\mathbf{A} = \mathbf{I}_p$ recovers the standard dot product ([Example 1 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#exm-dot-product-inner-product)), while taking $\mathbf{A} = \operatorname{diag}(c_1, \ldots, c_p)$ recovers the weighted inner product ([Example 3 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#exm-weighted-inner-product)).
 >
-> Conversely, every inner product on $\mathbb{R}^p$ has this form for a unique symmetric positive definite matrix $\mathbf{A}$, whose $(i, j)$ entry is $A_{ij} = {\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_i, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j\right\rangle\mathclose{}}$, where $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_p$ are the standard basis vectors ([Definition 18 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)).
+> Conversely, every inner product on $\mathbb{R}^p$ has this form for a unique symmetric positive definite matrix $\mathbf{A}$, whose $(i, j)$ entry is $A_{ij} = {\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_i, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j\right\rangle\mathclose{}}$, where $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_p$ are the standard basis vectors ([Definition 19 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)).
 
 > **NOTE:**
 >
@@ -2683,7 +2683,7 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 >   && \text{(definition of } {\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}}_{\mathbf{A}} \text{)}
 >   \end{aligned}$$
 >
-> For the converse, let ${\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}}$ be any inner product on $\mathbb{R}^p$. Any vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p$ can be written in the standard basis as $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \sum_{i=1}^px_i\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_i$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= \sum_{j=1}^py_j\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j$ ([Definition 6 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-basis), [Definition 18 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)). By linearity in both slots ([Remark 1 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#rem-inner-product-other-sources)):
+> For the converse, let ${\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}}$ be any inner product on $\mathbb{R}^p$. Any vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p$ can be written in the standard basis as $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \sum_{i=1}^px_i\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_i$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= \sum_{j=1}^py_j\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j$ ([Definition 6 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-basis), [Definition 19 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)). By linearity in both slots ([Remark 1 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#rem-inner-product-other-sources)):
 >
 > $$\begin{aligned}
 > {\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rangle\mathclose{}}

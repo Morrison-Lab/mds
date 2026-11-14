@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-11-13 01:11:21 (PST)
+Last modified: 2026-11-13 15:52:10 (PST)
 
 # 1 Column space and null space
 
@@ -631,7 +631,7 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 > && \text{(}\href{linear-algebra-matrices.qmd#exm-dot-product-matmul}{\text{Example~8 in Matrices}}\text{)}
 > \\
 > &= \mathopen{}\left\lVert\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}^2.
-> && \text{(square both sides of }\href{linear-algebra-vectors.qmd#eq-l2-norm}{\text{Equation~2 in Vectors}}\text{)}
+> && \text{(square both sides of }\href{linear-algebra-vectors.qmd#eq-l2-norm}{\text{Equation~4 in Vectors}}\text{)}
 > \end{aligned}$$
 >
 > A vector whose Euclidean norm is $0$ has every entry $0$, so $\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_m$.
@@ -1086,7 +1086,7 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 
 > **NOTE:**
 >
-> **Theorem 12 (A centered data matrix has rank at most** $n - 1$) Let $\mathbf{X}$ be an $n \times p$ matrix with rows ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_1}^{\top}, \ldots, {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n}^{\top}$, let $\bar{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} = \frac{1}{n}\sum_{i=1}^n \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_i$ be the mean of the rows, and let $\mathbf{X}_c = \mathbf{X}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}}\,{\bar{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}}^{\top}$ be the matrix whose row $i$ is ${(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_i - \bar{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}})}^{\top}$, where $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}}$ is the ones vector of length $n$ ([Definition 16 in Vectors](linear-algebra-vectors.llms.md#def-ones-vector)). Then $\operatorname{rank}(\mathbf{X}_c) \le n - 1$.
+> **Theorem 12 (A centered data matrix has rank at most** $n - 1$) Let $\mathbf{X}$ be an $n \times p$ matrix with rows ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_1}^{\top}, \ldots, {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n}^{\top}$, let $\bar{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} = \frac{1}{n}\sum_{i=1}^n \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_i$ be the mean of the rows, and let $\mathbf{X}_c = \mathbf{X}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}}\,{\bar{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}}^{\top}$ be the matrix whose row $i$ is ${(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_i - \bar{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}})}^{\top}$, where $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}}$ is the ones vector of length $n$ ([Definition 17 in Vectors](linear-algebra-vectors.llms.md#def-ones-vector)). Then $\operatorname{rank}(\mathbf{X}_c) \le n - 1$.
 
 > **NOTE:**
 >
@@ -1238,7 +1238,7 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 >
 > 1.  $\mathcal{H}_0$ is a subspace of $\mathbb{R}^p$ ([Definition 4 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-subspace)) of dimension $p - 1$ ([Definition 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)).
 > 2.  $\mathcal{H}$ is not empty, and for any $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 \in \mathcal{H}$, $\mathcal{H} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} \in \mathcal{H}_0\right\}\mathclose{}$, so $\mathcal{H}$ is an affine subspace ([Definition 8](#def-affine-subspace)).
-> 3.  For any $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathcal{H}$, the normal vector is orthogonal to their difference: $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \perp (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})$ ([Definition 19 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors)).
+> 3.  For any $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathcal{H}$, the normal vector is orthogonal to their difference: $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \perp (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})$ ([Definition 20 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors)).
 
 > **NOTE:**
 >

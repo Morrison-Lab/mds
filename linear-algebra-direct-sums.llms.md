@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-13 01:11:21 (PST)
+Last modified: 2026-11-13 15:52:10 (PST)
 
 # 1 Sums and direct sums
 
@@ -578,7 +578,7 @@ Last modified: 2026-11-13 01:11:21 (PST)
 
 > **NOTE:**
 >
-> **Definition 5 (Orthogonal complement)** The **orthogonal complement** [\[5\]](#ref-wikipedia_orthogonal_complement) of a set $\mathcal{X}$ of vectors in $\mathbb{R}^p$ is the set of vectors orthogonal ([Definition 19 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors)) to every vector of $\mathcal{X}$:
+> **Definition 5 (Orthogonal complement)** The **orthogonal complement** [\[5\]](#ref-wikipedia_orthogonal_complement) of a set $\mathcal{X}$ of vectors in $\mathbb{R}^p$ is the set of vectors orthogonal ([Definition 20 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors)) to every vector of $\mathcal{X}$:
 >
 > $$\mathcal{X}^\perp
 > \stackrel{\text{def}}{=}

@@ -5066,6 +5066,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra-vectors#def-harmonic-mean",
+   "site": "mds",
+   "page": "linear-algebra-vectors",
+   "div": "def-harmonic-mean",
+   "kind": "def",
+   "title": "Harmonic mean",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra-vectors#def-indicator-vector",
    "site": "mds",
    "page": "linear-algebra-vectors",
@@ -9747,6 +9756,10 @@
   [
    "mds/linear-algebra-vectors#def-euclidean-distance",
    "mds/linear-algebra-vectors#def-euclidean-norm"
+  ],
+  [
+   "mds/linear-algebra-vectors#def-harmonic-mean",
+   "mds/linear-algebra-vectors#def-mean"
   ],
   [
    "mds/linear-algebra-vectors#def-lincom-coefficient",

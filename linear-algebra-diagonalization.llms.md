@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-13 01:11:21 (PST)
+Last modified: 2026-11-13 15:52:10 (PST)
 
 # 1 Similarity and diagonalization
 
@@ -44,7 +44,7 @@ Last modified: 2026-11-13 01:11:21 (PST)
 >
 > so $\mathcal{N}(\mathbf{A}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_n\right\}\mathclose{}$, the nullity is $0$, and $\operatorname{rank}(\mathbf{A}) = n$ ([Theorem 8 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-nullity)).
 >
-> **Rank** $n$ implies invertible. Every system $\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ has exactly one solution ([Corollary 2 in Projections and Linear Systems](linear-algebra-projections.llms.md#cor-solution-unique), both parts, with $m = n$). Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_j$ solve $\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_j = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j$ ([Definition 18 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)), and let $\mathbf{B}$ have columns $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_n$. Column $j$ of $\mathbf{A} \mathbf{B}$ is $\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_j = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j$ (1), so $\mathbf{A} \mathbf{B} = \mathbf{I}_n$. For the other order,
+> **Rank** $n$ implies invertible. Every system $\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ has exactly one solution ([Corollary 2 in Projections and Linear Systems](linear-algebra-projections.llms.md#cor-solution-unique), both parts, with $m = n$). Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_j$ solve $\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_j = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j$ ([Definition 19 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)), and let $\mathbf{B}$ have columns $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_n$. Column $j$ of $\mathbf{A} \mathbf{B}$ is $\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_j = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j$ (1), so $\mathbf{A} \mathbf{B} = \mathbf{I}_n$. For the other order,
 >
 > $$\begin{aligned}
 > \mathbf{A}\,(\mathbf{B} \mathbf{A} - \mathbf{I}_n)
@@ -689,7 +689,7 @@ Last modified: 2026-11-13 01:11:21 (PST)
 > && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~19 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~7 in Matrices}}\text{)}
 > \\
 > &= \mathopen{}\left\lVert\mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}^2
-> && \text{(}\href{linear-algebra-vectors.qmd#eq-norm-dot-product}{\text{Equation~3 in Vectors}}\text{, squared)}
+> && \text{(}\href{linear-algebra-vectors.qmd#eq-norm-dot-product}{\text{Equation~5 in Vectors}}\text{, squared)}
 > \\
 > &\ge 0.
 > && \text{(}\href{linear-algebra-inner-products.qmd#thm-norm-properties}{\text{Theorem~1 in Inner Products and Orthogonality}}\text{)}
@@ -837,7 +837,7 @@ Last modified: 2026-11-13 01:11:21 (PST)
 > && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-distrib}{\text{Theorem~8 in Matrices}}\text{, }\href{linear-algebra-projections.qmd#thm-scalar-matmul}{\text{Theorem~7 in Projections and Linear Systems}}\text{)}
 > \\
 > &= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + \alpha\,\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}^2
-> && \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~10 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#eq-norm-dot-product}{\text{Equation~3 in Vectors}}\text{, squared)}
+> && \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~10 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#eq-norm-dot-product}{\text{Equation~5 in Vectors}}\text{, squared)}
 > \\
 > &> 0.
 > && \text{(} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \ge 0, \; \alpha> 0, \; \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_p \text{)}
@@ -953,7 +953,7 @@ Last modified: 2026-11-13 01:11:21 (PST)
 > && \text{(} \mathbf{X} \text{ positive definite, } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\text{)}
 > \end{aligned}$$
 >
-> For the diagonal entry $x_{ii}$, take $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_i$ ([Definition 18 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)), which is nonzero:
+> For the diagonal entry $x_{ii}$, take $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_i$ ([Definition 19 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)), which is nonzero:
 >
 > $$\begin{aligned}
 > {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_i}^{\top} \mathbf{X} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_i

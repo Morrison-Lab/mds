@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-13 01:11:21 (PST)
+Last modified: 2026-11-13 15:52:10 (PST)
 
 > **NOTE:**
 >
@@ -1492,7 +1492,7 @@ Last modified: 2026-11-13 01:11:21 (PST)
 >
 > $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\quad \text{for all } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$$
 >
-> Column $j$ of $\mathbf{A}$ is $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j)$, the value of $f$ at the $j$th indicator vector ([Definition 18 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)); that is, $a_{ij} = \mathopen{}\left(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j)\right)\mathclose{}_i$.
+> Column $j$ of $\mathbf{A}$ is $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j)$, the value of $f$ at the $j$th indicator vector ([Definition 19 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)); that is, $a_{ij} = \mathopen{}\left(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j)\right)\mathclose{}_i$.
 
 > **NOTE:**
 >
@@ -1529,7 +1529,7 @@ Last modified: 2026-11-13 01:11:21 (PST)
 > \\&= \sum_{k=1}^{p} b_{ik} (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j)_k
 > && \text{(}\href{#def-matvec-mult}{\text{Definition~16}}\text{)}
 > \\&= b_{ij} \cdot 1 + \sum_{k \neq j} b_{ik} \cdot 0
-> && \text{(}\href{linear-algebra-vectors.qmd#def-indicator-vector}{\text{Definition~18 in Vectors}}\text{, splitting off the } k = j \text{ term)}
+> && \text{(}\href{linear-algebra-vectors.qmd#def-indicator-vector}{\text{Definition~19 in Vectors}}\text{, splitting off the } k = j \text{ term)}
 > \\&= b_{ij} + 0
 > && \text{(times } 1 \text{ changes nothing; times } 0 \text{ gives } 0 \text{)}
 > \\&= b_{ij}
@@ -2246,7 +2246,7 @@ Last modified: 2026-11-13 01:11:21 (PST)
 > 1.  **Affine, and linear.** It is [Equation 1](#eq-linear-scalar) with $b = 0$, which is a linear map by [Theorem 12](#thm-matrix-map-linear): the matrix ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}$ times $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$.
 > 2.  **Affine.** Still an inner product plus an offset; here the offset is $b = -y$, which is a constant because $y$ is held fixed. It is linear only when $y = 0$: otherwise $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ gives $-y \ne 0$, and a linear map sends $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ to $0$ ([Theorem 11](#thm-linear-map-zero)).
 > 3.  **Not affine.** Squaring is not an inner product plus an offset. This expression is the squared error of one observation, and its curvature in $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ is exactly why fitting a model is an optimization problem rather than a lookup.
-> 4.  **Not affine.** By [Equation 3 in Vectors](linear-algebra-vectors.llms.md#eq-norm-dot-product), the squared [norm](linear-algebra-vectors.llms.md#def-euclidean-norm) $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\right\rVert\mathclose{}_2^2$ is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$, which has $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ in both slots at once. Hold either slot fixed and it is linear in the other; as a function of the single variable $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ it is quadratic.
+> 4.  **Not affine.** By [Equation 5 in Vectors](linear-algebra-vectors.llms.md#eq-norm-dot-product), the squared [norm](linear-algebra-vectors.llms.md#def-euclidean-norm) $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\right\rVert\mathclose{}_2^2$ is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$, which has $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ in both slots at once. Hold either slot fixed and it is linear in the other; as a function of the single variable $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ it is quadratic.
 > 5.  **Affine, not linear.** It is [Equation 1](#eq-linear-scalar) with coefficient vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}= (x_1, 0, \dots, 0)^{\top}$ and $b = 3$; at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ it equals $3 \ne 0$, so it is not linear ([Theorem 11](#thm-linear-map-zero)). The data $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is untouched — $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}$ is a new vector built from its first entry.
 >
 > Items 1, 2 and 5 are affine and items 3 and 4 are not, which is the split that matters: a *model* can be affine in its weights while the *quantity we minimize* is not. Squared error and the norm penalty are both curved in $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$, and that curvature is what makes fitting an optimization problem at all: there is always a downhill direction to follow. Curvature alone does not promise a *single* answer. The squared error of one observation is completely flat along a whole line of weight vectors, every one of which fits that observation exactly, and pinning down one of them is part of what the norm penalty is added for in week 3.
