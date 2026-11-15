@@ -11,7 +11,8 @@ $$\logf{\frac{1}{a}} = -\logf{a}$$
 
 ::: proof
 
-Since $1 > 0$ and $a > 0$, @cor-log-quot applies to the [quotient](algebra-sums.qmd#def-quotient) $\frac{1}{a}$:
+Since $1 > 0$ and $a > 0$,
+@cor-log-quot applies to the [quotient](algebra-sums.qmd#def-quotient) $\frac{1}{a}$:
 
 $$
 \ba
