@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-11-14 13:01:34 (PST)
+Last modified: 2026-11-15 11:08:30 (PST)
 
 # 1 Polynomials
 
@@ -565,6 +565,78 @@ Last modified: 2026-11-14 13:01:34 (PST)
 
 > **NOTE:**
 >
+> **Corollary 2 (Logarithm of a reciprocal)** If $a > 0$, then the [natural logarithm](#def-natural-log) of $\frac{1}{a}$ is the negative of the natural logarithm of $a$:
+>
+> $${\operatorname{log}\mathopen{}\left\{\frac{1}{a}\right\}\mathclose{}} = -{\operatorname{log}\mathopen{}\left\{a\right\}\mathclose{}}$$
+
+> **NOTE:**
+>
+> *Proof*. Since $1 > 0$ and $a > 0$, [Corollary 1](#cor-log-quot) applies to the [quotient](algebra-sums.llms.md#def-quotient) $\frac{1}{a}$:
+>
+> $$\begin{aligned}
+> {\operatorname{log}\mathopen{}\left\{\frac{1}{a}\right\}\mathclose{}}
+> &= {\operatorname{log}\mathopen{}\left\{1\right\}\mathclose{}} - {\operatorname{log}\mathopen{}\left\{a\right\}\mathclose{}}
+> && \text{(logarithm of a quotient)}
+> \\
+> &= 0 - {\operatorname{log}\mathopen{}\left\{a\right\}\mathclose{}}
+> && \text{(} {\operatorname{log}\mathopen{}\left\{1\right\}\mathclose{}} = 0 \text{)}
+> \\
+> &= -{\operatorname{log}\mathopen{}\left\{a\right\}\mathclose{}}
+> && \text{(} 0 - c = -c \text{)}
+> \end{aligned}$$
+>
+> The first step applies [Corollary 1](#cor-log-quot), and the second uses ${\operatorname{log}\mathopen{}\left\{1\right\}\mathclose{}} = 0$ from [Example 17](#exm-natural-log).
+
+> **NOTE:**
+>
+> **Example 21 (The logarithm of** $\frac{1}{\text{e}}$) $$\begin{aligned}
+> {\operatorname{log}\mathopen{}\left\{\frac{1}{\text{e}}\right\}\mathclose{}}
+> &= -{\operatorname{log}\mathopen{}\left\{\text{e}\right\}\mathclose{}}
+> && \text{(logarithm of a reciprocal)}
+> \\
+> &= -1
+> && \text{(} {\operatorname{log}\mathopen{}\left\{\text{e}\right\}\mathclose{}} = 1 \text{)}
+> \end{aligned}$$
+>
+> The first step applies [the logarithm of a reciprocal](#cor-log-recip), and the second uses ${\operatorname{log}\mathopen{}\left\{\text{e}\right\}\mathclose{}} = 1$ from [Example 17](#exm-natural-log).
+>
+> The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of ${\operatorname{log}\mathopen{}\left\{\frac{1}{x}\right\}\mathclose{}}$ is the graph of ${\operatorname{log}\mathopen{}\left\{x\right\}\mathclose{}}$ reflected across the horizontal axis. The dots mark $(\text{e}, 1)$ on the graph of ${\operatorname{log}\mathopen{}\left\{x\right\}\mathclose{}}$ and $(\text{e}, -1)$ on the graph of ${\operatorname{log}\mathopen{}\left\{\frac{1}{x}\right\}\mathclose{}}$.
+>
+> Show code
+>
+> ``` downlit
+> x <- seq(0.1, 5, length.out = 200)
+> log_x <- log(x)
+> reciprocal <- 1 / x
+> log_reciprocal <- log(reciprocal)
+> log_curve <- tibble::tibble(x = x, y = log_x, curve = "log(x)")
+> reciprocal_curve <- tibble::tibble(
+>   x = x, y = log_reciprocal, curve = "log(1/x)"
+> )
+> curves <- dplyr::bind_rows(log_curve, reciprocal_curve)
+>
+> e_value <- exp(1)
+> marked_y <- c(1, -1)
+> marked_curve <- c("log(x)", "log(1/x)")
+> marked <- tibble::tibble(x = e_value, y = marked_y, curve = marked_curve)
+> line_types <- c("log(x)" = "solid", "log(1/x)" = "dashed")
+>
+> recip_plot <- curves |>
+>   ggplot2::ggplot() +
+>   ggplot2::aes(x = x, y = y, linetype = curve) +
+>   ggplot2::geom_hline(yintercept = 0, colour = "grey60") +
+>   ggplot2::geom_line() +
+>   ggplot2::geom_point(data = marked, colour = "firebrick", size = 2) +
+>   ggplot2::scale_linetype_manual(values = line_types) +
+>   ggplot2::labs(x = "x", y = "value", linetype = NULL)
+>
+> recip_plot
+> ```
+>
+> [![Two curves for x from 0.1 to 5. The solid curve, the natural logarithm of x, rises from below the horizontal axis, crosses it at x = 1 and passes through a dot at (e, 1). The dashed curve, the natural logarithm of 1 over x, is its mirror image across the horizontal axis: it falls, crosses the axis at x = 1 and passes through a dot at (e, -1).](algebra-exponentials_files/figure-html/unnamed-chunk-2-1.png)](algebra-exponentials_files/figure-html/unnamed-chunk-2-1.png)
+
+> **NOTE:**
+>
 > **Theorem 4 (Logarithm of a power)** If $a > 0$ and $b \in \mathbb{R}$, then
 >
 > $${\operatorname{log}\mathopen{}\left\{a^b\right\}\mathclose{}} = b \cdot{\operatorname{log}\mathopen{}\left\{a\right\}\mathclose{}}$$
@@ -577,17 +649,17 @@ Last modified: 2026-11-14 13:01:34 (PST)
 
 > **NOTE:**
 >
-> **Example 21 (Exponential of a sum)** With $a = 2$ and $b = 3$, ${\operatorname{exp}\mathopen{}\left\{2 + 3\right\}\mathclose{}} = {\operatorname{exp}\mathopen{}\left\{5\right\}\mathclose{}} \approx 148.41$, and ${\operatorname{exp}\mathopen{}\left\{2\right\}\mathclose{}} \cdot{\operatorname{exp}\mathopen{}\left\{3\right\}\mathclose{}} \approx 7.3891 \cdot 20.0855 \approx 148.41$.
+> **Example 22 (Exponential of a sum)** With $a = 2$ and $b = 3$, ${\operatorname{exp}\mathopen{}\left\{2 + 3\right\}\mathclose{}} = {\operatorname{exp}\mathopen{}\left\{5\right\}\mathclose{}} \approx 148.41$, and ${\operatorname{exp}\mathopen{}\left\{2\right\}\mathclose{}} \cdot{\operatorname{exp}\mathopen{}\left\{3\right\}\mathclose{}} \approx 7.3891 \cdot 20.0855 \approx 148.41$.
 
 > **NOTE:**
 >
-> **Corollary 2 (Exponential of a difference)** The exponential of a difference is the exponential of the first term divided by the exponential of the second term:
+> **Corollary 3 (Exponential of a difference)** The exponential of a difference is the exponential of the first term divided by the exponential of the second term:
 >
 > $${\operatorname{exp}\mathopen{}\left\{a-b\right\}\mathclose{}} = \frac{{\operatorname{exp}\mathopen{}\left\{a\right\}\mathclose{}}}{{\operatorname{exp}\mathopen{}\left\{b\right\}\mathclose{}}}$$
 
 > **NOTE:**
 >
-> **Example 22 (Exponential of a difference)** With $a = 5$ and $b = 2$, ${\operatorname{exp}\mathopen{}\left\{5 - 2\right\}\mathclose{}} = {\operatorname{exp}\mathopen{}\left\{3\right\}\mathclose{}} \approx 20.09$, and $\frac{{\operatorname{exp}\mathopen{}\left\{5\right\}\mathclose{}}}{{\operatorname{exp}\mathopen{}\left\{2\right\}\mathclose{}}} \approx \frac{148.4132}{7.3891} \approx 20.09$.
+> **Example 23 (Exponential of a difference)** With $a = 5$ and $b = 2$, ${\operatorname{exp}\mathopen{}\left\{5 - 2\right\}\mathclose{}} = {\operatorname{exp}\mathopen{}\left\{3\right\}\mathclose{}} \approx 20.09$, and $\frac{{\operatorname{exp}\mathopen{}\left\{5\right\}\mathclose{}}}{{\operatorname{exp}\mathopen{}\left\{2\right\}\mathclose{}}} \approx \frac{148.4132}{7.3891} \approx 20.09$.
 
 > **NOTE:**
 >
@@ -607,7 +679,7 @@ Last modified: 2026-11-14 13:01:34 (PST)
 
 > **NOTE:**
 >
-> **Example 23 (Power of a sum)** With $a = 2$, $b = 3$, and $c = 4$,
+> **Example 24 (Power of a sum)** With $a = 2$, $b = 3$, and $c = 4$,
 >
 > $$\begin{aligned}
 > 2^{3+4} &= 2^7 \\
@@ -631,7 +703,7 @@ Last modified: 2026-11-14 13:01:34 (PST)
 
 > **NOTE:**
 >
-> **Example 24 (Power of a product)** With $a = 2$, $b = 3$, and $c = 2$,
+> **Example 25 (Power of a product)** With $a = 2$, $b = 3$, and $c = 2$,
 >
 > $$\begin{aligned}
 > (2 \cdot 3)^2 &= 6^2 \\
@@ -657,7 +729,7 @@ Last modified: 2026-11-14 13:01:34 (PST)
 
 > **NOTE:**
 >
-> **Example 25 (A negative base)** With $a = -1$, $b = 2$, and $c = \frac{1}{2}$:
+> **Example 26 (A negative base)** With $a = -1$, $b = 2$, and $c = \frac{1}{2}$:
 >
 > $$\begin{aligned}
 > a^{bc}
@@ -683,7 +755,7 @@ Last modified: 2026-11-14 13:01:34 (PST)
 
 > **NOTE:**
 >
-> **Corollary 3 (Natural exponential of a product)** $$\begin{aligned}
+> **Corollary 4 (Natural exponential of a product)** $$\begin{aligned}
 > {\operatorname{exp}\mathopen{}\left\{ab\right\}\mathclose{}}
 > &= ({\operatorname{exp}\mathopen{}\left\{a\right\}\mathclose{}})^b \\
 > &= ({\operatorname{exp}\mathopen{}\left\{b\right\}\mathclose{}})^a
@@ -709,7 +781,7 @@ Last modified: 2026-11-14 13:01:34 (PST)
 
 > **NOTE:**
 >
-> **Example 26 (Contour lines of a bowl)** For $g(b, c) = b^2 + c^2$, the contour line at height $k = 4$ is $\mathopen{}\left\{(b, c) : b^2 + c^2 = 4\right\}\mathclose{}$, the circle of radius $2$ around $(0, 0)$: for example,
+> **Example 27 (Contour lines of a bowl)** For $g(b, c) = b^2 + c^2$, the contour line at height $k = 4$ is $\mathopen{}\left\{(b, c) : b^2 + c^2 = 4\right\}\mathclose{}$, the circle of radius $2$ around $(0, 0)$: for example,
 >
 > $$\begin{aligned}
 > g(2, 0) &= 4 + 0 \\
@@ -901,7 +973,7 @@ Last modified: 2026-11-14 13:01:34 (PST)
 >
 > ## Python
 >
-> Figure 2: The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $g(b, c) = b^2 + c^2$, the surface whose [contour lines](#def-contour-line) are in [Figure 1](#fig-contour-line). The red circles are the contour lines at heights $1$, $4$ and $9$, and the dots are the points $(2, 0)$ and $(0, -2)$ of [Example 26](#exm-contour-line) on the one at height $4$.
+> Figure 2: The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $g(b, c) = b^2 + c^2$, the surface whose [contour lines](#def-contour-line) are in [Figure 1](#fig-contour-line). The red circles are the contour lines at heights $1$, $4$ and $9$, and the dots are the points $(2, 0)$ and $(0, -2)$ of [Example 27](#exm-contour-line) on the one at height $4$.
 
 > **NOTE:**
 >

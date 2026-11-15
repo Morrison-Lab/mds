@@ -792,6 +792,15 @@
    "external": false
   },
   {
+   "id": "mds/algebra-exponentials#cor-log-recip",
+   "site": "mds",
+   "page": "algebra-exponentials",
+   "div": "cor-log-recip",
+   "kind": "cor",
+   "title": "Logarithm of a reciprocal",
+   "external": false
+  },
+  {
    "id": "mds/algebra-exponentials#def-affine-function",
    "site": "mds",
    "page": "algebra-exponentials",
@@ -7074,6 +7083,10 @@
   [
    "mds/algebra-complex#def-real-part",
    "mds/algebra-complex#def-complex-number"
+  ],
+  [
+   "mds/algebra-exponentials#cor-log-recip",
+   "mds/algebra-exponentials#def-natural-log"
   ],
   [
    "mds/algebra-exponentials#def-affine-function",
