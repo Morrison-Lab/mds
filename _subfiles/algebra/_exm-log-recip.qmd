@@ -15,7 +15,7 @@ $$
 The first step applies [the logarithm of a reciprocal](#cor-log-recip),
 and the second uses $\logf{e} = 1$ from @exm-natural-log.
 
-The graph of $\logf{\frac{1}{x}}$ is the graph of $\logf{x}$
+The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $\logf{\frac{1}{x}}$ is the graph of $\logf{x}$
 reflected across the horizontal axis.
 The dots mark $(e, 1)$ on the graph of $\logf{x}$
 and $(e, -1)$ on the graph of $\logf{\frac{1}{x}}$.
