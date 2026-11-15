@@ -1,0 +1,63 @@
+:::{#exm-log-recip}
+#### The logarithm of $\frac{1}{\euler}$
+
+$$
+\ba
+\logf{\frac{1}{\euler}}
+&= -\logf{\euler}
+&& \text{(logarithm of a reciprocal)}
+\\
+&= -1
+&& \text{(} \logf{\euler} = 1 \text{)}
+\ea
+$$
+
+The first step applies [the logarithm of a reciprocal](#cor-log-recip),
+and the second uses $\logf{\euler} = 1$ from @exm-natural-log.
+
+The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $\logf{\frac{1}{x}}$ is the graph of $\logf{x}$
+reflected across the horizontal axis.
+The dots mark $(\euler, 1)$ on the graph of $\logf{x}$
+and $(\euler, -1)$ on the graph of $\logf{\frac{1}{x}}$.
+
+```{r}
+#| code-fold: true
+#| echo: !expr knitr::is_html_output()
+#| message: false
+#| warning: false
+#| fig-alt: >-
+#|   Two curves for x from 0.1 to 5. The solid curve, the natural logarithm
+#|   of x, rises from below the horizontal axis, crosses it at x = 1 and
+#|   passes through a dot at (e, 1). The dashed curve, the natural logarithm
+#|   of 1 over x, is its mirror image across the horizontal axis: it falls,
+#|   crosses the axis at x = 1 and passes through a dot at (e, -1).
+
+x <- seq(0.1, 5, length.out = 200)
+log_x <- log(x)
+reciprocal <- 1 / x
+log_reciprocal <- log(reciprocal)
+log_curve <- tibble::tibble(x = x, y = log_x, curve = "log(x)")
+reciprocal_curve <- tibble::tibble(
+  x = x, y = log_reciprocal, curve = "log(1/x)"
+)
+curves <- dplyr::bind_rows(log_curve, reciprocal_curve)
+
+e_value <- exp(1)
+marked_y <- c(1, -1)
+marked_curve <- c("log(x)", "log(1/x)")
+marked <- tibble::tibble(x = e_value, y = marked_y, curve = marked_curve)
+line_types <- c("log(x)" = "solid", "log(1/x)" = "dashed")
+
+recip_plot <- curves |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = x, y = y, linetype = curve) +
+  ggplot2::geom_hline(yintercept = 0, colour = "grey60") +
+  ggplot2::geom_line() +
+  ggplot2::geom_point(data = marked, colour = "firebrick", size = 2) +
+  ggplot2::scale_linetype_manual(values = line_types) +
+  ggplot2::labs(x = "x", y = "value", linetype = NULL)
+
+recip_plot
+```
+
+:::
