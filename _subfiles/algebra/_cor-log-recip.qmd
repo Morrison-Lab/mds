@@ -1,0 +1,33 @@
+:::{#cor-log-recip}
+#### Logarithm of a reciprocal
+
+If $a > 0$, then
+
+$$\logf{\frac{1}{a}} = -\logf{a}$$
+
+:::
+
+{{< slidebreak >}}
+
+::: proof
+
+Since $1 > 0$ and $a > 0$, @cor-log-quot applies to the quotient $\frac{1}{a}$:
+
+$$
+\ba
+\logf{\frac{1}{a}}
+&= \logf{1} - \logf{a}
+&& \text{(logarithm of a quotient)}
+\\
+&= 0 - \logf{a}
+&& \text{(} \logf{1} = 0 \text{)}
+\\
+&= -\logf{a}
+&& \text{(} 0 - c = -c \text{)}
+\ea
+$$
+
+The first step applies @cor-log-quot,
+and the second uses $\logf{1} = 0$ from @exm-natural-log.
+
+:::
