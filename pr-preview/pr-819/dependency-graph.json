@@ -7085,6 +7085,10 @@
    "mds/algebra-complex#def-complex-number"
   ],
   [
+   "mds/algebra-exponentials#cor-log-recip",
+   "mds/algebra-exponentials#def-natural-log"
+  ],
+  [
    "mds/algebra-exponentials#def-affine-function",
    "mcs/functions#def-function"
   ],

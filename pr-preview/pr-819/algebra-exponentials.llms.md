@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-11-15 04:51:36 (PST)
+Last modified: 2026-11-15 05:50:49 (PST)
 
 # 1 Polynomials
 
@@ -565,7 +565,7 @@ Last modified: 2026-11-15 04:51:36 (PST)
 
 > **NOTE:**
 >
-> **Corollary 2 (Logarithm of a reciprocal)** If $a > 0$, then
+> **Corollary 2 (Logarithm of a reciprocal)** If $a > 0$, then the [natural logarithm](#def-natural-log) of $\frac{1}{a}$ is the negative of the natural logarithm of $a$:
 >
 > $${\operatorname{log}\mathopen{}\left\{\frac{1}{a}\right\}\mathclose{}} = -{\operatorname{log}\mathopen{}\left\{a\right\}\mathclose{}}$$
 
