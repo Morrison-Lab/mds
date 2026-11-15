@@ -1,7 +1,8 @@
 :::{#cor-log-recip}
 #### Logarithm of a reciprocal
 
-If $a > 0$, then
+If $a > 0$,
+then the [natural logarithm](#def-natural-log) of $\frac{1}{a}$ is the negative of the natural logarithm of $a$:
 
 $$\logf{\frac{1}{a}} = -\logf{a}$$
 
