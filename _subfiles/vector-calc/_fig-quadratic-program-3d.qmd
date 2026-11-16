@@ -1,0 +1,89 @@
+::: {#fig-quadratic-program-3d}
+
+```{r}
+#| label: quadratic-program-3d
+#| echo: !expr knitr::is_html_output()
+#| eval: !expr knitr::is_html_output()
+#| code-fold: true
+#| fig-alt: >-
+#|   Surface plot of f(x) = x1 squared plus x2 squared for x1 and x2 from
+#|   -1.5 to 1.5: a bowl with its lowest point, height 0, at the origin.
+#|   A dashed vermilion curve on the surface lies above the line
+#|   x1 + x2 = 1, the edge of the feasible half-plane. Its lowest point,
+#|   at (0.5, 0.5) and height 0.5, is marked with a dot.
+qp_axis_sf <- seq(-1.5, 1.5, length.out = 101)
+qp_grid_sf <- tidyr::expand_grid(x1 = qp_axis_sf, x2 = qp_axis_sf)
+qp_value_sf <- qp_grid_sf$x1^2 + qp_grid_sf$x2^2
+qp_n_sf <- length(qp_axis_sf)
+qp_z_sf <- matrix(qp_value_sf, nrow = qp_n_sf)
+# The edge x1 + x2 = 1 of the feasible half-plane, lifted onto the surface.
+qp_edge_x1_sf <- seq(-0.5, 1.5, length.out = 41)
+qp_edge_sf <- tibble::tibble(x1 = qp_edge_x1_sf)
+qp_edge_sf$x2 <- 1 - qp_edge_sf$x1
+qp_edge_sf$z <- qp_edge_sf$x1^2 + qp_edge_sf$x2^2
+qp_min_sf <- tibble::tibble(x1 = 0.5, x2 = 0.5, z = 0.5)
+qp_dash_sf <- list(color = "#D55E00", dash = "dash", width = 5)
+qp_marker_sf <- list(color = "black", size = 5)
+qp_stops_sf <- c(0, 1)
+qp_cols_sf <- c("#CCE0F0", "#0072B2")
+qp_scale_sf <- list(qp_stops_sf, qp_cols_sf)
+qp_eye_sf <- list(x = 1.6, y = -1.6, z = 0.9)
+qp_camera_sf <- list(eye = qp_eye_sf)
+qp_xaxis_sf <- list(title = "x1")
+qp_yaxis_sf <- list(title = "x2")
+qp_zaxis_sf <- list(title = "f(x)")
+qp_scene_sf <- list(
+  xaxis = qp_xaxis_sf,
+  yaxis = qp_yaxis_sf,
+  zaxis = qp_zaxis_sf,
+  camera = qp_camera_sf
+)
+qp_legend_sf <- list(orientation = "h")
+plotly::plot_ly() |>
+  plotly::add_surface(
+    x = qp_axis_sf,
+    y = qp_axis_sf,
+    z = qp_z_sf,
+    colorscale = qp_scale_sf,
+    showscale = FALSE,
+    opacity = 0.8
+  ) |>
+  plotly::add_trace(
+    data = qp_edge_sf,
+    x = ~x1,
+    y = ~x2,
+    z = ~z,
+    type = "scatter3d",
+    mode = "lines",
+    line = qp_dash_sf,
+    name = "above x1 + x2 = 1"
+  ) |>
+  plotly::add_trace(
+    data = qp_min_sf,
+    x = ~x1,
+    y = ~x2,
+    z = ~z,
+    type = "scatter3d",
+    mode = "markers",
+    marker = qp_marker_sf,
+    name = "minimizer"
+  ) |>
+  plotly::layout(scene = qp_scene_sf, legend = qp_legend_sf)
+```
+
+```{r}
+#| echo: false
+#| eval: !expr isFALSE(knitr::is_html_output())
+#| results: asis
+cat(
+  "*(This 3D surface is interactive; see the HTML or slide version",
+  "of this page to view it.)*"
+)
+```
+
+The [objective](#def-objective-function) $x_1^2 + x_2^2$ of @exm-quadratic-program as a surface,
+whose [level curves](vector-calculus.qmd#def-level-set) are the circles in @fig-quadratic-program.
+The dashed curve lies above the edge $x_1 + x_2 = 1$ of the feasible [half-plane](optimization-convexity.qmd#def-half-space),
+and its lowest point, at $\tp{(0.5, 0.5)}$ and height $0.5$, is the dot.
+
+:::
