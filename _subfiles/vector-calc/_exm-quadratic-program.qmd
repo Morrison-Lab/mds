@@ -34,19 +34,20 @@ it is where the smallest contour circle of the objective touches the feasible ha
 #| fig-height: 4.5
 #| fig-width: 4.5
 # The objective on a grid, for its contour circles.
-grid <- tidyr::expand_grid(
-  x1 = seq(-1.5, 1.5, length.out = 301),
-  x2 = seq(-1.5, 1.5, length.out = 301)
-)
+axis_values <- seq(-1.5, 1.5, length.out = 301)
+grid <- tidyr::expand_grid(x1 = axis_values, x2 = axis_values)
 grid <- dplyr::mutate(grid, f = x1^2 + x2^2)
 
 # The feasible half-plane x1 + x2 >= 1, clipped to the plotted square.
-feasible <- tibble::tibble(
-  x1 = c(-0.5, 1.5, 1.5),
-  x2 = c(1.5, 1.5, -0.5)
+feasible <- tibble::tribble(
+  ~x1, ~x2,
+  -0.5, 1.5,
+  1.5, 1.5,
+  1.5, -0.5
 )
 # Contour heights: 0.5 is the minimum over the half-plane; the others frame it.
 heights <- c(0.25, 0.5, 1, 2)
+limits <- c(-1.5, 1.5)
 minimizer <- tibble::tibble(x1 = 0.5, x2 = 0.5)
 
 grid |>
@@ -60,7 +61,7 @@ grid |>
     colour = "grey30"
   ) +
   ggplot2::geom_point(data = minimizer, size = 3) +
-  ggplot2::coord_fixed(xlim = c(-1.5, 1.5), ylim = c(-1.5, 1.5)) +
+  ggplot2::coord_fixed(xlim = limits, ylim = limits) +
   ggplot2::labs(x = "first coordinate", y = "second coordinate")
 ```
 

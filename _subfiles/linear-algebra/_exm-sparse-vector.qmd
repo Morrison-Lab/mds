@@ -1,7 +1,8 @@
 :::{#exm-sparse-vector}
 #### A $2$-sparse vector
 
-The vector $\vx = \tp{(0, 3, 0, 0, -1)} \in \reals^5$ has two nonzero entries,
+Take $\vx = \tp{(0, 3, 0, 0, -1)} \in \reals^5$.
+It has two nonzero entries,
 $x_2 = 3$ and $x_5 = -1$,
 so it is [$2$-sparse](#def-sparse-vector).
 It is also $3$-sparse, $4$-sparse and $5$-sparse,
@@ -21,13 +22,16 @@ It is not $1$-sparse, because two of its entries are nonzero.
 #|   other three entries sit on it.
 #| fig-height: 3
 #| fig-width: 5
-entries <- tibble::tibble(position = 1:5, value = c(0, 3, 0, 0, -1))
+values <- c(0, 3, 0, 0, -1)
+entries <- tibble::tibble(position = 1:5, value = values)
 
 entries |>
   ggplot2::ggplot() +
   ggplot2::aes(x = position, y = value) +
   ggplot2::geom_hline(yintercept = 0, colour = "grey60") +
-  ggplot2::geom_segment(mapping = ggplot2::aes(xend = position, yend = 0)) +
+  ggplot2::geom_segment(
+    mapping = ggplot2::aes(xend = position, yend = 0)
+  ) +
   ggplot2::geom_point(size = 3) +
   ggplot2::labs(x = "entry position", y = "entry value")
 ```

@@ -1,7 +1,7 @@
 :::{#def-sparse-vector}
 #### $k$-sparse vector (sparsity)
 
-For a vector $\vx \in \reals^p$ (@def-real-coordinate-space)
+For a vector $\vx$ in [$\reals^p$](#def-real-coordinate-space)
 and a whole number $k \le p$,
 $\vx$ is **$k$-sparse**
 [@wikipedia_sparse_matrix]
