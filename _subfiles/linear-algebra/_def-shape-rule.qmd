@@ -1,0 +1,10 @@
+:::{#def-shape-rule}
+#### Shape rule
+
+The **shape rule** of [matrix multiplication](#def-matrix-mult)
+says that an $m \times k$ [matrix](#def-matrix) times a $k \times n$ matrix is an $m \times n$ matrix,
+and that the multiplication is defined only when the inner pair of sizes matches:
+
+$$(m \times k)(k \times n) \;\longrightarrow\; m \times n$$ {#eq-shape-rule}
+
+:::

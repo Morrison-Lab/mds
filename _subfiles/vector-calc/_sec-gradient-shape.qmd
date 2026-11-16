@@ -14,4 +14,4 @@ input:
 
 The table is the cheapest check there is on a gradient just worked out by
 hand: if the shapes disagree, something went wrong.
-It is the shape rule of matrix multiplication again, applied to calculus.
+It is the [shape rule](linear-algebra-matrices.qmd#def-shape-rule) of [matrix multiplication](linear-algebra-matrices.qmd#def-matrix-mult) again, applied to calculus.
