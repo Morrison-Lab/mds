@@ -1,0 +1,15 @@
+:::{#sol-null-gram-practice}
+
+Each entry of $\matr{A}\vecf{x}$ is $x_1 + x_2$,
+so $\matr{A}\vecf{x} = \vzero_3$ exactly when $x_2 = -x_1$,
+and $\mathcal{N}(\matr{A}) = \operatorname{span}\cb{(1, -1)}$.
+By @thm-null-gram,
+
+$$
+\mathcal{N}(\tp{\matr{A}}\matr{A}) = \operatorname{span}\cb{(1, -1)}.
+$$
+
+As a check, $\tp{\matr{A}}\matr{A} = \sbmat{3 & 3 \\ 3 & 3}$,
+which sends $(1, -1)$ to $\vzero_2$.
+
+:::

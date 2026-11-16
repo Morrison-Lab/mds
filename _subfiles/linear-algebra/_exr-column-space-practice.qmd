@@ -1,0 +1,23 @@
+:::{#exr-column-space-practice}
+#### Testing whether a vector is in a column space
+
+A vector $\vecf{b}$ is in the [column space](#def-column-space) of a [matrix](linear-algebra-matrices.qmd#def-matrix) $\matr{A}$
+exactly when some $\vecf{x}$ gives $\matr{A}\vecf{x} = \vecf{b}$.
+Let
+
+$$
+\matr{A} = \sbmat{1 & 2 \\ 3 & 6},
+\qquad
+\vecf{b} = \sbmat{2 \\ 6}.
+$$
+
+Decide whether $\vecf{b}$ is in $\mathcal{C}(\matr{A})$.
+
+::: {.callout-tip}
+#### Hint
+
+Try $\vecf{x} = (x_1, 0)$ and solve for $x_1$.
+
+:::
+
+:::

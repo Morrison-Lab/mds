@@ -1,0 +1,12 @@
+:::{#sol-subspace-practice}
+
+No.
+The vector $\tp{(0, 1)}$ is in $\mathcal{H}$,
+but $(-1) \cd \tp{(0, 1)} = \tp{(0, -1)}$ is not,
+because its second entry is negative.
+So $\mathcal{H}$ fails condition 2 of @def-subspace,
+and it is not a [subspace](#def-subspace).
+$\mathcal{H}$ does satisfy condition 1,
+which shows that one condition alone is not enough.
+
+:::

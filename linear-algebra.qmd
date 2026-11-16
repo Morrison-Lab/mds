@@ -1,16 +1,9 @@
 ---
 title: "Linear Algebra"
+html-only: true
 format:
   html: default
-  revealjs:
-    output-file: linear-algebra-slides.html
-  pdf:
-    output-file: linear-algebra-handout.pdf
-  docx:
-    output-file: linear-algebra.docx
 ---
-
-::: {.content-visible when-format="html"}
 
 The linear algebra notes are split across these pages:
 
@@ -43,14 +36,6 @@ The linear algebra notes are split across these pages:
 A link to a section, theorem or definition on this page from before the split
 goes on to the page that now holds it.
 
-:::
-
-::: {.content-visible unless-format="html"}
-
-{{< include mds/_subfiles/_sec_linear_algebra.qmd >}}
-
-:::
-
 {{< include mds/_subfiles/linear-algebra/_def-matrix-analysis.qmd >}}
 
 {{< include mds/_subfiles/linear-algebra/_exm-matrix-analysis.qmd >}}
@@ -78,7 +63,7 @@ goes on to the page that now holds it.
 - @petersen2012matrix
   is a free desk reference that collects matrix identities:
   it lists results on determinants, inverses, decompositions,
-  and [derivatives](calculus.qmd#def-derivative) of vectors and matrices,
+  and [derivatives](calculus-derivatives.qmd#def-derivative) of vectors and matrices,
   so it is a quick place to look up a formula these pages prove.
 - @stanford2024ee278notes
   (Stanford EE 278, taught by Tsachy Weissman) applies this page's tools to probability and inference.

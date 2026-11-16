@@ -1,0 +1,19 @@
+:::{#exr-subspace-sum-practice}
+#### Testing whether a vector is in a sum of two lines
+
+A vector is in the [sum of two subspaces](#def-subspace-sum)
+when it splits into one piece from each.
+Let $\mathcal{S}_1 = \operatorname{span}\cb{(1, 0, 1)}$
+and $\mathcal{S}_2 = \operatorname{span}\cb{(0, 1, 1)}$,
+two lines in $\reals^3$.
+
+Decide whether the vector $(2, 3, 5)$ is in $\mathcal{S}_1 + \mathcal{S}_2$.
+
+::: {.callout-tip}
+#### Hint
+
+Look for $a$ and $b$ with $a\,(1, 0, 1) + b\,(0, 1, 1) = (2, 3, 5)$, starting with the first two entries.
+
+:::
+
+:::

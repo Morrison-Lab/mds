@@ -1,0 +1,20 @@
+:::{#exr-dim-sum-practice}
+#### Finding the dimension of a sum of two planes in $\reals^4$
+
+@thm-dim-sum finds the [dimension](linear-algebra-subspaces.qmd#def-dimension) of a [sum of two subspaces](#def-subspace-sum)
+without describing it.
+Let $\mathcal{S}_1 = \operatorname{span}\cb{\vecf{e}_1, \vecf{e}_2}$
+and $\mathcal{S}_2 = \operatorname{span}\cb{\vecf{e}_2, \vecf{e}_3}$,
+two planes in $\reals^4$,
+where $\vecf{e}_1, \ldots, \vecf{e}_4$ are the [indicator vectors](linear-algebra-vectors.qmd#def-indicator-vector) of $\reals^4$.
+
+Find $\dim(\mathcal{S}_1 + \mathcal{S}_2)$ from @thm-dim-sum.
+
+::: {.callout-tip}
+#### Hint
+
+First find $\mathcal{S}_1 \cap \mathcal{S}_2$ by comparing entries.
+
+:::
+
+:::

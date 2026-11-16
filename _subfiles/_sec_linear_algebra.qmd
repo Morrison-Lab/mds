@@ -8,11 +8,33 @@
 
 {{< include mds/_subfiles/_sec_linear_algebra_matrices.qmd >}}
 
+# Rank
+
+{{< include mds/_subfiles/_sec_linear_algebra_subspaces_rank.qmd >}}
+
+# Subspaces {#sec-subspaces}
+
 {{< include mds/_subfiles/_sec_linear_algebra_subspaces.qmd >}}
+
+# Column space and null space {#sec-column-null-space}
+
+{{< include mds/_subfiles/_sec_linear_algebra_rank_nullity_spaces.qmd >}}
+
+# Rank-nullity and rank factorization {#sec-rank-nullity}
 
 {{< include mds/_subfiles/_sec_linear_algebra_rank_nullity.qmd >}}
 
+# Sums and direct sums {#sec-direct-sums}
+
 {{< include mds/_subfiles/_sec_linear_algebra_direct_sums.qmd >}}
+
+# Orthogonal complements {#sec-orthogonal-complements}
+
+{{< include mds/_subfiles/_sec_linear_algebra_direct_sums_complements.qmd >}}
+
+# The fundamental theorem of linear algebra {#sec-fundamental-theorem}
+
+{{< include mds/_subfiles/_sec_linear_algebra_direct_sums_fundamental.qmd >}}
 
 {{< include mds/_subfiles/_sec_linear_algebra_inner_products.qmd >}}
 

@@ -1,0 +1,17 @@
+:::{#exr-orthogonal-complement-practice}
+#### Testing whether a vector is in an orthogonal complement
+
+A vector is in the [orthogonal complement](#def-orthogonal-complement) of a [set](https://morrison-lab.github.io/mcs/sets.html#def-set)
+when it is [orthogonal](linear-algebra-vectors.qmd#def-orthogonal-vectors) to every vector of the set.
+Let $\mathcal{X} = \cb{(1, 2, 0), (0, 3, 1)}$, a set of two vectors in $\reals^3$.
+
+Decide whether the vector $(2, -1, 3)$ is in $\mathcal{X}^\perp$.
+
+::: {.callout-tip}
+#### Hint
+
+Take the [dot product](linear-algebra-vectors.qmd#def-dot-product) of $(2, -1, 3)$ with each vector of $\mathcal{X}$.
+
+:::
+
+:::

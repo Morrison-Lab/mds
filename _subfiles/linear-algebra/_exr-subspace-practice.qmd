@@ -1,0 +1,24 @@
+:::{#exr-subspace-practice}
+#### Testing whether vectors with a nonnegative second entry are a subspace
+
+A constraint such as "this entry is at least $0$" cuts out a [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of vectors,
+and it is worth knowing whether that set is a [subspace](#def-subspace).
+Let
+
+$$
+\mathcal{H} = \cb{(x, y) \in \reals^2 : y \ge 0},
+$$
+
+the vectors whose second entry is nonnegative.
+
+Is $\mathcal{H}$ a subspace of $\reals^2$?
+
+::: {.callout-tip}
+#### Hint
+
+Check condition 2 of @def-subspace
+with $c = -1$.
+
+:::
+
+:::

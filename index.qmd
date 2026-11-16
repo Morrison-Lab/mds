@@ -51,7 +51,7 @@ can build on them directly:
     set and predicate indicators, the Iverson bracket, the Kronecker delta,
     and their algebraic properties
 - [Algebra](algebra.qmd):
-  equalities and [inequalities](https://morrison-lab.github.io/mcs/proof-writing.html#def-inequality), [infimum](algebra.qmd#def-infimum) and [supremum](algebra.qmd#def-supremum),
+  equalities and [inequalities](https://morrison-lab.github.io/mcs/proof-writing.html#def-inequality), [infimum](algebra-sums.qmd#def-infimum) and [supremum](algebra-sums.qmd#def-supremum),
   percent, sums, products, quotients, limits of sums, notational shorthands, exponentials and logarithms
 - [Proof Writing](https://morrison-lab.github.io/mcs/proof-writing.html):
   propositions, quantifiers, proofs and [derivations](https://morrison-lab.github.io/mcs/proof-writing.html#def-derivation), and showing and annotating every step of a [derivation](https://morrison-lab.github.io/mcs/proof-writing.html#def-derivation)
@@ -61,13 +61,13 @@ can build on them directly:
 The remaining topics build on the foundations and on each other:
 
 - [Measures](measures.qmd):
-  $\sigma$-algebras, [finite](https://morrison-lab.github.io/mcs/functions.html#def-finite-set) and [countable additivity](measures.qmd#def-countable-additivity),
+  $\sigma$-algebras, [finite](https://morrison-lab.github.io/mcs/functions.html#def-finite-set) and [countable additivity](measures-additivity.qmd#def-countable-additivity),
   measures, and the counting measure
 - [Calculus](calculus.qmd):
-  [derivative](calculus-derivatives.qmd#def-derivative) rules, [Taylor series](calculus-taylor-series.qmd#def-taylor-series), [antiderivatives](calculus.qmd#def-antiderivative),
-  regularity conditions (the [continuity](calculus.qmd#def-continuous),
-  [differentiability](calculus.qmd#def-differentiable),
-  and [integrability](calculus.qmd#def-integrable) that results assume),
+  [derivative](calculus-derivatives.qmd#def-derivative) rules, [Taylor series](calculus-taylor-series.qmd#def-taylor-series), [antiderivatives](calculus-integration.qmd#def-antiderivative),
+  regularity conditions (the [continuity](calculus-integration.qmd#def-continuous),
+  [differentiability](calculus-derivatives.qmd#def-differentiable),
+  and [integrability](calculus-integration.qmd#def-integrable) that results assume),
   the Fundamental Theorem of Calculus, and double integrals
 - [Linear Algebra](linear-algebra.qmd):
   vectors, matrices and their operations, special matrices,
@@ -133,7 +133,8 @@ for example `{{</* include mds/_notation.qmd */>}}`.
 This site includes its own fragments the same way,
 through a `mds` symlink that points at the repository root.
 
-Each page is a thin wrapper around one or more fragments:
+Each page's content is in one or more fragments, which a host page can include,
+even where this site's own page only lists its sub-pages:
 
 | Page | Fragment(s) to include |
 |------|------------------------|

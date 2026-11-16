@@ -1,0 +1,11 @@
+:::{#sol-sum-of-elements-practice}
+
+By @def-sum-of-elements,
+
+$$
+\sumof{\vx} = 22 + 12 + 11 = 45,
+$$
+
+so the shop sold $45$ units in all.
+
+:::

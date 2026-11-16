@@ -1,0 +1,19 @@
+:::{#exr-double-complement-practice}
+#### Taking the orthogonal complement twice
+
+@thm-double-complement says that taking the [orthogonal complement](#def-orthogonal-complement)
+of a [subspace](linear-algebra-subspaces.qmd#def-subspace) twice gives back the subspace.
+Let $\mathcal{S} = \operatorname{span}\cb{(1, 2)}$ in $\reals^2$,
+whose orthogonal complement is $\mathcal{S}^\perp = \operatorname{span}\cb{(-2, 1)}$.
+
+Find $(\mathcal{S}^\perp)^\perp$ directly from $\mathcal{S}^\perp = \operatorname{span}\cb{(-2, 1)}$.
+
+::: {.callout-tip}
+#### Hint
+
+A vector $\vecf{w}$ is [orthogonal](linear-algebra-vectors.qmd#def-orthogonal-vectors) to every multiple of $(-2, 1)$
+exactly when $-2 w_1 + w_2 = 0$.
+
+:::
+
+:::

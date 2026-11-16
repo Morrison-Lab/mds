@@ -1,0 +1,17 @@
+:::{#exr-sample-covariance-singular-practice}
+#### Deciding whether a sample covariance matrix is invertible
+
+A study records $6$ features for each of $4$ people,
+and forms the $6 \times 6$ sample covariance [matrix](linear-algebra-matrices.qmd#def-matrix) $\matr{S}$
+defined in @cor-sample-covariance-singular.
+
+Decide whether $\matr{S}$ is [invertible](linear-algebra-special-matrices.qmd#def-invertible-matrix).
+
+::: {.callout-tip}
+#### Hint
+
+Compare $n$ with $p$.
+
+:::
+
+:::

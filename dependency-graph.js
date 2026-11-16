@@ -8,7 +8,9 @@
    - an element with id "dependency-graph-page" gets a folded labeled graph of every div on its page;
    - an element with id "dependency-graph-site" gets one tree of every div on the site, and an
      element with id "dependency-graph-all" and a data-json attribute (comma-separated URLs of
-     several sites' dependency-graph.json) gets one tree of all those sites together.
+     several sites' dependency-graph.json) gets one tree of all those sites together,
+     and says how many of its boxes each site defines.  Name this site's own graph by the
+     relative URL "dependency-graph.json", so that a PR preview joins its own graph, not main's.
      These have hundreds of nodes, so their boxes carry no text: the kind and title show as hovertext. */
 (function () {
   "use strict";
@@ -210,8 +212,13 @@
     var edges = g.edges.filter(function (e) { return ids[e[0]] && ids[e[1]]; }).map(function (e) { return [e[1], e[0]]; });
     var levels = layers(keys, nodes, uses), kinds = {};
     keys.forEach(function (k) { kinds[nodes[k].kind] = 1; });
+    /* A tree joining several sites (g.site is "") says how many boxes each site defines. */
+    var bySite = {}, parts = [];
+    keys.forEach(function (k) { bySite[nodes[k].site] = (bySite[nodes[k].site] || 0) + 1; });
+    if (!g.site) Object.keys(bySite).sort().forEach(function (s) { parts.push(bySite[s] + " from " + s); });
     var p = document.createElement("p");
-    p.textContent = keys.length + " definitions and results, " + edges.length + " dependencies, " + levels.length + " levels.";
+    p.textContent = keys.length + " definitions and results" + (parts.length ? " (" + parts.join(", ") + ")" : "") +
+      ", " + edges.length + " dependencies, " + levels.length + " levels.";
     host.appendChild(p);
     host.appendChild(legend(kinds, true));
     var s = document.createElement("div");

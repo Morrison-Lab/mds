@@ -1,0 +1,21 @@
+:::{#exr-vector-valued-practice}
+#### Evaluating a vector-valued function at one input
+
+A [vector-valued function](#def-vector-valued) returns several numbers for one input.
+Let $g : \reals^2 \to \reals^3$ be
+
+$$
+g(\vx) = \sbmat{x_1 + x_2 \\ x_1 x_2 \\ x_1 - x_2}.
+$$
+
+Find $g\paren{\sbmat{2 \\ 3}}$.
+
+::: {.callout-tip}
+#### Hint
+
+Substitute $x_1 = 2$ and $x_2 = 3$ into each entry,
+as in @exm-real-vector-valued.
+
+:::
+
+:::

@@ -1,0 +1,16 @@
+:::{#sol-dim-sum-practice}
+
+A vector of $\mathcal{S}_1$ is $(a, b, 0, 0)$,
+and a vector of $\mathcal{S}_2$ is $(0, c, d, 0)$.
+They coincide
+exactly when $a = 0$, $d = 0$ and $b = c$,
+so $\mathcal{S}_1 \cap \mathcal{S}_2 = \operatorname{span}\cb{\vecf{e}_2}$, of [dimension](linear-algebra-subspaces.qmd#def-dimension) $1$.
+Each plane has dimension $2$,
+since two distinct [indicator vectors](linear-algebra-vectors.qmd#def-indicator-vector) are [linearly independent](linear-algebra-subspaces.qmd#def-linearly-independent).
+By @thm-dim-sum,
+
+$$
+\dim(\mathcal{S}_1 + \mathcal{S}_2) = 2 + 2 - 1 = 3.
+$$
+
+:::

@@ -1,0 +1,22 @@
+:::{#exr-complement-null-space-practice}
+#### Finding the orthogonal complement of a column space
+
+@thm-complement-null-space turns the [orthogonal complement](#def-orthogonal-complement)
+of a [column space](linear-algebra-rank-nullity.qmd#def-column-space) into a [null space](linear-algebra-rank-nullity.qmd#def-null-space),
+which a [linear system](linear-algebra-matrices.qmd#def-linear-system) describes.
+Let
+
+$$
+\matr{A} = \sbmat{1 & 0 \\ 0 & 1 \\ 1 & 1}.
+$$
+
+Find $\mathcal{C}(\matr{A})^\perp$ as a [span](linear-algebra-subspaces.qmd#def-span).
+
+::: {.callout-tip}
+#### Hint
+
+Solve $\tp{\matr{A}}\vecf{y} = \vzero_2$.
+
+:::
+
+:::

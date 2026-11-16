@@ -1,0 +1,9 @@
+:::{#sol-rank-nullity-practice}
+
+By @thm-rank-nullity, $\rankf{\matr{A}} + \operatorname{nullity}(\matr{A}) = 8$, so
+
+$$
+\operatorname{nullity}(\matr{A}) = 8 - 3 = 5.
+$$
+
+:::

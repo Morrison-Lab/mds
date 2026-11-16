@@ -1,0 +1,16 @@
+:::{#exr-rank-nullity-practice}
+#### Finding a nullity from a rank
+
+Suppose that a $5 \times 8$ [matrix](linear-algebra-matrices.qmd#def-matrix) $\matr{A}$
+has [rank](linear-algebra-subspaces.qmd#def-rank) $3$.
+
+Find $\operatorname{nullity}(\matr{A})$.
+
+::: {.callout-tip}
+#### Hint
+
+Use @thm-rank-nullity with $n = 8$.
+
+:::
+
+:::

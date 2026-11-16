@@ -1,0 +1,27 @@
+:::{#exm-gram-properties}
+#### Checking the properties on a small Gram matrix
+
+For $\matr{A}$ in @exm-gram-matrix, $\matr{G} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$.
+It is symmetric: $g_{12} = g_{21} = 1$.
+Take $\vx = (1, -1)$. Then
+
+$$
+\ba
+\qform{\matr{G}}{\vx}
+&= \begin{bmatrix} 1 & -1 \end{bmatrix} \begin{bmatrix} 1 \\ -1 \end{bmatrix}
+&& \text{(} \matr{G} \vx = (1, -1) \text{)}
+\\
+&= 2,
+&& \text{(multiply and add)}
+\ea
+$$
+
+and $\matr{A} \vx = (1, 0, -1)$ has $\norm{\matr{A} \vx}^2 = 1 + 0 + 1 = 2$,
+as the theorem says.
+The converse (every positive semidefinite matrix is a Gram matrix) is
+[this theorem](linear-algebra.qmd#thm-pd-gram).
+
+:::
+
+{{< slidebreak >}}
+

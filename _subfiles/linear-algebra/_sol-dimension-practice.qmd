@@ -1,0 +1,13 @@
+:::{#sol-dimension-practice}
+
+$\dim(\mathcal{S}) = 2$.
+Since $\tp{(2, 4, 0)} = 2 \tp{(1, 2, 0)}$,
+dropping $\tp{(2, 4, 0)}$ leaves the [span](#def-span) unchanged,
+so $\tp{(1, 2, 0)}$ and $\tp{(0, 0, 1)}$ span $\mathcal{S}$.
+They are [linearly independent](#def-linearly-independent):
+if $c_1 \tp{(1, 2, 0)} + c_2 \tp{(0, 0, 1)} = \vzero$,
+the first entry gives $c_1 = 0$ and the third gives $c_2 = 0$.
+So they form a [basis](#def-basis) of $\mathcal{S}$ with $2$ vectors,
+and by @def-dimension the [dimension](#def-dimension) is $2$.
+
+:::

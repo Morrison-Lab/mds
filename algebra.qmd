@@ -1,16 +1,9 @@
 ---
 title: "Algebra"
+html-only: true
 format:
   html: default
-  revealjs:
-    output-file: algebra-slides.html
-  pdf:
-    output-file: algebra-handout.pdf
-  docx:
-    output-file: algebra.docx
 ---
-
-::: {.content-visible when-format="html"}
 
 The algebra notes are split across these pages:
 
@@ -30,14 +23,6 @@ The algebra notes are split across these pages:
 
 A link to a section, theorem or definition on this page from before the split
 goes on to the page that now holds it.
-
-:::
-
-::: {.content-visible unless-format="html"}
-
-{{< include mds/_algebra.qmd >}}
-
-:::
 
 # Further reading {#sec-further-reading}
 

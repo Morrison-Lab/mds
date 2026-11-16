@@ -1,0 +1,23 @@
+:::{#exr-rank-product-practice}
+#### Finding how large the rank of a matrix product can be
+
+@thm-rank-product shows how large the [rank](linear-algebra-subspaces.qmd#def-rank) of a [matrix product](linear-algebra-matrices.qmd#def-matrix-mult)
+can be.
+Let
+
+$$
+\matr{A} = \sbmat{1 & 0 \\ 0 & 0},
+\qquad
+\matr{B} = \sbmat{2 & 3 \\ 4 & 5}.
+$$
+
+Find the number that, by @thm-rank-product, $\rankf{\matr{A}\matr{B}}$ cannot exceed.
+
+::: {.callout-tip}
+#### Hint
+
+Find $\rankf{\matr{A}}$ first.
+
+:::
+
+:::

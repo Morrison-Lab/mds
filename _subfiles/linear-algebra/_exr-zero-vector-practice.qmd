@@ -1,0 +1,27 @@
+:::{#exr-zero-vector-practice}
+#### Picking the zero vector with three entries from three candidates
+
+A [zero vector](#def-zero-vector) has a number of entries as well as zero entries,
+so $\vzero \in \reals^2$ and $\vzero \in \reals^3$ are different vectors.
+Consider three candidates:
+
+$$
+\vecf{a} = \sbmat{0 \\ 0},
+\qquad
+\vecf{b} = \sbmat{0 \\ 0 \\ 0},
+\qquad
+\vecf{c} = \sbmat{0 \\ 1 \\ 0}.
+$$
+
+Which of the three candidates is the zero vector with $3$ entries?
+
+::: {.callout-tip}
+#### Hint
+
+@def-zero-vector has two conditions:
+$3$ entries,
+and $0$ in every entry.
+
+:::
+
+:::

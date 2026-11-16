@@ -1,0 +1,24 @@
+:::{#exr-matvec-linear-practice}
+#### Applying a matrix to a combination without knowing the matrix
+
+@thm-matvec-linear lets a [matrix-vector product](linear-algebra-matrices.qmd#def-matvec-mult) of a combination
+be found from the matrix-vector product of each part,
+even when the [matrix](linear-algebra-matrices.qmd#def-matrix) itself is not known.
+Suppose that a matrix $\matr{A}$ satisfies
+
+$$
+\matr{A}\vecf{z}_1 = \sbmat{1 \\ 2},
+\qquad
+\matr{A}\vecf{z}_2 = \sbmat{0 \\ -1}.
+$$
+
+Find $\matr{A}\,(3 \vecf{z}_1 + 2 \vecf{z}_2)$.
+
+::: {.callout-tip}
+#### Hint
+
+Use @thm-matvec-linear with $c_1 = 3$ and $c_2 = 2$.
+
+:::
+
+:::

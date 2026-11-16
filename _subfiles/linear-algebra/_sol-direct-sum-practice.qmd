@@ -1,0 +1,12 @@
+:::{#sol-direct-sum-practice}
+
+Any $(x, y, z)$ is $(x - z, y - z, 0) + z\,(1, 1, 1)$,
+with the first term in $\mathcal{S}_1$ and the second in $\mathcal{S}_2$,
+so $\mathcal{S}_1 + \mathcal{S}_2 = \reals^3$.
+Also, $c\,(1, 1, 1)$ is in $\mathcal{S}_1$
+only if its third entry $c$ is $0$,
+so $\mathcal{S}_1 \cap \mathcal{S}_2 = \cb{\vzero}$.
+So $\mathcal{S}_1$ and $\mathcal{S}_2$ are [complementary](#def-complementary-subspaces) in $\reals^3$,
+and $\reals^3 = \mathcal{S}_1 \oplus \mathcal{S}_2$.
+
+:::

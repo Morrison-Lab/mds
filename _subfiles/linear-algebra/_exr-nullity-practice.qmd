@@ -1,0 +1,21 @@
+:::{#exr-nullity-practice}
+#### Finding the nullity of a $3 \times 3$ matrix
+
+The [nullity](#def-nullity) of a [matrix](linear-algebra-matrices.qmd#def-matrix)
+is the [dimension](linear-algebra-subspaces.qmd#def-dimension) of its [null space](#def-null-space).
+Let
+
+$$
+\matr{A} = \sbmat{2 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 5}.
+$$
+
+Find $\operatorname{nullity}(\matr{A})$.
+
+::: {.callout-tip}
+#### Hint
+
+Write out $\matr{A}\vecf{x}$, find the [null space](#def-null-space), and then find a [basis](linear-algebra-subspaces.qmd#def-basis) of it.
+
+:::
+
+:::

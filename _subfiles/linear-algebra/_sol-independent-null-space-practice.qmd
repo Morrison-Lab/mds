@@ -1,0 +1,15 @@
+:::{#sol-independent-null-space-practice}
+
+For $\vecf{x} = (x_1, x_2)$,
+
+$$
+\matr{A}\vecf{x} = \sbmat{x_1 + 2 x_2 \\ 2 x_1 + 4 x_2 \\ x_2}.
+$$
+
+The third entry gives $x_2 = 0$,
+and then the first gives $x_1 = 0$.
+So $\mathcal{N}(\matr{A}) = \cb{\vzero_2}$,
+and by @thm-independent-null-space the [columns of $\matr{A}$](linear-algebra-matrices.qmd#def-matrix-column)
+are [linearly independent](linear-algebra-subspaces.qmd#def-linearly-independent).
+
+:::

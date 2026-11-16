@@ -1,0 +1,24 @@
+:::{#exr-fundamental-subspaces-practice}
+#### Testing whether a linear system has a solution through the left null space
+
+Part 2 of @thm-fundamental-subspaces says that $\mathcal{C}(\matr{A}) = \mathcal{N}(\tp{\matr{A}})^\perp$,
+so a [linear system](linear-algebra-matrices.qmd#def-linear-system) $\matr{A}\vecf{x} = \vecf{b}$ has a solution
+exactly when $\vecf{b}$ is [orthogonal](linear-algebra-vectors.qmd#def-orthogonal-vectors) to every vector of the [left null space](linear-algebra-rank-nullity.qmd#def-left-null-space).
+Let
+
+$$
+\matr{A} = \sbmat{1 & 1 \\ 1 & 1 \\ 0 & 0},
+\qquad
+\vecf{b} = \sbmat{1 \\ 2 \\ 0}.
+$$
+
+Decide whether $\matr{A}\vecf{x} = \vecf{b}$ has a solution, by testing $\vecf{b}$ against $\mathcal{N}(\tp{\matr{A}})$.
+
+::: {.callout-tip}
+#### Hint
+
+Find one nonzero vector of $\mathcal{N}(\tp{\matr{A}})$ whose third entry is $0$.
+
+:::
+
+:::

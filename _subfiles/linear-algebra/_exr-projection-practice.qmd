@@ -1,0 +1,21 @@
+:::{#exr-projection-practice}
+#### Projecting onto an axis along a diagonal line
+
+[A projection onto $\mathcal{S}$ along $\mathcal{T}$](#def-projection)
+keeps the piece of a vector that lies in $\mathcal{S}$
+when the vector is split along a [direct sum](#def-direct-sum).
+Let $\mathcal{S} = \operatorname{span}\cb{(1, 0)}$, the horizontal axis in $\reals^2$,
+let $\mathcal{T} = \operatorname{span}\cb{(1, 1)}$, a diagonal line,
+and let $\vecf{y} = (4, 3)$.
+
+Find the [projection of $\vecf{y}$ onto $\mathcal{S}$ along $\mathcal{T}$](#def-projection).
+
+::: {.callout-tip}
+#### Hint
+
+Split $(4, 3)$ as $(a, 0) + c\,(1, 1)$,
+and use the second entry first.
+
+:::
+
+:::

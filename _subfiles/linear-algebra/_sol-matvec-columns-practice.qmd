@@ -1,0 +1,12 @@
+:::{#sol-matvec-columns-practice}
+
+By @thm-matvec-columns,
+
+$$
+\matr{A}\vecf{x}
+= 3 \sbmat{2 \\ 0 \\ 1} + 2 \sbmat{1 \\ 3 \\ -1}
+= \sbmat{6 + 2 \\ 0 + 6 \\ 3 - 2}
+= \sbmat{8 \\ 6 \\ 1}.
+$$
+
+:::

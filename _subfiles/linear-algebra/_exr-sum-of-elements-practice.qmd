@@ -1,0 +1,22 @@
+:::{#exr-sum-of-elements-practice}
+#### Totalling the units sold across three items
+
+A shop sells $22$, $12$ and $11$ units of three items over two months,
+stored as
+
+$$
+\vx = \sbmat{22 \\ 12 \\ 11}.
+$$
+
+Find $\sumof{\vx}$,
+the [sum of the elements](#def-sum-of-elements) of $\vx$.
+
+::: {.callout-tip}
+#### Hint
+
+Use @def-sum-of-elements with $p = 3$,
+as in @exm-sum-of-elements.
+
+:::
+
+:::

@@ -1,0 +1,15 @@
+:::{#sol-orthogonal-direct-sum-practice}
+
+Take $\vecf{u} = t\,(1, 2)$.
+Then $\vecf{v} = \vecf{y} - \vecf{u} = (5 - t, -2t)$ is in $\mathcal{S}^\perp$ exactly when
+
+$$
+(1, 2) \cdot (5 - t, -2t) = 5 - t - 4t = 5 - 5t = 0,
+$$
+
+so $t = 1$.
+Then $\vecf{u} = (1, 2)$ and $\vecf{v} = (4, -2)$,
+with $\vecf{u} + \vecf{v} = (5, 0)$
+and $(1, 2) \cdot (4, -2) = 4 - 4 = 0$.
+
+:::

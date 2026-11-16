@@ -12,4 +12,10 @@ format:
 
 {{< include latex-macros/macros.qmd >}}
 
+# Column space and null space {#sec-column-null-space}
+
+{{< include mds/_subfiles/_sec_linear_algebra_rank_nullity_spaces.qmd >}}
+
+# Rank-nullity and rank factorization {#sec-rank-nullity}
+
 {{< include mds/_subfiles/_sec_linear_algebra_rank_nullity.qmd >}}

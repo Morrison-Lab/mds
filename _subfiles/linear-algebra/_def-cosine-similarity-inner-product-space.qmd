@@ -2,7 +2,7 @@
 #### Cosine similarity in an inner product space
 
 In a general real inner product space (@def-inner-product-space) with inner product $\iprod{\cdot}{\cdot}$
-and induced norm $\norm{\cdot}$, the **cosine similarity** is
+and [induced norm](#def-induced-norm) $\norm{\cdot}$, the **cosine similarity** is
 
 $$
 \cossim(\vx, \vy) \eqdef \frac{\iprod{\vx}{\vy}}{\norm{\vx}\,\norm{\vy}}.

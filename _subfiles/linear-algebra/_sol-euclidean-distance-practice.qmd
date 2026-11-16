@@ -1,0 +1,19 @@
+:::{#sol-euclidean-distance-practice}
+
+By @def-euclidean-distance,
+
+$$
+\ba
+d(\vx, \vy)
+&= \sqrt{(1 - 3)^2 + (0 - 1)^2 + (3 - 1)^2}
+&& \text{(@def-euclidean-distance)}
+\\
+&= \sqrt{4 + 1 + 4}
+&& \text{(subtract and square)}
+\\
+&= 3.
+&& \text{(add and take the square root)}
+\ea
+$$
+
+:::

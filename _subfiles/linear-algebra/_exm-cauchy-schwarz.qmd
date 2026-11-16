@@ -1,0 +1,44 @@
+:::{#exm-cauchy-schwarz}
+#### A strict case and an equality case
+
+- For $\vecf{x} = (1, 2)$ and $\vecf{y} = (3, 4)$:
+
+  $$
+  \begin{aligned}
+  \vecf{x} \cdot \vecf{y} &= 3 + 8 \\
+  &= 11,
+  \end{aligned}
+  $$
+
+  while $\norm{\vecf{x}}\,\norm{\vecf{y}} = \sqrt{5} \cd 5 \approx 11.18$.
+  The inequality is strict, and the vectors are linearly independent:
+  $(3, 4)$ is not a multiple of $(1, 2)$, since $3 \cd 2 \ne 4$.
+- For $\vecf{x} = (1, 2)$ and
+
+  $$
+  \begin{aligned}
+  \vecf{y} &= (2, 4) \\
+  &= 2\,\vecf{x}:
+  \end{aligned}
+  $$
+
+  $$
+  \begin{aligned}
+  \vecf{x} \cdot \vecf{y} &= 2 + 8 \\
+  &= 10
+  \end{aligned}
+  $$
+
+  and
+
+  $$
+  \begin{aligned}
+  \norm{\vecf{x}}\,\norm{\vecf{y}} &= \sqrt{5}\,\sqrt{20} \\
+  &= \sqrt{100} \\
+  &= 10,
+  \end{aligned}
+  $$
+
+  so equality holds.
+
+:::

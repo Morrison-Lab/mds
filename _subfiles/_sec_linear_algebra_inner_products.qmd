@@ -60,7 +60,15 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_exm-norm-sum-square.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_thm-cauchy-schwarz.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-cauchy-schwarz.qmd >}}
 
 {{< slidebreak >}}
 
@@ -69,6 +77,18 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_def-norm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-norm-euclidean.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-induced-norm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-induced-norm.qmd >}}
 
 {{< slidebreak >}}
 

@@ -3,34 +3,9 @@
 
 The **Euclidean norm**
 [@wikipedia_euclidean_vector]
-(or **length**, also called the **$L_2$ norm** and written $\norm{\vx}_2$) of a vector $\vx$ of length $p$ is
+(or **length**, also called the **$L_2$ norm** and written $\norm{\vx}_2$) of a vector $\vx$ of length $p$
+is the [square root](algebra.qmd#def-square-root) of the [sum](algebra.qmd#def-summation) of the [squares](algebra.qmd#def-square) of its entries:
 
-$$\norm{\vx} \eqdef \sqrt{\vx \cdot \vx} = \sqrt{\sumip x_i^2}$$ {#eq-l2-norm}
-
-where $\sqrt{\cdot}$ is the [square root](algebra.qmd#def-square-root).
-
-:::
-
-{{< slidebreak >}}
-
-:::{#exm-euclidean-norm}
-#### The length of a vector
-
-For $\vx = (3, 4)$:
-
-$$
-\ba
-\norm{\vx}
-&= \sqrt{3^2 + 4^2}
-&& \text{(definition of the norm)}
-\\
-&= \sqrt{25}
-&& \text{(square and add)}
-\\
-&= 5
-\ea
-$$
-
-The vector $(0.6, 0.8)$ has norm $\sqrt{0.36 + 0.64} = 1$.
+$$\norm{\vx} \eqdef \sqrt{\sumip x_i^2}$$ {#eq-l2-norm}
 
 :::

@@ -1,0 +1,18 @@
+:::{#exr-direct-sum-practice}
+#### Testing whether $\reals^3$ is the direct sum of a plane and a tilted line
+
+The [direct sum](#def-direct-sum) $\mathcal{S}_1 \oplus \mathcal{S}_2$
+needs the two [subspaces](linear-algebra-subspaces.qmd#def-subspace) to be [complementary](#def-complementary-subspaces).
+Let $\mathcal{S}_1 = \cb{(a, b, 0) : a, b \in \reals}$, the plane $z = 0$,
+and $\mathcal{S}_2 = \operatorname{span}\cb{(1, 1, 1)}$, a tilted line.
+
+Decide whether $\reals^3 = \mathcal{S}_1 \oplus \mathcal{S}_2$.
+
+::: {.callout-tip}
+#### Hint
+
+To write $(x, y, z)$ as a vector of $\mathcal{S}_1$ plus $c\,(1, 1, 1)$, the third entry fixes $c$.
+
+:::
+
+:::

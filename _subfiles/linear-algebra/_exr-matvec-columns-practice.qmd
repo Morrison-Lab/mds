@@ -1,0 +1,24 @@
+:::{#exr-matvec-columns-practice}
+#### Computing a matrix-vector product as a combination of columns
+
+A linear model's predictions for every observation at once
+are a [matrix-vector product](linear-algebra-matrices.qmd#def-matvec-mult) $\matr{A}\vecf{x}$,
+and @thm-matvec-columns writes it as a combination of the [columns of $\matr{A}$](linear-algebra-matrices.qmd#def-matrix-column).
+Let
+
+$$
+\matr{A} = \sbmat{2 & 1 \\ 0 & 3 \\ 1 & -1},
+\qquad
+\vecf{x} = \sbmat{3 \\ 2}.
+$$
+
+Find $\matr{A}\vecf{x}$ with @thm-matvec-columns.
+
+::: {.callout-tip}
+#### Hint
+
+Use @thm-matvec-columns with $x_1 = 3$ and $x_2 = 2$.
+
+:::
+
+:::

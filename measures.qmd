@@ -1,20 +1,13 @@
 ---
 title: "Measures"
+html-only: true
 format:
   html: default
-  revealjs:
-    output-file: measures-slides.html
-  pdf:
-    output-file: measures-handout.pdf
-  docx:
-    output-file: measures.docx
 ---
 
 {{< include latex-macros/macros.qmd >}}
 
 {{< include mds/_subfiles/measures/_rem-measures-overview.qmd >}}
-
-::: {.content-visible when-format="html"}
 
 The measure notes are split across these pages: <!-- check-term-links: allow -->
 
@@ -34,14 +27,6 @@ The measure notes are split across these pages: <!-- check-term-links: allow -->
 
 A link to a section, theorem or definition on this page from before the split <!-- check-term-links: allow -->
 goes on to the page that now holds it.
-
-:::
-
-::: {.content-visible unless-format="html"}
-
-{{< include mds/_subfiles/_sec_measures.qmd >}}
-
-:::
 
 # Further reading {#sec-further-reading}
 

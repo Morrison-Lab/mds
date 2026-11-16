@@ -1,0 +1,8 @@
+:::{#sol-zero-vector-practice}
+
+Only $\vecf{b}$.
+$\vecf{a}$ has only $2$ entries,
+so it is the [zero vector](#def-zero-vector) in $\reals^2$,
+and $\vecf{c}$ has a nonzero second entry.
+
+:::

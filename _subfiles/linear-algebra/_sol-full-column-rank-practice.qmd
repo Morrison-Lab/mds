@@ -1,0 +1,20 @@
+:::{#sol-full-column-rank-practice}
+
+Yes.
+Suppose $c_1 \tp{(1, 1, 1)} + c_2 \tp{(2, 4, 6)} = \vzero$.
+The first two entries give
+
+$$
+c_1 + 2 c_2 = 0
+\quad \text{and} \quad
+c_1 + 4 c_2 = 0.
+$$
+
+Subtracting the first equation from the second gives $2 c_2 = 0$,
+so $c_2 = 0$,
+and then $c_1 = 0$.
+So the two [columns of $\matr{X}$](linear-algebra-matrices.qmd#def-matrix-column) are [linearly independent](#def-linearly-independent),
+the [rank](#def-rank) of $\matr{X}$ is $2$,
+and $\matr{X}$ has [full column rank](#def-full-column-rank).
+
+:::

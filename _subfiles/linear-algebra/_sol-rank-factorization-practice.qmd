@@ -1,0 +1,16 @@
+:::{#sol-rank-factorization-practice}
+
+[Columns of $\matr{A}$](linear-algebra-matrices.qmd#def-matrix-column) are $(2, 1)$ and $(4, 2) = 2\,(2, 1)$,
+so $\rankf{\matr{A}} = 1$, and
+
+$$
+\sbmat{2 \\ 1} \sbmat{1 & 2}
+= \sbmat{2 \cd 1 & 2 \cd 2 \\ 1 \cd 1 & 1 \cd 2}
+= \sbmat{2 & 4 \\ 1 & 2}
+= \matr{A}.
+$$
+
+So $\matr{C} = \sbmat{2 \\ 1}$ ($2 \times 1$) and $\matr{R} = \sbmat{1 & 2}$ ($1 \times 2$)
+are a rank factorization.
+
+:::

@@ -1,0 +1,23 @@
+:::{#exr-rank-factorization-construct-practice}
+#### Building a rank factorization from a basis of the column space
+
+@thm-rank-factorization builds a [rank factorization](#def-rank-factorization)
+from a [basis](linear-algebra-subspaces.qmd#def-basis) of the [column space](#def-column-space).
+Let
+
+$$
+\matr{A} = \sbmat{1 & 2 & 3 \\ 2 & 4 & 6 \\ 1 & 0 & 1},
+$$
+
+in which [column](linear-algebra-matrices.qmd#def-matrix-column) $3$ is column $1$ plus column $2$.
+
+Find a rank factorization $\matr{A} = \matr{C}\matr{R}$ in which $\matr{C}$ holds [columns 1 and 2 of $\matr{A}$](linear-algebra-matrices.qmd#def-matrix-column).
+
+::: {.callout-tip}
+#### Hint
+
+[Column $j$ of](linear-algebra-matrices.qmd#def-matrix-column) $\matr{R}$ says how much of [column](linear-algebra-matrices.qmd#def-matrix-column) $1$ and of column $2$ of $\matr{C}$ add up to column $j$ of $\matr{A}$.
+
+:::
+
+:::

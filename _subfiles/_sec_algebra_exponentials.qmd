@@ -224,6 +224,14 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/algebra/_cor-log-recip.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-log-recip.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/algebra/_thm-log-exp.qmd >}}
 
 {{< slidebreak >}}

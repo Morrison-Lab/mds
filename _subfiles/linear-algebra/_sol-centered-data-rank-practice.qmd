@@ -1,0 +1,8 @@
+:::{#sol-centered-data-rank-practice}
+
+By @thm-centered-data-rank with $n = 3$, $\rankf{\mX_c} \le 3 - 1 = 2$.
+That number is smaller than $\min\cb{3, 4} = 3$ from @cor-rank-bound:
+the three centered [rows](linear-algebra-matrices.qmd#def-matrix-row) add up to $\vzero_4$,
+so they are [linearly dependent](linear-algebra-subspaces.qmd#def-linearly-independent).
+
+:::

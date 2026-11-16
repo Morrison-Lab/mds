@@ -1,0 +1,15 @@
+:::{#sol-column-space-practice}
+
+Take $\vecf{x} = (2, 0)$.
+Then
+
+$$
+\matr{A}\vecf{x}
+= \sbmat{1 \cd 2 + 2 \cd 0 \\ 3 \cd 2 + 6 \cd 0}
+= \sbmat{2 \\ 6}
+= \vecf{b},
+$$
+
+so $\vecf{b}$ is in $\mathcal{C}(\matr{A})$.
+
+:::

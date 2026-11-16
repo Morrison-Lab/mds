@@ -1,0 +1,10 @@
+:::{#exm-norm-euclidean}
+#### Euclidean space as a normed vector space
+
+The Euclidean space $\reals^p$ equipped with the Euclidean norm (@def-euclidean-norm)
+is a normed vector space:
+
+- Positivity and absolute homogeneity hold by @thm-norm-properties.
+- The triangle inequality holds by @thm-triangle-inequality.
+
+:::

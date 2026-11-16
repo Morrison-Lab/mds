@@ -1,0 +1,19 @@
+:::{#sol-orthogonal-complement-subspace-practice}
+
+A vector $\vecf{u}$ is in $\mathcal{X}^\perp$ exactly when
+$(1, 0, 1) \cdot \vecf{u} = u_1 + u_3 = 0$
+and $(1, 0, -1) \cdot \vecf{u} = u_1 - u_3 = 0$.
+Adding the two equations gives $u_1 = 0$,
+and then $u_3 = 0$,
+while $u_2$ is free.
+So
+
+$$
+\mathcal{X}^\perp = \cb{(0, u_2, 0) : u_2 \in \reals} = \operatorname{span}\cb{(0, 1, 0)},
+$$
+
+the second coordinate axis,
+which is a [subspace](linear-algebra-subspaces.qmd#def-subspace),
+as @thm-orthogonal-complement-subspace says.
+
+:::

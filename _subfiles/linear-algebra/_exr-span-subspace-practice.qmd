@@ -1,0 +1,22 @@
+:::{#exr-span-subspace-practice}
+#### Recognizing a set of vectors as a span
+
+Describing a [set](https://morrison-lab.github.io/mcs/sets.html#def-set) by free parameters
+often shows that it is a [span](#def-span).
+Let
+
+$$
+\mathcal{S} = \cb{(a + b,\ a - b,\ 2a) : a, b \in \reals}.
+$$
+
+Is $\mathcal{S}$ a [subspace](#def-subspace) of $\reals^3$?
+
+::: {.callout-tip}
+#### Hint
+
+Write $(a + b,\ a - b,\ 2a)$ as $a$ times one vector plus $b$ times another,
+then use @thm-span-subspace.
+
+:::
+
+:::

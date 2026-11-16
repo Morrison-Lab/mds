@@ -1,0 +1,15 @@
+:::{#sol-row-null-disjoint-practice}
+
+Here
+
+$$
+\matr{A}\vecf{v}
+= \sbmat{1 + 2 + 0 \\ 0 + 2 + 1}
+= \sbmat{3 \\ 3}
+\neq \vzero_2,
+$$
+
+so $\vecf{v}$ is not in $\mathcal{N}(\matr{A})$,
+as @thm-row-null-disjoint requires of a nonzero vector in the [row space](#def-row-space).
+
+:::
