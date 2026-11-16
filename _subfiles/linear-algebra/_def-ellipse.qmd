@@ -1,7 +1,7 @@
 :::{#def-ellipse}
 #### Ellipse
 
-For two points $\vu, \vv \in \reals^2$
+For two [points](#def-real-coordinate-space) $\vu, \vv \in \reals^2$
 and a number $s > \norm{\vu - \vv}$,
 the **ellipse**
 [@wikipedia_ellipse]

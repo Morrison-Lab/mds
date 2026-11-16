@@ -2,7 +2,7 @@
 #### Points on a circle
 
 Take the [circle](#def-circle) with center $\va = (1, 2)$ and radius $r = 5$.
-The point $\vx = (4, 6)$ is on it:
+The [point](#def-real-coordinate-space) $\vx = (4, 6)$ is on it:
 
 $$
 \ba

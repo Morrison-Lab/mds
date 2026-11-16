@@ -4,7 +4,7 @@
 Take the [ellipse](#def-ellipse) with foci $\vu = (-4, 0)$ and $\vv = (4, 0)$
 and $s = 10$,
 which is larger than $\norm{\vu - \vv} = 8$.
-The point $\vx = (0, 3)$ is on it:
+The [point](#def-real-coordinate-space) $\vx = (0, 3)$ is on it:
 
 $$
 \ba

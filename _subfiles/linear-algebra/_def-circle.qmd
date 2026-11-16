@@ -1,7 +1,7 @@
 :::{#def-circle}
 #### Circle
 
-For a point $\va \in \reals^2$ and a number $r > 0$,
+For a [point](#def-real-coordinate-space) $\va \in \reals^2$ and a number $r > 0$,
 the **circle**
 [@wikipedia_circle]
 with center $\va$ and radius $r$
