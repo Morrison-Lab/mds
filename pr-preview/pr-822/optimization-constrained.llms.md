@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-16 11:55:20 (PST)
+Last modified: 2026-11-16 12:51:02 (PST)
 
 > **NOTE:**
 >
@@ -213,6 +213,75 @@ Here the [objective](#def-objective-function) is a quadratic $f(\mathord{\smash[
 > > [![Contour circles of x1 squared plus x2 squared around the origin, at heights 0.25, 0.5, 1 and 2, drawn on equal axes. The shaded region above the line x1 + x2 = 1 is the feasible half-plane. A dot at (0.5, 0.5) marks where the circle at height 0.5 touches the line.](optimization-constrained_files/figure-html/quadratic-program-plot-1.png)](optimization-constrained_files/figure-html/quadratic-program-plot-1.png "Figure 1: The objective x_1^2 + x_2^2 has circular contours at heights 0.25, 0.5, 1 and 2. The shaded half-plane satisfies x_1 + x_2 \ge 1, and the dot at (0.5, 0.5) is where the contour at height 0.5 touches its edge.")
 > >
 > > Figure 1: The [objective](#def-objective-function) $x_1^2 + x_2^2$ has circular contours at heights $0.25$, $0.5$, $1$ and $2$. The shaded [half-plane](optimization-convexity.llms.md#def-half-space) satisfies $x_1 + x_2 \ge 1$, and the dot at $(0.5, 0.5)$ is where the contour at height $0.5$ touches its edge.
+>
+> [Figure 2](#fig-quadratic-program-3d) shows the same [function](https://morrison-lab.github.io/mcs/functions.html#def-function) as a surface.
+>
+> > **NOTE:**
+> >
+> > Show code
+> >
+> > ``` downlit
+> > qp_axis_sf <- seq(-1.5, 1.5, length.out = 101)
+> > qp_grid_sf <- tidyr::expand_grid(x1 = qp_axis_sf, x2 = qp_axis_sf)
+> > qp_value_sf <- qp_grid_sf$x1^2 + qp_grid_sf$x2^2
+> > qp_n_sf <- length(qp_axis_sf)
+> > qp_z_sf <- matrix(qp_value_sf, nrow = qp_n_sf)
+> > # The edge x1 + x2 = 1 of the feasible half-plane, lifted onto the surface.
+> > qp_edge_x1_sf <- seq(-0.5, 1.5, length.out = 41)
+> > qp_edge_sf <- tibble::tibble(x1 = qp_edge_x1_sf)
+> > qp_edge_sf$x2 <- 1 - qp_edge_sf$x1
+> > qp_edge_sf$z <- qp_edge_sf$x1^2 + qp_edge_sf$x2^2
+> > qp_min_sf <- tibble::tibble(x1 = 0.5, x2 = 0.5, z = 0.5)
+> > qp_dash_sf <- list(color = "#D55E00", dash = "dash", width = 5)
+> > qp_marker_sf <- list(color = "black", size = 5)
+> > qp_stops_sf <- c(0, 1)
+> > qp_cols_sf <- c("#CCE0F0", "#0072B2")
+> > qp_scale_sf <- list(qp_stops_sf, qp_cols_sf)
+> > qp_eye_sf <- list(x = 1.6, y = -1.6, z = 0.9)
+> > qp_camera_sf <- list(eye = qp_eye_sf)
+> > qp_xaxis_sf <- list(title = "x1")
+> > qp_yaxis_sf <- list(title = "x2")
+> > qp_zaxis_sf <- list(title = "f(x)")
+> > qp_scene_sf <- list(
+> >   xaxis = qp_xaxis_sf,
+> >   yaxis = qp_yaxis_sf,
+> >   zaxis = qp_zaxis_sf,
+> >   camera = qp_camera_sf
+> > )
+> > qp_legend_sf <- list(orientation = "h")
+> > plotly::plot_ly() |>
+> >   plotly::add_surface(
+> >     x = qp_axis_sf,
+> >     y = qp_axis_sf,
+> >     z = qp_z_sf,
+> >     colorscale = qp_scale_sf,
+> >     showscale = FALSE,
+> >     opacity = 0.8
+> >   ) |>
+> >   plotly::add_trace(
+> >     data = qp_edge_sf,
+> >     x = ~x1,
+> >     y = ~x2,
+> >     z = ~z,
+> >     type = "scatter3d",
+> >     mode = "lines",
+> >     line = qp_dash_sf,
+> >     name = "above x1 + x2 = 1"
+> >   ) |>
+> >   plotly::add_trace(
+> >     data = qp_min_sf,
+> >     x = ~x1,
+> >     y = ~x2,
+> >     z = ~z,
+> >     type = "scatter3d",
+> >     mode = "markers",
+> >     marker = qp_marker_sf,
+> >     name = "minimizer"
+> >   ) |>
+> >   plotly::layout(scene = qp_scene_sf, legend = qp_legend_sf)
+> > ```
+> >
+> > Figure 2: The [objective](#def-objective-function) $x_1^2 + x_2^2$ of [Example 5](#exm-quadratic-program) as a surface, whose [level curves](vector-calculus.llms.md#def-level-set) are the circles in [Figure 1](#fig-quadratic-program). The dashed curve lies above the edge $x_1 + x_2 = 1$ of the feasible [half-plane](optimization-convexity.llms.md#def-half-space), and its lowest point, at ${(0.5, 0.5)}^{\top}$ and height $0.5$, is the dot.
 
 > **NOTE:**
 >
@@ -451,13 +520,13 @@ Here the [objective](#def-objective-function) is a quadratic $f(\mathord{\smash[
 >
 > ## R
 >
-> [![Plot over the plane of concentric circles centered at the origin, in grey, with radii 0.5, 1 and 1.5, and a blue straight line 3 x1 plus 4 x2 equals 5 running from upper left to lower right. The line touches the circle of radius 1 at the point (0.6, 0.8), marked by a vermilion circle, and stays outside the circle everywhere else. A vermilion arrow from the origin to that point is perpendicular to the line.](optimization-constrained_files/figure-html/lagrange-line-r-1.png)](optimization-constrained_files/figure-html/lagrange-line-r-1.png "Figure 2: The level curves x_1^2 + x_2^2 = c of the objective (circles) and the constraint line 3 x_1 + 4 x_2 = 5. The line touches the circle c = 1 at the minimizer {(0.6, 0.8)}^{\top} (Example 6), and the arrow from the origin to that point points along the gradient there, which is perpendicular to the line.")
+> [![Plot over the plane of concentric circles centered at the origin, in grey, with radii 0.5, 1 and 1.5, and a blue straight line 3 x1 plus 4 x2 equals 5 running from upper left to lower right. The line touches the circle of radius 1 at the point (0.6, 0.8), marked by a vermilion circle, and stays outside the circle everywhere else. A vermilion arrow from the origin to that point is perpendicular to the line.](optimization-constrained_files/figure-html/lagrange-line-r-1.png)](optimization-constrained_files/figure-html/lagrange-line-r-1.png "Figure 3: The level curves x_1^2 + x_2^2 = c of the objective (circles) and the constraint line 3 x_1 + 4 x_2 = 5. The line touches the circle c = 1 at the minimizer {(0.6, 0.8)}^{\top} (Example 6), and the arrow from the origin to that point points along the gradient there, which is perpendicular to the line.")
 >
 > ## Python
 >
-> [![Plot over the plane of concentric circles centered at the origin, in grey, with radii 0.5, 1 and 1.5, and a blue straight line 3 x1 plus 4 x2 equals 5 running from upper left to lower right. The line touches the circle of radius 1 at the point (0.6, 0.8), marked by a vermilion circle, and stays outside the circle everywhere else. A vermilion arrow from the origin to that point is perpendicular to the line.](optimization-constrained_files/figure-html/lagrange-line-python-1.png)](optimization-constrained_files/figure-html/lagrange-line-python-1.png "Figure 2: The level curves x_1^2 + x_2^2 = c of the objective (circles) and the constraint line 3 x_1 + 4 x_2 = 5. The line touches the circle c = 1 at the minimizer {(0.6, 0.8)}^{\top} (Example 6), and the arrow from the origin to that point points along the gradient there, which is perpendicular to the line.")
+> [![Plot over the plane of concentric circles centered at the origin, in grey, with radii 0.5, 1 and 1.5, and a blue straight line 3 x1 plus 4 x2 equals 5 running from upper left to lower right. The line touches the circle of radius 1 at the point (0.6, 0.8), marked by a vermilion circle, and stays outside the circle everywhere else. A vermilion arrow from the origin to that point is perpendicular to the line.](optimization-constrained_files/figure-html/lagrange-line-python-1.png)](optimization-constrained_files/figure-html/lagrange-line-python-1.png "Figure 3: The level curves x_1^2 + x_2^2 = c of the objective (circles) and the constraint line 3 x_1 + 4 x_2 = 5. The line touches the circle c = 1 at the minimizer {(0.6, 0.8)}^{\top} (Example 6), and the arrow from the origin to that point points along the gradient there, which is perpendicular to the line.")
 >
-> Figure 2: The [level curves](vector-calculus.llms.md#def-level-curve) $x_1^2 + x_2^2 = c$ of the [objective](#def-objective-function) (circles) and the constraint line $3 x_1 + 4 x_2 = 5$. The line touches the circle $c = 1$ at the [minimizer](#def-minimizer-over-feasible-set) ${(0.6, 0.8)}^{\top}$ ([Example 6](#exm-qp-equality)), and the arrow from the origin to that point points along the [gradient](vector-calculus.llms.md#def-vector-derivative) there, which is perpendicular to the line.
+> Figure 3: The [level curves](vector-calculus.llms.md#def-level-curve) $x_1^2 + x_2^2 = c$ of the [objective](#def-objective-function) (circles) and the constraint line $3 x_1 + 4 x_2 = 5$. The line touches the circle $c = 1$ at the [minimizer](#def-minimizer-over-feasible-set) ${(0.6, 0.8)}^{\top}$ ([Example 6](#exm-qp-equality)), and the arrow from the origin to that point points along the [gradient](vector-calculus.llms.md#def-vector-derivative) there, which is perpendicular to the line.
 
 > **NOTE:**
 >
@@ -581,7 +650,7 @@ Here the [objective](#def-objective-function) is a quadratic $f(\mathord{\smash[
 >
 > ## Python
 >
-> Figure 3: The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of the [objective](#def-objective-function) $x_1^2 + x_2^2$, the surface whose [level curves](vector-calculus.llms.md#def-level-curve) (circles) are in [Figure 2](#fig-lagrange-line), with the constraint line $3 x_1 + 4 x_2 = 5$ lifted onto it. Along the constraint the objective is lowest above the [minimizer](#def-minimizer-over-feasible-set) ${(0.6, 0.8)}^{\top}$ ([Example 6](#exm-qp-equality)), where the line touches the circle $c = 1$.
+> Figure 4: The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of the [objective](#def-objective-function) $x_1^2 + x_2^2$, the surface whose [level curves](vector-calculus.llms.md#def-level-curve) (circles) are in [Figure 3](#fig-lagrange-line), with the constraint line $3 x_1 + 4 x_2 = 5$ lifted onto it. Along the constraint the objective is lowest above the [minimizer](#def-minimizer-over-feasible-set) ${(0.6, 0.8)}^{\top}$ ([Example 6](#exm-qp-equality)), where the line touches the circle $c = 1$.
 
 > **NOTE:**
 >
@@ -633,13 +702,13 @@ Here the [objective](#def-objective-function) is a quadratic $f(\mathord{\smash[
 >
 > ## R
 >
-> [![Graph of the value of f along the constraint line x1 equals 1, against x2 from -3 to 3. The blue curve is a downward-opening parabola with its peak of 0.5 at x2 equal to 0, and it falls without bound on both sides, so it has no lowest point.](optimization-constrained_files/figure-html/qp-equality-fails-fig-r-1.png)](optimization-constrained_files/figure-html/qp-equality-fails-fig-r-1.png "Figure 4: The first case of Example 7: with \mathbf{S} = \operatorname{diag}(1, -1), which is not positive definite, the value f(1, x_2) along the constraint x_1 = 1 falls without bound as \mathopen{}\left|x_2\right|\mathclose{} grows, so this problem has no minimizer.")
+> [![Graph of the value of f along the constraint line x1 equals 1, against x2 from -3 to 3. The blue curve is a downward-opening parabola with its peak of 0.5 at x2 equal to 0, and it falls without bound on both sides, so it has no lowest point.](optimization-constrained_files/figure-html/qp-equality-fails-fig-r-1.png)](optimization-constrained_files/figure-html/qp-equality-fails-fig-r-1.png "Figure 5: The first case of Example 7: with \mathbf{S} = \operatorname{diag}(1, -1), which is not positive definite, the value f(1, x_2) along the constraint x_1 = 1 falls without bound as \mathopen{}\left|x_2\right|\mathclose{} grows, so this problem has no minimizer.")
 >
 > ## Python
 >
-> [![Graph of the value of f along the constraint line x1 equals 1, against x2 from -3 to 3. The blue curve is a downward-opening parabola with its peak of 0.5 at x2 equal to 0, and it falls without bound on both sides, so it has no lowest point.](optimization-constrained_files/figure-html/qp-equality-fails-fig-python-1.png)](optimization-constrained_files/figure-html/qp-equality-fails-fig-python-1.png "Figure 4: The first case of Example 7: with \mathbf{S} = \operatorname{diag}(1, -1), which is not positive definite, the value f(1, x_2) along the constraint x_1 = 1 falls without bound as \mathopen{}\left|x_2\right|\mathclose{} grows, so this problem has no minimizer.")
+> [![Graph of the value of f along the constraint line x1 equals 1, against x2 from -3 to 3. The blue curve is a downward-opening parabola with its peak of 0.5 at x2 equal to 0, and it falls without bound on both sides, so it has no lowest point.](optimization-constrained_files/figure-html/qp-equality-fails-fig-python-1.png)](optimization-constrained_files/figure-html/qp-equality-fails-fig-python-1.png "Figure 5: The first case of Example 7: with \mathbf{S} = \operatorname{diag}(1, -1), which is not positive definite, the value f(1, x_2) along the constraint x_1 = 1 falls without bound as \mathopen{}\left|x_2\right|\mathclose{} grows, so this problem has no minimizer.")
 >
-> Figure 4: The first case of [Example 7](#exm-qp-equality-fails): with $\mathbf{S} = \operatorname{diag}(1, -1)$, which is not [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite), the [value](https://morrison-lab.github.io/mcs/functions.html#def-value) $f(1, x_2)$ along the constraint $x_1 = 1$ falls without [bound](https://morrison-lab.github.io/mcs/sets.html#def-bound) as $\mathopen{}\left|x_2\right|\mathclose{}$ grows, so this problem has no [minimizer](algebra-basics.llms.md#def-global-minimizer).
+> Figure 5: The first case of [Example 7](#exm-qp-equality-fails): with $\mathbf{S} = \operatorname{diag}(1, -1)$, which is not [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite), the [value](https://morrison-lab.github.io/mcs/functions.html#def-value) $f(1, x_2)$ along the constraint $x_1 = 1$ falls without [bound](https://morrison-lab.github.io/mcs/sets.html#def-bound) as $\mathopen{}\left|x_2\right|\mathclose{}$ grows, so this problem has no [minimizer](algebra-basics.llms.md#def-global-minimizer).
 
 > **NOTE:**
 >
