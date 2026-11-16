@@ -24,8 +24,8 @@ So is $(5, 0)$,
 whose distances to the foci are $9$ and $1$.
 When the foci coincide, $\vu = \vv$,
 both distances are $\norm{\vx - \vu}$,
-so $2\norm{\vx - \vu} = s$
-and every point of the ellipse is at distance $s / 2$ from $\vu$,
+so $2\norm{\vx - \vu} = s$.
+Every point of the ellipse is therefore at distance $s / 2$ from $\vu$,
 so the ellipse is the [circle](#def-circle) with center $\vu$ and radius $s / 2$.
 
 :::{#fig-ellipse-example}
