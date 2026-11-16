@@ -9799,6 +9799,10 @@
    "mds/linear-algebra-vectors#def-euclidean-distance"
   ],
   [
+   "mds/linear-algebra-vectors#def-circle",
+   "mds/linear-algebra-vectors#def-real-coordinate-space"
+  ],
+  [
    "mds/linear-algebra-vectors#def-column-vector",
    "mcs/number-systems#def-real-numbers"
   ],
@@ -9809,6 +9813,10 @@
   [
    "mds/linear-algebra-vectors#def-ellipse",
    "mds/linear-algebra-vectors#def-euclidean-distance"
+  ],
+  [
+   "mds/linear-algebra-vectors#def-ellipse",
+   "mds/linear-algebra-vectors#def-real-coordinate-space"
   ],
   [
    "mds/linear-algebra-vectors#def-euclidean-distance",
