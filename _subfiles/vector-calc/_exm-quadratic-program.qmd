@@ -3,9 +3,9 @@
 
 Minimizing $x_1^2 + x_2^2$ subject to $x_1 + x_2 \ge 1$
 is a [quadratic program](#def-quadratic-program):
-the objective is $\tfrac{1}{2}\,\qform{\matr{S}}{\vx}$ with $\matr{S} = 2 \matr{I}_2$,
-which is positive semidefinite, and $\vecf{c} = \vzero$,
-and the single constraint is a linear inequality.
+the [objective](#def-objective-function) is $\tfrac{1}{2}\,\qform{\matr{S}}{\vx}$ with $\matr{S} = 2 \matr{I}_2$,
+which is [positive semidefinite](linear-algebra.qmd#def-positive-semidefinite), and $\vecf{c} = \vzero$,
+and the single constraint is a linear [inequality](https://morrison-lab.github.io/mcs/proof-writing.html#def-inequality).
 The point $\tp{(0.5, 0.5)}$ is feasible, since $0.5 + 0.5 = 1$,
 and its objective value is
 
@@ -18,8 +18,8 @@ f(0.5, 0.5)
 \ea
 $$
 
-@fig-quadratic-program shows that it is the minimizer:
-it is where the smallest contour circle of the objective touches the feasible half-plane.
+@fig-quadratic-program shows that it is the [minimizer](#def-minimizer-over-feasible-set):
+it is where the smallest contour circle of the objective touches the feasible [half-plane](optimization-convexity.qmd#def-half-space).
 
 :::{#fig-quadratic-program}
 
@@ -65,8 +65,8 @@ grid |>
   ggplot2::labs(x = "first coordinate", y = "second coordinate")
 ```
 
-The objective $x_1^2 + x_2^2$ has circular contours at heights $0.25$, $0.5$, $1$ and $2$.
-The shaded half-plane satisfies $x_1 + x_2 \ge 1$,
+The [objective](#def-objective-function) $x_1^2 + x_2^2$ has circular contours at heights $0.25$, $0.5$, $1$ and $2$.
+The shaded [half-plane](optimization-convexity.qmd#def-half-space) satisfies $x_1 + x_2 \ge 1$,
 and the dot at $(0.5, 0.5)$ is where the contour at height $0.5$ touches its edge.
 :::
 
