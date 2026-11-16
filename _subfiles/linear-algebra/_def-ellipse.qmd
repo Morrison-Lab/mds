@@ -1,12 +1,12 @@
 :::{#def-ellipse}
 #### Ellipse
 
-For two [points](#def-real-coordinate-space) $\vu, \vv \in \reals^2$
+For two [points](#def-real-coordinate-space) $\vu$ and $\vv$ in the [real plane](#def-real-coordinate-space) $\reals^2$
 and a number $s > \norm{\vu - \vv}$,
 the **ellipse**
 [@wikipedia_ellipse]
 with foci $\vu$ and $\vv$
-is the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of points in the [real plane](#def-real-coordinate-space) $\reals^2$
+is the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of points in $\reals^2$
 whose [Euclidean distances](#def-euclidean-distance) to $\vu$ and to $\vv$ add up to $s$:
 
 $$\cb{\vx \in \reals^2 : \norm{\vx - \vu} + \norm{\vx - \vv} = s}$$
