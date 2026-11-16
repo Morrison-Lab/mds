@@ -10341,6 +10341,10 @@
   ],
   [
    "mds/optimization-constrained#def-quadratic-program",
+   "mds/linear-algebra-special-matrices#def-positive-semidefinite"
+  ],
+  [
+   "mds/optimization-constrained#def-quadratic-program",
    "mds/optimization-constrained#def-constraints"
   ],
   [
