@@ -3,6 +3,6 @@
 
 The **sparsity** of a vector $\vx$ in [$\reals^p$](#def-real-coordinate-space)
 [@wikipedia_sparse_matrix]
-is the fraction of its $p$ entries that are zero.
+is the [fraction](algebra-sums.qmd#def-quotient) of its $p$ entries that are zero.
 
 :::
