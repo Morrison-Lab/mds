@@ -10,9 +10,11 @@ which is a $4 \times 1$ [matrix](#def-matrix).
 Apply the [shape rule](#def-shape-rule) one [product](#def-matrix-mult) at a time:
 
 - $\matr{A}\matr{B}$ is $(2 \times 3)(3 \times 4)$.
-  The inner pair $3, 3$ matches, so the product is $2 \times 4$.
+  The inner pair $3, 3$ matches,
+  so the product is $2 \times 4$.
 - $(\matr{A}\matr{B})\vx$ is $(2 \times 4)(4 \times 1)$.
-  The inner pair $4, 4$ matches, so the product is $2 \times 1$,
+  The inner pair $4, 4$ matches,
+  so the product is $2 \times 1$,
   a vector in $\reals^2$.
 
 :::
