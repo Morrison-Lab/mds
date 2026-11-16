@@ -1,0 +1,89 @@
+:::{#exm-ellipse}
+#### Points on an ellipse
+
+Take the [ellipse](#def-ellipse) with foci $\vu = (-4, 0)$ and $\vv = (4, 0)$
+and $s = 10$,
+which is larger than $\norm{\vu - \vv} = 8$.
+The point $\vx = (0, 3)$ is on it:
+
+$$
+\ba
+\norm{\vx - \vu} + \norm{\vx - \vv}
+&= \sqrt{(0 + 4)^2 + 3^2} + \sqrt{(0 - 4)^2 + 3^2}
+&& \text{(@def-euclidean-distance)}
+\\
+&= \sqrt{25} + \sqrt{25}
+&& \text{(square and add)}
+\\
+&= 10.
+&& \text{(take the square roots and add)}
+\ea
+$$
+
+So is $(5, 0)$, whose distances to the foci are $9$ and $1$.
+When the foci coincide, $\vu = \vv$,
+every point of the ellipse is at distance $s / 2$ from $\vu$,
+so the ellipse is the [circle](#def-circle) with center $\vu$ and radius $s / 2$.
+
+:::{#fig-ellipse-example}
+
+```{r}
+#| label: ellipse-example-plot
+#| code-fold: true
+#| fig-alt: >-
+#|   An ellipse centered at the origin, 10 units wide and 6 units tall,
+#|   drawn on equal axes. Hollow dots mark the foci (-4, 0) and (4, 0) on
+#|   the horizontal axis. Solid dots mark the points (0, 3) and (5, 0) on
+#|   the ellipse, and two dashed segments, each of length 5, join (0, 3) to
+#|   the two foci.
+#| fig-height: 3.5
+#| fig-width: 6
+# With foci (-4, 0) and (4, 0) and s = 10, the ellipse reaches s / 2 = 5 along
+# the axis through the foci and sqrt(5^2 - 4^2) = 3 across it.
+angle <- seq(0, 2 * pi, length.out = 400)
+ellipse <- tibble::tibble(
+  x1 = 5 * cos(angle),
+  x2 = 3 * sin(angle)
+)
+marks <- tibble::tribble(
+  ~x1, ~x2, ~label, ~kind, ~nudge,
+  -4, 0, "focus (-4, 0)", "focus", -0.6,
+  4, 0, "focus (4, 0)", "focus", -0.6,
+  0, 3, "(0, 3)", "on the ellipse", 0.6,
+  5, 0, "(5, 0)", "on the ellipse", 0.6
+)
+to_foci <- tibble::tribble(
+  ~x1, ~x2, ~x1_end, ~x2_end,
+  0, 3, -4, 0,
+  0, 3, 4, 0
+)
+shapes <- c(focus = 1, "on the ellipse" = 16)
+
+ellipse |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = x1, y = x2) +
+  ggplot2::geom_path() +
+  ggplot2::geom_segment(
+    data = to_foci,
+    mapping = ggplot2::aes(xend = x1_end, yend = x2_end),
+    linetype = "dashed"
+  ) +
+  ggplot2::geom_point(
+    data = marks,
+    mapping = ggplot2::aes(shape = kind),
+    size = 3
+  ) +
+  ggplot2::geom_text(
+    data = marks,
+    mapping = ggplot2::aes(y = x2 + nudge, label = label)
+  ) +
+  ggplot2::scale_shape_manual(values = shapes, guide = "none") +
+  ggplot2::coord_fixed() +
+  ggplot2::labs(x = "first coordinate", y = "second coordinate")
+```
+
+The [ellipse](#def-ellipse) with foci $(-4, 0)$ and $(4, 0)$ and $s = 10$.
+The two dashed segments from $(0, 3)$ to the foci are each $5$ units long.
+:::
+
+:::
