@@ -3,7 +3,8 @@
 
 <!-- no-figure: the example works with shapes only, so there are no values to plot -->
 
-Let $\matr{A}$ be $2 \times 3$ and let $\matr{B}$ be $3 \times 4$.
+Let $\matr{A}$ be $2 \times 3$,
+and let $\matr{B}$ be $3 \times 4$.
 The [product](#def-matrix-mult) $\matr{B}\matr{A}$ is $(3 \times 4)(2 \times 3)$.
 Its inner pair $4, 2$ does not match,
 so the [shape rule](#def-shape-rule) says that $\matr{B}\matr{A}$ is not defined,

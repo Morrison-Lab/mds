@@ -3,7 +3,9 @@
 
 <!-- no-figure: the example works with shapes only, so there are no values to plot -->
 
-Let $\matr{A}$ be $2 \times 3$, let $\matr{B}$ be $3 \times 4$, and let $\vx \in \reals^4$,
+Let $\matr{A}$ be $2 \times 3$,
+let $\matr{B}$ be $3 \times 4$,
+and let $\vx \in \reals^4$,
 which is a $4 \times 1$ [matrix](#def-matrix).
 Apply the [shape rule](#def-shape-rule) one [product](#def-matrix-mult) at a time:
 
