@@ -7,7 +7,8 @@ is a [minimization problem](#def-minimization-problem) whose [objective](#def-ob
 
 $$f(\vx) = \tfrac{1}{2}\,\qform{\matr{S}}{\vx} + \tp{\vecf{c}} \vx,$$
 
-for a $p \times p$ [positive semidefinite matrix](linear-algebra.qmd#def-positive-semidefinite) $\matr{S}$ and a vector $\vecf{c} \in \reals^p$,
+for a $p \times p$ [positive semidefinite matrix](linear-algebra.qmd#def-positive-semidefinite) $\matr{S}$
+and a vector $\vecf{c} \in \reals^p$,
 and whose [constraints](#def-constraints) are linear equations and linear [inequalities](https://morrison-lab.github.io/mcs/proof-writing.html#def-inequality) in $\vx$.
 
 :::

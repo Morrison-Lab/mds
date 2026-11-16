@@ -1,11 +1,9 @@
 :::{#def-sparse-vector}
-#### $k$-sparse vector (sparsity)
+#### $k$-sparse vector
 
 For a vector $\vx$ in [$\reals^p$](#def-real-coordinate-space)
 and a whole number $k \le p$,
 $\vx$ is **$k$-sparse**
-[@wikipedia_sparse_matrix]
 if at most $k$ of its $p$ entries are nonzero.
-A method that favors vectors with fewer nonzero entries promotes **sparsity**.
 
 :::

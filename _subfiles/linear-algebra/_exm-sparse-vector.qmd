@@ -7,7 +7,8 @@ $x_2 = 3$ and $x_5 = -1$,
 so it is [$2$-sparse](#def-sparse-vector).
 It is also $3$-sparse, $4$-sparse and $5$-sparse,
 since "at most $k$" allows fewer.
-It is not $1$-sparse, because two of its entries are nonzero.
+It is not $1$-sparse,
+because two of its entries are nonzero.
 @fig-sparse-vector draws each entry as a stem from zero.
 
 :::{#fig-sparse-vector}
