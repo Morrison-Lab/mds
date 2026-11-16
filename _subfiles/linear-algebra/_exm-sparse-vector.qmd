@@ -1,0 +1,39 @@
+:::{#exm-sparse-vector}
+#### A $2$-sparse vector
+
+The vector $\vx = \tp{(0, 3, 0, 0, -1)} \in \reals^5$ has two nonzero entries,
+$x_2 = 3$ and $x_5 = -1$,
+so it is [$2$-sparse](#def-sparse-vector).
+It is also $3$-sparse, $4$-sparse and $5$-sparse,
+since "at most $k$" allows fewer.
+It is not $1$-sparse, because two of its entries are nonzero.
+@fig-sparse-vector draws each entry as a stem from zero.
+
+:::{#fig-sparse-vector}
+
+```{r}
+#| label: sparse-vector-plot
+#| code-fold: true
+#| fig-alt: >-
+#|   Stem plot of the five entries of the vector (0, 3, 0, 0, -1) against
+#|   their positions 1 to 5. Only position 2, with a stem up to 3, and
+#|   position 5, with a stem down to -1, leave the horizontal zero line; the
+#|   other three entries sit on it.
+#| fig-height: 3
+#| fig-width: 5
+entries <- tibble::tibble(position = 1:5, value = c(0, 3, 0, 0, -1))
+
+entries |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = position, y = value) +
+  ggplot2::geom_hline(yintercept = 0, colour = "grey60") +
+  ggplot2::geom_segment(mapping = ggplot2::aes(xend = position, yend = 0)) +
+  ggplot2::geom_point(size = 3) +
+  ggplot2::labs(x = "entry position", y = "entry value")
+```
+
+The entries of $\tp{(0, 3, 0, 0, -1)}$.
+Only two stems leave zero, so the vector is $2$-sparse.
+:::
+
+:::

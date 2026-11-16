@@ -30,6 +30,14 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_def-quadratic-program.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-quadratic-program.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_thm-qp-equality.qmd >}}
 
 {{< slidebreak >}}
