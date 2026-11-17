@@ -5049,6 +5049,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra-vectors#def-circle",
+   "site": "mds",
+   "page": "linear-algebra-vectors",
+   "div": "def-circle",
+   "kind": "def",
+   "title": "Circle",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra-vectors#def-column-vector",
    "site": "mds",
    "page": "linear-algebra-vectors",
@@ -5064,6 +5073,15 @@
    "div": "def-dot-product",
    "kind": "def",
    "title": "Dot product",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-vectors#def-ellipse",
+   "site": "mds",
+   "page": "linear-algebra-vectors",
+   "div": "def-ellipse",
+   "kind": "def",
+   "title": "Ellipse",
    "external": false
   },
   {
@@ -9773,8 +9791,32 @@
    "mds/linear-algebra-subspaces#def-subspace"
   ],
   [
+   "mds/linear-algebra-vectors#def-circle",
+   "mcs/sets#def-set"
+  ],
+  [
+   "mds/linear-algebra-vectors#def-circle",
+   "mds/linear-algebra-vectors#def-euclidean-distance"
+  ],
+  [
+   "mds/linear-algebra-vectors#def-circle",
+   "mds/linear-algebra-vectors#def-real-coordinate-space"
+  ],
+  [
    "mds/linear-algebra-vectors#def-column-vector",
    "mcs/number-systems#def-real-numbers"
+  ],
+  [
+   "mds/linear-algebra-vectors#def-ellipse",
+   "mcs/sets#def-set"
+  ],
+  [
+   "mds/linear-algebra-vectors#def-ellipse",
+   "mds/linear-algebra-vectors#def-euclidean-distance"
+  ],
+  [
+   "mds/linear-algebra-vectors#def-ellipse",
+   "mds/linear-algebra-vectors#def-real-coordinate-space"
   ],
   [
    "mds/linear-algebra-vectors#def-euclidean-distance",

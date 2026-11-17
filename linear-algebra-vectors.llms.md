@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-16 14:11:25 (PST)
+Last modified: 2026-11-16 17:45:04 (PST)
 
 > **NOTE:**
 >
@@ -1008,7 +1008,155 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Definition 24 (Orthonormal vectors)** A set of vectors $\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_2, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_k\}$ is **orthonormal** if the vectors are mutually orthogonal ([Definition 20](#def-orthogonal-vectors)) and each has norm $1$ ([Definition 21](#def-euclidean-norm)), that is, [unit length](#def-unit-vector):
+> **Definition 24 (Circle)** For a [point](#def-real-coordinate-space) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}$ in the [real plane](#def-real-coordinate-space) $\mathbb{R}^2$ and a number $r > 0$, the **circle** [\[13\]](#ref-wikipedia_circle) with center $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}$ and radius $r$ is the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of points in $\mathbb{R}^2$ at [Euclidean distance](#def-euclidean-distance) $r$ from $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}$:
+>
+> $$\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^2 : \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}\right\rVert\mathclose{} = r\right\}\mathclose{}$$
+
+> **NOTE:**
+>
+> **Example 19 (Points on a circle)** Take the [circle](#def-circle) with center $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}= (1, 2)$ and radius $r = 5$. The [point](#def-real-coordinate-space) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (4, 6)$ is on it:
+>
+> $$\begin{aligned}
+> \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}\right\rVert\mathclose{}
+> &= \sqrt{(4 - 1)^2 + (6 - 2)^2}
+> && \text{(}\href{#def-euclidean-distance}{\text{Definition~23}}\text{)}
+> \\
+> &= \sqrt{9 + 16}
+> && \text{(subtract and square)}
+> \\
+> &= 5.
+> && \text{(add and take the square root)}
+> \end{aligned}$$
+>
+> The center $(1, 2)$ itself is not on the circle, because its distance from $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}$ is $0$, not $5$.
+>
+> > **NOTE:**
+> >
+> > Show code
+> >
+> > ``` downlit
+> > # The circle with center (1, 2) and radius 5, traced by its angle.
+> > angle <- seq(0, 2 * pi, length.out = 400)
+> > circle <- tibble::tibble(
+> >   x1 = 1 + 5 * cos(angle),
+> >   x2 = 2 + 5 * sin(angle)
+> > )
+> > marks <- tibble::tribble(
+> >   ~x1, ~x2, ~label, ~kind,
+> >   1, 2, "center (1, 2)", "center",
+> >   4, 6, "(4, 6)", "on the circle"
+> > )
+> > radius <- tibble::tibble(x1 = 1, x2 = 2, x1_end = 4, x2_end = 6)
+> > shapes <- c(center = 1, "on the circle" = 16)
+> >
+> > circle |>
+> >   ggplot2::ggplot() +
+> >   ggplot2::aes(x = x1, y = x2) +
+> >   ggplot2::geom_path() +
+> >   ggplot2::geom_segment(
+> >     data = radius,
+> >     mapping = ggplot2::aes(xend = x1_end, yend = x2_end),
+> >     linetype = "dashed"
+> >   ) +
+> >   ggplot2::geom_point(
+> >     data = marks,
+> >     mapping = ggplot2::aes(shape = kind),
+> >     size = 3
+> >   ) +
+> >   ggplot2::geom_text(
+> >     data = marks,
+> >     mapping = ggplot2::aes(label = label),
+> >     vjust = -1
+> >   ) +
+> >   ggplot2::scale_shape_manual(values = shapes, guide = "none") +
+> >   ggplot2::coord_fixed() +
+> >   ggplot2::labs(x = "first coordinate", y = "second coordinate")
+> > ```
+> >
+> > [![A circle of radius 5 around the point (1, 2), drawn on equal axes. A hollow dot marks the center (1, 2), a solid dot marks the point (4, 6) on the circle, and a dashed segment of length 5 joins them.](linear-algebra-vectors_files/figure-html/circle-example-plot-1.png)](linear-algebra-vectors_files/figure-html/circle-example-plot-1.png "Figure 1: The circle with center (1, 2) and radius 5. The dashed segment from the center to (4, 6) is 5 units long.")
+> >
+> > Figure 1: The [circle](#def-circle) with center $(1, 2)$ and radius $5$. The dashed segment from the center to $(4, 6)$ is $5$ units long.
+
+> **NOTE:**
+>
+> **Definition 25 (Ellipse)** For two [points](#def-real-coordinate-space) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ in the [real plane](#def-real-coordinate-space) $\mathbb{R}^2$ and a number $s > \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\right\rVert\mathclose{}$, the **ellipse** [\[14\]](#ref-wikipedia_ellipse) with foci $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ is the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of points in $\mathbb{R}^2$ whose [Euclidean distances](#def-euclidean-distance) to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ and to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ add up to $s$:
+>
+> $$\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^2 : \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\right\rVert\mathclose{} + \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\right\rVert\mathclose{} = s\right\}\mathclose{}$$
+
+> **NOTE:**
+>
+> **Example 20 (Points on an ellipse)** Take the [ellipse](#def-ellipse) with foci $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}= (-4, 0)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}= (4, 0)$ and $s = 10$, which is larger than $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\right\rVert\mathclose{} = 8$. The [point](#def-real-coordinate-space) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (0, 3)$ is on it:
+>
+> $$\begin{aligned}
+> \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\right\rVert\mathclose{} + \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\right\rVert\mathclose{}
+> &= \sqrt{(0 + 4)^2 + 3^2} + \sqrt{(0 - 4)^2 + 3^2}
+> && \text{(}\href{#def-euclidean-distance}{\text{Definition~23}}\text{)}
+> \\
+> &= \sqrt{25} + \sqrt{25}
+> && \text{(square and add)}
+> \\
+> &= 10.
+> && \text{(take the square roots and add)}
+> \end{aligned}$$
+>
+> So is $(5, 0)$, whose distances to the foci are $9$ and $1$. When the foci coincide, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$, both distances are $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\right\rVert\mathclose{}$, so $2\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\right\rVert\mathclose{} = s$. Every point of the ellipse is therefore at distance $s / 2$ from $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$, so the ellipse is the [circle](#def-circle) with center $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ and radius $s / 2$.
+>
+> > **NOTE:**
+> >
+> > Show code
+> >
+> > ``` downlit
+> > # With foci (-4, 0) and (4, 0) and s = 10, the ellipse reaches s / 2 = 5 along
+> > # the axis through the foci and sqrt(5^2 - 4^2) = 3 across it.
+> > angle <- seq(0, 2 * pi, length.out = 400)
+> > ellipse <- tibble::tibble(
+> >   x1 = 5 * cos(angle),
+> >   x2 = 3 * sin(angle)
+> > )
+> > marks <- tibble::tribble(
+> >   ~x1, ~x2, ~label, ~kind, ~nudge,
+> >   -4, 0, "focus (-4, 0)", "focus", -0.6,
+> >   4, 0, "focus (4, 0)", "focus", -0.6,
+> >   0, 3, "(0, 3)", "on the ellipse", 0.6,
+> >   5, 0, "(5, 0)", "on the ellipse", 0.6
+> > )
+> > to_foci <- tibble::tribble(
+> >   ~x1, ~x2, ~x1_end, ~x2_end,
+> >   0, 3, -4, 0,
+> >   0, 3, 4, 0
+> > )
+> > shapes <- c(focus = 1, "on the ellipse" = 16)
+> >
+> > ellipse |>
+> >   ggplot2::ggplot() +
+> >   ggplot2::aes(x = x1, y = x2) +
+> >   ggplot2::geom_path() +
+> >   ggplot2::geom_segment(
+> >     data = to_foci,
+> >     mapping = ggplot2::aes(xend = x1_end, yend = x2_end),
+> >     linetype = "dashed"
+> >   ) +
+> >   ggplot2::geom_point(
+> >     data = marks,
+> >     mapping = ggplot2::aes(shape = kind),
+> >     size = 3
+> >   ) +
+> >   ggplot2::geom_text(
+> >     data = marks,
+> >     mapping = ggplot2::aes(y = x2 + nudge, label = label)
+> >   ) +
+> >   ggplot2::scale_shape_manual(values = shapes, guide = "none") +
+> >   ggplot2::coord_fixed() +
+> >   ggplot2::labs(x = "first coordinate", y = "second coordinate")
+> > ```
+> >
+> > [![An ellipse centered at the origin, 10 units wide and 6 units tall, drawn on equal axes. Hollow dots mark the foci (-4, 0) and (4, 0) on the horizontal axis. Solid dots mark the points (0, 3) and (5, 0) on the ellipse, and two dashed segments, each of length 5, join (0, 3) to the two foci.](linear-algebra-vectors_files/figure-html/ellipse-example-plot-1.png)](linear-algebra-vectors_files/figure-html/ellipse-example-plot-1.png "Figure 2: The ellipse with foci (-4, 0) and (4, 0) and s = 10. The two dashed segments from (0, 3) to the foci are each 5 units long.")
+> >
+> > Figure 2: The [ellipse](#def-ellipse) with foci $(-4, 0)$ and $(4, 0)$ and $s = 10$. The two dashed segments from $(0, 3)$ to the foci are each $5$ units long.
+
+> **NOTE:**
+>
+> **Definition 26 (Orthonormal vectors)** A set of vectors $\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_2, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_k\}$ is **orthonormal** if the vectors are mutually orthogonal ([Definition 20](#def-orthogonal-vectors)) and each has norm $1$ ([Definition 21](#def-euclidean-norm)), that is, [unit length](#def-unit-vector):
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_i \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_j =
 > \begin{cases}
@@ -1018,7 +1166,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Example 19 (Indicator vectors are orthonormal)** The indicator vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_p$ ([Definition 19](#def-indicator-vector)) form an orthonormal set. By [Theorem 3](#thm-indicator-selection), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_i \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j$ is entry $i$ of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j$, which is $1$ if $i = j$ and $0$ if $i \neq j$. For $p = 2$:
+> **Example 21 (Indicator vectors are orthonormal)** The indicator vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_p$ ([Definition 19](#def-indicator-vector)) form an orthonormal set. By [Theorem 3](#thm-indicator-selection), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_i \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j$ is entry $i$ of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j$, which is $1$ if $i = j$ and $0$ if $i \neq j$. For $p = 2$:
 >
 > $$\begin{aligned}
 > \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1 \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1 &= 1 \cdot 1 + 0 \cdot 0 \\
@@ -1039,7 +1187,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Example 20 (Two ways to fail to be orthonormal)**  
+> **Example 22 (Two ways to fail to be orthonormal)**  
 >
 > - $(1, 1)$ and $(1, -1)$ are orthogonal, since $1 \cdot 1 + 1 \cdot(-1) = 0$, but not orthonormal: $(1, 1) \cdot (1, 1) = 2 \ne 1$.
 >
@@ -1115,7 +1263,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **TIP:**
 >
-> Hutchinson’s [Linear Function Basics](https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/#linear_function_basics) (24 min) covers dot products and the Euclidean norm, and goes on to hyperplanes ([Definition 27 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)) and [level sets](vector-calculus.llms.md#def-level-set) [\[13\]](#ref-hutchinson_wwu_ml_videos). The login for the video site is posted [on Canvas](https://wwu.instructure.com/courses/1906010/modules#module_3922392).
+> Hutchinson’s [Linear Function Basics](https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/#linear_function_basics) (24 min) covers dot products and the Euclidean norm, and goes on to hyperplanes ([Definition 27 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)) and [level sets](vector-calculus.llms.md#def-level-set) [\[15\]](#ref-hutchinson_wwu_ml_videos). The login for the video site is posted [on Canvas](https://wwu.instructure.com/courses/1906010/modules#module_3922392).
 
 # Definitions on this page
 
@@ -1142,7 +1290,9 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 - [Definition 21 (Euclidean norm (length,](#def-euclidean-norm) $L_2$ norm))
 - [Definition 22 (Unit vector)](#def-unit-vector)
 - [Definition 23 (Euclidean distance)](#def-euclidean-distance)
-- [Definition 24 (Orthonormal vectors)](#def-orthonormal-vectors)
+- [Definition 24 (Circle)](#def-circle)
+- [Definition 25 (Ellipse)](#def-ellipse)
+- [Definition 26 (Orthonormal vectors)](#def-orthonormal-vectors)
 
 Back to top
 
@@ -1197,5 +1347,13 @@ Wikipedia contributors, “Euclidean distance — Wikipedia, the free encycloped
 I. Goodfellow, Y. Bengio, and A. Courville, *Deep learning*. MIT Press, 2016. Available: <https://www.deeplearningbook.org/>
 
 \[13\]
+
+Wikipedia contributors, “Circle — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Circle>
+
+\[14\]
+
+Wikipedia contributors, “Ellipse — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Ellipse>
+
+\[15\]
 
 B. Hutchinson, “DATA 471/571 (machine learning) and CSCI 481/581 (deep learning) video lectures.” Western Washington University. Accessed: Sep. 28, 2026. \[Online\]. Available: <https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/>

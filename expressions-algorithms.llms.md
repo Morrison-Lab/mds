@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-16 14:11:25 (PST)
+Last modified: 2026-11-16 17:45:04 (PST)
 
 This page moved to [Expressions and Algorithms](https://morrison-lab.github.io/mcs/expressions-algorithms.html) in the Math for Computer Science notes.
 

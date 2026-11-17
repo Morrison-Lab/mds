@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-16 14:11:25 (PST)
+Last modified: 2026-11-16 17:45:04 (PST)
 
 # 1 Special Matrices
 
@@ -563,7 +563,7 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> *Remark 6* (The columns of an orthogonal matrix are orthonormal). Entry $(i, j)$ of ${\mathbf{Q}}^{\top}\mathbf{Q}$ is the dot product of column $i$ and column $j$ of $\mathbf{Q}$, so ${\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}_p$ says that the columns of $\mathbf{Q}$ are orthonormal ([Definition 24 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)). For a square matrix, ${\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}_p$ also implies $\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}_p$, so $\mathbf{Q}^{-1} = {\mathbf{Q}}^{\top}$ ([Definition 5](#def-matrix-inverse)) [\[6, Ch. 8\]](#ref-banerjee2014linear), Theorem 8.1 and Definition 8.1, p. 209.
+> *Remark 6* (The columns of an orthogonal matrix are orthonormal). Entry $(i, j)$ of ${\mathbf{Q}}^{\top}\mathbf{Q}$ is the dot product of column $i$ and column $j$ of $\mathbf{Q}$, so ${\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}_p$ says that the columns of $\mathbf{Q}$ are orthonormal ([Definition 26 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)). For a square matrix, ${\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}_p$ also implies $\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}_p$, so $\mathbf{Q}^{-1} = {\mathbf{Q}}^{\top}$ ([Definition 5](#def-matrix-inverse)) [\[6, Ch. 8\]](#ref-banerjee2014linear), Theorem 8.1 and Definition 8.1, p. 209.
 >
 > For example, the columns of $\mathbf{Q}$ in [Example 14](#exm-orthogonal-matrix) are $(0.6, 0.8)$ and $(-0.8, 0.6)$. The diagonal entries $0.36 + 0.64 = 1$ of ${\mathbf{Q}}^{\top}\mathbf{Q}$ are their squared norms, and the off-diagonal entries $-0.48 + 0.48 = 0$ are their dot product. Multiplying in the other order also gives $\mathbf{I}_2$:
 >
@@ -1416,7 +1416,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 > && \text{(add)}
 > \end{aligned}$$
 >
-> Each has norm $\sqrt{1^2 + 1^2} = \sqrt{2}$ ([Definition 21 in Vectors](linear-algebra-vectors.llms.md#def-euclidean-norm)), so dividing each by $\sqrt{2}$ gives two orthonormal eigenvectors ([Definition 24 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)). Put them in the columns of $\mathbf{Q}$, and the matching eigenvalues on the diagonal of $\mathbf{\Lambda}$:
+> Each has norm $\sqrt{1^2 + 1^2} = \sqrt{2}$ ([Definition 21 in Vectors](linear-algebra-vectors.llms.md#def-euclidean-norm)), so dividing each by $\sqrt{2}$ gives two orthonormal eigenvectors ([Definition 26 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)). Put them in the columns of $\mathbf{Q}$, and the matching eigenvalues on the diagonal of $\mathbf{\Lambda}$:
 >
 > $$\mathbf{Q} = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
 > \qquad

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-16 14:11:25 (PST)
+Last modified: 2026-11-16 17:45:04 (PST)
 
 # 1 Inner products
 
@@ -994,7 +994,7 @@ Last modified: 2026-11-16 14:11:25 (PST)
 
 > **NOTE:**
 >
-> **Theorem 9 (Orthonormal vectors are linearly independent)** If $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_k$ are orthonormal ([Definition 24 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)), then they are linearly independent ([Definition 1 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-linearly-independent)).
+> **Theorem 9 (Orthonormal vectors are linearly independent)** If $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_k$ are orthonormal ([Definition 26 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)), then they are linearly independent ([Definition 1 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-linearly-independent)).
 
 > **NOTE:**
 >
@@ -1045,7 +1045,7 @@ Last modified: 2026-11-16 14:11:25 (PST)
 
 > **NOTE:**
 >
-> **Definition 15 (Orthonormal basis)** An **orthonormal basis** [\[12\]](#ref-wikipedia_orthonormal_basis) of a subspace $\mathcal{S}$ of $\mathbb{R}^p$ is a basis of $\mathcal{S}$ ([Definition 6 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-basis)) whose vectors are orthonormal ([Definition 24 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)).
+> **Definition 15 (Orthonormal basis)** An **orthonormal basis** [\[12\]](#ref-wikipedia_orthonormal_basis) of a subspace $\mathcal{S}$ of $\mathbb{R}^p$ is a basis of $\mathcal{S}$ ([Definition 6 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-basis)) whose vectors are orthonormal ([Definition 26 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)).
 
 > **NOTE:**
 >
@@ -1081,7 +1081,7 @@ Last modified: 2026-11-16 14:11:25 (PST)
 > && \text{(}\href{#thm-dot-linear-sum}{\text{Theorem~8}}\text{)}
 > \\
 > &= c_i,
-> && \text{(}\href{linear-algebra-vectors.qmd#def-orthonormal-vectors}{\text{Definition~24 in Vectors}}\text{)}
+> && \text{(}\href{linear-algebra-vectors.qmd#def-orthonormal-vectors}{\text{Definition~26 in Vectors}}\text{)}
 > \end{aligned}$$
 >
 > so each coefficient $c_i$ is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_i \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$.
@@ -1224,7 +1224,7 @@ Last modified: 2026-11-16 14:11:25 (PST)
 > && \text{(} 1\,z = z \text{, and pull the minus signs out of the sum)}
 > \\
 > &= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_l \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_i - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_l \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_i
-> && \text{(only the } j = l \text{ term survives, }\href{linear-algebra-vectors.qmd#def-orthonormal-vectors}{\text{Definition~24 in Vectors}}\text{)}
+> && \text{(only the } j = l \text{ term survives, }\href{linear-algebra-vectors.qmd#def-orthonormal-vectors}{\text{Definition~26 in Vectors}}\text{)}
 > \\
 > &= 0.
 > && \text{(arithmetic)}

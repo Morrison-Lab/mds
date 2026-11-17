@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-16 14:11:25 (PST)
+Last modified: 2026-11-16 17:45:04 (PST)
 
 # 1 Design Matrix
 
@@ -279,7 +279,7 @@ Last modified: 2026-11-16 14:11:25 (PST)
 > && \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~8 in Vectors}}\text{)}
 > \end{aligned}$$
 >
-> which is $1$ if $i = j$ and $0$ otherwise ([Definition 24 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)), so ${\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{I}_r$ ([Definition 15 in Matrices](linear-algebra-matrices.llms.md#def-identity-matrix)).
+> which is $1$ if $i = j$ and $0$ otherwise ([Definition 26 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)), so ${\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{I}_r$ ([Definition 15 in Matrices](linear-algebra-matrices.llms.md#def-identity-matrix)).
 >
 > **The split.** Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = \mathbf{Q} {\mathbf{Q}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$. $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = \mathbf{Q}\,({\mathbf{Q}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})$ ([Theorem 7 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc)) is in $\mathcal{C}(\mathbf{Q})$ ([Definition 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-column-space)), which is $\operatorname{span}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_r\right\}\mathclose{} = \mathcal{S}$ ([Theorem 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-column-space-span)). For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$,
 >
@@ -1623,7 +1623,7 @@ Last modified: 2026-11-16 14:11:25 (PST)
 >
 > $$\underbrace{\mathbf{A}}_{m \times n} = \underbrace{\mathbf{Q}}_{m \times n}\,\underbrace{\mathbf{R}}_{n \times n},$$
 >
-> where the columns of $\mathbf{Q}$ are orthonormal ([Definition 24 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)) and $\mathbf{R}$ is upper triangular ([Definition 7](#def-triangular-matrix)) with positive diagonal entries.
+> where the columns of $\mathbf{Q}$ are orthonormal ([Definition 26 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)) and $\mathbf{R}$ is upper triangular ([Definition 7](#def-triangular-matrix)) with positive diagonal entries.
 
 > **NOTE:**
 >
