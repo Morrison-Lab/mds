@@ -3492,6 +3492,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra-matrices#def-shape-rule",
+   "site": "mds",
+   "page": "linear-algebra-matrices",
+   "div": "def-shape-rule",
+   "kind": "def",
+   "title": "Shape rule",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra-matrices#def-square-matrix",
    "site": "mds",
    "page": "linear-algebra-matrices",
@@ -5202,6 +5211,24 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra-vectors#def-sparse-vector",
+   "site": "mds",
+   "page": "linear-algebra-vectors",
+   "div": "def-sparse-vector",
+   "kind": "def",
+   "title": "$k$-sparse vector",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-vectors#def-sparsity",
+   "site": "mds",
+   "page": "linear-algebra-vectors",
+   "div": "def-sparsity",
+   "kind": "def",
+   "title": "Sparsity",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra-vectors#def-sum-of-elements",
    "site": "mds",
    "page": "linear-algebra-vectors",
@@ -5802,6 +5829,15 @@
    "div": "def-optimization-algorithm",
    "kind": "def",
    "title": "Optimization algorithm",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-constrained#def-quadratic-program",
+   "site": "mds",
+   "page": "optimization-constrained",
+   "div": "def-quadratic-program",
+   "kind": "def",
+   "title": "Quadratic program (quadratic programming problem)",
    "external": false
   },
   {
@@ -8591,6 +8627,14 @@
    "mds/linear-algebra-matrices#def-main-diagonal"
   ],
   [
+   "mds/linear-algebra-matrices#def-shape-rule",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
+   "mds/linear-algebra-matrices#def-shape-rule",
+   "mds/linear-algebra-matrices#def-matrix-mult"
+  ],
+  [
    "mds/linear-algebra-matrices#thm-affine-linear-iff",
    "mds/linear-algebra-matrices#def-affine-map"
   ],
@@ -9875,6 +9919,18 @@
    "mcs/number-systems#def-real-numbers"
   ],
   [
+   "mds/linear-algebra-vectors#def-sparse-vector",
+   "mds/linear-algebra-vectors#def-real-coordinate-space"
+  ],
+  [
+   "mds/linear-algebra-vectors#def-sparsity",
+   "mds/algebra-sums#def-quotient"
+  ],
+  [
+   "mds/linear-algebra-vectors#def-sparsity",
+   "mds/linear-algebra-vectors#def-real-coordinate-space"
+  ],
+  [
    "mds/linear-algebra-vectors#def-transpose",
    "mcs/functions#def-sequence"
   ],
@@ -10336,6 +10392,26 @@
   ],
   [
    "mds/optimization-constrained#def-optimization-algorithm",
+   "mds/optimization-constrained#def-objective-function"
+  ],
+  [
+   "mds/optimization-constrained#def-quadratic-program",
+   "mcs/proof-writing#def-inequality"
+  ],
+  [
+   "mds/optimization-constrained#def-quadratic-program",
+   "mds/linear-algebra-special-matrices#def-positive-semidefinite"
+  ],
+  [
+   "mds/optimization-constrained#def-quadratic-program",
+   "mds/optimization-constrained#def-constraints"
+  ],
+  [
+   "mds/optimization-constrained#def-quadratic-program",
+   "mds/optimization-constrained#def-minimization-problem"
+  ],
+  [
+   "mds/optimization-constrained#def-quadratic-program",
    "mds/optimization-constrained#def-objective-function"
   ],
   [

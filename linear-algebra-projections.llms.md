@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-16 17:45:04 (PST)
+Last modified: 2026-11-16 18:39:12 (PST)
 
 # 1 Design Matrix
 
@@ -276,10 +276,10 @@ Last modified: 2026-11-16 17:45:04 (PST)
 > && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~6 in Matrices}}\text{)}
 > \\
 > &= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_i \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_j,
-> && \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~8 in Vectors}}\text{)}
+> && \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~10 in Vectors}}\text{)}
 > \end{aligned}$$
 >
-> which is $1$ if $i = j$ and $0$ otherwise ([Definition 26 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)), so ${\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{I}_r$ ([Definition 15 in Matrices](linear-algebra-matrices.llms.md#def-identity-matrix)).
+> which is $1$ if $i = j$ and $0$ otherwise ([Definition 28 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)), so ${\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{I}_r$ ([Definition 16 in Matrices](linear-algebra-matrices.llms.md#def-identity-matrix)).
 >
 > **The split.** Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = \mathbf{Q} {\mathbf{Q}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$. $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = \mathbf{Q}\,({\mathbf{Q}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})$ ([Theorem 7 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc)) is in $\mathcal{C}(\mathbf{Q})$ ([Definition 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-column-space)), which is $\operatorname{span}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_r\right\}\mathclose{} = \mathcal{S}$ ([Theorem 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-column-space-span)). For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$,
 >
@@ -395,7 +395,7 @@ Last modified: 2026-11-16 17:45:04 (PST)
 >
 > ([Theorem 7 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#thm-complement-null-space)). By the uniqueness in [Theorem 8 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#thm-orthogonal-direct-sum), $\mathbf{P} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ is the orthogonal projection of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ onto $\mathcal{C}(\mathbf{P})$.
 >
-> **Part 2.** The orthogonal projection of a vector onto $\mathcal{S}$ is unique ([Definition 3](#def-orthogonal-projection)), so $\mathbf{P}_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j = \mathbf{P}_2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j$ for each indicator vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j$ ([Definition 19 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)). $\mathbf{P}_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j$ is column $j$ of $\mathbf{P}_1$: by [Theorem 3 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-matvec-columns) it is the combination of the columns of $\mathbf{P}_1$ with coefficients the entries of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j$, which are $1$ in place $j$ and $0$ elsewhere ([Definition 19 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)). Likewise for $\mathbf{P}_2$, so the two matrices have the same columns.
+> **Part 2.** The orthogonal projection of a vector onto $\mathcal{S}$ is unique ([Definition 3](#def-orthogonal-projection)), so $\mathbf{P}_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j = \mathbf{P}_2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j$ for each indicator vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j$ ([Definition 21 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)). $\mathbf{P}_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j$ is column $j$ of $\mathbf{P}_1$: by [Theorem 3 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-matvec-columns) it is the combination of the columns of $\mathbf{P}_1$ with coefficients the entries of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j$, which are $1$ in place $j$ and $0$ elsewhere ([Definition 21 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)). Likewise for $\mathbf{P}_2$, so the two matrices have the same columns.
 
 > **NOTE:**
 >
@@ -1291,11 +1291,11 @@ Last modified: 2026-11-16 17:45:04 (PST)
 
 > **NOTE:**
 >
-> **Definition 6 (Consistent linear system)** A linear system ([Definition 17 in Matrices](linear-algebra-matrices.llms.md#def-linear-system)) $\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$, with $\mathbf{A}$ an $m \times n$ matrix and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m$, is **consistent** [\[9\]](#ref-wikipedia_consistent_and_inconsistent_equations) if it has at least one solution $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \in \mathbb{R}^n$, and **inconsistent** otherwise.
+> **Definition 6 (Consistent linear system)** A linear system ([Definition 18 in Matrices](linear-algebra-matrices.llms.md#def-linear-system)) $\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$, with $\mathbf{A}$ an $m \times n$ matrix and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m$, is **consistent** [\[9\]](#ref-wikipedia_consistent_and_inconsistent_equations) if it has at least one solution $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \in \mathbb{R}^n$, and **inconsistent** otherwise.
 
 > **NOTE:**
 >
-> **Example 22 (A consistent system and an inconsistent one)** With $\mathbf{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$, $\mathbf{A}\,(x_1, x_2) = (x_1, 0)$ ([Definition 16 in Matrices](linear-algebra-matrices.llms.md#def-matvec-mult)).
+> **Example 22 (A consistent system and an inconsistent one)** With $\mathbf{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$, $\mathbf{A}\,(x_1, x_2) = (x_1, 0)$ ([Definition 17 in Matrices](linear-algebra-matrices.llms.md#def-matvec-mult)).
 >
 > - $\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (2, 0)$ is consistent: $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (2, 0)$ is a solution.
 > - $\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (2, 1)$ is inconsistent: the second entry of $\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is always $0$, never $1$.
@@ -1572,7 +1572,7 @@ Last modified: 2026-11-16 17:45:04 (PST)
 > $$\begin{aligned}
 > b_i
 > &= \sum_{j=1}^nu_{ij}\,x_j
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~16 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~17 in Matrices}}\text{)}
 > \\
 > &= \sum_{j=i}^{n} u_{ij}\,x_j
 > && \text{(} u_{ij} = 0 \text{ for } j < i \text{)}
@@ -1623,7 +1623,7 @@ Last modified: 2026-11-16 17:45:04 (PST)
 >
 > $$\underbrace{\mathbf{A}}_{m \times n} = \underbrace{\mathbf{Q}}_{m \times n}\,\underbrace{\mathbf{R}}_{n \times n},$$
 >
-> where the columns of $\mathbf{Q}$ are orthonormal ([Definition 26 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)) and $\mathbf{R}$ is upper triangular ([Definition 7](#def-triangular-matrix)) with positive diagonal entries.
+> where the columns of $\mathbf{Q}$ are orthonormal ([Definition 28 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)) and $\mathbf{R}$ is upper triangular ([Definition 7](#def-triangular-matrix)) with positive diagonal entries.
 
 > **NOTE:**
 >

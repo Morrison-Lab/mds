@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-11-16 17:45:04 (PST)
+Last modified: 2026-11-16 18:39:12 (PST)
 
 (adapted from Fieller [\[1\]](#ref-fieller2018basics), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
@@ -245,7 +245,7 @@ The gradient always has the same shape as the input it is taken with respect to,
 >
 > Table 1: The shape of a gradient follows the shape of what it differentiates with respect to.
 
-The table is the cheapest check there is on a gradient just worked out by hand: if the shapes disagree, something went wrong. It is the shape rule of matrix multiplication again, applied to calculus.
+The table is the cheapest check there is on a gradient just worked out by hand: if the shapes disagree, something went wrong. It is the [shape rule](linear-algebra-matrices.llms.md#def-shape-rule) of [matrix multiplication](linear-algebra-matrices.llms.md#def-matrix-mult) again, applied to calculus.
 
 > **NOTE:**
 >
@@ -1749,7 +1749,7 @@ See Felippa [\[13\]](#ref-felippa_ifem_matrix_calculus), and Wikipedia contribut
 
 > **NOTE:**
 >
-> *Proof*. **Part 1.** By [Theorem 6](#thm-row-deriv-tp-col-deriv), the transposed gradient ${\mathopen{}\left(\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\right)\mathclose{}}^{\top}$ equals the row-vector derivative $\frac{\partial f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})}{\partial {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}}$. Substituting it into [Equation 5](#eq-hessian) gives the first line. The second line is the same expression written as a second derivative. It follows the shape rule of matrix multiplication ([Remark 4](#rem-row-derivative-shape)): the $p \times 1$ column-vector operator $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}$ stands on the left of a $1 \times p$ row vector, giving a $p \times p$ matrix.
+> *Proof*. **Part 1.** By [Theorem 6](#thm-row-deriv-tp-col-deriv), the transposed gradient ${\mathopen{}\left(\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\right)\mathclose{}}^{\top}$ equals the row-vector derivative $\frac{\partial f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})}{\partial {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}}$. Substituting it into [Equation 5](#eq-hessian) gives the first line. The second line is the same expression written as a second derivative. It follows the [shape rule](linear-algebra-matrices.llms.md#def-shape-rule) of [matrix multiplication](linear-algebra-matrices.llms.md#def-matrix-mult) ([Remark 4](#rem-row-derivative-shape)): the $p \times 1$ column-vector operator $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}$ stands on the left of a $1 \times p$ row vector, giving a $p \times p$ matrix.
 >
 > **Part 2.** Let $y_j \stackrel{\text{def}}{=}\frac{\partial}{\partial x_j} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ be entry $j$ of the gradient. By [Definition 8](#def-vector-valued-derivative), the $(i, j)$ entry of the derivative of the vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (y_1, \ldots, y_p)$ with respect to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is
 >

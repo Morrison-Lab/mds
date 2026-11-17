@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-16 17:45:04 (PST)
+Last modified: 2026-11-16 18:39:12 (PST)
 
 # 1 Similarity and diagonalization
 
@@ -39,12 +39,12 @@ Last modified: 2026-11-16 17:45:04 (PST)
 > && \text{(} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_n \text{)}
 > \\
 > &= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_n,
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~16 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~17 in Matrices}}\text{)}
 > \end{aligned}$$
 >
 > so $\mathcal{N}(\mathbf{A}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_n\right\}\mathclose{}$, the nullity is $0$, and $\operatorname{rank}(\mathbf{A}) = n$ ([Theorem 8 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-nullity)).
 >
-> **Rank** $n$ implies invertible. Every system $\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ has exactly one solution ([Corollary 2 in Projections and Linear Systems](linear-algebra-projections.llms.md#cor-solution-unique), both parts, with $m = n$). Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_j$ solve $\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_j = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j$ ([Definition 19 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)), and let $\mathbf{B}$ have columns $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_n$. Column $j$ of $\mathbf{A} \mathbf{B}$ is $\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_j = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j$ (1), so $\mathbf{A} \mathbf{B} = \mathbf{I}_n$. For the other order,
+> **Rank** $n$ implies invertible. Every system $\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ has exactly one solution ([Corollary 2 in Projections and Linear Systems](linear-algebra-projections.llms.md#cor-solution-unique), both parts, with $m = n$). Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_j$ solve $\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_j = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j$ ([Definition 21 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)), and let $\mathbf{B}$ have columns $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_n$. Column $j$ of $\mathbf{A} \mathbf{B}$ is $\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_j = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j$ (1), so $\mathbf{A} \mathbf{B} = \mathbf{I}_n$. For the other order,
 >
 > $$\begin{aligned}
 > \mathbf{A}\,(\mathbf{B} \mathbf{A} - \mathbf{I}_n)
@@ -207,7 +207,7 @@ Last modified: 2026-11-16 17:45:04 (PST)
 
 > **NOTE:**
 >
-> *Proof*. $\mathbf{U} - \lambda\,\mathbf{I}_p$ is upper triangular, with diagonal entries $u_{ii} - \lambda$ ([Definition 15 in Matrices](linear-algebra-matrices.llms.md#def-identity-matrix), [Definition 8 in Matrices](linear-algebra-matrices.llms.md#def-matrix-addition)).
+> *Proof*. $\mathbf{U} - \lambda\,\mathbf{I}_p$ is upper triangular, with diagonal entries $u_{ii} - \lambda$ ([Definition 16 in Matrices](linear-algebra-matrices.llms.md#def-identity-matrix), [Definition 8 in Matrices](linear-algebra-matrices.llms.md#def-matrix-addition)).
 >
 > **If** $\lambda$ is not a diagonal entry, every $u_{ii} - \lambda\ne 0$, so $(\mathbf{U} - \lambda\,\mathbf{I}_p)\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ has exactly one solution, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ ([Theorem 19 in Projections and Linear Systems](linear-algebra-projections.llms.md#thm-back-substitution)), and $\lambda$ is not an eigenvalue ([Theorem 2](#thm-eigenvalue-singular)).
 >
@@ -353,7 +353,7 @@ Last modified: 2026-11-16 17:45:04 (PST)
 > && \text{(arithmetic)}
 > \\
 > &= 2\,\mathbf{I}_2,
-> && \text{(}\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~9 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-identity-matrix}{\text{Definition~15 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~9 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-identity-matrix}{\text{Definition~16 in Matrices}}\text{)}
 > \end{aligned}$$
 >
 > so
@@ -436,7 +436,7 @@ Last modified: 2026-11-16 17:45:04 (PST)
 > &= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}
 > \end{aligned}$$
 >
-> ([Theorem 10 in Matrices](linear-algebra-matrices.llms.md#thm-identity), 2, [Theorem 7 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc), [Definition 16 in Matrices](linear-algebra-matrices.llms.md#def-matvec-mult)), which is false.
+> ([Theorem 10 in Matrices](linear-algebra-matrices.llms.md#thm-identity), 2, [Theorem 7 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc), [Definition 17 in Matrices](linear-algebra-matrices.llms.md#def-matvec-mult)), which is false.
 >
 > **From** $\mathbf{B}$ to $\mathbf{A}$. By [Remark 1](#rem-similar-both-ways),
 >
@@ -938,7 +938,7 @@ Last modified: 2026-11-16 17:45:04 (PST)
 > $$\begin{aligned}
 > {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top} \mathbf{X}_k \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}
 > &= \sum_{i=1}^{k} \sum_{j=1}^{k} u_i\,x_{ij}\,u_j
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~16 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~8 in Vectors}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~17 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~10 in Vectors}}\text{)}
 > \\
 > &= \sum_{i=1}^{k} \sum_{j=1}^{k} y_i\,x_{ij}\,y_j
 > && \text{(} y_i = u_i \text{ for } i \le k \text{)}
@@ -947,18 +947,18 @@ Last modified: 2026-11-16 17:45:04 (PST)
 > && \text{(each added term has a factor } y_i = 0 \text{ or } y_j = 0 \text{)}
 > \\
 > &= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}^{\top} \mathbf{X} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~16 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~8 in Vectors}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~17 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~10 in Vectors}}\text{)}
 > \\
 > &> 0.
 > && \text{(} \mathbf{X} \text{ positive definite, } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\text{)}
 > \end{aligned}$$
 >
-> For the diagonal entry $x_{ii}$, take $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_i$ ([Definition 19 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)), which is nonzero:
+> For the diagonal entry $x_{ii}$, take $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_i$ ([Definition 21 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)), which is nonzero:
 >
 > $$\begin{aligned}
 > {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_i}^{\top} \mathbf{X} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_i
 > &= \sum_{r=1}^{p} \sum_{s=1}^{p} (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_i)_r\,x_{rs}\,(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_i)_s
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~16 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~8 in Vectors}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~17 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~10 in Vectors}}\text{)}
 > \\
 > &= x_{ii}
 > && \text{(only the term with } r \text{ and } s \text{ both equal to } i \text{ is nonzero)}
@@ -1009,7 +1009,7 @@ Last modified: 2026-11-16 17:45:04 (PST)
 > $$\begin{aligned}
 > (\mathbf{X} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}})_i
 > &= \sum_{j=1}^{k+m} x_{ij}\,v_j
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~16 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~17 in Matrices}}\text{)}
 > \\
 > &= \sum_{j=1}^{k} x_{ij}\,v_j + \sum_{j=1}^{m} x_{i, k+j}\,v_{k+j}
 > && \text{(split the sum at } j = k \text{)}
@@ -1018,7 +1018,7 @@ Last modified: 2026-11-16 17:45:04 (PST)
 > && \text{(the blocks of } \mathbf{X} \text{ and of } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \text{)}
 > \\
 > &= (\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}})_i + (\mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}})_i,
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~16 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~17 in Matrices}}\text{)}
 > \end{aligned}$$
 >
 > and in the same way $(\mathbf{X} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}})_{k+i} = ({\mathbf{B}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}})_i + (\mathbf{C} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}})_i$ for $i \le m$.
@@ -1028,7 +1028,7 @@ Last modified: 2026-11-16 17:45:04 (PST)
 > $$\begin{aligned}
 > {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top} \mathbf{X} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}
 > &= \sum_{i=1}^{k} u_i\,(\mathbf{X} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}})_i + \sum_{i=1}^{m} w_i\,(\mathbf{X} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}})_{k+i}
-> && \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~8 in Vectors}}\text{, split the sum at } k \text{)}
+> && \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~10 in Vectors}}\text{, split the sum at } k \text{)}
 > \\
 > &= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \cdot (\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}) + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot ({\mathbf{B}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + \mathbf{C} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}})
 > && \text{(the blocks of } \mathbf{X} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \text{)}

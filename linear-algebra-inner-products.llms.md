@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-16 17:45:04 (PST)
+Last modified: 2026-11-16 18:39:12 (PST)
 
 # 1 Inner products
 
@@ -116,7 +116,7 @@ Last modified: 2026-11-16 17:45:04 (PST)
 > && \text{(definition of } {\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}}_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}} \text{)}
 > \\
 > &= \sum_{i=1}^pc_i\,(a x_i + b y_i)\,z_i
-> && \text{(}\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~9 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-vector-addition}{\text{Definition~7 in Vectors}}\text{)}
+> && \text{(}\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~9 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-vector-addition}{\text{Definition~9 in Vectors}}\text{)}
 > \\
 > &= \sum_{i=1}^p\mathopen{}\left(a\,c_i x_i z_i + b\,c_i y_i z_i\right)\mathclose{}
 > && \text{(distribute, and commute the factors in each product)}
@@ -244,7 +244,7 @@ Last modified: 2026-11-16 17:45:04 (PST)
 
 > **NOTE:**
 >
-> *Remark 2* (Orthogonality for the dot product). With the dot product as the inner product ([Example 1](#exm-dot-product-inner-product)), the condition of [Definition 7](#def-orthogonal-inner-product) is orthogonality as in [Definition 20 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors).
+> *Remark 2* (Orthogonality for the dot product). With the dot product as the inner product ([Example 1](#exm-dot-product-inner-product)), the condition of [Definition 7](#def-orthogonal-inner-product) is orthogonality as in [Definition 22 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors).
 
 # 2 Cauchy-Schwarz and the triangle inequality
 
@@ -289,7 +289,7 @@ Last modified: 2026-11-16 17:45:04 (PST)
 
 > **NOTE:**
 >
-> **Example 6 (Scaling a vector scales its length)** For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (3, 4)$, $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{} = 5$ ([Example 16 in Vectors](linear-algebra-vectors.llms.md#exm-euclidean-norm)). Then $-2\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (-6, -8)$ has norm
+> **Example 6 (Scaling a vector scales its length)** For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (3, 4)$, $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{} = 5$ ([Example 18 in Vectors](linear-algebra-vectors.llms.md#exm-euclidean-norm)). Then $-2\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (-6, -8)$ has norm
 >
 > $$\begin{aligned}
 > \sqrt{36 + 64} &= 10 \\
@@ -303,7 +303,7 @@ Last modified: 2026-11-16 17:45:04 (PST)
 > &= 1,
 > \end{aligned}$$
 >
-> and $\tfrac{1}{5}\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (0.6, 0.8)$ is the unit vector in [Example 16 in Vectors](linear-algebra-vectors.llms.md#exm-euclidean-norm).
+> and $\tfrac{1}{5}\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (0.6, 0.8)$ is the unit vector in [Example 18 in Vectors](linear-algebra-vectors.llms.md#exm-euclidean-norm).
 
 > **NOTE:**
 >
@@ -312,7 +312,7 @@ Last modified: 2026-11-16 17:45:04 (PST)
 > $$\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rVert\mathclose{}^2
 > = \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}^2 + 2\,(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) + \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rVert\mathclose{}^2.$$
 >
-> In particular, if $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \perp \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ ([Definition 20 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors)), then $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rVert\mathclose{}^2 = \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}^2 + \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rVert\mathclose{}^2$ (the **Pythagorean theorem**) [\[5\]](#ref-wikipedia_pythagorean_theorem).
+> In particular, if $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \perp \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ ([Definition 22 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors)), then $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rVert\mathclose{}^2 = \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}^2 + \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rVert\mathclose{}^2$ (the **Pythagorean theorem**) [\[5\]](#ref-wikipedia_pythagorean_theorem).
 
 > **NOTE:**
 >
@@ -577,7 +577,7 @@ Last modified: 2026-11-16 17:45:04 (PST)
 
 > **NOTE:**
 >
-> **Example 10 (Euclidean space as a normed vector space)** The Euclidean space $\mathbb{R}^p$ equipped with the Euclidean norm ([Definition 21 in Vectors](linear-algebra-vectors.llms.md#def-euclidean-norm)) is a normed vector space:
+> **Example 10 (Euclidean space as a normed vector space)** The Euclidean space $\mathbb{R}^p$ equipped with the Euclidean norm ([Definition 23 in Vectors](linear-algebra-vectors.llms.md#def-euclidean-norm)) is a normed vector space:
 >
 > - Positivity and absolute homogeneity hold by [Theorem 1](#thm-norm-properties).
 > - The triangle inequality holds by [Theorem 4](#thm-triangle-inequality).
@@ -603,7 +603,7 @@ Last modified: 2026-11-16 17:45:04 (PST)
 > &= 5
 > \end{aligned}$$
 >
-> which is the [length](linear-algebra-vectors.llms.md#def-euclidean-norm) that [Example 16 in Vectors](linear-algebra-vectors.llms.md#exm-euclidean-norm) found.
+> which is the [length](linear-algebra-vectors.llms.md#def-euclidean-norm) that [Example 18 in Vectors](linear-algebra-vectors.llms.md#exm-euclidean-norm) found.
 >
 > Every [inner product space](#def-inner-product-space) $(V, {\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}})$ has an induced norm, which satisfies all three axioms of a [norm](#def-norm).
 
@@ -667,7 +667,7 @@ Last modified: 2026-11-16 17:45:04 (PST)
 >
 > **Theorem 5 (The** $\ell_1$, $\ell_2$ and infinity norms, and the norm axioms) Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (x_1, \ldots, x_p) \in \mathbb{R}^p$.
 >
-> 1.  $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}_1 = \sum_{i=1}^p\mathopen{}\left|x_i\right|\mathclose{}$, and $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}_2 = \sqrt{\sum_{i=1}^px_i^2}$, which is the Euclidean norm ([Definition 21 in Vectors](linear-algebra-vectors.llms.md#def-euclidean-norm)).
+> 1.  $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}_1 = \sum_{i=1}^p\mathopen{}\left|x_i\right|\mathclose{}$, and $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}_2 = \sqrt{\sum_{i=1}^px_i^2}$, which is the Euclidean norm ([Definition 23 in Vectors](linear-algebra-vectors.llms.md#def-euclidean-norm)).
 > 2.  $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}_\infty = \lim_{k \to \infty} \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}_k$.
 > 3.  For every real number $k \ge 1$, and for $k = \infty$, $\mathopen{}\left\lVert\cdot\right\rVert\mathclose{}_k$ is a norm on $\mathbb{R}^p$ ([Definition 8](#def-norm)).
 
@@ -814,7 +814,7 @@ Last modified: 2026-11-16 17:45:04 (PST)
 > \quad\Longleftrightarrow\quad
 > \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = 0,$$
 >
-> so for nonzero vectors, orthogonal ([Definition 20 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors)) means at a right angle.
+> so for nonzero vectors, orthogonal ([Definition 22 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors)) means at a right angle.
 
 > **NOTE:**
 >
@@ -963,7 +963,7 @@ Last modified: 2026-11-16 17:45:04 (PST)
 > $$\begin{aligned}
 > \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot \mathopen{}\left(\sum_{j=1}^{k} c_j \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_j\right)\mathclose{}
 > &= \sum_{i=1}^px_i \sum_{j=1}^{k} c_j u_{ji}
-> && \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~8 in Vectors}}\text{, }\href{linear-algebra-vectors.qmd#def-linear-combination}{\text{Definition~9 in Vectors}}\text{)}
+> && \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~10 in Vectors}}\text{, }\href{linear-algebra-vectors.qmd#def-linear-combination}{\text{Definition~11 in Vectors}}\text{)}
 > \\
 > &= \sum_{i=1}^p\sum_{j=1}^{k} x_i c_j u_{ji}
 > && \text{(distribute each } x_i \text{ over the inner sum)}
@@ -978,7 +978,7 @@ Last modified: 2026-11-16 17:45:04 (PST)
 > && \text{(factor } c_j \text{ out of the inner sum)}
 > \\
 > &= \sum_{j=1}^{k} c_j\,(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_j).
-> && \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~8 in Vectors}}\text{)}
+> && \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~10 in Vectors}}\text{)}
 > \end{aligned}$$
 
 > **NOTE:**
@@ -994,7 +994,7 @@ Last modified: 2026-11-16 17:45:04 (PST)
 
 > **NOTE:**
 >
-> **Theorem 9 (Orthonormal vectors are linearly independent)** If $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_k$ are orthonormal ([Definition 26 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)), then they are linearly independent ([Definition 1 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-linearly-independent)).
+> **Theorem 9 (Orthonormal vectors are linearly independent)** If $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_k$ are orthonormal ([Definition 28 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)), then they are linearly independent ([Definition 1 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-linearly-independent)).
 
 > **NOTE:**
 >
@@ -1045,7 +1045,7 @@ Last modified: 2026-11-16 17:45:04 (PST)
 
 > **NOTE:**
 >
-> **Definition 15 (Orthonormal basis)** An **orthonormal basis** [\[12\]](#ref-wikipedia_orthonormal_basis) of a subspace $\mathcal{S}$ of $\mathbb{R}^p$ is a basis of $\mathcal{S}$ ([Definition 6 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-basis)) whose vectors are orthonormal ([Definition 26 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)).
+> **Definition 15 (Orthonormal basis)** An **orthonormal basis** [\[12\]](#ref-wikipedia_orthonormal_basis) of a subspace $\mathcal{S}$ of $\mathbb{R}^p$ is a basis of $\mathcal{S}$ ([Definition 6 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-basis)) whose vectors are orthonormal ([Definition 28 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)).
 
 > **NOTE:**
 >
@@ -1081,7 +1081,7 @@ Last modified: 2026-11-16 17:45:04 (PST)
 > && \text{(}\href{#thm-dot-linear-sum}{\text{Theorem~8}}\text{)}
 > \\
 > &= c_i,
-> && \text{(}\href{linear-algebra-vectors.qmd#def-orthonormal-vectors}{\text{Definition~26 in Vectors}}\text{)}
+> && \text{(}\href{linear-algebra-vectors.qmd#def-orthonormal-vectors}{\text{Definition~28 in Vectors}}\text{)}
 > \end{aligned}$$
 >
 > so each coefficient $c_i$ is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_i \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$.
@@ -1224,7 +1224,7 @@ Last modified: 2026-11-16 17:45:04 (PST)
 > && \text{(} 1\,z = z \text{, and pull the minus signs out of the sum)}
 > \\
 > &= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_l \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_i - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_l \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_i
-> && \text{(only the } j = l \text{ term survives, }\href{linear-algebra-vectors.qmd#def-orthonormal-vectors}{\text{Definition~26 in Vectors}}\text{)}
+> && \text{(only the } j = l \text{ term survives, }\href{linear-algebra-vectors.qmd#def-orthonormal-vectors}{\text{Definition~28 in Vectors}}\text{)}
 > \\
 > &= 0.
 > && \text{(arithmetic)}
@@ -1373,7 +1373,7 @@ Last modified: 2026-11-16 17:45:04 (PST)
 
 > **NOTE:**
 >
-> *Remark 6* (Outer product and dot product). The dot product ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ ([Example 8 in Matrices](linear-algebra-matrices.llms.md#exm-dot-product-matmul)) needs two vectors of the same length and gives a number. The outer product $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}$ takes vectors of any two lengths and gives a matrix [\[3, Ch. 1\]](#ref-banerjee2014linear), p. 11.
+> *Remark 6* (Outer product and dot product). The dot product ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ ([Example 10 in Matrices](linear-algebra-matrices.llms.md#exm-dot-product-matmul)) needs two vectors of the same length and gives a number. The outer product $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}$ takes vectors of any two lengths and gives a matrix [\[3, Ch. 1\]](#ref-banerjee2014linear), p. 11.
 >
 > For example, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = (1, 2, 3)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (4, 5)$ in [Example 28](#exm-outer-product) have different lengths, so they have no dot product, but their outer product is a $3 \times 2$ matrix. For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}} = (1, 2)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = (3, 4)$, which have the same length, both products exist:
 >
