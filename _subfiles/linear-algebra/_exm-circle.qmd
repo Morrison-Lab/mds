@@ -1,0 +1,77 @@
+:::{#exm-circle}
+#### Points on a circle
+
+Take the [circle](#def-circle) with center $\va = (1, 2)$ and radius $r = 5$.
+The [point](#def-real-coordinate-space) $\vx = (4, 6)$ is on it:
+
+$$
+\ba
+\norm{\vx - \va}
+&= \sqrt{(4 - 1)^2 + (6 - 2)^2}
+&& \text{(@def-euclidean-distance)}
+\\
+&= \sqrt{9 + 16}
+&& \text{(subtract and square)}
+\\
+&= 5.
+&& \text{(add and take the square root)}
+\ea
+$$
+
+The center $(1, 2)$ itself is not on the circle,
+because its distance from $\va$ is $0$, not $5$.
+
+:::{#fig-circle-example}
+
+```{r}
+#| label: circle-example-plot
+#| code-fold: true
+#| fig-alt: >-
+#|   A circle of radius 5 around the point (1, 2), drawn on equal axes. A
+#|   hollow dot marks the center (1, 2), a solid dot marks the point (4, 6)
+#|   on the circle, and a dashed segment of length 5 joins them.
+#| fig-height: 4.5
+#| fig-width: 4.5
+# The circle with center (1, 2) and radius 5, traced by its angle.
+angle <- seq(0, 2 * pi, length.out = 400)
+circle <- tibble::tibble(
+  x1 = 1 + 5 * cos(angle),
+  x2 = 2 + 5 * sin(angle)
+)
+marks <- tibble::tribble(
+  ~x1, ~x2, ~label, ~kind,
+  1, 2, "center (1, 2)", "center",
+  4, 6, "(4, 6)", "on the circle"
+)
+radius <- tibble::tibble(x1 = 1, x2 = 2, x1_end = 4, x2_end = 6)
+shapes <- c(center = 1, "on the circle" = 16)
+
+circle |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = x1, y = x2) +
+  ggplot2::geom_path() +
+  ggplot2::geom_segment(
+    data = radius,
+    mapping = ggplot2::aes(xend = x1_end, yend = x2_end),
+    linetype = "dashed"
+  ) +
+  ggplot2::geom_point(
+    data = marks,
+    mapping = ggplot2::aes(shape = kind),
+    size = 3
+  ) +
+  ggplot2::geom_text(
+    data = marks,
+    mapping = ggplot2::aes(label = label),
+    vjust = -1
+  ) +
+  ggplot2::scale_shape_manual(values = shapes, guide = "none") +
+  ggplot2::coord_fixed() +
+  ggplot2::labs(x = "first coordinate", y = "second coordinate")
+```
+
+The [circle](#def-circle) with center $(1, 2)$ and radius $5$.
+The dashed segment from the center to $(4, 6)$ is $5$ units long.
+:::
+
+:::
