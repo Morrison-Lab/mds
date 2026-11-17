@@ -4,6 +4,18 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_def-shape-rule.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-shape-rule.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-shape-rule-undefined.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_exm-dot-product-matmul.qmd >}}
 
 {{< slidebreak >}}
