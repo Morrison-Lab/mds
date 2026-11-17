@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-17 00:59:31 (PST)
+Last modified: 2026-11-17 13:25:24 (PST)
 
 > **NOTE:**
 >
@@ -582,7 +582,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Exercise 12 (Totalling the units sold across three items)** A shop sells $22$, $12$ and $11$ units of three items over two months, stored as
+> **Exercise 12 (Totaling the units sold across three items)** A shop sells $22$, $12$ and $11$ units of three items over two months, stored as
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix}22 \\ 12 \\ 11\end{bmatrix}.$$
 >
@@ -1017,7 +1017,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Exercise 20 (Finding the distance between two customers’ feature vectors)** A nearest-neighbour method compares two customers through the [Euclidean distance](#def-euclidean-distance) between their feature vectors. Two customers have feature vectors
+> **Exercise 20 (Finding the distance between two customers’ feature vectors)** A nearest-neighbor method compares two customers through the [Euclidean distance](#def-euclidean-distance) between their feature vectors. Two customers have feature vectors
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix}1 \\ 0 \\ 3\end{bmatrix},
 > \qquad

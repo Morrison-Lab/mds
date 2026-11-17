@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-17 00:59:31 (PST)
+Last modified: 2026-11-17 13:25:24 (PST)
 
 # 1 Special Matrices
 
@@ -290,7 +290,7 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> **Theorem 3 (An invertible factor can be cancelled)** Let $\mathbf{A}$ be an invertible $p \times p$ matrix ([Definition 6](#def-invertible-matrix)), and let $\mathbf{B}$ and $\mathbf{C}$ be $p \times n$ matrices. If $\mathbf{A}\mathbf{B} = \mathbf{A}\mathbf{C}$, then $\mathbf{B} = \mathbf{C}$.
+> **Theorem 3 (An invertible factor can be canceled)** Let $\mathbf{A}$ be an invertible $p \times p$ matrix ([Definition 6](#def-invertible-matrix)), and let $\mathbf{B}$ and $\mathbf{C}$ be $p \times n$ matrices. If $\mathbf{A}\mathbf{B} = \mathbf{A}\mathbf{C}$, then $\mathbf{B} = \mathbf{C}$.
 
 > **NOTE:**
 >
@@ -322,13 +322,13 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> **Corollary 2 (An invertible factor can be cancelled on the right)** Let $\mathbf{A}$ be an invertible $p \times p$ matrix, and let $\mathbf{B}$ and $\mathbf{C}$ be $n \times p$ matrices. If $\mathbf{B}\mathbf{A} = \mathbf{C}\mathbf{A}$, then $\mathbf{B} = \mathbf{C}$.
+> **Corollary 2 (An invertible factor can be canceled on the right)** Let $\mathbf{A}$ be an invertible $p \times p$ matrix, and let $\mathbf{B}$ and $\mathbf{C}$ be $n \times p$ matrices. If $\mathbf{B}\mathbf{A} = \mathbf{C}\mathbf{A}$, then $\mathbf{B} = \mathbf{C}$.
 >
 > The proof of [Theorem 3](#thm-invertible-cancel) works with every product reversed: multiply both sides on the right by $\mathbf{A}^{-1}$.
 
 > **NOTE:**
 >
-> **Example 8 (Solving for a matrix by cancelling an invertible factor)** Let $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}$, which is invertible with $\mathbf{A}^{-1} = \begin{bmatrix} 0.5 & -0.5 \\ 0 & 1 \end{bmatrix}$ ([Example 5](#exm-invertible-matrix)). If $\mathbf{A}\mathbf{B} = \begin{bmatrix} 3 \\ 1 \end{bmatrix}$ for a $2 \times 1$ matrix $\mathbf{B}$, then multiplying both sides on the left by $\mathbf{A}^{-1}$, as in the proof of [Theorem 3](#thm-invertible-cancel),
+> **Example 8 (Solving for a matrix by canceling an invertible factor)** Let $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}$, which is invertible with $\mathbf{A}^{-1} = \begin{bmatrix} 0.5 & -0.5 \\ 0 & 1 \end{bmatrix}$ ([Example 5](#exm-invertible-matrix)). If $\mathbf{A}\mathbf{B} = \begin{bmatrix} 3 \\ 1 \end{bmatrix}$ for a $2 \times 1$ matrix $\mathbf{B}$, then multiplying both sides on the left by $\mathbf{A}^{-1}$, as in the proof of [Theorem 3](#thm-invertible-cancel),
 >
 > $$\begin{aligned}
 > \mathbf{B}
@@ -356,7 +356,7 @@ Some special matrices appeared earlier:
 >
 > For numbers, $ab = 0$ forces $a = 0$ or $b = 0$. For matrices it does not.
 >
-> Because $\mathbf{A}\mathbf{0}_{2 \times 2} = \mathbf{0}_{2 \times 2} = \mathbf{A}\mathbf{B}$ while $\mathbf{B} \neq \mathbf{0}_{2 \times 2}$, the factor $\mathbf{A}$ cannot be cancelled from $\mathbf{A}\mathbf{B} = \mathbf{A}\mathbf{0}_{2 \times 2}$. This does not contradict [Theorem 3](#thm-invertible-cancel), because $\mathbf{A}$ is singular: its second row is zero, so $\mathbf{A}\mathbf{C}$ has a zero second row for every $2 \times 2$ matrix $\mathbf{C}$, and $\mathbf{A}\mathbf{C}$ can never be $\mathbf{I}_2$.
+> Because $\mathbf{A}\mathbf{0}_{2 \times 2} = \mathbf{0}_{2 \times 2} = \mathbf{A}\mathbf{B}$ while $\mathbf{B} \neq \mathbf{0}_{2 \times 2}$, the factor $\mathbf{A}$ cannot be canceled from $\mathbf{A}\mathbf{B} = \mathbf{A}\mathbf{0}_{2 \times 2}$. This does not contradict [Theorem 3](#thm-invertible-cancel), because $\mathbf{A}$ is singular: its second row is zero, so $\mathbf{A}\mathbf{C}$ has a zero second row for every $2 \times 2$ matrix $\mathbf{C}$, and $\mathbf{A}\mathbf{C}$ can never be $\mathbf{I}_2$.
 
 > **NOTE:**
 >
@@ -367,7 +367,7 @@ Some special matrices appeared earlier:
 > - $\mathbf{A}\mathbf{B}$ is defined only when the number of columns of $\mathbf{A}$ equals the number of rows of $\mathbf{B}$ ([Definition 10 in Matrices](linear-algebra-matrices.llms.md#def-matrix-mult)).
 > - It is not commutative: $\mathbf{A}\mathbf{B} \neq \mathbf{B}\mathbf{A}$ in general ([Remark 2 in Matrices](linear-algebra-matrices.llms.md#rem-matmul-not-commutative)).
 > - A nonzero square matrix need not have an inverse ([Example 5](#exm-invertible-matrix)).
-> - $\mathbf{A}\mathbf{B} = \mathbf{0}$ can hold with $\mathbf{A} \neq \mathbf{0}$ and $\mathbf{B} \neq \mathbf{0}$ ([Example 9](#exm-matmul-zero-divisors)), so a factor cannot be cancelled from $\mathbf{A}\mathbf{B} = \mathbf{A}\mathbf{C}$ unless it is invertible ([Theorem 3](#thm-invertible-cancel)).
+> - $\mathbf{A}\mathbf{B} = \mathbf{0}$ can hold with $\mathbf{A} \neq \mathbf{0}$ and $\mathbf{B} \neq \mathbf{0}$ ([Example 9](#exm-matmul-zero-divisors)), so a factor cannot be canceled from $\mathbf{A}\mathbf{B} = \mathbf{A}\mathbf{C}$ unless it is invertible ([Theorem 3](#thm-invertible-cancel)).
 
 > **NOTE:**
 >

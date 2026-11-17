@@ -4370,7 +4370,7 @@
    "page": "linear-algebra-special-matrices",
    "div": "cor-invertible-cancel-right",
    "kind": "cor",
-   "title": "An invertible factor can be cancelled on the right",
+   "title": "An invertible factor can be canceled on the right",
    "external": false
   },
   {
@@ -4739,7 +4739,7 @@
    "page": "linear-algebra-special-matrices",
    "div": "thm-invertible-cancel",
    "kind": "thm",
-   "title": "An invertible factor can be cancelled",
+   "title": "An invertible factor can be canceled",
    "external": false
   },
   {

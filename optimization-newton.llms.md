@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-17 00:59:31 (PST)
+Last modified: 2026-11-17 13:25:24 (PST)
 
 > **NOTE:**
 >
@@ -523,13 +523,13 @@ Last modified: 2026-11-17 00:59:31 (PST)
 > nc_err_ax = [x - 2 for x in nc_x_ax]
 > fig, ax = plt.subplots(figsize=(5, 3.5), layout="constrained")
 > ax.semilogy(range(4), nc_err_ax, "o-", color="#0072B2")
-> #> [<matplotlib.lines.Line2D object at 0x7f2ea2cf1e50>]
+> #> [<matplotlib.lines.Line2D object at 0x7fd6b79ef110>]
 > ax.set_xlabel("iteration t")
 > #> Text(0.5, 0, 'iteration t')
 > ax.set_ylabel("error of the iterate")
 > #> Text(0, 0.5, 'error of the iterate')
 > ax.set_xticks(range(4))
-> #> [<matplotlib.axis.XTick object at 0x7f2ea2ccf890>, <matplotlib.axis.XTick object at 0x7f2ea2cf1f90>, <matplotlib.axis.XTick object at 0x7f2ea2cf2710>, <matplotlib.axis.XTick object at 0x7f2ea2cf2e90>]
+> #> [<matplotlib.axis.XTick object at 0x7fd6b79ec050>, <matplotlib.axis.XTick object at 0x7fd6b79eefd0>, <matplotlib.axis.XTick object at 0x7fd6b79ef750>, <matplotlib.axis.XTick object at 0x7fd6b7ac3ed0>]
 > plt.show();
 > ```
 >
@@ -601,15 +601,15 @@ Last modified: 2026-11-17 00:59:31 (PST)
 > > nx_f_max_py = (-2)**3 / 3 - 4 * (-2)
 > > fig, ax = plt.subplots(figsize=(6, 4), layout="constrained")
 > > ax.plot(nx_x_py, nx_f_py, color="#0072B2")
-> > #> [<matplotlib.lines.Line2D object at 0x7f2ea2c9b750>]
+> > #> [<matplotlib.lines.Line2D object at 0x7fd6b5415090>]
 > > ax.plot(nx_x_py, nx_q_py, "--", color="#D55E00")
-> > #> [<matplotlib.lines.Line2D object at 0x7f2ea2c9a710>]
+> > #> [<matplotlib.lines.Line2D object at 0x7fd6b54151d0>]
 > > ax.plot([-2.5], [nx_f0_py], "o", color="#D55E00")
-> > #> [<matplotlib.lines.Line2D object at 0x7f2ea2c9a5d0>]
+> > #> [<matplotlib.lines.Line2D object at 0x7fd6b5415310>]
 > > ax.plot([-2.05], [nx_q_step_py], "^", color="#D55E00")
-> > #> [<matplotlib.lines.Line2D object at 0x7f2ea2c9a490>]
+> > #> [<matplotlib.lines.Line2D object at 0x7fd6b5415450>]
 > > ax.plot([-2], [nx_f_max_py], "s", color="#0072B2")
-> > #> [<matplotlib.lines.Line2D object at 0x7f2ea2c9a350>]
+> > #> [<matplotlib.lines.Line2D object at 0x7fd6b5415590>]
 > > ax.set_ylim(-2, 6.5)
 > > #> (-2.0, 6.5)
 > > ax.set_xlabel("x")
@@ -723,7 +723,7 @@ Last modified: 2026-11-17 00:59:31 (PST)
 > > nq_z_py = (nq_xx_py**2 + 3 * nq_yy_py**2) / 2
 > > fig, ax = plt.subplots(figsize=(6, 3.5), layout="constrained")
 > > ax.contour(nq_xx_py, nq_yy_py, nq_z_py, levels=10, colors="#0072B2")
-> > #> <matplotlib.contour.QuadContourSet object at 0x7f2ea2dbd940>
+> > #> <matplotlib.contour.QuadContourSet object at 0x7fd6b7d32f90>
 > > ax.annotate("", xy=(0.764, -1.236), xytext=(3, 1),
 > >             arrowprops={"arrowstyle": "->", "color": "grey"})
 > > #> Text(3, 1, '')
@@ -731,7 +731,7 @@ Last modified: 2026-11-17 00:59:31 (PST)
 > >             arrowprops={"arrowstyle": "->", "color": "#D55E00"})
 > > #> Text(3, 1, '')
 > > ax.plot([3], [1], "ko")
-> > #> [<matplotlib.lines.Line2D object at 0x7f2ea08b2710>]
+> > #> [<matplotlib.lines.Line2D object at 0x7fd6b55e1d10>]
 > > ax.set_aspect("equal")
 > > ax.set_xlabel("x1")
 > > #> Text(0.5, 0, 'x1')
@@ -742,13 +742,13 @@ Last modified: 2026-11-17 00:59:31 (PST)
 > >
 > > ## R
 > >
-> > [![Contour plot of f(x) = (x1^2 + 3 x2^2) / 2 for x1 from -4 to 4 and x2 from -2 to 2. The level curves are ellipses centred at the origin, wider along x1 than along x2. A point at (3, 1) lies on one ellipse. A vermilion arrow runs from that point straight to the origin, which is the Newton step. A grey arrow of the same length points along the negative gradient, down and left at 45 degrees, and does not reach the origin.](optimization-newton_files/figure-html/newton-quadratic-fig-r-3.png)](optimization-newton_files/figure-html/newton-quadratic-fig-r-3.png "Figure 5: The level curves of f in Example 12 are ellipses. From the start {(3, 1)}^{\top}, the Newton step (vermilion arrow) goes straight to the minimizer at the origin. The negative gradient -{(3, 3)}^{\top} (grey arrow, drawn as long as the Newton step) points across the narrow side of the ellipses and misses the origin.")
+> > [![Contour plot of f(x) = (x1^2 + 3 x2^2) / 2 for x1 from -4 to 4 and x2 from -2 to 2. The level curves are ellipses centred at the origin, wider along x1 than along x2. A point at (3, 1) lies on one ellipse. A vermilion arrow runs from that point straight to the origin, which is the Newton step. A grey arrow of the same length points along the negative gradient, down and left at 45 degrees, and does not reach the origin.](optimization-newton_files/figure-html/newton-quadratic-fig-r-3.png)](optimization-newton_files/figure-html/newton-quadratic-fig-r-3.png "Figure 5: The level curves of f in Example 12 are ellipses. From the start {(3, 1)}^{\top}, the Newton step (vermilion arrow) goes straight to the minimizer at the origin. The negative gradient -{(3, 3)}^{\top} (gray arrow, drawn as long as the Newton step) points across the narrow side of the ellipses and misses the origin.")
 > >
 > > ## Python
 > >
-> > [![Contour plot of f(x) = (x1^2 + 3 x2^2) / 2 for x1 from -4 to 4 and x2 from -2 to 2. The level curves are ellipses centred at the origin, wider along x1 than along x2. A point at (3, 1) lies on one ellipse. A vermilion arrow runs from that point straight to the origin, which is the Newton step. A grey arrow of the same length points along the negative gradient, down and left at 45 degrees, and does not reach the origin.](optimization-newton_files/figure-html/newton-quadratic-fig-python-1.png)](optimization-newton_files/figure-html/newton-quadratic-fig-python-1.png "Figure 5: The level curves of f in Example 12 are ellipses. From the start {(3, 1)}^{\top}, the Newton step (vermilion arrow) goes straight to the minimizer at the origin. The negative gradient -{(3, 3)}^{\top} (grey arrow, drawn as long as the Newton step) points across the narrow side of the ellipses and misses the origin.")
+> > [![Contour plot of f(x) = (x1^2 + 3 x2^2) / 2 for x1 from -4 to 4 and x2 from -2 to 2. The level curves are ellipses centred at the origin, wider along x1 than along x2. A point at (3, 1) lies on one ellipse. A vermilion arrow runs from that point straight to the origin, which is the Newton step. A grey arrow of the same length points along the negative gradient, down and left at 45 degrees, and does not reach the origin.](optimization-newton_files/figure-html/newton-quadratic-fig-python-1.png)](optimization-newton_files/figure-html/newton-quadratic-fig-python-1.png "Figure 5: The level curves of f in Example 12 are ellipses. From the start {(3, 1)}^{\top}, the Newton step (vermilion arrow) goes straight to the minimizer at the origin. The negative gradient -{(3, 3)}^{\top} (gray arrow, drawn as long as the Newton step) points across the narrow side of the ellipses and misses the origin.")
 > >
-> > Figure 5: The [level curves](vector-calculus.llms.md#def-level-set) of $f$ in [Example 12](#exm-newton-quadratic) are ellipses. From the start ${(3, 1)}^{\top}$, the [Newton step](#def-newton-step) (vermilion arrow) goes straight to the [minimizer](algebra-basics.llms.md#def-global-minimizer) at the origin. The negative [gradient](vector-calculus.llms.md#def-vector-derivative) $-{(3, 3)}^{\top}$ (grey arrow, drawn as long as the Newton step) points across the narrow side of the ellipses and misses the origin.
+> > Figure 5: The [level curves](vector-calculus.llms.md#def-level-set) of $f$ in [Example 12](#exm-newton-quadratic) are ellipses. From the start ${(3, 1)}^{\top}$, the [Newton step](#def-newton-step) (vermilion arrow) goes straight to the [minimizer](algebra-basics.llms.md#def-global-minimizer) at the origin. The negative [gradient](vector-calculus.llms.md#def-vector-derivative) $-{(3, 3)}^{\top}$ (gray arrow, drawn as long as the Newton step) points across the narrow side of the ellipses and misses the origin.
 >
 > [Figure 6](#fig-newton-quadratic-3d) shows the same [function](https://morrison-lab.github.io/mcs/functions.html#def-function) as a surface.
 >
@@ -826,11 +826,11 @@ Last modified: 2026-11-17 00:59:31 (PST)
 > > fig = plt.figure(figsize=(6, 4.5))
 > > ax = fig.add_subplot(projection="3d")
 > > ax.plot_surface(nq_x1_3d, nq_x2_3d, nq_z_3d, color="#0072B2", alpha=0.6)
-> > #> <mpl_toolkits.mplot3d.art3d.Poly3DCollection object at 0x7f2ea2dbf4d0>
+> > #> <mpl_toolkits.mplot3d.art3d.Poly3DCollection object at 0x7fd6b79d1550>
 > > ax.scatter([3], [1], [6], color="#D55E00", label="start")
-> > #> <mpl_toolkits.mplot3d.art3d.Path3DCollection object at 0x7f2ea2dbf620>
+> > #> <mpl_toolkits.mplot3d.art3d.Path3DCollection object at 0x7fd6b79d0830>
 > > ax.scatter([0], [0], [0], color="black", label="minimizer")
-> > #> <mpl_toolkits.mplot3d.art3d.Path3DCollection object at 0x7f2ea06aac10>
+> > #> <mpl_toolkits.mplot3d.art3d.Path3DCollection object at 0x7fd6b546e210>
 > > ax.set_xlabel("x1")
 > > #> Text(0.5, 0, 'x1')
 > > ax.set_ylabel("x2")
@@ -838,7 +838,7 @@ Last modified: 2026-11-17 00:59:31 (PST)
 > > ax.set_zlabel("f(x)")
 > > #> Text(0.5, 0, 'f(x)')
 > > ax.legend(loc="upper right")
-> > #> <matplotlib.legend.Legend object at 0x7f2ea2dbf770>
+> > #> <matplotlib.legend.Legend object at 0x7fd6b79d0980>
 > > plt.show();
 > > ```
 > >
