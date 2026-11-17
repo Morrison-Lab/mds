@@ -1,0 +1,9 @@
+:::{#def-sparse-vector}
+#### $k$-sparse vector
+
+For a vector $\vx$ in [$\reals^p$](#def-real-coordinate-space)
+and a whole number $k \le p$,
+$\vx$ is **$k$-sparse**
+if at most $k$ of its $p$ entries are nonzero.
+
+:::

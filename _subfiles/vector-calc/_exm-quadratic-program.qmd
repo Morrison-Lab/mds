@@ -1,0 +1,79 @@
+:::{#exm-quadratic-program}
+#### The closest point of a half-plane to the origin
+
+Minimizing $x_1^2 + x_2^2$ subject to $x_1 + x_2 \ge 1$
+is a [quadratic program](#def-quadratic-program):
+the [objective](#def-objective-function) is $\tfrac{1}{2}\,\qform{\matr{S}}{\vx}$ with $\matr{S} = 2 \matr{I}_2$,
+which is [positive semidefinite](linear-algebra-special-matrices.qmd#def-positive-semidefinite);
+$\vecf{c} = \vzero$;
+and the single constraint is a linear [inequality](https://morrison-lab.github.io/mcs/proof-writing.html#def-inequality).
+The point $\tp{(0.5, 0.5)}$ is feasible,
+since $0.5 + 0.5 = 1$,
+and its objective value is
+
+$$
+\ba
+f(0.5, 0.5)
+&= 0.25 + 0.25
+\\
+&= 0.5.
+\ea
+$$
+
+@fig-quadratic-program shows that it is the [minimizer](#def-minimizer-over-feasible-set):
+it is where the smallest contour circle of the objective touches the feasible [half-plane](optimization-convexity.qmd#def-half-space).
+
+:::{#fig-quadratic-program}
+
+```{r}
+#| label: quadratic-program-plot
+#| code-fold: true
+#| fig-alt: >-
+#|   Contour circles of x1 squared plus x2 squared around the origin, at
+#|   heights 0.25, 0.5, 1 and 2, drawn on equal axes. The shaded region above
+#|   the line x1 + x2 = 1 is the feasible half-plane. A dot at (0.5, 0.5)
+#|   marks where the circle at height 0.5 touches the line.
+#| fig-height: 4.5
+#| fig-width: 4.5
+# The objective on a grid, for its contour circles.
+axis_values <- seq(-1.5, 1.5, length.out = 301)
+grid <- tidyr::expand_grid(x1 = axis_values, x2 = axis_values)
+grid <- dplyr::mutate(grid, f = x1^2 + x2^2)
+
+# The feasible half-plane x1 + x2 >= 1, clipped to the plotted square.
+feasible <- tibble::tribble(
+  ~x1, ~x2,
+  -0.5, 1.5,
+  1.5, 1.5,
+  1.5, -0.5
+)
+# Contour heights: 0.5 is the minimum over the half-plane; the others frame it.
+heights <- c(0.25, 0.5, 1, 2)
+limits <- c(-1.5, 1.5)
+minimizer <- tibble::tibble(x1 = 0.5, x2 = 0.5)
+
+grid |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = x1, y = x2) +
+  ggplot2::geom_polygon(data = feasible, fill = "grey85") +
+  ggplot2::geom_abline(intercept = 1, slope = -1) +
+  ggplot2::geom_contour(
+    mapping = ggplot2::aes(z = f),
+    breaks = heights, # check-unexplained-choices: allow
+    colour = "grey30"
+  ) +
+  ggplot2::geom_point(data = minimizer, size = 3) +
+  ggplot2::coord_fixed(xlim = limits, ylim = limits) +
+  ggplot2::labs(x = "first coordinate", y = "second coordinate")
+```
+
+The [objective](#def-objective-function) $x_1^2 + x_2^2$ has circular contours at heights $0.25$, $0.5$, $1$ and $2$.
+The shaded [half-plane](optimization-convexity.qmd#def-half-space) satisfies $x_1 + x_2 \ge 1$,
+and the dot at $(0.5, 0.5)$ is where the contour at height $0.5$ touches its edge.
+:::
+
+@fig-quadratic-program-3d shows the same [function](https://morrison-lab.github.io/mcs/functions.html#def-function) as a surface.
+
+{{< include mds/_subfiles/vector-calc/_fig-quadratic-program-3d.qmd >}}
+
+:::

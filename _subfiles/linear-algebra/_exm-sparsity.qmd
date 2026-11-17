@@ -1,0 +1,8 @@
+:::{#exm-sparsity}
+#### The sparsity of a $2$-sparse vector
+
+The vector $\tp{(0, 3, 0, 0, -1)}$ of @exm-sparse-vector has three zero entries out of five,
+so its [sparsity](#def-sparsity) is $3/5$.
+In @fig-sparse-vector, the three zero entries are the ones whose stems do not leave zero.
+
+:::
