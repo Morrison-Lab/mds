@@ -101,10 +101,10 @@ plt.show();
 The first step (solid arrow) moves from $\vx^{(0)} = \vzero$ (blue circle) to $\vx^{(1)}$ (vermilion circle)
 in the [steepest-descent](#def-gradient-descent) [direction](vector-calculus.qmd#def-direction),
 because $\matr{H}^{(0)} = \matr{I}_2$.
-The [minimizer](algebra.qmd#def-global-minimizer) (blue square) is the centre of the ellipses. <!-- check-term-links: allow -->
+The [minimizer](algebra.qmd#def-global-minimizer) (blue square) is the center of the ellipses. <!-- check-term-links: allow -->
 The dashed arrow shows the step that remains.
 A [quasi-Newton](#def-quasi-newton-method) [matrix](linear-algebra-matrices.qmd#def-matrix) that approximates $\matr{Q}^{-1}$
-would aim the next step at that centre
+would aim the next step at that center
 rather than along the [gradient](vector-calculus.qmd#def-vector-derivative).
 
 :::

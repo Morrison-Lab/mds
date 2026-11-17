@@ -24,7 +24,7 @@ For matrices it does not.
 
 Because $\matr{A}\matr{0}_{2 \times 2} = \matr{0}_{2 \times 2} = \matr{A}\matr{B}$
 while $\matr{B} \neq \matr{0}_{2 \times 2}$,
-the factor $\matr{A}$ cannot be cancelled from $\matr{A}\matr{B} = \matr{A}\matr{0}_{2 \times 2}$.
+the factor $\matr{A}$ cannot be canceled from $\matr{A}\matr{B} = \matr{A}\matr{0}_{2 \times 2}$.
 This does not contradict @thm-invertible-cancel,
 because $\matr{A}$ is singular:
 its second row is zero, so $\matr{A}\matr{C}$ has a zero second row for every $2 \times 2$ matrix $\matr{C}$,
