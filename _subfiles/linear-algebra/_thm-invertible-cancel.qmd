@@ -1,5 +1,5 @@
 :::{#thm-invertible-cancel}
-#### An invertible factor can be cancelled
+#### An invertible factor can be canceled
 
 Let $\matr{A}$ be an invertible $p \times p$ matrix (@def-invertible-matrix),
 and let $\matr{B}$ and $\matr{C}$ be $p \times n$ matrices.
@@ -42,7 +42,7 @@ $\square$
 {{< slidebreak >}}
 
 :::{#cor-invertible-cancel-right}
-#### An invertible factor can be cancelled on the right
+#### An invertible factor can be canceled on the right
 
 Let $\matr{A}$ be an invertible $p \times p$ matrix,
 and let $\matr{B}$ and $\matr{C}$ be $n \times p$ matrices.
@@ -56,7 +56,7 @@ multiply both sides on the right by $\matr{A}^{-1}$.
 {{< slidebreak >}}
 
 :::{#exm-invertible-cancel}
-#### Solving for a matrix by cancelling an invertible factor
+#### Solving for a matrix by canceling an invertible factor
 
 Let $\matr{A} = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}$,
 which is invertible with

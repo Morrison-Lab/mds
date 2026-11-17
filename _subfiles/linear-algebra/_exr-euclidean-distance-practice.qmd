@@ -1,7 +1,7 @@
 :::{#exr-euclidean-distance-practice}
 #### Finding the distance between two customers' feature vectors
 
-A nearest-neighbour method compares two customers through the [Euclidean distance](#def-euclidean-distance)
+A nearest-neighbor method compares two customers through the [Euclidean distance](#def-euclidean-distance)
 between their feature vectors.
 Two customers have feature vectors
 

@@ -1,5 +1,5 @@
 :::{#exr-sum-of-elements-practice}
-#### Totalling the units sold across three items
+#### Totaling the units sold across three items
 
 A shop sells $22$, $12$ and $11$ units of three items over two months,
 stored as
