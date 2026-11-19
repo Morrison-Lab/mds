@@ -1,0 +1,14 @@
+:::{#exm-vectorization}
+#### Vectorizing a $2 \times 2$ matrix
+
+For $\matr{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$,
+the [column](linear-algebra.qmd#def-matrix-column)s are $(1, 3)$ and $(2, 4)$,
+so the [vectorization](#def-vectorization) stacks them:
+
+$$
+\vctf{\matr{A}} = \begin{bmatrix} 1 \\ 3 \\ 2 \\ 4 \end{bmatrix}
+$$
+
+<!-- no-figure: the example stacks the two columns of one small matrix -->
+
+:::
