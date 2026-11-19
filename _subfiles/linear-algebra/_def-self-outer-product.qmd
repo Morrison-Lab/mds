@@ -1,0 +1,12 @@
+:::{#def-self-outer-product}
+#### Self outer product
+
+The **self outer product** of a vector $\vx$ with $n$ entries
+is the [outer product](#def-outer-product) of $\vx$ with itself,
+the $n \times n$ [matrix](linear-algebra.qmd#def-matrix)
+
+$$
+\soprod{\vx} \eqdef \oprod{\vx}{\vx}
+$$
+
+:::
