@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-19 13:19:51 (PST)
+Last modified: 2026-11-19 14:57:45 (PST)
 
 # 1 Special Matrices
 
@@ -2509,7 +2509,7 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 
 > **NOTE:**
 >
-> **Definition 25 (Ill-conditioned matrix)** A [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{A}$ is **ill-conditioned** when its [condition number](#def-matrix-condition-number) is so large that small relative changes in its entries, such as those from rounding, can change the [solution of a linear system](linear-algebra-matrix-multiplication.llms.md#def-linear-system) by a much larger relative amount. The relative change in the solution can be up to $\kappa(\mathbf{A})$ times the relative change in the entries. A solution computed with $\kappa(\mathbf{A}) \approx 10^k$ therefore loses about $k$ of the digits that the floating-point arithmetic carries [\[14\]](#ref-trefethen1997numerical), Lecture 12.
+> **Definition 25 (Ill-conditioned matrix)** A [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{A}$ is **ill-conditioned** when its [condition number](#def-matrix-condition-number) is so large that small relative changes in its entries, such as those from rounding, can change the [solution](linear-algebra-matrix-multiplication.llms.md#def-linear-system) to a [linear system](linear-algebra-matrix-multiplication.llms.md#def-linear-system) by a much larger relative amount. The relative change in the solution can be up to $\kappa(\mathbf{A})$ times the relative change in the entries. A solution computed with $\kappa(\mathbf{A}) \approx 10^k$ therefore loses about $k$ of the digits that the floating-point arithmetic carries [\[14\]](#ref-trefethen1997numerical), Lecture 12.
 >
 > There is no sharp threshold: how large is too large depends on how many accurate digits the answer needs.
 
