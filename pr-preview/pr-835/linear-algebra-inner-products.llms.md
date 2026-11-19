@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-18 21:16:28 (PST)
+Last modified: 2026-11-19 13:13:10 (PST)
 
 # 1 Inner products
 
@@ -1388,6 +1388,39 @@ Last modified: 2026-11-18 21:16:28 (PST)
 
 > **NOTE:**
 >
+> **Definition 18 (Self outer product)** The **self outer product** of a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ with $n$ entries is the [outer product](#def-outer-product) of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ with itself, the $n \times n$ [matrix](linear-algebra-matrices.llms.md#def-matrix)
+>
+> $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \stackrel{\text{def}}{=}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}$$
+
+> **NOTE:**
+>
+> **Example 29 (A self outer product)** For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 2)$, the [self outer product](#def-self-outer-product) is
+>
+> $$\begin{aligned}
+> \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}
+> &= \begin{bmatrix} 1 \\ 2 \end{bmatrix}
+> \begin{bmatrix} 1 & 2 \end{bmatrix}
+> && \text{(definition of the self outer product)}
+> \\
+> &= \begin{bmatrix}
+> 1 \cdot 1 & 1 \cdot 2 \\
+> 2 \cdot 1 & 2 \cdot 2
+> \end{bmatrix}
+> && \text{(multiply each entry of the column by each entry of the row)}
+> \\
+> &= \begin{bmatrix}
+> 1 & 2 \\
+> 2 & 4
+> \end{bmatrix}
+> && \text{(multiply)}
+> \end{aligned}$$
+
+> **NOTE:**
+>
+> *Remark 7* (Self outer products in statistics). Statistics meets the [self outer product](#def-self-outer-product) mostly through [sum](algebra-sums.llms.md#def-summation)s of them. The [Gram matrix](linear-algebra-rank-nullity.llms.md#def-gram-matrix) ${\mathbf{X}}^{\top} \mathbf{X}$ of a data [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{X}$ is the sum of the self outer products of its [row](linear-algebra-matrices.llms.md#def-matrix-row)s, as [the Gram matrix example](linear-algebra-rank-nullity.llms.md#exm-cross-product-sum-outer) shows. For observation vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n$, the sum $\sum_{i=1}^n\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_i - {\bar{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}}\right)\mathclose{} {\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_i - {\bar{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}}\right)\mathclose{}}^{\top}$ of the self outer products of their deviations from the vector ${\bar{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}}$ of entrywise [mean](linear-algebra-vectors.llms.md#def-mean)s is what other sources call the *scatter matrix* [\[15\]](#ref-wikipedia_scatter_matrix). Each term of either sum is one observation’s contribution to the total.
+
+> **NOTE:**
+>
 > **Theorem 12 (An outer product has rank one)** If $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ is a nonzero vector of length $m$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ is a nonzero vector of length $n$, then $\operatorname{rank}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}) = 1$ ([Definition 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-rank)).
 
 > **NOTE:**
@@ -1421,13 +1454,148 @@ Last modified: 2026-11-18 21:16:28 (PST)
 
 > **NOTE:**
 >
-> **Example 29 (The rank of an outer product)** In [Example 28](#exm-outer-product), the second column $(5, 10, 15)$ of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}$ is $\frac{5}{4}$ times the first column $(4, 8, 12)$, because the columns are $v_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = 4\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ and $v_2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = 5\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$. So the two columns are not linearly independent, and the $3 \times 2$ matrix has rank $1$.
+> **Example 30 (The rank of an outer product)** In [Example 28](#exm-outer-product), the second column $(5, 10, 15)$ of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}$ is $\frac{5}{4}$ times the first column $(4, 8, 12)$, because the columns are $v_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = 4\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ and $v_2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = 5\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$. So the two columns are not linearly independent, and the $3 \times 2$ matrix has rank $1$.
+
+> **NOTE:**
+>
+> **Corollary 5 (A self outer product has rank one)** For a nonzero vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, the [self outer product](#def-self-outer-product) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}$ has [rank](linear-algebra-subspaces.llms.md#def-rank) $1$:
+>
+> $${\operatorname{rank}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\right)\mathclose{}} = 1$$
+
+> **NOTE:**
+>
+> *Proof*. The [self outer product](#def-self-outer-product) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}$ is the [outer product](#def-outer-product) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}$. Both of its factors are the nonzero vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, so [Theorem 12](#thm-outer-product-rank), with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ in place of both $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$, gives [rank](linear-algebra-subspaces.llms.md#def-rank) $1$.
+
+> **NOTE:**
+>
+> **Example 31 (The rank of a self outer product)** For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 2)$, [the example of a self outer product](#exm-self-outer-product) found the [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} = \begin{bmatrix} 1 & 2 \\ 2 & 4 \end{bmatrix}$. Its second [column](linear-algebra-matrices.llms.md#def-matrix-column) $(2, 4)$ is $2$ times its first column $(1, 2)$, so the two columns are not [linearly independent](linear-algebra-subspaces.llms.md#def-linearly-independent), and the matrix has [rank](linear-algebra-subspaces.llms.md#def-rank) $1$, as [Corollary 5](#cor-self-outer-product-rank) says.
+
+> **NOTE:**
+>
+> **Theorem 13 (The transpose of an outer product)** For a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ with $m$ entries and a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ with $n$ entries, the [transpose](linear-algebra-matrices.llms.md#def-matrix-transpose) of the [outer product](#def-outer-product) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}$ [equals](linear-algebra-matrices.llms.md#def-matrix-equality) the outer product $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top}$:
+>
+> $$\underbrace{{\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}\right)\mathclose{}}^{\top}}_{n \times m}
+> = \underbrace{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top}}_{n \times m}$$
+
+> **NOTE:**
+>
+> *Proof*. Entry $(i, j)$ of each side, for $i$ from $1$ to $n$ and $j$ from $1$ to $m$:
+>
+> $$\begin{aligned}
+> \mathopen{}\left[{\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}\right)\mathclose{}}^{\top}\right]\mathclose{}_{ij}
+> &= \mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}\right)\mathclose{}_{ji}
+> && \text{(definition of the transpose)}
+> \\
+> &= u_j v_i
+> && \text{(entries of an outer product)}
+> \\
+> &= v_i u_j
+> && \text{(multiplication of numbers is commutative)}
+> \\
+> &= \mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top}\right)\mathclose{}_{ij}
+> && \text{(entries of an outer product)}
+> \end{aligned}$$
+
+> **NOTE:**
+>
+> **Example 32 (Transposing an outer product)** For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = (1, 2, 3)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (4, 5)$, [the example of an outer product](#exm-outer-product) found the $3 \times 2$ [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}$. Swapping the two vectors gives its [transpose](linear-algebra-matrices.llms.md#def-matrix-transpose):
+>
+> $$\begin{aligned}
+> \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top}
+> &= \begin{bmatrix} 4 \\ 5 \end{bmatrix}
+> \begin{bmatrix} 1 & 2 & 3 \end{bmatrix}
+> && \text{(definition of the outer product)}
+> \\
+> &= \begin{bmatrix}
+> 4 \cdot 1 & 4 \cdot 2 & 4 \cdot 3 \\
+> 5 \cdot 1 & 5 \cdot 2 & 5 \cdot 3
+> \end{bmatrix}
+> && \text{(entry } (i, j) \text{ is } v_i u_j \text{)}
+> \\
+> &= \begin{bmatrix}
+> 4 & 8 & 12 \\
+> 5 & 10 & 15
+> \end{bmatrix}
+> && \text{(multiply)}
+> \end{aligned}$$
+>
+> Each [row of](linear-algebra-matrices.llms.md#def-matrix-row) this matrix is a [column of](linear-algebra-matrices.llms.md#def-matrix-column) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}$, as [Theorem 13](#thm-outer-product-transpose) says.
+
+> **NOTE:**
+>
+> **Theorem 14 (An outer product times a vector)** For a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ with $m$ entries and two vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ with $n$ entries, the [product](linear-algebra-matrices.llms.md#def-matvec-mult) of the [outer product](#def-outer-product) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}$ with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ [equals](linear-algebra-matrices.llms.md#def-matrix-equality) the [scalar multiple](linear-algebra-matrices.llms.md#def-scalar-mult) of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ by the [dot product](linear-algebra-vectors.llms.md#def-dot-product) ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$:
+>
+> $$\underbrace{\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}\right)\mathclose{} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}}_{m \times 1}
+> = \mathopen{}\left({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\right)\mathclose{} \underbrace{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}_{m \times 1}$$
+
+> **NOTE:**
+>
+> *Proof*. Entry $i$ of each side, for $i$ from $1$ to $m$:
+>
+> $$\begin{aligned}
+> \mathopen{}\left[\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}\right)\mathclose{} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\right]\mathclose{}_{i}
+> &= \sum_{j=1}^{n} \mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}\right)\mathclose{}_{ij} w_j
+> && \text{(definition of matrix-vector multiplication)}
+> \\
+> &= \sum_{j=1}^{n} u_i v_j w_j
+> && \text{(entries of an outer product)}
+> \\
+> &= u_i \sum_{j=1}^{n} v_j w_j
+> && \text{(factor } u_i \text{ out of the sum)}
+> \\
+> &= u_i \mathopen{}\left({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\right)\mathclose{}
+> && \text{(definition of the dot product)}
+> \\
+> &= \mathopen{}\left({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\right)\mathclose{} u_i
+> && \text{(multiplication of numbers is commutative)}
+> \\
+> &= \mathopen{}\left[\mathopen{}\left({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\right)\mathclose{} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\right]\mathclose{}_{i}
+> && \text{(definition of scalar multiplication)}
+> \end{aligned}$$
+
+> **NOTE:**
+>
+> **Example 33 (Multiplying an outer product by a vector)** Take $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = (1, 2, 3)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (4, 5)$ from [the example of an outer product](#exm-outer-product), and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (1, -1)$. [Multiplying](linear-algebra-matrices.llms.md#def-matvec-mult) the [outer product](#def-outer-product) by $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ directly gives
+>
+> $$\begin{aligned}
+> \mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}\right)\mathclose{} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}
+> &= \begin{bmatrix}
+> 4 & 5 \\
+> 8 & 10 \\
+> 12 & 15
+> \end{bmatrix}
+> \begin{bmatrix} 1 \\ -1 \end{bmatrix}
+> && \text{(the outer product found in that example)}
+> \\
+> &= \begin{bmatrix}
+> 4 - 5 \\
+> 8 - 10 \\
+> 12 - 15
+> \end{bmatrix}
+> && \text{(definition of matrix-vector multiplication)}
+> \\
+> &= \begin{bmatrix} -1 \\ -2 \\ -3 \end{bmatrix}
+> && \text{(subtract)}
+> \end{aligned}$$
+>
+> The [dot product](linear-algebra-vectors.llms.md#def-dot-product) of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ is
+>
+> $$\begin{aligned}
+> {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}
+> &= 4 \cdot 1 + 5 \cdot(-1)
+> && \text{(definition of the dot product)}
+> \\
+> &= -1
+> && \text{(multiply and add)}
+> \end{aligned}$$
+>
+> and $(-1)\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = (-1, -2, -3)$ is the same vector, as [Theorem 14](#thm-outer-product-matvec) says.
 
 # 5 Kronecker product
 
 > **NOTE:**
 >
-> **Definition 18 (Kronecker product)** The **Kronecker product** of an $m \times n$ [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{A}$ and a $p \times q$ matrix $\mathbf{B}$ is the $mp \times nq$ [block matrix](linear-algebra-diagonalization.llms.md#def-block-matrix) whose block in row $i$ and column $j$ is $a_{ij} \mathbf{B}$, where $a_{ij}$ is the $(i, j)$ entry of $\mathbf{A}$:
+> **Definition 19 (Kronecker product)** The **Kronecker product** of an $m \times n$ [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{A}$ and a $p \times q$ matrix $\mathbf{B}$ is the $mp \times nq$ [block matrix](linear-algebra-diagonalization.llms.md#def-block-matrix) whose block in row $i$ and column $j$ is $a_{ij} \mathbf{B}$, where $a_{ij}$ is the $(i, j)$ entry of $\mathbf{A}$:
 >
 > $$\mathbf{A} \otimes \mathbf{B}
 > = \begin{bmatrix}
@@ -1438,7 +1606,7 @@ Last modified: 2026-11-18 21:16:28 (PST)
 
 > **NOTE:**
 >
-> **Example 30 (A Kronecker product)** For $\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$ and $\mathbf{B} = \begin{bmatrix} 0 & 1 \end{bmatrix}$:
+> **Example 34 (A Kronecker product)** For $\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$ and $\mathbf{B} = \begin{bmatrix} 0 & 1 \end{bmatrix}$:
 >
 > $$\begin{aligned}
 > \mathbf{A} \otimes \mathbf{B}
@@ -1456,11 +1624,108 @@ Last modified: 2026-11-18 21:16:28 (PST)
 >
 > The result is $2 \times 4$: $\mathbf{A}$ is $2 \times 2$ and $\mathbf{B}$ is $1 \times 2$, so $\mathbf{A} \otimes \mathbf{B}$ is $(2 \cdot 1) \times (2 \cdot 2)$.
 
+> **NOTE:**
+>
+> **Theorem 15 (An outer product is a Kronecker product)** For a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ with $m$ entries and a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ with $n$ entries, the [Kronecker product](#def-kronecker-product) of the [column vector](linear-algebra-vectors.llms.md#def-column-vector) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ with the [transpose](linear-algebra-matrices.llms.md#def-matrix-transpose) ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}$ of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ [equals](linear-algebra-matrices.llms.md#def-matrix-equality) the [outer product](#def-outer-product) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}$:
+>
+> $$\underbrace{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}_{m \times 1} \otimes \underbrace{{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}}_{1 \times n}
+> = \underbrace{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}}_{m \times n}$$
+
+> **NOTE:**
+>
+> *Proof*. The [Kronecker product](#def-kronecker-product) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \otimes {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}$ stacks $u_1 {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}, \ldots, u_m {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}$, so its $i$th [row](linear-algebra-matrices.llms.md#def-matrix-row) is $u_i {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}$. So entry $(i, j)$ of each side, for $i$ from $1$ to $m$ and $j$ from $1$ to $n$, is
+>
+> $$\begin{aligned}
+> \mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \otimes {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}\right)\mathclose{}_{ij}
+> &= \mathopen{}\left(u_i {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}\right)\mathclose{}_{j}
+> && \text{(definition of the Kronecker product)}
+> \\
+> &= u_i v_j
+> && \text{(entry } j \text{ of the scalar multiple } u_i {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top} \text{)}
+> \\
+> &= \mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}\right)\mathclose{}_{ij}
+> && \text{(entries of an outer product)}
+> \end{aligned}$$
+
+> **NOTE:**
+>
+> **Example 35 (An outer product as a Kronecker product)** For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = (1, 2, 3)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (4, 5)$, the [Kronecker product](#def-kronecker-product) of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ with ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}$ is
+>
+> $$\begin{aligned}
+> \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \otimes {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}
+> &= \begin{bmatrix}
+> 1 \cdot\begin{bmatrix} 4 & 5 \end{bmatrix} \\
+> 2 \cdot\begin{bmatrix} 4 & 5 \end{bmatrix} \\
+> 3 \cdot\begin{bmatrix} 4 & 5 \end{bmatrix}
+> \end{bmatrix}
+> && \text{(definition of the Kronecker product)}
+> \\
+> &= \begin{bmatrix}
+> 4 & 5 \\
+> 8 & 10 \\
+> 12 & 15
+> \end{bmatrix}
+> && \text{(multiply)}
+> \end{aligned}$$
+>
+> This [matrix](linear-algebra-matrices.llms.md#def-matrix) is the [outer product](#def-outer-product) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}$ that [the example of an outer product](#exm-outer-product) found, as [Theorem 15](#thm-kronecker-outer-product) says.
+
+> **NOTE:**
+>
+> **Definition 20 (Vectorization)** The **vectorization** [\[16\]](#ref-wikipedia_vectorization) of an $m \times n$ [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{A}$ is the [column vector](linear-algebra-vectors.llms.md#def-column-vector) with $mn$ entries that stacks the [column](linear-algebra-matrices.llms.md#def-matrix-column)s $\mathbf{A}_{:,1}, \ldots, \mathbf{A}_{:,n}$ of $\mathbf{A}$ in order:
+>
+> $${\operatorname{vec}\mathopen{}\left(\mathbf{A}\right)\mathclose{}} \stackrel{\text{def}}{=}
+> \begin{bmatrix} \mathbf{A}_{:,1} \\ \vdots \\ \mathbf{A}_{:,n} \end{bmatrix}$$
+
+> **NOTE:**
+>
+> **Example 36 (Vectorizing a** $2 \times 2$ matrix) For $\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$, the [column](linear-algebra-matrices.llms.md#def-matrix-column)s are $(1, 3)$ and $(2, 4)$, so the [vectorization](#def-vectorization) stacks them:
+>
+> $${\operatorname{vec}\mathopen{}\left(\mathbf{A}\right)\mathclose{}} = \begin{bmatrix} 1 \\ 3 \\ 2 \\ 4 \end{bmatrix}$$
+
+> **NOTE:**
+>
+> **Theorem 16 (The vectorization of an outer product is a Kronecker product)** For a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ with $m$ entries and a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ with $n$ entries, the [vectorization](#def-vectorization) of the [outer product](#def-outer-product) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}$ [equals](linear-algebra-matrices.llms.md#def-matrix-equality) the [Kronecker product](#def-kronecker-product) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \otimes \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$:
+>
+> $$\underbrace{{\operatorname{vec}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}\right)\mathclose{}}}_{mn \times 1}
+> = \underbrace{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}_{n \times 1} \otimes \underbrace{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}_{m \times 1}$$
+
+> **NOTE:**
+>
+> *Proof*. The $j$th [column of](linear-algebra-matrices.llms.md#def-matrix-column) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}$ has entries $u_1 v_j, \ldots, u_m v_j$, so it is the vector $v_j \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$. Then
+>
+> $$\begin{aligned}
+> {\operatorname{vec}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}\right)\mathclose{}}
+> &= \begin{bmatrix} v_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \\ \vdots \\ v_n \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \end{bmatrix}
+> && \text{(definition of vectorization)}
+> \\
+> &= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \otimes \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}
+> && \text{(definition of the Kronecker product, with one column of blocks)}
+> \end{aligned}$$
+
+> **NOTE:**
+>
+> **Example 37 (Vectorizing an outer product)** For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = (1, 2, 3)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (4, 5)$, [the example of an outer product](#exm-outer-product) found the [outer product](#def-outer-product) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}$, whose [column](linear-algebra-matrices.llms.md#def-matrix-column)s are $(4, 8, 12)$ and $(5, 10, 15)$. Its [vectorization](#def-vectorization) and the [Kronecker product](#def-kronecker-product) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \otimes \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ agree:
+>
+> $$\begin{aligned}
+> {\operatorname{vec}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}\right)\mathclose{}}
+> &= \begin{bmatrix} 4 \\ 8 \\ 12 \\ 5 \\ 10 \\ 15 \end{bmatrix}
+> && \text{(stack the columns)}
+> \\
+> &= \begin{bmatrix} 4 \cdot\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \\ 5 \cdot\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \end{bmatrix}
+> && \text{(each column is a multiple of } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \text{)}
+> \\
+> &= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \otimes \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}
+> && \text{(definition of the Kronecker product)}
+> \end{aligned}$$
+>
+> as [Theorem 16](#thm-vec-outer-product) says.
+
 # 6 Hilbert spaces
 
 > **NOTE:**
 >
-> **Definition 19 (Cauchy sequence)** A [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) $(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n)$ of vectors in a [real inner product space](linear-algebra-inner-products.llms.md#def-inner-product-space) $V$ is a **Cauchy sequence** [\[15\]](#ref-wikipedia_cauchy_sequence) if for every $\varepsilon> 0$ there is a [natural number](https://morrison-lab.github.io/mcs/number-systems.html#def-natural-numbers) $N$ such that
+> **Definition 21 (Cauchy sequence)** A [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) $(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n)$ of vectors in a [real inner product space](linear-algebra-inner-products.llms.md#def-inner-product-space) $V$ is a **Cauchy sequence** [\[17\]](#ref-wikipedia_cauchy_sequence) if for every $\varepsilon> 0$ there is a [natural number](https://morrison-lab.github.io/mcs/number-systems.html#def-natural-numbers) $N$ such that
 >
 > $$\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_m - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n\right\rVert\mathclose{} < \varepsilon\quad \text{for all } m, n \ge N,$$
 >
@@ -1468,25 +1733,25 @@ Last modified: 2026-11-18 21:16:28 (PST)
 
 > **NOTE:**
 >
-> **Example 31 (A Cauchy sequence of real numbers)** The [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $\mathbb{R}$ with the [inner product](linear-algebra-inner-products.llms.md#def-inner-product) ${\mathopen{}\left\langle x, y\right\rangle\mathclose{}} = x\,y$ form an [inner product space](linear-algebra-inner-products.llms.md#def-inner-product-space), and $\mathopen{}\left\lVert x\right\rVert\mathclose{} = \mathopen{}\left|x\right|\mathclose{}$ in it. The [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) $x_n = \frac{1}{n}$ is a [Cauchy sequence](#def-cauchy-sequence). Given $\varepsilon> 0$, take $N$ to be any [natural number](https://morrison-lab.github.io/mcs/number-systems.html#def-natural-numbers) larger than $\frac{1}{\varepsilon}$. [For all](https://morrison-lab.github.io/mcs/proof-writing.html#def-universal-quantifier) $m, n \ge N$, both $\frac{1}{m}$ and $\frac{1}{n}$ lie in $(0, \frac{1}{N}]$, so $\mathopen{}\left|\frac{1}{m} - \frac{1}{n}\right|\mathclose{} < \frac{1}{N} < \varepsilon$. For example, with $\varepsilon= 0.01$, take $N = 101$: all $m, n \ge 101$ have $\mathopen{}\left|\frac{1}{m} - \frac{1}{n}\right|\mathclose{} < \frac{1}{101} < 0.01$.
+> **Example 38 (A Cauchy sequence of real numbers)** The [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $\mathbb{R}$ with the [inner product](linear-algebra-inner-products.llms.md#def-inner-product) ${\mathopen{}\left\langle x, y\right\rangle\mathclose{}} = x\,y$ form an [inner product space](linear-algebra-inner-products.llms.md#def-inner-product-space), and $\mathopen{}\left\lVert x\right\rVert\mathclose{} = \mathopen{}\left|x\right|\mathclose{}$ in it. The [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) $x_n = \frac{1}{n}$ is a [Cauchy sequence](#def-cauchy-sequence). Given $\varepsilon> 0$, take $N$ to be any [natural number](https://morrison-lab.github.io/mcs/number-systems.html#def-natural-numbers) larger than $\frac{1}{\varepsilon}$. [For all](https://morrison-lab.github.io/mcs/proof-writing.html#def-universal-quantifier) $m, n \ge N$, both $\frac{1}{m}$ and $\frac{1}{n}$ lie in $(0, \frac{1}{N}]$, so $\mathopen{}\left|\frac{1}{m} - \frac{1}{n}\right|\mathclose{} < \frac{1}{N} < \varepsilon$. For example, with $\varepsilon= 0.01$, take $N = 101$: all $m, n \ge 101$ have $\mathopen{}\left|\frac{1}{m} - \frac{1}{n}\right|\mathclose{} < \frac{1}{101} < 0.01$.
 
 > **NOTE:**
 >
-> **Definition 20 (Complete inner product space)** A [real inner product space](linear-algebra-inner-products.llms.md#def-inner-product-space) $V$ is **complete** [\[16\]](#ref-wikipedia_complete_metric_space) if for every [Cauchy sequence](#def-cauchy-sequence) $(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n)$ in $V$ there is a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in V$ such that for every $\varepsilon> 0$ there is a [natural number](https://morrison-lab.github.io/mcs/number-systems.html#def-natural-numbers) $N$ with
+> **Definition 22 (Complete inner product space)** A [real inner product space](linear-algebra-inner-products.llms.md#def-inner-product-space) $V$ is **complete** [\[18\]](#ref-wikipedia_complete_metric_space) if for every [Cauchy sequence](#def-cauchy-sequence) $(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n)$ in $V$ there is a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in V$ such that for every $\varepsilon> 0$ there is a [natural number](https://morrison-lab.github.io/mcs/number-systems.html#def-natural-numbers) $N$ with
 >
 > $$\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rVert\mathclose{} < \varepsilon\quad \text{for every } n \ge N.$$
 
 > **NOTE:**
 >
-> **Example 32 (Polynomials are not complete)** Let $V$ be the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of [polynomials](algebra-exponentials.llms.md#def-polynomial) on $[0, 1]$, with the [inner product](linear-algebra-inner-products.llms.md#def-inner-product) ${\mathopen{}\left\langle f, g\right\rangle\mathclose{}} = \int_0^1 f(t)\,g(t)\,dt$. The [partial sums](algebra-exponentials.llms.md#def-partial-sum) $p_n(t) = \sum_{k=0}^{n} \frac{t^k}{k!}$ are a [Cauchy sequence](#def-cauchy-sequence) in $V$, because they [converge](algebra-exponentials.llms.md#def-convergent-sequence) uniformly on $[0, 1]$ to $\text{e}^{t}$. The only candidate for a [limit](algebra-exponentials.llms.md#def-sequence-limit) is $\text{e}^{t}$, which is not a [polynomial](algebra-exponentials.llms.md#def-polynomial), so no polynomial $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in V$ satisfies the condition of [Definition 20](#def-complete-inner-product-space), and $V$ is not [complete](#def-complete-inner-product-space).
+> **Example 39 (Polynomials are not complete)** Let $V$ be the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of [polynomials](algebra-exponentials.llms.md#def-polynomial) on $[0, 1]$, with the [inner product](linear-algebra-inner-products.llms.md#def-inner-product) ${\mathopen{}\left\langle f, g\right\rangle\mathclose{}} = \int_0^1 f(t)\,g(t)\,dt$. The [partial sums](algebra-exponentials.llms.md#def-partial-sum) $p_n(t) = \sum_{k=0}^{n} \frac{t^k}{k!}$ are a [Cauchy sequence](#def-cauchy-sequence) in $V$, because they [converge](algebra-exponentials.llms.md#def-convergent-sequence) uniformly on $[0, 1]$ to $\text{e}^{t}$. The only candidate for a [limit](algebra-exponentials.llms.md#def-sequence-limit) is $\text{e}^{t}$, which is not a [polynomial](algebra-exponentials.llms.md#def-polynomial), so no polynomial $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in V$ satisfies the condition of [Definition 22](#def-complete-inner-product-space), and $V$ is not [complete](#def-complete-inner-product-space).
 
 > **NOTE:**
 >
-> **Definition 21 (Hilbert space)** A **Hilbert space** [\[17\]](#ref-wikipedia_hilbert_space) is a [complete](#def-complete-inner-product-space) [real inner product space](linear-algebra-inner-products.llms.md#def-inner-product-space) [\[3, Sec. 16.8\]](#ref-banerjee2014linear), Definition 16.8, p. 547.
+> **Definition 23 (Hilbert space)** A **Hilbert space** [\[19\]](#ref-wikipedia_hilbert_space) is a [complete](#def-complete-inner-product-space) [real inner product space](linear-algebra-inner-products.llms.md#def-inner-product-space) [\[3, Sec. 16.8\]](#ref-banerjee2014linear), Definition 16.8, p. 547.
 
 > **NOTE:**
 >
-> **Example 33 (Real coordinate space is a Hilbert space)** The Euclidean [space](linear-algebra-vectors.llms.md#def-real-coordinate-space) $\mathbb{R}^2$ with the [dot product](linear-algebra-vectors.llms.md#def-dot-product) ([Example 2](#exm-inner-product-space)) is a [Hilbert space](#def-hilbert-space). Let $(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n)$ with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n = (x_{n,1}, x_{n,2})$ be a [Cauchy sequence](#def-cauchy-sequence) in it. Each coordinate [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) is a Cauchy sequence of [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers), because $\mathopen{}\left|x_{m,j} - x_{n,j}\right|\mathclose{} \le \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_m - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n\right\rVert\mathclose{}$ for $j = 1, 2$. Each coordinate sequence then [converges](algebra-exponentials.llms.md#def-convergent-sequence) to a [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $y_j$, because every Cauchy sequence of real numbers converges [\[16\]](#ref-wikipedia_complete_metric_space), and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (y_1, y_2)$ satisfies the condition of [Definition 20](#def-complete-inner-product-space). For example, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n = (\frac{1}{n}, 1 + \frac{1}{n})$ is a Cauchy sequence with [limit](algebra-exponentials.llms.md#def-sequence-limit) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (0, 1)$.
+> **Example 40 (Real coordinate space is a Hilbert space)** The Euclidean [space](linear-algebra-vectors.llms.md#def-real-coordinate-space) $\mathbb{R}^2$ with the [dot product](linear-algebra-vectors.llms.md#def-dot-product) ([Example 2](#exm-inner-product-space)) is a [Hilbert space](#def-hilbert-space). Let $(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n)$ with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n = (x_{n,1}, x_{n,2})$ be a [Cauchy sequence](#def-cauchy-sequence) in it. Each coordinate [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) is a Cauchy sequence of [real numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers), because $\mathopen{}\left|x_{m,j} - x_{n,j}\right|\mathclose{} \le \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_m - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n\right\rVert\mathclose{}$ for $j = 1, 2$. Each coordinate sequence then [converges](algebra-exponentials.llms.md#def-convergent-sequence) to a [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $y_j$, because every Cauchy sequence of real numbers converges [\[18\]](#ref-wikipedia_complete_metric_space), and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (y_1, y_2)$ satisfies the condition of [Definition 22](#def-complete-inner-product-space). For example, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n = (\frac{1}{n}, 1 + \frac{1}{n})$ is a Cauchy sequence with [limit](algebra-exponentials.llms.md#def-sequence-limit) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (0, 1)$.
 
 # Definitions on this page
 
@@ -1507,10 +1772,12 @@ Last modified: 2026-11-18 21:16:28 (PST)
 - [Definition 15 (Orthonormal basis)](#def-orthonormal-basis)
 - [Definition 16 (Gram-Schmidt process)](#def-gram-schmidt)
 - [Definition 17 (Outer product)](#def-outer-product)
-- [Definition 18 (Kronecker product)](#def-kronecker-product)
-- [Definition 19 (Cauchy sequence)](#def-cauchy-sequence)
-- [Definition 20 (Complete inner product space)](#def-complete-inner-product-space)
-- [Definition 21 (Hilbert space)](#def-hilbert-space)
+- [Definition 18 (Self outer product)](#def-self-outer-product)
+- [Definition 19 (Kronecker product)](#def-kronecker-product)
+- [Definition 20 (Vectorization)](#def-vectorization)
+- [Definition 21 (Cauchy sequence)](#def-cauchy-sequence)
+- [Definition 22 (Complete inner product space)](#def-complete-inner-product-space)
+- [Definition 23 (Hilbert space)](#def-hilbert-space)
 
 Back to top
 
@@ -1574,12 +1841,20 @@ Wikipedia contributors, “Outer product — Wikipedia, the free encyclopedia.�
 
 \[15\]
 
-Wikipedia contributors, “Cauchy sequence — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Cauchy_sequence>
+Wikipedia contributors, “Scatter matrix — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Scatter_matrix>
 
 \[16\]
 
-Wikipedia contributors, “Complete metric space — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Complete_metric_space>
+Wikipedia contributors, “Vectorization (mathematics) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Vectorization_(mathematics)>
 
 \[17\]
+
+Wikipedia contributors, “Cauchy sequence — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Cauchy_sequence>
+
+\[18\]
+
+Wikipedia contributors, “Complete metric space — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Complete_metric_space>
+
+\[19\]
 
 Wikipedia contributors, “Hilbert space — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Hilbert_space>
