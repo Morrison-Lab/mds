@@ -48,7 +48,7 @@ jobs:
       head-sha: ${{ github.event.workflow_run.head_sha || inputs.head-sha }}
       all-runs: true
       # Tracked exception (gha#1103): the only submodule, latex-macros
-      # (d-morrison/macros), is public, so the review workflow's
+      # (Morrison-Lab/macros), is public, so the review workflow's
       # anonymous-clone notice is harmless.
       # Remove this if a private submodule is ever added.
       allow-patterns: |
