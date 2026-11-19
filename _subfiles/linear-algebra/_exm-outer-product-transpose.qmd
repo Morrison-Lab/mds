@@ -1,0 +1,34 @@
+:::{#exm-outer-product-transpose}
+#### Transposing an outer product
+
+For $\vecf{u} = (1, 2, 3)$ and $\vecf{v} = (4, 5)$,
+[the example of an outer product](#exm-outer-product) found the $3 \times 2$ [matrix](linear-algebra.qmd#def-matrix) $\oprod{\vecf{u}}{\vecf{v}}$.
+Swapping the two vectors gives its [transpose](linear-algebra.qmd#def-matrix-transpose):
+
+$$
+\ba
+\oprod{\vecf{v}}{\vecf{u}}
+&= \begin{bmatrix} 4 \\ 5 \end{bmatrix}
+\begin{bmatrix} 1 & 2 & 3 \end{bmatrix}
+&& \text{(definition of the outer product)}
+\\
+&= \begin{bmatrix}
+4 \cd 1 & 4 \cd 2 & 4 \cd 3 \\
+5 \cd 1 & 5 \cd 2 & 5 \cd 3
+\end{bmatrix}
+&& \text{(entry } (i, j) \text{ is } v_i u_j \text{)}
+\\
+&= \begin{bmatrix}
+4 & 8 & 12 \\
+5 & 10 & 15
+\end{bmatrix}
+&& \text{(multiply)}
+\ea
+$$
+
+Each [row of](linear-algebra.qmd#def-matrix-row) this matrix is a [column of](linear-algebra.qmd#def-matrix-column) $\oprod{\vecf{u}}{\vecf{v}}$,
+as @thm-outer-product-transpose says.
+
+<!-- no-figure: the example multiplies out one small matrix -->
+
+:::

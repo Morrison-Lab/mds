@@ -1,0 +1,29 @@
+:::{#exm-outer-product-trace}
+#### The trace of an outer product
+
+For $\vecf{a} = (1, 2)$ and $\vecf{b} = (3, 4)$,
+[the remark on outer and dot products](linear-algebra.qmd#rem-outer-vs-dot-product)
+found the [outer product](linear-algebra.qmd#def-outer-product) $\oprod{\vecf{a}}{\vecf{b}}$
+and the [dot product](linear-algebra.qmd#def-dot-product) $\tprod{\vecf{a}}{\vecf{b}} = 11$.
+The [trace](#def-trace) of the outer product is
+
+$$
+\ba
+\trf{\oprod{\vecf{a}}{\vecf{b}}}
+&= \trf{\begin{bmatrix} 3 & 4 \\ 6 & 8 \end{bmatrix}}
+&& \text{(the outer product found in the remark)}
+\\
+&= 3 + 8
+&& \text{(definition of the trace)}
+\\
+&= 11
+&& \text{(add)}
+\ea
+$$
+
+The trace and the dot product are the same number,
+as @thm-outer-product-trace says.
+
+<!-- no-figure: the example adds two diagonal entries -->
+
+:::

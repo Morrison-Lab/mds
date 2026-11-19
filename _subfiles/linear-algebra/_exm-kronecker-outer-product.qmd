@@ -1,0 +1,32 @@
+:::{#exm-kronecker-outer-product}
+#### An outer product as a Kronecker product
+
+For $\vecf{u} = (1, 2, 3)$ and $\vecf{v} = (4, 5)$,
+the [Kronecker product](#def-kronecker-product) of $\vecf{u}$ with $\tp{\vecf{v}}$ is
+
+$$
+\ba
+\vecf{u} \otimes \tp{\vecf{v}}
+&= \begin{bmatrix}
+1 \cd \begin{bmatrix} 4 & 5 \end{bmatrix} \\
+2 \cd \begin{bmatrix} 4 & 5 \end{bmatrix} \\
+3 \cd \begin{bmatrix} 4 & 5 \end{bmatrix}
+\end{bmatrix}
+&& \text{(definition of the Kronecker product)}
+\\
+&= \begin{bmatrix}
+4 & 5 \\
+8 & 10 \\
+12 & 15
+\end{bmatrix}
+&& \text{(multiply)}
+\ea
+$$
+
+This [matrix](linear-algebra.qmd#def-matrix) is the [outer product](#def-outer-product) $\oprod{\vecf{u}}{\vecf{v}}$
+that [the example of an outer product](#exm-outer-product) found,
+as @thm-kronecker-outer-product says.
+
+<!-- no-figure: the example multiplies out one small Kronecker product -->
+
+:::

@@ -1,0 +1,38 @@
+:::{#thm-kronecker-outer-product}
+#### An outer product is a Kronecker product
+
+For a vector $\vecf{u}$ with $m$ entries
+and a vector $\vecf{v}$ with $n$ entries,
+the [Kronecker product](#def-kronecker-product) of the [column vector](linear-algebra.qmd#def-column-vector) $\vecf{u}$
+with the [transpose](linear-algebra.qmd#def-matrix-transpose) $\tp{\vecf{v}}$ of $\vecf{v}$
+[equals](linear-algebra.qmd#def-matrix-equality) the [outer product](#def-outer-product) $\oprod{\vecf{u}}{\vecf{v}}$:
+
+$$
+\underbrace{\vecf{u}}_{m \times 1} \otimes \underbrace{\tp{\vecf{v}}}_{1 \times n}
+= \underbrace{\oprod{\vecf{u}}{\vecf{v}}}_{m \times n}
+$$
+
+:::
+
+::: proof
+
+The [Kronecker product](#def-kronecker-product) $\vecf{u} \otimes \tp{\vecf{v}}$
+stacks $u_1 \tp{\vecf{v}}, \ldots, u_m \tp{\vecf{v}}$,
+so its $i$th [row](linear-algebra.qmd#def-matrix-row) is $u_i \tp{\vecf{v}}$.
+So entry $(i, j)$ of each side, for $i$ from $1$ to $m$ and $j$ from $1$ to $n$, is
+
+$$
+\ba
+\paren{\vecf{u} \otimes \tp{\vecf{v}}}_{ij}
+&= \paren{u_i \tp{\vecf{v}}}_{j}
+&& \text{(definition of the Kronecker product)}
+\\
+&= u_i v_j
+&& \text{(entry } j \text{ of the scalar multiple } u_i \tp{\vecf{v}} \text{)}
+\\
+&= \paren{\oprod{\vecf{u}}{\vecf{v}}}_{ij}
+&& \text{(entries of an outer product)}
+\ea
+$$
+
+:::
