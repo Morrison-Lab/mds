@@ -1,0 +1,27 @@
+:::{#cor-self-outer-product-rank}
+#### A nonzero self outer product has rank one
+
+If $\vx$ is a nonzero vector,
+then the [self outer product](#def-self-outer-product) $\soprod{\vx}$
+has [rank](linear-algebra.qmd#def-rank) one:
+
+$$
+\rankf{\soprod{\vx}} = 1
+$$
+
+:::
+
+::: proof
+
+$$
+\ba
+\rankf{\soprod{\vx}}
+&= \rankf{\oprod{\vx}{\vx}}
+&& \text{(definition of the self outer product)}
+\\
+&= 1
+&& \text{(@thm-outer-product-rank, with } \vecf{u} = \vecf{v} = \vx \neq \vzero \text{)}
+\ea
+$$
+
+:::

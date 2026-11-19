@@ -1,0 +1,30 @@
+:::{#exm-self-outer-product}
+#### A self outer product
+
+For $\vx = (1, 2)$,
+the [self outer product](#def-self-outer-product) is
+
+$$
+\ba
+\soprod{\vx}
+&= \begin{bmatrix} 1 \\ 2 \end{bmatrix}
+\begin{bmatrix} 1 & 2 \end{bmatrix}
+&& \text{(definition of the self outer product)}
+\\
+&= \begin{bmatrix}
+1 \cd 1 & 1 \cd 2 \\
+2 \cd 1 & 2 \cd 2
+\end{bmatrix}
+&& \text{(entry } (i, j) \text{ is } x_i x_j \text{)}
+\\
+&= \begin{bmatrix}
+1 & 2 \\
+2 & 4
+\end{bmatrix}
+&& \text{(multiply)}
+\ea
+$$
+
+<!-- no-figure: the example multiplies out one small matrix -->
+
+:::

@@ -206,6 +206,26 @@
 
 {{< include mds/_subfiles/linear-algebra/_thm-outer-product-rank.qmd >}}
 
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-self-outer-product.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-self-outer-product.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_rem-self-outer-product-statistics.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_cor-self-outer-product-rank.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-self-outer-product-rank.qmd >}}
+
 # Kronecker product {#sec-kronecker-product}
 
 {{< include mds/_subfiles/linear-algebra/_def-kronecker-product.qmd >}}

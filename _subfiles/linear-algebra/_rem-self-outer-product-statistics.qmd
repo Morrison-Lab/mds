@@ -1,0 +1,15 @@
+:::{#rem-self-outer-product-statistics}
+#### Self outer products in statistics
+
+Statistics meets the [self outer product](#def-self-outer-product) mostly through [sum](algebra.qmd#def-summation)s of them.
+The [Gram matrix](linear-algebra.qmd#def-gram-matrix) $\stprod{\matr{X}}$
+of a data [matrix](linear-algebra.qmd#def-matrix) $\matr{X}$
+is the sum of the self outer products of its [row](linear-algebra.qmd#def-matrix-row)s,
+as [the Gram matrix example](linear-algebra.qmd#exm-cross-product-sum-outer) shows.
+For observation vectors $\vx_1, \ldots, \vx_n$,
+the scatter matrix is the sum $\sumin \soprod{\paren{\vx_i - \bar{\vx}}}$
+of the self outer products of their deviations from the vector $\bar{\vx}$ of entrywise [mean](linear-algebra.qmd#def-mean)s
+[@wikipedia_scatter_matrix].
+Each term of either sum is one observation's contribution to the total.
+
+:::
