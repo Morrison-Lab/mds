@@ -91,9 +91,33 @@ reticulate::py_require("numpy")
 
 # Quadratic Forms
 
+{{< include mds/_subfiles/linear-algebra/_def-bilinear-form.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-bilinear-form.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-symmetric-bilinear-form.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-symmetric-bilinear-form-swap.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-symmetric-bilinear-form.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-quadratic-form.qmd >}}
 
 {{< include mds/_subfiles/linear-algebra/_note-def-quadratic-form.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_rem-quadratic-form-bilinear.qmd >}}
 
 {{< slidebreak >}}
 
@@ -236,6 +260,10 @@ reticulate::py_require("numpy")
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_exm-matrix-induced-inner-product.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_rem-matrix-induced-inner-product-bilinear.qmd >}}
 
 {{< slidebreak >}}
 

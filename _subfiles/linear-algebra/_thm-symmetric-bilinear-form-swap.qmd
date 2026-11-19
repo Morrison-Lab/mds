@@ -1,0 +1,36 @@
+:::{#thm-symmetric-bilinear-form-swap}
+#### A symmetric bilinear form does not depend on the order of its vectors
+
+If $\matr{A}$ is a symmetric $p \times p$ matrix (@def-symmetric-matrix),
+then its bilinear form (@def-bilinear-form) is the same with its vectors swapped:
+for all $\vx, \vy \in \reals^p$,
+
+$$
+\bform{\matr{A}}{\vy}{\vx} = \bform{\matr{A}}{\vx}{\vy}.
+$$
+
+:::
+
+::: proof
+
+The second step uses the fact that
+[a $1 \times 1$ product equals its own transpose](linear-algebra-matrices.qmd#thm-scalar-transpose):
+
+$$
+\ba
+\bform{\matr{A}}{\vy}{\vx}
+&= \tp{\vy}\, \matr{A}\, \vx
+&& \text{(@def-bilinear-form)}
+\\
+&= \tp{\vx}\, \tp{\matr{A}}\, \vy
+&& \text{(a } 1 \times 1 \text{ product equals its own transpose)}
+\\
+&= \tp{\vx}\, \matr{A}\, \vy
+&& \text{(@def-symmetric-matrix)}
+\\
+&= \bform{\matr{A}}{\vx}{\vy}.
+&& \text{(@def-bilinear-form)}
+\ea
+$$
+
+:::

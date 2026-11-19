@@ -1,0 +1,13 @@
+:::{#def-symmetric-bilinear-form}
+#### Symmetric bilinear form
+
+A **symmetric bilinear form**
+[@wikipedia_bilinear_form]
+is a bilinear form $\bform{\matr{A}}{\vx}{\vy}$ (@def-bilinear-form)
+whose matrix $\matr{A}$ is symmetric (@def-symmetric-matrix):
+
+$$
+\tp{\matr{A}} = \matr{A}.
+$$
+
+:::

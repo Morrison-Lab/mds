@@ -1,0 +1,12 @@
+:::{#def-bilinear-form}
+#### Bilinear form
+
+The **bilinear form** of a $p \times p$ matrix $\matr{A}$
+[@wikipedia_bilinear_form]
+is the function that maps each pair of vectors $\vx, \vy \in \reals^p$ to the scalar
+
+$$
+\bform{\matr{A}}{\vx}{\vy} \eqdef \tp{\vx}\, \matr{A}\, \vy.
+$$
+
+:::
