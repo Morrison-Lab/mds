@@ -19,6 +19,7 @@ The linear algebra notes are split across these pages:
   and the transpose rules for addition and multiplication.
 - [Linear and Affine Maps](linear-algebra-linear-maps.qmd):
   linear and affine maps, and [hyperplanes](linear-algebra-linear-maps.qmd#def-hyperplane).
+  <!-- no-figure: an overview list of page topics, and the hyperplane figures are on the linked page -->
 - [Subspaces and Rank](linear-algebra-subspaces.qmd):
   rank, subspaces, and bases.
 - [Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.qmd):
