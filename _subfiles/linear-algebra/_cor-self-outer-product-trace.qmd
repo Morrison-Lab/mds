@@ -1,0 +1,36 @@
+:::{#cor-self-outer-product-trace}
+#### The trace of a self outer product is a squared norm
+
+For a vector $\vx$,
+the [trace](#def-trace) of the [self outer product](linear-algebra.qmd#def-self-outer-product) $\soprod{\vx}$
+and the square of the [Euclidean norm](linear-algebra.qmd#def-euclidean-norm) $\norm{\vx}$
+are the same number:
+
+$$
+\trf{\soprod{\vx}} = \norm{\vx}^2
+$$
+
+:::
+
+::: proof
+
+$$
+\ba
+\trf{\soprod{\vx}}
+&= \trf{\oprod{\vx}{\vx}}
+&& \text{(definition of the self outer product)}
+\\
+&= \tprod{\vx}{\vx}
+&& \text{(the trace of an outer product is a dot product)}
+\\
+&= \norm{\vx}^2
+&& \text{(the Euclidean norm from the dot product, squared)}
+\ea
+$$
+
+The second step is @thm-outer-product-trace,
+with $\vx$ in place of both $\vecf{u}$ and $\vecf{v}$.
+The third step squares both sides of
+[the formula for the Euclidean norm from the dot product](linear-algebra.qmd#thm-norm-dot-product).
+
+:::

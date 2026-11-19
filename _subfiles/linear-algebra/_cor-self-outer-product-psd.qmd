@@ -1,0 +1,35 @@
+:::{#cor-self-outer-product-psd}
+#### A self outer product is positive semidefinite
+
+For a vector $\vx$,
+the [self outer product](linear-algebra.qmd#def-self-outer-product) $\soprod{\vx}$
+is [positive semidefinite](#def-positive-semidefinite).
+
+:::
+
+::: proof
+
+Let $\matr{A} = \tp{\vx}$, the $1 \times n$ [matrix](linear-algebra.qmd#def-matrix) whose one [row](linear-algebra.qmd#def-matrix-row) is $\vx$.
+Then
+
+$$
+\ba
+\stprod{\matr{A}}
+&= \tp{\matr{A}} \matr{A}
+&& \text{(definition of the Gram matrix)}
+\\
+&= \tp{\paren{\tp{\vx}}} \tp{\vx}
+&& \text{(substitute } \matr{A} \text{)}
+\\
+&= \vx \tp{\vx}
+&& \text{(the transpose of a transpose is the original matrix)}
+\\
+&= \soprod{\vx}
+&& \text{(definition of the self outer product)}
+\ea
+$$
+
+So $\soprod{\vx}$ is the [Gram matrix](linear-algebra.qmd#def-gram-matrix) of $\matr{A}$,
+and @thm-gram-properties says that a Gram matrix is positive semidefinite.
+
+:::
