@@ -3222,12 +3222,30 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra-inner-products#thm-outer-product-matvec",
+   "site": "mds",
+   "page": "linear-algebra-inner-products",
+   "div": "thm-outer-product-matvec",
+   "kind": "thm",
+   "title": "An outer product times a vector",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra-inner-products#thm-outer-product-rank",
    "site": "mds",
    "page": "linear-algebra-inner-products",
    "div": "thm-outer-product-rank",
    "kind": "thm",
    "title": "An outer product has rank one",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-inner-products#thm-outer-product-transpose",
+   "site": "mds",
+   "page": "linear-algebra-inner-products",
+   "div": "thm-outer-product-transpose",
+   "kind": "thm",
+   "title": "The transpose of an outer product",
    "external": false
   },
   {
@@ -4767,6 +4785,15 @@
    "div": "thm-orthogonal-norm",
    "kind": "thm",
    "title": "Orthogonal matrices preserve length",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-special-matrices#thm-outer-product-trace",
+   "site": "mds",
+   "page": "linear-algebra-special-matrices",
+   "div": "thm-outer-product-trace",
+   "kind": "thm",
+   "title": "The trace of an outer product is a dot product",
    "external": false
   },
   {
@@ -8487,6 +8514,14 @@
    "mds/linear-algebra-inner-products#thm-dot-linear-sum"
   ],
   [
+   "mds/linear-algebra-inner-products#thm-outer-product-matvec",
+   "mds/linear-algebra-inner-products#def-outer-product"
+  ],
+  [
+   "mds/linear-algebra-inner-products#thm-outer-product-transpose",
+   "mds/linear-algebra-inner-products#def-outer-product"
+  ],
+  [
    "mds/linear-algebra-inner-products#thm-pearson-cosine-centered",
    "mds/linear-algebra-inner-products#def-cosine-similarity"
   ],
@@ -9569,6 +9604,10 @@
   [
    "mds/linear-algebra-special-matrices#thm-orthogonal-norm",
    "mds/linear-algebra-special-matrices#def-orthogonal-matrix"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#thm-outer-product-trace",
+   "mds/linear-algebra-special-matrices#def-trace"
   ],
   [
    "mds/linear-algebra-special-matrices#thm-pd-inverse",
