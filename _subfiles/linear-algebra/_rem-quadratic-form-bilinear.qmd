@@ -1,6 +1,9 @@
 :::{#rem-quadratic-form-bilinear}
 #### A quadratic form is a bilinear form with equal vectors
 
+<!-- check-results-in-remarks: allow -->
+<!-- Reason for the allow: the display is the bilinear form definition with y = x, read off by substitution, not a result that needs a proof. -->
+
 Setting $\vy = \vx$ in the [bilinear form](#def-bilinear-form) of $\matr{S}$
 gives the [quadratic form](#def-quadratic-form) of $\matr{S}$:
 
