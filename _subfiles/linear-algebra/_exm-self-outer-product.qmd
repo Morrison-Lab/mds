@@ -15,7 +15,7 @@ $$
 1 \cd 1 & 1 \cd 2 \\
 2 \cd 1 & 2 \cd 2
 \end{bmatrix}
-&& \text{(entry } (i, j) \text{ is } x_i x_j \text{)}
+&& \text{(multiply each entry of the column by each entry of the row)}
 \\
 &= \begin{bmatrix}
 1 & 2 \\
