@@ -1,0 +1,35 @@
+:::{#exm-self-outer-product-psd}
+#### A quadratic form in a self outer product
+
+For $\vx = (1, 2)$,
+[the example of a self outer product](linear-algebra.qmd#exm-self-outer-product)
+found $\soprod{\vx} = \begin{bmatrix} 1 & 2 \\ 2 & 4 \end{bmatrix}$,
+which is [symmetric](#def-symmetric-matrix).
+Take $\vecf{w} = (2, -1)$.
+The [quadratic form](#def-quadratic-form) in $\soprod{\vx}$ at $\vecf{w}$ is
+
+$$
+\ba
+\qform{\soprod{\vx}}{\vecf{w}}
+&= \begin{bmatrix} 2 & -1 \end{bmatrix}
+\begin{bmatrix} 1 & 2 \\ 2 & 4 \end{bmatrix}
+\begin{bmatrix} 2 \\ -1 \end{bmatrix}
+&& \text{(definition of the quadratic form)}
+\\
+&= \begin{bmatrix} 2 & -1 \end{bmatrix}
+\begin{bmatrix} 0 \\ 0 \end{bmatrix}
+&& \text{(} 1 \cd 2 + 2 \cd (-1) = 0 \text{ and } 2 \cd 2 + 4 \cd (-1) = 0 \text{)}
+\\
+&= 0
+&& \text{(multiply and add)}
+\ea
+$$
+
+The quadratic form is $0$ here, which is not negative,
+as @cor-self-outer-product-psd says.
+It is not positive either,
+because $\vecf{w}$ is [orthogonal](linear-algebra-vectors.qmd#def-orthogonal-vectors) to $\vx$.
+
+<!-- no-figure: the example multiplies out one small quadratic form -->
+
+:::

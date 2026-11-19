@@ -141,6 +141,22 @@ reticulate::py_require("numpy")
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_thm-outer-product-trace.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-outer-product-trace.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_cor-self-outer-product-trace.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-self-outer-product-trace.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-matrix-inner-product.qmd >}}
 
 {{< slidebreak >}}
@@ -202,6 +218,16 @@ reticulate::py_require("numpy")
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_exm-gram-properties.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_cor-self-outer-product-psd.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-self-outer-product-psd.qmd >}}
+
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_def-positive-definite.qmd >}}
 
