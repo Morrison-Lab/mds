@@ -91,7 +91,7 @@ page-xrefs:
       - optimization-newton.qmd
       - optimization-gradient-descent.qmd
       - optimization-quasi-newton.qmd
-  # linear-algebra-matrices.qmd was split again (mds#156), so links to it from
+  # linear-algebra-matrices.qmd was split (mds#156), so links to it from
   # before that split (index#id) go on to the page now holding #id.
   - index: linear-algebra-matrices.qmd
     pages:
