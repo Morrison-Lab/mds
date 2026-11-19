@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-19 14:04:52 (PST)
+Last modified: 2026-11-19 14:55:31 (PST)
 
 # 1 Special Matrices
 
@@ -732,7 +732,7 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> *Proof*. Swapping the vectors relies on the fact that [a](linear-algebra-matrices.llms.md#thm-scalar-transpose) $1 \times 1$ product equals its own transpose, in the second step below:
+> *Proof*. Swapping the vectors relies on the fact that [a](linear-algebra-matrices.llms.md#thm-scalar-transpose) $1 \times 1$ product equals its own transpose, which justifies the step labeled with that fact:
 >
 > $$\begin{aligned}
 > {{B_{\mathbf{A}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right)\mathclose{}}
@@ -833,7 +833,9 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> *Remark 8* (A quadratic form is a bilinear form with equal vectors). Setting $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ in the [bilinear form](#def-bilinear-form) of $\mathbf{S}$ gives the [quadratic form](#def-quadratic-form) of $\mathbf{S}$:
+> *Remark 8* (A quadratic form is a bilinear form with equal vectors).
+>
+> Setting $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ in the [bilinear form](#def-bilinear-form) of $\mathbf{S}$ gives the [quadratic form](#def-quadratic-form) of $\mathbf{S}$:
 >
 > $${{B_{\mathbf{S}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right)\mathclose{}} = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}.$$
 

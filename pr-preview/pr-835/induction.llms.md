@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-19 14:04:52 (PST)
+Last modified: 2026-11-19 14:55:31 (PST)
 
 This page moved to [Induction and Recursion](https://morrison-lab.github.io/mcs/induction.html) in the Math for Computer Science notes.
 
