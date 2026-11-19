@@ -3,8 +3,8 @@
 
 For a vector $\vecf{u}$ with $m$ entries
 and a vector $\vecf{v}$ with $n$ entries,
-the [Kronecker product](#def-kronecker-product) of the column vector $\vecf{u}$
-with the row vector $\tp{\vecf{v}}$
+the [Kronecker product](#def-kronecker-product) of the [column vector](linear-algebra.qmd#def-column-vector) $\vecf{u}$
+with the [transpose](linear-algebra.qmd#def-matrix-transpose) $\tp{\vecf{v}}$ of $\vecf{v}$
 [equals](linear-algebra.qmd#def-matrix-equality) the [outer product](#def-outer-product) $\oprod{\vecf{u}}{\vecf{v}}$:
 
 $$
