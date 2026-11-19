@@ -30,6 +30,6 @@ $$
 $$
 
 So $\soprod{\vx}$ is the [Gram matrix](linear-algebra.qmd#def-gram-matrix) of $\matr{A}$,
-and @thm-gram-properties says that a Gram matrix is positive semidefinite.
+and @thm-gram-properties says that a Gram matrix is [positive semidefinite](#def-positive-semidefinite).
 
 :::
