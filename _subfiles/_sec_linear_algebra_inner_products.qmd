@@ -220,6 +220,14 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_cor-self-outer-product-rank.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-self-outer-product-rank.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_thm-outer-product-transpose.qmd >}}
 
 {{< slidebreak >}}

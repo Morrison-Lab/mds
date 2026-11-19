@@ -1,0 +1,30 @@
+:::{#exm-self-outer-product-trace}
+#### The trace of a self outer product
+
+For $\vx = (1, 2)$,
+[the example of a self outer product](linear-algebra.qmd#exm-self-outer-product)
+found $\soprod{\vx} = \begin{bmatrix} 1 & 2 \\ 2 & 4 \end{bmatrix}$.
+Its [trace](#def-trace) and the squared [Euclidean norm](linear-algebra.qmd#def-euclidean-norm) of $\vx$ are
+
+$$
+\ba
+\trf{\soprod{\vx}}
+&= 1 + 4
+&& \text{(definition of the trace)}
+\\
+&= 5
+&& \text{(add)}
+\\
+&= 1^2 + 2^2
+&& \text{(write each diagonal entry as a square)}
+\\
+&= \norm{\vx}^2
+&& \text{(definition of the Euclidean norm, squared)}
+\ea
+$$
+
+as @cor-self-outer-product-trace says.
+
+<!-- no-figure: the example adds two diagonal entries -->
+
+:::
