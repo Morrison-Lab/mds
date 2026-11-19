@@ -1,0 +1,27 @@
+:::{#exm-vec-outer-product}
+#### Vectorizing an outer product
+
+For $\vecf{u} = (1, 2, 3)$ and $\vecf{v} = (4, 5)$,
+[the example of an outer product](#exm-outer-product) found the [outer product](#def-outer-product)
+$\oprod{\vecf{u}}{\vecf{v}}$, whose [column](linear-algebra.qmd#def-matrix-column)s are $(4, 8, 12)$ and $(5, 10, 15)$.
+Its [vectorization](#def-vectorization) and the [Kronecker product](#def-kronecker-product) $\vecf{v} \otimes \vecf{u}$ agree:
+
+$$
+\ba
+\vctf{\oprod{\vecf{u}}{\vecf{v}}}
+&= \begin{bmatrix} 4 \\ 8 \\ 12 \\ 5 \\ 10 \\ 15 \end{bmatrix}
+&& \text{(stack the columns)}
+\\
+&= \begin{bmatrix} 4 \cd \vecf{u} \\ 5 \cd \vecf{u} \end{bmatrix}
+&& \text{(each column is a multiple of } \vecf{u} \text{)}
+\\
+&= \vecf{v} \otimes \vecf{u}
+&& \text{(definition of the Kronecker product)}
+\ea
+$$
+
+as @thm-vec-outer-product says.
+
+<!-- no-figure: the example stacks the two columns of one small matrix -->
+
+:::

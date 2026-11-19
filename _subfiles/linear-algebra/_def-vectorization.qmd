@@ -1,0 +1,15 @@
+:::{#def-vectorization}
+#### Vectorization
+
+The **vectorization**
+[@wikipedia_vectorization]
+of an $m \times n$ [matrix](linear-algebra.qmd#def-matrix) $\matr{A}$
+is the column vector with $mn$ entries
+that stacks the [column](linear-algebra.qmd#def-matrix-column)s $\matr{A}_{:,1}, \ldots, \matr{A}_{:,n}$ of $\matr{A}$ in order:
+
+$$
+\vctf{\matr{A}} \eqdef
+\begin{bmatrix} \matr{A}_{:,1} \\ \vdots \\ \matr{A}_{:,n} \end{bmatrix}
+$$
+
+:::

@@ -214,6 +214,30 @@
 
 {{< include mds/_subfiles/linear-algebra/_exm-kronecker-product.qmd >}}
 
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-kronecker-outer-product.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-kronecker-outer-product.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-vectorization.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-vectorization.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-vec-outer-product.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-vec-outer-product.qmd >}}
+
 # Hilbert spaces {#sec-hilbert-spaces}
 
 {{< include mds/_subfiles/linear-algebra/_def-cauchy-sequence.qmd >}}
