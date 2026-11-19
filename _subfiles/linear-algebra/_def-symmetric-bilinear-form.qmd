@@ -3,7 +3,7 @@
 
 A **symmetric bilinear form**
 [@wikipedia_bilinear_form]
-is a [bilinear form](#def-bilinear-form) $\bform{\matr{A}}{\vx}{\vy}$
+is a [bilinear form](#def-bilinear-form) $\bformfn{\matr{A}}$
 whose [matrix](linear-algebra-matrices.qmd#def-matrix) $\matr{A}$ is [symmetric](#def-symmetric-matrix):
 
 $$

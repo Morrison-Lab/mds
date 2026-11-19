@@ -6,17 +6,17 @@
 Let
 
 $$
-\matr{B} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}, \quad \vx = \begin{bmatrix} 1 \\ 2 \end{bmatrix}, \quad \vy = \begin{bmatrix} 3 \\ -1 \end{bmatrix}.
+\matr{S} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}, \quad \vx = \begin{bmatrix} 1 \\ 2 \end{bmatrix}, \quad \vy = \begin{bmatrix} 3 \\ -1 \end{bmatrix}.
 $$
 
-The [matrix](linear-algebra-matrices.qmd#def-matrix) $\matr{B}$ is [symmetric](#def-symmetric-matrix),
+The [matrix](linear-algebra-matrices.qmd#def-matrix) $\matr{S}$ is [symmetric](#def-symmetric-matrix),
 because its two [off-diagonal entries](linear-algebra-matrices.qmd#def-off-diagonal-entry) are both $2$,
 so its [bilinear form](#def-bilinear-form) is a [symmetric bilinear form](#def-symmetric-bilinear-form).
 At $\vx$ and $\vy$, that form is
 
 $$
 \ba
-\bform{\matr{B}}{\vx}{\vy}
+\bformf{\matr{S}}{\vx}{\vy}
 &= \begin{bmatrix} 1 & 2 \end{bmatrix}
 \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}
 \begin{bmatrix} 3 \\ -1 \end{bmatrix}
@@ -42,7 +42,7 @@ With the vectors swapped, it is
 
 $$
 \ba
-\bform{\matr{B}}{\vy}{\vx}
+\bformf{\matr{S}}{\vy}{\vx}
 &= \begin{bmatrix} 3 & -1 \end{bmatrix}
 \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}
 \begin{bmatrix} 1 \\ 2 \end{bmatrix}

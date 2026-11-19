@@ -13,7 +13,7 @@ The [bilinear form](#def-bilinear-form) of $\matr{A}$ at $\vx$ and $\vy$ is
 
 $$
 \ba
-\bform{\matr{A}}{\vx}{\vy}
+\bformf{\matr{A}}{\vx}{\vy}
 &= \begin{bmatrix} 1 & 2 \end{bmatrix}
 \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix}
 \begin{bmatrix} 3 \\ -1 \end{bmatrix}
@@ -39,7 +39,7 @@ With the vectors swapped, it is
 
 $$
 \ba
-\bform{\matr{A}}{\vy}{\vx}
+\bformf{\matr{A}}{\vy}{\vx}
 &= \begin{bmatrix} 3 & -1 \end{bmatrix}
 \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix}
 \begin{bmatrix} 1 \\ 2 \end{bmatrix}
