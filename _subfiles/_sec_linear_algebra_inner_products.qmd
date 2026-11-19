@@ -206,6 +206,22 @@
 
 {{< include mds/_subfiles/linear-algebra/_thm-outer-product-rank.qmd >}}
 
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-outer-product-transpose.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-outer-product-transpose.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-outer-product-matvec.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-outer-product-matvec.qmd >}}
+
 # Kronecker product {#sec-kronecker-product}
 
 {{< include mds/_subfiles/linear-algebra/_def-kronecker-product.qmd >}}

@@ -1,0 +1,38 @@
+:::{#thm-outer-product-transpose}
+#### The transpose of an outer product
+
+For a vector $\vecf{u}$ with $m$ entries
+and a vector $\vecf{v}$ with $n$ entries,
+the [transpose](linear-algebra.qmd#def-matrix-transpose)
+of the [outer product](#def-outer-product) $\oprod{\vecf{u}}{\vecf{v}}$
+[equals](linear-algebra.qmd#def-matrix-equality) the outer product $\oprod{\vecf{v}}{\vecf{u}}$:
+
+$$
+\underbrace{\tp{\paren{\oprod{\vecf{u}}{\vecf{v}}}}}_{n \times m}
+= \underbrace{\oprod{\vecf{v}}{\vecf{u}}}_{n \times m}
+$$
+
+:::
+
+::: proof
+
+Entry $(i, j)$ of each side, for $i$ from $1$ to $n$ and $j$ from $1$ to $m$:
+
+$$
+\ba
+\sb{\tp{\paren{\oprod{\vecf{u}}{\vecf{v}}}}}_{ij}
+&= \paren{\oprod{\vecf{u}}{\vecf{v}}}_{ji}
+&& \text{(definition of the transpose)}
+\\
+&= u_j v_i
+&& \text{(entries of an outer product)}
+\\
+&= v_i u_j
+&& \text{(multiplication of numbers is commutative)}
+\\
+&= \paren{\oprod{\vecf{v}}{\vecf{u}}}_{ij}
+&& \text{(entries of an outer product)}
+\ea
+$$
+
+:::
