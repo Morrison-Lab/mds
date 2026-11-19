@@ -2961,6 +2961,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra-inner-products#cor-self-outer-product-rank",
+   "site": "mds",
+   "page": "linear-algebra-inner-products",
+   "div": "cor-self-outer-product-rank",
+   "kind": "cor",
+   "title": "A self outer product has rank one",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra-inner-products#def-angle",
    "site": "mds",
    "page": "linear-algebra-inner-products",
@@ -4434,6 +4443,24 @@
    "div": "cor-pd-transpose-product",
    "kind": "cor",
    "title": "A positive definite matrix is a transpose product",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-special-matrices#cor-self-outer-product-psd",
+   "site": "mds",
+   "page": "linear-algebra-special-matrices",
+   "div": "cor-self-outer-product-psd",
+   "kind": "cor",
+   "title": "A self outer product is positive semidefinite",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-special-matrices#cor-self-outer-product-trace",
+   "site": "mds",
+   "page": "linear-algebra-special-matrices",
+   "div": "cor-self-outer-product-trace",
+   "kind": "cor",
+   "title": "The trace of a self outer product is a squared norm",
    "external": false
   },
   {
@@ -8354,6 +8381,18 @@
    "mds/linear-algebra-inner-products#thm-norm-properties"
   ],
   [
+   "mds/linear-algebra-inner-products#cor-self-outer-product-rank",
+   "mds/linear-algebra-inner-products#def-outer-product"
+  ],
+  [
+   "mds/linear-algebra-inner-products#cor-self-outer-product-rank",
+   "mds/linear-algebra-inner-products#def-self-outer-product"
+  ],
+  [
+   "mds/linear-algebra-inner-products#cor-self-outer-product-rank",
+   "mds/linear-algebra-inner-products#thm-outer-product-rank"
+  ],
+  [
    "mds/linear-algebra-inner-products#def-angle",
    "mds/algebra-trigonometry#def-arccosine"
   ],
@@ -9448,6 +9487,22 @@
   [
    "mds/linear-algebra-special-matrices#cor-pd-transpose-product",
    "mds/linear-algebra-special-matrices#thm-spectral"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#cor-self-outer-product-psd",
+   "mds/linear-algebra-special-matrices#def-positive-semidefinite"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#cor-self-outer-product-psd",
+   "mds/linear-algebra-special-matrices#thm-gram-properties"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#cor-self-outer-product-trace",
+   "mds/linear-algebra-special-matrices#def-trace"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#cor-self-outer-product-trace",
+   "mds/linear-algebra-special-matrices#thm-outer-product-trace"
   ],
   [
    "mds/linear-algebra-special-matrices#def-eigendecomposition",
