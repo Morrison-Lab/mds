@@ -2,10 +2,10 @@
 #### The trace of an outer product
 
 For $\vecf{a} = (1, 2)$ and $\vecf{b} = (3, 4)$,
-[the remark on outer and dot products](#rem-outer-vs-dot-product)
-found the [outer product](#def-outer-product) $\oprod{\vecf{a}}{\vecf{b}}$
+[the remark on outer and dot products](linear-algebra.qmd#rem-outer-vs-dot-product)
+found the [outer product](linear-algebra.qmd#def-outer-product) $\oprod{\vecf{a}}{\vecf{b}}$
 and the [dot product](linear-algebra.qmd#def-dot-product) $\tprod{\vecf{a}}{\vecf{b}} = 11$.
-The [trace](linear-algebra.qmd#def-trace) of the outer product is
+The [trace](#def-trace) of the outer product is
 
 $$
 \ba
