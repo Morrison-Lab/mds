@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-18 21:51:30 (PST)
+Last modified: 2026-11-18 22:40:16 (PST)
 
 This page moved to [Number Systems](https://morrison-lab.github.io/mcs/number-systems.html) in the Math for Computer Science notes.
 
