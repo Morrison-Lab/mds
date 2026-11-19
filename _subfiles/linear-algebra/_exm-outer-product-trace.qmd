@@ -21,7 +21,7 @@ $$
 \ea
 $$
 
-The trace equals the dot product,
+The trace and the dot product are the same number,
 as @thm-outer-product-trace says.
 
 <!-- no-figure: the example adds two diagonal entries -->

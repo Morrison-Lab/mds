@@ -2,7 +2,7 @@
 #### Transposing an outer product
 
 For $\vecf{u} = (1, 2, 3)$ and $\vecf{v} = (4, 5)$,
-[the example of an outer product](#exm-outer-product) found the $3 \times 2$ matrix $\oprod{\vecf{u}}{\vecf{v}}$.
+[the example of an outer product](#exm-outer-product) found the $3 \times 2$ [matrix](linear-algebra.qmd#def-matrix) $\oprod{\vecf{u}}{\vecf{v}}$.
 Swapping the two vectors gives its [transpose](linear-algebra.qmd#def-matrix-transpose):
 
 $$
@@ -26,7 +26,7 @@ $$
 \ea
 $$
 
-Each row of this matrix is a column of $\oprod{\vecf{u}}{\vecf{v}}$,
+Each [row](linear-algebra.qmd#def-matrix-row) of this matrix is a [column](linear-algebra.qmd#def-matrix-column) of $\oprod{\vecf{u}}{\vecf{v}}$,
 as @thm-outer-product-transpose says.
 
 <!-- no-figure: the example multiplies out one small matrix -->

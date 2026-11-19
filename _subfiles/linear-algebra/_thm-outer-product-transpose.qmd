@@ -1,11 +1,11 @@
 :::{#thm-outer-product-transpose}
 #### The transpose of an outer product
 
-For a vector $\vecf{u}$ of length $m$
-and a vector $\vecf{v}$ of length $n$,
+For a vector $\vecf{u}$ with $m$ entries
+and a vector $\vecf{v}$ with $n$ entries,
 the [transpose](linear-algebra.qmd#def-matrix-transpose)
 of the [outer product](#def-outer-product) $\oprod{\vecf{u}}{\vecf{v}}$
-is the outer product $\oprod{\vecf{v}}{\vecf{u}}$:
+[equals](linear-algebra.qmd#def-matrix-equality) the outer product $\oprod{\vecf{v}}{\vecf{u}}$:
 
 $$
 \underbrace{\tp{\paren{\oprod{\vecf{u}}{\vecf{v}}}}}_{n \times m}

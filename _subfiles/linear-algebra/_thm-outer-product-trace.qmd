@@ -1,10 +1,11 @@
 :::{#thm-outer-product-trace}
 #### The trace of an outer product is a dot product
 
-For two vectors $\vecf{u}$ and $\vecf{v}$ of the same length $n$,
+For two vectors $\vecf{u}$ and $\vecf{v}$ with the same number $n$ of entries,
 the [trace](#def-trace)
 of the [outer product](linear-algebra.qmd#def-outer-product) $\oprod{\vecf{u}}{\vecf{v}}$
-equals the [dot product](linear-algebra.qmd#def-dot-product) $\tprod{\vecf{u}}{\vecf{v}}$:
+and the [dot product](linear-algebra.qmd#def-dot-product) $\tprod{\vecf{u}}{\vecf{v}}$
+are the same number:
 
 $$
 \trf{\underbrace{\oprod{\vecf{u}}{\vecf{v}}}_{n \times n}}

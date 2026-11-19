@@ -1,12 +1,12 @@
 :::{#thm-outer-product-matvec}
 #### An outer product times a vector
 
-For a vector $\vecf{u}$ of length $m$
-and two vectors $\vecf{v}$ and $\vecf{w}$ of length $n$,
+For a vector $\vecf{u}$ with $m$ entries
+and two vectors $\vecf{v}$ and $\vecf{w}$ with $n$ entries,
 the [product](linear-algebra.qmd#def-matvec-mult)
 of the [outer product](#def-outer-product) $\oprod{\vecf{u}}{\vecf{v}}$
 with $\vecf{w}$
-equals the [scalar multiple](linear-algebra.qmd#def-scalar-mult) of $\vecf{u}$
+[equals](linear-algebra.qmd#def-matrix-equality) the [scalar multiple](linear-algebra.qmd#def-scalar-mult) of $\vecf{u}$
 by the [dot product](linear-algebra.qmd#def-dot-product) $\tprod{\vecf{v}}{\vecf{w}}$:
 
 $$
