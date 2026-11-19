@@ -26,7 +26,7 @@ $$
 \ea
 $$
 
-Each [row](linear-algebra.qmd#def-matrix-row) of this matrix is a [column](linear-algebra.qmd#def-matrix-column) of $\oprod{\vecf{u}}{\vecf{v}}$,
+Each [row of](linear-algebra.qmd#def-matrix-row) this matrix is a [column of](linear-algebra.qmd#def-matrix-column) $\oprod{\vecf{u}}{\vecf{v}}$,
 as @thm-outer-product-transpose says.
 
 <!-- no-figure: the example multiplies out one small matrix -->
