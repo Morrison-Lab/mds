@@ -16,7 +16,7 @@ $$
 
 ::: proof
 
-Column $j$ of $\oprod{\vecf{u}}{\vecf{v}}$ has entries $u_1 v_j, \ldots, u_m v_j$,
+[Column](linear-algebra.qmd#def-matrix-column) $j$ of $\oprod{\vecf{u}}{\vecf{v}}$ has entries $u_1 v_j, \ldots, u_m v_j$,
 so it is the vector $v_j \vecf{u}$.
 Then
 

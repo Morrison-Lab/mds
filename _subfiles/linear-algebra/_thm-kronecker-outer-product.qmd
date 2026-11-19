@@ -16,8 +16,9 @@ $$
 
 ::: proof
 
-The Kronecker product $\vecf{u} \otimes \tp{\vecf{v}}$ has one column of blocks,
-and its block in row $i$ is $u_i \tp{\vecf{v}}$, a $1 \times n$ row.
+The [Kronecker product](#def-kronecker-product) $\vecf{u} \otimes \tp{\vecf{v}}$
+stacks the $1 \times n$ blocks $u_1 \tp{\vecf{v}}, \ldots, u_m \tp{\vecf{v}}$,
+so its [row](linear-algebra.qmd#def-matrix-row) $i$ is $u_i \tp{\vecf{v}}$.
 So entry $(i, j)$ of each side, for $i$ from $1$ to $m$ and $j$ from $1$ to $n$, is
 
 $$
