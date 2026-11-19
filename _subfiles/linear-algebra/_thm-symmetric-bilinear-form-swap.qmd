@@ -15,7 +15,7 @@ $$
 
 Swapping the vectors relies on the fact that
 [a $1 \times 1$ product equals its own transpose](linear-algebra-matrices.qmd#thm-scalar-transpose),
-in the second step below:
+which justifies the step labeled with that fact:
 
 $$
 \ba
