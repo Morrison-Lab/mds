@@ -1,0 +1,22 @@
+# Flags a page a PR adds to when the page, with its includes expanded,
+# has more than 600 math expressions or 5000 source lines (the lab's rule:
+# a page loads and renders its math in under 5 seconds, mds#156).
+# Warn-only while the 12 pages over the limit on 2026-11-19 are split
+# (mds#156); set fail back to its default once they are.
+name: Check page length
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check:
+    permissions:
+      contents: read
+    uses: Morrison-Lab/gha/.github/workflows/check-page-length.yml@v3
+    with:
+      fail: false
+      paths-ignore: '_extensions/**,**/outtakes/**'
