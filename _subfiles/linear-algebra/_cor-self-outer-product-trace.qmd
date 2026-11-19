@@ -3,7 +3,7 @@
 
 For a vector $\vx$,
 the [trace](#def-trace) of the [self outer product](linear-algebra.qmd#def-self-outer-product) $\soprod{\vx}$
-and the square of the [Euclidean norm](linear-algebra.qmd#def-euclidean-norm) $\norm{\vx}$
+and the [square](algebra.qmd#def-square) of the [Euclidean norm](linear-algebra.qmd#def-euclidean-norm) $\norm{\vx}$
 are the same number:
 
 $$
@@ -30,7 +30,7 @@ $$
 
 The second step is @thm-outer-product-trace,
 with $\vx$ in place of both $\vecf{u}$ and $\vecf{v}$.
-The third step squares both sides of
+The third step takes the [square](algebra.qmd#def-square) of both sides of
 [the formula for the Euclidean norm from the dot product](linear-algebra.qmd#thm-norm-dot-product).
 
 :::

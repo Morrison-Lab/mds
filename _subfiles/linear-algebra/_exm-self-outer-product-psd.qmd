@@ -28,7 +28,7 @@ $$
 The quadratic form is $0$ here, which is not negative,
 as @cor-self-outer-product-psd says.
 It is not positive either,
-because $\vecf{w}$ is orthogonal to $\vx$.
+because $\vecf{w}$ is [orthogonal](linear-algebra-vectors.qmd#def-orthogonal-vectors) to $\vx$.
 
 <!-- no-figure: the example multiplies out one small quadratic form -->
 

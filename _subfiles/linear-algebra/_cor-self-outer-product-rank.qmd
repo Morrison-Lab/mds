@@ -17,6 +17,6 @@ The self outer product $\soprod{\vx}$ is the [outer product](#def-outer-product)
 Both of its factors are the nonzero vector $\vx$,
 so @thm-outer-product-rank,
 with $\vx$ in place of both $\vecf{u}$ and $\vecf{v}$,
-gives rank $1$.
+gives [rank](linear-algebra.qmd#def-rank) $1$.
 
 :::
