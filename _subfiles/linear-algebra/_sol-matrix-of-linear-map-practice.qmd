@@ -8,7 +8,7 @@ f(\vecf{e}_1) = f\paren{\begin{bmatrix} 1 \\ 0 \end{bmatrix}} = \begin{bmatrix} 
 f(\vecf{e}_2) = f\paren{\begin{bmatrix} 0 \\ 1 \end{bmatrix}} = \begin{bmatrix} 1 \\ 0 \\ -1 \end{bmatrix}.
 $$
 
-These values are the [columns](#def-matrix-column) of the [matrix of $f$](#def-matrix-of-linear-map):
+The [matrix of $f$](#def-matrix-of-linear-map) has these values as its [columns](linear-algebra-matrices.qmd#def-matrix-column):
 
 $$
 \matr{A} = \begin{bmatrix} 0 & 1 \\ 1 & 0 \\ 1 & -1 \end{bmatrix}.

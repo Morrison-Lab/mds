@@ -1,0 +1,15 @@
+---
+title: "Linear and Affine Maps"
+format:
+  html: default
+  revealjs:
+    output-file: linear-algebra-linear-maps-slides.html
+  pdf:
+    output-file: linear-algebra-linear-maps-handout.pdf
+  docx:
+    output-file: linear-algebra-linear-maps.docx
+---
+
+{{< include latex-macros/macros.qmd >}}
+
+{{< include mds/_subfiles/_sec_linear_algebra_matrices_linear_affine_maps.qmd >}}

@@ -14,7 +14,7 @@ Find the [matrix of $f$](#def-matrix-of-linear-map).
 ::: {.callout-tip}
 #### Hint
 
-[Column $j$ of the matrix](#def-matrix-column) is $f(\vecf{e}_j)$.
+[Column $j$ of the matrix](linear-algebra-matrices.qmd#def-matrix-column) is $f(\vecf{e}_j)$.
 
 :::
 

@@ -1,7 +1,7 @@
 :::{#exr-transpose-sum-practice}
 #### Transposing a sum of two matrices
 
-@thm-transpose-sum lets a [transpose](#def-matrix-transpose) be taken before or after adding,
+@thm-transpose-sum lets a [transpose](linear-algebra-matrices.qmd#def-matrix-transpose) be taken before or after adding,
 whichever is less work.
 Let
 
@@ -17,7 +17,7 @@ Find $\tp{(\matr{A} + \matr{B})}$.
 #### Hint
 
 Add first with @def-matrix-addition,
-then take the [transpose](#def-matrix-transpose).
+then take the [transpose](linear-algebra-matrices.qmd#def-matrix-transpose).
 
 :::
 

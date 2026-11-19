@@ -3,7 +3,7 @@
 
 @thm-complement-null-space turns the [orthogonal complement](#def-orthogonal-complement)
 of a [column space](linear-algebra-rank-nullity.qmd#def-column-space) into a [null space](linear-algebra-rank-nullity.qmd#def-null-space),
-which a [linear system](linear-algebra-matrices.qmd#def-linear-system) describes.
+which a [linear system](linear-algebra-matrix-multiplication.qmd#def-linear-system) describes.
 Let
 
 $$

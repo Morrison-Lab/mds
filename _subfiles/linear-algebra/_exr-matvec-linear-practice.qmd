@@ -1,7 +1,7 @@
 :::{#exr-matvec-linear-practice}
 #### Applying a matrix to a combination without knowing the matrix
 
-@thm-matvec-linear lets a [matrix-vector product](linear-algebra-matrices.qmd#def-matvec-mult) of a combination
+@thm-matvec-linear lets a [matrix-vector product](linear-algebra-matrix-multiplication.qmd#def-matvec-mult) of a combination
 be found from the matrix-vector product of each part,
 even when the [matrix](linear-algebra-matrices.qmd#def-matrix) itself is not known.
 Suppose that a matrix $\matr{A}$ satisfies

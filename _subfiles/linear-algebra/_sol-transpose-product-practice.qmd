@@ -1,7 +1,7 @@
 :::{#sol-transpose-product-practice}
 
-No: the two [matrices](#def-matrix) differ,
-so keeping the order of the factors gives the wrong [transpose](#def-matrix-transpose).
+No: the two [matrices](linear-algebra-matrices.qmd#def-matrix) differ,
+so keeping the order of the factors gives the wrong [transpose](linear-algebra-matrices.qmd#def-matrix-transpose).
 
 The [product](#def-matrix-mult) $\matr{A}\matr{B}$ and its transpose are
 
