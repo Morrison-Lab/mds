@@ -2,7 +2,7 @@
 #### Finding the orthogonal complement of a column space
 
 @thm-complement-null-space turns the [orthogonal complement](#def-orthogonal-complement)
-of a [column space](linear-algebra-rank-nullity.qmd#def-column-space) into a [null space](linear-algebra-rank-nullity.qmd#def-null-space),
+of a [column space](linear-algebra-column-null-space.qmd#def-column-space) into a [null space](linear-algebra-column-null-space.qmd#def-null-space),
 which a [linear system](linear-algebra-matrix-multiplication.qmd#def-linear-system) describes.
 Let
 

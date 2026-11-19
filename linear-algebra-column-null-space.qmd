@@ -1,0 +1,15 @@
+---
+title: "Column Space and Null Space"
+format:
+  html: default
+  revealjs:
+    output-file: linear-algebra-column-null-space-slides.html
+  pdf:
+    output-file: linear-algebra-column-null-space-handout.pdf
+  docx:
+    output-file: linear-algebra-column-null-space.docx
+---
+
+{{< include latex-macros/macros.qmd >}}
+
+{{< include mds/_subfiles/_sec_linear_algebra_rank_nullity_spaces.qmd >}}
