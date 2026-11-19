@@ -1,18 +1,19 @@
 :::{#rem-matrix-induced-inner-product-bilinear}
 #### A matrix-induced inner product is a symmetric bilinear form
 
-When $\matr{A}$ is symmetric and positive definite (@def-positive-definite),
-its matrix-induced inner product (@def-matrix-induced-inner-product)
-equals its symmetric bilinear form (@def-symmetric-bilinear-form):
+When $\matr{A}$ is [symmetric](#def-symmetric-matrix) and [positive definite](#def-positive-definite),
+its [matrix-induced inner product](#def-matrix-induced-inner-product)
+is the same function as its [symmetric bilinear form](#def-symmetric-bilinear-form),
+since both are defined as $\tp{\vx}\, \matr{A}\, \vy$:
 
 $$
 \iprod{\vx}{\vy}_{\matr{A}} = \bform{\matr{A}}{\vx}{\vy}.
 $$
 
-A symmetric matrix that is not positive definite
+A [symmetric matrix](#def-symmetric-matrix) that is not positive definite
 still has a symmetric bilinear form,
-but that form is not an inner product.
-For example, take the symmetric matrix $\matr{B}$ of @exm-symmetric-bilinear-form
+but that form is not an [inner product](linear-algebra-inner-products.qmd#def-inner-product).
+For example, take $\matr{B}$ from @exm-symmetric-bilinear-form
 and the vector $\vecf{z} = \tp{(1, -1)}$:
 
 $$
@@ -39,7 +40,7 @@ $$
 \ea
 $$
 
-The quadratic form of $\matr{B}$ is negative at $\vecf{z}$,
-so $\matr{B}$ is not positive definite (@def-positive-definite).
+The [quadratic form](#def-quadratic-form) of $\matr{B}$ is negative at $\vecf{z}$,
+so $\matr{B}$ is not positive definite.
 
 :::

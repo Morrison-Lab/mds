@@ -6,16 +6,12 @@
 Let
 
 $$
-\matr{B} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix},
-\quad
-\vx = \begin{bmatrix} 1 \\ 2 \end{bmatrix},
-\quad
-\vy = \begin{bmatrix} 3 \\ -1 \end{bmatrix}.
+\matr{B} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}, \quad \vx = \begin{bmatrix} 1 \\ 2 \end{bmatrix}, \quad \vy = \begin{bmatrix} 3 \\ -1 \end{bmatrix}.
 $$
 
-The matrix $\matr{B}$ is symmetric (@def-symmetric-matrix),
-because its two off-diagonal entries are both $2$,
-so its bilinear form is a symmetric bilinear form (@def-symmetric-bilinear-form).
+The [matrix](linear-algebra-matrices.qmd#def-matrix) $\matr{B}$ is [symmetric](#def-symmetric-matrix),
+because its two [off-diagonal entries](linear-algebra-matrices.qmd#def-off-diagonal-entry) are both $2$,
+so its [bilinear form](#def-bilinear-form) is a [symmetric bilinear form](#def-symmetric-bilinear-form).
 At $\vx$ and $\vy$, that form is
 
 $$
@@ -69,7 +65,7 @@ $$
 $$
 
 the same value, as @thm-symmetric-bilinear-form-swap says it must be.
-The matrix $\matr{A}$ of @exm-bilinear-form is not symmetric,
+By contrast, $\matr{A}$ in @exm-bilinear-form is not symmetric,
 so its bilinear form is not a symmetric bilinear form,
 and swapping the vectors changed its value from $-5$ to $9$.
 

@@ -1,8 +1,8 @@
 :::{#rem-quadratic-form-bilinear}
 #### A quadratic form is a bilinear form with equal vectors
 
-Setting $\vy = \vx$ in the bilinear form of $\matr{S}$ (@def-bilinear-form)
-gives the quadratic form of $\matr{S}$ (@def-quadratic-form):
+Setting $\vy = \vx$ in the [bilinear form](#def-bilinear-form) of $\matr{S}$
+gives the [quadratic form](#def-quadratic-form) of $\matr{S}$:
 
 $$
 \bform{\matr{S}}{\vx}{\vx} = \qform{\matr{S}}{\vx}.

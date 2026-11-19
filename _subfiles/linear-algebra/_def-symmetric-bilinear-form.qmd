@@ -3,8 +3,8 @@
 
 A **symmetric bilinear form**
 [@wikipedia_bilinear_form]
-is a bilinear form $\bform{\matr{A}}{\vx}{\vy}$ (@def-bilinear-form)
-whose matrix $\matr{A}$ is symmetric (@def-symmetric-matrix):
+is a [bilinear form](#def-bilinear-form) $\bform{\matr{A}}{\vx}{\vy}$
+whose [matrix](linear-algebra-matrices.qmd#def-matrix) $\matr{A}$ is [symmetric](#def-symmetric-matrix):
 
 $$
 \tp{\matr{A}} = \matr{A}.

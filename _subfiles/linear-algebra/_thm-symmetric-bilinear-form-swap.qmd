@@ -1,9 +1,9 @@
 :::{#thm-symmetric-bilinear-form-swap}
 #### A symmetric bilinear form does not depend on the order of its vectors
 
-If $\matr{A}$ is a symmetric $p \times p$ matrix (@def-symmetric-matrix),
-then its bilinear form (@def-bilinear-form) is the same with its vectors swapped:
-for all $\vx, \vy \in \reals^p$,
+If $\matr{A}$ is a $p \times p$ [symmetric matrix](#def-symmetric-matrix),
+then its [bilinear form](#def-bilinear-form) is the same with its vectors swapped,
+[for all](https://morrison-lab.github.io/mcs/proof-writing.html#def-universal-quantifier) $\vx, \vy \in \reals^p$:
 
 $$
 \bform{\matr{A}}{\vy}{\vx} = \bform{\matr{A}}{\vx}{\vy}.
