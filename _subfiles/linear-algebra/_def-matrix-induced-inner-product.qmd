@@ -1,7 +1,7 @@
 :::{#def-matrix-induced-inner-product}
 #### Matrix-induced inner product ($\matr{A}$-inner product)
 
-Let $\matr{A}$ be a $p \times p$ [symmetric](#def-symmetric-matrix) [positive definite](#def-positive-definite) matrix.
+Let $\matr{A}$ be a $p \times p$ [symmetric](#def-symmetric-matrix) [positive definite matrix](#def-positive-definite).
 The **matrix-induced inner product** (or **$\matr{A}$-inner product**)
 on $\reals^p$
 is the [symmetric bilinear form](#def-symmetric-bilinear-form) of $\matr{A}$,
