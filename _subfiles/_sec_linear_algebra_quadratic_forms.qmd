@@ -1,0 +1,15 @@
+{{< include mds/_subfiles/linear-algebra/_def-quadratic-form.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_note-def-quadratic-form.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-quadratic-form-additive.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-symmetric-part.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-quadratic-form-symmetric.qmd >}}
