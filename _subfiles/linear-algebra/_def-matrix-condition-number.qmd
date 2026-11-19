@@ -8,7 +8,7 @@ counting all $\min(n, p)$ [singular values](linear-algebra-decompositions.qmd#de
 [@wikipedia_condition_number]:
 
 $$
-\condnum(\matr{A}) \eqdef \frac{\singval_{\max}}{\singval_{\min}} = \frac{\singval_1}{\singval_{\min(n,p)}}.
+\condnum(\matr{A}) \eqdef \frac{\singval_1}{\singval_{\min(n,p)}}.
 $$
 
 This generalizes @def-condition-number,
