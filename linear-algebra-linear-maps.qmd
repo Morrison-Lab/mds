@@ -12,4 +12,6 @@ format:
 
 {{< include latex-macros/macros.qmd >}}
 
+# Linear and affine maps
+
 {{< include mds/_subfiles/_sec_linear_algebra_matrices_linear_affine_maps.qmd >}}
