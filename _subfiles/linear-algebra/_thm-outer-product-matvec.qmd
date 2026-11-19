@@ -1,0 +1,46 @@
+:::{#thm-outer-product-matvec}
+#### An outer product times a vector
+
+For a vector $\vecf{u}$ of length $m$
+and two vectors $\vecf{v}$ and $\vecf{w}$ of length $n$,
+the [product](linear-algebra.qmd#def-matvec-mult)
+of the [outer product](#def-outer-product) $\oprod{\vecf{u}}{\vecf{v}}$
+with $\vecf{w}$
+equals the [scalar multiple](linear-algebra.qmd#def-scalar-mult) of $\vecf{u}$
+by the [dot product](linear-algebra.qmd#def-dot-product) $\tprod{\vecf{v}}{\vecf{w}}$:
+
+$$
+\underbrace{\paren{\oprod{\vecf{u}}{\vecf{v}}} \vecf{w}}_{m \times 1}
+= \paren{\tprod{\vecf{v}}{\vecf{w}}} \underbrace{\vecf{u}}_{m \times 1}
+$$
+
+:::
+
+::: proof
+
+Entry $i$ of each side, for $i$ from $1$ to $m$:
+
+$$
+\ba
+\sb{\paren{\oprod{\vecf{u}}{\vecf{v}}} \vecf{w}}_{i}
+&= \sumto{j}{n} \paren{\oprod{\vecf{u}}{\vecf{v}}}_{ij} w_j
+&& \text{(definition of matrix-vector multiplication)}
+\\
+&= \sumto{j}{n} u_i v_j w_j
+&& \text{(entries of an outer product)}
+\\
+&= u_i \sumto{j}{n} v_j w_j
+&& \text{(factor } u_i \text{ out of the sum)}
+\\
+&= u_i \paren{\tprod{\vecf{v}}{\vecf{w}}}
+&& \text{(definition of the dot product)}
+\\
+&= \paren{\tprod{\vecf{v}}{\vecf{w}}} u_i
+&& \text{(multiplication of numbers is commutative)}
+\\
+&= \sb{\paren{\tprod{\vecf{v}}{\vecf{w}}} \vecf{u}}_{i}
+&& \text{(definition of scalar multiplication)}
+\ea
+$$
+
+:::
