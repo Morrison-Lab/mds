@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-20 00:54:12 (PST)
+Last modified: 2026-11-20 01:54:00 (PST)
 
 > **NOTE:**
 >
@@ -665,7 +665,7 @@ Here the [objective](#def-objective-function) is a quadratic $f(\mathord{\smash[
 >   &= \begin{bmatrix} 2 & 2 \\ 2 & 2 \end{bmatrix},
 >   \end{aligned}$$
 >
->   whose columns are equal. So $\mathbf{M} {(1, -1)}^{\top} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$, and $\mathbf{M}$ is not [invertible](linear-algebra-diagonalization.llms.md#thm-invertible-rank), since a [square matrix](linear-algebra-matrix-multiplication.llms.md#def-square-matrix) is invertible exactly when its [null space](linear-algebra-rank-nullity.llms.md#def-null-space) is zero. The two constraints both read $x_1 + x_2 = b_i$, so they have no solution at all when $b_1 \ne b_2$. When $b_1 = b_2$ a unique minimizer still exists,
+>   whose columns are equal. So $\mathbf{M} {(1, -1)}^{\top} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$, and $\mathbf{M}$ is not [invertible](linear-algebra-diagonalization.llms.md#thm-invertible-rank), since a [square matrix](linear-algebra-matrix-multiplication.llms.md#def-square-matrix) is invertible exactly when its [null space](linear-algebra-column-null-space.llms.md#def-null-space) is zero. The two constraints both read $x_1 + x_2 = b_i$, so they have no solution at all when $b_1 \ne b_2$. When $b_1 = b_2$ a unique minimizer still exists,
 >
 >   $$\begin{aligned}
 >   x_1 &= x_2 \\

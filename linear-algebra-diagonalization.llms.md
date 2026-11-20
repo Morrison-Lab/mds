@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-20 00:54:12 (PST)
+Last modified: 2026-11-20 01:54:00 (PST)
 
 # 1 Similarity and diagonalization
 
@@ -42,7 +42,7 @@ Last modified: 2026-11-20 00:54:12 (PST)
 > && \text{(}\href{linear-algebra-matrix-multiplication.qmd#def-matvec-mult}{\text{Definition~8 in Matrix Multiplication}}\text{)}
 > \end{aligned}$$
 >
-> so $\mathcal{N}(\mathbf{A}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_n\right\}\mathclose{}$, the nullity is $0$, and $\operatorname{rank}(\mathbf{A}) = n$ ([Theorem 8 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-nullity)).
+> so $\mathcal{N}(\mathbf{A}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_n\right\}\mathclose{}$, the nullity is $0$, and $\operatorname{rank}(\mathbf{A}) = n$ ([Theorem 2 in Rank-Nullity and Rank Factorization](linear-algebra-rank-nullity.llms.md#thm-rank-nullity)).
 >
 > **Rank** $n$ implies invertible. Every system $\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ has exactly one solution ([Corollary 2 in Projections and Linear Systems](linear-algebra-projections.llms.md#cor-solution-unique), both parts, with $m = n$). Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_j$ solve $\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_j = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j$ ([Definition 21 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)), and let $\mathbf{B}$ have columns $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_n$. Column $j$ of $\mathbf{A} \mathbf{B}$ is $\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_j = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j$ (1), so $\mathbf{A} \mathbf{B} = \mathbf{I}_n$. For the other order,
 >
@@ -61,7 +61,7 @@ Last modified: 2026-11-20 00:54:12 (PST)
 > && \text{(arithmetic)}
 > \end{aligned}$$
 >
-> so every column of $\mathbf{B} \mathbf{A} - \mathbf{I}_n$ is in $\mathcal{N}(\mathbf{A}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_n\right\}\mathclose{}$ (1), and $\mathbf{B} \mathbf{A} = \mathbf{I}_n$. So $\mathbf{B}$ satisfies [Definition 6 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-invertible-matrix). The two conditions in the statement are equivalent by [Theorem 8 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-nullity): the nullity is $0$ exactly when $\mathcal{N}(\mathbf{A}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_n\right\}\mathclose{}$, because a subspace of dimension $0$ has the empty list as a basis, whose span is $\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}$ ([Definition 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension), [Definition 5 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-span)), and $\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}$ has dimension $0$ ([Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension)).
+> so every column of $\mathbf{B} \mathbf{A} - \mathbf{I}_n$ is in $\mathcal{N}(\mathbf{A}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_n\right\}\mathclose{}$ (1), and $\mathbf{B} \mathbf{A} = \mathbf{I}_n$. So $\mathbf{B}$ satisfies [Definition 6 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-invertible-matrix). The two conditions in the statement are equivalent by [Theorem 2 in Rank-Nullity and Rank Factorization](linear-algebra-rank-nullity.llms.md#thm-rank-nullity): the nullity is $0$ exactly when $\mathcal{N}(\mathbf{A}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_n\right\}\mathclose{}$, because a subspace of dimension $0$ has the empty list as a basis, whose span is $\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}$ ([Definition 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension), [Definition 5 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-span)), and $\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}$ has dimension $0$ ([Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension)).
 
 > **NOTE:**
 >
@@ -72,7 +72,7 @@ Last modified: 2026-11-20 00:54:12 (PST)
 
 > **NOTE:**
 >
-> **Definition 1 (Eigenspace)** Let $\lambda$ be an eigenvalue of a $p \times p$ matrix $\mathbf{A}$ ([Definition 18 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-eigenvalue)). The **eigenspace** [\[2\]](#ref-wikipedia_eigenvalues_and_eigenvectors) of $\lambda$ is $\mathcal{E}_\lambda\stackrel{\text{def}}{=}\mathcal{N}(\mathbf{A} - \lambda\,\mathbf{I}_p)$. It is a subspace of $\mathbb{R}^p$ ([Theorem 2 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-null-space-subspace)).
+> **Definition 1 (Eigenspace)** Let $\lambda$ be an eigenvalue of a $p \times p$ matrix $\mathbf{A}$ ([Definition 18 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-eigenvalue)). The **eigenspace** [\[2\]](#ref-wikipedia_eigenvalues_and_eigenvectors) of $\lambda$ is $\mathcal{E}_\lambda\stackrel{\text{def}}{=}\mathcal{N}(\mathbf{A} - \lambda\,\mathbf{I}_p)$. It is a subspace of $\mathbb{R}^p$ ([Theorem 2 in Column Space and Null Space](linear-algebra-column-null-space.llms.md#thm-null-space-subspace)).
 
 > **NOTE:**
 >
@@ -124,7 +124,7 @@ Last modified: 2026-11-20 00:54:12 (PST)
 > && \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-identity}{\text{Theorem~4 in Matrix Multiplication}}\text{)}
 > \end{aligned}$$
 >
-> so $\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \lambda\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ exactly when $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \in \mathcal{N}(\mathbf{A} - \lambda\,\mathbf{I}_p)$; the nonzero such $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ are the eigenvectors for $\lambda$. So $\lambda$ is an eigenvalue exactly when that null space contains a nonzero vector, which by [Theorem 1](#thm-invertible-rank) is exactly when $\mathbf{A} - \lambda\,\mathbf{I}_p$ is singular. With $\lambda= 0$, $\mathbf{A} - 0\,\mathbf{I}_p = \mathbf{A}$. An eigenspace is a null space, so it is a subspace ([Theorem 2 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-null-space-subspace)).
+> so $\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \lambda\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ exactly when $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \in \mathcal{N}(\mathbf{A} - \lambda\,\mathbf{I}_p)$; the nonzero such $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ are the eigenvectors for $\lambda$. So $\lambda$ is an eigenvalue exactly when that null space contains a nonzero vector, which by [Theorem 1](#thm-invertible-rank) is exactly when $\mathbf{A} - \lambda\,\mathbf{I}_p$ is singular. With $\lambda= 0$, $\mathbf{A} - 0\,\mathbf{I}_p = \mathbf{A}$. An eigenspace is a null space, so it is a subspace ([Theorem 2 in Column Space and Null Space](linear-algebra-column-null-space.llms.md#thm-null-space-subspace)).
 
 > **NOTE:**
 >
@@ -865,10 +865,10 @@ Last modified: 2026-11-20 00:54:12 (PST)
 > && \text{(}\href{#thm-invertible-rank}{\text{Theorem~1}}\text{)}
 > \\
 > &\iff \mathcal{N}(\mathbf{X}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_p\right\}\mathclose{}
-> && \text{(}\href{linear-algebra-rank-nullity.qmd#thm-null-gram}{\text{Theorem~6 in Column Space, Null Space and Rank-Nullity}}\text{)}
+> && \text{(}\href{linear-algebra-column-null-space.qmd#thm-null-gram}{\text{Theorem~6 in Column Space and Null Space}}\text{)}
 > \\
 > &\iff \mathbf{X}\text{ has full column rank.}
-> && \text{(}\href{linear-algebra-rank-nullity.qmd#thm-independent-null-space}{\text{Theorem~3 in Column Space, Null Space and Rank-Nullity}}\text{)}
+> && \text{(}\href{linear-algebra-column-null-space.qmd#thm-independent-null-space}{\text{Theorem~3 in Column Space and Null Space}}\text{)}
 > \end{aligned}$$
 
 > **NOTE:**
@@ -877,7 +877,7 @@ Last modified: 2026-11-20 00:54:12 (PST)
 >
 > $${\mathbf{X}}^{\top}\mathbf{X}= \begin{bmatrix} 3 & 6 \\ 6 & 12 \end{bmatrix},$$
 >
-> which is singular: $(2, -1)$ is in its null space, because $\mathbf{X}(2, -1) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_3$ ([Example 5 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#exm-independent-null-space)). For the full-column-rank matrix of [Example 1 in Projections and Linear Systems](linear-algebra-projections.llms.md#exm-gram-invertible), ${\mathbf{X}}^{\top}\mathbf{X}$ is invertible.
+> which is singular: $(2, -1)$ is in its null space, because $\mathbf{X}(2, -1) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_3$ ([Example 5 in Column Space and Null Space](linear-algebra-column-null-space.llms.md#exm-independent-null-space)). For the full-column-rank matrix of [Example 1 in Projections and Linear Systems](linear-algebra-projections.llms.md#exm-gram-invertible), ${\mathbf{X}}^{\top}\mathbf{X}$ is invertible.
 
 > **NOTE:**
 >

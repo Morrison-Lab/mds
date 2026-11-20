@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-20 00:54:12 (PST)
+Last modified: 2026-11-20 01:54:00 (PST)
 
 # 1 Special Matrices
 
@@ -2365,7 +2365,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 
 > **NOTE:**
 >
-> **Theorem 19 (Entries and symmetry of a Gram matrix)** Let $\mathbf{A}$ be an $m \times n$ matrix with columns $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_n$, and let $\mathbf{G} = {\mathbf{A}}^{\top} \mathbf{A}$ ([Definition 6 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-gram-matrix)).
+> **Theorem 19 (Entries and symmetry of a Gram matrix)** Let $\mathbf{A}$ be an $m \times n$ matrix with columns $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_n$, and let $\mathbf{G} = {\mathbf{A}}^{\top} \mathbf{A}$ ([Definition 6 in Column Space and Null Space](linear-algebra-column-null-space.llms.md#def-gram-matrix)).
 >
 > 1.  Entry $(i, j)$ of $\mathbf{G}$ is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_i \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j$.
 > 2.  $\mathbf{G}$ is symmetric ([Definition 3](#def-symmetric-matrix)).
@@ -2402,7 +2402,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 
 > **NOTE:**
 >
-> **Example 36 (Checking the properties on a small Gram matrix)** For $\mathbf{A}$ in [Example 8 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#exm-gram-matrix), $\mathbf{G} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$. It is symmetric: $g_{12} = g_{21} = 1$. Take $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, -1)$. Then
+> **Example 36 (Checking the properties on a small Gram matrix)** For $\mathbf{A}$ in [Example 8 in Column Space and Null Space](linear-algebra-column-null-space.llms.md#exm-gram-matrix), $\mathbf{G} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$. It is symmetric: $g_{12} = g_{21} = 1$. Take $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, -1)$. Then
 >
 > $$\begin{aligned}
 > {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{G} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
@@ -2438,7 +2438,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 > && \text{(definition of the self outer product)}
 > \end{aligned}$$
 >
-> So $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}$ is the [Gram matrix](linear-algebra-rank-nullity.llms.md#def-gram-matrix) of $\mathbf{A}$, and [Theorem 19](#thm-gram-properties) says that a Gram matrix is [positive semidefinite](#def-positive-semidefinite).
+> So $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}$ is the [Gram matrix](linear-algebra-column-null-space.llms.md#def-gram-matrix) of $\mathbf{A}$, and [Theorem 19](#thm-gram-properties) says that a Gram matrix is [positive semidefinite](#def-positive-semidefinite).
 
 > **NOTE:**
 >

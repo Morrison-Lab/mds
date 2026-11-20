@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-11-20 00:54:12 (PST)
+Last modified: 2026-11-20 01:54:00 (PST)
 
 (adapted from Fieller [\[1\]](#ref-fieller2018basics), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
@@ -477,7 +477,7 @@ The table is the cheapest check there is on a gradient just worked out by hand: 
 > &= {\mathopen{}\left\{ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}: \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + (\beta_{0}- c) = 0 \right\}\mathclose{}}.
 > \end{aligned}$$
 >
-> This is the [hyperplane](linear-algebra-linear-maps.llms.md#def-hyperplane) with [normal vector](linear-algebra-linear-maps.llms.md#def-normal-vector) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$ and [offset](linear-algebra-linear-maps.llms.md#def-affine-offset) $\beta_{0}- c$. Changing $c$ changes only the offset, so the [level sets](#def-level-set) share the normal vector and are parallel. A hyperplane in $\mathbb{R}^p$ has [dimension](linear-algebra-subspaces.llms.md#def-dimension) $p - 1$ by [the hyperplane theorem](linear-algebra-rank-nullity.llms.md#thm-hyperplane-subspace), which gives the point, line and plane cases for $p = 1, 2, 3$.
+> This is the [hyperplane](linear-algebra-linear-maps.llms.md#def-hyperplane) with [normal vector](linear-algebra-linear-maps.llms.md#def-normal-vector) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$ and [offset](linear-algebra-linear-maps.llms.md#def-affine-offset) $\beta_{0}- c$. Changing $c$ changes only the offset, so the [level sets](#def-level-set) share the normal vector and are parallel. A hyperplane in $\mathbb{R}^p$ has [dimension](linear-algebra-subspaces.llms.md#def-dimension) $p - 1$ by [the hyperplane theorem](linear-algebra-affine-subspaces.llms.md#thm-hyperplane-subspace), which gives the point, line and plane cases for $p = 1, 2, 3$.
 
 > **NOTE:**
 >

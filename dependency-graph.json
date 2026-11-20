@@ -2448,6 +2448,177 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra-affine-subspaces#def-affine-subspace",
+   "site": "mds",
+   "page": "linear-algebra-affine-subspaces",
+   "div": "def-affine-subspace",
+   "kind": "def",
+   "title": "Affine subspace",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-affine-subspaces#def-closed-half-space",
+   "site": "mds",
+   "page": "linear-algebra-affine-subspaces",
+   "div": "def-closed-half-space",
+   "kind": "def",
+   "title": "Closed half-space",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-affine-subspaces#def-half-space",
+   "site": "mds",
+   "page": "linear-algebra-affine-subspaces",
+   "div": "def-half-space",
+   "kind": "def",
+   "title": "Open half-space",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-affine-subspaces#thm-half-space-dimension",
+   "site": "mds",
+   "page": "linear-algebra-affine-subspaces",
+   "div": "thm-half-space-dimension",
+   "kind": "thm",
+   "title": "Differences of points in a hyperplane and in a half-space",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-affine-subspaces#thm-hyperplane-graph",
+   "site": "mds",
+   "page": "linear-algebra-affine-subspaces",
+   "div": "thm-hyperplane-graph",
+   "kind": "thm",
+   "title": "The graph of an affine function is a hyperplane",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-affine-subspaces#thm-hyperplane-origin",
+   "site": "mds",
+   "page": "linear-algebra-affine-subspaces",
+   "div": "thm-hyperplane-origin",
+   "kind": "thm",
+   "title": "Where a hyperplane passes, and its shape in $\\reals^2$ and $\\reals^3$",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-affine-subspaces#thm-hyperplane-subspace",
+   "site": "mds",
+   "page": "linear-algebra-affine-subspaces",
+   "div": "thm-hyperplane-subspace",
+   "kind": "thm",
+   "title": "A hyperplane is a translated subspace of dimension $p - 1$",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-column-null-space#def-column-space",
+   "site": "mds",
+   "page": "linear-algebra-column-null-space",
+   "div": "def-column-space",
+   "kind": "def",
+   "title": "Column space, range, image",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-column-null-space#def-cross-product-matrix",
+   "site": "mds",
+   "page": "linear-algebra-column-null-space",
+   "div": "def-cross-product-matrix",
+   "kind": "def",
+   "title": "Cross-product matrix",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-column-null-space#def-gram-matrix",
+   "site": "mds",
+   "page": "linear-algebra-column-null-space",
+   "div": "def-gram-matrix",
+   "kind": "def",
+   "title": "Gram matrix",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-column-null-space#def-left-null-space",
+   "site": "mds",
+   "page": "linear-algebra-column-null-space",
+   "div": "def-left-null-space",
+   "kind": "def",
+   "title": "Left null space",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-column-null-space#def-null-space",
+   "site": "mds",
+   "page": "linear-algebra-column-null-space",
+   "div": "def-null-space",
+   "kind": "def",
+   "title": "Null space, kernel",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-column-null-space#def-row-space",
+   "site": "mds",
+   "page": "linear-algebra-column-null-space",
+   "div": "def-row-space",
+   "kind": "def",
+   "title": "Row space",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-column-null-space#thm-column-space-span",
+   "site": "mds",
+   "page": "linear-algebra-column-null-space",
+   "div": "thm-column-space-span",
+   "kind": "thm",
+   "title": "The column space is the span of the columns",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-column-null-space#thm-cross-product-sum-outer",
+   "site": "mds",
+   "page": "linear-algebra-column-null-space",
+   "div": "thm-cross-product-sum-outer",
+   "kind": "thm",
+   "title": "The cross-product matrix is the sum of the outer products of the rows",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-column-null-space#thm-independent-null-space",
+   "site": "mds",
+   "page": "linear-algebra-column-null-space",
+   "div": "thm-independent-null-space",
+   "kind": "thm",
+   "title": "Independent columns exactly when the null space is trivial",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-column-null-space#thm-null-gram",
+   "site": "mds",
+   "page": "linear-algebra-column-null-space",
+   "div": "thm-null-gram",
+   "kind": "thm",
+   "title": "$\\tp{\\matr{A}} \\matr{A}$ has the same null space as $\\matr{A}$",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-column-null-space#thm-null-space-subspace",
+   "site": "mds",
+   "page": "linear-algebra-column-null-space",
+   "div": "thm-null-space-subspace",
+   "kind": "thm",
+   "title": "A null space is a subspace",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-column-null-space#thm-row-null-disjoint",
+   "site": "mds",
+   "page": "linear-algebra-column-null-space",
+   "div": "thm-row-null-disjoint",
+   "kind": "thm",
+   "title": "The row space and null space share only the zero vector",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra-complex#def-complex-conjugate-matrix",
    "site": "mds",
    "page": "linear-algebra-complex",
@@ -4158,78 +4329,6 @@
    "external": false
   },
   {
-   "id": "mds/linear-algebra-rank-nullity#def-affine-subspace",
-   "site": "mds",
-   "page": "linear-algebra-rank-nullity",
-   "div": "def-affine-subspace",
-   "kind": "def",
-   "title": "Affine subspace",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-rank-nullity#def-closed-half-space",
-   "site": "mds",
-   "page": "linear-algebra-rank-nullity",
-   "div": "def-closed-half-space",
-   "kind": "def",
-   "title": "Closed half-space",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-rank-nullity#def-column-space",
-   "site": "mds",
-   "page": "linear-algebra-rank-nullity",
-   "div": "def-column-space",
-   "kind": "def",
-   "title": "Column space, range, image",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-rank-nullity#def-cross-product-matrix",
-   "site": "mds",
-   "page": "linear-algebra-rank-nullity",
-   "div": "def-cross-product-matrix",
-   "kind": "def",
-   "title": "Cross-product matrix",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-rank-nullity#def-gram-matrix",
-   "site": "mds",
-   "page": "linear-algebra-rank-nullity",
-   "div": "def-gram-matrix",
-   "kind": "def",
-   "title": "Gram matrix",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-rank-nullity#def-half-space",
-   "site": "mds",
-   "page": "linear-algebra-rank-nullity",
-   "div": "def-half-space",
-   "kind": "def",
-   "title": "Open half-space",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-rank-nullity#def-left-null-space",
-   "site": "mds",
-   "page": "linear-algebra-rank-nullity",
-   "div": "def-left-null-space",
-   "kind": "def",
-   "title": "Left null space",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-rank-nullity#def-null-space",
-   "site": "mds",
-   "page": "linear-algebra-rank-nullity",
-   "div": "def-null-space",
-   "kind": "def",
-   "title": "Null space, kernel",
-   "external": false
-  },
-  {
    "id": "mds/linear-algebra-rank-nullity#def-nullity",
    "site": "mds",
    "page": "linear-algebra-rank-nullity",
@@ -4248,102 +4347,12 @@
    "external": false
   },
   {
-   "id": "mds/linear-algebra-rank-nullity#def-row-space",
-   "site": "mds",
-   "page": "linear-algebra-rank-nullity",
-   "div": "def-row-space",
-   "kind": "def",
-   "title": "Row space",
-   "external": false
-  },
-  {
    "id": "mds/linear-algebra-rank-nullity#thm-centered-data-rank",
    "site": "mds",
    "page": "linear-algebra-rank-nullity",
    "div": "thm-centered-data-rank",
    "kind": "thm",
    "title": "A centered data matrix has rank at most $n - 1$",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-rank-nullity#thm-column-space-span",
-   "site": "mds",
-   "page": "linear-algebra-rank-nullity",
-   "div": "thm-column-space-span",
-   "kind": "thm",
-   "title": "The column space is the span of the columns",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-rank-nullity#thm-cross-product-sum-outer",
-   "site": "mds",
-   "page": "linear-algebra-rank-nullity",
-   "div": "thm-cross-product-sum-outer",
-   "kind": "thm",
-   "title": "The cross-product matrix is the sum of the outer products of the rows",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-rank-nullity#thm-half-space-dimension",
-   "site": "mds",
-   "page": "linear-algebra-rank-nullity",
-   "div": "thm-half-space-dimension",
-   "kind": "thm",
-   "title": "Differences of points in a hyperplane and in a half-space",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-rank-nullity#thm-hyperplane-graph",
-   "site": "mds",
-   "page": "linear-algebra-rank-nullity",
-   "div": "thm-hyperplane-graph",
-   "kind": "thm",
-   "title": "The graph of an affine function is a hyperplane",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-rank-nullity#thm-hyperplane-origin",
-   "site": "mds",
-   "page": "linear-algebra-rank-nullity",
-   "div": "thm-hyperplane-origin",
-   "kind": "thm",
-   "title": "Where a hyperplane passes, and its shape in $\\reals^2$ and $\\reals^3$",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-rank-nullity#thm-hyperplane-subspace",
-   "site": "mds",
-   "page": "linear-algebra-rank-nullity",
-   "div": "thm-hyperplane-subspace",
-   "kind": "thm",
-   "title": "A hyperplane is a translated subspace of dimension $p - 1$",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-rank-nullity#thm-independent-null-space",
-   "site": "mds",
-   "page": "linear-algebra-rank-nullity",
-   "div": "thm-independent-null-space",
-   "kind": "thm",
-   "title": "Independent columns exactly when the null space is trivial",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-rank-nullity#thm-null-gram",
-   "site": "mds",
-   "page": "linear-algebra-rank-nullity",
-   "div": "thm-null-gram",
-   "kind": "thm",
-   "title": "$\\tp{\\matr{A}} \\matr{A}$ has the same null space as $\\matr{A}$",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-rank-nullity#thm-null-space-subspace",
-   "site": "mds",
-   "page": "linear-algebra-rank-nullity",
-   "div": "thm-null-space-subspace",
-   "kind": "thm",
-   "title": "A null space is a subspace",
    "external": false
   },
   {
@@ -4398,15 +4407,6 @@
    "div": "thm-rank-transpose",
    "kind": "thm",
    "title": "Fundamental theorem of ranks",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-rank-nullity#thm-row-null-disjoint",
-   "site": "mds",
-   "page": "linear-algebra-rank-nullity",
-   "div": "thm-row-null-disjoint",
-   "kind": "thm",
-   "title": "The row space and null space share only the zero vector",
    "external": false
   },
   {
@@ -8101,6 +8101,86 @@
    "mds/linear-algebra-matrices#def-matrix"
   ],
   [
+   "mds/linear-algebra-affine-subspaces#def-affine-subspace",
+   "mcs/functions#def-image"
+  ],
+  [
+   "mds/linear-algebra-affine-subspaces#def-closed-half-space",
+   "mds/linear-algebra-affine-subspaces#def-half-space"
+  ],
+  [
+   "mds/linear-algebra-affine-subspaces#thm-half-space-dimension",
+   "mds/linear-algebra-affine-subspaces#def-half-space"
+  ],
+  [
+   "mds/linear-algebra-affine-subspaces#thm-half-space-dimension",
+   "mds/linear-algebra-affine-subspaces#thm-hyperplane-subspace"
+  ],
+  [
+   "mds/linear-algebra-affine-subspaces#thm-hyperplane-graph",
+   "mcs/functions#def-function"
+  ],
+  [
+   "mds/linear-algebra-affine-subspaces#thm-hyperplane-graph",
+   "mcs/functions#def-graph"
+  ],
+  [
+   "mds/linear-algebra-affine-subspaces#thm-hyperplane-graph",
+   "mcs/sets#def-set"
+  ],
+  [
+   "mds/linear-algebra-affine-subspaces#thm-hyperplane-graph",
+   "mds/linear-algebra-linear-maps#def-hyperplane"
+  ],
+  [
+   "mds/linear-algebra-affine-subspaces#thm-hyperplane-graph",
+   "mds/linear-algebra-linear-maps#def-normal-vector"
+  ],
+  [
+   "mds/linear-algebra-affine-subspaces#thm-hyperplane-subspace",
+   "mds/linear-algebra-affine-subspaces#def-affine-subspace"
+  ],
+  [
+   "mds/linear-algebra-column-null-space#def-gram-matrix",
+   "mds/linear-algebra-column-null-space#def-cross-product-matrix"
+  ],
+  [
+   "mds/linear-algebra-column-null-space#thm-column-space-span",
+   "mds/linear-algebra-column-null-space#def-column-space"
+  ],
+  [
+   "mds/linear-algebra-column-null-space#thm-cross-product-sum-outer",
+   "mds/linear-algebra-column-null-space#def-cross-product-matrix"
+  ],
+  [
+   "mds/linear-algebra-column-null-space#thm-cross-product-sum-outer",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
+   "mds/linear-algebra-column-null-space#thm-independent-null-space",
+   "mds/linear-algebra-column-null-space#def-null-space"
+  ],
+  [
+   "mds/linear-algebra-column-null-space#thm-null-space-subspace",
+   "mds/linear-algebra-column-null-space#def-null-space"
+  ],
+  [
+   "mds/linear-algebra-column-null-space#thm-row-null-disjoint",
+   "mds/linear-algebra-column-null-space#def-column-space"
+  ],
+  [
+   "mds/linear-algebra-column-null-space#thm-row-null-disjoint",
+   "mds/linear-algebra-column-null-space#def-null-space"
+  ],
+  [
+   "mds/linear-algebra-column-null-space#thm-row-null-disjoint",
+   "mds/linear-algebra-column-null-space#thm-column-space-span"
+  ],
+  [
+   "mds/linear-algebra-column-null-space#thm-row-null-disjoint",
+   "mds/linear-algebra-column-null-space#thm-null-space-subspace"
+  ],
+  [
    "mds/linear-algebra-complex#def-hermitian-matrix",
    "mds/linear-algebra-complex#def-conjugate-transpose"
   ],
@@ -9250,23 +9330,7 @@
   ],
   [
    "mds/linear-algebra-rank-nullity#cor-rank-product-full-rank",
-   "mds/linear-algebra-rank-nullity#def-column-space"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#cor-rank-product-full-rank",
-   "mds/linear-algebra-rank-nullity#def-null-space"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#cor-rank-product-full-rank",
    "mds/linear-algebra-rank-nullity#def-nullity"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#cor-rank-product-full-rank",
-   "mds/linear-algebra-rank-nullity#thm-column-space-span"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#cor-rank-product-full-rank",
-   "mds/linear-algebra-rank-nullity#thm-independent-null-space"
   ],
   [
    "mds/linear-algebra-rank-nullity#cor-rank-product-full-rank",
@@ -9301,104 +9365,12 @@
    "mds/linear-algebra-rank-nullity#thm-rank-transpose"
   ],
   [
-   "mds/linear-algebra-rank-nullity#def-affine-subspace",
-   "mcs/functions#def-image"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#def-closed-half-space",
-   "mds/linear-algebra-rank-nullity#def-half-space"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#def-gram-matrix",
-   "mds/linear-algebra-rank-nullity#def-cross-product-matrix"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#def-nullity",
-   "mds/linear-algebra-rank-nullity#def-null-space"
-  ],
-  [
    "mds/linear-algebra-rank-nullity#thm-centered-data-rank",
    "mds/linear-algebra-rank-nullity#thm-rank-nullity"
   ],
   [
    "mds/linear-algebra-rank-nullity#thm-centered-data-rank",
    "mds/linear-algebra-rank-nullity#thm-rank-transpose"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-column-space-span",
-   "mds/linear-algebra-rank-nullity#def-column-space"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-cross-product-sum-outer",
-   "mds/linear-algebra-matrices#def-matrix"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-cross-product-sum-outer",
-   "mds/linear-algebra-rank-nullity#def-cross-product-matrix"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-half-space-dimension",
-   "mds/linear-algebra-rank-nullity#def-half-space"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-half-space-dimension",
-   "mds/linear-algebra-rank-nullity#thm-hyperplane-subspace"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-hyperplane-graph",
-   "mcs/functions#def-function"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-hyperplane-graph",
-   "mcs/functions#def-graph"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-hyperplane-graph",
-   "mcs/sets#def-set"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-hyperplane-graph",
-   "mds/linear-algebra-linear-maps#def-hyperplane"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-hyperplane-graph",
-   "mds/linear-algebra-linear-maps#def-normal-vector"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-hyperplane-subspace",
-   "mds/linear-algebra-rank-nullity#cor-rank-bound"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-hyperplane-subspace",
-   "mds/linear-algebra-rank-nullity#def-affine-subspace"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-hyperplane-subspace",
-   "mds/linear-algebra-rank-nullity#def-null-space"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-hyperplane-subspace",
-   "mds/linear-algebra-rank-nullity#def-nullity"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-hyperplane-subspace",
-   "mds/linear-algebra-rank-nullity#thm-null-space-subspace"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-hyperplane-subspace",
-   "mds/linear-algebra-rank-nullity#thm-rank-nullity"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-independent-null-space",
-   "mds/linear-algebra-rank-nullity#def-null-space"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-null-space-subspace",
-   "mds/linear-algebra-rank-nullity#def-null-space"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-rank-dim",
-   "mds/linear-algebra-rank-nullity#thm-column-space-span"
   ],
   [
    "mds/linear-algebra-rank-nullity#thm-rank-factorization",
@@ -9410,19 +9382,7 @@
   ],
   [
    "mds/linear-algebra-rank-nullity#thm-rank-nullity",
-   "mds/linear-algebra-rank-nullity#def-column-space"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-rank-nullity",
    "mds/linear-algebra-rank-nullity#thm-rank-dim"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-rank-product",
-   "mds/linear-algebra-rank-nullity#def-column-space"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-rank-product",
-   "mds/linear-algebra-rank-nullity#thm-column-space-span"
   ],
   [
    "mds/linear-algebra-rank-nullity#thm-rank-product",
@@ -9442,31 +9402,11 @@
   ],
   [
    "mds/linear-algebra-rank-nullity#thm-rank-transpose",
-   "mds/linear-algebra-rank-nullity#thm-null-gram"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-rank-transpose",
    "mds/linear-algebra-rank-nullity#thm-rank-nullity"
   ],
   [
    "mds/linear-algebra-rank-nullity#thm-rank-transpose",
    "mds/linear-algebra-rank-nullity#thm-rank-product"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-row-null-disjoint",
-   "mds/linear-algebra-rank-nullity#def-column-space"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-row-null-disjoint",
-   "mds/linear-algebra-rank-nullity#def-null-space"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-row-null-disjoint",
-   "mds/linear-algebra-rank-nullity#thm-column-space-span"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-row-null-disjoint",
-   "mds/linear-algebra-rank-nullity#thm-null-space-subspace"
   ],
   [
    "mds/linear-algebra-special-matrices#cor-det-pd",
@@ -11622,6 +11562,10 @@
   ],
   [
    "mds/vector-calculus#thm-level-sets-linear",
+   "mds/linear-algebra-affine-subspaces#thm-hyperplane-subspace"
+  ],
+  [
+   "mds/vector-calculus#thm-level-sets-linear",
    "mds/linear-algebra-linear-maps#def-affine-offset"
   ],
   [
@@ -11631,10 +11575,6 @@
   [
    "mds/vector-calculus#thm-level-sets-linear",
    "mds/linear-algebra-linear-maps#def-normal-vector"
-  ],
-  [
-   "mds/vector-calculus#thm-level-sets-linear",
-   "mds/linear-algebra-rank-nullity#thm-hyperplane-subspace"
   ],
   [
    "mds/vector-calculus#thm-level-sets-linear",

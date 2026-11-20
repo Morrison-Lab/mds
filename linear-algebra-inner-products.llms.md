@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-20 00:54:12 (PST)
+Last modified: 2026-11-20 01:54:00 (PST)
 
 # 1 Inner products
 
@@ -1417,7 +1417,7 @@ Last modified: 2026-11-20 00:54:12 (PST)
 
 > **NOTE:**
 >
-> *Remark 7* (Self outer products in statistics). Statistics meets the [self outer product](#def-self-outer-product) mostly through [sum](algebra-sums.llms.md#def-summation)s of them. The [Gram matrix](linear-algebra-rank-nullity.llms.md#def-gram-matrix) ${\mathbf{X}}^{\top} \mathbf{X}$ of a data [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{X}$ is the sum of the self outer products of its [row](linear-algebra-matrices.llms.md#def-matrix-row)s, as [the Gram matrix example](linear-algebra-rank-nullity.llms.md#exm-cross-product-sum-outer) shows. For observation vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n$, the sum $\sum_{i=1}^n\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_i - {\bar{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}}\right)\mathclose{} {\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_i - {\bar{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}}\right)\mathclose{}}^{\top}$ of the self outer products of their deviations from the vector ${\bar{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}}$ of entrywise [mean](linear-algebra-vectors.llms.md#def-mean)s is what other sources call the *scatter matrix* [\[15\]](#ref-wikipedia_scatter_matrix). Each term of either sum is one observation’s contribution to the total.
+> *Remark 7* (Self outer products in statistics). Statistics meets the [self outer product](#def-self-outer-product) mostly through [sum](algebra-sums.llms.md#def-summation)s of them. The [Gram matrix](linear-algebra-column-null-space.llms.md#def-gram-matrix) ${\mathbf{X}}^{\top} \mathbf{X}$ of a data [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{X}$ is the sum of the self outer products of its [row](linear-algebra-matrices.llms.md#def-matrix-row)s, as [the Gram matrix example](linear-algebra-column-null-space.llms.md#exm-cross-product-sum-outer) shows. For observation vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_n$, the sum $\sum_{i=1}^n\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_i - {\bar{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}}\right)\mathclose{} {\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_i - {\bar{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}}\right)\mathclose{}}^{\top}$ of the self outer products of their deviations from the vector ${\bar{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}}$ of entrywise [mean](linear-algebra-vectors.llms.md#def-mean)s is what other sources call the *scatter matrix* [\[15\]](#ref-wikipedia_scatter_matrix). Each term of either sum is one observation’s contribution to the total.
 
 > **NOTE:**
 >
