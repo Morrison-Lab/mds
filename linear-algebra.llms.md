@@ -4,12 +4,14 @@ Code
 
 Published
 
-Last modified: 2026-11-19 19:15:22 (PST)
+Last modified: 2026-11-20 00:54:12 (PST)
 
 The linear algebra notes are split across these pages:
 
 - [Vectors](linear-algebra-vectors.llms.md): column vectors, transposes, linear combinations, special vectors, and orthogonality.
-- [Matrices](linear-algebra-matrices.llms.md): matrix arithmetic, matrix-vector products, linear and affine maps, and hyperplanes.
+- [Matrices](linear-algebra-matrices.llms.md): matrices, their [rows](linear-algebra-matrices.llms.md#def-matrix-row) and [columns](linear-algebra-matrices.llms.md#def-matrix-column), transposes, addition, and [scalar multiplication](linear-algebra-matrices.llms.md#def-scalar-mult).
+- The [Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md) page: [matrix products](linear-algebra-matrix-multiplication.llms.md#def-matrix-mult), [square matrices](linear-algebra-matrix-multiplication.llms.md#def-square-matrix), [identity matrices](linear-algebra-matrix-multiplication.llms.md#def-identity-matrix), [matrix-vector products](linear-algebra-matrix-multiplication.llms.md#def-matvec-mult), and the transpose rules for addition and multiplication.
+- The [Linear and Affine Maps](linear-algebra-linear-maps.llms.md) page: linear and affine maps, and [hyperplanes](linear-algebra-linear-maps.llms.md#def-hyperplane).
 - [Subspaces and Rank](linear-algebra-subspaces.llms.md): rank, subspaces, and bases.
 - [Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md): column and null spaces, the rank-nullity theorem, and rank factorization.
 - [Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md): sums and direct sums, orthogonal complements, and the fundamental theorem of linear algebra.

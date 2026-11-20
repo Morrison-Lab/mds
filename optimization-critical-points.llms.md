@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-19 19:15:22 (PST)
+Last modified: 2026-11-20 00:54:12 (PST)
 
 # 1 Critical points and optimization
 
@@ -1048,7 +1048,7 @@ This is the case $n = 2$ of [\[6\]](#ref-rudin1976principles), Theorem 5.15, who
 > && \text{(matrix product)}
 > \end{aligned}$$
 >
-> The second step writes out the [matrix product](linear-algebra-matrices.llms.md#def-matrix-mult). $g'$ is [continuous](vector-calculus.llms.md#def-continuous-several): $t \mapsto \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}$ is continuous, since $\mathopen{}\left\lVert(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + s \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}) - (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}})\right\rVert\mathclose{} = \mathopen{}\left|s - t\right|\mathclose{}\,\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}\right\rVert\mathclose{}$, each $\frac{\partial}{\partial x_j} f$ is continuous by assumption, and compositions, sums and constant multiples of continuous functions are continuous. Each $\frac{\partial}{\partial x_j} f$ has continuous partial derivatives, the second partial derivatives of $f$, so the same chain-rule computation applies to it: $\frac{\partial}{\partial t} \mathopen{}\left[\frac{\partial}{\partial x_j} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}})\right]\mathclose{} = \sum_{i=1}^ph_i\,\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}})\right)\mathclose{}$. So
+> The second step writes out the [matrix product](linear-algebra-matrix-multiplication.llms.md#def-matrix-mult). $g'$ is [continuous](vector-calculus.llms.md#def-continuous-several): $t \mapsto \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}$ is continuous, since $\mathopen{}\left\lVert(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + s \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}) - (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}})\right\rVert\mathclose{} = \mathopen{}\left|s - t\right|\mathclose{}\,\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}\right\rVert\mathclose{}$, each $\frac{\partial}{\partial x_j} f$ is continuous by assumption, and compositions, sums and constant multiples of continuous functions are continuous. Each $\frac{\partial}{\partial x_j} f$ has continuous partial derivatives, the second partial derivatives of $f$, so the same chain-rule computation applies to it: $\frac{\partial}{\partial t} \mathopen{}\left[\frac{\partial}{\partial x_j} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}})\right]\mathclose{} = \sum_{i=1}^ph_i\,\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + t \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}})\right)\mathclose{}$. So
 >
 > $$\begin{aligned}
 > g''(t)
@@ -1062,7 +1062,7 @@ This is the case $n = 2$ of [\[6\]](#ref-rudin1976principles), Theorem 5.15, who
 > && \text{(matrix product)}
 > \end{aligned}$$
 >
-> The last step is again the [matrix product](linear-algebra-matrices.llms.md#def-matrix-mult). Now apply [Theorem 5](#thm-taylor-1d) to $g$ on $[0, 1]$: there is a $\tau\in (0, 1)$ with
+> The last step is again the [matrix product](linear-algebra-matrix-multiplication.llms.md#def-matrix-mult). Now apply [Theorem 5](#thm-taylor-1d) to $g$ on $[0, 1]$: there is a $\tau\in (0, 1)$ with
 >
 > $$\begin{aligned}
 > f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}})
@@ -1159,7 +1159,7 @@ This is the case $n = 2$ of [\[6\]](#ref-rudin1976principles), Theorem 5.15, who
 > && \text{(orthogonal matrices preserve length)}
 > \end{aligned}$$
 >
-> The second step is the [transpose of a product](linear-algebra-matrices.llms.md#thm-transpose-product). The last step applies [orthogonal matrices preserve length](linear-algebra-special-matrices.llms.md#thm-orthogonal-norm) to ${\mathbf{Q}}^{\top}$. That theorem applies because ${\mathbf{Q}}^{\top}$ is an [orthogonal matrix](linear-algebra-special-matrices.llms.md#def-orthogonal-matrix): since $\mathbf{Q}$ is [square](linear-algebra-matrices.llms.md#def-square-matrix) with ${\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{I}_p$, also $\mathbf{Q} {\mathbf{Q}}^{\top} = \mathbf{I}_p$, so
+> The second step is the [transpose of a product](linear-algebra-matrix-multiplication.llms.md#thm-transpose-product). The last step applies [orthogonal matrices preserve length](linear-algebra-special-matrices.llms.md#thm-orthogonal-norm) to ${\mathbf{Q}}^{\top}$. That theorem applies because ${\mathbf{Q}}^{\top}$ is an [orthogonal matrix](linear-algebra-special-matrices.llms.md#def-orthogonal-matrix): since $\mathbf{Q}$ is [square](linear-algebra-matrix-multiplication.llms.md#def-square-matrix) with ${\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{I}_p$, also $\mathbf{Q} {\mathbf{Q}}^{\top} = \mathbf{I}_p$, so
 >
 > $${({\mathbf{Q}}^{\top})}^{\top} {\mathbf{Q}}^{\top} = \mathbf{Q} {\mathbf{Q}}^{\top} = \mathbf{I}_p.$$
 
@@ -1207,7 +1207,7 @@ This is the case $n = 2$ of [\[6\]](#ref-rudin1976principles), Theorem 5.15, who
 > && \text{(} \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}}\right\rVert\mathclose{}^2 = p \text{ and } \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}\right\rVert\mathclose{}^2 = \textstyle\sum_i h_i^2 \text{, which equals } \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{h}}\vphantom{h}}\right\rVert\mathclose{}^2 \text{)}
 > \end{aligned}$$
 >
-> The steps use the [matrix product](linear-algebra-matrices.llms.md#def-matrix-mult), the [dot product](linear-algebra-vectors.llms.md#def-dot-product) and the [Cauchy-Schwarz inequality](linear-algebra-inner-products.llms.md#thm-cauchy-schwarz).
+> The steps use the [matrix product](linear-algebra-matrix-multiplication.llms.md#def-matrix-mult), the [dot product](linear-algebra-vectors.llms.md#def-dot-product) and the [Cauchy-Schwarz inequality](linear-algebra-inner-products.llms.md#thm-cauchy-schwarz).
 
 > **NOTE:**
 >

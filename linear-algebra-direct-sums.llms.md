@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-19 19:15:22 (PST)
+Last modified: 2026-11-20 00:54:12 (PST)
 
 # 1 Sums and direct sums
 
@@ -241,7 +241,7 @@ Last modified: 2026-11-19 19:15:22 (PST)
 
 > **NOTE:**
 >
-> *Proof*. $\mathcal{C}(\mathbf{A} + \mathbf{B}) \subseteq \mathcal{C}(\mathbf{A}) + \mathcal{C}(\mathbf{B})$. Any vector of $\mathcal{C}(\mathbf{A} + \mathbf{B})$ is $(\mathbf{A} + \mathbf{B})\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ for some $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \in \mathbb{R}^n$ ([Definition 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-column-space)), and $(\mathbf{A} + \mathbf{B})\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ ([Theorem 8 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-distrib), with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ as an $n \times 1$ matrix), a vector of $\mathcal{C}(\mathbf{A})$ plus a vector of $\mathcal{C}(\mathbf{B})$.
+> *Proof*. $\mathcal{C}(\mathbf{A} + \mathbf{B}) \subseteq \mathcal{C}(\mathbf{A}) + \mathcal{C}(\mathbf{B})$. Any vector of $\mathcal{C}(\mathbf{A} + \mathbf{B})$ is $(\mathbf{A} + \mathbf{B})\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ for some $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \in \mathbb{R}^n$ ([Definition 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-column-space)), and $(\mathbf{A} + \mathbf{B})\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ ([Theorem 2 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#thm-matmul-distrib), with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ as an $n \times 1$ matrix), a vector of $\mathcal{C}(\mathbf{A})$ plus a vector of $\mathcal{C}(\mathbf{B})$.
 >
 > **Compare dimensions.** All the sets involved are subspaces of $\mathbb{R}^m$ ([Theorem 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-column-space-span), [Theorem 1](#thm-sum-intersection-subspace)), so
 >
@@ -738,7 +738,7 @@ Last modified: 2026-11-19 19:15:22 (PST)
 > $$\begin{aligned}
 > ({\mathbf{A}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})_j
 > &= \sum_{i=1}^{m} ({\mathbf{A}}^{\top})_{ji}\, x_i
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~17 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrix-multiplication.qmd#def-matvec-mult}{\text{Definition~8 in Matrix Multiplication}}\text{)}
 > \\
 > &= \sum_{i=1}^{m} a_{ij}\, x_i
 > && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~6 in Matrices}}\text{)}
@@ -759,7 +759,7 @@ Last modified: 2026-11-19 19:15:22 (PST)
 > && \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~10 in Vectors}}\text{)}
 > \\
 > &= \sum_{i=1}^{m} \mathopen{}\left(\sum_{j=1}^na_{ij} z_j\right)\mathclose{}\, x_i
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~17 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrix-multiplication.qmd#def-matvec-mult}{\text{Definition~8 in Matrix Multiplication}}\text{)}
 > \\
 > &= \sum_{i=1}^{m} \sum_{j=1}^na_{ij}\, z_j\, x_i
 > && \text{(distribute each } x_i \text{ over the inner sum)}
@@ -800,7 +800,7 @@ Last modified: 2026-11-19 19:15:22 (PST)
 
 > **NOTE:**
 >
-> **Exercise 13 (Finding the orthogonal complement of a column space)** [Theorem 7](#thm-complement-null-space) turns the [orthogonal complement](#def-orthogonal-complement) of a [column space](linear-algebra-rank-nullity.llms.md#def-column-space) into a [null space](linear-algebra-rank-nullity.llms.md#def-null-space), which a [linear system](linear-algebra-matrices.llms.md#def-linear-system) describes. Let
+> **Exercise 13 (Finding the orthogonal complement of a column space)** [Theorem 7](#thm-complement-null-space) turns the [orthogonal complement](#def-orthogonal-complement) of a [column space](linear-algebra-rank-nullity.llms.md#def-column-space) into a [null space](linear-algebra-rank-nullity.llms.md#def-null-space), which a [linear system](linear-algebra-matrix-multiplication.llms.md#def-linear-system) describes. Let
 >
 > $$\mathbf{A} = \begin{bmatrix}1 & 0 \\ 0 & 1 \\ 1 & 1\end{bmatrix}.$$
 >
@@ -972,7 +972,7 @@ Last modified: 2026-11-19 19:15:22 (PST)
 
 > **NOTE:**
 >
-> **Example 16 (Back to the line)** In [Example 15](#exm-orthogonal-direct-sum), $\mathcal{S} = \operatorname{span}\mathopen{}\left\{(1, 1, 0)\right\}\mathclose{}$ and $\mathcal{S}^\perp = \operatorname{span}\mathopen{}\left\{(1, -1, 0), (0, 0, 1)\right\}\mathclose{}$. Put those two spanning vectors in the columns of the $3 \times 2$ matrix $\mathbf{B} = \begin{bmatrix} 1 & 0 \\ -1 & 0 \\ 0 & 1 \end{bmatrix}$, so $\mathcal{S}^\perp = \mathcal{C}(\mathbf{B})$ ([Theorem 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-column-space-span)) and $(\mathcal{S}^\perp)^\perp = \mathcal{N}({\mathbf{B}}^{\top})$ ([Theorem 7](#thm-complement-null-space)). Since ${\mathbf{B}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (w_1 - w_2,\ w_3)$ ([Definition 17 in Matrices](linear-algebra-matrices.llms.md#def-matvec-mult)), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in (\mathcal{S}^\perp)^\perp$ exactly when $w_1 - w_2 = 0$ and $w_3 = 0$. So
+> **Example 16 (Back to the line)** In [Example 15](#exm-orthogonal-direct-sum), $\mathcal{S} = \operatorname{span}\mathopen{}\left\{(1, 1, 0)\right\}\mathclose{}$ and $\mathcal{S}^\perp = \operatorname{span}\mathopen{}\left\{(1, -1, 0), (0, 0, 1)\right\}\mathclose{}$. Put those two spanning vectors in the columns of the $3 \times 2$ matrix $\mathbf{B} = \begin{bmatrix} 1 & 0 \\ -1 & 0 \\ 0 & 1 \end{bmatrix}$, so $\mathcal{S}^\perp = \mathcal{C}(\mathbf{B})$ ([Theorem 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-column-space-span)) and $(\mathcal{S}^\perp)^\perp = \mathcal{N}({\mathbf{B}}^{\top})$ ([Theorem 7](#thm-complement-null-space)). Since ${\mathbf{B}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (w_1 - w_2,\ w_3)$ ([Definition 8 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#def-matvec-mult)), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in (\mathcal{S}^\perp)^\perp$ exactly when $w_1 - w_2 = 0$ and $w_3 = 0$. So
 >
 > $$\begin{aligned}
 > (\mathcal{S}^\perp)^\perp &= \mathopen{}\left\{(a, a, 0) : a \in \mathbb{R}\right\}\mathclose{} \\
@@ -1096,7 +1096,7 @@ Last modified: 2026-11-19 19:15:22 (PST)
 
 > **NOTE:**
 >
-> **Exercise 16 (Testing whether a linear system has a solution through the left null space)** Part 2 of [Theorem 10](#thm-fundamental-subspaces) says that $\mathcal{C}(\mathbf{A}) = \mathcal{N}({\mathbf{A}}^{\top})^\perp$, so a [linear system](linear-algebra-matrices.llms.md#def-linear-system) $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ has a solution exactly when $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ is [orthogonal](linear-algebra-vectors.llms.md#def-orthogonal-vectors) to every vector of the [left null space](linear-algebra-rank-nullity.llms.md#def-left-null-space). Let
+> **Exercise 16 (Testing whether a linear system has a solution through the left null space)** Part 2 of [Theorem 10](#thm-fundamental-subspaces) says that $\mathcal{C}(\mathbf{A}) = \mathcal{N}({\mathbf{A}}^{\top})^\perp$, so a [linear system](linear-algebra-matrix-multiplication.llms.md#def-linear-system) $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ has a solution exactly when $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ is [orthogonal](linear-algebra-vectors.llms.md#def-orthogonal-vectors) to every vector of the [left null space](linear-algebra-rank-nullity.llms.md#def-left-null-space). Let
 >
 > $$\mathbf{A} = \begin{bmatrix}1 & 1 \\ 1 & 1 \\ 0 & 0\end{bmatrix},
 > \qquad
