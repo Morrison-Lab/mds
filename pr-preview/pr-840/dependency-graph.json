@@ -4464,6 +4464,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra-special-matrices#def-bilinear-form",
+   "site": "mds",
+   "page": "linear-algebra-special-matrices",
+   "div": "def-bilinear-form",
+   "kind": "def",
+   "title": "Bilinear form",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra-special-matrices#def-condition-number",
    "site": "mds",
    "page": "linear-algebra-special-matrices",
@@ -4581,6 +4590,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra-special-matrices#def-matrix-induced-norm",
+   "site": "mds",
+   "page": "linear-algebra-special-matrices",
+   "div": "def-matrix-induced-norm",
+   "kind": "def",
+   "title": "Matrix-induced norm, $\\matr{A}$-norm",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra-special-matrices#def-matrix-inner-product",
    "site": "mds",
    "page": "linear-algebra-special-matrices",
@@ -4695,6 +4713,15 @@
    "div": "def-svd",
    "kind": "def",
    "title": "Singular value decomposition",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-special-matrices#def-symmetric-bilinear-form",
+   "site": "mds",
+   "page": "linear-algebra-special-matrices",
+   "div": "def-symmetric-bilinear-form",
+   "kind": "def",
+   "title": "Symmetric bilinear form",
    "external": false
   },
   {
@@ -4938,6 +4965,15 @@
    "div": "thm-svd-evd",
    "kind": "thm",
    "title": "An SVD gives an eigendecomposition of $\\tp{\\matr{A}}\\matr{A}$",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-special-matrices#thm-symmetric-bilinear-form-swap",
+   "site": "mds",
+   "page": "linear-algebra-special-matrices",
+   "div": "thm-symmetric-bilinear-form-swap",
+   "kind": "thm",
+   "title": "A symmetric bilinear form does not depend on the order of its vectors",
    "external": false
   },
   {
@@ -9425,6 +9461,18 @@
    "mds/linear-algebra-special-matrices#thm-outer-product-trace"
   ],
   [
+   "mds/linear-algebra-special-matrices#def-bilinear-form",
+   "mcs/functions#def-function"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#def-bilinear-form",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#def-bilinear-form",
+   "mds/linear-algebra-vectors#def-scalar"
+  ],
+  [
    "mds/linear-algebra-special-matrices#def-eigendecomposition",
    "mds/linear-algebra-special-matrices#def-diagonal-matrix"
   ],
@@ -9486,6 +9534,34 @@
   ],
   [
    "mds/linear-algebra-special-matrices#def-matrix-induced-inner-product",
+   "mcs/proof-writing#def-universal-quantifier"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#def-matrix-induced-inner-product",
+   "mds/linear-algebra-inner-products#def-inner-product"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#def-matrix-induced-inner-product",
+   "mds/linear-algebra-special-matrices#def-positive-definite"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#def-matrix-induced-inner-product",
+   "mds/linear-algebra-special-matrices#def-symmetric-bilinear-form"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#def-matrix-induced-inner-product",
+   "mds/linear-algebra-special-matrices#def-symmetric-matrix"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#def-matrix-induced-norm",
+   "mds/linear-algebra-inner-products#def-induced-norm"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#def-matrix-induced-norm",
+   "mds/linear-algebra-special-matrices#def-matrix-induced-inner-product"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#def-matrix-induced-norm",
    "mds/linear-algebra-special-matrices#def-positive-definite"
   ],
   [
@@ -9535,6 +9611,18 @@
   [
    "mds/linear-algebra-special-matrices#def-svd",
    "mds/linear-algebra-special-matrices#thm-svd"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#def-symmetric-bilinear-form",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#def-symmetric-bilinear-form",
+   "mds/linear-algebra-special-matrices#def-bilinear-form"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#def-symmetric-bilinear-form",
+   "mds/linear-algebra-special-matrices#def-symmetric-matrix"
   ],
   [
    "mds/linear-algebra-special-matrices#def-well-conditioned",
@@ -9726,6 +9814,22 @@
   ],
   [
    "mds/linear-algebra-special-matrices#thm-svd-evd",
+   "mds/linear-algebra-special-matrices#def-symmetric-matrix"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#thm-symmetric-bilinear-form-swap",
+   "mcs/proof-writing#def-universal-quantifier"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#thm-symmetric-bilinear-form-swap",
+   "mds/linear-algebra-matrix-multiplication#thm-scalar-transpose"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#thm-symmetric-bilinear-form-swap",
+   "mds/linear-algebra-special-matrices#def-bilinear-form"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#thm-symmetric-bilinear-form-swap",
    "mds/linear-algebra-special-matrices#def-symmetric-matrix"
   ],
   [

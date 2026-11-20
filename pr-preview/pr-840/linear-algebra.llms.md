@@ -4,18 +4,18 @@ Code
 
 Published
 
-Last modified: 2026-11-19 15:49:32 (PST)
+Last modified: 2026-11-19 23:43:39 (PST)
 
 The linear algebra notes are split across these pages:
 
 - [Vectors](linear-algebra-vectors.llms.md): column vectors, transposes, linear combinations, special vectors, and orthogonality.
 - [Matrices](linear-algebra-matrices.llms.md): matrices, their [rows](linear-algebra-matrices.llms.md#def-matrix-row) and [columns](linear-algebra-matrices.llms.md#def-matrix-column), transposes, addition, and [scalar multiplication](linear-algebra-matrices.llms.md#def-scalar-mult).
-- [Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md): [matrix products](linear-algebra-matrix-multiplication.llms.md#def-matrix-mult), [square matrices](linear-algebra-matrix-multiplication.llms.md#def-square-matrix), [identity matrices](linear-algebra-matrix-multiplication.llms.md#def-identity-matrix), [matrix-vector products](linear-algebra-matrix-multiplication.llms.md#def-matvec-mult), and the transpose rules for addition and multiplication.
-- [Linear and Affine Maps](linear-algebra-linear-maps.llms.md): linear and affine maps, and [hyperplanes](linear-algebra-linear-maps.llms.md#def-hyperplane).
+- The [Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md) page: [matrix products](linear-algebra-matrix-multiplication.llms.md#def-matrix-mult), [square matrices](linear-algebra-matrix-multiplication.llms.md#def-square-matrix), [identity matrices](linear-algebra-matrix-multiplication.llms.md#def-identity-matrix), [matrix-vector products](linear-algebra-matrix-multiplication.llms.md#def-matvec-mult), and the transpose rules for addition and multiplication.
+- The [Linear and Affine Maps](linear-algebra-linear-maps.llms.md) page: linear and affine maps, and [hyperplanes](linear-algebra-linear-maps.llms.md#def-hyperplane).
 - [Subspaces and Rank](linear-algebra-subspaces.llms.md): rank, subspaces, and bases.
-- [Column Space and Null Space](linear-algebra-column-null-space.llms.md): column, row and null spaces of a matrix, and [Gram matrices](linear-algebra-column-null-space.llms.md#def-gram-matrix).
-- [Rank-Nullity and Rank Factorization](linear-algebra-rank-nullity.llms.md): [rank-nullity](linear-algebra-rank-nullity.llms.md#thm-rank-nullity), the rank of matrix products, and rank factorization.
-- [Affine Subspaces and Half-Spaces](linear-algebra-affine-subspaces.llms.md): affine subspaces, hyperplanes, and half-spaces.
+- The [Column Space and Null Space](linear-algebra-column-null-space.llms.md) page: column, row and null spaces of a matrix, and [Gram matrices](linear-algebra-column-null-space.llms.md#def-gram-matrix).
+- The [Rank-Nullity and Rank Factorization](linear-algebra-rank-nullity.llms.md) page: [rank-nullity](linear-algebra-rank-nullity.llms.md#thm-rank-nullity), the rank of matrix products, and rank factorization.
+- The [Affine Subspaces and Half-Spaces](linear-algebra-affine-subspaces.llms.md) page: affine subspaces, hyperplanes, and half-spaces.
 - [Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md): sums and direct sums, orthogonal complements, and the fundamental theorem of linear algebra.
 - [Inner Products and Orthogonality](linear-algebra-inner-products.llms.md): inner products, the Cauchy-Schwarz and triangle inequalities, norms, angles, Gram-Schmidt, and outer products.
 - [Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md): symmetric, diagonal, inverse, projection and orthogonal matrices, quadratic forms, the trace, eigendecompositions and the SVD, definite matrices, and determinants.
