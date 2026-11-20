@@ -1,7 +1,7 @@
 :::{#exr-rank-transpose-practice}
 #### Finding the rank of a Gram matrix without computing it
 
-A [Gram matrix](#def-gram-matrix) can be larger than the [matrix](linear-algebra-matrices.qmd#def-matrix) it comes from,
+A [Gram matrix](linear-algebra-column-null-space.qmd#def-gram-matrix) can be larger than the [matrix](linear-algebra-matrices.qmd#def-matrix) it comes from,
 but @thm-rank-transpose says it has the same [rank](linear-algebra-subspaces.qmd#def-rank).
 Let
 

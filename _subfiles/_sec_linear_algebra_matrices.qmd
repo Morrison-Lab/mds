@@ -1,94 +1,4 @@
-{{< include mds/_subfiles/linear-algebra/_def-matrix.qmd >}}
-
-{{< include mds/_subfiles/linear-algebra/_note-def-matrix.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_def-matrix-equality.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_exm-matrix-equality.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_exr-matrix-equality-practice.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_sol-matrix-equality-practice.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_def-matrix-row.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_def-matrix-column.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_exm-matrix-rows-columns.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_exr-matrix-column-practice.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_sol-matrix-column-practice.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_exr-matrix-size-practice.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_sol-matrix-size-practice.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_exr-matrix-row-practice.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_sol-matrix-row-practice.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_thm-matrix-column-of-rows.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_exr-matrix-from-rows-practice.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_sol-matrix-from-rows-practice.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_thm-matrix-row-of-columns.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_exr-matrix-from-columns-practice.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_sol-matrix-from-columns-practice.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_def-tensor.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_exr-tensor-entries-practice.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_sol-tensor-entries-practice.qmd >}}
+{{< include mds/_subfiles/_sec_linear_algebra_matrices_intro.qmd >}}
 
 ## Matrix transpose {#sec-matrix-transpose}
 
@@ -114,12 +24,12 @@
 
 {{< include mds/_subfiles/_sec_linear_algebra_matrices_matvec.qmd >}}
 
-## Linear and affine maps
-
-{{< include mds/_subfiles/_sec_linear_algebra_matrices_linear_affine_maps.qmd >}}
-
 ## Transposes of sums and products
 
 <!-- heading shares the slide; do not re-flag -->
 
 {{< include mds/_subfiles/_sec_linear_algebra_matrices_transposes_sums_products.qmd >}}
+
+## Linear and affine maps
+
+{{< include mds/_subfiles/_sec_linear_algebra_matrices_linear_affine_maps.qmd >}}
