@@ -2,7 +2,7 @@
 #### A smooth function and one that is not
 
 $f(x) = x^3$ is smooth on $\reals$.
-By the [power rule](#thm-deriv-polynomial), its [derivatives](#def-derivative) are $f'(x) = 3x^2$, $f''(x) = 6x$, $f'''(x) = 6$, and $0$ from then on,
+By the [power rule](#thm-deriv-polynomial), later on this page, its [derivatives](#def-derivative) are $f'(x) = 3x^2$, $f''(x) = 6x$, $f'''(x) = 6$, and $0$ from then on,
 and each of them is [differentiable at](#def-differentiable) every $x$.
 
 $g(x) = x \abs{x}$ is not smooth on any [open interval](https://morrison-lab.github.io/mcs/sets.html#def-open-interval) containing $0$.
