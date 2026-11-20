@@ -36,12 +36,12 @@ The linear algebra notes are split across these pages:
 - [Inner Products and Orthogonality](linear-algebra-inner-products.qmd):
   inner products, the Cauchy-Schwarz and triangle inequalities, norms, angles,
   Gram-Schmidt, and outer products.
-- [Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.qmd):
+- The [Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.qmd) page:
   symmetric, diagonal, inverse, projection and orthogonal matrices,
   quadratic forms, the trace, and the [matrix inner product](linear-algebra-special-matrices.qmd#def-matrix-inner-product).
-- [Eigenvalues and Matrix Decompositions](linear-algebra-decompositions.qmd):
+- The [Eigenvalues and Matrix Decompositions](linear-algebra-decompositions.qmd) page:
   eigenvalues, the spectral theorem, [eigendecompositions](linear-algebra-decompositions.qmd#def-eigendecomposition) and the SVD.
-- [Definite Matrices and Determinants](linear-algebra-definite-matrices.qmd):
+- The [Definite Matrices and Determinants](linear-algebra-definite-matrices.qmd) page:
   [positive definite](linear-algebra-definite-matrices.qmd#def-positive-definite) and semidefinite matrices,
   [condition numbers](linear-algebra-definite-matrices.qmd#def-condition-number),
   [matrix-induced inner products](linear-algebra-definite-matrices.qmd#def-matrix-induced-inner-product), and determinants.
