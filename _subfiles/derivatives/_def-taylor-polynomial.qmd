@@ -1,6 +1,6 @@
 ::: {#def-taylor-polynomial}
-<!-- def-equiv-ok: the second line writes out the terms of the defining sum, not a result -->
 #### Taylor polynomial (Taylor expansion)
+<!-- def-equiv-ok: the second line writes out the terms of the defining sum, not a result -->
 
 Let $f$ be a function that has at least $n$ derivatives at a point $x_0$.
 The **Taylor polynomial** (also called the **Taylor expansion**)
