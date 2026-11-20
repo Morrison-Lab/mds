@@ -8385,6 +8385,14 @@
    "mds/linear-algebra-inner-products#def-inner-product"
   ],
   [
+   "mds/linear-algebra-definite-matrices#def-matrix-induced-inner-product",
+   "mds/linear-algebra-special-matrices#def-symmetric-bilinear-form"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#def-matrix-induced-inner-product",
+   "mds/linear-algebra-special-matrices#def-symmetric-matrix"
+  ],
+  [
    "mds/linear-algebra-definite-matrices#def-matrix-induced-norm",
    "mds/linear-algebra-definite-matrices#def-matrix-induced-inner-product"
   ],
