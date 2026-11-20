@@ -1,0 +1,42 @@
+:::{#exm-matrix-induced-norm}
+#### A matrix-induced norm calculation
+
+Take the positive definite matrix
+$\matr{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$
+of @exm-matrix-induced-inner-product
+and the vector $\vx = (1, 2)$.
+Then
+
+$$
+\ba
+\norm{\vx}_{\matr{A}}
+&= \sqrt{\iprod{\vx}{\vx}_{\matr{A}}}
+&& \text{(@def-matrix-induced-norm)}
+\\
+&= \sqrt{\tp{\vx} \matr{A} \vx}
+&& \text{(@def-matrix-induced-inner-product)}
+\\
+&= \sqrt{\begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix} \begin{bmatrix} 1 \\ 2 \end{bmatrix}}
+&& \text{(substitute the vector and the matrix)}
+\\
+&= \sqrt{\begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 2 \cd 1 + 1 \cd 2 \\ 1 \cd 1 + 2 \cd 2 \end{bmatrix}}
+&& \text{(@def-matvec-mult)}
+\\
+&= \sqrt{\begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 4 \\ 5 \end{bmatrix}}
+&& \text{(multiply and add)}
+\\
+&= \sqrt{1 \cd 4 + 2 \cd 5}
+&& \text{(@def-matvec-mult)}
+\\
+&= \sqrt{14}.
+&& \text{(multiply and add)}
+\ea
+$$
+
+The Euclidean length of the same vector is
+$\norm{\vx} = \sqrt{1^2 + 2^2} = \sqrt{5}$,
+so the $\matr{A}$-norm of this vector is larger than its Euclidean norm.
+
+<!-- no-figure: the example computes one norm of one vector -->
+
+:::

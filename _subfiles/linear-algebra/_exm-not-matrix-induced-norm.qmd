@@ -1,0 +1,23 @@
+:::{#exm-not-matrix-induced-norm}
+#### A symmetric matrix that induces no norm
+
+The symmetric matrix $\matr{B} = \diag(1, -1)$ is not [positive definite](#def-positive-definite),
+so it has no [matrix-induced norm](#def-matrix-induced-norm).
+The formula $\sqrt{\qform{\matr{B}}{\vx}}$ fails at $\vx = (0, 1)$:
+
+$$
+\ba
+\qform{\matr{B}}{\vx}
+&= 1 \cd 0^2 + (-1) \cd 1^2
+&& \text{(expand the quadratic form)}
+\\
+&= -1,
+&& \text{(multiply and add)}
+\ea
+$$
+
+and $-1$ has no real [square root](algebra.qmd#def-square-root).
+
+<!-- no-figure: the example is one quadratic-form value at one vector -->
+
+:::
