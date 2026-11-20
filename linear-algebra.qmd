@@ -21,7 +21,9 @@ The linear algebra notes are split across these pages:
   linear and affine maps, and [hyperplanes](linear-algebra-linear-maps.qmd#def-hyperplane).
   <!-- no-figure: an overview list of page topics, and the hyperplane figures are on the linked page -->
 - The [Subspaces and Rank](linear-algebra-subspaces.qmd) page:
-  rank, subspaces, and bases.
+  rank, subspaces, [spans](linear-algebra-subspaces.qmd#def-span), and linear dependence.
+- The [Bases and Dimension](linear-algebra-bases.qmd) page:
+  bases, [coordinates](linear-algebra-bases.qmd#def-coordinates), and dimension.
 - The [Column Space and Null Space](linear-algebra-column-null-space.qmd) page:
   column, row and null spaces of a matrix,
   and [Gram matrices](linear-algebra-column-null-space.qmd#def-gram-matrix).

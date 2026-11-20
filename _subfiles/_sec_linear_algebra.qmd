@@ -16,6 +16,10 @@
 
 {{< include mds/_subfiles/_sec_linear_algebra_subspaces.qmd >}}
 
+# Bases and dimension {#sec-bases-dimension}
+
+{{< include mds/_subfiles/_sec_linear_algebra_bases.qmd >}}
+
 # Column space and null space {#sec-column-null-space}
 
 {{< include mds/_subfiles/_sec_linear_algebra_rank_nullity_spaces.qmd >}}

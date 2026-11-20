@@ -1,0 +1,17 @@
+---
+title: "Bases and Dimension"
+format:
+  html: default
+  revealjs:
+    output-file: linear-algebra-bases-slides.html
+  pdf:
+    output-file: linear-algebra-bases-handout.pdf
+  docx:
+    output-file: linear-algebra-bases.docx
+---
+
+{{< include latex-macros/macros.qmd >}}
+
+# Bases and dimension {#sec-bases-dimension}
+
+{{< include mds/_subfiles/_sec_linear_algebra_bases.qmd >}}

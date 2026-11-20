@@ -1,7 +1,7 @@
 :::{#exr-dim-subadditive-practice}
 #### Finding the dimension of a sum of subspaces that meet only at the origin
 
-@cor-dim-subadditive says when the [dimension](linear-algebra-subspaces.qmd#def-dimension) of a [sum](#def-subspace-sum)
+@cor-dim-subadditive says when the [dimension](linear-algebra-bases.qmd#def-dimension) of a [sum](#def-subspace-sum)
 matches the total of the dimensions.
 Let $\mathcal{S}_1$ and $\mathcal{S}_2$ be [subspaces](linear-algebra-subspaces.qmd#def-subspace) of $\reals^5$
 with $\dim(\mathcal{S}_1) = 2$, $\dim(\mathcal{S}_2) = 3$

@@ -60,6 +60,7 @@ page-xrefs:
       - linear-algebra-matrix-multiplication.qmd
       - linear-algebra-linear-maps.qmd
       - linear-algebra-subspaces.qmd
+      - linear-algebra-bases.qmd
       - linear-algebra-column-null-space.qmd
       - linear-algebra-rank-nullity.qmd
       - linear-algebra-affine-subspaces.qmd
@@ -147,6 +148,7 @@ page-xrefs:
   # the second split (index#id) go on to the page now holding #id.
   - index: linear-algebra-subspaces.qmd
     pages:
+      - linear-algebra-bases.qmd
       - linear-algebra-column-null-space.qmd
       - linear-algebra-rank-nullity.qmd
       - linear-algebra-affine-subspaces.qmd
