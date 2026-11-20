@@ -12,56 +12,56 @@ The linear algebra notes are split across these pages:
 - [Matrices](linear-algebra-matrices.qmd):
   matrices, their [rows](linear-algebra-matrices.qmd#def-matrix-row) and [columns](linear-algebra-matrices.qmd#def-matrix-column),
   transposes, addition, and [scalar multiplication](linear-algebra-matrices.qmd#def-scalar-mult).
-- [Matrix Multiplication](linear-algebra-matrix-multiplication.qmd):
+- The [Matrix Multiplication](linear-algebra-matrix-multiplication.qmd) page:
   [matrix products](linear-algebra-matrix-multiplication.qmd#def-matrix-mult),
   [square matrices](linear-algebra-matrix-multiplication.qmd#def-square-matrix), [identity matrices](linear-algebra-matrix-multiplication.qmd#def-identity-matrix),
   [matrix-vector products](linear-algebra-matrix-multiplication.qmd#def-matvec-mult),
   and the transpose rules for addition and multiplication.
-- [Linear and Affine Maps](linear-algebra-linear-maps.qmd):
+- The [Linear and Affine Maps](linear-algebra-linear-maps.qmd) page:
   linear and affine maps, and [hyperplanes](linear-algebra-linear-maps.qmd#def-hyperplane).
   <!-- no-figure: an overview list of page topics, and the hyperplane figures are on the linked page -->
 - [Subspaces and Rank](linear-algebra-subspaces.qmd):
   rank, subspaces, and bases.
-- [Column Space and Null Space](linear-algebra-column-null-space.qmd):
+- The [Column Space and Null Space](linear-algebra-column-null-space.qmd) page:
   column, row and null spaces of a matrix,
   and [Gram matrices](linear-algebra-column-null-space.qmd#def-gram-matrix).
-- [Rank-Nullity and Rank Factorization](linear-algebra-rank-nullity.qmd):
+- The [Rank-Nullity and Rank Factorization](linear-algebra-rank-nullity.qmd) page:
   [rank-nullity](linear-algebra-rank-nullity.qmd#thm-rank-nullity),
   the rank of matrix products, and rank factorization.
-- [Affine Subspaces and Half-Spaces](linear-algebra-affine-subspaces.qmd):
+- The [Affine Subspaces and Half-Spaces](linear-algebra-affine-subspaces.qmd) page:
   affine subspaces, hyperplanes, and half-spaces.
 - [Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.qmd):
   sums and direct sums, orthogonal complements,
   and the fundamental theorem of linear algebra.
-- [Inner Products and the Cauchy-Schwarz Inequality](linear-algebra-inner-products.qmd):
+- The [Inner Products and the Cauchy-Schwarz Inequality](linear-algebra-inner-products.qmd) page:
   inner products, the Cauchy-Schwarz inequality,
   the [triangle inequality](linear-algebra-inner-products.qmd#thm-triangle-inequality),
   the [norm](linear-algebra-inner-products.qmd#def-norm) of a vector,
   and the [angle between two vectors](linear-algebra-inner-products.qmd#def-angle).
-- [Orthonormal Bases, Outer Products and Hilbert Spaces](linear-algebra-orthonormal-bases.qmd):
+- The [Orthonormal Bases, Outer Products and Hilbert Spaces](linear-algebra-orthonormal-bases.qmd) page:
   orthonormal bases, Gram-Schmidt, outer products,
   the [Kronecker product](linear-algebra-orthonormal-bases.qmd#def-kronecker-product), and Hilbert spaces.
-- [Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.qmd):
+- The [Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.qmd) page:
   symmetric, diagonal, inverse, projection and orthogonal matrices,
   quadratic forms, the trace, and the [matrix inner product](linear-algebra-special-matrices.qmd#def-matrix-inner-product).
-- [Eigenvalues and Matrix Decompositions](linear-algebra-decompositions.qmd):
+- The [Eigenvalues and Matrix Decompositions](linear-algebra-decompositions.qmd) page:
   eigenvalues, the spectral theorem, [eigendecompositions](linear-algebra-decompositions.qmd#def-eigendecomposition) and the SVD.
-- [Definite Matrices and Determinants](linear-algebra-definite-matrices.qmd):
+- The [Definite Matrices and Determinants](linear-algebra-definite-matrices.qmd) page:
   [positive definite](linear-algebra-definite-matrices.qmd#def-positive-definite) and semidefinite matrices,
   [condition numbers](linear-algebra-definite-matrices.qmd#def-condition-number),
   [matrix-induced inner products](linear-algebra-definite-matrices.qmd#def-matrix-induced-inner-product), and determinants.
-- [Design Matrices and Projections](linear-algebra-projections.qmd):
+- The [Design Matrices and Projections](linear-algebra-projections.qmd) page:
   design matrices, the [hat matrix](linear-algebra-projections.qmd#def-hat-matrix) and [orthogonal projection](linear-algebra-projections.qmd#def-orthogonal-projection).
-- [Generalized Inverses and Linear Systems](linear-algebra-generalized-inverses.qmd):
+- The [Generalized Inverses and Linear Systems](linear-algebra-generalized-inverses.qmd) page:
   generalized inverses, the [Moore-Penrose inverse](linear-algebra-generalized-inverses.qmd#def-moore-penrose),
   and when a linear system has a solution.
-- [Solving Linear Systems and Least Squares](linear-algebra-least-squares.qmd):
+- The [Solving Linear Systems and Least Squares](linear-algebra-least-squares.qmd) page:
   back substitution, the QR factorization, the [LU factorization](linear-algebra-least-squares.qmd#def-lu),
   least squares and the [normal equations](linear-algebra-least-squares.qmd#def-normal-equations).
-- [Similarity and Diagonalization](linear-algebra-diagonalization.qmd):
+- The [Similarity and Diagonalization](linear-algebra-diagonalization.qmd) page:
   [eigenspaces](linear-algebra-diagonalization.qmd#def-eigenspace), [similar matrices](linear-algebra-diagonalization.qmd#def-similar),
   and [diagonalizable matrices](linear-algebra-diagonalization.qmd#def-diagonalizable).
-- [Schur Complements and the Cholesky Factorization](linear-algebra-cholesky.qmd):
+- The [Schur Complements and the Cholesky Factorization](linear-algebra-cholesky.qmd) page:
   Gram matrices, [block matrices](linear-algebra-cholesky.qmd#def-block-matrix),
   [Schur complements](linear-algebra-cholesky.qmd#def-schur-complement),
   and the [Cholesky factorization](linear-algebra-cholesky.qmd#thm-cholesky).
