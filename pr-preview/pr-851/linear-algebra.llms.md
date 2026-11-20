@@ -4,27 +4,27 @@ Code
 
 Published
 
-Last modified: 2026-11-19 16:43:08 (PST)
+Last modified: 2026-11-19 23:44:07 (PST)
 
 The linear algebra notes are split across these pages:
 
 - [Vectors](linear-algebra-vectors.llms.md): column vectors, transposes, linear combinations, special vectors, and orthogonality.
 - [Matrices](linear-algebra-matrices.llms.md): matrices, their [rows](linear-algebra-matrices.llms.md#def-matrix-row) and [columns](linear-algebra-matrices.llms.md#def-matrix-column), transposes, addition, and [scalar multiplication](linear-algebra-matrices.llms.md#def-scalar-mult).
-- [Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md): [matrix products](linear-algebra-matrix-multiplication.llms.md#def-matrix-mult), [square matrices](linear-algebra-matrix-multiplication.llms.md#def-square-matrix), [identity matrices](linear-algebra-matrix-multiplication.llms.md#def-identity-matrix), [matrix-vector products](linear-algebra-matrix-multiplication.llms.md#def-matvec-mult), and the transpose rules for addition and multiplication.
-- [Linear and Affine Maps](linear-algebra-linear-maps.llms.md): linear and affine maps, and [hyperplanes](linear-algebra-linear-maps.llms.md#def-hyperplane).
+- The [Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md) page: [matrix products](linear-algebra-matrix-multiplication.llms.md#def-matrix-mult), [square matrices](linear-algebra-matrix-multiplication.llms.md#def-square-matrix), [identity matrices](linear-algebra-matrix-multiplication.llms.md#def-identity-matrix), [matrix-vector products](linear-algebra-matrix-multiplication.llms.md#def-matvec-mult), and the transpose rules for addition and multiplication.
+- The [Linear and Affine Maps](linear-algebra-linear-maps.llms.md) page: linear and affine maps, and [hyperplanes](linear-algebra-linear-maps.llms.md#def-hyperplane).
 - [Subspaces and Rank](linear-algebra-subspaces.llms.md): rank, subspaces, and bases.
-- [Column Space and Null Space](linear-algebra-column-null-space.llms.md): column, row and null spaces of a matrix, and [Gram matrices](linear-algebra-column-null-space.llms.md#def-gram-matrix).
-- [Rank-Nullity and Rank Factorization](linear-algebra-rank-nullity.llms.md): [rank-nullity](linear-algebra-rank-nullity.llms.md#thm-rank-nullity), the rank of matrix products, and rank factorization.
-- [Affine Subspaces and Half-Spaces](linear-algebra-affine-subspaces.llms.md): affine subspaces, hyperplanes, and half-spaces.
+- The [Column Space and Null Space](linear-algebra-column-null-space.llms.md) page: column, row and null spaces of a matrix, and [Gram matrices](linear-algebra-column-null-space.llms.md#def-gram-matrix).
+- The [Rank-Nullity and Rank Factorization](linear-algebra-rank-nullity.llms.md) page: [rank-nullity](linear-algebra-rank-nullity.llms.md#thm-rank-nullity), the rank of matrix products, and rank factorization.
+- The [Affine Subspaces and Half-Spaces](linear-algebra-affine-subspaces.llms.md) page: affine subspaces, hyperplanes, and half-spaces.
 - [Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md): sums and direct sums, orthogonal complements, and the fundamental theorem of linear algebra.
-- [Inner Products and the Cauchy-Schwarz Inequality](linear-algebra-inner-products.llms.md): inner products, the Cauchy-Schwarz inequality, the [triangle inequality](linear-algebra-inner-products.llms.md#thm-triangle-inequality), the [norm](linear-algebra-inner-products.llms.md#def-norm) of a vector, and the [angle between two vectors](linear-algebra-inner-products.llms.md#def-angle).
-- [Orthonormal Bases, Outer Products and Hilbert Spaces](linear-algebra-orthonormal-bases.llms.md): orthonormal bases, Gram-Schmidt, outer products, the [Kronecker product](linear-algebra-orthonormal-bases.llms.md#def-kronecker-product), and Hilbert spaces.
-- [Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md): symmetric, diagonal, inverse, projection and orthogonal matrices, quadratic forms, the trace, and the [matrix inner product](linear-algebra-special-matrices.llms.md#def-matrix-inner-product).
-- [Eigenvalues and Matrix Decompositions](linear-algebra-decompositions.llms.md): eigenvalues, the spectral theorem, [eigendecompositions](linear-algebra-decompositions.llms.md#def-eigendecomposition) and the SVD.
-- [Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md): [positive definite](linear-algebra-definite-matrices.llms.md#def-positive-definite) and semidefinite matrices, [condition numbers](linear-algebra-definite-matrices.llms.md#def-condition-number), [matrix-induced inner products](linear-algebra-definite-matrices.llms.md#def-matrix-induced-inner-product), and determinants.
-- [Design Matrices and Projections](linear-algebra-projections.llms.md): design matrices, the [hat matrix](linear-algebra-projections.llms.md#def-hat-matrix) and [orthogonal projection](linear-algebra-projections.llms.md#def-orthogonal-projection).
-- [Generalized Inverses and Linear Systems](linear-algebra-generalized-inverses.llms.md): generalized inverses, the [Moore-Penrose inverse](linear-algebra-generalized-inverses.llms.md#def-moore-penrose), and when a linear system has a solution.
-- [Solving Linear Systems and Least Squares](linear-algebra-least-squares.llms.md): back substitution, the QR factorization, the [LU factorization](linear-algebra-least-squares.llms.md#def-lu), least squares and the [normal equations](linear-algebra-least-squares.llms.md#def-normal-equations).
+- The [Inner Products and the Cauchy-Schwarz Inequality](linear-algebra-inner-products.llms.md) page: inner products, the Cauchy-Schwarz inequality, the [triangle inequality](linear-algebra-inner-products.llms.md#thm-triangle-inequality), the [norm](linear-algebra-inner-products.llms.md#def-norm) of a vector, and the [angle between two vectors](linear-algebra-inner-products.llms.md#def-angle).
+- The [Orthonormal Bases, Outer Products and Hilbert Spaces](linear-algebra-orthonormal-bases.llms.md) page: orthonormal bases, Gram-Schmidt, outer products, the [Kronecker product](linear-algebra-orthonormal-bases.llms.md#def-kronecker-product), and Hilbert spaces.
+- The [Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md) page: symmetric, diagonal, inverse, projection and orthogonal matrices, quadratic forms, the trace, and the [matrix inner product](linear-algebra-special-matrices.llms.md#def-matrix-inner-product).
+- The [Eigenvalues and Matrix Decompositions](linear-algebra-decompositions.llms.md) page: eigenvalues, the spectral theorem, [eigendecompositions](linear-algebra-decompositions.llms.md#def-eigendecomposition) and the SVD.
+- The [Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md) page: [positive definite](linear-algebra-definite-matrices.llms.md#def-positive-definite) and semidefinite matrices, [condition numbers](linear-algebra-definite-matrices.llms.md#def-condition-number), [matrix-induced inner products](linear-algebra-definite-matrices.llms.md#def-matrix-induced-inner-product), and determinants.
+- The [Design Matrices and Projections](linear-algebra-projections.llms.md) page: design matrices, the [hat matrix](linear-algebra-projections.llms.md#def-hat-matrix) and [orthogonal projection](linear-algebra-projections.llms.md#def-orthogonal-projection).
+- The [Generalized Inverses and Linear Systems](linear-algebra-generalized-inverses.llms.md) page: generalized inverses, the [Moore-Penrose inverse](linear-algebra-generalized-inverses.llms.md#def-moore-penrose), and when a linear system has a solution.
+- The [Solving Linear Systems and Least Squares](linear-algebra-least-squares.llms.md) page: back substitution, the QR factorization, the [LU factorization](linear-algebra-least-squares.llms.md#def-lu), least squares and the [normal equations](linear-algebra-least-squares.llms.md#def-normal-equations).
 - [Diagonalization and Cholesky](linear-algebra-diagonalization.llms.md): similarity, diagonalization, Schur complements, and the Cholesky factorization.
 - [Complex Vectors and Matrices](linear-algebra-complex.llms.md): conjugate transposes and Hermitian matrices.
 

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-19 16:43:08 (PST)
+Last modified: 2026-11-19 23:44:07 (PST)
 
 # 1 Definite Matrices
 
@@ -13,7 +13,7 @@ Last modified: 2026-11-19 16:43:08 (PST)
 > **Definition 1 (Positive semidefinite matrix)** A $p \times p$ matrix $\mathbf{A}$ is **positive semidefinite** [\[1\]](#ref-wikipedia_definite_matrix) if it satisfies both conditions:
 >
 > - $\mathbf{A}$ is symmetric ([Definition 3 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#def-symmetric-matrix)).
-> - Every quadratic form ([Definition 11 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#def-quadratic-form)) in $\mathbf{A}$ is non-negative: ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \ge 0$ for every vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ of length $p$.
+> - Every quadratic form ([Definition 13 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#def-quadratic-form)) in $\mathbf{A}$ is non-negative: ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \ge 0$ for every vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ of length $p$.
 
 > **NOTE:**
 >
@@ -136,7 +136,7 @@ Last modified: 2026-11-19 16:43:08 (PST)
 > **Definition 2 (Positive definite matrix)** A $p \times p$ matrix $\mathbf{A}$ is **positive definite** [\[1\]](#ref-wikipedia_definite_matrix) if it satisfies both conditions:
 >
 > - $\mathbf{A}$ is symmetric ([Definition 3 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#def-symmetric-matrix)).
-> - Every quadratic form ([Definition 11 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#def-quadratic-form)) in $\mathbf{A}$ at a nonzero vector is positive: ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} > 0$ for every vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\neq \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ of length $p$.
+> - Every quadratic form ([Definition 13 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#def-quadratic-form)) in $\mathbf{A}$ at a nonzero vector is positive: ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} > 0$ for every vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\neq \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ of length $p$.
 
 > **NOTE:**
 >
@@ -495,7 +495,7 @@ See also [\[1\]](#ref-wikipedia_definite_matrix).
 >
 > $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + c,$$
 >
-> where $\mathbf{S}$ is a nonzero symmetric $p \times p$ matrix ([Definition 3 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#def-symmetric-matrix)), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^p$, and $c \in \mathbb{R}$. The first term is a quadratic form ([Definition 11 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#def-quadratic-form)).
+> where $\mathbf{S}$ is a nonzero symmetric $p \times p$ matrix ([Definition 3 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#def-symmetric-matrix)), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^p$, and $c \in \mathbb{R}$. The first term is a quadratic form ([Definition 13 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#def-quadratic-form)).
 
 > **NOTE:**
 >
@@ -533,9 +533,9 @@ See also [\[1\]](#ref-wikipedia_definite_matrix).
 
 > **NOTE:**
 >
-> **Definition 9 (Matrix-induced inner product (**$\mathbf{A}$-inner product)) Let $\mathbf{A}$ be a $p \times p$ symmetric positive definite matrix ([Definition 2](#def-positive-definite)) ($\mathbf{A} = {\mathbf{A}}^{\top}$ and ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} > 0$ for all nonzero $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$). The **matrix-induced inner product** (or $\mathbf{A}$-inner product) on $\mathbb{R}^p$ is defined for all $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p$ by
+> **Definition 9 (Matrix-induced inner product (**$\mathbf{A}$-inner product)) Let $\mathbf{A}$ be a $p \times p$ [symmetric](linear-algebra-special-matrices.llms.md#def-symmetric-matrix) [positive definite matrix](#def-positive-definite). The **matrix-induced inner product** (or $\mathbf{A}$-inner product) on $\mathbb{R}^p$ is the [symmetric bilinear form](linear-algebra-special-matrices.llms.md#def-symmetric-bilinear-form) of $\mathbf{A}$, used as an [inner product](linear-algebra-inner-products.llms.md#def-inner-product): [for all](https://morrison-lab.github.io/mcs/proof-writing.html#def-universal-quantifier) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p$,
 >
-> $${\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rangle\mathclose{}}_{\mathbf{A}} \stackrel{\text{def}}{=}{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}.$$
+> $${\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rangle\mathclose{}}_{\mathbf{A}} \stackrel{\text{def}}{=}{{B_{\mathbf{A}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right)\mathclose{}}.$$
 
 > **NOTE:**
 >
@@ -595,6 +595,34 @@ See also [\[1\]](#ref-wikipedia_definite_matrix).
 > \end{aligned}$$
 >
 > couple the coordinate directions, altering lengths and angles from their Euclidean values. When $\mathbf{A} = \mathbf{I}_p$, the matrix-induced inner product recovers the standard dot product ${\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rangle\mathclose{}}_{\mathbf{I}_p} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$.
+
+> **NOTE:**
+>
+> *Remark 3* (A symmetric bilinear form needs a positive definite matrix to be an inner product). [Definition 9](#def-matrix-induced-inner-product) uses the [symmetric bilinear form](linear-algebra-special-matrices.llms.md#def-symmetric-bilinear-form) of $\mathbf{A}$ as an [inner product](linear-algebra-inner-products.llms.md#def-inner-product) only when $\mathbf{A}$ is also [positive definite](#def-positive-definite). A [symmetric matrix](linear-algebra-special-matrices.llms.md#def-symmetric-matrix) $\mathbf{A}$ that is not positive definite has a nonzero vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ with ${{B_{\mathbf{A}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right)\mathclose{}} \le 0$. If ${{B_{\mathbf{A}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right)\mathclose{}} < 0$, the form breaks [positivity](linear-algebra-inner-products.llms.md#def-inner-product-positivity); if ${{B_{\mathbf{A}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right)\mathclose{}} = 0$, it breaks [definiteness](linear-algebra-inner-products.llms.md#def-inner-product-definiteness). Either way, that form is not an inner product. For example, take $\mathbf{S}$ from [Example 18 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#exm-symmetric-bilinear-form) and the vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} = {(1, -1)}^{\top}$:
+>
+> $$\begin{aligned}
+> {{B_{\mathbf{S}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}\right)\mathclose{}}
+> &= \begin{bmatrix} 1 & -1 \end{bmatrix}
+> \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}
+> \begin{bmatrix} 1 \\ -1 \end{bmatrix}
+> && \text{(}\href{linear-algebra-special-matrices.qmd#def-bilinear-form}{\text{Definition~11 in Special Matrices, Quadratic Forms and Trace}}\text{)}
+> \\
+> &= \begin{bmatrix} 1 & -1 \end{bmatrix}
+> \begin{bmatrix} 1 \cdot 1 + 2 \cdot(-1) \\ 2 \cdot 1 + 1 \cdot(-1) \end{bmatrix}
+> && \text{(multiply the matrix by } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} \text{)}
+> \\
+> &= \begin{bmatrix} 1 & -1 \end{bmatrix}
+> \begin{bmatrix} -1 \\ 1 \end{bmatrix}
+> && \text{(multiply and add)}
+> \\
+> &= 1 \cdot(-1) + (-1) \cdot 1
+> && \text{(multiply the row by the column)}
+> \\
+> &= -2.
+> && \text{(multiply and add)}
+> \end{aligned}$$
+>
+> The [quadratic form](linear-algebra-special-matrices.llms.md#def-quadratic-form) of $\mathbf{S}$ is negative at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}$, so $\mathbf{S}$ is not positive definite.
 
 > **NOTE:**
 >
@@ -715,6 +743,57 @@ See also [\[1\]](#ref-wikipedia_definite_matrix).
 
 > **NOTE:**
 >
+> **Definition 10 (Matrix-induced norm,** $\mathbf{A}$-norm) Let $\mathbf{A}$ be a $p \times p$ [positive definite matrix](#def-positive-definite). The **matrix-induced norm**, or $\mathbf{A}$-norm, on $\mathbb{R}^p$ is the [induced norm](linear-algebra-inner-products.llms.md#def-induced-norm) of the [matrix-induced inner product](#def-matrix-induced-inner-product) ${\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}}_{\mathbf{A}}$: for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$,
+>
+> $$\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}_{\mathbf{A}} \stackrel{\text{def}}{=}\sqrt{{\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rangle\mathclose{}}_{\mathbf{A}}}.$$
+
+> **NOTE:**
+>
+> **Example 14 (A matrix-induced norm calculation)** Take the [positive definite matrix](#def-positive-definite) $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ of [Example 12](#exm-matrix-induced-inner-product) and the vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 2)$. Then
+>
+> $$\begin{aligned}
+> \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}_{\mathbf{A}}
+> &= \sqrt{{\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rangle\mathclose{}}_{\mathbf{A}}}
+> && \text{(}\href{#def-matrix-induced-norm}{\text{Definition~10}}\text{)}
+> \\
+> &= \sqrt{{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}
+> && \text{(}\href{#def-matrix-induced-inner-product}{\text{Definition~9}}\text{)}
+> \\
+> &= \sqrt{\begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix} \begin{bmatrix} 1 \\ 2 \end{bmatrix}}
+> && \text{(substitute the vector and the matrix)}
+> \\
+> &= \sqrt{\begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 2 \cdot 1 + 1 \cdot 2 \\ 1 \cdot 1 + 2 \cdot 2 \end{bmatrix}}
+> && \text{(}\href{linear-algebra-matrix-multiplication.qmd#def-matvec-mult}{\text{Definition~8 in Matrix Multiplication}}\text{)}
+> \\
+> &= \sqrt{\begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 4 \\ 5 \end{bmatrix}}
+> && \text{(multiply and add)}
+> \\
+> &= \sqrt{1 \cdot 4 + 2 \cdot 5}
+> && \text{(}\href{linear-algebra-matrix-multiplication.qmd#def-matvec-mult}{\text{Definition~8 in Matrix Multiplication}}\text{)}
+> \\
+> &= \sqrt{14}.
+> && \text{(multiply and add)}
+> \end{aligned}$$
+>
+> The [Euclidean norm](linear-algebra-vectors.llms.md#def-euclidean-norm) of the same vector is $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{} = \sqrt{1^2 + 2^2} = \sqrt{5}$, so the $\mathbf{A}$-norm of this vector is larger than its Euclidean norm.
+
+> **NOTE:**
+>
+> **Example 15 (A symmetric matrix that induces no norm)** The [symmetric matrix](linear-algebra-special-matrices.llms.md#def-symmetric-matrix) $\mathbf{B} = \operatorname{diag}(1, -1)$ is not [positive definite](#def-positive-definite), so it has no [matrix-induced norm](#def-matrix-induced-norm). The [square root](algebra-basics.llms.md#def-square-root) $\sqrt{{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}$ is undefined at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (0, 1)$:
+>
+> $$\begin{aligned}
+> {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
+> &= 1 \cdot 0^2 + (-1) \cdot 1^2
+> && \text{(expand the quadratic form)}
+> \\
+> &= -1,
+> && \text{(multiply and add)}
+> \end{aligned}$$
+>
+> and $-1$ has no square root in $\mathbb{R}$.
+
+> **NOTE:**
+>
 > **Corollary 2 (A positive definite matrix is a transpose product)** Let $\mathbf{A}$ be a $p \times p$ symmetric positive definite matrix ([Definition 2](#def-positive-definite)). Then $\mathbf{A} = {\mathbf{W}}^{\top}\mathbf{W}$ for some invertible $p \times p$ matrix $\mathbf{W}$.
 
 > **NOTE:**
@@ -745,7 +824,7 @@ See also [\[1\]](#ref-wikipedia_definite_matrix).
 
 > **NOTE:**
 >
-> *Remark 3* (Inner product spaces in machine learning). In machine learning and statistics, choosing or learning an inner product space tailors geometric notions of distance, angle, and projection to the structure of the data:
+> *Remark 4* (Inner product spaces in machine learning). In machine learning and statistics, choosing or learning an inner product space tailors geometric notions of distance, angle, and projection to the structure of the data:
 >
 > 1.  **Mahalanobis metric and whitening**: Standard Euclidean distance treats all coordinate axes identically, ignoring feature correlations and variance differences. If data features have a symmetric positive definite covariance matrix $\mathbf{\Sigma}$ ([Definition 2](#def-positive-definite)), the precision matrix $\mathbf{A} = \mathbf{\Sigma}^{-1}$ ([Theorem 4](#thm-pd-inverse)) defines the Mahalanobis inner product ${\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rangle\mathclose{}}_{\mathbf{\Sigma}^{-1}} = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{\Sigma}^{-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$. The induced distance $d_{\mathbf{\Sigma}^{-1}}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) = \sqrt{{(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})}^{\top}\mathbf{\Sigma}^{-1}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})}$ measures statistical distance normalized by variance along each principal direction. Factoring $\mathbf{\Sigma}^{-1} = {\mathbf{W}}^{\top}\mathbf{W}$ (via Cholesky or spectral decomposition, [Corollary 2](#cor-pd-transpose-product)), this inner product is the Euclidean dot product of the whitened vectors $\mathbf{W}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $\mathbf{W}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ ([Theorem 6](#thm-whitening-inner-product)).
 >
@@ -753,20 +832,20 @@ See also [\[1\]](#ref-wikipedia_definite_matrix).
 >
 > 3.  **Embeddings and cosine similarity**: In natural language processing and recommendation systems, data items are embedded as vectors in high-dimensional representations. The angle between embeddings captures semantic similarity through cosine similarity ([Definition 14 in Inner Products and the Cauchy-Schwarz Inequality](linear-algebra-inner-products.llms.md#def-cosine-similarity-inner-product-space)): $$\operatorname{cossim}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) = \frac{{\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rangle\mathclose{}}}{\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}\,\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rVert\mathclose{}}.$$ When embedding vectors are normalized to unit Euclidean norm ($\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{} = 1$ and $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rVert\mathclose{} = 1$), cosine similarity equals the inner product ${\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rangle\mathclose{}}$ ([Corollary 2 in Inner Products and the Cauchy-Schwarz Inequality](linear-algebra-inner-products.llms.md#cor-cosine-similarity-unit-vectors)). Similarly, the self-attention mechanism in Transformers computes query-key alignment scores through scaled inner products $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{k}}\vphantom{k}} / \sqrt{d_k}$.
 >
-> 4.  **Weighted and generalized least squares**: In linear regression $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\approx \mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$, when observation errors have unequal variances or known correlations with positive definite covariance matrix $\mathbf{\Omega}$, ordinary least squares is inefficient. Generalized least squares minimizes the residual norm in the inner product space induced by $\mathbf{W} = \mathbf{\Omega}^{-1}$: $$\min_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}} \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\right\rVert\mathclose{}_{\mathbf{W}}^2 = \min_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}} {\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\right\rangle\mathclose{}}_{\mathbf{W}}.$$
+> 4.  **Weighted and generalized least squares**: In linear regression $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\approx \mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}$, when observation errors have unequal variances or known correlations with positive definite covariance matrix $\mathbf{\Omega}$, ordinary least squares is inefficient. Generalized least squares minimizes the [matrix-induced norm](#def-matrix-induced-norm) of the residual, with $\mathbf{W} = \mathbf{\Omega}^{-1}$: $$\min_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}} \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\right\rVert\mathclose{}_{\mathbf{W}}^2 = \min_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}} {\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}\right\rangle\mathclose{}}_{\mathbf{W}}.$$
 
 # 2 Determinants
 
 > **NOTE:**
 >
-> **Definition 10 (Determinant)** The **determinant** [\[5\]](#ref-wikipedia_determinant) of a $p \times p$ matrix $\mathbf{A}$ with entries $a_{ij}$, written $\det(\mathbf{A})$ or $\mathopen{}\left|\mathbf{A}\right|\mathclose{}$, is the number defined recursively in $p$:
+> **Definition 11 (Determinant)** The **determinant** [\[5\]](#ref-wikipedia_determinant) of a $p \times p$ matrix $\mathbf{A}$ with entries $a_{ij}$, written $\det(\mathbf{A})$ or $\mathopen{}\left|\mathbf{A}\right|\mathclose{}$, is the number defined recursively in $p$:
 >
 > - For $p = 1$, $\det(\mathbf{A}) = a_{11}$.
 > - For $p \ge 2$, $$\det(\mathbf{A}) = \sum_{j=1}^p(-1)^{1+j}\, a_{1j} {\det\mathopen{}\left(\mathbf{A}_{(1j)}\right)\mathclose{}},$$ where $\mathbf{A}_{(1j)}$ is the $(p-1) \times (p-1)$ matrix left after deleting row $1$ and column $j$ of $\mathbf{A}$.
 
 > **NOTE:**
 >
-> **Example 14 (Determinant of a** $2 \times 2$ matrix) For $\mathbf{A} = \begin{bmatrix} a & b \\ c & d \end{bmatrix}$, deleting row 1 and column 1 leaves $\begin{bmatrix} d \end{bmatrix}$, and deleting row 1 and column 2 leaves $\begin{bmatrix} c \end{bmatrix}$. So:
+> **Example 16 (Determinant of a** $2 \times 2$ matrix) For $\mathbf{A} = \begin{bmatrix} a & b \\ c & d \end{bmatrix}$, deleting row 1 and column 1 leaves $\begin{bmatrix} d \end{bmatrix}$, and deleting row 1 and column 2 leaves $\begin{bmatrix} c \end{bmatrix}$. So:
 >
 > $$\begin{aligned}
 > \det(\mathbf{A})
@@ -787,11 +866,11 @@ See also [\[1\]](#ref-wikipedia_definite_matrix).
 
 > **NOTE:**
 >
-> *Remark 4* (Cofactor expansion). The recursive formula in [Definition 10](#def-determinant) is the *cofactor expansion* along the first row. Other sources define the determinant as a sum over all orderings of the columns and derive this expansion from it; the two definitions agree [\[6\]](#ref-banerjee2014linear).
+> *Remark 5* (Cofactor expansion). The recursive formula in [Definition 11](#def-determinant) is the *cofactor expansion* along the first row. Other sources define the determinant as a sum over all orderings of the columns and derive this expansion from it; the two definitions agree [\[6\]](#ref-banerjee2014linear).
 >
 > Each ordering picks one entry from each row, from the column that the ordering assigns to that row, and multiplies them. Its sign is $+1$ if the ordering takes an even number of swaps of two columns to reach from $(1, 2, \ldots, p)$, and $-1$ if it takes an odd number.
 >
-> For $p = 2$, the columns have two orderings. The ordering $(1, 2)$ keeps each column in place, picks the entries $a_{11}$ and $a_{22}$, and has sign $+1$. The ordering $(2, 1)$ swaps the two columns, picks the entries $a_{12}$ and $a_{21}$, and has sign $-1$. The sum $a_{11} a_{22} - a_{12} a_{21}$ is the value $a d - b c$ from [Example 14](#exm-determinant).
+> For $p = 2$, the columns have two orderings. The ordering $(1, 2)$ keeps each column in place, picks the entries $a_{11}$ and $a_{22}$, and has sign $+1$. The ordering $(2, 1)$ swaps the two columns, picks the entries $a_{12}$ and $a_{21}$, and has sign $-1$. The sum $a_{11} a_{22} - a_{12} a_{21}$ is the value $a d - b c$ from [Example 16](#exm-determinant).
 
 See also [\[5\]](#ref-wikipedia_determinant).
 
@@ -803,7 +882,7 @@ See also [\[5\]](#ref-wikipedia_determinant).
 
 > **NOTE:**
 >
-> **Theorem 7 (Determinant of a diagonal matrix)** The determinant ([Definition 10](#def-determinant)) of a $p \times p$ diagonal matrix ([Definition 4 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#def-diagonal-matrix)) is the product of its diagonal entries:
+> **Theorem 7 (Determinant of a diagonal matrix)** The determinant ([Definition 11](#def-determinant)) of a $p \times p$ diagonal matrix ([Definition 4 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#def-diagonal-matrix)) is the product of its diagonal entries:
 >
 > $${\det\mathopen{}\left(
 > \begin{bmatrix}
@@ -837,7 +916,7 @@ See also [\[5\]](#ref-wikipedia_determinant).
 
 > **NOTE:**
 >
-> **Example 15 (Determinant of a scaled identity matrix)** For a number $c$, $c\,\mathbf{I}_p$ is diagonal with every diagonal entry equal to $c$, so $\det(c\,\mathbf{I}_p) = c^p$. In particular, $\det(\mathbf{I}_p) = 1$.
+> **Example 17 (Determinant of a scaled identity matrix)** For a number $c$, $c\,\mathbf{I}_p$ is diagonal with every diagonal entry equal to $c$, so $\det(c\,\mathbf{I}_p) = c^p$. In particular, $\det(\mathbf{I}_p) = 1$.
 
 > **NOTE:**
 >
@@ -847,7 +926,7 @@ See also [\[5\]](#ref-wikipedia_determinant).
 
 > **NOTE:**
 >
-> **Example 16 (Checking the product rule)** For $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}$ and $\mathbf{B} = \begin{bmatrix} 1 & 0 \\ 3 & 1 \end{bmatrix}$, [Example 14](#exm-determinant) gives
+> **Example 18 (Checking the product rule)** For $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}$ and $\mathbf{B} = \begin{bmatrix} 1 & 0 \\ 3 & 1 \end{bmatrix}$, [Example 16](#exm-determinant) gives
 >
 > $$\begin{aligned}
 > \det(\mathbf{A}) &= 2 \cdot 1 - 1 \cdot 0 \\
@@ -879,7 +958,7 @@ See also [\[5\]](#ref-wikipedia_determinant).
 
 > **NOTE:**
 >
-> *Remark 5* (An example is not a proof). [Example 16](#exm-det-product) checks [Theorem 8](#thm-det-product) for one pair of $2 \times 2$ matrices, which shows the theorem holds there but does not prove it for every pair. The proof needs properties of the determinant that these notes don’t develop; see Banerjee and Roy [\[6\]](#ref-banerjee2014linear).
+> *Remark 6* (An example is not a proof). [Example 18](#exm-det-product) checks [Theorem 8](#thm-det-product) for one pair of $2 \times 2$ matrices, which shows the theorem holds there but does not prove it for every pair. The proof needs properties of the determinant that these notes don’t develop; see Banerjee and Roy [\[6\]](#ref-banerjee2014linear).
 
 See also [\[5\]](#ref-wikipedia_determinant).
 
@@ -925,7 +1004,7 @@ See also [\[5\]](#ref-wikipedia_determinant).
 > && \text{(determinant of a diagonal matrix)}
 > \end{aligned}$$
 >
-> The product steps are [Theorem 8](#thm-det-product), the orthogonality step is [Definition 10 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#def-orthogonal-matrix), and the identity and diagonal steps are [Theorem 7](#thm-det-diagonal) and [Example 15](#exm-det-diagonal).
+> The product steps are [Theorem 8](#thm-det-product), the orthogonality step is [Definition 10 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#def-orthogonal-matrix), and the identity and diagonal steps are [Theorem 7](#thm-det-diagonal) and [Example 17](#exm-det-diagonal).
 
 > **NOTE:**
 >
@@ -937,14 +1016,14 @@ See also [\[5\]](#ref-wikipedia_determinant).
 
 > **NOTE:**
 >
-> **Example 17 (Two ways to the same determinant)** $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ has eigenvalues $3$ and $1$ ([Example 1 in Eigenvalues and Matrix Decompositions](linear-algebra-decompositions.llms.md#exm-eigenvalue)), so [Theorem 9](#thm-det-eigenvalues) gives
+> **Example 19 (Two ways to the same determinant)** $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ has eigenvalues $3$ and $1$ ([Example 1 in Eigenvalues and Matrix Decompositions](linear-algebra-decompositions.llms.md#exm-eigenvalue)), so [Theorem 9](#thm-det-eigenvalues) gives
 >
 > $$\begin{aligned}
 > \det(\mathbf{A}) &= 3 \cdot 1 \\
 > &= 3,
 > \end{aligned}$$
 >
-> matching $2 \cdot 2 - 1 \cdot 1 = 3$ from [Example 14](#exm-determinant).
+> matching $2 \cdot 2 - 1 \cdot 1 = 3$ from [Example 16](#exm-determinant).
 
 # Definitions on this page
 
@@ -957,7 +1036,8 @@ See also [\[5\]](#ref-wikipedia_determinant).
 - [Definition 7 (Paraboloid)](#def-paraboloid)
 - [Definition 8 (Elliptic paraboloid)](#def-elliptic-paraboloid)
 - [Definition 9 (Matrix-induced inner product (](#def-matrix-induced-inner-product)$\mathbf{A}$-inner product))
-- [Definition 10 (Determinant)](#def-determinant)
+- [Definition 10 (Matrix-induced norm,](#def-matrix-induced-norm) $\mathbf{A}$-norm)
+- [Definition 11 (Determinant)](#def-determinant)
 
 Back to top
 
