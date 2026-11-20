@@ -30,9 +30,10 @@ The linear algebra notes are split across these pages:
   the rank of matrix products, and rank factorization.
 - [Affine Subspaces and Half-Spaces](linear-algebra-affine-subspaces.qmd):
   affine subspaces, hyperplanes, and half-spaces.
-- [Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.qmd):
-  sums and direct sums, orthogonal complements,
-  and the fundamental theorem of linear algebra.
+- [Sums and Direct Sums](linear-algebra-direct-sums.qmd):
+  sums and direct sums of subspaces.
+- [Orthogonal Complements and the Fundamental Theorem](linear-algebra-orthogonal-complements.qmd):
+  orthogonal complements and the fundamental theorem of linear algebra.
 - [Inner Products and the Cauchy-Schwarz Inequality](linear-algebra-inner-products.qmd):
   inner products, the Cauchy-Schwarz inequality,
   the [triangle inequality](linear-algebra-inner-products.qmd#thm-triangle-inequality),
