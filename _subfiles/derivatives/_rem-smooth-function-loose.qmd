@@ -1,0 +1,13 @@
+:::{#rem-smooth-function-loose}
+#### "Smooth" in statistics and machine learning
+
+Statistics and machine learning texts often use "smooth" loosely,
+for a function with as many derivatives as the argument at hand needs,
+usually two.
+A cubic spline, for example, is called smooth
+although its third derivative jumps at each knot,
+so it is not smooth in the sense of @def-smooth-function.
+When an argument depends on the number of derivatives,
+name that number ("twice-differentiable") rather than saying "smooth".
+
+:::

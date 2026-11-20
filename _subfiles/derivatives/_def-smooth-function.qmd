@@ -1,0 +1,12 @@
+:::{#def-smooth-function}
+#### Smooth function (infinitely differentiable function)
+
+A real-valued function $f$ of one variable is **smooth** on an [open interval](https://morrison-lab.github.io/mcs/sets.html#def-open-interval) $I$,
+also called **infinitely differentiable** on $I$,
+if it has a derivative of every order at every point of $I$:
+$f'$ (@def-derivative) exists on $I$,
+$f''$ (@def-second-derivative) exists on $I$,
+and so on, each derivative being differentiable (@def-differentiable) on $I$
+[@wikipedia_smoothness].
+
+:::
