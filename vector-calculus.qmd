@@ -13,7 +13,7 @@ The notes on this topic are split across these pages:
   [partial derivatives](vector-calculus-gradients.qmd#def-partial-derivative),
   [gradients](vector-calculus-gradients.qmd#def-vector-derivative),
   [linear approximation](vector-calculus-gradients.qmd#def-linear-approximation-vector),
-  and [level sets](vector-calculus-gradients.qmd#def-level-set).
+  and [level sets](vector-calculus-gradients.qmd#def-level-set). <!-- no-figure: this overview only links, and the level-set figures are on the linked page -->
 - [Jacobians and Derivative Rules](vector-calculus-derivative-rules.qmd):
   [Jacobian matrices](vector-calculus-derivative-rules.qmd#def-jacobian-matrix),
   derivatives of linear forms and [quadratic forms](linear-algebra-special-matrices.qmd#def-quadratic-form), and the vector chain rule.
