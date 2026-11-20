@@ -4,13 +4,13 @@ Code
 
 Published
 
-Last modified: 2026-11-19 17:40:22 (PST)
+Last modified: 2026-11-19 18:32:32 (PST)
 
 The notes on this topic are split across these pages:
 
-- [Partial Derivatives and Gradients](vector-calculus-gradients.llms.md): [partial derivatives](vector-calculus-gradients.llms.md#def-partial-derivative), [gradients](vector-calculus-gradients.llms.md#def-vector-derivative), [linear approximation](vector-calculus-gradients.llms.md#def-linear-approximation-vector), and [level sets](vector-calculus-gradients.llms.md#def-level-set).
-- [Jacobians and Derivative Rules](vector-calculus-derivative-rules.llms.md): [Jacobian matrices](vector-calculus-derivative-rules.llms.md#def-jacobian-matrix), derivatives of linear forms and [quadratic forms](linear-algebra-special-matrices.llms.md#def-quadratic-form), and the vector chain rule.
-- [Second Partial Derivatives and the Hessian](vector-calculus-hessian.llms.md): [Hessian matrices](vector-calculus-hessian.llms.md#def-hessian), [continuity in several variables](vector-calculus-hessian.llms.md#def-continuous-several), and the [symmetry of the Hessian](vector-calculus-hessian.llms.md#thm-hessian-symmetric).
+- The [Partial Derivatives and Gradients](vector-calculus-gradients.llms.md) page: [partial derivatives](vector-calculus-gradients.llms.md#def-partial-derivative), [gradients](vector-calculus-gradients.llms.md#def-vector-derivative), [linear approximation](vector-calculus-gradients.llms.md#def-linear-approximation-vector), and [level sets](vector-calculus-gradients.llms.md#def-level-set).
+- The [Jacobians and Derivative Rules](vector-calculus-derivative-rules.llms.md) page: [Jacobian matrices](vector-calculus-derivative-rules.llms.md#def-jacobian-matrix), derivatives of linear forms and [quadratic forms](linear-algebra-special-matrices.llms.md#def-quadratic-form), and the vector chain rule.
+- The [Second Partial Derivatives and the Hessian](vector-calculus-hessian.llms.md) page: [Hessian matrices](vector-calculus-hessian.llms.md#def-hessian), [continuity in several variables](vector-calculus-hessian.llms.md#def-continuous-several), and the [symmetry of the Hessian](vector-calculus-hessian.llms.md#thm-hessian-symmetric).
 
 A link to a section, theorem or definition on this page from before the split goes on to the page that now holds it.
 
