@@ -302,7 +302,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-19 18:34:41 (PST)</p>
+  <p class="date">Last modified: 2026-11-19 23:44:37 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -1033,8 +1033,174 @@ p_{ii}
 </section>
 <section class="slide level2">
 
+<div id="def-bilinear-form" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 11 (Bilinear form)</strong></span> The <strong>bilinear form</strong> of a <span class="math inline">\(p \times p\)</span> <a href="./linear-algebra-matrices.html#def-matrix">matrix</a> <span class="math inline">\(\mathbf{A}\)</span> <span class="citation" data-cites="wikipedia_bilinear_form"><a href="#/references" role="doc-biblioref" onclick="">[7]</a></span> is the function <span class="math inline">\({B_{\mathbf{A}}}\)</span> that <a href="https://morrison-lab.github.io/mcs/functions.html#def-function">maps</a> each pair of vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p\)</span> to the <a href="./linear-algebra-vectors.html#def-scalar">scalar</a></p>
+<p><span class="math display">\[
+{{B_{\mathbf{A}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right)\mathclose{}} \stackrel{\text{def}}{=}{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}.
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-bilinear-form" class="theorem example">
+<p><span class="theorem-title"><strong>Example 17 (A bilinear form that depends on the order of its vectors)</strong></span> &nbsp;</p>
+<!-- no-figure: the example computes two numbers from one small matrix -->
+<p>Let</p>
+<p><span class="math display">\[
+\mathbf{A} = \begin{bmatrix} 1 &amp; 2 \\ 0 &amp; 3 \end{bmatrix}, \quad \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix} 1 \\ 2 \end{bmatrix}, \quad \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= \begin{bmatrix} 3 \\ -1 \end{bmatrix}.
+\]</span></p>
+<p>The <a href="#/def-bilinear-form">bilinear form</a> of <span class="math inline">\(\mathbf{A}\)</span> at <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> is</p>
+<p><span class="math display">\[
+\begin{aligned}
+{{B_{\mathbf{A}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right)\mathclose{}}
+&amp;= \begin{bmatrix} 1 &amp; 2 \end{bmatrix}
+\begin{bmatrix} 1 &amp; 2 \\ 0 &amp; 3 \end{bmatrix}
+\begin{bmatrix} 3 \\ -1 \end{bmatrix}
+&amp;&amp; \text{(}\href{#def-bilinear-form}{\text{Definition~11}}\text{)}
+\\
+&amp;= \begin{bmatrix} 1 &amp; 2 \end{bmatrix}
+\begin{bmatrix} 1 \cdot 3 + 2 \cdot(-1) \\ 0 \cdot 3 + 3 \cdot(-1) \end{bmatrix}
+&amp;&amp; \text{(multiply the matrix by } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\text{)}
+\\
+&amp;= \begin{bmatrix} 1 &amp; 2 \end{bmatrix}
+\begin{bmatrix} 1 \\ -3 \end{bmatrix}
+&amp;&amp; \text{(multiply and add)}
+\\
+&amp;= 1 \cdot 1 + 2 \cdot(-3)
+&amp;&amp; \text{(multiply the row by the column)}
+\\
+&amp;= -5.
+&amp;&amp; \text{(multiply and add)}
+\end{aligned}
+\]</span></p>
+<p>With the vectors swapped, it is</p>
+<p><span class="math display">\[
+\begin{aligned}
+{{B_{\mathbf{A}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right)\mathclose{}}
+&amp;= \begin{bmatrix} 3 &amp; -1 \end{bmatrix}
+\begin{bmatrix} 1 &amp; 2 \\ 0 &amp; 3 \end{bmatrix}
+\begin{bmatrix} 1 \\ 2 \end{bmatrix}
+&amp;&amp; \text{(}\href{#def-bilinear-form}{\text{Definition~11}}\text{)}
+\\
+&amp;= \begin{bmatrix} 3 &amp; -1 \end{bmatrix}
+\begin{bmatrix} 1 \cdot 1 + 2 \cdot 2 \\ 0 \cdot 1 + 3 \cdot 2 \end{bmatrix}
+&amp;&amp; \text{(multiply the matrix by } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\text{)}
+\\
+&amp;= \begin{bmatrix} 3 &amp; -1 \end{bmatrix}
+\begin{bmatrix} 5 \\ 6 \end{bmatrix}
+&amp;&amp; \text{(multiply and add)}
+\\
+&amp;= 3 \cdot 5 + (-1) \cdot 6
+&amp;&amp; \text{(multiply the row by the column)}
+\\
+&amp;= 9.
+&amp;&amp; \text{(multiply and add)}
+\end{aligned}
+\]</span></p>
+<p>The two orders give different values.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-symmetric-bilinear-form" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 12 (Symmetric bilinear form)</strong></span> A <strong>symmetric bilinear form</strong> <span class="citation" data-cites="wikipedia_bilinear_form"><a href="#/references" role="doc-biblioref" onclick="">[7]</a></span> is a <a href="#/def-bilinear-form">bilinear form</a> <span class="math inline">\({B_{\mathbf{A}}}\)</span> whose <a href="./linear-algebra-matrices.html#def-matrix">matrix</a> <span class="math inline">\(\mathbf{A}\)</span> is <a href="#/def-symmetric-matrix">symmetric</a>:</p>
+<p><span class="math display">\[
+{\mathbf{A}}^{\top} = \mathbf{A}.
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="thm-symmetric-bilinear-form-swap" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 8 (A symmetric bilinear form does not depend on the order of its vectors)</strong></span> If <span class="math inline">\(\mathbf{A}\)</span> is a <span class="math inline">\(p \times p\)</span> <a href="#/def-symmetric-matrix">symmetric matrix</a>, then its <a href="#/def-bilinear-form">bilinear form</a> is the same with its vectors swapped, <a href="https://morrison-lab.github.io/mcs/proof-writing.html#def-universal-quantifier">for all</a> <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p\)</span>:</p>
+<p><span class="math display">\[
+{{B_{\mathbf{A}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right)\mathclose{}} = {{B_{\mathbf{A}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right)\mathclose{}}.
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Swapping the vectors relies on the fact that <a href="./linear-algebra-matrix-multiplication.html#thm-scalar-transpose">a <span class="math inline">\(1 \times 1\)</span> product equals its own transpose</a>, which justifies the step labeled with that fact:</p>
+<p><span class="math display">\[
+\begin{aligned}
+{{B_{\mathbf{A}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right)\mathclose{}}
+&amp;= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}^{\top}\, \mathbf{A}\, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
+&amp;&amp; \text{(}\href{#def-bilinear-form}{\text{Definition~11}}\text{)}
+\\
+&amp;= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\, {\mathbf{A}}^{\top}\, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}
+&amp;&amp; \text{(a } 1 \times 1 \text{ product equals its own transpose)}
+\\
+&amp;= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\, \mathbf{A}\, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}
+&amp;&amp; \text{(}\href{#def-symmetric-matrix}{\text{Definition~3}}\text{)}
+\\
+&amp;= {{B_{\mathbf{A}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right)\mathclose{}}.
+&amp;&amp; \text{(}\href{#def-bilinear-form}{\text{Definition~11}}\text{)}
+\end{aligned}
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-symmetric-bilinear-form" class="theorem example">
+<p><span class="theorem-title"><strong>Example 18 (A symmetric bilinear form)</strong></span> &nbsp;</p>
+<!-- no-figure: the example computes two numbers from one small matrix -->
+<p>Let</p>
+<p><span class="math display">\[
+\mathbf{S} = \begin{bmatrix} 1 &amp; 2 \\ 2 &amp; 1 \end{bmatrix}, \quad \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix} 1 \\ 2 \end{bmatrix}, \quad \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= \begin{bmatrix} 3 \\ -1 \end{bmatrix}.
+\]</span></p>
+<p>The <a href="./linear-algebra-matrices.html#def-matrix">matrix</a> <span class="math inline">\(\mathbf{S}\)</span> is <a href="#/def-symmetric-matrix">symmetric</a>, because its two <a href="./linear-algebra-matrix-multiplication.html#def-off-diagonal-entry">off-diagonal entries</a> are both <span class="math inline">\(2\)</span>, so its <a href="#/def-bilinear-form">bilinear form</a> is a <a href="#/def-symmetric-bilinear-form">symmetric bilinear form</a>. At <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span>, that form is</p>
+<p><span class="math display">\[
+\begin{aligned}
+{{B_{\mathbf{S}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right)\mathclose{}}
+&amp;= \begin{bmatrix} 1 &amp; 2 \end{bmatrix}
+\begin{bmatrix} 1 &amp; 2 \\ 2 &amp; 1 \end{bmatrix}
+\begin{bmatrix} 3 \\ -1 \end{bmatrix}
+&amp;&amp; \text{(}\href{#def-bilinear-form}{\text{Definition~11}}\text{)}
+\\
+&amp;= \begin{bmatrix} 1 &amp; 2 \end{bmatrix}
+\begin{bmatrix} 1 \cdot 3 + 2 \cdot(-1) \\ 2 \cdot 3 + 1 \cdot(-1) \end{bmatrix}
+&amp;&amp; \text{(multiply the matrix by } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\text{)}
+\\
+&amp;= \begin{bmatrix} 1 &amp; 2 \end{bmatrix}
+\begin{bmatrix} 1 \\ 5 \end{bmatrix}
+&amp;&amp; \text{(multiply and add)}
+\\
+&amp;= 1 \cdot 1 + 2 \cdot 5
+&amp;&amp; \text{(multiply the row by the column)}
+\\
+&amp;= 11.
+&amp;&amp; \text{(multiply and add)}
+\end{aligned}
+\]</span></p>
+<p>With the vectors swapped, it is</p>
+<p><span class="math display">\[
+\begin{aligned}
+{{B_{\mathbf{S}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right)\mathclose{}}
+&amp;= \begin{bmatrix} 3 &amp; -1 \end{bmatrix}
+\begin{bmatrix} 1 &amp; 2 \\ 2 &amp; 1 \end{bmatrix}
+\begin{bmatrix} 1 \\ 2 \end{bmatrix}
+&amp;&amp; \text{(}\href{#def-bilinear-form}{\text{Definition~11}}\text{)}
+\\
+&amp;= \begin{bmatrix} 3 &amp; -1 \end{bmatrix}
+\begin{bmatrix} 1 \cdot 1 + 2 \cdot 2 \\ 2 \cdot 1 + 1 \cdot 2 \end{bmatrix}
+&amp;&amp; \text{(multiply the matrix by } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\text{)}
+\\
+&amp;= \begin{bmatrix} 3 &amp; -1 \end{bmatrix}
+\begin{bmatrix} 5 \\ 4 \end{bmatrix}
+&amp;&amp; \text{(multiply and add)}
+\\
+&amp;= 3 \cdot 5 + (-1) \cdot 4
+&amp;&amp; \text{(multiply the row by the column)}
+\\
+&amp;= 11,
+&amp;&amp; \text{(multiply and add)}
+\end{aligned}
+\]</span></p>
+<p>the same value, as <a href="#/thm-symmetric-bilinear-form-swap" class="quarto-xref">Theorem&nbsp;8</a> says it must be. By contrast, <span class="math inline">\(\mathbf{A}\)</span> in <a href="#/exm-bilinear-form" class="quarto-xref">Example&nbsp;17</a> is not symmetric, so its bilinear form is not a symmetric bilinear form, and swapping the vectors changed its value from <span class="math inline">\(-5\)</span> to <span class="math inline">\(9\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
 <div id="def-quadratic-form" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 11 (Quadratic form)</strong></span> A <strong>quadratic form</strong> <span class="citation" data-cites="wikipedia_quadratic_form"><a href="#/references" role="doc-biblioref" onclick="">[7]</a></span> is a mathematical expression of the structure</p>
+<p><span class="theorem-title"><strong>Definition 13 (Quadratic form)</strong></span> A <strong>quadratic form</strong> <span class="citation" data-cites="wikipedia_quadratic_form"><a href="#/references" role="doc-biblioref" onclick="">[8]</a></span> is a mathematical expression of the structure</p>
 <p><span class="math display">\[{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\, \mathbf{S}\, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\]</span></p>
 <p>where <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is a <span class="math inline">\(p \times 1\)</span> vector and <span class="math inline">\(\mathbf{S}\)</span> is a <span class="math inline">\(p \times p\)</span> matrix.</p>
 </div>
@@ -1059,8 +1225,20 @@ p_{ii}
 </section>
 <section class="slide level2">
 
+<div id="rem-quadratic-form-bilinear" class="proof remark">
+<p><span class="proof-title"><em>Remark 8</em> (A quadratic form is a bilinear form with equal vectors). </span></p>
+<!-- check-results-in-remarks: allow -->
+<!-- Reason for the allow: the display is the bilinear form definition with y = x, read off by substitution, not a result that needs a proof. -->
+<p>Setting <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> in the <a href="#/def-bilinear-form">bilinear form</a> of <span class="math inline">\(\mathbf{S}\)</span> gives the <a href="#/def-quadratic-form">quadratic form</a> of <span class="math inline">\(\mathbf{S}\)</span>:</p>
+<p><span class="math display">\[
+{{B_{\mathbf{S}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right)\mathclose{}} = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}.
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
 <div id="thm-quadratic-form-additive" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 8 (A quadratic form is additive in its matrix)</strong></span> If <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span> are <span class="math inline">\(p \times p\)</span> matrices, <span class="math inline">\(c\)</span> is a number and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is a vector of length <span class="math inline">\(p\)</span>, then</p>
+<p><span class="theorem-title"><strong>Theorem 9 (A quadratic form is additive in its matrix)</strong></span> If <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span> are <span class="math inline">\(p \times p\)</span> matrices, <span class="math inline">\(c\)</span> is a number and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is a vector of length <span class="math inline">\(p\)</span>, then</p>
 <p><span class="math display">\[
 \begin{aligned}
 {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}(\mathbf{A} + \mathbf{B})\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}&amp;= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \\
@@ -1087,7 +1265,7 @@ p_{ii}
 <section class="slide level2">
 
 <div id="exm-quadratic-form-additive" class="theorem example">
-<p><span class="theorem-title"><strong>Example 17 (Combining two quadratic forms into one)</strong></span> Take <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 1 &amp; 2 \\ 0 &amp; 3 \end{bmatrix}\)</span>, <span class="math inline">\(\mathbf{B} = \mathbf{I}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 2)\)</span>. Then</p>
+<p><span class="theorem-title"><strong>Example 19 (Combining two quadratic forms into one)</strong></span> Take <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 1 &amp; 2 \\ 0 &amp; 3 \end{bmatrix}\)</span>, <span class="math inline">\(\mathbf{B} = \mathbf{I}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 2)\)</span>. Then</p>
 <p><span class="math display">\[
 \begin{aligned}
 {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} &amp;= 1 + 4 + 12 = 17, \\
@@ -1104,14 +1282,14 @@ p_{ii}
 <section class="slide level2">
 
 <div id="def-symmetric-part" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 12 (Symmetric part of a square matrix)</strong></span> The <strong>symmetric part</strong> of a <span class="math inline">\(p \times p\)</span> matrix <span class="math inline">\(\mathbf{S}\)</span> is</p>
+<p><span class="theorem-title"><strong>Definition 14 (Symmetric part of a square matrix)</strong></span> The <strong>symmetric part</strong> of a <span class="math inline">\(p \times p\)</span> matrix <span class="math inline">\(\mathbf{S}\)</span> is</p>
 <p><span class="math display">\[\frac{1}{2}\mathopen{}\left(\mathbf{S} + {\mathbf{S}}^{\top}\right)\mathclose{}\]</span></p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-symmetric-part" class="theorem example">
-<p><span class="theorem-title"><strong>Example 18 (The symmetric part of a <span class="math inline">\(2 \times 2\)</span> matrix)</strong></span> For <span class="math inline">\(\mathbf{S} = \begin{bmatrix} 1 &amp; 2 \\ 0 &amp; 3 \end{bmatrix}\)</span>, the symmetric part is</p>
+<p><span class="theorem-title"><strong>Example 20 (The symmetric part of a <span class="math inline">\(2 \times 2\)</span> matrix)</strong></span> For <span class="math inline">\(\mathbf{S} = \begin{bmatrix} 1 &amp; 2 \\ 0 &amp; 3 \end{bmatrix}\)</span>, the symmetric part is</p>
 <p><span class="math display">\[
 \begin{aligned}
 \frac{1}{2}\mathopen{}\left(
@@ -1128,13 +1306,13 @@ p_{ii}
 <section class="slide level2">
 
 <div id="thm-quadratic-form-symmetric" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 9 (A quadratic form depends only on the symmetric part)</strong></span> If <span class="math inline">\(\mathbf{S}\)</span> is a <span class="math inline">\(p \times p\)</span> matrix and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is a vector of length <span class="math inline">\(p\)</span>, then</p>
+<p><span class="theorem-title"><strong>Theorem 10 (A quadratic form depends only on the symmetric part)</strong></span> If <span class="math inline">\(\mathbf{S}\)</span> is a <span class="math inline">\(p \times p\)</span> matrix and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is a vector of length <span class="math inline">\(p\)</span>, then</p>
 <p><span class="math display">\[
 {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
 =
 {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\mathopen{}\left(\frac{1}{2}(\mathbf{S}+{\mathbf{S}}^{\top})\right)\mathclose{}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}.
 \]</span></p>
-<p>So the value of a quadratic form depends only on the symmetric part (<a href="#/def-symmetric-part" class="quarto-xref">Definition&nbsp;12</a>) of <span class="math inline">\(\mathbf{S}\)</span>.</p>
+<p>So the value of a quadratic form depends only on the symmetric part (<a href="#/def-symmetric-part" class="quarto-xref">Definition&nbsp;14</a>) of <span class="math inline">\(\mathbf{S}\)</span>.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>The quadratic form <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is a <span class="math inline">\(1 \times 1\)</span> matrix, so it equals its own transpose:</p>
@@ -1171,7 +1349,7 @@ p_{ii}
 <section class="slide level2">
 
 <div id="exm-quadratic-form-symmetric" class="theorem example">
-<p><span class="theorem-title"><strong>Example 19 (Replacing a matrix by its symmetric part)</strong></span> With <span class="math inline">\(\mathbf{S} = \begin{bmatrix} 1 &amp; 2 \\ 0 &amp; 3 \end{bmatrix}\)</span> from <a href="#/exm-symmetric-part" class="quarto-xref">Example&nbsp;18</a> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 1)\)</span>:</p>
+<p><span class="theorem-title"><strong>Example 21 (Replacing a matrix by its symmetric part)</strong></span> With <span class="math inline">\(\mathbf{S} = \begin{bmatrix} 1 &amp; 2 \\ 0 &amp; 3 \end{bmatrix}\)</span> from <a href="#/exm-symmetric-part" class="quarto-xref">Example&nbsp;20</a> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 1)\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
 {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
@@ -1191,14 +1369,14 @@ p_{ii}
 <section class="slide level2">
 
 <div id="def-trace" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 13 (Trace)</strong></span> The <strong>trace</strong> <span class="citation" data-cites="wikipedia_trace_linear_algebra"><a href="#/references" role="doc-biblioref" onclick="">[8]</a></span> of a <span class="math inline">\(p \times p\)</span> matrix <span class="math inline">\(\mathbf{M}\)</span> is the sum of its diagonal entries:</p>
+<p><span class="theorem-title"><strong>Definition 15 (Trace)</strong></span> The <strong>trace</strong> <span class="citation" data-cites="wikipedia_trace_linear_algebra"><a href="#/references" role="doc-biblioref" onclick="">[9]</a></span> of a <span class="math inline">\(p \times p\)</span> matrix <span class="math inline">\(\mathbf{M}\)</span> is the sum of its diagonal entries:</p>
 <p><span class="math display">\[\operatorname{tr}(\mathbf{M}) \stackrel{\text{def}}{=}\sum_{i=1}^pM_{ii}\]</span></p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-trace" class="theorem example">
-<p><span class="theorem-title"><strong>Example 20 (The trace of a <span class="math inline">\(2 \times 2\)</span> matrix)</strong></span> <span class="math display">\[
+<p><span class="theorem-title"><strong>Example 22 (The trace of a <span class="math inline">\(2 \times 2\)</span> matrix)</strong></span> <span class="math display">\[
 \begin{aligned}
 {\operatorname{tr}\mathopen{}\left(\begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix}\right)\mathclose{}}
 &amp;= 1 + 4 \\
@@ -1210,7 +1388,7 @@ p_{ii}
 <section class="slide level2">
 
 <div id="thm-trace-cyclic" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 10 (The trace of a product does not depend on the order)</strong></span> For an <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and an <span class="math inline">\(n \times m\)</span> matrix <span class="math inline">\(\mathbf{B}\)</span>:</p>
+<p><span class="theorem-title"><strong>Theorem 11 (The trace of a product does not depend on the order)</strong></span> For an <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and an <span class="math inline">\(n \times m\)</span> matrix <span class="math inline">\(\mathbf{B}\)</span>:</p>
 <p><span class="math display">\[
 {\operatorname{tr}\mathopen{}\left(\underbrace{\mathbf{A}\mathbf{B}}_{m \times m}\right)\mathclose{}}
 = {\operatorname{tr}\mathopen{}\left(\underbrace{\mathbf{B}\mathbf{A}}_{n \times n}\right)\mathclose{}}
@@ -1244,7 +1422,7 @@ p_{ii}
 <section class="slide level2">
 
 <div id="exm-trace-cyclic" class="theorem example">
-<p><span class="theorem-title"><strong>Example 21 (Traces of the two products of a <span class="math inline">\(2 \times 3\)</span> and a <span class="math inline">\(3 \times 2\)</span> matrix)</strong></span> Let</p>
+<p><span class="theorem-title"><strong>Example 23 (Traces of the two products of a <span class="math inline">\(2 \times 3\)</span> and a <span class="math inline">\(3 \times 2\)</span> matrix)</strong></span> Let</p>
 <p><span class="math display">\[
 \mathbf{A} = \begin{bmatrix} 1 &amp; 2 &amp; 0 \\ 0 &amp; 1 &amp; 3 \end{bmatrix}
 \qquad
@@ -1302,7 +1480,7 @@ p_{ii}
 <section class="slide level2">
 
 <div id="rem-trace-cyclic-triple" class="proof remark">
-<p><span class="proof-title"><em>Remark 8</em> (Moving a factor of a triple product). </span>Let <span class="math inline">\(\mathbf{A}\)</span> be <span class="math inline">\(m \times n\)</span>, <span class="math inline">\(\mathbf{B}\)</span> be <span class="math inline">\(n \times k\)</span>, and <span class="math inline">\(\mathbf{C}\)</span> be <span class="math inline">\(k \times m\)</span>, so that <span class="math inline">\(\mathbf{A}\mathbf{B}\)</span> is <span class="math inline">\(m \times k\)</span> and <span class="math inline">\(\mathbf{A}\mathbf{B}\mathbf{C}\)</span> is square. Applying <a href="#/thm-trace-cyclic" class="quarto-xref">Theorem&nbsp;10</a> to the <span class="math inline">\(m \times k\)</span> matrix <span class="math inline">\(\mathbf{A}\mathbf{B}\)</span> and the <span class="math inline">\(k \times m\)</span> matrix <span class="math inline">\(\mathbf{C}\)</span> moves the last factor of the triple product to the front <span class="citation" data-cites="banerjee2014linear"><a href="#/references" role="doc-biblioref" onclick="">[6, Ch. 1]</a>, Theorem 1.5 and eq. 1.17, p.&nbsp;19</span>:</p>
+<p><span class="proof-title"><em>Remark 9</em> (Moving a factor of a triple product). </span>Let <span class="math inline">\(\mathbf{A}\)</span> be <span class="math inline">\(m \times n\)</span>, <span class="math inline">\(\mathbf{B}\)</span> be <span class="math inline">\(n \times k\)</span>, and <span class="math inline">\(\mathbf{C}\)</span> be <span class="math inline">\(k \times m\)</span>, so that <span class="math inline">\(\mathbf{A}\mathbf{B}\)</span> is <span class="math inline">\(m \times k\)</span> and <span class="math inline">\(\mathbf{A}\mathbf{B}\mathbf{C}\)</span> is square. Applying <a href="#/thm-trace-cyclic" class="quarto-xref">Theorem&nbsp;11</a> to the <span class="math inline">\(m \times k\)</span> matrix <span class="math inline">\(\mathbf{A}\mathbf{B}\)</span> and the <span class="math inline">\(k \times m\)</span> matrix <span class="math inline">\(\mathbf{C}\)</span> moves the last factor of the triple product to the front <span class="citation" data-cites="banerjee2014linear"><a href="#/references" role="doc-biblioref" onclick="">[6, Ch. 1]</a>, Theorem 1.5 and eq. 1.17, p.&nbsp;19</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \operatorname{tr}(\mathbf{A}\mathbf{B}\mathbf{C})
@@ -1363,7 +1541,7 @@ p_{ii}
 <section class="slide level2">
 
 <div id="thm-outer-product-trace" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 11 (The trace of an outer product is a dot product)</strong></span> For two vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> with the same number <span class="math inline">\(n\)</span> of entries, the <a href="#/def-trace">trace</a> of the <a href="./linear-algebra-orthonormal-bases.html#def-outer-product">outer product</a> <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}\)</span> and the <a href="./linear-algebra-vectors.html#def-dot-product">dot product</a> <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> are the same number:</p>
+<p><span class="theorem-title"><strong>Theorem 12 (The trace of an outer product is a dot product)</strong></span> For two vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> with the same number <span class="math inline">\(n\)</span> of entries, the <a href="#/def-trace">trace</a> of the <a href="./linear-algebra-orthonormal-bases.html#def-outer-product">outer product</a> <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}\)</span> and the <a href="./linear-algebra-vectors.html#def-dot-product">dot product</a> <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> are the same number:</p>
 <p><span class="math display">\[
 {\operatorname{tr}\mathopen{}\left(\underbrace{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}}_{n \times n}\right)\mathclose{}}
 = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}
@@ -1388,7 +1566,7 @@ p_{ii}
 <section class="slide level2">
 
 <div id="exm-outer-product-trace" class="theorem example">
-<p><span class="theorem-title"><strong>Example 22 (The trace of an outer product)</strong></span> For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}} = (1, 2)\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = (3, 4)\)</span>, <a href="./linear-algebra-orthonormal-bases.html#rem-outer-vs-dot-product">the remark on outer and dot products</a> found the <a href="./linear-algebra-orthonormal-bases.html#def-outer-product">outer product</a> <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}}^{\top}\)</span> and the <a href="./linear-algebra-vectors.html#def-dot-product">dot product</a> <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = 11\)</span>. The <a href="#/def-trace">trace</a> of the outer product is</p>
+<p><span class="theorem-title"><strong>Example 24 (The trace of an outer product)</strong></span> For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}} = (1, 2)\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = (3, 4)\)</span>, <a href="./linear-algebra-orthonormal-bases.html#rem-outer-vs-dot-product">the remark on outer and dot products</a> found the <a href="./linear-algebra-orthonormal-bases.html#def-outer-product">outer product</a> <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}}^{\top}\)</span> and the <a href="./linear-algebra-vectors.html#def-dot-product">dot product</a> <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = 11\)</span>. The <a href="#/def-trace">trace</a> of the outer product is</p>
 <p><span class="math display">\[
 \begin{aligned}
 {\operatorname{tr}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}}^{\top}\right)\mathclose{}}
@@ -1402,7 +1580,7 @@ p_{ii}
 &amp;&amp; \text{(add)}
 \end{aligned}
 \]</span></p>
-<p>The trace and the dot product are the same number, as <a href="#/thm-outer-product-trace" class="quarto-xref">Theorem&nbsp;11</a> says.</p>
+<p>The trace and the dot product are the same number, as <a href="#/thm-outer-product-trace" class="quarto-xref">Theorem&nbsp;12</a> says.</p>
 <!-- no-figure: the example adds two diagonal entries -->
 </div>
 </section>
@@ -1428,13 +1606,13 @@ p_{ii}
 &amp;&amp; \text{(the Euclidean norm from the dot product, squared)}
 \end{aligned}
 \]</span></p>
-<p>The second step is <a href="#/thm-outer-product-trace" class="quarto-xref">Theorem&nbsp;11</a>, with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> in place of both <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span>. The third step takes the <a href="./algebra-basics.html#def-square">square</a> of both sides of <a href="./linear-algebra-vectors.html#thm-norm-dot-product">the formula for the Euclidean norm from the dot product</a>.</p>
+<p>The second step is <a href="#/thm-outer-product-trace" class="quarto-xref">Theorem&nbsp;12</a>, with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> in place of both <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span>. The third step takes the <a href="./algebra-basics.html#def-square">square</a> of both sides of <a href="./linear-algebra-vectors.html#thm-norm-dot-product">the formula for the Euclidean norm from the dot product</a>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-self-outer-product-trace" class="theorem example">
-<p><span class="theorem-title"><strong>Example 23 (The trace of a self outer product)</strong></span> For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 2)\)</span>, <a href="./linear-algebra-orthonormal-bases.html#exm-self-outer-product">the example of a self outer product</a> found <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} = \begin{bmatrix} 1 &amp; 2 \\ 2 &amp; 4 \end{bmatrix}\)</span>. Its <a href="#/def-trace">trace</a> and the squared <a href="./linear-algebra-vectors.html#def-euclidean-norm">Euclidean norm</a> of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> are</p>
+<p><span class="theorem-title"><strong>Example 25 (The trace of a self outer product)</strong></span> For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 2)\)</span>, <a href="./linear-algebra-orthonormal-bases.html#exm-self-outer-product">the example of a self outer product</a> found <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} = \begin{bmatrix} 1 &amp; 2 \\ 2 &amp; 4 \end{bmatrix}\)</span>. Its <a href="#/def-trace">trace</a> and the squared <a href="./linear-algebra-vectors.html#def-euclidean-norm">Euclidean norm</a> of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> are</p>
 <p><span class="math display">\[
 \begin{aligned}
 {\operatorname{tr}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\right)\mathclose{}}
@@ -1458,7 +1636,7 @@ p_{ii}
 <section class="slide level2">
 
 <div id="def-matrix-inner-product" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 14 (Matrix inner product)</strong></span> The <strong>inner product</strong> of two <span class="math inline">\(n \times p\)</span> matrices <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span> is</p>
+<p><span class="theorem-title"><strong>Definition 16 (Matrix inner product)</strong></span> The <strong>inner product</strong> of two <span class="math inline">\(n \times p\)</span> matrices <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span> is</p>
 <p><span class="math display">\[
 {\mathopen{}\left\langle \mathbf{A}, \mathbf{B}\right\rangle\mathclose{}}
 \stackrel{\text{def}}{=}
@@ -1482,7 +1660,7 @@ p_{ii}
 <section class="slide level2">
 
 <div id="thm-matrix-inner-product-entries" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 12 (The matrix inner product multiplies matching entries)</strong></span> For two <span class="math inline">\(n \times p\)</span> matrices <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span>:</p>
+<p><span class="theorem-title"><strong>Theorem 13 (The matrix inner product multiplies matching entries)</strong></span> For two <span class="math inline">\(n \times p\)</span> matrices <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span>:</p>
 <p><span class="math display">\[
 {\mathopen{}\left\langle \mathbf{A}, \mathbf{B}\right\rangle\mathclose{}} = \sum_{i=1}^n\sum_{j=1}^pa_{ij}\, b_{ij}
 \]</span></p>
@@ -1512,13 +1690,13 @@ p_{ii}
 <section class="slide level2">
 
 <div id="exm-matrix-inner-product" class="theorem example">
-<p><span class="theorem-title"><strong>Example 24 (The inner product of two <span class="math inline">\(2 \times 2\)</span> matrices)</strong></span> Let</p>
+<p><span class="theorem-title"><strong>Example 26 (The inner product of two <span class="math inline">\(2 \times 2\)</span> matrices)</strong></span> Let</p>
 <p><span class="math display">\[
 \mathbf{A} = \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix}
 \qquad
 \mathbf{B} = \begin{bmatrix} 0 &amp; 1 \\ -1 &amp; 2 \end{bmatrix}
 \]</span></p>
-<p>From <a href="#/def-matrix-inner-product" class="quarto-xref">Definition&nbsp;14</a>:</p>
+<p>From <a href="#/def-matrix-inner-product" class="quarto-xref">Definition&nbsp;16</a>:</p>
 <p><span class="math display">\[
 \begin{aligned}
 {\mathopen{}\left\langle \mathbf{A}, \mathbf{B}\right\rangle\mathclose{}}
@@ -1547,7 +1725,7 @@ p_{ii}
 &amp;&amp; \text{(add)}
 \end{aligned}
 \]</span></p>
-<p>From <a href="#/thm-matrix-inner-product-entries" class="quarto-xref">Theorem&nbsp;12</a>:</p>
+<p>From <a href="#/thm-matrix-inner-product-entries" class="quarto-xref">Theorem&nbsp;13</a>:</p>
 <p><span class="math display">\[
 \begin{aligned}
 {\mathopen{}\left\langle \mathbf{A}, \mathbf{B}\right\rangle\mathclose{}}
@@ -1566,8 +1744,8 @@ p_{ii}
 <section class="slide level2">
 
 <div id="rem-matrix-inner-product-dot-product" class="proof remark">
-<p><span class="proof-title"><em>Remark 9</em> (The matrix inner product as a dot product). </span><a href="#/thm-matrix-inner-product-entries" class="quarto-xref">Theorem&nbsp;12</a> says that the matrix inner product is the dot product (<a href="./linear-algebra-vectors.html#def-dot-product">Definition&nbsp;10 in Vectors</a>) of the two matrices’ entries, each listed as one vector of length <span class="math inline">\(np\)</span>, with both matrices’ entries listed in the same order.</p>
-<p>For example, listing the entries of <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span> in <a href="#/exm-matrix-inner-product" class="quarto-xref">Example&nbsp;24</a> row by row gives <span class="math inline">\((1, 2, 3, 4)\)</span> and <span class="math inline">\((0, 1, -1, 2)\)</span>, and</p>
+<p><span class="proof-title"><em>Remark 10</em> (The matrix inner product as a dot product). </span><a href="#/thm-matrix-inner-product-entries" class="quarto-xref">Theorem&nbsp;13</a> says that the matrix inner product is the dot product (<a href="./linear-algebra-vectors.html#def-dot-product">Definition&nbsp;10 in Vectors</a>) of the two matrices’ entries, each listed as one vector of length <span class="math inline">\(np\)</span>, with both matrices’ entries listed in the same order.</p>
+<p>For example, listing the entries of <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span> in <a href="#/exm-matrix-inner-product" class="quarto-xref">Example&nbsp;26</a> row by row gives <span class="math inline">\((1, 2, 3, 4)\)</span> and <span class="math inline">\((0, 1, -1, 2)\)</span>, and</p>
 <p><span class="math display">\[
 \begin{aligned}
 (1, 2, 3, 4) \cdot (0, 1, -1, 2) &amp;= 7 \\
@@ -1579,17 +1757,17 @@ p_{ii}
 <section class="slide level2">
 
 <div id="def-frobenius-norm" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 15 (Frobenius norm)</strong></span> The <strong>Frobenius norm</strong> <span class="citation" data-cites="wikipedia_frobenius_norm"><a href="#/references" role="doc-biblioref" onclick="">[9]</a></span> of an <span class="math inline">\(n \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> is</p>
+<p><span class="theorem-title"><strong>Definition 17 (Frobenius norm)</strong></span> The <strong>Frobenius norm</strong> <span class="citation" data-cites="wikipedia_frobenius_norm"><a href="#/references" role="doc-biblioref" onclick="">[10]</a></span> of an <span class="math inline">\(n \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> is</p>
 <p><span class="math display">\[
 \mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}_F \stackrel{\text{def}}{=}\sqrt{{\mathopen{}\left\langle \mathbf{A}, \mathbf{A}\right\rangle\mathclose{}}}
 \]</span></p>
-<p>where <span class="math inline">\({\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}}\)</span> is the matrix inner product (<a href="#/def-matrix-inner-product" class="quarto-xref">Definition&nbsp;14</a>).</p>
+<p>where <span class="math inline">\({\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}}\)</span> is the matrix inner product (<a href="#/def-matrix-inner-product" class="quarto-xref">Definition&nbsp;16</a>).</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-frobenius-norm" class="theorem example">
-<p><span class="theorem-title"><strong>Example 25 (The Frobenius norm of a <span class="math inline">\(2 \times 2\)</span> matrix)</strong></span> For <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix}\)</span>:</p>
+<p><span class="theorem-title"><strong>Example 27 (The Frobenius norm of a <span class="math inline">\(2 \times 2\)</span> matrix)</strong></span> For <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix}\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}_F
@@ -1606,14 +1784,14 @@ p_{ii}
 &amp;&amp; \text{(add)}
 \end{aligned}
 \]</span></p>
-<p>The second step is <a href="#/thm-matrix-inner-product-entries" class="quarto-xref">Theorem&nbsp;12</a>.</p>
+<p>The second step is <a href="#/thm-matrix-inner-product-entries" class="quarto-xref">Theorem&nbsp;13</a>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="rem-frobenius-norm-entries" class="proof remark">
-<p><span class="proof-title"><em>Remark 10</em> (The Frobenius norm is the Euclidean norm of the entries). </span>By <a href="#/thm-matrix-inner-product-entries" class="quarto-xref">Theorem&nbsp;12</a>, <span class="math inline">\(\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}_F^2 = \sum_{i=1}^n\sum_{j=1}^pa_{ij}^2\)</span>, a sum of squares, so the square root is always defined. <span class="math inline">\(\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}_F\)</span> is the Euclidean norm (<a href="./linear-algebra-vectors.html#def-euclidean-norm">Definition&nbsp;23 in Vectors</a>) of the entries of <span class="math inline">\(\mathbf{A}\)</span>, listed as one vector of length <span class="math inline">\(np\)</span> <span class="citation" data-cites="banerjee2014linear"><a href="#/references" role="doc-biblioref" onclick="">[6, Ch. 15]</a>, Definition 15.4, p.&nbsp;492</span>.</p>
-<p>For example, listing the entries of <span class="math inline">\(\mathbf{A}\)</span> in <a href="#/exm-frobenius-norm" class="quarto-xref">Example&nbsp;25</a> row by row gives the vector <span class="math inline">\((1, 2, 3, 4)\)</span> of length <span class="math inline">\(2 \cdot 2 = 4\)</span>, and</p>
+<p><span class="proof-title"><em>Remark 11</em> (The Frobenius norm is the Euclidean norm of the entries). </span>By <a href="#/thm-matrix-inner-product-entries" class="quarto-xref">Theorem&nbsp;13</a>, <span class="math inline">\(\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}_F^2 = \sum_{i=1}^n\sum_{j=1}^pa_{ij}^2\)</span>, a sum of squares, so the square root is always defined. <span class="math inline">\(\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}_F\)</span> is the Euclidean norm (<a href="./linear-algebra-vectors.html#def-euclidean-norm">Definition&nbsp;23 in Vectors</a>) of the entries of <span class="math inline">\(\mathbf{A}\)</span>, listed as one vector of length <span class="math inline">\(np\)</span> <span class="citation" data-cites="banerjee2014linear"><a href="#/references" role="doc-biblioref" onclick="">[6, Ch. 15]</a>, Definition 15.4, p.&nbsp;492</span>.</p>
+<p>For example, listing the entries of <span class="math inline">\(\mathbf{A}\)</span> in <a href="#/exm-frobenius-norm" class="quarto-xref">Example&nbsp;27</a> row by row gives the vector <span class="math inline">\((1, 2, 3, 4)\)</span> of length <span class="math inline">\(2 \cdot 2 = 4\)</span>, and</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathopen{}\left\lVert(1, 2, 3, 4)\right\rVert\mathclose{} &amp;= \sqrt{1 + 4 + 9 + 16} \\
@@ -1626,7 +1804,7 @@ p_{ii}
 <section class="slide level2">
 
 <div id="thm-frobenius-norm-columns" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 13 (The squared Frobenius norm adds up the squared column norms)</strong></span> If <span class="math inline">\(\mathbf{A}\)</span> is an <span class="math inline">\(n \times p\)</span> matrix with columns <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_p\)</span>, then</p>
+<p><span class="theorem-title"><strong>Theorem 14 (The squared Frobenius norm adds up the squared column norms)</strong></span> If <span class="math inline">\(\mathbf{A}\)</span> is an <span class="math inline">\(n \times p\)</span> matrix with columns <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_p\)</span>, then</p>
 <p><span class="math display">\[
 \mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}_F^2 = \sum_{j=1}^p\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j\right\rVert\mathclose{}^2.
 \]</span></p>
@@ -1637,7 +1815,7 @@ p_{ii}
 \begin{aligned}
 \mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}_F^2
 &amp;= \sum_{i=1}^n\sum_{j=1}^pa_{ij}^2
-&amp;&amp; \text{(}\href{#rem-frobenius-norm-entries}{\text{Remark~10}}\text{)}
+&amp;&amp; \text{(}\href{#rem-frobenius-norm-entries}{\text{Remark~11}}\text{)}
 \\
 &amp;= \sum_{j=1}^p\sum_{i=1}^na_{ij}^2
 &amp;&amp; \text{(swap the order of two finite sums)}
@@ -1651,12 +1829,12 @@ p_{ii}
 <section class="slide level2 smaller scrollable" id="references">
 
 <div id="exm-frobenius-norm-columns" class="theorem example">
-<p><span class="theorem-title"><strong>Example 26 (The Frobenius norm of a <span class="math inline">\(2 \times 2\)</span> matrix, column by column)</strong></span> The matrix <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix}\)</span> in <a href="#/exm-frobenius-norm" class="quarto-xref">Example&nbsp;25</a> has columns <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 = (1, 3)\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 = (2, 4)\)</span>, so</p>
+<p><span class="theorem-title"><strong>Example 28 (The Frobenius norm of a <span class="math inline">\(2 \times 2\)</span> matrix, column by column)</strong></span> The matrix <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix}\)</span> in <a href="#/exm-frobenius-norm" class="quarto-xref">Example&nbsp;27</a> has columns <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 = (1, 3)\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 = (2, 4)\)</span>, so</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}_F^2
 &amp;= \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1\right\rVert\mathclose{}^2 + \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2\right\rVert\mathclose{}^2
-&amp;&amp; \text{(}\href{#thm-frobenius-norm-columns}{\text{Theorem~13}}\text{)}
+&amp;&amp; \text{(}\href{#thm-frobenius-norm-columns}{\text{Theorem~14}}\text{)}
 \\
 &amp;= (1^2 + 3^2) + (2^2 + 4^2)
 &amp;&amp; \text{(definition of the norm)}
@@ -1668,7 +1846,7 @@ p_{ii}
 &amp;&amp; \text{(add)}
 \end{aligned}
 \]</span></p>
-<p>which matches <span class="math inline">\(\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}_F = \sqrt{30}\)</span> from <a href="#/exm-frobenius-norm" class="quarto-xref">Example&nbsp;25</a>.</p>
+<p>which matches <span class="math inline">\(\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}_F = \sqrt{30}\)</span> from <a href="#/exm-frobenius-norm" class="quarto-xref">Example&nbsp;27</a>.</p>
 </div>
 
 
@@ -1881,14 +2059,17 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
 <div id="ref-banerjee2014linear" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[6] </div><div class="csl-right-inline">S. Banerjee and A. Roy, <em>Linear algebra and matrix analysis for statistics</em>, vol. 181. Crc Press Boca Raton, 2014. Available: <a href="https://www.routledge.com/Linear-Algebra-and-Matrix-Analysis-for-Statistics/Banerjee-Roy/p/book/9781420095388">https://www.routledge.com/Linear-Algebra-and-Matrix-Analysis-for-Statistics/Banerjee-Roy/p/book/9781420095388</a></div>
 </div>
+<div id="ref-wikipedia_bilinear_form" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[7] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Bilinear form — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Bilinear_form">https://en.wikipedia.org/wiki/Bilinear_form</a></div>
+</div>
 <div id="ref-wikipedia_quadratic_form" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[7] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Quadratic form — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Quadratic_form">https://en.wikipedia.org/wiki/Quadratic_form</a></div>
+<div class="csl-left-margin">[8] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Quadratic form — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Quadratic_form">https://en.wikipedia.org/wiki/Quadratic_form</a></div>
 </div>
 <div id="ref-wikipedia_trace_linear_algebra" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[8] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Trace (linear algebra) — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Trace_(linear_algebra)">https://en.wikipedia.org/wiki/Trace_(linear_algebra)</a></div>
+<div class="csl-left-margin">[9] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Trace (linear algebra) — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Trace_(linear_algebra)">https://en.wikipedia.org/wiki/Trace_(linear_algebra)</a></div>
 </div>
 <div id="ref-wikipedia_frobenius_norm" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[9] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Frobenius norm — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Frobenius_norm">https://en.wikipedia.org/wiki/Frobenius_norm</a></div>
+<div class="csl-left-margin">[10] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Frobenius norm — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Frobenius_norm">https://en.wikipedia.org/wiki/Frobenius_norm</a></div>
 </div>
 </div>
 </section>
