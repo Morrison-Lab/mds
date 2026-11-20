@@ -121,6 +121,7 @@ website:
           - text: "Overview"
             href: optimization.qmd
           - optimization-critical-points.qmd
+          - optimization-optimality.qmd
           - optimization-convexity.qmd
           - optimization-constrained.qmd
           - optimization-newton.qmd
@@ -213,6 +214,7 @@ website:
         href: optimization.qmd
         contents:
           - optimization-critical-points.qmd
+          - optimization-optimality.qmd
           - optimization-convexity.qmd
           - optimization-constrained.qmd
           - optimization-newton.qmd
