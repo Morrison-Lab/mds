@@ -1,0 +1,13 @@
+:::{#def-bilinear-form}
+#### Bilinear form
+
+The **bilinear form** of a $p \times p$ [matrix](linear-algebra-matrices.qmd#def-matrix) $\matr{A}$
+[@wikipedia_bilinear_form]
+is the function $\bformfn{\matr{A}}$ that [maps](https://morrison-lab.github.io/mcs/functions.html#def-function) each pair of vectors $\vx, \vy \in \reals^p$
+to the [scalar](linear-algebra-vectors.qmd#def-scalar)
+
+$$
+\bformf{\matr{A}}{\vx}{\vy} \eqdef \bform{\matr{A}}{\vx}{\vy}.
+$$
+
+:::

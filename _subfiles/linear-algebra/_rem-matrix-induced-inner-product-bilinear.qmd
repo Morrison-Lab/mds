@@ -1,0 +1,46 @@
+:::{#rem-matrix-induced-inner-product-bilinear}
+#### A matrix-induced inner product is a symmetric bilinear form
+
+When $\matr{A}$ is [symmetric](#def-symmetric-matrix) and [positive definite](#def-positive-definite),
+its [matrix-induced inner product](#def-matrix-induced-inner-product)
+is the same function as its [symmetric bilinear form](#def-symmetric-bilinear-form),
+since both are defined as $\tp{\vx}\, \matr{A}\, \vy$:
+
+$$
+\iprod{\vx}{\vy}_{\matr{A}} = \bformf{\matr{A}}{\vx}{\vy}.
+$$
+
+A [symmetric matrix](#def-symmetric-matrix) that is not positive definite
+still has a symmetric bilinear form,
+but that form is not an [inner product](linear-algebra-inner-products.qmd#def-inner-product).
+For example, take $\matr{S}$ from @exm-symmetric-bilinear-form
+and the vector $\vecf{z} = \tp{(1, -1)}$:
+
+$$
+\ba
+\bformf{\matr{S}}{\vecf{z}}{\vecf{z}}
+&= \begin{bmatrix} 1 & -1 \end{bmatrix}
+\begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}
+\begin{bmatrix} 1 \\ -1 \end{bmatrix}
+&& \text{(@def-bilinear-form)}
+\\
+&= \begin{bmatrix} 1 & -1 \end{bmatrix}
+\begin{bmatrix} 1 \cd 1 + 2 \cd (-1) \\ 2 \cd 1 + 1 \cd (-1) \end{bmatrix}
+&& \text{(multiply the matrix by } \vecf{z} \text{)}
+\\
+&= \begin{bmatrix} 1 & -1 \end{bmatrix}
+\begin{bmatrix} -1 \\ 1 \end{bmatrix}
+&& \text{(multiply and add)}
+\\
+&= 1 \cd (-1) + (-1) \cd 1
+&& \text{(multiply the row by the column)}
+\\
+&= -2.
+&& \text{(multiply and add)}
+\ea
+$$
+
+The [quadratic form](#def-quadratic-form) of $\matr{S}$ is negative at $\vecf{z}$,
+so $\matr{S}$ is not positive definite.
+
+:::
