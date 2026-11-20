@@ -9,9 +9,11 @@ format:
 
 The optimization notes are split across these pages:
 
-- [Critical Points and Optimality Conditions](optimization-critical-points.qmd):
-  flat points and critical points, Fermat's theorem, Taylor approximations, <!-- check-term-links: allow -->
-  and the first- and second-order conditions in several variables. <!-- check-term-links: allow -->
+- The [Critical Points and Optimization](optimization-critical-points.qmd) page:
+  flat points, critical points, the second derivative test, and inflection points. <!-- check-term-links: allow: a summary of the linked page, which defines these terms -->
+- The [Optimality Conditions in Several Variables](optimization-optimality.qmd) page:
+  Fermat's theorem, stationary points, Taylor approximations, <!-- check-term-links: allow: a summary of the linked page, which defines these terms -->
+  the first- and second-order conditions, and saddle points. <!-- check-term-links: allow: a summary of the linked page, which defines these terms -->
 - [Convexity in Several Variables](optimization-convexity.qmd):
   convex sets and functions, epigraphs, tangent planes, <!-- check-term-links: allow -->
   and the first-order and Hessian characterizations of convexity. <!-- check-term-links: allow -->
