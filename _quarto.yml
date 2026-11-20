@@ -64,6 +64,7 @@ page-xrefs:
       - linear-algebra-rank-nullity.qmd
       - linear-algebra-affine-subspaces.qmd
       - linear-algebra-direct-sums.qmd
+      - linear-algebra-orthogonal-complements.qmd
       - linear-algebra-inner-products.qmd
       - linear-algebra-orthonormal-bases.qmd
       - linear-algebra-special-matrices.qmd
@@ -108,6 +109,11 @@ page-xrefs:
   - index: linear-algebra-diagonalization.qmd
     pages:
       - linear-algebra-cholesky.qmd
+  # linear-algebra-direct-sums.qmd was split (mds#156), so links to it from
+  # before that split (index#id) go on to the page now holding #id.
+  - index: linear-algebra-direct-sums.qmd
+    pages:
+      - linear-algebra-orthogonal-complements.qmd
   # linear-algebra-matrices.qmd was split (mds#156), so links to it from
   # before that split (index#id) go on to the page now holding #id.
   - index: linear-algebra-matrices.qmd
@@ -145,6 +151,7 @@ page-xrefs:
       - linear-algebra-rank-nullity.qmd
       - linear-algebra-affine-subspaces.qmd
       - linear-algebra-direct-sums.qmd
+      - linear-algebra-orthogonal-complements.qmd
 
 format:
   pdf:

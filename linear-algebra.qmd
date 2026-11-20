@@ -7,9 +7,9 @@ format:
 
 The linear algebra notes are split across these pages:
 
-- [Vectors](linear-algebra-vectors.qmd):
+- The [Vectors](linear-algebra-vectors.qmd) page:
   column vectors, transposes, linear combinations, special vectors, and orthogonality.
-- [Matrices](linear-algebra-matrices.qmd):
+- The [Matrices](linear-algebra-matrices.qmd) page:
   matrices, their [rows](linear-algebra-matrices.qmd#def-matrix-row) and [columns](linear-algebra-matrices.qmd#def-matrix-column),
   transposes, addition, and [scalar multiplication](linear-algebra-matrices.qmd#def-scalar-mult).
 - The [Matrix Multiplication](linear-algebra-matrix-multiplication.qmd) page:
@@ -20,7 +20,7 @@ The linear algebra notes are split across these pages:
 - The [Linear and Affine Maps](linear-algebra-linear-maps.qmd) page:
   linear and affine maps, and [hyperplanes](linear-algebra-linear-maps.qmd#def-hyperplane).
   <!-- no-figure: an overview list of page topics, and the hyperplane figures are on the linked page -->
-- [Subspaces and Rank](linear-algebra-subspaces.qmd):
+- The [Subspaces and Rank](linear-algebra-subspaces.qmd) page:
   rank, subspaces, and bases.
 - The [Column Space and Null Space](linear-algebra-column-null-space.qmd) page:
   column, row and null spaces of a matrix,
@@ -30,9 +30,10 @@ The linear algebra notes are split across these pages:
   the rank of matrix products, and rank factorization.
 - The [Affine Subspaces and Half-Spaces](linear-algebra-affine-subspaces.qmd) page:
   affine subspaces, hyperplanes, and half-spaces.
-- [Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.qmd):
-  sums and direct sums, orthogonal complements,
-  and the fundamental theorem of linear algebra.
+- The [Sums and Direct Sums](linear-algebra-direct-sums.qmd) page:
+  sums and direct sums of subspaces.
+- The [Orthogonal Complements and the Fundamental Theorem](linear-algebra-orthogonal-complements.qmd) page:
+  orthogonal complements and the fundamental theorem of linear algebra.
 - The [Inner Products and the Cauchy-Schwarz Inequality](linear-algebra-inner-products.qmd) page:
   inner products, the Cauchy-Schwarz inequality,
   the [triangle inequality](linear-algebra-inner-products.qmd#thm-triangle-inequality),
@@ -65,7 +66,7 @@ The linear algebra notes are split across these pages:
   Gram matrices, [block matrices](linear-algebra-cholesky.qmd#def-block-matrix),
   [Schur complements](linear-algebra-cholesky.qmd#def-schur-complement),
   and the [Cholesky factorization](linear-algebra-cholesky.qmd#thm-cholesky).
-- [Complex Vectors and Matrices](linear-algebra-complex.qmd):
+- The [Complex Vectors and Matrices](linear-algebra-complex.qmd) page:
   conjugate transposes and Hermitian matrices.
 
 A link to a section, theorem or definition on this page from before the split

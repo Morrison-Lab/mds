@@ -94,6 +94,7 @@ website:
           - linear-algebra-rank-nullity.qmd
           - linear-algebra-affine-subspaces.qmd
           - linear-algebra-direct-sums.qmd
+          - linear-algebra-orthogonal-complements.qmd
           - linear-algebra-inner-products.qmd
           - linear-algebra-orthonormal-bases.qmd
           - linear-algebra-special-matrices.qmd
@@ -184,6 +185,7 @@ website:
           - linear-algebra-rank-nullity.qmd
           - linear-algebra-affine-subspaces.qmd
           - linear-algebra-direct-sums.qmd
+          - linear-algebra-orthogonal-complements.qmd
           - linear-algebra-inner-products.qmd
           - linear-algebra-orthonormal-bases.qmd
           - linear-algebra-special-matrices.qmd
