@@ -1,0 +1,14 @@
+:::{#def-matrix-induced-norm}
+#### Matrix-induced norm, $\matr{A}$-norm
+
+Let $\matr{A}$ be a $p \times p$ [positive definite matrix](#def-positive-definite).
+The **matrix-induced norm**, or **$\matr{A}$-norm**, on $\reals^p$
+is the [induced norm](linear-algebra-inner-products.qmd#def-induced-norm)
+of the [matrix-induced inner product](#def-matrix-induced-inner-product) $\iprod{\cdot}{\cdot}_{\matr{A}}$:
+for every $\vx \in \reals^p$,
+
+$$
+\norm{\vx}_{\matr{A}} \eqdef \sqrt{\iprod{\vx}{\vx}_{\matr{A}}}.
+$$
+
+:::
