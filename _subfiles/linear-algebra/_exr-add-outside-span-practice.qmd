@@ -1,7 +1,7 @@
 :::{#exr-add-outside-span-practice}
 #### Adding a third feature to an independent pair
 
-Adding a new feature keeps a list of features [linearly independent](#def-linearly-independent)
+Adding a new feature keeps a list of features [linearly independent](linear-algebra-subspaces.qmd#def-linearly-independent)
 when the new one is not a combination of the old ones,
 which is what @thm-add-outside-span says.
 Let

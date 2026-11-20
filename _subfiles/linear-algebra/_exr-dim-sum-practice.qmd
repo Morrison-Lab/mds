@@ -1,7 +1,7 @@
 :::{#exr-dim-sum-practice}
 #### Finding the dimension of a sum of two planes in $\reals^4$
 
-@thm-dim-sum finds the [dimension](linear-algebra-subspaces.qmd#def-dimension) of a [sum of two subspaces](#def-subspace-sum)
+@thm-dim-sum finds the [dimension](linear-algebra-bases.qmd#def-dimension) of a [sum of two subspaces](#def-subspace-sum)
 without describing it.
 Let $\mathcal{S}_1 = \operatorname{span}\cb{\vecf{e}_1, \vecf{e}_2}$
 and $\mathcal{S}_2 = \operatorname{span}\cb{\vecf{e}_2, \vecf{e}_3}$,

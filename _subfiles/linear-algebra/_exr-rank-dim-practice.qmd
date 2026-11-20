@@ -2,7 +2,7 @@
 #### Finding a rank from the column space
 
 @thm-rank-dim reads the [rank](linear-algebra-subspaces.qmd#def-rank) of a [matrix](linear-algebra-matrices.qmd#def-matrix)
-off the [dimension](linear-algebra-subspaces.qmd#def-dimension) of its [column space](linear-algebra-column-null-space.qmd#def-column-space).
+off the [dimension](linear-algebra-bases.qmd#def-dimension) of its [column space](linear-algebra-column-null-space.qmd#def-column-space).
 Let
 
 $$

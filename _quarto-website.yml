@@ -90,6 +90,7 @@ website:
           - linear-algebra-matrix-multiplication.qmd
           - linear-algebra-linear-maps.qmd
           - linear-algebra-subspaces.qmd
+          - linear-algebra-bases.qmd
           - linear-algebra-column-null-space.qmd
           - linear-algebra-rank-nullity.qmd
           - linear-algebra-affine-subspaces.qmd
@@ -181,6 +182,7 @@ website:
           - linear-algebra-matrix-multiplication.qmd
           - linear-algebra-linear-maps.qmd
           - linear-algebra-subspaces.qmd
+          - linear-algebra-bases.qmd
           - linear-algebra-column-null-space.qmd
           - linear-algebra-rank-nullity.qmd
           - linear-algebra-affine-subspaces.qmd
