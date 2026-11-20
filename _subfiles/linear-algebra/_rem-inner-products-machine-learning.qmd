@@ -38,7 +38,7 @@ tailors geometric notions of distance, angle, and projection to the structure of
 4. **Weighted and generalized least squares**:
    In linear regression $\vy \approx \matr{X}\vcoef$, when observation errors have unequal variances or known correlations with positive definite covariance matrix $\matr{\errcov}$,
    ordinary least squares is inefficient.
-   Generalized least squares minimizes the residual norm in the inner product space induced by $\matr{W} = \matr{\errcov}^{-1}$:
+   Generalized least squares minimizes the [matrix-induced norm](#def-matrix-induced-norm) of the residual, with $\matr{W} = \matr{\errcov}^{-1}$:
    $$
    \min_{\vcoef} \norm{\vy - \matr{X}\vcoef}_{\matr{W}}^2 = \min_{\vcoef} \iprod{\vy - \matr{X}\vcoef}{\vy - \matr{X}\vcoef}_{\matr{W}}.
    $$
