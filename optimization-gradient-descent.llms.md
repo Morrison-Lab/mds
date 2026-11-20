@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-20 11:25:10 (PST)
+Last modified: 2026-11-20 12:57:53 (PST)
 
 > **NOTE:**
 >
@@ -945,7 +945,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > grid_bf = np.linspace(-1.6, 1.6, 321)
 > ax.plot(grid_bf, basin_cost_bf(grid_bf), color="grey")
-> #> [<matplotlib.lines.Line2D object at 0x7402bdac6850>]
+> #> [<matplotlib.lines.Line2D object at 0x72cbbdbfa710>]
 > for start in sorted(basin_starts_bs[:6], reverse=True):
 >     x = [start]
 >     for _ in range(30):
@@ -957,18 +957,18 @@ Last modified: 2026-11-20 11:25:10 (PST)
 >             marker="o" if above else "^",
 >             label=("start above 0" if above else "start below 0")
 >             if abs(start) == 0.1 else None)
-> #> [<matplotlib.lines.Line2D object at 0x7402bdac6990>]
-> #> [<matplotlib.lines.Line2D object at 0x7402bdac6ad0>]
-> #> [<matplotlib.lines.Line2D object at 0x7402bdac6c10>]
-> #> [<matplotlib.lines.Line2D object at 0x7402bdac6d50>]
-> #> [<matplotlib.lines.Line2D object at 0x7402bdac6e90>]
-> #> [<matplotlib.lines.Line2D object at 0x7402bdac6fd0>]
+> #> [<matplotlib.lines.Line2D object at 0x72cbbdbfa850>]
+> #> [<matplotlib.lines.Line2D object at 0x72cbbdbfa990>]
+> #> [<matplotlib.lines.Line2D object at 0x72cbbdbfaad0>]
+> #> [<matplotlib.lines.Line2D object at 0x72cbbdbfac10>]
+> #> [<matplotlib.lines.Line2D object at 0x72cbbdbfad50>]
+> #> [<matplotlib.lines.Line2D object at 0x72cbbdbfae90>]
 > ax.set_xlabel("x")
 > #> Text(0.5, 0, 'x')
 > ax.set_ylabel("f(x)")
 > #> Text(0, 0.5, 'f(x)')
 > fig.legend(loc="outside lower center", ncol=2)
-> #> <matplotlib.legend.Legend object at 0x7402bdac7110>
+> #> <matplotlib.legend.Legend object at 0x72cbbdbfafd0>
 > plt.show()
 > ```
 >
@@ -1058,19 +1058,19 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > >             solid_capstyle="butt")
 > >     ax.plot([dwf_cut_py, 8], [dwf_i_py] * 2, color="#D55E00", lw=8,
 > >             solid_capstyle="butt")
-> > #> [<matplotlib.lines.Line2D object at 0x7402bda007d0>]
-> > #> [<matplotlib.lines.Line2D object at 0x7402bda00910>]
-> > #> [<matplotlib.lines.Line2D object at 0x7402bda00a50>]
-> > #> [<matplotlib.lines.Line2D object at 0x7402bda00b90>]
-> > #> [<matplotlib.lines.Line2D object at 0x7402bda00cd0>]
-> > #> [<matplotlib.lines.Line2D object at 0x7402bda00e10>]
-> > #> [<matplotlib.lines.Line2D object at 0x7402bda00f50>]
-> > #> [<matplotlib.lines.Line2D object at 0x7402bda01090>]
-> > #> [<matplotlib.lines.Line2D object at 0x7402bda011d0>]
+> > #> [<matplotlib.lines.Line2D object at 0x72cbbda8ac10>]
+> > #> [<matplotlib.lines.Line2D object at 0x72cbbda8ad50>]
+> > #> [<matplotlib.lines.Line2D object at 0x72cbbda8ae90>]
+> > #> [<matplotlib.lines.Line2D object at 0x72cbbda8afd0>]
+> > #> [<matplotlib.lines.Line2D object at 0x72cbbda8b110>]
+> > #> [<matplotlib.lines.Line2D object at 0x72cbbda8b250>]
+> > #> [<matplotlib.lines.Line2D object at 0x72cbbda8b390>]
+> > #> [<matplotlib.lines.Line2D object at 0x72cbbda8b4d0>]
+> > #> [<matplotlib.lines.Line2D object at 0x72cbbda8b610>]
 > > ax.axvline(4, linestyle=":", color="black")
-> > #> <matplotlib.lines.Line2D object at 0x7402bda01310>
+> > #> <matplotlib.lines.Line2D object at 0x72cbbda8b750>
 > > ax.set_yticks(range(3), [str(s) for s in dwf_step_py])
-> > #> [<matplotlib.axis.YTick object at 0x7402bdafac10>, <matplotlib.axis.YTick object at 0x7402bda01590>, <matplotlib.axis.YTick object at 0x7402bda01d10>]
+> > #> [<matplotlib.axis.YTick object at 0x72cbbda89090>, <matplotlib.axis.YTick object at 0x72cbbda8b9d0>, <matplotlib.axis.YTick object at 0x72cbbdabc190>]
 > > ax.set_xlabel("starting point")
 > > #> Text(0.5, 0, 'starting point')
 > > ax.set_ylabel("step length")
@@ -1139,10 +1139,10 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > plateau_marks_pf = np.array([0, 10])
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > ax.plot(plateau_grid_pf, 1 / (1 + np.exp(plateau_grid_pf)), color="#0072B2")
-> #> [<matplotlib.lines.Line2D object at 0x7402bd946210>]
+> #> [<matplotlib.lines.Line2D object at 0x72cbbda4b390>]
 > ax.plot(plateau_marks_pf, 1 / (1 + np.exp(plateau_marks_pf)),
 >         color="#D55E00", marker="^", markersize=8, linestyle="")
-> #> [<matplotlib.lines.Line2D object at 0x7402bd946350>]
+> #> [<matplotlib.lines.Line2D object at 0x72cbbda4b250>]
 > ax.set_yscale("log")
 > ax.set_xlabel("x")
 > #> Text(0.5, 0, 'x')
@@ -1197,7 +1197,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 
 > **NOTE:**
 >
-> **Theorem 2 (A bound on the error of gradient descent on a quadratic)** Let $\mathbf{S}$ be a $p \times p$ [positive definite matrix](linear-algebra-special-matrices.llms.md#def-positive-definite) with [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) $\lambda_1, \ldots, \lambda_p$, let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} \in \mathbb{R}^p$, and let $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, whose unique [minimizer](algebra-basics.llms.md#def-global-minimizer) is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^* = \mathbf{S}^{-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}$ ([Theorem 3 in Newton’s Method](optimization-newton.llms.md#thm-newton-quadratic)). [Gradient descent](#def-gradient-descent) with a fixed [step length](#def-gradient-descent) $s> 0$ from any ${{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{(0)}}$ has [errors](optimization-newton.llms.md#def-iterate-error) satisfying, for $t = 1, 2, \ldots$,
+> **Theorem 2 (A bound on the error of gradient descent on a quadratic)** Let $\mathbf{S}$ be a $p \times p$ [positive definite matrix](linear-algebra-definite-matrices.llms.md#def-positive-definite) with [eigenvalues](linear-algebra-decompositions.llms.md#def-eigenvalue) $\lambda_1, \ldots, \lambda_p$, let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} \in \mathbb{R}^p$, and let $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, whose unique [minimizer](algebra-basics.llms.md#def-global-minimizer) is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^* = \mathbf{S}^{-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}$ ([Theorem 3 in Newton’s Method](optimization-newton.llms.md#thm-newton-quadratic)). [Gradient descent](#def-gradient-descent) with a fixed [step length](#def-gradient-descent) $s> 0$ from any ${{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{(0)}}$ has [errors](optimization-newton.llms.md#def-iterate-error) satisfying, for $t = 1, 2, \ldots$,
 >
 > $$\mathopen{}\left\lVert{{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{(t)}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*\right\rVert\mathclose{} \le \rho(s)^t\,\mathopen{}\left\lVert{{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{(0)}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*\right\rVert\mathclose{},
 > \qquad
@@ -1219,7 +1219,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > && \text{(collect the terms in } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}^{(t)} \text{)}
 > \end{aligned}$$
 >
-> By [induction](https://morrison-lab.github.io/mcs/proof-writing.html#def-proof-by-induction) on $t$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}^{(t)} = (\mathbf{I}_p - s\,\mathbf{S})^t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}^{(0)}$. By the [spectral theorem](linear-algebra-special-matrices.llms.md#thm-spectral), write $\mathbf{S} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}$. Then $\mathbf{I}_p - s\,\mathbf{S} = \mathbf{Q}(\mathbf{I}_p - s\,\mathbf{\Lambda}){\mathbf{Q}}^{\top}$ because $\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}_p$, and the $t$th [power](linear-algebra-special-matrices.llms.md#def-matrix-power) cancels each inner ${\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}_p$, so
+> By [induction](https://morrison-lab.github.io/mcs/proof-writing.html#def-proof-by-induction) on $t$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}^{(t)} = (\mathbf{I}_p - s\,\mathbf{S})^t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}^{(0)}$. By the [spectral theorem](linear-algebra-decompositions.llms.md#thm-spectral), write $\mathbf{S} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}$. Then $\mathbf{I}_p - s\,\mathbf{S} = \mathbf{Q}(\mathbf{I}_p - s\,\mathbf{\Lambda}){\mathbf{Q}}^{\top}$ because $\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}_p$, and the $t$th [power](linear-algebra-special-matrices.llms.md#def-matrix-power) cancels each inner ${\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}_p$, so
 >
 > $$\begin{aligned}
 > \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}^{(t)}\right\rVert\mathclose{}
@@ -1240,15 +1240,15 @@ Last modified: 2026-11-20 11:25:10 (PST)
 
 > **NOTE:**
 >
-> **Example 15 (The error multiplier for a step length of one quarter)** Let $\mathbf{S} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ with [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) $3$ and $1$, and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^* = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$. With $s= 0.25$, the factors $1 - s\,\lambda_i$ are $0.25$ and $0.75$, so $\rho(s) = 0.75$ and
+> **Example 15 (The error multiplier for a step length of one quarter)** Let $\mathbf{S} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ with [eigenvalues](linear-algebra-decompositions.llms.md#def-eigenvalue) $3$ and $1$, and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^* = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$. With $s= 0.25$, the factors $1 - s\,\lambda_i$ are $0.25$ and $0.75$, so $\rho(s) = 0.75$ and
 >
 > $$\mathopen{}\left\lVert{{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{(t)}}\right\rVert\mathclose{} \le 0.75^t\,\mathopen{}\left\lVert{{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{(0)}}\right\rVert\mathclose{}.$$
 >
-> Along the [eigenvector](linear-algebra-special-matrices.llms.md#def-eigenvector) for $\lambda= 3$ the [error](optimization-newton.llms.md#def-iterate-error) shrinks fast, and along the eigenvector for $\lambda= 1$ it shrinks slowly; the [bound](https://morrison-lab.github.io/mcs/sets.html#def-bound) follows the slower one.
+> Along the [eigenvector](linear-algebra-decompositions.llms.md#def-eigenvector) for $\lambda= 3$ the [error](optimization-newton.llms.md#def-iterate-error) shrinks fast, and along the eigenvector for $\lambda= 1$ it shrinks slowly; the [bound](https://morrison-lab.github.io/mcs/sets.html#def-bound) follows the slower one.
 
 > **NOTE:**
 >
-> **Theorem 3 (The best constant step length)** In the setting of [Theorem 2](#thm-gd-quadratic-error), let $\lambda_{\min}$ and $\lambda_{\max}$ be the smallest and largest [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) of $\mathbf{S}$. The factor $\rho(s) = \max_i \mathopen{}\left|1 - s\,\lambda_i\right|\mathclose{}$ of [Theorem 2](#thm-gd-quadratic-error) is smallest over $s> 0$ at
+> **Theorem 3 (The best constant step length)** In the setting of [Theorem 2](#thm-gd-quadratic-error), let $\lambda_{\min}$ and $\lambda_{\max}$ be the smallest and largest [eigenvalues](linear-algebra-decompositions.llms.md#def-eigenvalue) of $\mathbf{S}$. The factor $\rho(s) = \max_i \mathopen{}\left|1 - s\,\lambda_i\right|\mathclose{}$ of [Theorem 2](#thm-gd-quadratic-error) is smallest over $s> 0$ at
 >
 > $$s^* = \frac{2}{\lambda_{\min} + \lambda_{\max}},$$
 >
@@ -1258,7 +1258,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > \qquad
 > \kappa= \kappa(\mathbf{S}),$$
 >
-> the [condition number](linear-algebra-special-matrices.llms.md#def-condition-number) of $\mathbf{S}$.
+> which is $\mathbf{S}$’s [condition number](linear-algebra-definite-matrices.llms.md#def-condition-number).
 
 > **NOTE:**
 >
@@ -1295,7 +1295,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 
 > **NOTE:**
 >
-> **Example 16 (The best step length for eigenvalues 3 and 1)** For $\mathbf{S} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ with [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) $3$ and $1$, [Theorem 3](#thm-best-constant-step) gives $s^* = 2 / (3 + 1) = 0.5$, the [condition number](linear-algebra-special-matrices.llms.md#def-condition-number) $\kappa= 3$, and $\rho(s^*) = (3 - 1) / (3 + 1) = 0.5$. A grid search over $s= 0.01, 0.02, \ldots, 1$ finds the smallest $\rho(s)$ at $s= 0.5$, the same [step length](#def-gradient-descent). Each step then multiplies the [error](optimization-newton.llms.md#def-iterate-error) by at most $0.5$.
+> **Example 16 (The best step length for eigenvalues 3 and 1)** For $\mathbf{S} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ with [eigenvalues](linear-algebra-decompositions.llms.md#def-eigenvalue) $3$ and $1$, [Theorem 3](#thm-best-constant-step) gives $s^* = 2 / (3 + 1) = 0.5$, the [condition number](linear-algebra-definite-matrices.llms.md#def-condition-number) $\kappa= 3$, and $\rho(s^*) = (3 - 1) / (3 + 1) = 0.5$. A grid search over $s= 0.01, 0.02, \ldots, 1$ finds the smallest $\rho(s)$ at $s= 0.5$, the same [step length](#def-gradient-descent). Each step then multiplies the [error](optimization-newton.llms.md#def-iterate-error) by at most $0.5$.
 
 > **NOTE:**
 >
@@ -1327,11 +1327,11 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > bcs_rho_pf = np.maximum(np.abs(1 - 3 * bcs_grid_pf), np.abs(1 - bcs_grid_pf))
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > ax.plot(bcs_grid_pf, bcs_rho_pf, color="#0072B2")
-> #> [<matplotlib.lines.Line2D object at 0x7402bda4b750>]
+> #> [<matplotlib.lines.Line2D object at 0x72cbbd847250>]
 > ax.axhline(1, color="black", linestyle=":")
-> #> <matplotlib.lines.Line2D object at 0x7402bda482d0>
+> #> <matplotlib.lines.Line2D object at 0x72cbbd847390>
 > ax.axvline(0.5, color="#D55E00", linestyle="--")
-> #> <matplotlib.lines.Line2D object at 0x7402bda48190>
+> #> <matplotlib.lines.Line2D object at 0x72cbbd8474d0>
 > ax.set_xlabel("Step length")
 > #> Text(0.5, 0, 'Step length')
 > ax.set_ylabel("Error factor")
@@ -1355,19 +1355,19 @@ Last modified: 2026-11-20 11:25:10 (PST)
 
 > **NOTE:**
 >
-> *Solution 1*. $\rho(s) < 1$ says that $\mathopen{}\left|1 - s\,\lambda_i\right|\mathclose{} < 1$ for every $i$, which is $-1 < 1 - s\,\lambda_i < 1$. The right [inequality](https://morrison-lab.github.io/mcs/proof-writing.html#def-inequality) holds for every $s> 0$ because $\lambda_i > 0$. The left inequality is $s\,\lambda_i < 2$, that is, $s< 2 / \lambda_i$. These $p$ [inequalities](https://morrison-lab.github.io/mcs/proof-writing.html#def-inequality), one for each [eigenvalue](linear-algebra-special-matrices.llms.md#def-eigenvalue), all hold exactly when the inequality for the largest eigenvalue holds, since it is the most restrictive:
+> *Solution 1*. $\rho(s) < 1$ says that $\mathopen{}\left|1 - s\,\lambda_i\right|\mathclose{} < 1$ for every $i$, which is $-1 < 1 - s\,\lambda_i < 1$. The right [inequality](https://morrison-lab.github.io/mcs/proof-writing.html#def-inequality) holds for every $s> 0$ because $\lambda_i > 0$. The left inequality is $s\,\lambda_i < 2$, that is, $s< 2 / \lambda_i$. These $p$ [inequalities](https://morrison-lab.github.io/mcs/proof-writing.html#def-inequality), one for each [eigenvalue](linear-algebra-decompositions.llms.md#def-eigenvalue), all hold exactly when the inequality for the largest eigenvalue holds, since it is the most restrictive:
 >
 > $$0 < s< \frac{2}{\lambda_{\max}}.$$
 
 > **NOTE:**
 >
-> **Exercise 2 (The best step length for eigenvalues 1 and 9)** In [gradient descent](#def-gradient-descent), a fixed [step length](#def-gradient-descent) that is too short [converges](algebra-exponentials.llms.md#def-convergent-sequence) slowly, and one that is too long [diverges](algebra-exponentials.llms.md#def-divergent-sequence). [Theorem 3](#thm-best-constant-step) gives the best one from the [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) of $\mathbf{S}$.
+> **Exercise 2 (The best step length for eigenvalues 1 and 9)** In [gradient descent](#def-gradient-descent), a fixed [step length](#def-gradient-descent) that is too short [converges](algebra-exponentials.llms.md#def-convergent-sequence) slowly, and one that is too long [diverges](algebra-exponentials.llms.md#def-divergent-sequence). [Theorem 3](#thm-best-constant-step) gives the best one from the [eigenvalues](linear-algebra-decompositions.llms.md#def-eigenvalue) of $\mathbf{S}$.
 >
 > Let $\mathbf{S} = \begin{bmatrix} 1 & 0 \\ 0 & 9 \end{bmatrix}$. Using [Theorem 3](#thm-best-constant-step), find $s^*$.
 
 > **NOTE:**
 >
-> *Solution 2*. $\mathbf{S}$ is diagonal, so its [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) are its [diagonal entries](linear-algebra-matrix-multiplication.llms.md#def-main-diagonal) $1$ and $9$. Then
+> *Solution 2*. $\mathbf{S}$ is diagonal, so its [eigenvalues](linear-algebra-decompositions.llms.md#def-eigenvalue) are its [diagonal entries](linear-algebra-matrix-multiplication.llms.md#def-main-diagonal) $1$ and $9$. Then
 >
 > $$s^* = \frac{2}{1 + 9} = 0.2.$$
 
@@ -1377,7 +1377,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 
 > **NOTE:**
 >
-> *Solution 3*. The [condition number](linear-algebra-special-matrices.llms.md#def-condition-number) is $\kappa(\mathbf{S}) = 9 / 1 = 9$, so by [Theorem 3](#thm-best-constant-step)
+> *Solution 3*. The [condition number](linear-algebra-definite-matrices.llms.md#def-condition-number) is $\kappa(\mathbf{S}) = 9 / 1 = 9$, so by [Theorem 3](#thm-best-constant-step)
 >
 > $$\rho(s^*) = \frac{9 - 1}{9 + 1} = 0.8.$$
 

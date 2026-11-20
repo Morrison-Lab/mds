@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-20 11:25:10 (PST)
+Last modified: 2026-11-20 12:57:53 (PST)
 
 > **NOTE:**
 >
@@ -128,11 +128,11 @@ Last modified: 2026-11-20 11:25:10 (PST)
 
 > **NOTE:**
 >
-> **Theorem 1 (The Newton step minimizes the quadratic approximation)** Let $q$ be the [quadratic approximation](#def-quadratic-model) of $f$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, with $\mathbf{H} = \mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite). Its unique minimizer is the Newton step $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^* = -\mathbf{H}^{-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}$.
+> **Theorem 1 (The Newton step minimizes the quadratic approximation)** Let $q$ be the [quadratic approximation](#def-quadratic-model) of $f$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, with $\mathbf{H} = \mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ [positive definite](linear-algebra-definite-matrices.llms.md#def-positive-definite). Its unique minimizer is the Newton step $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^* = -\mathbf{H}^{-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}$.
 
 > **NOTE:**
 >
-> *Proof*. $\mathbf{H}$ is symmetric, by the definition of [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite), and [invertible](linear-algebra-special-matrices.llms.md#thm-pd-inverse), so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^*$ exists and $\mathbf{H} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^* = -\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}$. For any $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}} \in \mathbb{R}^p$, first
+> *Proof*. $\mathbf{H}$ is symmetric, by the definition of [positive definite](linear-algebra-definite-matrices.llms.md#def-positive-definite), and [invertible](linear-algebra-definite-matrices.llms.md#thm-pd-inverse), so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^*$ exists and $\mathbf{H} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^* = -\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}$. For any $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}} \in \mathbb{R}^p$, first
 >
 > $$\begin{aligned}
 > {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}}^{\top} \mathbf{H} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^*
@@ -456,11 +456,11 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > \end{aligned}
 > \tag{9}$$
 >
-> so the next [iterate](#def-iterate) is $-2.5 + 0.45 = -2.05$, the point where the [tangent line](calculus-derivatives.llms.md#def-tangent-line) in [Figure 2](#fig-gradient-linear-approximation) crosses $0$. The [Newton’s method](#def-newton-method) iteration $x^{(t+1)} = \tfrac{1}{2} \mathopen{}\left(x^{(t)} + 4 / x^{(t)}\right)\mathclose{}$ of [Example 2](#exm-newton-method) gives the same iterate. Here $H = [-5]$ is not [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite), so [Theorem 1](#thm-newton-model) does not describe this step, but [Theorem 2](#thm-newton-linearized-gradient) does.
+> so the next [iterate](#def-iterate) is $-2.5 + 0.45 = -2.05$, the point where the [tangent line](calculus-derivatives.llms.md#def-tangent-line) in [Figure 2](#fig-gradient-linear-approximation) crosses $0$. The [Newton’s method](#def-newton-method) iteration $x^{(t+1)} = \tfrac{1}{2} \mathopen{}\left(x^{(t)} + 4 / x^{(t)}\right)\mathclose{}$ of [Example 2](#exm-newton-method) gives the same iterate. Here $H = [-5]$ is not [positive definite](linear-algebra-definite-matrices.llms.md#def-positive-definite), so [Theorem 1](#thm-newton-model) does not describe this step, but [Theorem 2](#thm-newton-linearized-gradient) does.
 
 > **NOTE:**
 >
-> *Remark 2* (Two ways to read the Newton step). [Theorem 1](#thm-newton-model) reads the [Newton step](#def-newton-step) as the [minimizer](algebra-basics.llms.md#def-global-minimizer) of the [quadratic approximation](#def-quadratic-model), which needs the [Hessian](vector-calculus.llms.md#def-hessian) $\mathbf{H}$ to be [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite). [Theorem 2](#thm-newton-linearized-gradient) reads it as the root of the [linear approximation of the gradient](#def-gradient-linear-approximation), which needs only $\mathbf{H}$ [invertible](linear-algebra-special-matrices.llms.md#def-matrix-inverse). [Newton’s method](#def-newton-method) solves $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{p \times 1}$ by replacing the [gradient](vector-calculus.llms.md#def-vector-derivative) with [its linear approximation](#def-gradient-linear-approximation) at each [iterate](#def-iterate), so it looks for a [stationary point](optimization-critical-points.llms.md#def-stationary-point) of any kind, not only a minimizer.
+> *Remark 2* (Two ways to read the Newton step). [Theorem 1](#thm-newton-model) reads the [Newton step](#def-newton-step) as the [minimizer](algebra-basics.llms.md#def-global-minimizer) of the [quadratic approximation](#def-quadratic-model), which needs the [Hessian](vector-calculus.llms.md#def-hessian) $\mathbf{H}$ to be [positive definite](linear-algebra-definite-matrices.llms.md#def-positive-definite). [Theorem 2](#thm-newton-linearized-gradient) reads it as the root of the [linear approximation of the gradient](#def-gradient-linear-approximation), which needs only $\mathbf{H}$ [invertible](linear-algebra-special-matrices.llms.md#def-matrix-inverse). [Newton’s method](#def-newton-method) solves $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{p \times 1}$ by replacing the [gradient](vector-calculus.llms.md#def-vector-derivative) with [its linear approximation](#def-gradient-linear-approximation) at each [iterate](#def-iterate), so it looks for a [stationary point](optimization-critical-points.llms.md#def-stationary-point) of any kind, not only a minimizer.
 
 # 4 Convergence
 
@@ -523,13 +523,13 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > nc_err_ax = [x - 2 for x in nc_x_ax]
 > fig, ax = plt.subplots(figsize=(5, 3.5), layout="constrained")
 > ax.semilogy(range(4), nc_err_ax, "o-", color="#0072B2")
-> #> [<matplotlib.lines.Line2D object at 0x7f27026d1e50>]
+> #> [<matplotlib.lines.Line2D object at 0x7911c8c81e50>]
 > ax.set_xlabel("iteration t")
 > #> Text(0.5, 0, 'iteration t')
 > ax.set_ylabel("error of the iterate")
 > #> Text(0, 0.5, 'error of the iterate')
 > ax.set_xticks(range(4))
-> #> [<matplotlib.axis.XTick object at 0x7f27026b3890>, <matplotlib.axis.XTick object at 0x7f27026d1f90>, <matplotlib.axis.XTick object at 0x7f27026d2710>, <matplotlib.axis.XTick object at 0x7f27026d2e90>]
+> #> [<matplotlib.axis.XTick object at 0x7911c8c63890>, <matplotlib.axis.XTick object at 0x7911c8c81f90>, <matplotlib.axis.XTick object at 0x7911c8c82710>, <matplotlib.axis.XTick object at 0x7911c8c82e90>]
 > plt.show();
 > ```
 >
@@ -545,7 +545,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 
 > **NOTE:**
 >
-> **Example 11 (Newton’s method can find a maximum)** From $x^{(0)} = -2.5$ the same iteration gives $-2.05$, $-2.000610$, $-2.0000001$, approaching $-2$. But $-2$ is not a minimizer of $f$: it is a [stationary point](optimization-critical-points.llms.md#def-stationary-point) of $-f$, whose [second derivative](calculus-derivatives.llms.md#def-second-derivative) at $-2$ is $-f''(-2) = 4 > 0$, so it is a strict local minimizer of $-f$ ([Theorem 7 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#thm-second-order-condition)), that is, $f$ is strictly larger at $-2$ than at all nearby points. [Newton’s method](#def-newton-method) looks only for a stationary point. In this example, the [Hessian](vector-calculus.llms.md#def-hessian) $H = f''(x) = 2x$ is negative at every [iterate](#def-iterate). If $H < 0$, then [Theorem 1](#thm-newton-model) does not apply, because it requires a [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite) Hessian. Instead, the [quadratic approximation](#def-quadratic-model) ${q\mathopen{}\left(\delta\right)\mathclose{}} = f + g\,\delta+ \tfrac{1}{2} H \delta^2$ tends to $-\infty$ as $\mathopen{}\left|\delta\right|\mathclose{} \to \infty$, so it has no minimizer.
+> **Example 11 (Newton’s method can find a maximum)** From $x^{(0)} = -2.5$ the same iteration gives $-2.05$, $-2.000610$, $-2.0000001$, approaching $-2$. But $-2$ is not a minimizer of $f$: it is a [stationary point](optimization-critical-points.llms.md#def-stationary-point) of $-f$, whose [second derivative](calculus-derivatives.llms.md#def-second-derivative) at $-2$ is $-f''(-2) = 4 > 0$, so it is a strict local minimizer of $-f$ ([Theorem 7 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#thm-second-order-condition)), that is, $f$ is strictly larger at $-2$ than at all nearby points. [Newton’s method](#def-newton-method) looks only for a stationary point. In this example, the [Hessian](vector-calculus.llms.md#def-hessian) $H = f''(x) = 2x$ is negative at every [iterate](#def-iterate). If $H < 0$, then [Theorem 1](#thm-newton-model) does not apply, because it requires a [positive definite](linear-algebra-definite-matrices.llms.md#def-positive-definite) Hessian. Instead, the [quadratic approximation](#def-quadratic-model) ${q\mathopen{}\left(\delta\right)\mathclose{}} = f + g\,\delta+ \tfrac{1}{2} H \delta^2$ tends to $-\infty$ as $\mathopen{}\left|\delta\right|\mathclose{} \to \infty$, so it has no minimizer.
 >
 > [Figure 4](#fig-newton-maximum) shows the [cubic](algebra-exponentials.llms.md#def-cubic-polynomial) and its quadratic approximation.
 >
@@ -601,15 +601,15 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > > nx_f_max_py = (-2)**3 / 3 - 4 * (-2)
 > > fig, ax = plt.subplots(figsize=(6, 4), layout="constrained")
 > > ax.plot(nx_x_py, nx_f_py, color="#0072B2")
-> > #> [<matplotlib.lines.Line2D object at 0x7f270275fb10>]
+> > #> [<matplotlib.lines.Line2D object at 0x7911c8c37b10>]
 > > ax.plot(nx_x_py, nx_q_py, "--", color="#D55E00")
-> > #> [<matplotlib.lines.Line2D object at 0x7f270275efd0>]
+> > #> [<matplotlib.lines.Line2D object at 0x7911c8c36fd0>]
 > > ax.plot([-2.5], [nx_f0_py], "o", color="#D55E00")
-> > #> [<matplotlib.lines.Line2D object at 0x7f270275ead0>]
+> > #> [<matplotlib.lines.Line2D object at 0x7911c8c36ad0>]
 > > ax.plot([-2.05], [nx_q_step_py], "^", color="#D55E00")
-> > #> [<matplotlib.lines.Line2D object at 0x7f270275e990>]
+> > #> [<matplotlib.lines.Line2D object at 0x7911c8c36990>]
 > > ax.plot([-2], [nx_f_max_py], "s", color="#0072B2")
-> > #> [<matplotlib.lines.Line2D object at 0x7f270275f390>]
+> > #> [<matplotlib.lines.Line2D object at 0x7911c8c37390>]
 > > ax.set_ylim(-2, 6.5)
 > > #> (-2.0, 6.5)
 > > ax.set_xlabel("x")
@@ -631,7 +631,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 
 > **NOTE:**
 >
-> **Theorem 3 (Newton’s method minimizes a quadratic in one step)** Let $\mathbf{S}$ be a $p \times p$ [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite) matrix, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} \in \mathbb{R}^p$, and $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$. From any $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)}$, Newton’s method ([Definition 5](#def-newton-method)) gives $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)} = \mathbf{S}^{-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}$, the unique minimizer of $f$.
+> **Theorem 3 (Newton’s method minimizes a quadratic in one step)** Let $\mathbf{S}$ be a $p \times p$ [positive definite](linear-algebra-definite-matrices.llms.md#def-positive-definite) matrix, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} \in \mathbb{R}^p$, and $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$. From any $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)}$, Newton’s method ([Definition 5](#def-newton-method)) gives $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)} = \mathbf{S}^{-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}$, the unique minimizer of $f$.
 
 > **NOTE:**
 >
@@ -642,7 +642,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > &= \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}};
 > \end{aligned}$$
 >
-> by the [Hessian of a quadratic form](vector-calculus.llms.md#thm-hessian-quadratic) with $\tfrac{1}{2} \mathbf{S}$ in place of $\mathbf{S}$, and because the [gradient](vector-calculus.llms.md#def-vector-derivative) $-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}$ of the [linear](algebra-exponentials.llms.md#def-linear-function) [term](algebra-sums.llms.md#def-term) is [constant](vector-calculus.llms.md#def-constant-wrt-vector), $\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{S}$, which is [invertible](linear-algebra-special-matrices.llms.md#thm-pd-inverse). So
+> by the [Hessian of a quadratic form](vector-calculus.llms.md#thm-hessian-quadratic) with $\tfrac{1}{2} \mathbf{S}$ in place of $\mathbf{S}$, and because the [gradient](vector-calculus.llms.md#def-vector-derivative) $-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}$ of the [linear](algebra-exponentials.llms.md#def-linear-function) [term](algebra-sums.llms.md#def-term) is [constant](vector-calculus.llms.md#def-constant-wrt-vector), $\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{S}$, which is [invertible](linear-algebra-definite-matrices.llms.md#thm-pd-inverse). So
 >
 > $$\begin{aligned}
 > \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)}
@@ -723,7 +723,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > > nq_z_py = (nq_xx_py**2 + 3 * nq_yy_py**2) / 2
 > > fig, ax = plt.subplots(figsize=(6, 3.5), layout="constrained")
 > > ax.contour(nq_xx_py, nq_yy_py, nq_z_py, levels=10, colors="#0072B2")
-> > #> <matplotlib.contour.QuadContourSet object at 0x7f27027dd940>
+> > #> <matplotlib.contour.QuadContourSet object at 0x7911c8d21940>
 > > ax.annotate("", xy=(0.764, -1.236), xytext=(3, 1),
 > >             arrowprops={"arrowstyle": "->", "color": "grey"})
 > > #> Text(3, 1, '')
@@ -731,7 +731,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > >             arrowprops={"arrowstyle": "->", "color": "#D55E00"})
 > > #> Text(3, 1, '')
 > > ax.plot([3], [1], "ko")
-> > #> [<matplotlib.lines.Line2D object at 0x7f270029e710>]
+> > #> [<matplotlib.lines.Line2D object at 0x7911c67c2710>]
 > > ax.set_aspect("equal")
 > > ax.set_xlabel("x1")
 > > #> Text(0.5, 0, 'x1')
@@ -826,11 +826,11 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > > fig = plt.figure(figsize=(6, 4.5))
 > > ax = fig.add_subplot(projection="3d")
 > > ax.plot_surface(nq_x1_3d, nq_x2_3d, nq_z_3d, color="#0072B2", alpha=0.6)
-> > #> <mpl_toolkits.mplot3d.art3d.Poly3DCollection object at 0x7f27027df4d0>
+> > #> <mpl_toolkits.mplot3d.art3d.Poly3DCollection object at 0x7911c8d234d0>
 > > ax.scatter([3], [1], [6], color="#D55E00", label="start")
-> > #> <mpl_toolkits.mplot3d.art3d.Path3DCollection object at 0x7f27027df620>
+> > #> <mpl_toolkits.mplot3d.art3d.Path3DCollection object at 0x7911c8d23620>
 > > ax.scatter([0], [0], [0], color="black", label="minimizer")
-> > #> <mpl_toolkits.mplot3d.art3d.Path3DCollection object at 0x7f2700096c10>
+> > #> <mpl_toolkits.mplot3d.art3d.Path3DCollection object at 0x7911c6676c10>
 > > ax.set_xlabel("x1")
 > > #> Text(0.5, 0, 'x1')
 > > ax.set_ylabel("x2")
@@ -838,7 +838,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > > ax.set_zlabel("f(x)")
 > > #> Text(0.5, 0, 'f(x)')
 > > ax.legend(loc="upper right")
-> > #> <matplotlib.legend.Legend object at 0x7f27027df770>
+> > #> <matplotlib.legend.Legend object at 0x7911c8d23770>
 > > plt.show();
 > > ```
 > >

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-20 11:25:10 (PST)
+Last modified: 2026-11-20 12:57:53 (PST)
 
 > **NOTE:**
 >
@@ -1043,8 +1043,8 @@ Last modified: 2026-11-20 11:25:10 (PST)
 >
 > **Theorem 6 (Second-derivative test for convexity)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have first and second partial derivatives that are [continuous on](vector-calculus.llms.md#def-continuous-on) $\mathbb{R}^p$.
 >
-> 1.  If $\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ is [positive semidefinite](linear-algebra-special-matrices.llms.md#def-positive-semidefinite) for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, then $f$ is [convex](algebra-sums.llms.md#def-convex-function).
-> 2.  If $\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ is [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite) for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, then $f$ is strictly convex ([Definition 4](#def-strictly-convex)).
+> 1.  If $\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ is [positive semidefinite](linear-algebra-definite-matrices.llms.md#def-positive-semidefinite) for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, then $f$ is [convex](algebra-sums.llms.md#def-convex-function).
+> 2.  If $\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ is [positive definite](linear-algebra-definite-matrices.llms.md#def-positive-definite) for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, then $f$ is strictly convex ([Definition 4](#def-strictly-convex)).
 
 > **NOTE:**
 >
@@ -1288,7 +1288,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 
 > **NOTE:**
 >
-> **Theorem 7 (A convex function has a positive semidefinite Hessian)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have first and [second partial derivatives](vector-calculus.llms.md#def-second-partial-derivative) that are [continuous on](vector-calculus.llms.md#def-continuous-on) $\mathbb{R}^p$. If $f$ is [convex](algebra-sums.llms.md#def-convex-function), then the Hessian $\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ is [positive semidefinite](linear-algebra-special-matrices.llms.md#def-positive-semidefinite) for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$.
+> **Theorem 7 (A convex function has a positive semidefinite Hessian)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have first and [second partial derivatives](vector-calculus.llms.md#def-second-partial-derivative) that are [continuous on](vector-calculus.llms.md#def-continuous-on) $\mathbb{R}^p$. If $f$ is [convex](algebra-sums.llms.md#def-convex-function), then the [Hessian](vector-calculus.llms.md#def-hessian) $\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ is [positive semidefinite](linear-algebra-definite-matrices.llms.md#def-positive-semidefinite) for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$.
 
 > **NOTE:**
 >
@@ -1322,24 +1322,24 @@ Last modified: 2026-11-20 11:25:10 (PST)
 
 > **NOTE:**
 >
-> **Corollary 1 (Convex if and only if the Hessian is positive semidefinite)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have first and [second partial derivatives](vector-calculus.llms.md#def-second-partial-derivative) that are [continuous on](vector-calculus.llms.md#def-continuous-on) $\mathbb{R}^p$. Then $f$ is [convex](algebra-sums.llms.md#def-convex-function) [if and only if](https://morrison-lab.github.io/mcs/proof-writing.html#def-iff) the [Hessian](vector-calculus.llms.md#def-hessian) $\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ is [positive semidefinite](linear-algebra-special-matrices.llms.md#def-positive-semidefinite) for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$.
+> **Corollary 1 (Convex if and only if the Hessian is positive semidefinite)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have first and [second partial derivatives](vector-calculus.llms.md#def-second-partial-derivative) that are [continuous on](vector-calculus.llms.md#def-continuous-on) $\mathbb{R}^p$. Then $f$ is [convex](algebra-sums.llms.md#def-convex-function) [if and only if](https://morrison-lab.github.io/mcs/proof-writing.html#def-iff) the [Hessian](vector-calculus.llms.md#def-hessian) $\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ is [positive semidefinite](linear-algebra-definite-matrices.llms.md#def-positive-semidefinite) for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$.
 
 > **NOTE:**
 >
-> *Proof*. Part 1 of [Theorem 6](#thm-convex-hessian) proves that a [positive semidefinite](linear-algebra-special-matrices.llms.md#def-positive-semidefinite) [Hessian](vector-calculus.llms.md#def-hessian) at every point makes $f$ [convex](algebra-sums.llms.md#def-convex-function), and [Theorem 7](#thm-convex-hessian-converse) proves that a convex $f$ has a positive semidefinite Hessian at every point.
+> *Proof*. Part 1 of [Theorem 6](#thm-convex-hessian) proves that a [positive semidefinite](linear-algebra-definite-matrices.llms.md#def-positive-semidefinite) [Hessian](vector-calculus.llms.md#def-hessian) at every [point](linear-algebra-vectors.llms.md#def-real-coordinate-space) makes $f$ [convex](algebra-sums.llms.md#def-convex-function), and [Theorem 7](#thm-convex-hessian-converse) proves that a convex $f$ has a positive semidefinite Hessian at every point.
 
 > **NOTE:**
 >
 > **Theorem 8 (Second-derivative test for concavity)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have first and [second partial derivatives](vector-calculus.llms.md#def-second-partial-derivative) that are [continuous on](vector-calculus.llms.md#def-continuous-on) $\mathbb{R}^p$.
 >
-> 1.  $f$ is [concave](#def-concave) [if and only if](https://morrison-lab.github.io/mcs/proof-writing.html#def-iff) $-\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ is [positive semidefinite](linear-algebra-special-matrices.llms.md#def-positive-semidefinite) for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$.
-> 2.  If $-\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ is [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite) for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$, then $f$ is [strictly concave](#def-strictly-concave).
+> 1.  $f$ is [concave](#def-concave) [if and only if](https://morrison-lab.github.io/mcs/proof-writing.html#def-iff) $-\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ is [positive semidefinite](linear-algebra-definite-matrices.llms.md#def-positive-semidefinite) for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$.
+> 2.  If $-\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ is [positive definite](linear-algebra-definite-matrices.llms.md#def-positive-definite) for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$, then $f$ is [strictly concave](#def-strictly-concave).
 
 > **NOTE:**
 >
 > *Proof*. Its negative $-f$ has the [second partial derivatives](vector-calculus.llms.md#def-second-partial-derivative) $-\frac{\partial}{\partial x_j}\frac{\partial}{\partial x_k} f$, which are [continuous on](vector-calculus.llms.md#def-continuous-on) $\mathbb{R}^p$, so its [Hessian](vector-calculus.llms.md#def-hessian) is $\mathbf{H}_{-f}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = -\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$.
 >
-> 1.  By [Definition 5](#def-concave), $f$ is [concave](#def-concave) [if and only if](https://morrison-lab.github.io/mcs/proof-writing.html#def-iff) $-f$ is [convex](algebra-sums.llms.md#def-convex-function). By [Corollary 1](#cor-convex-iff-hessian) applied to $-f$, that holds [if and only if](https://morrison-lab.github.io/mcs/proof-writing.html#def-iff) $-\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ is [positive semidefinite](linear-algebra-special-matrices.llms.md#def-positive-semidefinite) for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$.
+> 1.  By [Definition 5](#def-concave), $f$ is [concave](#def-concave) [if and only if](https://morrison-lab.github.io/mcs/proof-writing.html#def-iff) $-f$ is [convex](algebra-sums.llms.md#def-convex-function). By [Corollary 1](#cor-convex-iff-hessian) applied to $-f$, that holds [if and only if](https://morrison-lab.github.io/mcs/proof-writing.html#def-iff) $-\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ is [positive semidefinite](linear-algebra-definite-matrices.llms.md#def-positive-semidefinite) for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$.
 > 2.  Part 2 of [Theorem 6](#thm-convex-hessian), applied to $-f$, makes $-f$ [strictly convex](#def-strictly-convex), so $f$ is [strictly concave](#def-strictly-concave) by [Definition 6](#def-strictly-concave).
 
 > **NOTE:**
@@ -1358,7 +1358,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > && \text{(} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\text{)}
 > \end{aligned}$$
 >
-> so $-\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ is [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite), and $f$ is [strictly concave](#def-strictly-concave) by part 2 of [Theorem 8](#thm-concave-hessian). [Figure 12](#fig-concave-hessian) shows the dome that its [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) forms.
+> so $-\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ is [positive definite](linear-algebra-definite-matrices.llms.md#def-positive-definite), and $f$ is [strictly concave](#def-strictly-concave) by part 2 of [Theorem 8](#thm-concave-hessian). [Figure 12](#fig-concave-hessian) shows the dome that its [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) forms.
 >
 > > **NOTE:**
 > >
@@ -1454,7 +1454,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 
 > **NOTE:**
 >
-> **Example 18 (Minimizing over a line, and over a circle)** Let $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2$. Its [Hessian](vector-calculus.llms.md#def-hessian) is $2 \mathbf{I}_2$ at every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, which is [positive semidefinite](linear-algebra-special-matrices.llms.md#def-positive-semidefinite), so $f$ is [convex](algebra-sums.llms.md#def-convex-function) by part 1 of [Theorem 6](#thm-convex-hessian).
+> **Example 18 (Minimizing over a line, and over a circle)** Let $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1^2 + x_2^2$. Its [Hessian](vector-calculus.llms.md#def-hessian) is $2 \mathbf{I}_2$ at every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, which is [positive semidefinite](linear-algebra-definite-matrices.llms.md#def-positive-semidefinite), so $f$ is [convex](algebra-sums.llms.md#def-convex-function) by part 1 of [Theorem 6](#thm-convex-hessian).
 >
 > - Minimizing $f$ subject to $3 x_1 + 4 x_2 = 5$, as in [the example of a minimization problem](optimization-constrained.llms.md#exm-minimization-problem), is a [convex problem](#def-convex-optimization-problem). Its [feasible set](optimization-constrained.llms.md#def-feasible-set) $L = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^2 : 3 x_1 + 4 x_2 = 5\right\}\mathclose{}$ is a [convex set](#def-convex-set): for $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in L$ and $t \in [0, 1]$,
 >

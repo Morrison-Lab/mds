@@ -2709,6 +2709,294 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra-decompositions#def-eigendecomposition",
+   "site": "mds",
+   "page": "linear-algebra-decompositions",
+   "div": "def-eigendecomposition",
+   "kind": "def",
+   "title": "Eigendecomposition, spectral decomposition",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-decompositions#def-eigenvalue",
+   "site": "mds",
+   "page": "linear-algebra-decompositions",
+   "div": "def-eigenvalue",
+   "kind": "def",
+   "title": "Eigenvalue",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-decompositions#def-eigenvector",
+   "site": "mds",
+   "page": "linear-algebra-decompositions",
+   "div": "def-eigenvector",
+   "kind": "def",
+   "title": "Eigenvector",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-decompositions#def-singular-values",
+   "site": "mds",
+   "page": "linear-algebra-decompositions",
+   "div": "def-singular-values",
+   "kind": "def",
+   "title": "Singular values",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-decompositions#def-svd",
+   "site": "mds",
+   "page": "linear-algebra-decompositions",
+   "div": "def-svd",
+   "kind": "def",
+   "title": "Singular value decomposition",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-decompositions#thm-spectral",
+   "site": "mds",
+   "page": "linear-algebra-decompositions",
+   "div": "thm-spectral",
+   "kind": "thm",
+   "title": "Spectral theorem for symmetric matrices",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-decompositions#thm-svd",
+   "site": "mds",
+   "page": "linear-algebra-decompositions",
+   "div": "thm-svd",
+   "kind": "thm",
+   "title": "Singular value decomposition",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-decompositions#thm-svd-evd",
+   "site": "mds",
+   "page": "linear-algebra-decompositions",
+   "div": "thm-svd-evd",
+   "kind": "thm",
+   "title": "An SVD gives an eigendecomposition of $\\tp{\\matr{A}}\\matr{A}$",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-decompositions#thm-symmetric-eigenvectors-orthogonal",
+   "site": "mds",
+   "page": "linear-algebra-decompositions",
+   "div": "thm-symmetric-eigenvectors-orthogonal",
+   "kind": "thm",
+   "title": "Eigenvectors of a symmetric matrix for distinct eigenvalues are orthogonal",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-definite-matrices#cor-det-pd",
+   "site": "mds",
+   "page": "linear-algebra-definite-matrices",
+   "div": "cor-det-pd",
+   "kind": "cor",
+   "title": "A positive definite matrix has a positive determinant",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-definite-matrices#cor-pd-transpose-product",
+   "site": "mds",
+   "page": "linear-algebra-definite-matrices",
+   "div": "cor-pd-transpose-product",
+   "kind": "cor",
+   "title": "A positive definite matrix is a transpose product",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-definite-matrices#cor-self-outer-product-psd",
+   "site": "mds",
+   "page": "linear-algebra-definite-matrices",
+   "div": "cor-self-outer-product-psd",
+   "kind": "cor",
+   "title": "A self outer product is positive semidefinite",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-definite-matrices#def-condition-number",
+   "site": "mds",
+   "page": "linear-algebra-definite-matrices",
+   "div": "def-condition-number",
+   "kind": "def",
+   "title": "Condition number of a positive definite matrix",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-definite-matrices#def-determinant",
+   "site": "mds",
+   "page": "linear-algebra-definite-matrices",
+   "div": "def-determinant",
+   "kind": "def",
+   "title": "Determinant",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-definite-matrices#def-elliptic-paraboloid",
+   "site": "mds",
+   "page": "linear-algebra-definite-matrices",
+   "div": "def-elliptic-paraboloid",
+   "kind": "def",
+   "title": "Elliptic paraboloid",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-definite-matrices#def-ill-conditioned",
+   "site": "mds",
+   "page": "linear-algebra-definite-matrices",
+   "div": "def-ill-conditioned",
+   "kind": "def",
+   "title": "Ill-conditioned matrix",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-definite-matrices#def-matrix-condition-number",
+   "site": "mds",
+   "page": "linear-algebra-definite-matrices",
+   "div": "def-matrix-condition-number",
+   "kind": "def",
+   "title": "Condition number of a matrix",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-definite-matrices#def-matrix-induced-inner-product",
+   "site": "mds",
+   "page": "linear-algebra-definite-matrices",
+   "div": "def-matrix-induced-inner-product",
+   "kind": "def",
+   "title": "Matrix-induced inner product ($\\matr{A}$-inner product)",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-definite-matrices#def-matrix-induced-norm",
+   "site": "mds",
+   "page": "linear-algebra-definite-matrices",
+   "div": "def-matrix-induced-norm",
+   "kind": "def",
+   "title": "Matrix-induced norm, $\\matr{A}$-norm",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-definite-matrices#def-paraboloid",
+   "site": "mds",
+   "page": "linear-algebra-definite-matrices",
+   "div": "def-paraboloid",
+   "kind": "def",
+   "title": "Paraboloid",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-definite-matrices#def-positive-definite",
+   "site": "mds",
+   "page": "linear-algebra-definite-matrices",
+   "div": "def-positive-definite",
+   "kind": "def",
+   "title": "Positive definite matrix",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-definite-matrices#def-positive-semidefinite",
+   "site": "mds",
+   "page": "linear-algebra-definite-matrices",
+   "div": "def-positive-semidefinite",
+   "kind": "def",
+   "title": "Positive semidefinite matrix",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-definite-matrices#def-well-conditioned",
+   "site": "mds",
+   "page": "linear-algebra-definite-matrices",
+   "div": "def-well-conditioned",
+   "kind": "def",
+   "title": "Well-conditioned matrix",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-definite-matrices#thm-condition-number-gram",
+   "site": "mds",
+   "page": "linear-algebra-definite-matrices",
+   "div": "thm-condition-number-gram",
+   "kind": "thm",
+   "title": "Forming $\\tp{\\matr{A}}\\matr{A}$ squares the condition number",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-definite-matrices#thm-definite-eigenvalues",
+   "site": "mds",
+   "page": "linear-algebra-definite-matrices",
+   "div": "thm-definite-eigenvalues",
+   "kind": "thm",
+   "title": "Definiteness and eigenvalues",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-definite-matrices#thm-det-diagonal",
+   "site": "mds",
+   "page": "linear-algebra-definite-matrices",
+   "div": "thm-det-diagonal",
+   "kind": "thm",
+   "title": "Determinant of a diagonal matrix",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-definite-matrices#thm-det-eigenvalues",
+   "site": "mds",
+   "page": "linear-algebra-definite-matrices",
+   "div": "thm-det-eigenvalues",
+   "kind": "thm",
+   "title": "The determinant of a symmetric matrix is the product of its eigenvalues",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-definite-matrices#thm-det-product",
+   "site": "mds",
+   "page": "linear-algebra-definite-matrices",
+   "div": "thm-det-product",
+   "kind": "thm",
+   "title": "Determinant of a product",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-definite-matrices#thm-gram-properties",
+   "site": "mds",
+   "page": "linear-algebra-definite-matrices",
+   "div": "thm-gram-properties",
+   "kind": "thm",
+   "title": "Entries and symmetry of a Gram matrix",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-definite-matrices#thm-matrix-induced-inner-product",
+   "site": "mds",
+   "page": "linear-algebra-definite-matrices",
+   "div": "thm-matrix-induced-inner-product",
+   "kind": "thm",
+   "title": "Properties of the matrix-induced inner product",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-definite-matrices#thm-pd-inverse",
+   "site": "mds",
+   "page": "linear-algebra-definite-matrices",
+   "div": "thm-pd-inverse",
+   "kind": "thm",
+   "title": "A positive definite matrix has a positive definite inverse",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-definite-matrices#thm-whitening-inner-product",
+   "site": "mds",
+   "page": "linear-algebra-definite-matrices",
+   "div": "thm-whitening-inner-product",
+   "kind": "thm",
+   "title": "A matrix-induced inner product is a dot product of transformed vectors",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra-diagonalization#cor-distinct-diagonalizable",
    "site": "mds",
    "page": "linear-algebra-diagonalization",
@@ -4410,15 +4698,6 @@
    "external": false
   },
   {
-   "id": "mds/linear-algebra-special-matrices#cor-det-pd",
-   "site": "mds",
-   "page": "linear-algebra-special-matrices",
-   "div": "cor-det-pd",
-   "kind": "cor",
-   "title": "A positive definite matrix has a positive determinant",
-   "external": false
-  },
-  {
    "id": "mds/linear-algebra-special-matrices#cor-inverse-symmetric",
    "site": "mds",
    "page": "linear-algebra-special-matrices",
@@ -4434,24 +4713,6 @@
    "div": "cor-invertible-cancel-right",
    "kind": "cor",
    "title": "An invertible factor can be canceled on the right",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-special-matrices#cor-pd-transpose-product",
-   "site": "mds",
-   "page": "linear-algebra-special-matrices",
-   "div": "cor-pd-transpose-product",
-   "kind": "cor",
-   "title": "A positive definite matrix is a transpose product",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-special-matrices#cor-self-outer-product-psd",
-   "site": "mds",
-   "page": "linear-algebra-special-matrices",
-   "div": "cor-self-outer-product-psd",
-   "kind": "cor",
-   "title": "A self outer product is positive semidefinite",
    "external": false
   },
   {
@@ -4473,66 +4734,12 @@
    "external": false
   },
   {
-   "id": "mds/linear-algebra-special-matrices#def-condition-number",
-   "site": "mds",
-   "page": "linear-algebra-special-matrices",
-   "div": "def-condition-number",
-   "kind": "def",
-   "title": "Condition number of a positive definite matrix",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-special-matrices#def-determinant",
-   "site": "mds",
-   "page": "linear-algebra-special-matrices",
-   "div": "def-determinant",
-   "kind": "def",
-   "title": "Determinant",
-   "external": false
-  },
-  {
    "id": "mds/linear-algebra-special-matrices#def-diagonal-matrix",
    "site": "mds",
    "page": "linear-algebra-special-matrices",
    "div": "def-diagonal-matrix",
    "kind": "def",
    "title": "Diagonal matrix",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-special-matrices#def-eigendecomposition",
-   "site": "mds",
-   "page": "linear-algebra-special-matrices",
-   "div": "def-eigendecomposition",
-   "kind": "def",
-   "title": "Eigendecomposition, spectral decomposition",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-special-matrices#def-eigenvalue",
-   "site": "mds",
-   "page": "linear-algebra-special-matrices",
-   "div": "def-eigenvalue",
-   "kind": "def",
-   "title": "Eigenvalue",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-special-matrices#def-eigenvector",
-   "site": "mds",
-   "page": "linear-algebra-special-matrices",
-   "div": "def-eigenvector",
-   "kind": "def",
-   "title": "Eigenvector",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-special-matrices#def-elliptic-paraboloid",
-   "site": "mds",
-   "page": "linear-algebra-special-matrices",
-   "div": "def-elliptic-paraboloid",
-   "kind": "def",
-   "title": "Elliptic paraboloid",
    "external": false
   },
   {
@@ -4554,48 +4761,12 @@
    "external": false
   },
   {
-   "id": "mds/linear-algebra-special-matrices#def-ill-conditioned",
-   "site": "mds",
-   "page": "linear-algebra-special-matrices",
-   "div": "def-ill-conditioned",
-   "kind": "def",
-   "title": "Ill-conditioned matrix",
-   "external": false
-  },
-  {
    "id": "mds/linear-algebra-special-matrices#def-invertible-matrix",
    "site": "mds",
    "page": "linear-algebra-special-matrices",
    "div": "def-invertible-matrix",
    "kind": "def",
    "title": "Invertible matrix, non-singular matrix",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-special-matrices#def-matrix-condition-number",
-   "site": "mds",
-   "page": "linear-algebra-special-matrices",
-   "div": "def-matrix-condition-number",
-   "kind": "def",
-   "title": "Condition number of a matrix",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-special-matrices#def-matrix-induced-inner-product",
-   "site": "mds",
-   "page": "linear-algebra-special-matrices",
-   "div": "def-matrix-induced-inner-product",
-   "kind": "def",
-   "title": "Matrix-induced inner product ($\\matr{A}$-inner product)",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-special-matrices#def-matrix-induced-norm",
-   "site": "mds",
-   "page": "linear-algebra-special-matrices",
-   "div": "def-matrix-induced-norm",
-   "kind": "def",
-   "title": "Matrix-induced norm, $\\matr{A}$-norm",
    "external": false
   },
   {
@@ -4653,33 +4824,6 @@
    "external": false
   },
   {
-   "id": "mds/linear-algebra-special-matrices#def-paraboloid",
-   "site": "mds",
-   "page": "linear-algebra-special-matrices",
-   "div": "def-paraboloid",
-   "kind": "def",
-   "title": "Paraboloid",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-special-matrices#def-positive-definite",
-   "site": "mds",
-   "page": "linear-algebra-special-matrices",
-   "div": "def-positive-definite",
-   "kind": "def",
-   "title": "Positive definite matrix",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-special-matrices#def-positive-semidefinite",
-   "site": "mds",
-   "page": "linear-algebra-special-matrices",
-   "div": "def-positive-semidefinite",
-   "kind": "def",
-   "title": "Positive semidefinite matrix",
-   "external": false
-  },
-  {
    "id": "mds/linear-algebra-special-matrices#def-projection-matrix",
    "site": "mds",
    "page": "linear-algebra-special-matrices",
@@ -4695,24 +4839,6 @@
    "div": "def-quadratic-form",
    "kind": "def",
    "title": "Quadratic form",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-special-matrices#def-singular-values",
-   "site": "mds",
-   "page": "linear-algebra-special-matrices",
-   "div": "def-singular-values",
-   "kind": "def",
-   "title": "Singular values",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-special-matrices#def-svd",
-   "site": "mds",
-   "page": "linear-algebra-special-matrices",
-   "div": "def-svd",
-   "kind": "def",
-   "title": "Singular value decomposition",
    "external": false
   },
   {
@@ -4752,75 +4878,12 @@
    "external": false
   },
   {
-   "id": "mds/linear-algebra-special-matrices#def-well-conditioned",
-   "site": "mds",
-   "page": "linear-algebra-special-matrices",
-   "div": "def-well-conditioned",
-   "kind": "def",
-   "title": "Well-conditioned matrix",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-special-matrices#thm-condition-number-gram",
-   "site": "mds",
-   "page": "linear-algebra-special-matrices",
-   "div": "thm-condition-number-gram",
-   "kind": "thm",
-   "title": "Forming $\\tp{\\matr{A}}\\matr{A}$ squares the condition number",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-special-matrices#thm-definite-eigenvalues",
-   "site": "mds",
-   "page": "linear-algebra-special-matrices",
-   "div": "thm-definite-eigenvalues",
-   "kind": "thm",
-   "title": "Definiteness and eigenvalues",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-special-matrices#thm-det-diagonal",
-   "site": "mds",
-   "page": "linear-algebra-special-matrices",
-   "div": "thm-det-diagonal",
-   "kind": "thm",
-   "title": "Determinant of a diagonal matrix",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-special-matrices#thm-det-eigenvalues",
-   "site": "mds",
-   "page": "linear-algebra-special-matrices",
-   "div": "thm-det-eigenvalues",
-   "kind": "thm",
-   "title": "The determinant of a symmetric matrix is the product of its eigenvalues",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-special-matrices#thm-det-product",
-   "site": "mds",
-   "page": "linear-algebra-special-matrices",
-   "div": "thm-det-product",
-   "kind": "thm",
-   "title": "Determinant of a product",
-   "external": false
-  },
-  {
    "id": "mds/linear-algebra-special-matrices#thm-frobenius-norm-columns",
    "site": "mds",
    "page": "linear-algebra-special-matrices",
    "div": "thm-frobenius-norm-columns",
    "kind": "thm",
    "title": "The squared Frobenius norm adds up the squared column norms",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-special-matrices#thm-gram-properties",
-   "site": "mds",
-   "page": "linear-algebra-special-matrices",
-   "div": "thm-gram-properties",
-   "kind": "thm",
-   "title": "Entries and symmetry of a Gram matrix",
    "external": false
   },
   {
@@ -4851,15 +4914,6 @@
    "external": false
   },
   {
-   "id": "mds/linear-algebra-special-matrices#thm-matrix-induced-inner-product",
-   "site": "mds",
-   "page": "linear-algebra-special-matrices",
-   "div": "thm-matrix-induced-inner-product",
-   "kind": "thm",
-   "title": "Properties of the matrix-induced inner product",
-   "external": false
-  },
-  {
    "id": "mds/linear-algebra-special-matrices#thm-matrix-inner-product-entries",
    "site": "mds",
    "page": "linear-algebra-special-matrices",
@@ -4884,15 +4938,6 @@
    "div": "thm-outer-product-trace",
    "kind": "thm",
    "title": "The trace of an outer product is a dot product",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-special-matrices#thm-pd-inverse",
-   "site": "mds",
-   "page": "linear-algebra-special-matrices",
-   "div": "thm-pd-inverse",
-   "kind": "thm",
-   "title": "A positive definite matrix has a positive definite inverse",
    "external": false
   },
   {
@@ -4941,33 +4986,6 @@
    "external": false
   },
   {
-   "id": "mds/linear-algebra-special-matrices#thm-spectral",
-   "site": "mds",
-   "page": "linear-algebra-special-matrices",
-   "div": "thm-spectral",
-   "kind": "thm",
-   "title": "Spectral theorem for symmetric matrices",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-special-matrices#thm-svd",
-   "site": "mds",
-   "page": "linear-algebra-special-matrices",
-   "div": "thm-svd",
-   "kind": "thm",
-   "title": "Singular value decomposition",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-special-matrices#thm-svd-evd",
-   "site": "mds",
-   "page": "linear-algebra-special-matrices",
-   "div": "thm-svd-evd",
-   "kind": "thm",
-   "title": "An SVD gives an eigendecomposition of $\\tp{\\matr{A}}\\matr{A}$",
-   "external": false
-  },
-  {
    "id": "mds/linear-algebra-special-matrices#thm-symmetric-bilinear-form-swap",
    "site": "mds",
    "page": "linear-algebra-special-matrices",
@@ -4977,30 +4995,12 @@
    "external": false
   },
   {
-   "id": "mds/linear-algebra-special-matrices#thm-symmetric-eigenvectors-orthogonal",
-   "site": "mds",
-   "page": "linear-algebra-special-matrices",
-   "div": "thm-symmetric-eigenvectors-orthogonal",
-   "kind": "thm",
-   "title": "Eigenvectors of a symmetric matrix for distinct eigenvalues are orthogonal",
-   "external": false
-  },
-  {
    "id": "mds/linear-algebra-special-matrices#thm-trace-cyclic",
    "site": "mds",
    "page": "linear-algebra-special-matrices",
    "div": "thm-trace-cyclic",
    "kind": "thm",
    "title": "The trace of a product does not depend on the order",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-special-matrices#thm-whitening-inner-product",
-   "site": "mds",
-   "page": "linear-algebra-special-matrices",
-   "div": "thm-whitening-inner-product",
-   "kind": "thm",
-   "title": "A matrix-induced inner product is a dot product of transformed vectors",
    "external": false
   },
   {
@@ -8205,6 +8205,202 @@
    "mds/linear-algebra-complex#def-conjugate-transpose"
   ],
   [
+   "mds/linear-algebra-decompositions#def-eigenvector",
+   "mds/linear-algebra-decompositions#def-eigenvalue"
+  ],
+  [
+   "mds/linear-algebra-decompositions#def-singular-values",
+   "mds/linear-algebra-decompositions#def-svd"
+  ],
+  [
+   "mds/linear-algebra-decompositions#def-svd",
+   "mds/linear-algebra-decompositions#thm-svd"
+  ],
+  [
+   "mds/linear-algebra-decompositions#thm-spectral",
+   "mds/linear-algebra-decompositions#def-eigenvalue"
+  ],
+  [
+   "mds/linear-algebra-decompositions#thm-svd-evd",
+   "mds/linear-algebra-decompositions#def-eigendecomposition"
+  ],
+  [
+   "mds/linear-algebra-decompositions#thm-svd-evd",
+   "mds/linear-algebra-decompositions#def-svd"
+  ],
+  [
+   "mds/linear-algebra-decompositions#thm-symmetric-eigenvectors-orthogonal",
+   "mds/linear-algebra-decompositions#def-eigenvalue"
+  ],
+  [
+   "mds/linear-algebra-decompositions#thm-symmetric-eigenvectors-orthogonal",
+   "mds/linear-algebra-decompositions#def-eigenvector"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#cor-det-pd",
+   "mds/linear-algebra-definite-matrices#def-positive-definite"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#cor-det-pd",
+   "mds/linear-algebra-definite-matrices#thm-definite-eigenvalues"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#cor-det-pd",
+   "mds/linear-algebra-definite-matrices#thm-det-eigenvalues"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#cor-pd-transpose-product",
+   "mds/linear-algebra-definite-matrices#def-positive-definite"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#cor-pd-transpose-product",
+   "mds/linear-algebra-definite-matrices#thm-definite-eigenvalues"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#cor-self-outer-product-psd",
+   "mds/linear-algebra-definite-matrices#def-positive-semidefinite"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#cor-self-outer-product-psd",
+   "mds/linear-algebra-definite-matrices#thm-gram-properties"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#def-elliptic-paraboloid",
+   "mds/linear-algebra-definite-matrices#def-paraboloid"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#def-elliptic-paraboloid",
+   "mds/linear-algebra-definite-matrices#def-positive-definite"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#def-ill-conditioned",
+   "mds/linear-algebra-definite-matrices#def-matrix-condition-number"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#def-ill-conditioned",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#def-ill-conditioned",
+   "mds/linear-algebra-matrix-multiplication#def-linear-system"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#def-matrix-condition-number",
+   "mds/algebra-sums#def-ratio"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#def-matrix-condition-number",
+   "mds/linear-algebra-decompositions#def-singular-values"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#def-matrix-condition-number",
+   "mds/linear-algebra-definite-matrices#def-condition-number"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#def-matrix-condition-number",
+   "mds/linear-algebra-definite-matrices#def-positive-definite"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#def-matrix-condition-number",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#def-matrix-condition-number",
+   "mds/linear-algebra-subspaces#def-linearly-independent"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#def-matrix-induced-inner-product",
+   "mcs/proof-writing#def-universal-quantifier"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#def-matrix-induced-inner-product",
+   "mds/linear-algebra-definite-matrices#def-positive-definite"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#def-matrix-induced-inner-product",
+   "mds/linear-algebra-inner-products#def-inner-product"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#def-matrix-induced-norm",
+   "mds/linear-algebra-definite-matrices#def-matrix-induced-inner-product"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#def-matrix-induced-norm",
+   "mds/linear-algebra-definite-matrices#def-positive-definite"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#def-matrix-induced-norm",
+   "mds/linear-algebra-inner-products#def-induced-norm"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#def-well-conditioned",
+   "mds/linear-algebra-definite-matrices#def-ill-conditioned"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#def-well-conditioned",
+   "mds/linear-algebra-definite-matrices#def-matrix-condition-number"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#def-well-conditioned",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#thm-condition-number-gram",
+   "mds/linear-algebra-decompositions#def-eigenvalue"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#thm-condition-number-gram",
+   "mds/linear-algebra-decompositions#def-singular-values"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#thm-condition-number-gram",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#thm-condition-number-gram",
+   "mds/linear-algebra-special-matrices#def-symmetric-matrix"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#thm-definite-eigenvalues",
+   "mds/linear-algebra-definite-matrices#def-positive-definite"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#thm-definite-eigenvalues",
+   "mds/linear-algebra-definite-matrices#def-positive-semidefinite"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#thm-det-diagonal",
+   "mcs/proof-writing#def-proof-by-induction"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#thm-det-diagonal",
+   "mds/linear-algebra-definite-matrices#def-determinant"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#thm-det-eigenvalues",
+   "mds/linear-algebra-definite-matrices#thm-det-diagonal"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#thm-det-eigenvalues",
+   "mds/linear-algebra-definite-matrices#thm-det-product"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#thm-gram-properties",
+   "mds/linear-algebra-definite-matrices#def-positive-semidefinite"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#thm-pd-inverse",
+   "mds/linear-algebra-definite-matrices#def-positive-definite"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#thm-pd-inverse",
+   "mds/linear-algebra-definite-matrices#thm-definite-eigenvalues"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#thm-whitening-inner-product",
+   "mds/linear-algebra-definite-matrices#def-matrix-induced-inner-product"
+  ],
+  [
    "mds/linear-algebra-diagonalization#cor-distinct-diagonalizable",
    "mds/linear-algebra-diagonalization#thm-diagonalizable"
   ],
@@ -9409,48 +9605,12 @@
    "mds/linear-algebra-rank-nullity#thm-rank-product"
   ],
   [
-   "mds/linear-algebra-special-matrices#cor-det-pd",
-   "mds/linear-algebra-special-matrices#def-positive-definite"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#cor-det-pd",
-   "mds/linear-algebra-special-matrices#thm-definite-eigenvalues"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#cor-det-pd",
-   "mds/linear-algebra-special-matrices#thm-det-eigenvalues"
-  ],
-  [
    "mds/linear-algebra-special-matrices#cor-inverse-symmetric",
    "mds/linear-algebra-special-matrices#thm-inverse-transpose"
   ],
   [
    "mds/linear-algebra-special-matrices#cor-invertible-cancel-right",
    "mds/linear-algebra-special-matrices#thm-invertible-cancel"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#cor-pd-transpose-product",
-   "mds/linear-algebra-special-matrices#def-positive-definite"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#cor-pd-transpose-product",
-   "mds/linear-algebra-special-matrices#thm-definite-eigenvalues"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#cor-pd-transpose-product",
-   "mds/linear-algebra-special-matrices#thm-inverse-product"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#cor-pd-transpose-product",
-   "mds/linear-algebra-special-matrices#thm-spectral"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#cor-self-outer-product-psd",
-   "mds/linear-algebra-special-matrices#def-positive-semidefinite"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#cor-self-outer-product-psd",
-   "mds/linear-algebra-special-matrices#thm-gram-properties"
   ],
   [
    "mds/linear-algebra-special-matrices#cor-self-outer-product-trace",
@@ -9473,127 +9633,15 @@
    "mds/linear-algebra-vectors#def-scalar"
   ],
   [
-   "mds/linear-algebra-special-matrices#def-eigendecomposition",
-   "mds/linear-algebra-special-matrices#def-diagonal-matrix"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#def-eigendecomposition",
-   "mds/linear-algebra-special-matrices#def-orthogonal-matrix"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#def-eigenvector",
-   "mds/linear-algebra-special-matrices#def-eigenvalue"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#def-elliptic-paraboloid",
-   "mds/linear-algebra-special-matrices#def-paraboloid"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#def-elliptic-paraboloid",
-   "mds/linear-algebra-special-matrices#def-positive-definite"
-  ],
-  [
    "mds/linear-algebra-special-matrices#def-frobenius-norm",
    "mds/linear-algebra-special-matrices#def-matrix-inner-product"
   ],
   [
-   "mds/linear-algebra-special-matrices#def-ill-conditioned",
-   "mds/linear-algebra-matrices#def-matrix"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#def-ill-conditioned",
-   "mds/linear-algebra-matrix-multiplication#def-linear-system"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#def-ill-conditioned",
-   "mds/linear-algebra-special-matrices#def-matrix-condition-number"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#def-matrix-condition-number",
-   "mds/algebra-sums#def-ratio"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#def-matrix-condition-number",
-   "mds/linear-algebra-matrices#def-matrix"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#def-matrix-condition-number",
-   "mds/linear-algebra-special-matrices#def-condition-number"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#def-matrix-condition-number",
-   "mds/linear-algebra-special-matrices#def-positive-definite"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#def-matrix-condition-number",
-   "mds/linear-algebra-special-matrices#def-singular-values"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#def-matrix-condition-number",
-   "mds/linear-algebra-subspaces#def-linearly-independent"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#def-matrix-induced-inner-product",
-   "mcs/proof-writing#def-universal-quantifier"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#def-matrix-induced-inner-product",
-   "mds/linear-algebra-inner-products#def-inner-product"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#def-matrix-induced-inner-product",
-   "mds/linear-algebra-special-matrices#def-positive-definite"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#def-matrix-induced-inner-product",
-   "mds/linear-algebra-special-matrices#def-symmetric-bilinear-form"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#def-matrix-induced-inner-product",
-   "mds/linear-algebra-special-matrices#def-symmetric-matrix"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#def-matrix-induced-norm",
-   "mds/linear-algebra-inner-products#def-induced-norm"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#def-matrix-induced-norm",
-   "mds/linear-algebra-special-matrices#def-matrix-induced-inner-product"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#def-matrix-induced-norm",
-   "mds/linear-algebra-special-matrices#def-positive-definite"
-  ],
-  [
    "mds/linear-algebra-special-matrices#def-oblique-projection",
    "mds/linear-algebra-special-matrices#def-idempotent-matrix"
   ],
   [
    "mds/linear-algebra-special-matrices#def-oblique-projection",
-   "mds/linear-algebra-special-matrices#def-symmetric-matrix"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#def-paraboloid",
-   "mds/linear-algebra-special-matrices#def-quadratic-form"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#def-paraboloid",
-   "mds/linear-algebra-special-matrices#def-symmetric-matrix"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#def-positive-definite",
-   "mds/linear-algebra-special-matrices#def-quadratic-form"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#def-positive-definite",
-   "mds/linear-algebra-special-matrices#def-symmetric-matrix"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#def-positive-semidefinite",
-   "mds/linear-algebra-special-matrices#def-quadratic-form"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#def-positive-semidefinite",
    "mds/linear-algebra-special-matrices#def-symmetric-matrix"
   ],
   [
@@ -9603,14 +9651,6 @@
   [
    "mds/linear-algebra-special-matrices#def-projection-matrix",
    "mds/linear-algebra-special-matrices#def-symmetric-matrix"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#def-singular-values",
-   "mds/linear-algebra-special-matrices#def-svd"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#def-svd",
-   "mds/linear-algebra-special-matrices#thm-svd"
   ],
   [
    "mds/linear-algebra-special-matrices#def-symmetric-bilinear-form",
@@ -9622,90 +9662,6 @@
   ],
   [
    "mds/linear-algebra-special-matrices#def-symmetric-bilinear-form",
-   "mds/linear-algebra-special-matrices#def-symmetric-matrix"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#def-well-conditioned",
-   "mds/linear-algebra-matrices#def-matrix"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#def-well-conditioned",
-   "mds/linear-algebra-special-matrices#def-ill-conditioned"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#def-well-conditioned",
-   "mds/linear-algebra-special-matrices#def-matrix-condition-number"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#thm-condition-number-gram",
-   "mds/linear-algebra-matrices#def-matrix"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#thm-condition-number-gram",
-   "mds/linear-algebra-special-matrices#def-eigenvalue"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#thm-condition-number-gram",
-   "mds/linear-algebra-special-matrices#def-singular-values"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#thm-condition-number-gram",
-   "mds/linear-algebra-special-matrices#def-symmetric-matrix"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#thm-condition-number-gram",
-   "mds/linear-algebra-special-matrices#thm-svd-evd"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#thm-definite-eigenvalues",
-   "mds/linear-algebra-special-matrices#def-eigendecomposition"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#thm-definite-eigenvalues",
-   "mds/linear-algebra-special-matrices#def-orthogonal-matrix"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#thm-definite-eigenvalues",
-   "mds/linear-algebra-special-matrices#def-positive-definite"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#thm-definite-eigenvalues",
-   "mds/linear-algebra-special-matrices#def-positive-semidefinite"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#thm-det-diagonal",
-   "mcs/proof-writing#def-proof-by-induction"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#thm-det-diagonal",
-   "mds/linear-algebra-special-matrices#def-determinant"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#thm-det-diagonal",
-   "mds/linear-algebra-special-matrices#def-diagonal-matrix"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#thm-det-eigenvalues",
-   "mds/linear-algebra-special-matrices#def-eigendecomposition"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#thm-det-eigenvalues",
-   "mds/linear-algebra-special-matrices#def-orthogonal-matrix"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#thm-det-eigenvalues",
-   "mds/linear-algebra-special-matrices#thm-det-diagonal"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#thm-det-eigenvalues",
-   "mds/linear-algebra-special-matrices#thm-det-product"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#thm-gram-properties",
-   "mds/linear-algebra-special-matrices#def-positive-semidefinite"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#thm-gram-properties",
    "mds/linear-algebra-special-matrices#def-symmetric-matrix"
   ],
   [
@@ -9733,34 +9689,6 @@
    "mds/linear-algebra-special-matrices#def-trace"
   ],
   [
-   "mds/linear-algebra-special-matrices#thm-pd-inverse",
-   "mds/linear-algebra-special-matrices#cor-inverse-symmetric"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#thm-pd-inverse",
-   "mds/linear-algebra-special-matrices#def-eigendecomposition"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#thm-pd-inverse",
-   "mds/linear-algebra-special-matrices#def-invertible-matrix"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#thm-pd-inverse",
-   "mds/linear-algebra-special-matrices#def-matrix-inverse"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#thm-pd-inverse",
-   "mds/linear-algebra-special-matrices#def-orthogonal-matrix"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#thm-pd-inverse",
-   "mds/linear-algebra-special-matrices#def-positive-definite"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#thm-pd-inverse",
-   "mds/linear-algebra-special-matrices#thm-definite-eigenvalues"
-  ],
-  [
    "mds/linear-algebra-special-matrices#thm-projection-complement",
    "mds/linear-algebra-special-matrices#def-projection-matrix"
   ],
@@ -9785,38 +9713,6 @@
    "mds/linear-algebra-special-matrices#def-symmetric-part"
   ],
   [
-   "mds/linear-algebra-special-matrices#thm-spectral",
-   "mds/linear-algebra-special-matrices#def-diagonal-matrix"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#thm-spectral",
-   "mds/linear-algebra-special-matrices#def-eigenvalue"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#thm-spectral",
-   "mds/linear-algebra-special-matrices#def-orthogonal-matrix"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#thm-spectral",
-   "mds/linear-algebra-special-matrices#def-symmetric-matrix"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#thm-svd",
-   "mds/linear-algebra-special-matrices#def-orthogonal-matrix"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#thm-svd-evd",
-   "mds/linear-algebra-special-matrices#def-eigendecomposition"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#thm-svd-evd",
-   "mds/linear-algebra-special-matrices#def-svd"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#thm-svd-evd",
-   "mds/linear-algebra-special-matrices#def-symmetric-matrix"
-  ],
-  [
    "mds/linear-algebra-special-matrices#thm-symmetric-bilinear-form-swap",
    "mcs/proof-writing#def-universal-quantifier"
   ],
@@ -9831,22 +9727,6 @@
   [
    "mds/linear-algebra-special-matrices#thm-symmetric-bilinear-form-swap",
    "mds/linear-algebra-special-matrices#def-symmetric-matrix"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#thm-symmetric-eigenvectors-orthogonal",
-   "mds/linear-algebra-special-matrices#def-eigenvalue"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#thm-symmetric-eigenvectors-orthogonal",
-   "mds/linear-algebra-special-matrices#def-eigenvector"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#thm-symmetric-eigenvectors-orthogonal",
-   "mds/linear-algebra-special-matrices#def-symmetric-matrix"
-  ],
-  [
-   "mds/linear-algebra-special-matrices#thm-whitening-inner-product",
-   "mds/linear-algebra-special-matrices#def-matrix-induced-inner-product"
   ],
   [
    "mds/linear-algebra-subspaces#def-basis",
@@ -10578,7 +10458,7 @@
   ],
   [
    "mds/optimization-constrained#def-quadratic-program",
-   "mds/linear-algebra-special-matrices#def-positive-semidefinite"
+   "mds/linear-algebra-definite-matrices#def-positive-semidefinite"
   ],
   [
    "mds/optimization-constrained#def-quadratic-program",
@@ -10614,7 +10494,11 @@
   ],
   [
    "mds/optimization-convexity#cor-convex-iff-hessian",
-   "mds/linear-algebra-special-matrices#def-positive-semidefinite"
+   "mds/linear-algebra-definite-matrices#def-positive-semidefinite"
+  ],
+  [
+   "mds/optimization-convexity#cor-convex-iff-hessian",
+   "mds/linear-algebra-vectors#def-real-coordinate-space"
   ],
   [
    "mds/optimization-convexity#cor-convex-iff-hessian",
@@ -10718,11 +10602,11 @@
   ],
   [
    "mds/optimization-convexity#thm-concave-hessian",
-   "mds/linear-algebra-special-matrices#def-positive-definite"
+   "mds/linear-algebra-definite-matrices#def-positive-definite"
   ],
   [
    "mds/optimization-convexity#thm-concave-hessian",
-   "mds/linear-algebra-special-matrices#def-positive-semidefinite"
+   "mds/linear-algebra-definite-matrices#def-positive-semidefinite"
   ],
   [
    "mds/optimization-convexity#thm-concave-hessian",
@@ -10798,7 +10682,7 @@
   ],
   [
    "mds/optimization-convexity#thm-convex-hessian-converse",
-   "mds/linear-algebra-special-matrices#def-positive-semidefinite"
+   "mds/linear-algebra-definite-matrices#def-positive-semidefinite"
   ],
   [
    "mds/optimization-convexity#thm-convex-hessian-converse",
@@ -10807,6 +10691,10 @@
   [
    "mds/optimization-convexity#thm-convex-hessian-converse",
    "mds/vector-calculus#def-continuous-several"
+  ],
+  [
+   "mds/optimization-convexity#thm-convex-hessian-converse",
+   "mds/vector-calculus#def-hessian"
   ],
   [
    "mds/optimization-convexity#thm-convex-hessian-converse",
@@ -11134,7 +11022,7 @@
   ],
   [
    "mds/optimization-gradient-descent#thm-best-constant-step",
-   "mds/linear-algebra-special-matrices#def-condition-number"
+   "mds/linear-algebra-definite-matrices#def-condition-number"
   ],
   [
    "mds/optimization-gradient-descent#thm-best-constant-step",

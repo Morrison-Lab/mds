@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-20 11:25:10 (PST)
+Last modified: 2026-11-20 12:57:53 (PST)
 
 # 1 Design Matrix
 
@@ -121,7 +121,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 
 > **NOTE:**
 >
-> **Theorem 2 (Hat matrix is a projection matrix)** If $\mathbf{X}$ is an $n \times p$ design matrix with $\operatorname{rank}(\mathbf{X}) = p$, then the hat matrix $\mathbf{H}$ ([Definition 2](#def-hat-matrix)) is an orthogonal projection matrix ([Definition 8 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-projection-matrix)).
+> **Theorem 2 (Hat matrix is a projection matrix)** If $\mathbf{X}$ is an $n \times p$ design matrix with $\operatorname{rank}(\mathbf{X}) = p$, then the hat matrix $\mathbf{H}$ ([Definition 2](#def-hat-matrix)) is an orthogonal projection matrix ([Definition 8 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#def-projection-matrix)).
 
 > **NOTE:**
 >
@@ -132,7 +132,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > &= {\mathbf{X}}^{\top}\mathbf{X}
 > \end{aligned}$$
 >
-> ([Theorem 6 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#thm-transpose-product)), so its inverse is symmetric too ([Corollary 1 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#cor-inverse-symmetric)).
+> ([Theorem 6 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#thm-transpose-product)), so its inverse is symmetric too ([Corollary 1 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#cor-inverse-symmetric)).
 >
 > **Symmetry:** $$\begin{aligned}
 > {\mathbf{H}}^{\top}
@@ -199,7 +199,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 
 > **NOTE:**
 >
-> This section is adapted from the second half of Zhou [\[5\]](#ref-zhou2024orthproj), used under the MIT License (see the license text in [Section  in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). It connects the orthogonal projection matrices of [Definition 8 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-projection-matrix), defined by an algebraic property, to the geometric decomposition of [Theorem 8 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#thm-orthogonal-direct-sum).
+> This section is adapted from the second half of Zhou [\[5\]](#ref-zhou2024orthproj), used under the MIT License (see the license text in [Section  in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). It connects the orthogonal projection matrices of [Definition 8 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#def-projection-matrix), defined by an algebraic property, to the geometric decomposition of [Theorem 8 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#thm-orthogonal-direct-sum).
 
 > **NOTE:**
 >
@@ -261,7 +261,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 
 > **NOTE:**
 >
-> **Theorem 4 (Projecting with an orthonormal basis)** Let $\mathcal{S}$ be a subspace of $\mathbb{R}^p$ with $\dim(\mathcal{S}) = r \ge 1$, and let $\mathbf{Q}$ be the $p \times r$ matrix whose columns $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_r$ are an orthonormal basis of $\mathcal{S}$ ([Definition 15 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#def-orthonormal-basis), [Corollary 4 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#cor-orthonormal-basis-exists)). Then for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} \in \mathbb{R}^p$, $\mathbf{Q} {\mathbf{Q}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ is the orthogonal projection of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ onto $\mathcal{S}$, and $\mathbf{Q} {\mathbf{Q}}^{\top}$ is an orthogonal projection matrix ([Definition 8 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-projection-matrix)).
+> **Theorem 4 (Projecting with an orthonormal basis)** Let $\mathcal{S}$ be a subspace of $\mathbb{R}^p$ with $\dim(\mathcal{S}) = r \ge 1$, and let $\mathbf{Q}$ be the $p \times r$ matrix whose columns $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_r$ are an orthonormal basis of $\mathcal{S}$ ([Definition 15 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#def-orthonormal-basis), [Corollary 4 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#cor-orthonormal-basis-exists)). Then for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} \in \mathbb{R}^p$, $\mathbf{Q} {\mathbf{Q}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ is the orthogonal projection of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ onto $\mathcal{S}$, and $\mathbf{Q} {\mathbf{Q}}^{\top}$ is an orthogonal projection matrix ([Definition 8 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#def-projection-matrix)).
 
 > **NOTE:**
 >
@@ -361,7 +361,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 >
 > **Theorem 5 (A projection matrix projects onto its column space, and is the only one that does)**  
 >
-> 1.  If $\mathbf{P}$ is a $p \times p$ orthogonal projection matrix ([Definition 8 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-projection-matrix)), then for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} \in \mathbb{R}^p$, $\mathbf{P} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ is the orthogonal projection of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ onto $\mathcal{C}(\mathbf{P})$ ([Definition 3](#def-orthogonal-projection)).
+> 1.  If $\mathbf{P}$ is a $p \times p$ orthogonal projection matrix ([Definition 8 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#def-projection-matrix)), then for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} \in \mathbb{R}^p$, $\mathbf{P} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ is the orthogonal projection of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ onto $\mathcal{C}(\mathbf{P})$ ([Definition 3](#def-orthogonal-projection)).
 > 2.  If $\mathbf{P}_1$ and $\mathbf{P}_2$ are $p \times p$ matrices such that, for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$, both $\mathbf{P}_1 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ and $\mathbf{P}_2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ are the orthogonal projection of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ onto the same subspace $\mathcal{S}$, then $\mathbf{P}_1 = \mathbf{P}_2$.
 
 > **NOTE:**
@@ -377,7 +377,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > && \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 > \\
 > &= \mathbf{P} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} - \mathbf{P}^2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}
-> && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-power}{\text{Definition~2 in Special Matrices and Decompositions}}\text{)}
+> && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-power}{\text{Definition~2 in Special Matrices, Quadratic Forms and Trace}}\text{)}
 > \\
 > &= \mathbf{P} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} - \mathbf{P} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}
 > && \text{(} \mathbf{P} \text{ is idempotent)}
@@ -399,7 +399,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 
 > **NOTE:**
 >
-> **Example 8 (Two routes to the same projection matrix)** The matrix $\mathbf{P} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$ of [Example 12 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#exm-projection-matrix) is an orthogonal projection matrix, and its column space is $\operatorname{span}\mathopen{}\left\{(1, 0)\right\}\mathclose{}$, the horizontal axis. By part 1, $\mathbf{P}(v_1, v_2) = (v_1, 0)$ is the orthogonal projection onto that axis: the remainder $(0, v_2)$ is orthogonal to $(1, 0)$. The vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1 = (1, 0)$ has length $1$ and spans the axis, so it is an orthonormal basis of it, and with $\mathbf{B} = [\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1]$,
+> **Example 8 (Two routes to the same projection matrix)** The matrix $\mathbf{P} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$ of [Example 12 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#exm-projection-matrix) is an orthogonal projection matrix, and its column space is $\operatorname{span}\mathopen{}\left\{(1, 0)\right\}\mathclose{}$, the horizontal axis. By part 1, $\mathbf{P}(v_1, v_2) = (v_1, 0)$ is the orthogonal projection onto that axis: the remainder $(0, v_2)$ is orthogonal to $(1, 0)$. The vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1 = (1, 0)$ has length $1$ and spans the axis, so it is an orthonormal basis of it, and with $\mathbf{B} = [\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1]$,
 >
 > $$\begin{aligned}
 > \mathbf{B} {\mathbf{B}}^{\top} &= \begin{bmatrix} 1 \\ 0 \end{bmatrix} \begin{bmatrix} 1 & 0 \end{bmatrix} \\
@@ -408,7 +408,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 >
 > as part 2 and [Theorem 4](#thm-projector-onb) require.
 >
-> The oblique projection $\mathbf{Q} = \begin{bmatrix} 1 & 1 \\ 0 & 0 \end{bmatrix}$ of [Example 12 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#exm-projection-matrix) also maps every vector into the horizontal axis. It sends $(0, 1)$ to $(1, 0)$, but the remainder $(0, 1) - (1, 0) = (-1, 1)$ is not orthogonal to the axis, so $(1, 0)$ is not the orthogonal projection of $(0, 1)$ onto the axis, which is $\mathbf{P}(0, 1) = (0, 0)$.
+> The oblique projection $\mathbf{Q} = \begin{bmatrix} 1 & 1 \\ 0 & 0 \end{bmatrix}$ of [Example 12 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#exm-projection-matrix) also maps every vector into the horizontal axis. It sends $(0, 1)$ to $(1, 0)$, but the remainder $(0, 1) - (1, 0) = (-1, 1)$ is not orthogonal to the axis, so $(1, 0)$ is not the orthogonal projection of $(0, 1)$ onto the axis, which is $\mathbf{P}(0, 1) = (0, 0)$.
 
 > **NOTE:**
 >
@@ -431,7 +431,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > && \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 > \\
 > &= \mathbf{X}\,\mathbf{I}_p
-> && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices and Decompositions}}\text{)}
+> && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices, Quadratic Forms and Trace}}\text{)}
 > \\
 > &= \mathbf{X}.
 > && \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-identity}{\text{Theorem~4 in Matrix Multiplication}}\text{)}
@@ -591,7 +591,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 
 > **NOTE:**
 >
-> **Theorem 8 (An invertible matrix has only one generalized inverse)** If $\mathbf{A}$ is an invertible $p \times p$ matrix ([Definition 6 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-invertible-matrix)), its only generalized inverse is $\mathbf{A}^{-1}$.
+> **Theorem 8 (An invertible matrix has only one generalized inverse)** If $\mathbf{A}$ is an invertible $p \times p$ matrix ([Definition 6 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#def-invertible-matrix)), its only generalized inverse is $\mathbf{A}^{-1}$.
 
 > **NOTE:**
 >
@@ -600,7 +600,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > &= \mathbf{A}
 > \end{aligned}$$
 >
-> ([Definition 5 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-matrix-inverse), [Theorem 4 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#thm-identity)), so $\mathbf{A}^{-1}$ is a generalized inverse. If $\mathbf{G}$ is any generalized inverse, then
+> ([Definition 5 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#def-matrix-inverse), [Theorem 4 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#thm-identity)), so $\mathbf{A}^{-1}$ is a generalized inverse. If $\mathbf{G}$ is any generalized inverse, then
 >
 > $$\begin{aligned}
 > \mathbf{G}
@@ -608,7 +608,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > && \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-identity}{\text{Theorem~4 in Matrix Multiplication}}\text{)}
 > \\
 > &= (\mathbf{A}^{-1} \mathbf{A})\,\mathbf{G}\,(\mathbf{A} \mathbf{A}^{-1})
-> && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices and Decompositions}}\text{)}
+> && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices, Quadratic Forms and Trace}}\text{)}
 > \\
 > &= \mathbf{A}^{-1}\,(\mathbf{A} \mathbf{G} \mathbf{A})\,\mathbf{A}^{-1}
 > && \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
@@ -617,7 +617,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > && \text{(}\href{#def-generalized-inverse}{\text{Definition~4}}\text{)}
 > \\
 > &= \mathbf{I}_p\,\mathbf{A}^{-1}
-> && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices and Decompositions}}\text{)}
+> && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices, Quadratic Forms and Trace}}\text{)}
 > \\
 > &= \mathbf{A}^{-1}.
 > && \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-identity}{\text{Theorem~4 in Matrix Multiplication}}\text{)}
@@ -625,7 +625,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 
 > **NOTE:**
 >
-> **Example 12 (The generalized inverse of an invertible matrix)** For $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}$ of [Example 5 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#exm-invertible-matrix), the only generalized inverse is $\mathbf{A}^{-1} = \begin{bmatrix} 0.5 & -0.5 \\ 0 & 1 \end{bmatrix}$. The matrix of [Example 11](#exm-generalized-inverse), by contrast, has infinitely many, so by [Theorem 8](#thm-generalized-inverse-invertible) it is singular.
+> **Example 12 (The generalized inverse of an invertible matrix)** For $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}$ of [Example 5 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#exm-invertible-matrix), the only generalized inverse is $\mathbf{A}^{-1} = \begin{bmatrix} 0.5 & -0.5 \\ 0 & 1 \end{bmatrix}$. The matrix of [Example 11](#exm-generalized-inverse), by contrast, has infinitely many, so by [Theorem 8](#thm-generalized-inverse-invertible) it is singular.
 
 > **NOTE:**
 >
@@ -862,7 +862,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > &= {\mathbf{C}}^{\top} \mathbf{C}
 > \end{aligned}$$
 >
-> ([Theorem 6 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#thm-transpose-product), [Definition 6 in Matrices](linear-algebra-matrices.llms.md#def-matrix-transpose)), and likewise for $\mathbf{R} {\mathbf{R}}^{\top}$. Write $\mathbf{S} \stackrel{\text{def}}{=}(\mathbf{R} {\mathbf{R}}^{\top})^{-1}$ and $\mathbf{T} \stackrel{\text{def}}{=}({\mathbf{C}}^{\top} \mathbf{C})^{-1}$, both symmetric ([Corollary 1 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#cor-inverse-symmetric)), and $\mathbf{G} \stackrel{\text{def}}{=}{\mathbf{R}}^{\top} \mathbf{S} \mathbf{T} {\mathbf{C}}^{\top}$.
+> ([Theorem 6 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#thm-transpose-product), [Definition 6 in Matrices](linear-algebra-matrices.llms.md#def-matrix-transpose)), and likewise for $\mathbf{R} {\mathbf{R}}^{\top}$. Write $\mathbf{S} \stackrel{\text{def}}{=}(\mathbf{R} {\mathbf{R}}^{\top})^{-1}$ and $\mathbf{T} \stackrel{\text{def}}{=}({\mathbf{C}}^{\top} \mathbf{C})^{-1}$, both symmetric ([Corollary 1 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#cor-inverse-symmetric)), and $\mathbf{G} \stackrel{\text{def}}{=}{\mathbf{R}}^{\top} \mathbf{S} \mathbf{T} {\mathbf{C}}^{\top}$.
 >
 > **Two products.**
 >
@@ -875,7 +875,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > && \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 > \\
 > &= \mathbf{C}\,\mathbf{I}_r\,\mathbf{T} {\mathbf{C}}^{\top}
-> && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices and Decompositions}}\text{)}
+> && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices, Quadratic Forms and Trace}}\text{)}
 > \\
 > &= \mathbf{C} \mathbf{T} {\mathbf{C}}^{\top},
 > && \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-identity}{\text{Theorem~4 in Matrix Multiplication}}\text{)}
@@ -890,7 +890,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > && \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 > \\
 > &= {\mathbf{R}}^{\top} \mathbf{S}\,\mathbf{I}_r\,\mathbf{R}
-> && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices and Decompositions}}\text{)}
+> && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices, Quadratic Forms and Trace}}\text{)}
 > \\
 > &= {\mathbf{R}}^{\top} \mathbf{S} \mathbf{R}.
 > && \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-identity}{\text{Theorem~4 in Matrix Multiplication}}\text{)}
@@ -951,7 +951,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > && \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 > \\
 > &= \mathbf{C}\,\mathbf{I}_r\,\mathbf{R}
-> && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices and Decompositions}}\text{)}
+> && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices, Quadratic Forms and Trace}}\text{)}
 > \\
 > &= \mathbf{A}.
 > && \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-identity}{\text{Theorem~4 in Matrix Multiplication}}\text{)}
@@ -968,7 +968,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > && \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 > \\
 > &= {\mathbf{R}}^{\top}\,\mathbf{I}_r\,\mathbf{S}\,\mathbf{T} {\mathbf{C}}^{\top}
-> && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices and Decompositions}}\text{)}
+> && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices, Quadratic Forms and Trace}}\text{)}
 > \\
 > &= \mathbf{G}.
 > && \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-identity}{\text{Theorem~4 in Matrix Multiplication}}\text{)}
@@ -1026,7 +1026,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > && \text{(definition of } \mathbf{G} \text{)}
 > \\
 > &= \mathbf{I}_n.
-> && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices and Decompositions}}\text{)}
+> && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices, Quadratic Forms and Trace}}\text{)}
 > \end{aligned}$$
 >
 > - Condition 4: ${(\mathbf{G} \mathbf{A})}^{\top} = {\mathbf{I}_n}^{\top} = \mathbf{I}_n = \mathbf{G} \mathbf{A}$.
@@ -1036,9 +1036,9 @@ Last modified: 2026-11-20 11:25:10 (PST)
 >   = \mathbf{A}\,{\mathopen{}\left({\mathopen{}\left(({\mathbf{A}}^{\top} \mathbf{A})\right)\mathclose{}}^{-1}\right)\mathclose{}}^{\top}\,{\mathbf{A}}^{\top}
 >   = \mathbf{A}\,{\mathopen{}\left({({\mathbf{A}}^{\top} \mathbf{A})}^{\top}\right)\mathclose{}}^{-1}\,{\mathbf{A}}^{\top}
 >   = \mathbf{A}\,{\mathopen{}\left(({\mathbf{A}}^{\top} \mathbf{A})\right)\mathclose{}}^{-1}\,{\mathbf{A}}^{\top}
->   = \mathbf{A} \mathbf{G}$, by [Theorem 6 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#thm-transpose-product), [Theorem 2 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#thm-inverse-transpose), and because ${\mathbf{A}}^{\top} \mathbf{A}$ is [symmetric](linear-algebra-special-matrices.llms.md#def-symmetric-matrix).
+>   = \mathbf{A} \mathbf{G}$, by [Theorem 6 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#thm-transpose-product), [Theorem 2 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#thm-inverse-transpose), and because ${\mathbf{A}}^{\top} \mathbf{A}$ is [symmetric](linear-algebra-special-matrices.llms.md#def-symmetric-matrix).
 >
-> **Part 2.** $\operatorname{rank}(\mathbf{A} {\mathbf{A}}^{\top}) = \operatorname{rank}(\mathbf{A}) = m$ ([Theorem 4 in Rank-Nullity and Rank Factorization](linear-algebra-rank-nullity.llms.md#thm-rank-transpose)), and $\mathbf{A} {\mathbf{A}}^{\top}$ is $m \times m$, so it is invertible ([Theorem 1 in Diagonalization and Cholesky](linear-algebra-diagonalization.llms.md#thm-invertible-rank)). Let $\mathbf{G} = {\mathbf{A}}^{\top}\,{\mathopen{}\left((\mathbf{A} {\mathbf{A}}^{\top})\right)\mathclose{}}^{-1}$. Then $\mathbf{A} \mathbf{G} = \mathbf{A} {\mathbf{A}}^{\top}\,{\mathopen{}\left((\mathbf{A} {\mathbf{A}}^{\top})\right)\mathclose{}}^{-1} = \mathbf{I}_m$ ([Definition 5 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-matrix-inverse)).
+> **Part 2.** $\operatorname{rank}(\mathbf{A} {\mathbf{A}}^{\top}) = \operatorname{rank}(\mathbf{A}) = m$ ([Theorem 4 in Rank-Nullity and Rank Factorization](linear-algebra-rank-nullity.llms.md#thm-rank-transpose)), and $\mathbf{A} {\mathbf{A}}^{\top}$ is $m \times m$, so it is invertible ([Theorem 1 in Diagonalization and Cholesky](linear-algebra-diagonalization.llms.md#thm-invertible-rank)). Let $\mathbf{G} = {\mathbf{A}}^{\top}\,{\mathopen{}\left((\mathbf{A} {\mathbf{A}}^{\top})\right)\mathclose{}}^{-1}$. Then $\mathbf{A} \mathbf{G} = \mathbf{A} {\mathbf{A}}^{\top}\,{\mathopen{}\left((\mathbf{A} {\mathbf{A}}^{\top})\right)\mathclose{}}^{-1} = \mathbf{I}_m$ ([Definition 5 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#def-matrix-inverse)).
 >
 > - Condition 3: ${(\mathbf{A} \mathbf{G})}^{\top} = {\mathbf{I}_m}^{\top} = \mathbf{I}_m = \mathbf{A} \mathbf{G}$.
 > - Condition 1: $\mathbf{A} \mathbf{G} \mathbf{A} = \mathbf{I}_m \mathbf{A} = \mathbf{A}$.
@@ -1046,7 +1046,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > - Condition 4: ${(\mathbf{G} \mathbf{A})}^{\top}
 >   = {\mathbf{A}}^{\top}\,{\mathopen{}\left({\mathopen{}\left((\mathbf{A} {\mathbf{A}}^{\top})\right)\mathclose{}}^{-1}\right)\mathclose{}}^{\top}\,\mathbf{A}
 >   = {\mathbf{A}}^{\top}\,{\mathopen{}\left((\mathbf{A} {\mathbf{A}}^{\top})\right)\mathclose{}}^{-1}\,\mathbf{A}
->   = \mathbf{G} \mathbf{A}$, by [Theorem 6 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#thm-transpose-product), [Theorem 2 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#thm-inverse-transpose), and because $\mathbf{A} {\mathbf{A}}^{\top}$ is symmetric.
+>   = \mathbf{G} \mathbf{A}$, by [Theorem 6 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#thm-transpose-product), [Theorem 2 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#thm-inverse-transpose), and because $\mathbf{A} {\mathbf{A}}^{\top}$ is symmetric.
 
 > **NOTE:**
 >
@@ -1068,7 +1068,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 
 > **NOTE:**
 >
-> **Theorem 14 (The Moore-Penrose inverse of a symmetric matrix from its eigendecomposition)** Let $\mathbf{S} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}$ be an eigendecomposition ([Definition 20 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-eigendecomposition)) of a [symmetric matrix](linear-algebra-special-matrices.llms.md#def-symmetric-matrix) $\mathbf{S}$, with [diagonal entries](linear-algebra-matrix-multiplication.llms.md#def-diagonal-entry) $\lambda_1, \ldots, \lambda_p$ in the [diagonal matrix](linear-algebra-special-matrices.llms.md#def-diagonal-matrix) $\mathbf{\Lambda}$. Let $\mathbf{\Lambda}^+$ be the diagonal matrix with $j$th [diagonal entry](linear-algebra-matrix-multiplication.llms.md#def-diagonal-entry) $1/\lambda_j$ if $\lambda_j \ne 0$ and $0$ if $\lambda_j = 0$. Then
+> **Theorem 14 (The Moore-Penrose inverse of a symmetric matrix from its eigendecomposition)** Let $\mathbf{S} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}$ be an eigendecomposition ([Definition 3 in Eigenvalues and Matrix Decompositions](linear-algebra-decompositions.llms.md#def-eigendecomposition)) of a [symmetric matrix](linear-algebra-special-matrices.llms.md#def-symmetric-matrix) $\mathbf{S}$, with [diagonal entries](linear-algebra-matrix-multiplication.llms.md#def-diagonal-entry) $\lambda_1, \ldots, \lambda_p$ in the [diagonal matrix](linear-algebra-special-matrices.llms.md#def-diagonal-matrix) $\mathbf{\Lambda}$. Let $\mathbf{\Lambda}^+$ be the diagonal matrix with $j$th [diagonal entry](linear-algebra-matrix-multiplication.llms.md#def-diagonal-entry) $1/\lambda_j$ if $\lambda_j \ne 0$ and $0$ if $\lambda_j = 0$. Then
 >
 > $$\mathbf{S}^+ = \mathbf{Q}\mathbf{\Lambda}^+{\mathbf{Q}}^{\top}.$$
 
@@ -1127,14 +1127,14 @@ Last modified: 2026-11-20 11:25:10 (PST)
 
 > **NOTE:**
 >
-> **Example 19 (The Moore-Penrose inverse of a rank-one symmetric matrix)** For the [symmetric matrix](linear-algebra-special-matrices.llms.md#def-symmetric-matrix) $\mathbf{S} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$, an [eigendecomposition](linear-algebra-special-matrices.llms.md#def-eigendecomposition) is
+> **Example 19 (The Moore-Penrose inverse of a rank-one symmetric matrix)** For the [symmetric matrix](linear-algebra-special-matrices.llms.md#def-symmetric-matrix) $\mathbf{S} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$, an [eigendecomposition](linear-algebra-decompositions.llms.md#def-eigendecomposition) is
 >
 > $$\mathbf{S}
 > = \underbrace{\frac{1}{\sqrt{2}}\begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}}_{\mathbf{Q}}
 >   \underbrace{\begin{bmatrix} 2 & 0 \\ 0 & 0 \end{bmatrix}}_{\mathbf{\Lambda}}
 >   {\mathbf{Q}}^{\top}.$$
 >
-> Inverting only the nonzero [eigenvalue](linear-algebra-special-matrices.llms.md#def-eigenvalue) gives $\mathbf{\Lambda}^+ = \begin{bmatrix} 1/2 & 0 \\ 0 & 0 \end{bmatrix}$, so
+> Inverting only the nonzero [eigenvalue](linear-algebra-decompositions.llms.md#def-eigenvalue) gives $\mathbf{\Lambda}^+ = \begin{bmatrix} 1/2 & 0 \\ 0 & 0 \end{bmatrix}$, so
 >
 > $$\begin{aligned}
 > \mathbf{S}^+
@@ -1554,7 +1554,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 >
 > - $\begin{bmatrix} 2 & 1 & -1 \\ 0 & \frac{1}{2} & \frac{1}{2} \\ 0 & 0 & -1 \end{bmatrix}$ is upper triangular: its entries below the diagonal, in positions $(2, 1)$, $(3, 1)$ and $(3, 2)$, are $0$.
 > - $\begin{bmatrix} 1 & 0 \\ 4 & 1 \end{bmatrix}$ is unit lower triangular.
-> - A diagonal matrix ([Definition 4 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-diagonal-matrix)) is both upper and lower triangular.
+> - A diagonal matrix ([Definition 4 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#def-diagonal-matrix)) is both upper and lower triangular.
 > - $\begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$ is neither: its $(2, 1)$ entry is not $0$, and neither is its $(1, 2)$ entry.
 
 > **NOTE:**
@@ -1757,7 +1757,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > && \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-identity}{\text{Theorem~4 in Matrix Multiplication}}\text{)}
 > \\
 > &= (\mathbf{M}^{-1} \mathbf{M})\,\hat{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}
-> && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices and Decompositions}}\text{)}
+> && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices, Quadratic Forms and Trace}}\text{)}
 > \\
 > &= \mathbf{M}^{-1}\,(\mathbf{M} \hat{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}})
 > && \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
@@ -2019,7 +2019,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 
 > **NOTE:**
 >
-> **Example 36 (An invertible matrix with no LU factorization)** $\mathbf{P} = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$ is invertible: $\mathbf{P}^2 = \mathbf{I}_2$, so $\mathbf{P}^{-1} = \mathbf{P}$ ([Definition 5 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-matrix-inverse)); but it has no LU factorization. If $\mathbf{P} = \mathbf{L} \mathbf{U}$, the $(1, 1)$ entry gives $0 = 1 \cdot u_{11}$, so $u_{11} = 0$, and then the $(2, 1)$ entry gives
+> **Example 36 (An invertible matrix with no LU factorization)** $\mathbf{P} = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$ is invertible: $\mathbf{P}^2 = \mathbf{I}_2$, so $\mathbf{P}^{-1} = \mathbf{P}$ ([Definition 5 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#def-matrix-inverse)); but it has no LU factorization. If $\mathbf{P} = \mathbf{L} \mathbf{U}$, the $(1, 1)$ entry gives $0 = 1 \cdot u_{11}$, so $u_{11} = 0$, and then the $(2, 1)$ entry gives
 >
 > $$\begin{aligned}
 > 1 &= \ell_{21}\,u_{11} \\

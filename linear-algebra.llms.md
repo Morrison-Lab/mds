@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-20 11:25:10 (PST)
+Last modified: 2026-11-20 12:57:53 (PST)
 
 The linear algebra notes are split across these pages:
 
@@ -18,7 +18,9 @@ The linear algebra notes are split across these pages:
 - The [Affine Subspaces and Half-Spaces](linear-algebra-affine-subspaces.llms.md) page: affine subspaces, hyperplanes, and half-spaces.
 - [Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md): sums and direct sums, orthogonal complements, and the fundamental theorem of linear algebra.
 - [Inner Products and Orthogonality](linear-algebra-inner-products.llms.md): inner products, the Cauchy-Schwarz and triangle inequalities, norms, angles, Gram-Schmidt, and outer products.
-- [Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md): symmetric, diagonal, inverse, projection and orthogonal matrices, quadratic forms, the trace, eigendecompositions and the SVD, definite matrices, and determinants.
+- The [Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md) page: symmetric, diagonal, inverse, projection and orthogonal matrices, quadratic forms, the trace, and the [matrix inner product](linear-algebra-special-matrices.llms.md#def-matrix-inner-product).
+- The [Eigenvalues and Matrix Decompositions](linear-algebra-decompositions.llms.md) page: eigenvalues, the spectral theorem, [eigendecompositions](linear-algebra-decompositions.llms.md#def-eigendecomposition) and the SVD.
+- The [Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md) page: [positive definite](linear-algebra-definite-matrices.llms.md#def-positive-definite) and semidefinite matrices, [condition numbers](linear-algebra-definite-matrices.llms.md#def-condition-number), [matrix-induced inner products](linear-algebra-definite-matrices.llms.md#def-matrix-induced-inner-product), and determinants.
 - [Projections and Linear Systems](linear-algebra-projections.llms.md): design matrices, orthogonal projection, generalized inverses, and solving linear systems and least squares.
 - [Diagonalization and Cholesky](linear-algebra-diagonalization.llms.md): similarity, diagonalization, Schur complements, and the Cholesky factorization.
 - [Complex Vectors and Matrices](linear-algebra-complex.llms.md): conjugate transposes and Hermitian matrices.
@@ -27,11 +29,11 @@ A link to a section, theorem or definition on this page from before the split go
 
 > **NOTE:**
 >
-> **Definition 1 (Matrix analysis)** **Matrix analysis** is the study of [matrices](linear-algebra-matrices.llms.md#def-matrix) and their algebraic properties, with operations on matrices, [functions](https://morrison-lab.github.io/mcs/functions.html#def-function) of matrices and the [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) of matrices as example topics [\[1\]](#ref-wikipedia_matrix_analysis).
+> **Definition 1 (Matrix analysis)** **Matrix analysis** is the study of [matrices](linear-algebra-matrices.llms.md#def-matrix) and their algebraic properties, with operations on matrices, [functions](https://morrison-lab.github.io/mcs/functions.html#def-function) of matrices and the [eigenvalues](linear-algebra-decompositions.llms.md#def-eigenvalue) of matrices as example topics [\[1\]](#ref-wikipedia_matrix_analysis).
 
 > **NOTE:**
 >
-> **Example 1 (Eigenvalues of a small matrix)** The [matrix](linear-algebra-matrices.llms.md#def-matrix) $\matr{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ has the [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) $3$ and $1$. Finding these eigenvalues is a question about $\matr{A}$ alone, so it is a topic of [matrix analysis](#def-matrix-analysis).
+> **Example 1 (Eigenvalues of a small matrix)** The [matrix](linear-algebra-matrices.llms.md#def-matrix) $\matr{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ has the [eigenvalues](linear-algebra-decompositions.llms.md#def-eigenvalue) $3$ and $1$. Finding these eigenvalues is a question about $\matr{A}$ alone, so it is a topic of [matrix analysis](#def-matrix-analysis).
 
 > **NOTE:**
 >
@@ -42,7 +44,7 @@ A link to a section, theorem or definition on this page from before the split go
 - Strang [\[3\]](#ref-strang2023linear) is a widely used first course in linear algebra. It covers vectors, elimination, vector spaces, orthogonality, determinants, eigenvalues, and the singular value decomposition.
 - Nield [\[4\]](#ref-nield2022essential) is a short, code-driven introduction to the linear algebra used in data science (Chapter 4).
 - Axler [\[5\]](#ref-axler2024linear) is a proof-based treatment centered on vector spaces and linear maps. A free electronic version is available from the publisher.
-- Lange [\[6\]](#ref-lange2010numerical) covers computing [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) and [eigenvectors](linear-algebra-special-matrices.llms.md#def-eigenvector), including Jacobi’s method (Chapter 8), and the singular value decomposition, its properties, and its applications (Chapter 9).
+- Lange [\[6\]](#ref-lange2010numerical) covers computing [eigenvalues](linear-algebra-decompositions.llms.md#def-eigenvalue) and [eigenvectors](linear-algebra-decompositions.llms.md#def-eigenvector), including Jacobi’s method (Chapter 8), and the singular value decomposition, its properties, and its applications (Chapter 9).
 - Fieller [\[7\]](#ref-fieller2018basics)
 - Banerjee and Roy [\[2\]](#ref-banerjee2014linear)
 - Searle and Khuri [\[8\]](#ref-searle2017matrix)

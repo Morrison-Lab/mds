@@ -4,13 +4,13 @@ Code
 
 Published
 
-Last modified: 2026-11-20 11:25:10 (PST)
+Last modified: 2026-11-20 12:57:53 (PST)
 
 # 1 Similarity and diagonalization
 
 > **NOTE:**
 >
-> This section is adapted from Zhou [\[1\]](#ref-zhou2024eig), used under the MIT License (see the license text in [Section  in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). These notes take eigenvalues to be real numbers ([Definition 18 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-eigenvalue)), so the source’s complex eigenvalues are left out, and eigenvalues are characterized through null spaces rather than through the characteristic polynomial. Only the source’s material on similarity, diagonalization and the basic eigenvalue properties is adapted; its characteristic polynomial and algebraic multiplicity, its trace and determinant identities, and the part of its section on symmetric matrices that builds bases of the column space and null space from eigenvectors are left out. The rest of that section is covered by [Theorem 15 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#thm-spectral) and [Theorem 16 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#thm-symmetric-eigenvectors-orthogonal). Its result that eigenvalues of orthogonal matrices have modulus $1$ appears here in the real form $\pm 1$. Three other parts of the source are not part of this section:
+> This section is adapted from Zhou [\[1\]](#ref-zhou2024eig), used under the MIT License (see the license text in [Section  in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). These notes take eigenvalues to be real numbers ([Definition 1 in Eigenvalues and Matrix Decompositions](linear-algebra-decompositions.llms.md#def-eigenvalue)), so the source’s complex eigenvalues are left out, and eigenvalues are characterized through null spaces rather than through the characteristic polynomial. Only the source’s material on similarity, diagonalization and the basic eigenvalue properties is adapted; its characteristic polynomial and algebraic multiplicity, its trace and determinant identities, and the part of its section on symmetric matrices that builds bases of the column space and null space from eigenvectors are left out. The rest of that section is covered by [Theorem 1 in Eigenvalues and Matrix Decompositions](linear-algebra-decompositions.llms.md#thm-spectral) and [Theorem 2 in Eigenvalues and Matrix Decompositions](linear-algebra-decompositions.llms.md#thm-symmetric-eigenvectors-orthogonal). Its result that eigenvalues of orthogonal matrices have modulus $1$ appears here in the real form $\pm 1$. Three other parts of the source are not part of this section:
 >
 > - its statement that the eigenvalues of a lower triangular matrix are also its diagonal entries ([Theorem 4](#thm-eigen-triangular) states the upper triangular case)
 > - its three further examples of matrices with geometric multiplicity smaller than algebraic multiplicity ([Example 2](#exm-eigenspace) gives one nilpotent example)
@@ -18,7 +18,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 
 > **NOTE:**
 >
-> **Theorem 1 (A square matrix is invertible exactly when it has full column rank)** An $n \times n$ matrix $\mathbf{A}$ is invertible ([Definition 6 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-invertible-matrix)) exactly when $\operatorname{rank}(\mathbf{A}) = n$ (full column rank, [Definition 3 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-full-column-rank)), that is, exactly when $\mathcal{N}(\mathbf{A}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_n\right\}\mathclose{}$.
+> **Theorem 1 (A square matrix is invertible exactly when it has full column rank)** An $n \times n$ matrix $\mathbf{A}$ is invertible ([Definition 6 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#def-invertible-matrix)) exactly when $\operatorname{rank}(\mathbf{A}) = n$ (full column rank, [Definition 3 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-full-column-rank)), that is, exactly when $\mathcal{N}(\mathbf{A}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_n\right\}\mathclose{}$.
 
 > **NOTE:**
 >
@@ -30,7 +30,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > && \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-identity}{\text{Theorem~4 in Matrix Multiplication}}\text{)}
 > \\
 > &= (\mathbf{A}^{-1} \mathbf{A})\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
-> && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices and Decompositions}}\text{)}
+> && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices, Quadratic Forms and Trace}}\text{)}
 > \\
 > &= \mathbf{A}^{-1}\,(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})
 > && \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
@@ -61,18 +61,18 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > && \text{(arithmetic)}
 > \end{aligned}$$
 >
-> so every column of $\mathbf{B} \mathbf{A} - \mathbf{I}_n$ is in $\mathcal{N}(\mathbf{A}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_n\right\}\mathclose{}$ (1), and $\mathbf{B} \mathbf{A} = \mathbf{I}_n$. So $\mathbf{B}$ satisfies [Definition 6 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-invertible-matrix). The two conditions in the statement are equivalent by [Theorem 2 in Rank-Nullity and Rank Factorization](linear-algebra-rank-nullity.llms.md#thm-rank-nullity): the nullity is $0$ exactly when $\mathcal{N}(\mathbf{A}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_n\right\}\mathclose{}$, because a subspace of dimension $0$ has the empty list as a basis, whose span is $\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}$ ([Definition 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension), [Definition 5 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-span)), and $\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}$ has dimension $0$ ([Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension)).
+> so every column of $\mathbf{B} \mathbf{A} - \mathbf{I}_n$ is in $\mathcal{N}(\mathbf{A}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_n\right\}\mathclose{}$ (1), and $\mathbf{B} \mathbf{A} = \mathbf{I}_n$. So $\mathbf{B}$ satisfies [Definition 6 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#def-invertible-matrix). The two conditions in the statement are equivalent by [Theorem 2 in Rank-Nullity and Rank Factorization](linear-algebra-rank-nullity.llms.md#thm-rank-nullity): the nullity is $0$ exactly when $\mathcal{N}(\mathbf{A}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_n\right\}\mathclose{}$, because a subspace of dimension $0$ has the empty list as a basis, whose span is $\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}$ ([Definition 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension), [Definition 5 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-span)), and $\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}$ has dimension $0$ ([Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension)).
 
 > **NOTE:**
 >
 > **Example 1 (Rank decides invertibility)**  
 >
-> - $\begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}$ of [Example 5 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#exm-invertible-matrix) has rank $2$: $c_1 (2, 0) + c_2 (1, 1) = (2c_1 + c_2, c_2)$ is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ only if $c_2 = 0$ and then $c_1 = 0$. So it is invertible, as that example found by exhibiting the inverse.
-> - $\begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$ has rank less than $2$: $(1, -1)$ is a nonzero vector in its null space. So it is singular, as [Example 5 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#exm-invertible-matrix) found.
+> - $\begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}$ of [Example 5 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#exm-invertible-matrix) has rank $2$: $c_1 (2, 0) + c_2 (1, 1) = (2c_1 + c_2, c_2)$ is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ only if $c_2 = 0$ and then $c_1 = 0$. So it is invertible, as that example found by exhibiting the inverse.
+> - $\begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$ has rank less than $2$: $(1, -1)$ is a nonzero vector in its null space. So it is singular, as [Example 5 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#exm-invertible-matrix) found.
 
 > **NOTE:**
 >
-> **Definition 1 (Eigenspace)** Let $\lambda$ be an eigenvalue of a $p \times p$ matrix $\mathbf{A}$ ([Definition 18 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-eigenvalue)). The **eigenspace** [\[2\]](#ref-wikipedia_eigenvalues_and_eigenvectors) of $\lambda$ is $\mathcal{E}_\lambda\stackrel{\text{def}}{=}\mathcal{N}(\mathbf{A} - \lambda\,\mathbf{I}_p)$. It is a subspace of $\mathbb{R}^p$ ([Theorem 2 in Column Space and Null Space](linear-algebra-column-null-space.llms.md#thm-null-space-subspace)).
+> **Definition 1 (Eigenspace)** Let $\lambda$ be an eigenvalue of a $p \times p$ matrix $\mathbf{A}$ ([Definition 1 in Eigenvalues and Matrix Decompositions](linear-algebra-decompositions.llms.md#def-eigenvalue)). The **eigenspace** [\[2\]](#ref-wikipedia_eigenvalues_and_eigenvectors) of $\lambda$ is $\mathcal{E}_\lambda\stackrel{\text{def}}{=}\mathcal{N}(\mathbf{A} - \lambda\,\mathbf{I}_p)$. It is a subspace of $\mathbb{R}^p$ ([Theorem 2 in Column Space and Null Space](linear-algebra-column-null-space.llms.md#thm-null-space-subspace)).
 
 > **NOTE:**
 >
@@ -82,7 +82,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 >
 > **Example 2 (Eigenspaces of two matrices)**  
 >
-> - For $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ of [Example 29 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#exm-eigenvalue), $\mathbf{A} - 3\,\mathbf{I}_2 = \begin{bmatrix} -1 & 1 \\ 1 & -1 \end{bmatrix}$ sends $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ to $(v_2 - v_1)\,(1, -1)$, so $\mathcal{E}_3 = \operatorname{span}\mathopen{}\left\{(1, 1)\right\}\mathclose{}$, with geometric multiplicity $1$.
+> - For $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ of [Example 1 in Eigenvalues and Matrix Decompositions](linear-algebra-decompositions.llms.md#exm-eigenvalue), $\mathbf{A} - 3\,\mathbf{I}_2 = \begin{bmatrix} -1 & 1 \\ 1 & -1 \end{bmatrix}$ sends $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ to $(v_2 - v_1)\,(1, -1)$, so $\mathcal{E}_3 = \operatorname{span}\mathopen{}\left\{(1, 1)\right\}\mathclose{}$, with geometric multiplicity $1$.
 >
 > - For $\mathbf{J} = \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}$, $\mathbf{J} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (v_2, 0)$.
 >
@@ -102,11 +102,11 @@ Last modified: 2026-11-20 11:25:10 (PST)
 
 > **NOTE:**
 >
-> **Example 3 (A number that is not an eigenvalue has no eigenspace)** For $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ and $\lambda= 2$, $\mathbf{A} - 2\,\mathbf{I}_2 = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$ sends $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ to $(v_2, v_1)$, which is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ only for $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, so $\mathcal{N}(\mathbf{A} - 2\,\mathbf{I}_2) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}$. And $2$ is not an eigenvalue ([Definition 18 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-eigenvalue)): $\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = 2\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ reads $(2v_1 + v_2, v_1 + 2v_2) = (2v_1, 2v_2)$, so $v_2 = 0$ and $v_1 = 0$. So [Definition 1](#def-eigenspace) does not apply to $2$.
+> **Example 3 (A number that is not an eigenvalue has no eigenspace)** For $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ and $\lambda= 2$, $\mathbf{A} - 2\,\mathbf{I}_2 = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$ sends $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ to $(v_2, v_1)$, which is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ only for $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, so $\mathcal{N}(\mathbf{A} - 2\,\mathbf{I}_2) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}$. And $2$ is not an eigenvalue ([Definition 1 in Eigenvalues and Matrix Decompositions](linear-algebra-decompositions.llms.md#def-eigenvalue)): $\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = 2\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ reads $(2v_1 + v_2, v_1 + 2v_2) = (2v_1, 2v_2)$, so $v_2 = 0$ and $v_1 = 0$. So [Definition 1](#def-eigenspace) does not apply to $2$.
 
 > **NOTE:**
 >
-> **Theorem 2 (Eigenvalues are where** $\mathbf{A} - \lambda\mathbf{I}$ is singular) Let $\mathbf{A}$ be a $p \times p$ matrix and $\lambda$ a real number. Then $\lambda$ is an eigenvalue of $\mathbf{A}$ ([Definition 18 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-eigenvalue)) exactly when $\mathbf{A} - \lambda\,\mathbf{I}_p$ is singular ([Definition 6 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-invertible-matrix)). In particular, $\mathbf{A}$ is singular exactly when $0$ is one of its eigenvalues; and each eigenspace $\mathcal{E}_\lambda$ ([Definition 1](#def-eigenspace)) is a subspace of $\mathbb{R}^p$ consisting of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ and the eigenvectors for $\lambda$.
+> **Theorem 2 (Eigenvalues are where** $\mathbf{A} - \lambda\mathbf{I}$ is singular) Let $\mathbf{A}$ be a $p \times p$ matrix and $\lambda$ a real number. Then $\lambda$ is an eigenvalue of $\mathbf{A}$ ([Definition 1 in Eigenvalues and Matrix Decompositions](linear-algebra-decompositions.llms.md#def-eigenvalue)) exactly when $\mathbf{A} - \lambda\,\mathbf{I}_p$ is singular ([Definition 6 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#def-invertible-matrix)). In particular, $\mathbf{A}$ is singular exactly when $0$ is one of its eigenvalues; and each eigenspace $\mathcal{E}_\lambda$ ([Definition 1](#def-eigenspace)) is a subspace of $\mathbb{R}^p$ consisting of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ and the eigenvectors for $\lambda$.
 
 > **NOTE:**
 >
@@ -128,7 +128,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 
 > **NOTE:**
 >
-> **Example 4 (Eigenvalues and singular matrices)** For $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$, $\mathbf{A} - 3\,\mathbf{I}_2 = \begin{bmatrix} -1 & 1 \\ 1 & -1 \end{bmatrix}$ is singular (its columns are negatives of each other, so its rank is $1$), matching the eigenvalue $3$ of [Example 29 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#exm-eigenvalue). $\mathbf{A}$ itself has rank $2$, since $c_1 (2, 1) + c_2 (1, 2) = (2c_1 + c_2, c_1 + 2c_2)$ is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ only if
+> **Example 4 (Eigenvalues and singular matrices)** For $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$, $\mathbf{A} - 3\,\mathbf{I}_2 = \begin{bmatrix} -1 & 1 \\ 1 & -1 \end{bmatrix}$ is singular (its columns are negatives of each other, so its rank is $1$), matching the eigenvalue $3$ of [Example 1 in Eigenvalues and Matrix Decompositions](linear-algebra-decompositions.llms.md#exm-eigenvalue). $\mathbf{A}$ itself has rank $2$, since $c_1 (2, 1) + c_2 (1, 2) = (2c_1 + c_2, c_1 + 2c_2)$ is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ only if
 >
 > $$\begin{aligned}
 > c_1 &= c_2 \\
@@ -139,10 +139,10 @@ Last modified: 2026-11-20 11:25:10 (PST)
 
 > **NOTE:**
 >
-> **Theorem 3 (Eigenvalues of shifts and powers)** Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ be an eigenvector of a $p \times p$ matrix $\mathbf{A}$ for the eigenvalue $\lambda$ ([Definition 18 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-eigenvalue)). Then
+> **Theorem 3 (Eigenvalues of shifts and powers)** Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ be an eigenvector of a $p \times p$ matrix $\mathbf{A}$ for the eigenvalue $\lambda$ ([Definition 1 in Eigenvalues and Matrix Decompositions](linear-algebra-decompositions.llms.md#def-eigenvalue)). Then
 >
 > 1.  $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ is an eigenvector of $\mathbf{A} + s\,\mathbf{I}_p$ for $\lambda+ s$, for every number $s$;
-> 2.  $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ is an eigenvector of $\mathbf{A}^k$ ([Definition 2 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-matrix-power)) for $\lambda^k$, for every positive integer $k$.
+> 2.  $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ is an eigenvector of $\mathbf{A}^k$ ([Definition 2 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#def-matrix-power)) for $\lambda^k$, for every positive integer $k$.
 
 > **NOTE:**
 >
@@ -171,7 +171,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > $$\begin{aligned}
 > \mathbf{A}^k \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}
 > &= \mathbf{A}\,(\mathbf{A}^{k-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}})
-> && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-power}{\text{Definition~2 in Special Matrices and Decompositions}}\text{, }\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
+> && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-power}{\text{Definition~2 in Special Matrices, Quadratic Forms and Trace}}\text{, }\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 > \\
 > &= \mathbf{A}\,(\lambda^{k-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}})
 > && \text{(induction hypothesis)}
@@ -190,7 +190,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 
 > **NOTE:**
 >
-> **Example 5 (Shifting and squaring)** For $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ with eigenvector $(1, 1)$ for $3$ ([Example 29 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#exm-eigenvalue)):
+> **Example 5 (Shifting and squaring)** For $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ with eigenvector $(1, 1)$ for $3$ ([Example 1 in Eigenvalues and Matrix Decompositions](linear-algebra-decompositions.llms.md#exm-eigenvalue)):
 >
 > - $\mathbf{A} - 2\,\mathbf{I}_2 = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$ sends $(1, 1)$ to $(1, 1) = (3 - 2)\,(1, 1)$;
 >
@@ -203,7 +203,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 
 > **NOTE:**
 >
-> **Theorem 4 (The eigenvalues of an upper triangular matrix are its diagonal entries)** The eigenvalues ([Definition 18 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-eigenvalue)) of an upper triangular $p \times p$ matrix $\mathbf{U}$ ([Definition 7 in Projections and Linear Systems](linear-algebra-projections.llms.md#def-triangular-matrix)) are exactly its diagonal entries $u_{11}, \ldots, u_{pp}$.
+> **Theorem 4 (The eigenvalues of an upper triangular matrix are its diagonal entries)** The eigenvalues ([Definition 1 in Eigenvalues and Matrix Decompositions](linear-algebra-decompositions.llms.md#def-eigenvalue)) of an upper triangular $p \times p$ matrix $\mathbf{U}$ ([Definition 7 in Projections and Linear Systems](linear-algebra-projections.llms.md#def-triangular-matrix)) are exactly its diagonal entries $u_{11}, \ldots, u_{pp}$.
 
 > **NOTE:**
 >
@@ -245,8 +245,8 @@ Last modified: 2026-11-20 11:25:10 (PST)
 >
 > **Theorem 5 (Eigenvalues of idempotent and orthogonal matrices)**  
 >
-> 1.  Every eigenvalue of an idempotent matrix ([Definition 7 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-idempotent-matrix)) is $0$ or $1$.
-> 2.  Every eigenvalue of an orthogonal matrix ([Definition 10 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-orthogonal-matrix)) is $1$ or $-1$.
+> 1.  Every eigenvalue of an idempotent matrix ([Definition 7 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#def-idempotent-matrix)) is $0$ or $1$.
+> 2.  Every eigenvalue of an orthogonal matrix ([Definition 10 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#def-orthogonal-matrix)) is $1$ or $-1$.
 
 > **NOTE:**
 >
@@ -280,7 +280,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > $$\begin{aligned}
 > \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\right\rVert\mathclose{}
 > &= \mathopen{}\left\lVert\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\right\rVert\mathclose{}
-> && \text{(}\href{linear-algebra-special-matrices.qmd#thm-orthogonal-norm}{\text{Theorem~7 in Special Matrices and Decompositions}}\text{)}
+> && \text{(}\href{linear-algebra-special-matrices.qmd#thm-orthogonal-norm}{\text{Theorem~7 in Special Matrices, Quadratic Forms and Trace}}\text{)}
 > \\
 > &= \mathopen{}\left\lVert\lambda\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\right\rVert\mathclose{}
 > && \text{(eigenvector)}
@@ -289,7 +289,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > && \text{(}\href{linear-algebra-inner-products.qmd#thm-norm-properties}{\text{Theorem~1 in Inner Products and Orthogonality}}\text{, part 2)}
 > \end{aligned}$$
 >
-> and $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\right\rVert\mathclose{} > 0$ ([Theorem 1 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#thm-norm-properties), part 1), so dividing by $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\right\rVert\mathclose{}$ gives $\mathopen{}\left|\lambda\right|\mathclose{} = 1$; since $\lambda$ is real ([Definition 18 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-eigenvalue)), $\lambda= 1$ or $\lambda= -1$.
+> and $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\right\rVert\mathclose{} > 0$ ([Theorem 1 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#thm-norm-properties), part 1), so dividing by $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\right\rVert\mathclose{}$ gives $\mathopen{}\left|\lambda\right|\mathclose{} = 1$; since $\lambda$ is real ([Definition 1 in Eigenvalues and Matrix Decompositions](linear-algebra-decompositions.llms.md#def-eigenvalue)), $\lambda= 1$ or $\lambda= -1$.
 
 > **NOTE:**
 >
@@ -297,9 +297,9 @@ Last modified: 2026-11-20 11:25:10 (PST)
 >
 > - The idempotent matrix $\begin{bmatrix} 0.5 & 0.5 \\ 0.5 & 0.5 \end{bmatrix}$ of [Example 3 in Projections and Linear Systems](linear-algebra-projections.llms.md#exm-hat-matrix-projection) sends $(1, 1)$ to $(1, 1)$ and $(1, -1)$ to $(0, 0)$: eigenvalues $1$ and $0$.
 >
-> - The matrix $\begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$, which swaps the two entries, is orthogonal: its columns $(0, 1)$ and $(1, 0)$ are orthonormal ([Remark 6 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#rem-orthogonal-matrix-columns)). It sends $(1, 1)$ to $(1, 1)$ and $(1, -1)$ to $(-1, 1)$: eigenvalues $1$ and $-1$.
+> - The matrix $\begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$, which swaps the two entries, is orthogonal: its columns $(0, 1)$ and $(1, 0)$ are orthonormal ([Remark 6 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#rem-orthogonal-matrix-columns)). It sends $(1, 1)$ to $(1, 1)$ and $(1, -1)$ to $(-1, 1)$: eigenvalues $1$ and $-1$.
 >
-> - The rotation $\mathbf{Q}$ of [Example 14 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#exm-orthogonal-matrix) has no real eigenvalue. By part 2 the only candidates are $\pm 1$. $\mathbf{Q} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ reads $-0.4\,v_1 - 0.8\,v_2 = 0$ and $0.8\,v_1 - 0.4\,v_2 = 0$, so $v_1 = -2 v_2$ and
+> - The rotation $\mathbf{Q}$ of [Example 14 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#exm-orthogonal-matrix) has no real eigenvalue. By part 2 the only candidates are $\pm 1$. $\mathbf{Q} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ reads $-0.4\,v_1 - 0.8\,v_2 = 0$ and $0.8\,v_1 - 0.4\,v_2 = 0$, so $v_1 = -2 v_2$ and
 >
 >   $$\begin{aligned}
 >   v_2 &= 2 v_1 \\
@@ -310,7 +310,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 
 > **NOTE:**
 >
-> **Definition 3 (Similar matrices)** Two $p \times p$ matrices $\mathbf{A}$ and $\mathbf{B}$ are **similar** [\[3\]](#ref-wikipedia_matrix_similarity) if $\mathbf{B} = \mathbf{P}^{-1} \mathbf{A} \mathbf{P}$ for some invertible $p \times p$ matrix $\mathbf{P}$ ([Definition 6 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-invertible-matrix)).
+> **Definition 3 (Similar matrices)** Two $p \times p$ matrices $\mathbf{A}$ and $\mathbf{B}$ are **similar** [\[3\]](#ref-wikipedia_matrix_similarity) if $\mathbf{B} = \mathbf{P}^{-1} \mathbf{A} \mathbf{P}$ for some invertible $p \times p$ matrix $\mathbf{P}$ ([Definition 6 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#def-invertible-matrix)).
 
 > **NOTE:**
 >
@@ -321,7 +321,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > &= \mathbf{I}_p
 > \end{aligned}$$
 >
-> 2.  is the condition of [Definition 6 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-invertible-matrix) for $\mathbf{P}^{-1}$ with $\mathbf{P}$ as the other factor, and that factor is unique ([Remark 3 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#rem-invertible-inverse)). If $\mathbf{B} = \mathbf{P}^{-1} \mathbf{A} \mathbf{P}$, then
+> 2.  is the condition of [Definition 6 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#def-invertible-matrix) for $\mathbf{P}^{-1}$ with $\mathbf{P}$ as the other factor, and that factor is unique ([Remark 3 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#rem-invertible-inverse)). If $\mathbf{B} = \mathbf{P}^{-1} \mathbf{A} \mathbf{P}$, then
 >
 > $$\begin{aligned}
 > \mathbf{P} \mathbf{B} \mathbf{P}^{-1}
@@ -332,7 +332,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > && \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 > \\
 > &= \mathbf{I}_p\,\mathbf{A}\,\mathbf{I}_p
-> && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices and Decompositions}}\text{)}
+> && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices, Quadratic Forms and Trace}}\text{)}
 > \\
 > &= \mathbf{A},
 > && \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-identity}{\text{Theorem~4 in Matrix Multiplication}}\text{)}
@@ -412,7 +412,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > && \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 > \\
 > &= \mathbf{P}^{-1} \mathbf{A}\,\mathbf{I}_p\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}
-> && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices and Decompositions}}\text{)}
+> && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices, Quadratic Forms and Trace}}\text{)}
 > \\
 > &= \mathbf{P}^{-1} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}
 > && \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-identity}{\text{Theorem~4 in Matrix Multiplication}}\text{)}
@@ -456,7 +456,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 
 > **NOTE:**
 >
-> **Example 9 (Eigenvectors carried across a similarity)** In [Example 8](#exm-similar), $\mathbf{B} = \operatorname{diag}(3, 1)$ has eigenvectors $(1, 0)$ for $3$ and $(0, 1)$ for $1$: $\operatorname{diag}(3, 1)\,(1, 0) = (3, 0)$ and $\operatorname{diag}(3, 1)\,(0, 1) = (0, 1)$. $\mathbf{P}\,(1, 0) = (1, 1)$ and $\mathbf{P}\,(0, 1) = (1, -1)$ are the eigenvectors of $\mathbf{A}$ for $3$ and $1$ found in [Example 29 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#exm-eigenvalue).
+> **Example 9 (Eigenvectors carried across a similarity)** In [Example 8](#exm-similar), $\mathbf{B} = \operatorname{diag}(3, 1)$ has eigenvectors $(1, 0)$ for $3$ and $(0, 1)$ for $1$: $\operatorname{diag}(3, 1)\,(1, 0) = (3, 0)$ and $\operatorname{diag}(3, 1)\,(0, 1) = (0, 1)$. $\mathbf{P}\,(1, 0) = (1, 1)$ and $\mathbf{P}\,(0, 1) = (1, -1)$ are the eigenvectors of $\mathbf{A}$ for $3$ and $1$ found in [Example 1 in Eigenvalues and Matrix Decompositions](linear-algebra-decompositions.llms.md#exm-eigenvalue).
 
 > **NOTE:**
 >
@@ -485,7 +485,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 
 > **NOTE:**
 >
-> **Example 10 (Independent eigenvectors)** The eigenvectors $(1, 1)$ for $3$ and $(1, -1)$ for $1$ of [Example 29 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#exm-eigenvalue) are linearly independent, as [Theorem 7](#thm-eigenvectors-independent) says they must be: $c_1 (1, 1) + c_2 (1, -1) = (c_1 + c_2, c_1 - c_2)$ is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ only if
+> **Example 10 (Independent eigenvectors)** The eigenvectors $(1, 1)$ for $3$ and $(1, -1)$ for $1$ of [Example 1 in Eigenvalues and Matrix Decompositions](linear-algebra-decompositions.llms.md#exm-eigenvalue) are linearly independent, as [Theorem 7](#thm-eigenvectors-independent) says they must be: $c_1 (1, 1) + c_2 (1, -1) = (c_1 + c_2, c_1 - c_2)$ is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ only if
 >
 > $$\begin{aligned}
 > c_1 &= c_2 \\
@@ -496,7 +496,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 
 > **NOTE:**
 >
-> **Definition 4 (Diagonalizable matrix)** A $p \times p$ matrix $\mathbf{A}$ is **diagonalizable** [\[4\]](#ref-wikipedia_diagonalizable_matrix) if $\mathbf{A} = \mathbf{X} \mathbf{\Lambda} \mathbf{X}^{-1}$ for some invertible $p \times p$ matrix $\mathbf{X}$ and diagonal $p \times p$ matrix $\mathbf{\Lambda}$ ([Definition 4 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-diagonal-matrix)); by [Remark 1](#rem-similar-both-ways), that is the same as $\mathbf{\Lambda} = \mathbf{X}^{-1} \mathbf{A} \mathbf{X}$, so a diagonalizable matrix is one similar to a diagonal matrix ([Definition 3](#def-similar)).
+> **Definition 4 (Diagonalizable matrix)** A $p \times p$ matrix $\mathbf{A}$ is **diagonalizable** [\[4\]](#ref-wikipedia_diagonalizable_matrix) if $\mathbf{A} = \mathbf{X} \mathbf{\Lambda} \mathbf{X}^{-1}$ for some invertible $p \times p$ matrix $\mathbf{X}$ and diagonal $p \times p$ matrix $\mathbf{\Lambda}$ ([Definition 4 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#def-diagonal-matrix)); by [Remark 1](#rem-similar-both-ways), that is the same as $\mathbf{\Lambda} = \mathbf{X}^{-1} \mathbf{A} \mathbf{X}$, so a diagonalizable matrix is one similar to a diagonal matrix ([Definition 3](#def-similar)).
 
 > **NOTE:**
 >
@@ -542,7 +542,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > && \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-identity}{\text{Theorem~4 in Matrix Multiplication}}\text{)}
 > \\
 > &= \mathbf{A}\,(\mathbf{X} \mathbf{X}^{-1})
-> && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices and Decompositions}}\text{)}
+> && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices, Quadratic Forms and Trace}}\text{)}
 > \\
 > &= (\mathbf{A} \mathbf{X})\,\mathbf{X}^{-1}
 > && \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
@@ -562,7 +562,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > && \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 > \\
 > &= \mathbf{X} \mathbf{\Lambda}\,\mathbf{I}_p
-> && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices and Decompositions}}\text{)}
+> && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices, Quadratic Forms and Trace}}\text{)}
 > \\
 > &= \mathbf{X} \mathbf{\Lambda},
 > && \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-identity}{\text{Theorem~4 in Matrix Multiplication}}\text{)}
@@ -572,7 +572,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 
 > **NOTE:**
 >
-> **Example 12 (Building the diagonalization from eigenvectors)** The eigenvectors $(1, 1)$ and $(1, -1)$ of $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ are linearly independent ([Example 10](#exm-eigenvectors-independent)), so with $\mathbf{X} = \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}$ and $\mathbf{\Lambda} = \operatorname{diag}(3, 1)$, $\mathbf{A} = \mathbf{X} \mathbf{\Lambda} \mathbf{X}^{-1}$; by [Remark 1](#rem-similar-both-ways) this is the similarity of [Example 8](#exm-similar), with $\mathbf{X} = \mathbf{P}$. Because $\mathbf{A}$ is symmetric, [Theorem 15 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#thm-spectral) even gives such a factorization with orthonormal eigenvectors ([Definition 20 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-eigendecomposition)): dividing each column of $\mathbf{X}$ by its length $\sqrt{2}$ gives one. By contrast, every eigenvector of $\mathbf{J}$ in [Example 2](#exm-eigenspace) has the form $(t, 0)$, so any two of them are multiples of each other, and $\mathbf{J}$ has no two linearly independent eigenvectors: another way to see that it is not diagonalizable.
+> **Example 12 (Building the diagonalization from eigenvectors)** The eigenvectors $(1, 1)$ and $(1, -1)$ of $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ are linearly independent ([Example 10](#exm-eigenvectors-independent)), so with $\mathbf{X} = \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}$ and $\mathbf{\Lambda} = \operatorname{diag}(3, 1)$, $\mathbf{A} = \mathbf{X} \mathbf{\Lambda} \mathbf{X}^{-1}$; by [Remark 1](#rem-similar-both-ways) this is the similarity of [Example 8](#exm-similar), with $\mathbf{X} = \mathbf{P}$. Because $\mathbf{A}$ is symmetric, [Theorem 1 in Eigenvalues and Matrix Decompositions](linear-algebra-decompositions.llms.md#thm-spectral) even gives such a factorization with orthonormal eigenvectors ([Definition 3 in Eigenvalues and Matrix Decompositions](linear-algebra-decompositions.llms.md#def-eigendecomposition)): dividing each column of $\mathbf{X}$ by its length $\sqrt{2}$ gives one. By contrast, every eigenvector of $\mathbf{J}$ in [Example 2](#exm-eigenspace) has the form $(t, 0)$, so any two of them are multiples of each other, and $\mathbf{J}$ has no two linearly independent eigenvectors: another way to see that it is not diagonalizable.
 
 > **NOTE:**
 >
@@ -584,7 +584,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 
 > **NOTE:**
 >
-> **Example 13 (A triangular matrix with distinct diagonal entries)** $\mathbf{U}$ of [Example 6](#exm-eigen-triangular) has the three different eigenvalues $2$, $\tfrac{1}{2}$ and $-1$ ([Theorem 4](#thm-eigen-triangular)), so it is diagonalizable, even though it is not symmetric, so [Theorem 15 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#thm-spectral) does not apply to it. The converse fails: $\mathbf{I}_2$ is diagonal, hence diagonalizable ($\mathbf{I}_2 = \mathbf{I}_2\,\mathbf{I}_2\,\mathbf{I}_2^{-1}$), but has only the eigenvalue $1$.
+> **Example 13 (A triangular matrix with distinct diagonal entries)** $\mathbf{U}$ of [Example 6](#exm-eigen-triangular) has the three different eigenvalues $2$, $\tfrac{1}{2}$ and $-1$ ([Theorem 4](#thm-eigen-triangular)), so it is diagonalizable, even though it is not symmetric, so [Theorem 1 in Eigenvalues and Matrix Decompositions](linear-algebra-decompositions.llms.md#thm-spectral) does not apply to it. The converse fails: $\mathbf{I}_2$ is diagonal, hence diagonalizable ($\mathbf{I}_2 = \mathbf{I}_2\,\mathbf{I}_2\,\mathbf{I}_2^{-1}$), but has only the eigenvalue $1$.
 
 > **NOTE:**
 >
@@ -599,7 +599,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > $$\begin{aligned}
 > \mathbf{A}^k
 > &= \mathbf{A}^{k-1} \mathbf{A}
-> && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-power}{\text{Definition~2 in Special Matrices and Decompositions}}\text{, }\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
+> && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-power}{\text{Definition~2 in Special Matrices, Quadratic Forms and Trace}}\text{, }\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 > \\
 > &= \mathbf{X} \mathbf{\Lambda}^{k-1} \mathbf{X}^{-1}\,\mathbf{A}
 > && \text{(induction hypothesis)}
@@ -611,13 +611,13 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > && \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 > \\
 > &= \mathbf{X} \mathbf{\Lambda}^{k-1}\,\mathbf{I}_p\,\mathbf{\Lambda} \mathbf{X}^{-1}
-> && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices and Decompositions}}\text{)}
+> && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices, Quadratic Forms and Trace}}\text{)}
 > \\
 > &= \mathbf{X} \mathbf{\Lambda}^{k-1} \mathbf{\Lambda} \mathbf{X}^{-1}
 > && \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-identity}{\text{Theorem~4 in Matrix Multiplication}}\text{)}
 > \\
 > &= \mathbf{X} \mathbf{\Lambda}^{k} \mathbf{X}^{-1}.
-> && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-power}{\text{Definition~2 in Special Matrices and Decompositions}}\text{)}
+> && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-power}{\text{Definition~2 in Special Matrices, Quadratic Forms and Trace}}\text{)}
 > \end{aligned}$$
 
 > **NOTE:**
@@ -648,7 +648,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 
 > **NOTE:**
 >
-> This section is adapted from Zhou [\[5\]](#ref-zhou2024pd), used under the MIT License (see the license text in [Section  in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). The source’s eigenvalue and quadratic-form characterizations of definiteness are covered in these notes already ([Theorem 20 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#thm-definite-eigenvalues)). These parts of the source are left out:
+> This section is adapted from Zhou [\[5\]](#ref-zhou2024pd), used under the MIT License (see the license text in [Section  in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). The source’s eigenvalue and quadratic-form characterizations of definiteness are covered in these notes already ([Theorem 2 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#thm-definite-eigenvalues)). These parts of the source are left out:
 >
 > - its covariance test, which needs probability
 > - its material on minimization
@@ -666,8 +666,8 @@ Last modified: 2026-11-20 11:25:10 (PST)
 >
 > **Theorem 10 (Definite matrices are Gram matrices)** Let $\mathbf{A}$ be a $p \times p$ matrix.
 >
-> 1.  $\mathbf{A}$ is positive semidefinite ([Definition 23 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-positive-semidefinite)) exactly when $\mathbf{A} = {\mathbf{B}}^{\top} \mathbf{B}$ for some matrix $\mathbf{B}$ with $p$ columns.
-> 2.  $\mathbf{A}$ is positive definite ([Definition 24 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-positive-definite)) exactly when $\mathbf{A} = {\mathbf{B}}^{\top} \mathbf{B}$ for some matrix $\mathbf{B}$ with $p$ linearly independent columns.
+> 1.  $\mathbf{A}$ is positive semidefinite ([Definition 1 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#def-positive-semidefinite)) exactly when $\mathbf{A} = {\mathbf{B}}^{\top} \mathbf{B}$ for some matrix $\mathbf{B}$ with $p$ columns.
+> 2.  $\mathbf{A}$ is positive definite ([Definition 2 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#def-positive-definite)) exactly when $\mathbf{A} = {\mathbf{B}}^{\top} \mathbf{B}$ for some matrix $\mathbf{B}$ with $p$ linearly independent columns.
 
 > **NOTE:**
 >
@@ -697,7 +697,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 >
 > If the columns of $\mathbf{B}$ are linearly independent, then $\mathcal{N}(\mathbf{B}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}$ ($\mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is the combination of the columns with coefficients $x_j$, [Theorem 3 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-matvec-columns), and only the zero combination is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, [Definition 1 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-linearly-independent)), so for $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, $\mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ and $\mathopen{}\left\lVert\mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}^2 > 0$ ([Theorem 1 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#thm-norm-properties), part 1).
 >
-> **Only if.** Let $\mathbf{A}$ be positive semidefinite. It is symmetric, so $\mathbf{A} = \mathbf{Q} \mathbf{\Lambda} {\mathbf{Q}}^{\top}$ ([Theorem 15 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#thm-spectral)), and every $\lambda_i \ge 0$ ([Theorem 20 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#thm-definite-eigenvalues)). Let $\mathbf{\Lambda}^{1/2} \stackrel{\text{def}}{=}\operatorname{diag}(\sqrt{\lambda_1}, \ldots, \sqrt{\lambda_p})$, which is symmetric, with $\mathbf{\Lambda}^{1/2} \mathbf{\Lambda}^{1/2} = \mathbf{\Lambda}$ (the product of diagonal matrices multiplies their diagonals, as in the proof of [Theorem 9](#thm-diagonalizable-powers)), and let $\mathbf{B} \stackrel{\text{def}}{=}\mathbf{\Lambda}^{1/2} {\mathbf{Q}}^{\top}$. Then
+> **Only if.** Let $\mathbf{A}$ be positive semidefinite. It is symmetric, so $\mathbf{A} = \mathbf{Q} \mathbf{\Lambda} {\mathbf{Q}}^{\top}$ ([Theorem 1 in Eigenvalues and Matrix Decompositions](linear-algebra-decompositions.llms.md#thm-spectral)), and every $\lambda_i \ge 0$ ([Theorem 2 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#thm-definite-eigenvalues)). Let $\mathbf{\Lambda}^{1/2} \stackrel{\text{def}}{=}\operatorname{diag}(\sqrt{\lambda_1}, \ldots, \sqrt{\lambda_p})$, which is symmetric, with $\mathbf{\Lambda}^{1/2} \mathbf{\Lambda}^{1/2} = \mathbf{\Lambda}$ (the product of diagonal matrices multiplies their diagonals, as in the proof of [Theorem 9](#thm-diagonalizable-powers)), and let $\mathbf{B} \stackrel{\text{def}}{=}\mathbf{\Lambda}^{1/2} {\mathbf{Q}}^{\top}$. Then
 >
 > $$\begin{aligned}
 > {\mathbf{B}}^{\top} \mathbf{B}
@@ -711,24 +711,24 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > && \text{(} \mathbf{\Lambda}^{1/2} \mathbf{\Lambda}^{1/2} = \mathbf{\Lambda} \text{)}
 > \\
 > &= \mathbf{A}.
-> && \text{(}\href{linear-algebra-special-matrices.qmd#thm-spectral}{\text{Theorem~15 in Special Matrices and Decompositions}}\text{)}
+> && \text{(}\href{linear-algebra-decompositions.qmd#thm-spectral}{\text{Theorem~1 in Eigenvalues and Matrix Decompositions}}\text{)}
 > \end{aligned}$$
 >
-> If $\mathbf{A}$ is positive definite, it is positive semidefinite ([Remark 20 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#rem-positive-definite-symmetry)), so the same $\mathbf{B}$ gives $\mathbf{A} = {\mathbf{B}}^{\top} \mathbf{B}$; and every $\lambda_i > 0$ ([Theorem 20 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#thm-definite-eigenvalues)), so $\mathbf{\Lambda}^{1/2}$ is diagonal with nonzero diagonal, and invertible (its inverse is $\operatorname{diag}(1/\sqrt{\lambda_1}, \ldots, 1/\sqrt{\lambda_p})$); ${\mathbf{Q}}^{\top}$ is invertible with inverse $\mathbf{Q}$ ([Remark 6 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#rem-orthogonal-matrix-columns)). So $\mathbf{B}$ is invertible ([Theorem 1 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#thm-inverse-product)), and its $p$ columns are linearly independent ([Theorem 1](#thm-invertible-rank), [Definition 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-rank)).
+> If $\mathbf{A}$ is positive definite, it is positive semidefinite ([Remark 1 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#rem-positive-definite-symmetry)), so the same $\mathbf{B}$ gives $\mathbf{A} = {\mathbf{B}}^{\top} \mathbf{B}$; and every $\lambda_i > 0$ ([Theorem 2 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#thm-definite-eigenvalues)), so $\mathbf{\Lambda}^{1/2}$ is diagonal with nonzero diagonal, and invertible (its inverse is $\operatorname{diag}(1/\sqrt{\lambda_1}, \ldots, 1/\sqrt{\lambda_p})$); ${\mathbf{Q}}^{\top}$ is invertible with inverse $\mathbf{Q}$ ([Remark 6 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#rem-orthogonal-matrix-columns)). So $\mathbf{B}$ is invertible ([Theorem 1 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#thm-inverse-product)), and its $p$ columns are linearly independent ([Theorem 1](#thm-invertible-rank), [Definition 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-rank)).
 
 > **NOTE:**
 >
 > **Example 15 (Gram factorizations)**  
 >
-> - With $\mathbf{R} = \begin{bmatrix} 1 & 1 \end{bmatrix}$ ($1 \times 2$), ${\mathbf{R}}^{\top} \mathbf{R} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$, the positive semidefinite matrix of [Example 35 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#exm-positive-semidefinite); the two columns of $\mathbf{R}$, $1$ and $1$, are dependent, so part 2 does not apply to $\mathbf{R}$; ${\mathbf{R}}^{\top} \mathbf{R}$ is in fact not positive definite ([Example 38 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#exm-positive-definite)).
+> - With $\mathbf{R} = \begin{bmatrix} 1 & 1 \end{bmatrix}$ ($1 \times 2$), ${\mathbf{R}}^{\top} \mathbf{R} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$, the positive semidefinite matrix of [Example 1 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#exm-positive-semidefinite); the two columns of $\mathbf{R}$, $1$ and $1$, are dependent, so part 2 does not apply to $\mathbf{R}$; ${\mathbf{R}}^{\top} \mathbf{R}$ is in fact not positive definite ([Example 4 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#exm-positive-definite)).
 > - With $\mathbf{X}= \begin{bmatrix} 1 & 1 \\ 1 & 2 \\ 1 & 3 \end{bmatrix}$, whose columns are independent ([Example 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-rank)), ${\mathbf{X}}^{\top} \mathbf{X}= \begin{bmatrix} 3 & 6 \\ 6 & 14 \end{bmatrix}$ ([Example 1 in Projections and Linear Systems](linear-algebra-projections.llms.md#exm-gram-invertible)) is positive definite.
-> - $\mathbf{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}$ of [Example 38 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#exm-positive-definite) is symmetric but not positive semidefinite, so by part 1 it is not ${\mathbf{B}}^{\top} \mathbf{B}$ for any $\mathbf{B}$.
+> - $\mathbf{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}$ of [Example 4 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#exm-positive-definite) is symmetric but not positive semidefinite, so by part 1 it is not ${\mathbf{B}}^{\top} \mathbf{B}$ for any $\mathbf{B}$.
 
 > **NOTE:**
 >
 > **Theorem 11 (Operations that preserve definiteness)**  
 >
-> 1.  If $\mathbf{C}$ is a $p \times p$ positive definite matrix ([Definition 24 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-positive-definite)) and $\mathbf{A}$ is a $p \times k$ matrix with $k$ linearly independent columns, then the $k \times k$ matrix ${\mathbf{A}}^{\top} \mathbf{C} \mathbf{A}$ is positive definite.
+> 1.  If $\mathbf{C}$ is a $p \times p$ positive definite matrix ([Definition 2 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#def-positive-definite)) and $\mathbf{A}$ is a $p \times k$ matrix with $k$ linearly independent columns, then the $k \times k$ matrix ${\mathbf{A}}^{\top} \mathbf{C} \mathbf{A}$ is positive definite.
 > 2.  If $\mathbf{A}_1$ and $\mathbf{A}_2$ are positive definite $p \times p$ matrices and $\alpha_1, \alpha_2 > 0$, then $\alpha_1 \mathbf{A}_1 + \alpha_2 \mathbf{A}_2$ is positive definite.
 
 > **NOTE:**
@@ -771,7 +771,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 >
 > - With $\mathbf{C} = \mathbf{I}_3$ and $\mathbf{X}$ of [Example 15](#exm-pd-gram), part 1 gives again that ${\mathbf{X}}^{\top} \mathbf{X}$ is positive definite.
 >
-> - With $\alpha_1 = 2$, $\mathbf{A}_1 = \mathbf{I}_2$ ([Example 38 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#exm-positive-definite)), $\alpha_2 = 1$ and
+> - With $\alpha_1 = 2$, $\mathbf{A}_1 = \mathbf{I}_2$ ([Example 4 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#exm-positive-definite)), $\alpha_2 = 1$ and
 >
 >   $$\begin{aligned}
 >   \mathbf{A}_2 &= {\mathbf{X}}^{\top} \mathbf{X}\\
@@ -780,13 +780,13 @@ Last modified: 2026-11-20 11:25:10 (PST)
 >
 >   ([Example 15](#exm-pd-gram)), part 2 gives that $2 \mathbf{I}_2 + {\mathbf{X}}^{\top} \mathbf{X}= \begin{bmatrix} 5 & 6 \\ 6 & 16 \end{bmatrix}$ is positive definite.
 >
-> - An aside beyond part 2: $\mathbf{I}_2 + \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ is positive definite plus positive semidefinite; its quadratic form is $x_1^2 + x_2^2 + (x_1 + x_2)^2 > 0$ for $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, so it is positive definite, in line with its eigenvalues $3$ and $1$ ([Example 29 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#exm-eigenvalue)).
+> - An aside beyond part 2: $\mathbf{I}_2 + \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ is positive definite plus positive semidefinite; its quadratic form is $x_1^2 + x_2^2 + (x_1 + x_2)^2 > 0$ for $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, so it is positive definite, in line with its eigenvalues $3$ and $1$ ([Example 1 in Eigenvalues and Matrix Decompositions](linear-algebra-decompositions.llms.md#exm-eigenvalue)).
 >
 > - Independence is needed in part 1: with $\mathbf{A} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$, whose columns are equal, ${\mathbf{A}}^{\top}\,\mathbf{I}_2\,\mathbf{A} = \begin{bmatrix} 2 & 2 \\ 2 & 2 \end{bmatrix}$, and $(1, -1)$ gives quadratic form $0$.
 
 > **NOTE:**
 >
-> **Theorem 12 (A positive definite matrix is invertible)** Every positive definite matrix ([Definition 24 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-positive-definite)) is invertible ([Definition 6 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-invertible-matrix)).
+> **Theorem 12 (A positive definite matrix is invertible)** Every positive definite matrix ([Definition 2 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#def-positive-definite)) is invertible ([Definition 6 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#def-invertible-matrix)).
 
 > **NOTE:**
 >
@@ -795,7 +795,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > $$\begin{aligned}
 > {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
 > &= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\,(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})
-> && \text{(}\href{linear-algebra-special-matrices.qmd#def-quadratic-form}{\text{Definition~13 in Special Matrices and Decompositions}}\text{)}
+> && \text{(}\href{linear-algebra-special-matrices.qmd#def-quadratic-form}{\text{Definition~13 in Special Matrices, Quadratic Forms and Trace}}\text{)}
 > \\
 > &= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_p
 > && \text{(} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_p \text{)}
@@ -821,11 +821,11 @@ Last modified: 2026-11-20 11:25:10 (PST)
 >
 > which is $0$ only when $x_1 = x_2 = 0$. It is invertible, with ${\mathopen{}\left(\mathbf{A}\right)\mathclose{}}^{-1} = \frac{1}{3}\begin{bmatrix} 2 & -1 \\ -1 & 2 \end{bmatrix}$.
 >
-> The converse fails. $\mathbf{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}$ of [Example 38 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#exm-positive-definite) is not positive definite, yet it is invertible: ${\mathopen{}\left(\mathbf{D}\right)\mathclose{}}^{-1} = \frac{1}{3}\begin{bmatrix} -1 & 2 \\ 2 & -1 \end{bmatrix}$.
+> The converse fails. $\mathbf{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}$ of [Example 4 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#exm-positive-definite) is not positive definite, yet it is invertible: ${\mathopen{}\left(\mathbf{D}\right)\mathclose{}}^{-1} = \frac{1}{3}\begin{bmatrix} -1 & 2 \\ 2 & -1 \end{bmatrix}$.
 
 > **NOTE:**
 >
-> **Theorem 13 (Adding a positive multiple of the identity makes a matrix positive definite)** Let $\mathbf{A}$ be a $p \times p$ positive semidefinite matrix ([Definition 23 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-positive-semidefinite)) and let $\alpha> 0$. Then $\mathbf{A} + \alpha\mathbf{I}_p$ is positive definite ([Definition 24 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-positive-definite)), so it is invertible ([Theorem 12](#thm-pd-invertible)).
+> **Theorem 13 (Adding a positive multiple of the identity makes a matrix positive definite)** Let $\mathbf{A}$ be a $p \times p$ positive semidefinite matrix ([Definition 1 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#def-positive-semidefinite)) and let $\alpha> 0$. Then $\mathbf{A} + \alpha\mathbf{I}_p$ is positive definite ([Definition 2 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#def-positive-definite)), so it is invertible ([Theorem 12](#thm-pd-invertible)).
 
 > **NOTE:**
 >
@@ -845,7 +845,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 
 > **NOTE:**
 >
-> **Example 18 (Repairing a singular matrix)** $\mathbf{B} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$ of [Example 35 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#exm-positive-semidefinite) is positive semidefinite and singular: $\mathbf{B} (1, -1) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2$. With $\alpha= 1$,
+> **Example 18 (Repairing a singular matrix)** $\mathbf{B} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$ of [Example 1 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#exm-positive-semidefinite) is positive semidefinite and singular: $\mathbf{B} (1, -1) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2$. With $\alpha= 1$,
 >
 > $$\mathbf{B} + \mathbf{I}_2 = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix},$$
 >
@@ -853,7 +853,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 
 > **NOTE:**
 >
-> **Corollary 2 (**${\mathbf{X}}^{\top}\mathbf{X}$ is invertible exactly when $\mathbf{X}$ has full column rank) For an $n \times p$ matrix $\mathbf{X}$, the $p \times p$ matrix ${\mathbf{X}}^{\top}\mathbf{X}$ is invertible ([Definition 6 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-invertible-matrix)) exactly when $\operatorname{rank}(\mathbf{X}) = p$ ([Definition 3 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-full-column-rank)).
+> **Corollary 2 (**${\mathbf{X}}^{\top}\mathbf{X}$ is invertible exactly when $\mathbf{X}$ has full column rank) For an $n \times p$ matrix $\mathbf{X}$, the $p \times p$ matrix ${\mathbf{X}}^{\top}\mathbf{X}$ is invertible ([Definition 6 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#def-invertible-matrix)) exactly when $\operatorname{rank}(\mathbf{X}) = p$ ([Definition 3 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-full-column-rank)).
 
 > **NOTE:**
 >
@@ -929,7 +929,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 
 > **NOTE:**
 >
-> **Theorem 14 (Leading blocks of a positive definite matrix are positive definite)** Let $\mathbf{X}$ be a $p \times p$ positive definite matrix ([Definition 24 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-positive-definite)), and for $1 \le k \le p$ let $\mathbf{X}_k$ be its leading $k \times k$ block ([Definition 5](#def-block-matrix)), with entries $x_{ij}$ for $i, j \le k$. Then $\mathbf{X}_k$ is positive definite. Also, every diagonal entry of a positive definite matrix is positive.
+> **Theorem 14 (Leading blocks of a positive definite matrix are positive definite)** Let $\mathbf{X}$ be a $p \times p$ positive definite matrix ([Definition 2 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#def-positive-definite)), and for $1 \le k \le p$ let $\mathbf{X}_k$ be its leading $k \times k$ block ([Definition 5](#def-block-matrix)), with entries $x_{ij}$ for $i, j \le k$. Then $\mathbf{X}_k$ is positive definite. Also, every diagonal entry of a positive definite matrix is positive.
 
 > **NOTE:**
 >
@@ -977,7 +977,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > &> 0
 > \end{aligned}$$
 >
-> ([Definition 33 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-determinant)); a positive determinant alone does not make a matrix positive definite. And positive diagonal entries are not enough: $\mathbf{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}$ of [Example 38 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#exm-positive-definite) has them but is not positive definite.
+> ([Definition 11 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#def-determinant)); a positive determinant alone does not make a matrix positive definite. And positive diagonal entries are not enough: $\mathbf{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}$ of [Example 4 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#exm-positive-definite) has them but is not positive definite.
 
 > **NOTE:**
 >
@@ -985,7 +985,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 >
 > $$\mathbf{X} = \begin{bmatrix} \underbrace{\mathbf{A}}_{k \times k} & \underbrace{\mathbf{B}}_{k \times m} \\ \underbrace{{\mathbf{B}}^{\top}}_{m \times k} & \underbrace{\mathbf{C}}_{m \times m} \end{bmatrix},$$
 >
-> that is, $x_{ij} = a_{ij}$, $x_{i, k+j} = b_{ij}$, $x_{k+i, j} = b_{ji}$ and $x_{k+i, k+j} = c_{ij}$ for indices in range. $\mathbf{X}$ is symmetric ([Definition 3 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-symmetric-matrix)):
+> that is, $x_{ij} = a_{ij}$, $x_{i, k+j} = b_{ij}$, $x_{k+i, j} = b_{ji}$ and $x_{k+i, k+j} = c_{ij}$ for indices in range. $\mathbf{X}$ is symmetric ([Definition 3 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#def-symmetric-matrix)):
 >
 > $$\begin{aligned}
 > x_{k+i, j} &= b_{ji} \\
@@ -1043,7 +1043,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > && \text{(combine like terms)}
 > \end{aligned}$$
 >
-> **Completing the square.** Write $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}} \stackrel{\text{def}}{=}\mathbf{A}^{-1} \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}$ and $\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}} = \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ ([Theorem 1 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#thm-matmul-assoc), 2, [Theorem 4 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#thm-identity)); $\mathbf{A}^{-1}$ is symmetric ([Corollary 1 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#cor-inverse-symmetric)). Then
+> **Completing the square.** Write $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}} \stackrel{\text{def}}{=}\mathbf{A}^{-1} \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}$ and $\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}} = \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ ([Theorem 1 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#thm-matmul-assoc), 2, [Theorem 4 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#thm-identity)); $\mathbf{A}^{-1}$ is symmetric ([Corollary 1 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#cor-inverse-symmetric)). Then
 >
 > $$\begin{aligned}
 > {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}
@@ -1066,7 +1066,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 > && \text{(} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}} = \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \text{, twice)}
 > \\
 > &= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + 2\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top} \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} + {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}}^{\top}\,{\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}},
-> && \text{(} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}}^{\top} = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}}^{\top} {\mathbf{B}}^{\top} \mathbf{A}^{-1} \text{, }\href{linear-algebra-matrix-multiplication.qmd#thm-transpose-product}{\text{Theorem~6 in Matrix Multiplication}}\text{, }\href{linear-algebra-special-matrices.qmd#cor-inverse-symmetric}{\text{Corollary~1 in Special Matrices and Decompositions}}\text{)}
+> && \text{(} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}}^{\top} = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}}^{\top} {\mathbf{B}}^{\top} \mathbf{A}^{-1} \text{, }\href{linear-algebra-matrix-multiplication.qmd#thm-transpose-product}{\text{Theorem~6 in Matrix Multiplication}}\text{, }\href{linear-algebra-special-matrices.qmd#cor-inverse-symmetric}{\text{Corollary~1 in Special Matrices, Quadratic Forms and Trace}}\text{)}
 > \end{aligned}$$
 >
 > and
@@ -1135,31 +1135,31 @@ Last modified: 2026-11-20 11:25:10 (PST)
 
 > **NOTE:**
 >
-> **Theorem 16 (Schur complement test)** Let $\mathbf{X} = \begin{bmatrix} \mathbf{A} & \mathbf{B} \\ {\mathbf{B}}^{\top} & \mathbf{C} \end{bmatrix}$ be as in [Theorem 15](#thm-block-quadratic). Then $\mathbf{X}$ is positive definite ([Definition 24 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-positive-definite)) exactly when $\mathbf{A}$ is positive definite and its Schur complement $\mathbf{S}$ ([Definition 7](#def-schur-complement)) is positive definite.
+> **Theorem 16 (Schur complement test)** Let $\mathbf{X} = \begin{bmatrix} \mathbf{A} & \mathbf{B} \\ {\mathbf{B}}^{\top} & \mathbf{C} \end{bmatrix}$ be as in [Theorem 15](#thm-block-quadratic). Then $\mathbf{X}$ is positive definite ([Definition 2 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#def-positive-definite)) exactly when $\mathbf{A}$ is positive definite and its Schur complement $\mathbf{S}$ ([Definition 7](#def-schur-complement)) is positive definite.
 
 > **NOTE:**
 >
-> *Proof*. **If.** $\mathbf{A}$ is positive definite, so invertible ([Theorem 22 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#thm-pd-inverse)), and $\mathbf{S}$ is defined. $\mathbf{X}$ is symmetric. Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}) \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + \mathbf{A}^{-1} \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$. By [Theorem 15](#thm-block-quadratic), ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top} \mathbf{X} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$, and both terms are at least $0$. If $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, the second term is positive. If $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, then $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$, so the first term is positive. Either way ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top} \mathbf{X} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} > 0$.
+> *Proof*. **If.** $\mathbf{A}$ is positive definite, so invertible ([Theorem 4 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#thm-pd-inverse)), and $\mathbf{S}$ is defined. $\mathbf{X}$ is symmetric. Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}) \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + \mathbf{A}^{-1} \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$. By [Theorem 15](#thm-block-quadratic), ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top} \mathbf{X} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$, and both terms are at least $0$. If $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, the second term is positive. If $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, then $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$, so the first term is positive. Either way ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top} \mathbf{X} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} > 0$.
 >
-> **Only if.** $\mathbf{A}$ is the top-left $k \times k$ block of $\mathbf{X}$, so it is positive definite ([Theorem 14](#thm-pd-submatrix)), and invertible ([Theorem 22 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#thm-pd-inverse)). $\mathbf{S}$ is symmetric:
+> **Only if.** $\mathbf{A}$ is the top-left $k \times k$ block of $\mathbf{X}$, so it is positive definite ([Theorem 14](#thm-pd-submatrix)), and invertible ([Theorem 4 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#thm-pd-inverse)). $\mathbf{S}$ is symmetric:
 >
 > $$\begin{aligned}
 > {({\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B})}^{\top} &= {\mathbf{B}}^{\top}\,{(\mathbf{A}^{-1})}^{\top}\,\mathbf{B} \\
 > &= {\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B}
 > \end{aligned}$$
 >
-> ([Theorem 6 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#thm-transpose-product), [Definition 6 in Matrices](linear-algebra-matrices.llms.md#def-matrix-transpose) for ${({\mathbf{B}}^{\top})}^{\top} = \mathbf{B}$, [Corollary 1 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#cor-inverse-symmetric)), and $\mathbf{C}$ is symmetric, so $\mathbf{S} = \mathbf{C} - {\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B}$ is symmetric (the transpose of a difference is the difference of the transposes, entry by entry, [Definition 6 in Matrices](linear-algebra-matrices.llms.md#def-matrix-transpose)). For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, take $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = -\mathbf{A}^{-1} \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}) \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$; then ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top} \mathbf{X} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} > 0$ ([Theorem 15](#thm-block-quadratic)).
+> ([Theorem 6 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#thm-transpose-product), [Definition 6 in Matrices](linear-algebra-matrices.llms.md#def-matrix-transpose) for ${({\mathbf{B}}^{\top})}^{\top} = \mathbf{B}$, [Corollary 1 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#cor-inverse-symmetric)), and $\mathbf{C}$ is symmetric, so $\mathbf{S} = \mathbf{C} - {\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B}$ is symmetric (the transpose of a difference is the difference of the transposes, entry by entry, [Definition 6 in Matrices](linear-algebra-matrices.llms.md#def-matrix-transpose)). For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, take $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = -\mathbf{A}^{-1} \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}) \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$; then ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top} \mathbf{X} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} > 0$ ([Theorem 15](#thm-block-quadratic)).
 
 > **NOTE:**
 >
 > **Example 24 (Testing** $2 \times 2$ matrices) A symmetric $\begin{bmatrix} a & b \\ b & c \end{bmatrix}$ is positive definite exactly when $a > 0$ and $c - \tfrac{b^2}{a} > 0$, that is, $a > 0$ and $ac > b^2$ (a $1 \times 1$ matrix $[s]$ is positive definite exactly when $s > 0$, since ${x}^{\top} s x = s x^2$).
 >
 > - $\begin{bmatrix} 5 & 4 \\ 4 & 5 \end{bmatrix}$: $5 > 0$ and $\tfrac{9}{5} > 0$ ([Example 23](#exm-schur-complement)), so it is positive definite.
-> - $\mathbf{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}$: $1 > 0$ but $\mathbf{S} = -3$, so it is not, as [Example 38 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#exm-positive-definite) found directly.
+> - $\mathbf{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}$: $1 > 0$ but $\mathbf{S} = -3$, so it is not, as [Example 4 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#exm-positive-definite) found directly.
 
 > **NOTE:**
 >
-> **Theorem 17 (The inverse of a positive definite block matrix)** Let $\mathbf{X} = \begin{bmatrix} \mathbf{A} & \mathbf{B} \\ {\mathbf{B}}^{\top} & \mathbf{C} \end{bmatrix}$ be as in [Theorem 15](#thm-block-quadratic), with $\mathbf{X}$ [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite). Then $\mathbf{X}$ is [invertible](linear-algebra-special-matrices.llms.md#def-invertible-matrix), and with the [Schur complement](#def-schur-complement) $\mathbf{S}$ of $\mathbf{A}$, its [inverse](linear-algebra-special-matrices.llms.md#def-matrix-inverse) is the following, where $\mathbf{P}$ is the block of the first $k$ rows and columns of $\mathbf{X}^{-1}$:
+> **Theorem 17 (The inverse of a positive definite block matrix)** Let $\mathbf{X} = \begin{bmatrix} \mathbf{A} & \mathbf{B} \\ {\mathbf{B}}^{\top} & \mathbf{C} \end{bmatrix}$ be as in [Theorem 15](#thm-block-quadratic), with $\mathbf{X}$ [positive definite](linear-algebra-definite-matrices.llms.md#def-positive-definite). Then $\mathbf{X}$ is [invertible](linear-algebra-special-matrices.llms.md#def-invertible-matrix), and with the [Schur complement](#def-schur-complement) $\mathbf{S}$ of $\mathbf{A}$, its [inverse](linear-algebra-special-matrices.llms.md#def-matrix-inverse) is the following, where $\mathbf{P}$ is the block of the first $k$ rows and columns of $\mathbf{X}^{-1}$:
 >
 > $$\mathbf{X}^{-1}
 > = \begin{bmatrix}
@@ -1169,7 +1169,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 
 > **NOTE:**
 >
-> *Proof*. $\mathbf{X}$ is invertible, because it is [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite). By the [Schur complement test](#thm-schur-test), $\mathbf{A}$ and $\mathbf{S}$ are positive definite as well, and [so both are invertible](linear-algebra-special-matrices.llms.md#thm-pd-inverse). Let $\mathbf{W} = \begin{bmatrix} -\mathbf{A}^{-1}\mathbf{B} \\ \mathbf{I}_m \end{bmatrix}$. Each entry of $\mathbf{X}\mathbf{W}$ adds one group of $k$ summands to one group of $m$ summands, so $\mathbf{X}\mathbf{W}$ can be computed one block row at a time:
+> *Proof*. $\mathbf{X}$ is invertible, because it is [positive definite](linear-algebra-definite-matrices.llms.md#def-positive-definite). By the [Schur complement test](#thm-schur-test), $\mathbf{A}$ and $\mathbf{S}$ are positive definite as well, and [so both are invertible](linear-algebra-definite-matrices.llms.md#thm-pd-inverse). Let $\mathbf{W} = \begin{bmatrix} -\mathbf{A}^{-1}\mathbf{B} \\ \mathbf{I}_m \end{bmatrix}$. Each entry of $\mathbf{X}\mathbf{W}$ adds one group of $k$ summands to one group of $m$ summands, so $\mathbf{X}\mathbf{W}$ can be computed one block row at a time:
 >
 > $$\begin{aligned}
 > \mathbf{X}\mathbf{W}
@@ -1195,7 +1195,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 >
 > **Example 25 (The bottom-right entry of the inverse of a** $2 \times 2$ matrix)  
 >
-> Let $\mathbf{X} = \begin{bmatrix} 5 & 4 \\ 4 & 5 \end{bmatrix}$ with $\mathbf{A} = [5]$, whose [Schur complement](#def-schur-complement) is $\mathbf{S} = [\tfrac{9}{5}]$ ([Example 23](#exm-schur-complement)). It is [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite) ([Example 24](#exm-schur-test)), so by [Theorem 17](#thm-block-inverse):
+> Let $\mathbf{X} = \begin{bmatrix} 5 & 4 \\ 4 & 5 \end{bmatrix}$ with $\mathbf{A} = [5]$, whose [Schur complement](#def-schur-complement) is $\mathbf{S} = [\tfrac{9}{5}]$ ([Example 23](#exm-schur-complement)). It is [positive definite](linear-algebra-definite-matrices.llms.md#def-positive-definite) ([Example 24](#exm-schur-test)), so by [Theorem 17](#thm-block-inverse):
 >
 > $$\begin{aligned}
 > \mathbf{T}
@@ -1220,7 +1220,7 @@ Last modified: 2026-11-20 11:25:10 (PST)
 
 > **NOTE:**
 >
-> **Theorem 18 (Cholesky factorization)** A $p \times p$ matrix $\mathbf{A}$ is positive definite ([Definition 24 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-positive-definite)) exactly when $\mathbf{A} = \mathbf{L} {\mathbf{L}}^{\top}$ for some lower triangular $\mathbf{L}$ ([Definition 8 in Projections and Linear Systems](linear-algebra-projections.llms.md#def-lower-triangular-matrix)) with positive diagonal entries. For a positive definite $\mathbf{A}$ that $\mathbf{L}$ is unique; it is the **Cholesky factor** [\[8\]](#ref-wikipedia_cholesky_decomposition) of $\mathbf{A}$.
+> **Theorem 18 (Cholesky factorization)** A $p \times p$ matrix $\mathbf{A}$ is positive definite ([Definition 2 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#def-positive-definite)) exactly when $\mathbf{A} = \mathbf{L} {\mathbf{L}}^{\top}$ for some lower triangular $\mathbf{L}$ ([Definition 8 in Projections and Linear Systems](linear-algebra-projections.llms.md#def-lower-triangular-matrix)) with positive diagonal entries. For a positive definite $\mathbf{A}$ that $\mathbf{L}$ is unique; it is the **Cholesky factor** [\[8\]](#ref-wikipedia_cholesky_decomposition) of $\mathbf{A}$.
 
 > **NOTE:**
 >
