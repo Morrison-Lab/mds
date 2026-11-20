@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-19 15:36:46 (PST)
+Last modified: 2026-11-19 18:13:07 (PST)
 
 # 1 Special Matrices
 
@@ -656,7 +656,160 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> **Definition 11 (Quadratic form)** A **quadratic form** [\[7\]](#ref-wikipedia_quadratic_form) is a mathematical expression of the structure
+> **Definition 11 (Bilinear form)** The **bilinear form** of a $p \times p$ [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{A}$ [\[7\]](#ref-wikipedia_bilinear_form) is the function ${B_{\mathbf{A}}}$ that [maps](https://morrison-lab.github.io/mcs/functions.html#def-function) each pair of vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p$ to the [scalar](linear-algebra-vectors.llms.md#def-scalar)
+>
+> $${{B_{\mathbf{A}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right)\mathclose{}} \stackrel{\text{def}}{=}{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}.$$
+
+> **NOTE:**
+>
+> **Example 17 (A bilinear form that depends on the order of its vectors)**  
+>
+> Let
+>
+> $$\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix}, \quad \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix} 1 \\ 2 \end{bmatrix}, \quad \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= \begin{bmatrix} 3 \\ -1 \end{bmatrix}.$$
+>
+> The [bilinear form](#def-bilinear-form) of $\mathbf{A}$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ is
+>
+> $$\begin{aligned}
+> {{B_{\mathbf{A}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right)\mathclose{}}
+> &= \begin{bmatrix} 1 & 2 \end{bmatrix}
+> \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix}
+> \begin{bmatrix} 3 \\ -1 \end{bmatrix}
+> && \text{(}\href{#def-bilinear-form}{\text{Definition~11}}\text{)}
+> \\
+> &= \begin{bmatrix} 1 & 2 \end{bmatrix}
+> \begin{bmatrix} 1 \cdot 3 + 2 \cdot(-1) \\ 0 \cdot 3 + 3 \cdot(-1) \end{bmatrix}
+> && \text{(multiply the matrix by } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\text{)}
+> \\
+> &= \begin{bmatrix} 1 & 2 \end{bmatrix}
+> \begin{bmatrix} 1 \\ -3 \end{bmatrix}
+> && \text{(multiply and add)}
+> \\
+> &= 1 \cdot 1 + 2 \cdot(-3)
+> && \text{(multiply the row by the column)}
+> \\
+> &= -5.
+> && \text{(multiply and add)}
+> \end{aligned}$$
+>
+> With the vectors swapped, it is
+>
+> $$\begin{aligned}
+> {{B_{\mathbf{A}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right)\mathclose{}}
+> &= \begin{bmatrix} 3 & -1 \end{bmatrix}
+> \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix}
+> \begin{bmatrix} 1 \\ 2 \end{bmatrix}
+> && \text{(}\href{#def-bilinear-form}{\text{Definition~11}}\text{)}
+> \\
+> &= \begin{bmatrix} 3 & -1 \end{bmatrix}
+> \begin{bmatrix} 1 \cdot 1 + 2 \cdot 2 \\ 0 \cdot 1 + 3 \cdot 2 \end{bmatrix}
+> && \text{(multiply the matrix by } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\text{)}
+> \\
+> &= \begin{bmatrix} 3 & -1 \end{bmatrix}
+> \begin{bmatrix} 5 \\ 6 \end{bmatrix}
+> && \text{(multiply and add)}
+> \\
+> &= 3 \cdot 5 + (-1) \cdot 6
+> && \text{(multiply the row by the column)}
+> \\
+> &= 9.
+> && \text{(multiply and add)}
+> \end{aligned}$$
+>
+> The two orders give different values.
+
+> **NOTE:**
+>
+> **Definition 12 (Symmetric bilinear form)** A **symmetric bilinear form** [\[7\]](#ref-wikipedia_bilinear_form) is a [bilinear form](#def-bilinear-form) ${B_{\mathbf{A}}}$ whose [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{A}$ is [symmetric](#def-symmetric-matrix):
+>
+> $${\mathbf{A}}^{\top} = \mathbf{A}.$$
+
+> **NOTE:**
+>
+> **Theorem 8 (A symmetric bilinear form does not depend on the order of its vectors)** If $\mathbf{A}$ is a $p \times p$ [symmetric matrix](#def-symmetric-matrix), then its [bilinear form](#def-bilinear-form) is the same with its vectors swapped, [for all](https://morrison-lab.github.io/mcs/proof-writing.html#def-universal-quantifier) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p$:
+>
+> $${{B_{\mathbf{A}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right)\mathclose{}} = {{B_{\mathbf{A}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right)\mathclose{}}.$$
+
+> **NOTE:**
+>
+> *Proof*. Swapping the vectors relies on the fact that [a](linear-algebra-matrices.llms.md#thm-scalar-transpose) $1 \times 1$ product equals its own transpose, which justifies the step labeled with that fact:
+>
+> $$\begin{aligned}
+> {{B_{\mathbf{A}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right)\mathclose{}}
+> &= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}^{\top}\, \mathbf{A}\, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
+> && \text{(}\href{#def-bilinear-form}{\text{Definition~11}}\text{)}
+> \\
+> &= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\, {\mathbf{A}}^{\top}\, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}
+> && \text{(a } 1 \times 1 \text{ product equals its own transpose)}
+> \\
+> &= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\, \mathbf{A}\, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}
+> && \text{(}\href{#def-symmetric-matrix}{\text{Definition~3}}\text{)}
+> \\
+> &= {{B_{\mathbf{A}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right)\mathclose{}}.
+> && \text{(}\href{#def-bilinear-form}{\text{Definition~11}}\text{)}
+> \end{aligned}$$
+
+> **NOTE:**
+>
+> **Example 18 (A symmetric bilinear form)**  
+>
+> Let
+>
+> $$\mathbf{S} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}, \quad \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix} 1 \\ 2 \end{bmatrix}, \quad \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= \begin{bmatrix} 3 \\ -1 \end{bmatrix}.$$
+>
+> The [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{S}$ is [symmetric](#def-symmetric-matrix), because its two [off-diagonal entries](linear-algebra-matrices.llms.md#def-off-diagonal-entry) are both $2$, so its [bilinear form](#def-bilinear-form) is a [symmetric bilinear form](#def-symmetric-bilinear-form). At $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$, that form is
+>
+> $$\begin{aligned}
+> {{B_{\mathbf{S}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right)\mathclose{}}
+> &= \begin{bmatrix} 1 & 2 \end{bmatrix}
+> \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}
+> \begin{bmatrix} 3 \\ -1 \end{bmatrix}
+> && \text{(}\href{#def-bilinear-form}{\text{Definition~11}}\text{)}
+> \\
+> &= \begin{bmatrix} 1 & 2 \end{bmatrix}
+> \begin{bmatrix} 1 \cdot 3 + 2 \cdot(-1) \\ 2 \cdot 3 + 1 \cdot(-1) \end{bmatrix}
+> && \text{(multiply the matrix by } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\text{)}
+> \\
+> &= \begin{bmatrix} 1 & 2 \end{bmatrix}
+> \begin{bmatrix} 1 \\ 5 \end{bmatrix}
+> && \text{(multiply and add)}
+> \\
+> &= 1 \cdot 1 + 2 \cdot 5
+> && \text{(multiply the row by the column)}
+> \\
+> &= 11.
+> && \text{(multiply and add)}
+> \end{aligned}$$
+>
+> With the vectors swapped, it is
+>
+> $$\begin{aligned}
+> {{B_{\mathbf{S}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right)\mathclose{}}
+> &= \begin{bmatrix} 3 & -1 \end{bmatrix}
+> \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}
+> \begin{bmatrix} 1 \\ 2 \end{bmatrix}
+> && \text{(}\href{#def-bilinear-form}{\text{Definition~11}}\text{)}
+> \\
+> &= \begin{bmatrix} 3 & -1 \end{bmatrix}
+> \begin{bmatrix} 1 \cdot 1 + 2 \cdot 2 \\ 2 \cdot 1 + 1 \cdot 2 \end{bmatrix}
+> && \text{(multiply the matrix by } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\text{)}
+> \\
+> &= \begin{bmatrix} 3 & -1 \end{bmatrix}
+> \begin{bmatrix} 5 \\ 4 \end{bmatrix}
+> && \text{(multiply and add)}
+> \\
+> &= 3 \cdot 5 + (-1) \cdot 4
+> && \text{(multiply the row by the column)}
+> \\
+> &= 11,
+> && \text{(multiply and add)}
+> \end{aligned}$$
+>
+> the same value, as [Theorem 8](#thm-symmetric-bilinear-form-swap) says it must be. By contrast, $\mathbf{A}$ in [Example 17](#exm-bilinear-form) is not symmetric, so its bilinear form is not a symmetric bilinear form, and swapping the vectors changed its value from $-5$ to $9$.
+
+> **NOTE:**
+>
+> **Definition 13 (Quadratic form)** A **quadratic form** [\[8\]](#ref-wikipedia_quadratic_form) is a mathematical expression of the structure
 >
 > $${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\, \mathbf{S}\, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$$
 >
@@ -680,7 +833,15 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> **Theorem 8 (A quadratic form is additive in its matrix)** If $\mathbf{A}$ and $\mathbf{B}$ are $p \times p$ matrices, $c$ is a number and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is a vector of length $p$, then
+> *Remark 8* (A quadratic form is a bilinear form with equal vectors).
+>
+> Setting $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ in the [bilinear form](#def-bilinear-form) of $\mathbf{S}$ gives the [quadratic form](#def-quadratic-form) of $\mathbf{S}$:
+>
+> $${{B_{\mathbf{S}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right)\mathclose{}} = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}.$$
+
+> **NOTE:**
+>
+> **Theorem 9 (A quadratic form is additive in its matrix)** If $\mathbf{A}$ and $\mathbf{B}$ are $p \times p$ matrices, $c$ is a number and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is a vector of length $p$, then
 >
 > $$\begin{aligned}
 > {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}(\mathbf{A} + \mathbf{B})\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}&= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \\
@@ -706,7 +867,7 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> **Example 17 (Combining two quadratic forms into one)** Take $\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix}$, $\mathbf{B} = \mathbf{I}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 2)$. Then
+> **Example 19 (Combining two quadratic forms into one)** Take $\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix}$, $\mathbf{B} = \mathbf{I}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 2)$. Then
 >
 > $$\begin{aligned}
 > {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} &= 1 + 4 + 12 = 17, \\
@@ -721,13 +882,13 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> **Definition 12 (Symmetric part of a square matrix)** The **symmetric part** of a $p \times p$ matrix $\mathbf{S}$ is
+> **Definition 14 (Symmetric part of a square matrix)** The **symmetric part** of a $p \times p$ matrix $\mathbf{S}$ is
 >
 > $$\frac{1}{2}\mathopen{}\left(\mathbf{S} + {\mathbf{S}}^{\top}\right)\mathclose{}$$
 
 > **NOTE:**
 >
-> **Example 18 (The symmetric part of a** $2 \times 2$ matrix) For $\mathbf{S} = \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix}$, the symmetric part is
+> **Example 20 (The symmetric part of a** $2 \times 2$ matrix) For $\mathbf{S} = \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix}$, the symmetric part is
 >
 > $$\begin{aligned}
 > \frac{1}{2}\mathopen{}\left(
@@ -742,13 +903,13 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> **Theorem 9 (A quadratic form depends only on the symmetric part)** If $\mathbf{S}$ is a $p \times p$ matrix and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is a vector of length $p$, then
+> **Theorem 10 (A quadratic form depends only on the symmetric part)** If $\mathbf{S}$ is a $p \times p$ matrix and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is a vector of length $p$, then
 >
 > $${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
 > =
 > {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\mathopen{}\left(\frac{1}{2}(\mathbf{S}+{\mathbf{S}}^{\top})\right)\mathclose{}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}.$$
 >
-> So the value of a quadratic form depends only on the symmetric part ([Definition 12](#def-symmetric-part)) of $\mathbf{S}$.
+> So the value of a quadratic form depends only on the symmetric part ([Definition 14](#def-symmetric-part)) of $\mathbf{S}$.
 
 > **NOTE:**
 >
@@ -784,7 +945,7 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> **Example 19 (Replacing a matrix by its symmetric part)** With $\mathbf{S} = \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix}$ from [Example 18](#exm-symmetric-part) and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 1)$:
+> **Example 21 (Replacing a matrix by its symmetric part)** With $\mathbf{S} = \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix}$ from [Example 20](#exm-symmetric-part) and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 1)$:
 >
 > $$\begin{aligned}
 > {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
@@ -801,13 +962,13 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> **Definition 13 (Trace)** The **trace** [\[8\]](#ref-wikipedia_trace_linear_algebra) of a $p \times p$ matrix $\mathbf{M}$ is the sum of its diagonal entries:
+> **Definition 15 (Trace)** The **trace** [\[9\]](#ref-wikipedia_trace_linear_algebra) of a $p \times p$ matrix $\mathbf{M}$ is the sum of its diagonal entries:
 >
 > $$\operatorname{tr}(\mathbf{M}) \stackrel{\text{def}}{=}\sum_{i=1}^pM_{ii}$$
 
 > **NOTE:**
 >
-> **Example 20 (The trace of a** $2 \times 2$ matrix) $$\begin{aligned}
+> **Example 22 (The trace of a** $2 \times 2$ matrix) $$\begin{aligned}
 > {\operatorname{tr}\mathopen{}\left(\begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}\right)\mathclose{}}
 > &= 1 + 4 \\
 > &= 5
@@ -815,7 +976,7 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> **Theorem 10 (The trace of a product does not depend on the order)** For an $m \times n$ matrix $\mathbf{A}$ and an $n \times m$ matrix $\mathbf{B}$:
+> **Theorem 11 (The trace of a product does not depend on the order)** For an $m \times n$ matrix $\mathbf{A}$ and an $n \times m$ matrix $\mathbf{B}$:
 >
 > $${\operatorname{tr}\mathopen{}\left(\underbrace{\mathbf{A}\mathbf{B}}_{m \times m}\right)\mathclose{}}
 > = {\operatorname{tr}\mathopen{}\left(\underbrace{\mathbf{B}\mathbf{A}}_{n \times n}\right)\mathclose{}}$$
@@ -845,7 +1006,7 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> **Example 21 (Traces of the two products of a** $2 \times 3$ and a $3 \times 2$ matrix) Let
+> **Example 23 (Traces of the two products of a** $2 \times 3$ and a $3 \times 2$ matrix) Let
 >
 > $$\mathbf{A} = \begin{bmatrix} 1 & 2 & 0 \\ 0 & 1 & 3 \end{bmatrix}
 > \qquad
@@ -901,7 +1062,7 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> *Remark 8* (Moving a factor of a triple product). Let $\mathbf{A}$ be $m \times n$, $\mathbf{B}$ be $n \times k$, and $\mathbf{C}$ be $k \times m$, so that $\mathbf{A}\mathbf{B}$ is $m \times k$ and $\mathbf{A}\mathbf{B}\mathbf{C}$ is square. Applying [Theorem 10](#thm-trace-cyclic) to the $m \times k$ matrix $\mathbf{A}\mathbf{B}$ and the $k \times m$ matrix $\mathbf{C}$ moves the last factor of the triple product to the front [\[6, Ch. 1\]](#ref-banerjee2014linear), Theorem 1.5 and eq. 1.17, p. 19:
+> *Remark 9* (Moving a factor of a triple product). Let $\mathbf{A}$ be $m \times n$, $\mathbf{B}$ be $n \times k$, and $\mathbf{C}$ be $k \times m$, so that $\mathbf{A}\mathbf{B}$ is $m \times k$ and $\mathbf{A}\mathbf{B}\mathbf{C}$ is square. Applying [Theorem 11](#thm-trace-cyclic) to the $m \times k$ matrix $\mathbf{A}\mathbf{B}$ and the $k \times m$ matrix $\mathbf{C}$ moves the last factor of the triple product to the front [\[6, Ch. 1\]](#ref-banerjee2014linear), Theorem 1.5 and eq. 1.17, p. 19:
 >
 > $$\begin{aligned}
 > \operatorname{tr}(\mathbf{A}\mathbf{B}\mathbf{C})
@@ -959,7 +1120,7 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> **Theorem 11 (The trace of an outer product is a dot product)** For two vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ with the same number $n$ of entries, the [trace](#def-trace) of the [outer product](linear-algebra-inner-products.llms.md#def-outer-product) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}$ and the [dot product](linear-algebra-vectors.llms.md#def-dot-product) ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ are the same number:
+> **Theorem 12 (The trace of an outer product is a dot product)** For two vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ with the same number $n$ of entries, the [trace](#def-trace) of the [outer product](linear-algebra-inner-products.llms.md#def-outer-product) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}$ and the [dot product](linear-algebra-vectors.llms.md#def-dot-product) ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ are the same number:
 >
 > $${\operatorname{tr}\mathopen{}\left(\underbrace{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}}_{n \times n}\right)\mathclose{}}
 > = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$$
@@ -980,7 +1141,7 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> **Example 22 (The trace of an outer product)** For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}} = (1, 2)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = (3, 4)$, [the remark on outer and dot products](linear-algebra-inner-products.llms.md#rem-outer-vs-dot-product) found the [outer product](linear-algebra-inner-products.llms.md#def-outer-product) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}}^{\top}$ and the [dot product](linear-algebra-vectors.llms.md#def-dot-product) ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = 11$. The [trace](#def-trace) of the outer product is
+> **Example 24 (The trace of an outer product)** For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}} = (1, 2)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = (3, 4)$, [the remark on outer and dot products](linear-algebra-inner-products.llms.md#rem-outer-vs-dot-product) found the [outer product](linear-algebra-inner-products.llms.md#def-outer-product) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}}^{\top}$ and the [dot product](linear-algebra-vectors.llms.md#def-dot-product) ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = 11$. The [trace](#def-trace) of the outer product is
 >
 > $$\begin{aligned}
 > {\operatorname{tr}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}}^{\top}\right)\mathclose{}}
@@ -994,7 +1155,7 @@ Some special matrices appeared earlier:
 > && \text{(add)}
 > \end{aligned}$$
 >
-> The trace and the dot product are the same number, as [Theorem 11](#thm-outer-product-trace) says.
+> The trace and the dot product are the same number, as [Theorem 12](#thm-outer-product-trace) says.
 
 > **NOTE:**
 >
@@ -1016,11 +1177,11 @@ Some special matrices appeared earlier:
 > && \text{(the Euclidean norm from the dot product, squared)}
 > \end{aligned}$$
 >
-> The second step is [Theorem 11](#thm-outer-product-trace), with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ in place of both $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$. The third step takes the [square](algebra-basics.llms.md#def-square) of both sides of [the formula for the Euclidean norm from the dot product](linear-algebra-vectors.llms.md#thm-norm-dot-product).
+> The second step is [Theorem 12](#thm-outer-product-trace), with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ in place of both $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$. The third step takes the [square](algebra-basics.llms.md#def-square) of both sides of [the formula for the Euclidean norm from the dot product](linear-algebra-vectors.llms.md#thm-norm-dot-product).
 
 > **NOTE:**
 >
-> **Example 23 (The trace of a self outer product)** For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 2)$, [the example of a self outer product](linear-algebra-inner-products.llms.md#exm-self-outer-product) found $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} = \begin{bmatrix} 1 & 2 \\ 2 & 4 \end{bmatrix}$. Its [trace](#def-trace) and the squared [Euclidean norm](linear-algebra-vectors.llms.md#def-euclidean-norm) of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ are
+> **Example 25 (The trace of a self outer product)** For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 2)$, [the example of a self outer product](linear-algebra-inner-products.llms.md#exm-self-outer-product) found $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} = \begin{bmatrix} 1 & 2 \\ 2 & 4 \end{bmatrix}$. Its [trace](#def-trace) and the squared [Euclidean norm](linear-algebra-vectors.llms.md#def-euclidean-norm) of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ are
 >
 > $$\begin{aligned}
 > {\operatorname{tr}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\right)\mathclose{}}
@@ -1041,7 +1202,7 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> **Definition 14 (Matrix inner product)** The **inner product** of two $n \times p$ matrices $\mathbf{A}$ and $\mathbf{B}$ is
+> **Definition 16 (Matrix inner product)** The **inner product** of two $n \times p$ matrices $\mathbf{A}$ and $\mathbf{B}$ is
 >
 > $${\mathopen{}\left\langle \mathbf{A}, \mathbf{B}\right\rangle\mathclose{}}
 > \stackrel{\text{def}}{=}
@@ -1051,7 +1212,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 
 > **NOTE:**
 >
-> **Theorem 12 (The matrix inner product multiplies matching entries)** For two $n \times p$ matrices $\mathbf{A}$ and $\mathbf{B}$:
+> **Theorem 13 (The matrix inner product multiplies matching entries)** For two $n \times p$ matrices $\mathbf{A}$ and $\mathbf{B}$:
 >
 > $${\mathopen{}\left\langle \mathbf{A}, \mathbf{B}\right\rangle\mathclose{}} = \sum_{i=1}^n\sum_{j=1}^pa_{ij}\, b_{ij}$$
 
@@ -1077,13 +1238,13 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 
 > **NOTE:**
 >
-> **Example 24 (The inner product of two** $2 \times 2$ matrices) Let
+> **Example 26 (The inner product of two** $2 \times 2$ matrices) Let
 >
 > $$\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}
 > \qquad
 > \mathbf{B} = \begin{bmatrix} 0 & 1 \\ -1 & 2 \end{bmatrix}$$
 >
-> From [Definition 14](#def-matrix-inner-product):
+> From [Definition 16](#def-matrix-inner-product):
 >
 > $$\begin{aligned}
 > {\mathopen{}\left\langle \mathbf{A}, \mathbf{B}\right\rangle\mathclose{}}
@@ -1112,7 +1273,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 > && \text{(add)}
 > \end{aligned}$$
 >
-> From [Theorem 12](#thm-matrix-inner-product-entries):
+> From [Theorem 13](#thm-matrix-inner-product-entries):
 >
 > $$\begin{aligned}
 > {\mathopen{}\left\langle \mathbf{A}, \mathbf{B}\right\rangle\mathclose{}}
@@ -1128,9 +1289,9 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 
 > **NOTE:**
 >
-> *Remark 9* (The matrix inner product as a dot product). [Theorem 12](#thm-matrix-inner-product-entries) says that the matrix inner product is the dot product ([Definition 10 in Vectors](linear-algebra-vectors.llms.md#def-dot-product)) of the two matrices’ entries, each listed as one vector of length $np$, with both matrices’ entries listed in the same order.
+> *Remark 10* (The matrix inner product as a dot product). [Theorem 13](#thm-matrix-inner-product-entries) says that the matrix inner product is the dot product ([Definition 10 in Vectors](linear-algebra-vectors.llms.md#def-dot-product)) of the two matrices’ entries, each listed as one vector of length $np$, with both matrices’ entries listed in the same order.
 >
-> For example, listing the entries of $\mathbf{A}$ and $\mathbf{B}$ in [Example 24](#exm-matrix-inner-product) row by row gives $(1, 2, 3, 4)$ and $(0, 1, -1, 2)$, and
+> For example, listing the entries of $\mathbf{A}$ and $\mathbf{B}$ in [Example 26](#exm-matrix-inner-product) row by row gives $(1, 2, 3, 4)$ and $(0, 1, -1, 2)$, and
 >
 > $$\begin{aligned}
 > (1, 2, 3, 4) \cdot (0, 1, -1, 2) &= 7 \\
@@ -1139,15 +1300,15 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 
 > **NOTE:**
 >
-> **Definition 15 (Frobenius norm)** The **Frobenius norm** [\[9\]](#ref-wikipedia_frobenius_norm) of an $n \times p$ matrix $\mathbf{A}$ is
+> **Definition 17 (Frobenius norm)** The **Frobenius norm** [\[10\]](#ref-wikipedia_frobenius_norm) of an $n \times p$ matrix $\mathbf{A}$ is
 >
 > $$\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}_F \stackrel{\text{def}}{=}\sqrt{{\mathopen{}\left\langle \mathbf{A}, \mathbf{A}\right\rangle\mathclose{}}}$$
 >
-> where ${\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}}$ is the matrix inner product ([Definition 14](#def-matrix-inner-product)).
+> where ${\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}}$ is the matrix inner product ([Definition 16](#def-matrix-inner-product)).
 
 > **NOTE:**
 >
-> **Example 25 (The Frobenius norm of a** $2 \times 2$ matrix) For $\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$:
+> **Example 27 (The Frobenius norm of a** $2 \times 2$ matrix) For $\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$:
 >
 > $$\begin{aligned}
 > \mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}_F
@@ -1164,13 +1325,13 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 > && \text{(add)}
 > \end{aligned}$$
 >
-> The second step is [Theorem 12](#thm-matrix-inner-product-entries).
+> The second step is [Theorem 13](#thm-matrix-inner-product-entries).
 
 > **NOTE:**
 >
-> *Remark 10* (The Frobenius norm is the Euclidean norm of the entries). By [Theorem 12](#thm-matrix-inner-product-entries), $\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}_F^2 = \sum_{i=1}^n\sum_{j=1}^pa_{ij}^2$, a sum of squares, so the square root is always defined. $\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}_F$ is the Euclidean norm ([Definition 23 in Vectors](linear-algebra-vectors.llms.md#def-euclidean-norm)) of the entries of $\mathbf{A}$, listed as one vector of length $np$ [\[6, Ch. 15\]](#ref-banerjee2014linear), Definition 15.4, p. 492.
+> *Remark 11* (The Frobenius norm is the Euclidean norm of the entries). By [Theorem 13](#thm-matrix-inner-product-entries), $\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}_F^2 = \sum_{i=1}^n\sum_{j=1}^pa_{ij}^2$, a sum of squares, so the square root is always defined. $\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}_F$ is the Euclidean norm ([Definition 23 in Vectors](linear-algebra-vectors.llms.md#def-euclidean-norm)) of the entries of $\mathbf{A}$, listed as one vector of length $np$ [\[6, Ch. 15\]](#ref-banerjee2014linear), Definition 15.4, p. 492.
 >
-> For example, listing the entries of $\mathbf{A}$ in [Example 25](#exm-frobenius-norm) row by row gives the vector $(1, 2, 3, 4)$ of length $2 \cdot 2 = 4$, and
+> For example, listing the entries of $\mathbf{A}$ in [Example 27](#exm-frobenius-norm) row by row gives the vector $(1, 2, 3, 4)$ of length $2 \cdot 2 = 4$, and
 >
 > $$\begin{aligned}
 > \mathopen{}\left\lVert(1, 2, 3, 4)\right\rVert\mathclose{} &= \sqrt{1 + 4 + 9 + 16} \\
@@ -1180,7 +1341,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 
 > **NOTE:**
 >
-> **Theorem 13 (The squared Frobenius norm adds up the squared column norms)** If $\mathbf{A}$ is an $n \times p$ matrix with columns $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_p$, then
+> **Theorem 14 (The squared Frobenius norm adds up the squared column norms)** If $\mathbf{A}$ is an $n \times p$ matrix with columns $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_p$, then
 >
 > $$\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}_F^2 = \sum_{j=1}^p\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j\right\rVert\mathclose{}^2.$$
 
@@ -1191,7 +1352,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 > $$\begin{aligned}
 > \mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}_F^2
 > &= \sum_{i=1}^n\sum_{j=1}^pa_{ij}^2
-> && \text{(}\href{#rem-frobenius-norm-entries}{\text{Remark~10}}\text{)}
+> && \text{(}\href{#rem-frobenius-norm-entries}{\text{Remark~11}}\text{)}
 > \\
 > &= \sum_{j=1}^p\sum_{i=1}^na_{ij}^2
 > && \text{(swap the order of two finite sums)}
@@ -1202,12 +1363,12 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 
 > **NOTE:**
 >
-> **Example 26 (The Frobenius norm of a** $2 \times 2$ matrix, column by column) The matrix $\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$ in [Example 25](#exm-frobenius-norm) has columns $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 = (1, 3)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 = (2, 4)$, so
+> **Example 28 (The Frobenius norm of a** $2 \times 2$ matrix, column by column) The matrix $\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$ in [Example 27](#exm-frobenius-norm) has columns $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 = (1, 3)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 = (2, 4)$, so
 >
 > $$\begin{aligned}
 > \mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}_F^2
 > &= \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1\right\rVert\mathclose{}^2 + \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2\right\rVert\mathclose{}^2
-> && \text{(}\href{#thm-frobenius-norm-columns}{\text{Theorem~13}}\text{)}
+> && \text{(}\href{#thm-frobenius-norm-columns}{\text{Theorem~14}}\text{)}
 > \\
 > &= (1^2 + 3^2) + (2^2 + 4^2)
 > && \text{(definition of the norm)}
@@ -1219,24 +1380,24 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 > && \text{(add)}
 > \end{aligned}$$
 >
-> which matches $\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}_F = \sqrt{30}$ from [Example 25](#exm-frobenius-norm).
+> which matches $\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}_F = \sqrt{30}$ from [Example 27](#exm-frobenius-norm).
 
 # 4 Matrix Decompositions
 
 > **NOTE:**
 >
-> **Definition 16 (Eigenvalue)** Let $\mathbf{A}$ be a $p \times p$ matrix. A real number $\lambda$ is an **eigenvalue** of $\mathbf{A}$ if some real vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \neq \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ of length $p$ satisfies
+> **Definition 18 (Eigenvalue)** Let $\mathbf{A}$ be a $p \times p$ matrix. A real number $\lambda$ is an **eigenvalue** of $\mathbf{A}$ if some real vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \neq \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ of length $p$ satisfies
 >
 > $$\underbrace{\mathbf{A}}_{p \times p}\,\underbrace{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}_{p \times 1}
 > = \lambda\,\underbrace{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}_{p \times 1}$$
 
 > **NOTE:**
 >
-> **Definition 17 (Eigenvector)** In [Definition 16](#def-eigenvalue), any such $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ is an **eigenvector** of $\mathbf{A}$ for $\lambda$.
+> **Definition 19 (Eigenvector)** In [Definition 18](#def-eigenvalue), any such $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ is an **eigenvector** of $\mathbf{A}$ for $\lambda$.
 
 > **NOTE:**
 >
-> **Example 27 (Eigenvectors of a** $2 \times 2$ matrix) Let $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$.
+> **Example 29 (Eigenvectors of a** $2 \times 2$ matrix) Let $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$.
 >
 > $(1, 1)$ is an eigenvector for the eigenvalue $3$:
 >
@@ -1264,7 +1425,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 
 > **NOTE:**
 >
-> *Remark 11* (Multiples of an eigenvector). Multiplying by $\mathbf{A}$ rescales an eigenvector by $\lambda$ and does not change the line it lies on. Any nonzero multiple $c\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ of an eigenvector is also an eigenvector for the same $\lambda$:
+> *Remark 12* (Multiples of an eigenvector). Multiplying by $\mathbf{A}$ rescales an eigenvector by $\lambda$ and does not change the line it lies on. Any nonzero multiple $c\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ of an eigenvector is also an eigenvector for the same $\lambda$:
 >
 > $$\begin{aligned}
 > \mathbf{A}(c\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}})
@@ -1278,7 +1439,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 > && \text{(multiplication of numbers is commutative)}
 > \end{aligned}$$
 >
-> For example, in [Example 27](#exm-eigenvalue), $2\,(1, 1) = (2, 2)$ is also an eigenvector for the eigenvalue $3$:
+> For example, in [Example 29](#exm-eigenvalue), $2\,(1, 1) = (2, 2)$ is also an eigenvector for the eigenvalue $3$:
 >
 > $$\begin{aligned}
 > \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}
@@ -1298,7 +1459,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 
 > **NOTE:**
 >
-> **Example 28 (A vector that is not an eigenvector)** For the same $\mathbf{A}$, $(1, 0)$ is not an eigenvector:
+> **Example 30 (A vector that is not an eigenvector)** For the same $\mathbf{A}$, $(1, 0)$ is not an eigenvector:
 >
 > $$\begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}
 > \begin{bmatrix} 1 \\ 0 \end{bmatrix}
@@ -1308,7 +1469,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 
 > **NOTE:**
 >
-> *Remark 12* (Real and complex eigenvalues). These notes take $\lambda$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ to be real. Banerjee and Roy [\[6, Ch. 11\]](#ref-banerjee2014linear), Definition 11.1, pp. 312-313 also allows [complex](algebra-complex.llms.md#def-complex-number) eigenvalues and eigenvectors, because some real matrices, such as a rotation by $90$ degrees, have no real eigenvalues [\[6, Ch. 11\]](#ref-banerjee2014linear), Example 11.2, p. 312.
+> *Remark 13* (Real and complex eigenvalues). These notes take $\lambda$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ to be real. Banerjee and Roy [\[6, Ch. 11\]](#ref-banerjee2014linear), Definition 11.1, pp. 312-313 also allows [complex](algebra-complex.llms.md#def-complex-number) eigenvalues and eigenvectors, because some real matrices, such as a rotation by $90$ degrees, have no real eigenvalues [\[6, Ch. 11\]](#ref-banerjee2014linear), Example 11.2, p. 312.
 >
 > For example, $\mathbf{R} = \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}$ rotates each vector in the plane counterclockwise by $90$ degrees: $\mathbf{R}\,(v_1, v_2) = (-v_2, v_1)$. Suppose $\mathbf{R}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \lambda\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ for a real number $\lambda$. Matching entries gives $-v_2 = \lambda v_1$ and $v_1 = \lambda v_2$. Substituting the second equation into the first gives $-v_2 = \lambda^2 v_2$, so $(1 + \lambda^2)\, v_2 = 0$. Since $1 + \lambda^2 > 0$, $v_2 = 0$, and then
 >
@@ -1323,22 +1484,22 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 >
 > Chapter 14 of the [*Essence of linear algebra*](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab) series by 3Blue1Brown shows the geometric meaning of eigenvectors and eigenvalues:
 >
-> - [Eigenvectors and eigenvalues](https://www.youtube.com/watch?v=PFDu9oVAE-g) shows how certain vectors maintain their direction during a linear transformation and are merely stretched or squished by an eigenvalue factor ([Definition 16](#def-eigenvalue)).
+> - [Eigenvectors and eigenvalues](https://www.youtube.com/watch?v=PFDu9oVAE-g) shows how certain vectors maintain their direction during a linear transformation and are merely stretched or squished by an eigenvalue factor ([Definition 18](#def-eigenvalue)).
 
 > **NOTE:**
 >
-> **Theorem 14 (Spectral theorem for symmetric matrices)** If $\mathbf{A}$ is a $p \times p$ symmetric matrix ([Definition 3](#def-symmetric-matrix)) with real entries, then there are a $p \times p$ orthogonal matrix $\mathbf{Q}$ ([Definition 10](#def-orthogonal-matrix)) and a $p \times p$ diagonal matrix $\mathbf{\Lambda}$ ([Definition 4](#def-diagonal-matrix)) with real diagonal entries $\lambda_1, \ldots, \lambda_p$ such that
+> **Theorem 15 (Spectral theorem for symmetric matrices)** If $\mathbf{A}$ is a $p \times p$ symmetric matrix ([Definition 3](#def-symmetric-matrix)) with real entries, then there are a $p \times p$ orthogonal matrix $\mathbf{Q}$ ([Definition 10](#def-orthogonal-matrix)) and a $p \times p$ diagonal matrix $\mathbf{\Lambda}$ ([Definition 4](#def-diagonal-matrix)) with real diagonal entries $\lambda_1, \ldots, \lambda_p$ such that
 >
 > $$\underbrace{\mathbf{A}}_{p \times p}
 > = \underbrace{\mathbf{Q}}_{p \times p}\,
 > \underbrace{\mathbf{\Lambda}}_{p \times p}\,
 > \underbrace{{\mathbf{Q}}^{\top}}_{p \times p}$$
 >
-> Each $\lambda_i$ is an eigenvalue of $\mathbf{A}$ ([Definition 16](#def-eigenvalue)), and column $i$ of $\mathbf{Q}$ is an eigenvector of $\mathbf{A}$ for $\lambda_i$.
+> Each $\lambda_i$ is an eigenvalue of $\mathbf{A}$ ([Definition 18](#def-eigenvalue)), and column $i$ of $\mathbf{Q}$ is an eigenvector of $\mathbf{A}$ for $\lambda_i$.
 
 > **NOTE:**
 >
-> *Remark 13* (An equivalent form of the spectral theorem). The proof, by [induction](https://morrison-lab.github.io/mcs/proof-writing.html#def-proof-by-induction) on $p$, is outside the scope of these notes; see Banerjee and Roy [\[6, Ch. 11\]](#ref-banerjee2014linear), Theorem 11.27, p. 349, which states the result in the equivalent form ${\mathbf{Q}}^{\top}\mathbf{A}\mathbf{Q} = \mathbf{\Lambda}$. The two forms are equivalent because
+> *Remark 14* (An equivalent form of the spectral theorem). The proof, by [induction](https://morrison-lab.github.io/mcs/proof-writing.html#def-proof-by-induction) on $p$, is outside the scope of these notes; see Banerjee and Roy [\[6, Ch. 11\]](#ref-banerjee2014linear), Theorem 11.27, p. 349, which states the result in the equivalent form ${\mathbf{Q}}^{\top}\mathbf{A}\mathbf{Q} = \mathbf{\Lambda}$. The two forms are equivalent because
 >
 > $$\begin{aligned}
 > {\mathbf{Q}}^{\top}\mathbf{Q} &= \mathbf{Q}{\mathbf{Q}}^{\top} \\
@@ -1431,11 +1592,11 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 > && \text{(multiply by } \tfrac{1}{2} \text{)}
 > \end{aligned}$$
 >
-> a diagonal matrix with the eigenvalues $3$ and $1$ of $\mathbf{A}$ from [Example 27](#exm-eigenvalue) on its diagonal.
+> a diagonal matrix with the eigenvalues $3$ and $1$ of $\mathbf{A}$ from [Example 29](#exm-eigenvalue) on its diagonal.
 
 > **NOTE:**
 >
-> **Theorem 15 (Eigenvectors of a symmetric matrix for distinct eigenvalues are orthogonal)** Let $\mathbf{A}$ be a symmetric $p \times p$ matrix ([Definition 3](#def-symmetric-matrix)), and let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ be [eigenvectors](linear-algebra-special-matrices.llms.md#def-eigenvector) of $\mathbf{A}$ ([Definition 17](#def-eigenvector)) for [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) $\lambda_1 \ne \lambda_2$. Then $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \perp \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ ([Definition 22 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors)).
+> **Theorem 16 (Eigenvectors of a symmetric matrix for distinct eigenvalues are orthogonal)** Let $\mathbf{A}$ be a symmetric $p \times p$ matrix ([Definition 3](#def-symmetric-matrix)), and let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ be [eigenvectors](linear-algebra-special-matrices.llms.md#def-eigenvector) of $\mathbf{A}$ ([Definition 19](#def-eigenvector)) for [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) $\lambda_1 \ne \lambda_2$. Then $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \perp \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ ([Definition 22 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors)).
 
 > **NOTE:**
 >
@@ -1467,7 +1628,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 
 > **NOTE:**
 >
-> **Example 29 (Eigenvectors of a symmetric** $2 \times 2$ matrix) $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ is [symmetric](linear-algebra-special-matrices.llms.md#def-symmetric-matrix). Its [eigenvectors](linear-algebra-special-matrices.llms.md#def-eigenvector) $(1, 1)$ for $\lambda_1 = 3$ and $(1, -1)$ for $\lambda_2 = 1$ ([Example 27](#exm-eigenvalue)) satisfy
+> **Example 31 (Eigenvectors of a symmetric** $2 \times 2$ matrix) $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ is [symmetric](linear-algebra-special-matrices.llms.md#def-symmetric-matrix). Its [eigenvectors](linear-algebra-special-matrices.llms.md#def-eigenvector) $(1, 1)$ for $\lambda_1 = 3$ and $(1, -1)$ for $\lambda_2 = 1$ ([Example 29](#exm-eigenvalue)) satisfy
 >
 > $$\begin{aligned}
 > (1, 1) \cdot (1, -1) &= 1 \cdot 1 + 1 \cdot(-1) \\
@@ -1476,7 +1637,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 
 > **NOTE:**
 >
-> **Definition 18 (Eigendecomposition, spectral decomposition)** Let $\mathbf{A}$ be a $p \times p$ symmetric matrix with real entries. An **eigendecomposition** [\[10\]](#ref-wikipedia_eigendecomposition_of_a_matrix), or **spectral decomposition**, of $\mathbf{A}$ is a factorization
+> **Definition 20 (Eigendecomposition, spectral decomposition)** Let $\mathbf{A}$ be a $p \times p$ symmetric matrix with real entries. An **eigendecomposition** [\[11\]](#ref-wikipedia_eigendecomposition_of_a_matrix), or **spectral decomposition**, of $\mathbf{A}$ is a factorization
 >
 > $$\mathbf{A} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}$$
 >
@@ -1484,7 +1645,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 
 > **NOTE:**
 >
-> **Example 30 (An eigendecomposition of a** $2 \times 2$ symmetric matrix) For $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$, [Example 27](#exm-eigenvalue) found the eigenvectors $(1, 1)$ for $3$ and $(1, -1)$ for $1$. They are orthogonal ([Definition 22 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors)):
+> **Example 32 (An eigendecomposition of a** $2 \times 2$ symmetric matrix) For $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$, [Example 29](#exm-eigenvalue) found the eigenvectors $(1, 1)$ for $3$ and $(1, -1)$ for $1$. They are orthogonal ([Definition 22 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors)):
 >
 > $$\begin{aligned}
 > (1, 1) \cdot (1, -1)
@@ -1560,9 +1721,9 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 
 > **NOTE:**
 >
-> *Remark 14* (An eigendecomposition is not unique). A symmetric matrix can have more than one eigendecomposition. Reordering the eigenvalues on the diagonal of $\mathbf{\Lambda}$, and the columns of $\mathbf{Q}$ with them, gives another one, and so does multiplying a column of $\mathbf{Q}$ by $-1$.
+> *Remark 15* (An eigendecomposition is not unique). A symmetric matrix can have more than one eigendecomposition. Reordering the eigenvalues on the diagonal of $\mathbf{\Lambda}$, and the columns of $\mathbf{Q}$ with them, gives another one, and so does multiplying a column of $\mathbf{Q}$ by $-1$.
 >
-> For example, take $\mathbf{A}$ from [Example 30](#exm-spectral). Swapping the two eigenvalues and the two columns gives
+> For example, take $\mathbf{A}$ from [Example 32](#exm-spectral). Swapping the two eigenvalues and the two columns gives
 >
 > $$\mathbf{Q}_1 = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ -1 & 1 \end{bmatrix}
 > \qquad
@@ -1692,7 +1853,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 
 > **NOTE:**
 >
-> **Theorem 16 (Singular value decomposition)** Let $\mathbf{A}$ be an $n \times p$ matrix with real entries and $\operatorname{rank}(\mathbf{A}) = r$ ([Definition 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-rank)). Then there are an $n \times n$ orthogonal matrix $\mathbf{U}$, a $p \times p$ orthogonal matrix $\mathbf{V}$ ([Definition 10](#def-orthogonal-matrix)), and numbers $\sigma_1 \ge \sigma_2 \ge \cdots \ge \sigma_r > 0$ such that
+> **Theorem 17 (Singular value decomposition)** Let $\mathbf{A}$ be an $n \times p$ matrix with real entries and $\operatorname{rank}(\mathbf{A}) = r$ ([Definition 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-rank)). Then there are an $n \times n$ orthogonal matrix $\mathbf{U}$, a $p \times p$ orthogonal matrix $\mathbf{V}$ ([Definition 10](#def-orthogonal-matrix)), and numbers $\sigma_1 \ge \sigma_2 \ge \cdots \ge \sigma_r > 0$ such that
 >
 > $$\underbrace{\mathbf{A}}_{n \times p}
 > = \underbrace{\mathbf{U}}_{n \times n}\,
@@ -1703,9 +1864,9 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 
 > **NOTE:**
 >
-> *Remark 15* (The SVD applies to every real matrix). The proof is outside the scope of these notes; see Banerjee and Roy [\[6, Ch. 12\]](#ref-banerjee2014linear), Theorem 12.1, p. 373. Unlike the spectral theorem ([Theorem 14](#thm-spectral)), [Theorem 16](#thm-svd) applies to every real matrix, including one that is not square or not symmetric.
+> *Remark 16* (The SVD applies to every real matrix). The proof is outside the scope of these notes; see Banerjee and Roy [\[6, Ch. 12\]](#ref-banerjee2014linear), Theorem 12.1, p. 373. Unlike the spectral theorem ([Theorem 15](#thm-spectral)), [Theorem 17](#thm-svd) applies to every real matrix, including one that is not square or not symmetric.
 >
-> For example, the $1 \times 2$ matrix $\mathbf{A} = \begin{bmatrix} 1 & 1 \end{bmatrix}$ is not square, so [Theorem 14](#thm-spectral) does not apply to it. It has rank $1$, and [Theorem 16](#thm-svd) holds with $\mathbf{U} = \begin{bmatrix} 1 \end{bmatrix}$, $\mathbf{D} = \begin{bmatrix} \sqrt{2} & 0 \end{bmatrix}$, and $\mathbf{V}$ the orthogonal matrix $\mathbf{Q}$ from [Example 30](#exm-spectral), which is symmetric, so ${\mathbf{V}}^{\top} = \mathbf{V}$:
+> For example, the $1 \times 2$ matrix $\mathbf{A} = \begin{bmatrix} 1 & 1 \end{bmatrix}$ is not square, so [Theorem 15](#thm-spectral) does not apply to it. It has rank $1$, and [Theorem 17](#thm-svd) holds with $\mathbf{U} = \begin{bmatrix} 1 \end{bmatrix}$, $\mathbf{D} = \begin{bmatrix} \sqrt{2} & 0 \end{bmatrix}$, and $\mathbf{V}$ the orthogonal matrix $\mathbf{Q}$ from [Example 32](#exm-spectral), which is symmetric, so ${\mathbf{V}}^{\top} = \mathbf{V}$:
 >
 > $$\begin{aligned}
 > \mathbf{U}\mathbf{D}{\mathbf{V}}^{\top}
@@ -1750,15 +1911,15 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 
 > **NOTE:**
 >
-> **Definition 19 (Singular value decomposition)** Let $\mathbf{A}$ be an $n \times p$ matrix with real entries and $\operatorname{rank}(\mathbf{A}) = r$. A **singular value decomposition** [\[11\]](#ref-wikipedia_singular_value_decomposition) (SVD) of $\mathbf{A}$ is a factorization $\mathbf{A} = \mathbf{U}\mathbf{D}{\mathbf{V}}^{\top}$ with $\mathbf{U}$, $\mathbf{D}$ and $\mathbf{V}$ as in [Theorem 16](#thm-svd).
+> **Definition 21 (Singular value decomposition)** Let $\mathbf{A}$ be an $n \times p$ matrix with real entries and $\operatorname{rank}(\mathbf{A}) = r$. A **singular value decomposition** [\[12\]](#ref-wikipedia_singular_value_decomposition) (SVD) of $\mathbf{A}$ is a factorization $\mathbf{A} = \mathbf{U}\mathbf{D}{\mathbf{V}}^{\top}$ with $\mathbf{U}$, $\mathbf{D}$ and $\mathbf{V}$ as in [Theorem 17](#thm-svd).
 
 > **NOTE:**
 >
-> **Definition 20 (Singular values)** The numbers $\sigma_1 \ge \cdots \ge \sigma_r > 0$ on the diagonal of $\mathbf{D}$ in a singular value decomposition of $\mathbf{A}$ ([Definition 19](#def-svd)) are the **singular values** of $\mathbf{A}$.
+> **Definition 22 (Singular values)** The numbers $\sigma_1 \ge \cdots \ge \sigma_r > 0$ on the diagonal of $\mathbf{D}$ in a singular value decomposition of $\mathbf{A}$ ([Definition 21](#def-svd)) are the **singular values** of $\mathbf{A}$.
 
 > **NOTE:**
 >
-> **Example 31 (An SVD of a** $3 \times 2$ matrix) Let
+> **Example 33 (An SVD of a** $3 \times 2$ matrix) Let
 >
 > $$\mathbf{A} = \begin{bmatrix} 1 & 1 \\ 1 & -1 \\ 1 & 1 \end{bmatrix}
 > \qquad
@@ -1772,7 +1933,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 > \qquad
 > \mathbf{V} = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}$$
 >
-> $\mathbf{V}$ is the orthogonal matrix $\mathbf{Q}$ from [Example 30](#exm-spectral). $\mathbf{U}$ is orthogonal too. Entry $(i, j)$ of ${\mathbf{U}}^{\top}\mathbf{U}$ is the dot product of columns $i$ and $j$ of $\mathbf{U}$, and those columns are $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_1 = (\frac{1}{\sqrt{2}}, 0, \frac{1}{\sqrt{2}})$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_2 = (0, 1, 0)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_3 = (\frac{1}{\sqrt{2}}, 0, -\frac{1}{\sqrt{2}})$:
+> $\mathbf{V}$ is the orthogonal matrix $\mathbf{Q}$ from [Example 32](#exm-spectral). $\mathbf{U}$ is orthogonal too. Entry $(i, j)$ of ${\mathbf{U}}^{\top}\mathbf{U}$ is the dot product of columns $i$ and $j$ of $\mathbf{U}$, and those columns are $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_1 = (\frac{1}{\sqrt{2}}, 0, \frac{1}{\sqrt{2}})$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_2 = (0, 1, 0)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_3 = (\frac{1}{\sqrt{2}}, 0, -\frac{1}{\sqrt{2}})$:
 >
 > $$\begin{aligned}
 > \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_1 \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}_1
@@ -1915,9 +2076,9 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 
 > **NOTE:**
 >
-> *Remark 16* (An SVD is not unique). An SVD is not unique [\[6, Ch. 12\]](#ref-banerjee2014linear), Examples 12.2 and 12.3, p. 378. For any $i \le r$, multiplying column $i$ of both $\mathbf{U}$ and $\mathbf{V}$ by $-1$ gives another one. The singular values do not depend on which SVD is chosen [\[6, Ch. 12\]](#ref-banerjee2014linear), pp. 371 and 378.
+> *Remark 17* (An SVD is not unique). An SVD is not unique [\[6, Ch. 12\]](#ref-banerjee2014linear), Examples 12.2 and 12.3, p. 378. For any $i \le r$, multiplying column $i$ of both $\mathbf{U}$ and $\mathbf{V}$ by $-1$ gives another one. The singular values do not depend on which SVD is chosen [\[6, Ch. 12\]](#ref-banerjee2014linear), pp. 371 and 378.
 >
-> For example, in [Example 31](#exm-svd), multiplying the first columns of $\mathbf{U}$ and $\mathbf{V}$ by $-1$ gives
+> For example, in [Example 33](#exm-svd), multiplying the first columns of $\mathbf{U}$ and $\mathbf{V}$ by $-1$ gives
 >
 > $$\mathbf{U}_1 = \begin{bmatrix}
 > -\frac{1}{\sqrt{2}} & 0 & \frac{1}{\sqrt{2}} \\
@@ -1998,7 +2159,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 
 > **NOTE:**
 >
-> *Remark 17* (Counting zero singular values). Some texts, and R’s [`svd()`](https://rdrr.io/r/base/svd.html), also count $\min(n, p) - r$ singular values equal to $0$, so that every $n \times p$ matrix has $\min(n, p)$ singular values.
+> *Remark 18* (Counting zero singular values). Some texts, and R’s [`svd()`](https://rdrr.io/r/base/svd.html), also count $\min(n, p) - r$ singular values equal to $0$, so that every $n \times p$ matrix has $\min(n, p)$ singular values.
 >
 > For example, $\mathbf{B} = \begin{bmatrix} 3 & 0 \\ 0 & 0 \end{bmatrix}$ has rank $r = 1$. Taking
 >
@@ -2007,18 +2168,18 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 > &= \mathbf{I}_2
 > \end{aligned}$$
 >
-> and $\mathbf{D} = \mathbf{B}$ gives an SVD $\mathbf{B} = \mathbf{I}_2 \mathbf{B} {\mathbf{I}_2}^{\top}$, so by [Definition 20](#def-singular-values), $\mathbf{B}$ has one singular value, $\sigma_1 = 3$. R’s [`svd()`](https://rdrr.io/r/base/svd.html) reports $\min(2, 2) = 2$ singular values for $\mathbf{B}$: $3$ and $0$.
+> and $\mathbf{D} = \mathbf{B}$ gives an SVD $\mathbf{B} = \mathbf{I}_2 \mathbf{B} {\mathbf{I}_2}^{\top}$, so by [Definition 22](#def-singular-values), $\mathbf{B}$ has one singular value, $\sigma_1 = 3$. R’s [`svd()`](https://rdrr.io/r/base/svd.html) reports $\min(2, 2) = 2$ singular values for $\mathbf{B}$: $3$ and $0$.
 
 > **NOTE:**
 >
-> **Theorem 17 (An SVD gives an eigendecomposition of** ${\mathbf{A}}^{\top}\mathbf{A}$) Let $\mathbf{A} = \mathbf{U}\mathbf{D}{\mathbf{V}}^{\top}$ be a singular value decomposition ([Definition 19](#def-svd)) of an $n \times p$ matrix $\mathbf{A}$ with singular values $\sigma_1, \ldots, \sigma_r$. Then ${\mathbf{A}}^{\top}\mathbf{A}$ is symmetric ([Definition 3](#def-symmetric-matrix)), and
+> **Theorem 18 (An SVD gives an eigendecomposition of** ${\mathbf{A}}^{\top}\mathbf{A}$) Let $\mathbf{A} = \mathbf{U}\mathbf{D}{\mathbf{V}}^{\top}$ be a singular value decomposition ([Definition 21](#def-svd)) of an $n \times p$ matrix $\mathbf{A}$ with singular values $\sigma_1, \ldots, \sigma_r$. Then ${\mathbf{A}}^{\top}\mathbf{A}$ is symmetric ([Definition 3](#def-symmetric-matrix)), and
 >
 > $$\underbrace{{\mathbf{A}}^{\top}\mathbf{A}}_{p \times p}
 > = \underbrace{\mathbf{V}}_{p \times p}\,
 > \underbrace{\mathbf{\Lambda}}_{p \times p}\,
 > \underbrace{{\mathbf{V}}^{\top}}_{p \times p}$$
 >
-> where $\mathbf{\Lambda} \stackrel{\text{def}}{=}{\mathbf{D}}^{\top}\mathbf{D}$ is the $p \times p$ diagonal matrix whose $i$-th diagonal entry $\lambda_i$ is $\sigma_i^2$ for $i \le r$ and $0$ for $i > r$. So $\mathbf{V}\mathbf{\Lambda}{\mathbf{V}}^{\top}$ is an eigendecomposition ([Definition 18](#def-eigendecomposition)) of ${\mathbf{A}}^{\top}\mathbf{A}$: column $i$ of $\mathbf{V}$ is an eigenvector of ${\mathbf{A}}^{\top}\mathbf{A}$ for the eigenvalue $\lambda_i$.
+> where $\mathbf{\Lambda} \stackrel{\text{def}}{=}{\mathbf{D}}^{\top}\mathbf{D}$ is the $p \times p$ diagonal matrix whose $i$-th diagonal entry $\lambda_i$ is $\sigma_i^2$ for $i \le r$ and $0$ for $i > r$. So $\mathbf{V}\mathbf{\Lambda}{\mathbf{V}}^{\top}$ is an eigendecomposition ([Definition 20](#def-eigendecomposition)) of ${\mathbf{A}}^{\top}\mathbf{A}$: column $i$ of $\mathbf{V}$ is an eigenvector of ${\mathbf{A}}^{\top}\mathbf{A}$ for the eigenvalue $\lambda_i$.
 
 > **NOTE:**
 >
@@ -2118,7 +2279,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 
 > **NOTE:**
 >
-> **Example 32 (**${\mathbf{A}}^{\top}\mathbf{A}$ for the matrix of the SVD example) For $\mathbf{A}$ in [Example 31](#exm-svd):
+> **Example 34 (**${\mathbf{A}}^{\top}\mathbf{A}$ for the matrix of the SVD example) For $\mathbf{A}$ in [Example 33](#exm-svd):
 >
 > $$\begin{aligned}
 > {\mathbf{A}}^{\top}\mathbf{A}
@@ -2133,7 +2294,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 > && \text{(add)}
 > \end{aligned}$$
 >
-> [Theorem 17](#thm-svd-evd) says its eigenvalues are $\sigma_1^2 = 4$ and $\sigma_2^2 = 2$, with the columns of $\mathbf{V}$ as eigenvectors. Checking the first column, up to its factor $\frac{1}{\sqrt{2}}$:
+> [Theorem 18](#thm-svd-evd) says its eigenvalues are $\sigma_1^2 = 4$ and $\sigma_2^2 = 2$, with the columns of $\mathbf{V}$ as eigenvectors. Checking the first column, up to its factor $\frac{1}{\sqrt{2}}$:
 >
 > $$\begin{aligned}
 > \begin{bmatrix} 3 & 1 \\ 1 & 3 \end{bmatrix}
@@ -2171,22 +2332,22 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 
 > **NOTE:**
 >
-> *Remark 18* (Building an SVD from an eigendecomposition). [Theorem 17](#thm-svd-evd) matches Banerjee and Roy [\[6, Ch. 12\]](#ref-banerjee2014linear), pp. 372-373, which works in the other direction: it constructs an SVD from a spectral decomposition of ${\mathbf{A}}^{\top}\mathbf{A}$ and sets $\sigma_i = \sqrt{\lambda_i}$.
+> *Remark 19* (Building an SVD from an eigendecomposition). [Theorem 18](#thm-svd-evd) matches Banerjee and Roy [\[6, Ch. 12\]](#ref-banerjee2014linear), pp. 372-373, which works in the other direction: it constructs an SVD from a spectral decomposition of ${\mathbf{A}}^{\top}\mathbf{A}$ and sets $\sigma_i = \sqrt{\lambda_i}$.
 >
-> For example, in [Example 32](#exm-svd-evd) the eigenvalues of ${\mathbf{A}}^{\top}\mathbf{A}$ are $4$ and $2$, and $\sqrt{4} = 2$ and $\sqrt{2}$ are the singular values $\sigma_1$ and $\sigma_2$ of $\mathbf{A}$ from [Example 31](#exm-svd).
+> For example, in [Example 34](#exm-svd-evd) the eigenvalues of ${\mathbf{A}}^{\top}\mathbf{A}$ are $4$ and $2$, and $\sqrt{4} = 2$ and $\sqrt{2}$ are the singular values $\sigma_1$ and $\sigma_2$ of $\mathbf{A}$ from [Example 33](#exm-svd).
 
 # 5 Definite Matrices
 
 > **NOTE:**
 >
-> **Definition 21 (Positive semidefinite matrix)** A $p \times p$ matrix $\mathbf{A}$ is **positive semidefinite** [\[12\]](#ref-wikipedia_definite_matrix) if it satisfies both conditions:
+> **Definition 23 (Positive semidefinite matrix)** A $p \times p$ matrix $\mathbf{A}$ is **positive semidefinite** [\[13\]](#ref-wikipedia_definite_matrix) if it satisfies both conditions:
 >
 > - $\mathbf{A}$ is symmetric ([Definition 3](#def-symmetric-matrix)).
-> - Every quadratic form ([Definition 11](#def-quadratic-form)) in $\mathbf{A}$ is non-negative: ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \ge 0$ for every vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ of length $p$.
+> - Every quadratic form ([Definition 13](#def-quadratic-form)) in $\mathbf{A}$ is non-negative: ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \ge 0$ for every vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ of length $p$.
 
 > **NOTE:**
 >
-> **Example 33 (A positive semidefinite matrix)** Let $\mathbf{B} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$, which is symmetric. For any $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (x_1, x_2)$:
+> **Example 35 (A positive semidefinite matrix)** Let $\mathbf{B} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$, which is symmetric. For any $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (x_1, x_2)$:
 >
 > $$\begin{aligned}
 > {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
@@ -2204,11 +2365,11 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 
 > **NOTE:**
 >
-> **Theorem 18 (Entries and symmetry of a Gram matrix)** Let $\mathbf{A}$ be an $m \times n$ matrix with columns $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_n$, and let $\mathbf{G} = {\mathbf{A}}^{\top} \mathbf{A}$ ([Definition 6 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-gram-matrix)).
+> **Theorem 19 (Entries and symmetry of a Gram matrix)** Let $\mathbf{A}$ be an $m \times n$ matrix with columns $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_n$, and let $\mathbf{G} = {\mathbf{A}}^{\top} \mathbf{A}$ ([Definition 6 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-gram-matrix)).
 >
 > 1.  Entry $(i, j)$ of $\mathbf{G}$ is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_i \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j$.
 > 2.  $\mathbf{G}$ is symmetric ([Definition 3](#def-symmetric-matrix)).
-> 3.  ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{G} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathopen{}\left\lVert\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}^2 \ge 0$ for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^n$, so $\mathbf{G}$ is positive semidefinite ([Definition 21](#def-positive-semidefinite)).
+> 3.  ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{G} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathopen{}\left\lVert\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}^2 \ge 0$ for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^n$, so $\mathbf{G}$ is positive semidefinite ([Definition 23](#def-positive-semidefinite)).
 
 > **NOTE:**
 >
@@ -2241,7 +2402,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 
 > **NOTE:**
 >
-> **Example 34 (Checking the properties on a small Gram matrix)** For $\mathbf{A}$ in [Example 8 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#exm-gram-matrix), $\mathbf{G} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$. It is symmetric: $g_{12} = g_{21} = 1$. Take $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, -1)$. Then
+> **Example 36 (Checking the properties on a small Gram matrix)** For $\mathbf{A}$ in [Example 8 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#exm-gram-matrix), $\mathbf{G} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$. It is symmetric: $g_{12} = g_{21} = 1$. Take $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, -1)$. Then
 >
 > $$\begin{aligned}
 > {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{G} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
@@ -2277,11 +2438,11 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 > && \text{(definition of the self outer product)}
 > \end{aligned}$$
 >
-> So $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}$ is the [Gram matrix](linear-algebra-rank-nullity.llms.md#def-gram-matrix) of $\mathbf{A}$, and [Theorem 18](#thm-gram-properties) says that a Gram matrix is [positive semidefinite](#def-positive-semidefinite).
+> So $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}$ is the [Gram matrix](linear-algebra-rank-nullity.llms.md#def-gram-matrix) of $\mathbf{A}$, and [Theorem 19](#thm-gram-properties) says that a Gram matrix is [positive semidefinite](#def-positive-semidefinite).
 
 > **NOTE:**
 >
-> **Example 35 (A quadratic form in a self outer product)** For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 2)$, [the example of a self outer product](linear-algebra-inner-products.llms.md#exm-self-outer-product) found $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} = \begin{bmatrix} 1 & 2 \\ 2 & 4 \end{bmatrix}$, which is [symmetric](#def-symmetric-matrix). Take $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (2, -1)$. The [quadratic form](#def-quadratic-form) in $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ is
+> **Example 37 (A quadratic form in a self outer product)** For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 2)$, [the example of a self outer product](linear-algebra-inner-products.llms.md#exm-self-outer-product) found $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} = \begin{bmatrix} 1 & 2 \\ 2 & 4 \end{bmatrix}$, which is [symmetric](#def-symmetric-matrix). Take $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (2, -1)$. The [quadratic form](#def-quadratic-form) in $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ is
 >
 > $$\begin{aligned}
 > {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}
@@ -2302,18 +2463,18 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 
 > **NOTE:**
 >
-> **Definition 22 (Positive definite matrix)** A $p \times p$ matrix $\mathbf{A}$ is **positive definite** [\[12\]](#ref-wikipedia_definite_matrix) if it satisfies both conditions:
+> **Definition 24 (Positive definite matrix)** A $p \times p$ matrix $\mathbf{A}$ is **positive definite** [\[13\]](#ref-wikipedia_definite_matrix) if it satisfies both conditions:
 >
 > - $\mathbf{A}$ is symmetric ([Definition 3](#def-symmetric-matrix)).
-> - Every quadratic form ([Definition 11](#def-quadratic-form)) in $\mathbf{A}$ at a nonzero vector is positive: ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} > 0$ for every vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\neq \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ of length $p$.
+> - Every quadratic form ([Definition 13](#def-quadratic-form)) in $\mathbf{A}$ at a nonzero vector is positive: ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} > 0$ for every vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\neq \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ of length $p$.
 
 > **NOTE:**
 >
-> **Example 36 (Positive definite, semidefinite, and neither)**  
+> **Example 38 (Positive definite, semidefinite, and neither)**  
 >
 > - The identity matrix $\mathbf{I}_p$ ([Definition 16 in Matrices](linear-algebra-matrices.llms.md#def-identity-matrix)) is positive definite: ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{I}_p \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \sum_{i=1}^px_i^2$, which is positive unless every $x_i$ is $0$.
 >
-> - $\mathbf{B} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$ from [Example 33](#exm-positive-semidefinite) is positive semidefinite but not positive definite: at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, -1) \neq \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$,
+> - $\mathbf{B} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$ from [Example 35](#exm-positive-semidefinite) is positive semidefinite but not positive definite: at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, -1) \neq \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$,
 >
 >   $$\begin{aligned}
 >   {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} &= (1 - 1)^2 \\
@@ -2330,9 +2491,9 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 
 > **NOTE:**
 >
-> *Remark 19* (Why the definition requires symmetry). A positive definite matrix is positive semidefinite ([Definition 21](#def-positive-semidefinite)): ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} > 0$ for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\neq \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, and ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}}^{\top}\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}= 0$. For example, $\mathbf{I}_p$ in [Example 36](#exm-positive-definite) is both.
+> *Remark 20* (Why the definition requires symmetry). A positive definite matrix is positive semidefinite ([Definition 23](#def-positive-semidefinite)): ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} > 0$ for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\neq \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, and ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}}^{\top}\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}= 0$. For example, $\mathbf{I}_p$ in [Example 38](#exm-positive-definite) is both.
 >
-> Some sources drop the symmetry condition from both definitions. These notes keep it, because without it a matrix can pass the quadratic-form condition and still have no real eigenvalues ([Definition 16](#def-eigenvalue)). For example, $\mathbf{C} = \begin{bmatrix} 1 & 1 \\ -1 & 1 \end{bmatrix}$ is not symmetric, and for any $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (x_1, x_2)$:
+> Some sources drop the symmetry condition from both definitions. These notes keep it, because without it a matrix can pass the quadratic-form condition and still have no real eigenvalues ([Definition 18](#def-eigenvalue)). For example, $\mathbf{C} = \begin{bmatrix} 1 & 1 \\ -1 & 1 \end{bmatrix}$ is not symmetric, and for any $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (x_1, x_2)$:
 >
 > $$\begin{aligned}
 > {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{C} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
@@ -2355,14 +2516,14 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 >
 > So no real $\lambda$ has an eigenvector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \neq \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$.
 
-See also [\[12\]](#ref-wikipedia_definite_matrix).
+See also [\[13\]](#ref-wikipedia_definite_matrix).
 
 > **NOTE:**
 >
-> **Theorem 19 (Definiteness and eigenvalues)** Let $\mathbf{A}$ be a $p \times p$ symmetric matrix with real entries, with eigendecomposition $\mathbf{A} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}$ ([Definition 18](#def-eigendecomposition)) and eigenvalues $\lambda_1, \ldots, \lambda_p$ on the diagonal of $\mathbf{\Lambda}$. Then:
+> **Theorem 20 (Definiteness and eigenvalues)** Let $\mathbf{A}$ be a $p \times p$ symmetric matrix with real entries, with eigendecomposition $\mathbf{A} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}$ ([Definition 20](#def-eigendecomposition)) and eigenvalues $\lambda_1, \ldots, \lambda_p$ on the diagonal of $\mathbf{\Lambda}$. Then:
 >
-> - $\mathbf{A}$ is positive semidefinite ([Definition 21](#def-positive-semidefinite)) if and only if every $\lambda_i \ge 0$.
-> - $\mathbf{A}$ is positive definite ([Definition 22](#def-positive-definite)) if and only if every $\lambda_i > 0$.
+> - $\mathbf{A}$ is positive semidefinite ([Definition 23](#def-positive-semidefinite)) if and only if every $\lambda_i \ge 0$.
+> - $\mathbf{A}$ is positive definite ([Definition 24](#def-positive-definite)) if and only if every $\lambda_i > 0$.
 
 > **NOTE:**
 >
@@ -2391,14 +2552,14 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 
 > **NOTE:**
 >
-> **Example 37 (Reading definiteness off the eigenvalues)**  
+> **Example 39 (Reading definiteness off the eigenvalues)**  
 >
-> - $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ has eigenvalues $3$ and $1$ ([Example 27](#exm-eigenvalue)), both positive, so it is positive definite.
-> - $\mathbf{B} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$ has eigenvalues $2$, for the eigenvector $(1, 1)$, and $0$, for the eigenvector $(1, -1)$, so it is positive semidefinite but not positive definite, as [Example 36](#exm-positive-definite) found directly.
+> - $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ has eigenvalues $3$ and $1$ ([Example 29](#exm-eigenvalue)), both positive, so it is positive definite.
+> - $\mathbf{B} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$ has eigenvalues $2$, for the eigenvector $(1, 1)$, and $0$, for the eigenvector $(1, -1)$, so it is positive semidefinite but not positive definite, as [Example 38](#exm-positive-definite) found directly.
 
 > **NOTE:**
 >
-> **Definition 23 (Condition number of a positive definite matrix)** Let $\mathbf{S}$ be a $p \times p$ [positive definite matrix](#def-positive-definite) with [eigenvalues](#def-eigenvalue) $\lambda_{\min} \le \cdots \le \lambda_{\max}$, all positive by [definiteness and eigenvalues](#thm-definite-eigenvalues). The **condition number** of $\mathbf{S}$ is
+> **Definition 25 (Condition number of a positive definite matrix)** Let $\mathbf{S}$ be a $p \times p$ [positive definite matrix](#def-positive-definite) with [eigenvalues](#def-eigenvalue) $\lambda_{\min} \le \cdots \le \lambda_{\max}$, all positive by [definiteness and eigenvalues](#thm-definite-eigenvalues). The **condition number** of $\mathbf{S}$ is
 >
 > $$\kappa(\mathbf{S}) \stackrel{\text{def}}{=}\frac{\lambda_{\max}}{\lambda_{\min}}.$$
 >
@@ -2406,19 +2567,19 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 
 > **NOTE:**
 >
-> **Example 38 (A condition number of 3)** $\mathbf{S} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ has [eigenvalues](#def-eigenvalue) $3$ and $1$ ([eigenvalue example](#exm-eigenvalue)), so $\kappa(\mathbf{S}) = 3 / 1 = 3$. The [identity matrix](linear-algebra-matrices.llms.md#def-identity-matrix) $\mathbf{I}_2$ has eigenvalues $1$ and $1$, so $\kappa(\mathbf{I}_2) = 1$.
+> **Example 40 (A condition number of 3)** $\mathbf{S} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ has [eigenvalues](#def-eigenvalue) $3$ and $1$ ([eigenvalue example](#exm-eigenvalue)), so $\kappa(\mathbf{S}) = 3 / 1 = 3$. The [identity matrix](linear-algebra-matrices.llms.md#def-identity-matrix) $\mathbf{I}_2$ has eigenvalues $1$ and $1$, so $\kappa(\mathbf{I}_2) = 1$.
 
 > **NOTE:**
 >
-> **Definition 24 (Condition number of a matrix)** The **condition number** of an $n \times p$ [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{A}$ is the [ratio](algebra-sums.llms.md#def-ratio) of its largest to its smallest [singular value](#def-singular-values), counting all $\min(n, p)$ [singular values](#def-singular-values) of $\mathbf{A}$, zeros included ([Remark 17](#rem-svd-zero-singular-values)) [\[13\]](#ref-wikipedia_condition_number):
+> **Definition 26 (Condition number of a matrix)** The **condition number** of an $n \times p$ [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{A}$ is the [ratio](algebra-sums.llms.md#def-ratio) of its largest to its smallest [singular value](#def-singular-values), counting all $\min(n, p)$ [singular values](#def-singular-values) of $\mathbf{A}$, zeros included ([Remark 18](#rem-svd-zero-singular-values)) [\[14\]](#ref-wikipedia_condition_number):
 >
 > $$\kappa(\mathbf{A}) \stackrel{\text{def}}{=}\frac{\sigma_{\max}}{\sigma_{\min}} = \frac{\sigma_1}{\sigma_{\min(n,p)}}.$$
 >
-> This generalizes [Definition 23](#def-condition-number), which covers [positive definite matrices](linear-algebra-special-matrices.llms.md#def-positive-definite). For a nonzero matrix, $\kappa(\mathbf{A}) \ge 1$. When the columns of a tall matrix $\mathbf{A}$ ($n \ge p$) are [linearly dependent](linear-algebra-subspaces.llms.md#def-linearly-independent), its smallest singular value is $0$, and $\kappa(\mathbf{A}) = \infty$.
+> This generalizes [Definition 25](#def-condition-number), which covers [positive definite matrices](linear-algebra-special-matrices.llms.md#def-positive-definite). For a nonzero matrix, $\kappa(\mathbf{A}) \ge 1$. When the columns of a tall matrix $\mathbf{A}$ ($n \ge p$) are [linearly dependent](linear-algebra-subspaces.llms.md#def-linearly-independent), its smallest singular value is $0$, and $\kappa(\mathbf{A}) = \infty$.
 
 > **NOTE:**
 >
-> **Example 39 (The condition number of a matrix with nearly parallel columns)** Let $\mathbf{A} = \begin{bmatrix} 1 & 1 \\ 1 & 1.01 \end{bmatrix}$. Its columns, $(1, 1)$ and $(1, 1.01)$, are nearly parallel. We find its [singular values](#def-singular-values) and their [ratio](algebra-sums.llms.md#def-ratio), then repeat after multiplying every entry by $1000$:
+> **Example 41 (The condition number of a matrix with nearly parallel columns)** Let $\mathbf{A} = \begin{bmatrix} 1 & 1 \\ 1 & 1.01 \end{bmatrix}$. Its columns, $(1, 1)$ and $(1, 1.01)$, are nearly parallel. We find its [singular values](#def-singular-values) and their [ratio](algebra-sums.llms.md#def-ratio), then repeat after multiplying every entry by $1000$:
 >
 > ## R
 >
@@ -2458,17 +2619,17 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 
 > **NOTE:**
 >
-> *Remark 20* (Other condition numbers). Other [norms](linear-algebra-inner-products.llms.md#def-norm) give other [condition numbers](#def-matrix-condition-number). This definition uses the 2-norm, which is the one built from the [singular values](#def-singular-values). For a [positive definite matrix](linear-algebra-special-matrices.llms.md#def-positive-definite), the singular values are the [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue), and this definition agrees with the [ratio](algebra-sums.llms.md#def-ratio) of its largest to its smallest [eigenvalue](linear-algebra-special-matrices.llms.md#def-eigenvalue) in [Definition 23](#def-condition-number).
+> *Remark 21* (Other condition numbers). Other [norms](linear-algebra-inner-products.llms.md#def-norm) give other [condition numbers](#def-matrix-condition-number). This definition uses the 2-norm, which is the one built from the [singular values](#def-singular-values). For a [positive definite matrix](linear-algebra-special-matrices.llms.md#def-positive-definite), the singular values are the [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue), and this definition agrees with the [ratio](algebra-sums.llms.md#def-ratio) of its largest to its smallest [eigenvalue](linear-algebra-special-matrices.llms.md#def-eigenvalue) in [Definition 25](#def-condition-number).
 
 > **NOTE:**
 >
-> **Theorem 20 (Forming** ${\mathbf{A}}^{\top}\mathbf{A}$ squares the condition number) Let $\mathbf{A}$ be a nonzero $n \times p$ [matrix](linear-algebra-matrices.llms.md#def-matrix) with $n \ge p$. Then
+> **Theorem 21 (Forming** ${\mathbf{A}}^{\top}\mathbf{A}$ squares the condition number) Let $\mathbf{A}$ be a nonzero $n \times p$ [matrix](linear-algebra-matrices.llms.md#def-matrix) with $n \ge p$. Then
 >
 > $$\kappa({\mathbf{A}}^{\top}\mathbf{A}) = \kappa(\mathbf{A})^2.$$
 
 > **NOTE:**
 >
-> *Proof*. By [Theorem 17](#thm-svd-evd), the [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) of the [symmetric matrix](linear-algebra-special-matrices.llms.md#def-symmetric-matrix) ${\mathbf{A}}^{\top}\mathbf{A}$ are $\sigma_1^2 \ge \cdots \ge \sigma_p^2$, where $\sigma_1 \ge \cdots \ge \sigma_p$ are the [singular values](#def-singular-values) of $\mathbf{A}$, with zeros counted ([Remark 17](#rem-svd-zero-singular-values)). These eigenvalues are non-negative, so for the symmetric matrix ${\mathbf{A}}^{\top}\mathbf{A}$ they are also its singular values. Therefore
+> *Proof*. By [Theorem 18](#thm-svd-evd), the [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) of the [symmetric matrix](linear-algebra-special-matrices.llms.md#def-symmetric-matrix) ${\mathbf{A}}^{\top}\mathbf{A}$ are $\sigma_1^2 \ge \cdots \ge \sigma_p^2$, where $\sigma_1 \ge \cdots \ge \sigma_p$ are the [singular values](#def-singular-values) of $\mathbf{A}$, with zeros counted ([Remark 18](#rem-svd-zero-singular-values)). These eigenvalues are non-negative, so for the symmetric matrix ${\mathbf{A}}^{\top}\mathbf{A}$ they are also its singular values. Therefore
 >
 > $$\kappa({\mathbf{A}}^{\top}\mathbf{A}) = \frac{\sigma_1^2}{\sigma_p^2} = \mathopen{}\left(\frac{\sigma_1}{\sigma_p}\right)\mathclose{}^2 = \kappa(\mathbf{A})^2.$$
 >
@@ -2476,7 +2637,7 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 
 > **NOTE:**
 >
-> **Example 40 (Squaring the condition number)** For the [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{A}$ from [Example 39](#exm-matrix-condition-number), compare $\kappa(\mathbf{A})$ with $\kappa({\mathbf{A}}^{\top}\mathbf{A})$:
+> **Example 42 (Squaring the condition number)** For the [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{A}$ from [Example 41](#exm-matrix-condition-number), compare $\kappa(\mathbf{A})$ with $\kappa({\mathbf{A}}^{\top}\mathbf{A})$:
 >
 > ## R
 >
@@ -2505,21 +2666,21 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 > #> 161610.04009381044
 > ```
 >
-> The [condition number](#def-matrix-condition-number) of ${\mathbf{A}}^{\top}\mathbf{A}$ is 161610, and $\kappa(\mathbf{A})^2 =$ 161610, as [Theorem 20](#thm-condition-number-gram) says.
+> The [condition number](#def-matrix-condition-number) of ${\mathbf{A}}^{\top}\mathbf{A}$ is 161610, and $\kappa(\mathbf{A})^2 =$ 161610, as [Theorem 21](#thm-condition-number-gram) says.
 
 > **NOTE:**
 >
-> **Definition 25 (Ill-conditioned matrix)** A [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{A}$ is **ill-conditioned** when its [condition number](#def-matrix-condition-number) is so large that small relative changes in its entries, such as those from rounding, can change the solution of a [linear system](linear-algebra-matrices.llms.md#def-linear-system) by a much larger relative amount. The relative change in the solution can be up to $\kappa(\mathbf{A})$ times the relative change in the entries. A solution computed with $\kappa(\mathbf{A}) \approx 10^k$ therefore loses about $k$ of the digits that the floating-point arithmetic carries [\[14\]](#ref-trefethen1997numerical), Lecture 12.
+> **Definition 27 (Ill-conditioned matrix)** A [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{A}$ is **ill-conditioned** when its [condition number](#def-matrix-condition-number) is so large that small relative changes in its entries, such as those from rounding, can change the solution of a [linear system](linear-algebra-matrices.llms.md#def-linear-system) by a much larger relative amount. The relative change in the solution can be up to $\kappa(\mathbf{A})$ times the relative change in the entries. A solution computed with $\kappa(\mathbf{A}) \approx 10^k$ therefore loses about $k$ of the digits that the floating-point arithmetic carries [\[15\]](#ref-trefethen1997numerical), Lecture 12.
 >
 > There is no sharp threshold: how large is too large depends on how many accurate digits the answer needs.
 
 > **NOTE:**
 >
-> **Definition 26 (Well-conditioned matrix)** A [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{A}$ is **well-conditioned** when its [condition number](#def-matrix-condition-number) is close to $1$, so it is not [ill-conditioned](#def-ill-conditioned).
+> **Definition 28 (Well-conditioned matrix)** A [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{A}$ is **well-conditioned** when its [condition number](#def-matrix-condition-number) is close to $1$, so it is not [ill-conditioned](#def-ill-conditioned).
 
 > **NOTE:**
 >
-> **Example 41 (A small change in the right-hand side moves the solution a long way)** Let $\mathbf{A}$ be the [matrix](linear-algebra-matrices.llms.md#def-matrix) from [Example 39](#exm-matrix-condition-number), and let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = (2, 2.01)$. The system $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ has solution $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 1)$. Change the second entry of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ from $2.01$ to $2.011$, and solve again:
+> **Example 43 (A small change in the right-hand side moves the solution a long way)** Let $\mathbf{A}$ be the [matrix](linear-algebra-matrices.llms.md#def-matrix) from [Example 41](#exm-matrix-condition-number), and let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = (2, 2.01)$. The system $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ has solution $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 1)$. Change the second entry of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ from $2.01$ to $2.011$, and solve again:
 >
 > ## R
 >
@@ -2565,11 +2726,11 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 > #> 0.0003526706147110207 0.1000000000000334 283.55070093371313
 > ```
 >
-> The right-hand side changes by a relative amount of 0.00035, and the solution changes by a relative amount of 0.100, about 284 times as much. That amplification is what [Definition 25](#def-ill-conditioned) describes, and it cannot exceed $\kappa(\mathbf{A}) =$ 402.0.
+> The right-hand side changes by a relative amount of 0.00035, and the solution changes by a relative amount of 0.100, about 284 times as much. That amplification is what [Definition 27](#def-ill-conditioned) describes, and it cannot exceed $\kappa(\mathbf{A}) =$ 402.0.
 
 > **NOTE:**
 >
-> **Theorem 21 (A positive definite matrix has a positive definite inverse)** Let $\mathbf{A}$ be a $p \times p$ positive definite matrix ([Definition 22](#def-positive-definite)) with real entries, with eigendecomposition $\mathbf{A} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}$ ([Definition 18](#def-eigendecomposition)) and eigenvalues $\lambda_1, \ldots, \lambda_p$. Then $\mathbf{A}$ is invertible ([Definition 6](#def-invertible-matrix)),
+> **Theorem 22 (A positive definite matrix has a positive definite inverse)** Let $\mathbf{A}$ be a $p \times p$ positive definite matrix ([Definition 24](#def-positive-definite)) with real entries, with eigendecomposition $\mathbf{A} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}$ ([Definition 20](#def-eigendecomposition)) and eigenvalues $\lambda_1, \ldots, \lambda_p$. Then $\mathbf{A}$ is invertible ([Definition 6](#def-invertible-matrix)),
 >
 > $$\mathbf{A}^{-1} = \mathbf{Q}\,\mathbf{\Lambda}^{-1}\,{\mathbf{Q}}^{\top},
 > \qquad
@@ -2584,7 +2745,7 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 
 > **NOTE:**
 >
-> *Proof*. By [Theorem 19](#thm-definite-eigenvalues), every $\lambda_i > 0$, so $\mathbf{\Lambda}^{-1}$ is well defined, and multiplying the two diagonal matrices entry by entry gives
+> *Proof*. By [Theorem 20](#thm-definite-eigenvalues), every $\lambda_i > 0$, so $\mathbf{\Lambda}^{-1}$ is well defined, and multiplying the two diagonal matrices entry by entry gives
 >
 > $$\begin{aligned}
 > \mathbf{\Lambda}\mathbf{\Lambda}^{-1} &= \mathbf{\Lambda}^{-1}\mathbf{\Lambda} \\
@@ -2613,7 +2774,7 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 >
 > The same steps, with $\mathbf{\Lambda}^{-1}$ and $\mathbf{\Lambda}$ swapped, give $\mathbf{B}\mathbf{A} = \mathbf{I}_p$, so $\mathbf{B} = \mathbf{A}^{-1}$ ([Definition 5](#def-matrix-inverse)). The steps with $\mathbf{Q}$ use [Definition 10](#def-orthogonal-matrix), whose remark records that $\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}_p$ too, and the identity step uses [Theorem 10 in Matrices](linear-algebra-matrices.llms.md#thm-identity).
 >
-> $\mathbf{A}^{-1}$ is symmetric by [Corollary 1](#cor-inverse-symmetric). For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\neq \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = {\mathbf{Q}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, which is not $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ because $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathbf{Q}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$. As in the proof of [Theorem 19](#thm-definite-eigenvalues):
+> $\mathbf{A}^{-1}$ is symmetric by [Corollary 1](#cor-inverse-symmetric). For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\neq \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = {\mathbf{Q}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, which is not $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ because $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathbf{Q}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$. As in the proof of [Theorem 20](#thm-definite-eigenvalues):
 >
 > $$\begin{aligned}
 > {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\mathbf{A}^{-1}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
@@ -2631,7 +2792,7 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 
 > **NOTE:**
 >
-> **Example 42 (Inverting a positive definite matrix)** For $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$, [Example 30](#exm-spectral) gives $\mathbf{Q} = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}$ and eigenvalues $3$ and $1$, so:
+> **Example 44 (Inverting a positive definite matrix)** For $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$, [Example 32](#exm-spectral) gives $\mathbf{Q} = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}$ and eigenvalues $3$ and $1$, so:
 >
 > $$\begin{aligned}
 > \mathbf{A}^{-1}
@@ -2660,19 +2821,19 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 
 > **NOTE:**
 >
-> **Definition 27 (Paraboloid)** A **paraboloid** [\[15\]](#ref-wikipedia_paraboloid) in $\mathbb{R}^{p+1}$ is the graph ${\mathopen{}\left\{(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})) \mid \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p\right\}\mathclose{}}$ of a function
+> **Definition 29 (Paraboloid)** A **paraboloid** [\[16\]](#ref-wikipedia_paraboloid) in $\mathbb{R}^{p+1}$ is the graph ${\mathopen{}\left\{(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})) \mid \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p\right\}\mathclose{}}$ of a function
 >
 > $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + c,$$
 >
-> where $\mathbf{S}$ is a nonzero symmetric $p \times p$ matrix ([Definition 3](#def-symmetric-matrix)), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^p$, and $c \in \mathbb{R}$. The first term is a quadratic form ([Definition 11](#def-quadratic-form)).
+> where $\mathbf{S}$ is a nonzero symmetric $p \times p$ matrix ([Definition 3](#def-symmetric-matrix)), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^p$, and $c \in \mathbb{R}$. The first term is a quadratic form ([Definition 13](#def-quadratic-form)).
 
 > **NOTE:**
 >
-> **Definition 28 (Elliptic paraboloid)** The paraboloid of [Definition 27](#def-paraboloid) is **elliptic** if $\mathbf{S}$ is positive definite ([Definition 22](#def-positive-definite)); it is then a bowl that opens upward.
+> **Definition 30 (Elliptic paraboloid)** The paraboloid of [Definition 29](#def-paraboloid) is **elliptic** if $\mathbf{S}$ is positive definite ([Definition 24](#def-positive-definite)); it is then a bowl that opens upward.
 
 > **NOTE:**
 >
-> **Example 43 (A bowl with its lowest point at the origin)** Take $p = 2$, $\mathbf{S} = \mathbf{I}_2$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$ and $c = 0$. Then $\mathbf{S}$ is positive definite ([Example 36](#exm-positive-definite)), so the graph of
+> **Example 45 (A bowl with its lowest point at the origin)** Take $p = 2$, $\mathbf{S} = \mathbf{I}_2$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$ and $c = 0$. Then $\mathbf{S}$ is positive definite ([Example 38](#exm-positive-definite)), so the graph of
 >
 > $$\begin{aligned}
 > f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) &= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{I}_2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \\
@@ -2702,13 +2863,13 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 
 > **NOTE:**
 >
-> **Definition 29 (Matrix-induced inner product (**$\mathbf{A}$-inner product)) Let $\mathbf{A}$ be a $p \times p$ symmetric positive definite matrix ([Definition 22](#def-positive-definite)) ($\mathbf{A} = {\mathbf{A}}^{\top}$ and ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} > 0$ for all nonzero $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$). The **matrix-induced inner product** (or $\mathbf{A}$-inner product) on $\mathbb{R}^p$ is defined for all $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p$ by
+> **Definition 31 (Matrix-induced inner product (**$\mathbf{A}$-inner product)) Let $\mathbf{A}$ be a $p \times p$ symmetric positive definite matrix ([Definition 24](#def-positive-definite)) ($\mathbf{A} = {\mathbf{A}}^{\top}$ and ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} > 0$ for all nonzero $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$). The **matrix-induced inner product** (or $\mathbf{A}$-inner product) on $\mathbb{R}^p$ is defined for all $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p$ by
 >
 > $${\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rangle\mathclose{}}_{\mathbf{A}} \stackrel{\text{def}}{=}{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}.$$
 
 > **NOTE:**
 >
-> **Example 44 (A matrix-induced inner product calculation)** Consider the symmetric matrix
+> **Example 46 (A matrix-induced inner product calculation)** Consider the symmetric matrix
 >
 > $$\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}.$$
 >
@@ -2723,7 +2884,7 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 > && \text{(complete the square)}
 > \end{aligned}$$
 >
-> which is strictly positive because $x_1^2 + x_2^2 > 0$ when $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\neq \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$. Thus $\mathbf{A}$ is positive definite ([Definition 22](#def-positive-definite)).
+> which is strictly positive because $x_1^2 + x_2^2 > 0$ when $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\neq \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$. Thus $\mathbf{A}$ is positive definite ([Definition 24](#def-positive-definite)).
 >
 > For vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 2)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (3, -1)$, their inner product induced by $\mathbf{A}$ is:
 >
@@ -2767,7 +2928,39 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 
 > **NOTE:**
 >
-> **Theorem 22 (Properties of the matrix-induced inner product)** For every $p \times p$ symmetric positive definite matrix $\mathbf{A}$, the function ${\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rangle\mathclose{}}_{\mathbf{A}} = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ satisfies the four inner product axioms ([Definition 5 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#def-inner-product)): positivity, definiteness, linearity in the first slot, and symmetry. Thus $(\mathbb{R}^p, {\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}}_{\mathbf{A}})$ is an inner product space ([Definition 6 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#def-inner-product-space)).
+> *Remark 22* (A matrix-induced inner product is a symmetric bilinear form). When $\mathbf{A}$ is [symmetric](#def-symmetric-matrix) and [positive definite](#def-positive-definite), its [matrix-induced inner product](#def-matrix-induced-inner-product) is the same function as its [symmetric bilinear form](#def-symmetric-bilinear-form), since both are defined as ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\, \mathbf{A}\, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$:
+>
+> $${\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rangle\mathclose{}}_{\mathbf{A}} = {{B_{\mathbf{A}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right)\mathclose{}}.$$
+>
+> A [symmetric matrix](#def-symmetric-matrix) that is not positive definite still has a symmetric bilinear form, but that form is not an [inner product](linear-algebra-inner-products.llms.md#def-inner-product). For example, take $\mathbf{S}$ from [Example 18](#exm-symmetric-bilinear-form) and the vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} = {(1, -1)}^{\top}$:
+>
+> $$\begin{aligned}
+> {{B_{\mathbf{S}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}\right)\mathclose{}}
+> &= \begin{bmatrix} 1 & -1 \end{bmatrix}
+> \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}
+> \begin{bmatrix} 1 \\ -1 \end{bmatrix}
+> && \text{(}\href{#def-bilinear-form}{\text{Definition~11}}\text{)}
+> \\
+> &= \begin{bmatrix} 1 & -1 \end{bmatrix}
+> \begin{bmatrix} 1 \cdot 1 + 2 \cdot(-1) \\ 2 \cdot 1 + 1 \cdot(-1) \end{bmatrix}
+> && \text{(multiply the matrix by } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} \text{)}
+> \\
+> &= \begin{bmatrix} 1 & -1 \end{bmatrix}
+> \begin{bmatrix} -1 \\ 1 \end{bmatrix}
+> && \text{(multiply and add)}
+> \\
+> &= 1 \cdot(-1) + (-1) \cdot 1
+> && \text{(multiply the row by the column)}
+> \\
+> &= -2.
+> && \text{(multiply and add)}
+> \end{aligned}$$
+>
+> The [quadratic form](#def-quadratic-form) of $\mathbf{S}$ is negative at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}$, so $\mathbf{S}$ is not positive definite.
+
+> **NOTE:**
+>
+> **Theorem 23 (Properties of the matrix-induced inner product)** For every $p \times p$ symmetric positive definite matrix $\mathbf{A}$, the function ${\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rangle\mathclose{}}_{\mathbf{A}} = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ satisfies the four inner product axioms ([Definition 5 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#def-inner-product)): positivity, definiteness, linearity in the first slot, and symmetry. Thus $(\mathbb{R}^p, {\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}}_{\mathbf{A}})$ is an inner product space ([Definition 6 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#def-inner-product-space)).
 >
 > Taking $\mathbf{A} = \mathbf{I}_p$ recovers the standard dot product ([Example 1 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#exm-dot-product-inner-product)), while taking $\mathbf{A} = \operatorname{diag}(c_1, \ldots, c_p)$ recovers the weighted inner product ([Example 3 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#exm-weighted-inner-product)).
 >
@@ -2777,8 +2970,8 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 >
 > *Proof*.
 >
-> - **positivity**: ${\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rangle\mathclose{}}_{\mathbf{A}} = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \ge 0$ for all $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$, because $\mathbf{A}$ is positive definite ([Definition 22](#def-positive-definite));
-> - **definiteness**: ${\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rangle\mathclose{}}_{\mathbf{A}} = 0$ if and only if $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{p \times 1}$, by definition of a positive definite matrix ([Definition 22](#def-positive-definite));
+> - **positivity**: ${\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rangle\mathclose{}}_{\mathbf{A}} = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \ge 0$ for all $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$, because $\mathbf{A}$ is positive definite ([Definition 24](#def-positive-definite));
+> - **definiteness**: ${\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rangle\mathclose{}}_{\mathbf{A}} = 0$ if and only if $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{p \times 1}$, by definition of a positive definite matrix ([Definition 24](#def-positive-definite));
 > - **linearity in the first slot**: for all $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} \in \mathbb{R}^p$ and real numbers $a, b$, $$\begin{aligned}
 >   {\mathopen{}\left\langle a\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ b\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}\right\rangle\mathclose{}}_{\mathbf{A}}
 >   &= {(a\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ b\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})}^{\top}\,\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}
@@ -2836,7 +3029,7 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 > &= A_{ij},
 > \end{aligned}$$
 >
-> so $\mathbf{A}$ is symmetric ([Definition 3](#def-symmetric-matrix)). For any $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\neq \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = {\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rangle\mathclose{}} > 0$ by positivity and definiteness of the inner product, so $\mathbf{A}$ is positive definite ([Definition 22](#def-positive-definite)).
+> so $\mathbf{A}$ is symmetric ([Definition 3](#def-symmetric-matrix)). For any $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\neq \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = {\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rangle\mathclose{}} > 0$ by positivity and definiteness of the inner product, so $\mathbf{A}$ is positive definite ([Definition 24](#def-positive-definite)).
 >
 > For uniqueness, if another matrix $\mathbf{B}$ satisfies ${\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rangle\mathclose{}} = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\mathbf{B}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ for all $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$, evaluating at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_i$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j$ gives
 >
@@ -2850,7 +3043,7 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 
 > **NOTE:**
 >
-> **Example 45 (Checking the inner product axioms, and recovering the matrix from the inner product)** Take $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ from [Example 44](#exm-matrix-induced-inner-product), the vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 2)$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (3, -1)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} = (0, 4)$, and the numbers $a = 2$ and $b = -3$. The code computes both sides of each axiom in [Theorem 22](#thm-matrix-induced-inner-product), and then the numbers ${\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_i, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j\right\rangle\mathclose{}}_{\mathbf{A}}$ for the standard basis vectors.
+> **Example 47 (Checking the inner product axioms, and recovering the matrix from the inner product)** Take $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ from [Example 46](#exm-matrix-induced-inner-product), the vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 2)$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (3, -1)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} = (0, 4)$, and the numbers $a = 2$ and $b = -3$. The code computes both sides of each axiom in [Theorem 23](#thm-matrix-induced-inner-product), and then the numbers ${\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_i, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j\right\rangle\mathclose{}}_{\mathbf{A}}$ for the standard basis vectors.
 >
 > ``` downlit
 > A <- matrix(c(2, 1, 1, 2), nrow = 2)
@@ -2880,15 +3073,15 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 > #> [2,]    1    2
 > ```
 >
-> The inner product of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ with itself is 14, which is positive. The two orders give the same number, 7 and 7. Both sides of the linearity axiom equal 28. The matrix of numbers ${\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_i, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j\right\rangle\mathclose{}}_{\mathbf{A}}$ is equal to $\mathbf{A}$, as the converse in [Theorem 22](#thm-matrix-induced-inner-product) says.
+> The inner product of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ with itself is 14, which is positive. The two orders give the same number, 7 and 7. Both sides of the linearity axiom equal 28. The matrix of numbers ${\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_i, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j\right\rangle\mathclose{}}_{\mathbf{A}}$ is equal to $\mathbf{A}$, as the converse in [Theorem 23](#thm-matrix-induced-inner-product) says.
 
 > **NOTE:**
 >
-> **Corollary 5 (A positive definite matrix is a transpose product)** Let $\mathbf{A}$ be a $p \times p$ symmetric positive definite matrix ([Definition 22](#def-positive-definite)). Then $\mathbf{A} = {\mathbf{W}}^{\top}\mathbf{W}$ for some invertible $p \times p$ matrix $\mathbf{W}$.
+> **Corollary 5 (A positive definite matrix is a transpose product)** Let $\mathbf{A}$ be a $p \times p$ symmetric positive definite matrix ([Definition 24](#def-positive-definite)). Then $\mathbf{A} = {\mathbf{W}}^{\top}\mathbf{W}$ for some invertible $p \times p$ matrix $\mathbf{W}$.
 
 > **NOTE:**
 >
-> *Proof*. By the spectral theorem ([Theorem 14](#thm-spectral)), $\mathbf{A} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}$ with $\mathbf{Q}$ orthogonal and $\mathbf{\Lambda}$ diagonal with the eigenvalues $\lambda_i$ of $\mathbf{A}$ on its diagonal. These are positive ([Theorem 19](#thm-definite-eigenvalues)), so $\mathbf{\Lambda}^{1/2}$, the diagonal matrix with entries $\sqrt{\lambda_i}$, is defined. Take $\mathbf{W} = \mathbf{\Lambda}^{1/2}{\mathbf{Q}}^{\top}$. Since $\mathbf{\Lambda}^{1/2}$ is diagonal, ${(\mathbf{\Lambda}^{1/2})}^{\top} = \mathbf{\Lambda}^{1/2}$, and
+> *Proof*. By the spectral theorem ([Theorem 15](#thm-spectral)), $\mathbf{A} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}$ with $\mathbf{Q}$ orthogonal and $\mathbf{\Lambda}$ diagonal with the eigenvalues $\lambda_i$ of $\mathbf{A}$ on its diagonal. These are positive ([Theorem 20](#thm-definite-eigenvalues)), so $\mathbf{\Lambda}^{1/2}$, the diagonal matrix with entries $\sqrt{\lambda_i}$, is defined. Take $\mathbf{W} = \mathbf{\Lambda}^{1/2}{\mathbf{Q}}^{\top}$. Since $\mathbf{\Lambda}^{1/2}$ is diagonal, ${(\mathbf{\Lambda}^{1/2})}^{\top} = \mathbf{\Lambda}^{1/2}$, and
 >
 > $$\begin{aligned}
 > {\mathbf{W}}^{\top}\mathbf{W} &= \mathbf{Q}\mathbf{\Lambda}^{1/2}\mathbf{\Lambda}^{1/2}{\mathbf{Q}}^{\top} \\
@@ -2900,7 +3093,7 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 
 > **NOTE:**
 >
-> **Theorem 23 (A matrix-induced inner product is a dot product of transformed vectors)** Let $\mathbf{A}$ be a $p \times p$ symmetric positive definite matrix, and let $\mathbf{W}$ be any $p \times p$ matrix with $\mathbf{A} = {\mathbf{W}}^{\top}\mathbf{W}$. Then for all $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p$, the $\mathbf{A}$-inner product ([Definition 29](#def-matrix-induced-inner-product)) satisfies
+> **Theorem 24 (A matrix-induced inner product is a dot product of transformed vectors)** Let $\mathbf{A}$ be a $p \times p$ symmetric positive definite matrix, and let $\mathbf{W}$ be any $p \times p$ matrix with $\mathbf{A} = {\mathbf{W}}^{\top}\mathbf{W}$. Then for all $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p$, the $\mathbf{A}$-inner product ([Definition 31](#def-matrix-induced-inner-product)) satisfies
 >
 > $${\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rangle\mathclose{}}_{\mathbf{A}} = (\mathbf{W}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) \cdot (\mathbf{W}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}).$$
 
@@ -2914,9 +3107,9 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 
 > **NOTE:**
 >
-> *Remark 21* (Inner product spaces in machine learning). In machine learning and statistics, choosing or learning an inner product space tailors geometric notions of distance, angle, and projection to the structure of the data:
+> *Remark 23* (Inner product spaces in machine learning). In machine learning and statistics, choosing or learning an inner product space tailors geometric notions of distance, angle, and projection to the structure of the data:
 >
-> 1.  **Mahalanobis metric and whitening**: Standard Euclidean distance treats all coordinate axes identically, ignoring feature correlations and variance differences. If data features have a symmetric positive definite covariance matrix $\mathbf{\Sigma}$ ([Definition 22](#def-positive-definite)), the precision matrix $\mathbf{A} = \mathbf{\Sigma}^{-1}$ ([Theorem 21](#thm-pd-inverse)) defines the Mahalanobis inner product ${\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rangle\mathclose{}}_{\mathbf{\Sigma}^{-1}} = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{\Sigma}^{-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$. The induced distance $d_{\mathbf{\Sigma}^{-1}}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) = \sqrt{{(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})}^{\top}\mathbf{\Sigma}^{-1}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})}$ measures statistical distance normalized by variance along each principal direction. Factoring $\mathbf{\Sigma}^{-1} = {\mathbf{W}}^{\top}\mathbf{W}$ (via Cholesky or spectral decomposition, [Corollary 5](#cor-pd-transpose-product)), this inner product is the Euclidean dot product of the whitened vectors $\mathbf{W}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $\mathbf{W}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ ([Theorem 23](#thm-whitening-inner-product)).
+> 1.  **Mahalanobis metric and whitening**: Standard Euclidean distance treats all coordinate axes identically, ignoring feature correlations and variance differences. If data features have a symmetric positive definite covariance matrix $\mathbf{\Sigma}$ ([Definition 24](#def-positive-definite)), the precision matrix $\mathbf{A} = \mathbf{\Sigma}^{-1}$ ([Theorem 22](#thm-pd-inverse)) defines the Mahalanobis inner product ${\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rangle\mathclose{}}_{\mathbf{\Sigma}^{-1}} = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{\Sigma}^{-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$. The induced distance $d_{\mathbf{\Sigma}^{-1}}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) = \sqrt{{(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})}^{\top}\mathbf{\Sigma}^{-1}(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})}$ measures statistical distance normalized by variance along each principal direction. Factoring $\mathbf{\Sigma}^{-1} = {\mathbf{W}}^{\top}\mathbf{W}$ (via Cholesky or spectral decomposition, [Corollary 5](#cor-pd-transpose-product)), this inner product is the Euclidean dot product of the whitened vectors $\mathbf{W}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $\mathbf{W}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ ([Theorem 24](#thm-whitening-inner-product)).
 >
 > 2.  **The kernel trick and reproducing kernel Hilbert spaces (RKHS)**: Algorithms such as support vector machines (SVMs), kernel ridge regression, and Gaussian processes depend on training vectors solely through pairwise inner products ${\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_i, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_j\right\rangle\mathclose{}}$. By mapping data into a higher- or infinite-dimensional inner product space via a feature map $D: \mathbb{R}^p \to \mathcal{H}$, the kernel trick replaces the computation of $D(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_i)$ with an evaluation of a positive definite kernel function: $$k(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_i, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_j) \stackrel{\text{def}}{=}{\mathopen{}\left\langle D(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_i), D(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_j)\right\rangle\mathclose{}}_{\mathcal{H}}.$$ Mercer’s theorem guarantees that every symmetric positive definite kernel function implicitly defines a valid inner product space $\mathcal{H}$ (a reproducing kernel Hilbert space) without requiring explicit coordinate representations.
 >
@@ -2928,14 +3121,14 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 
 > **NOTE:**
 >
-> **Definition 30 (Determinant)** The **determinant** [\[16\]](#ref-wikipedia_determinant) of a $p \times p$ matrix $\mathbf{A}$ with entries $a_{ij}$, written $\det(\mathbf{A})$ or $\mathopen{}\left|\mathbf{A}\right|\mathclose{}$, is the number defined recursively in $p$:
+> **Definition 32 (Determinant)** The **determinant** [\[17\]](#ref-wikipedia_determinant) of a $p \times p$ matrix $\mathbf{A}$ with entries $a_{ij}$, written $\det(\mathbf{A})$ or $\mathopen{}\left|\mathbf{A}\right|\mathclose{}$, is the number defined recursively in $p$:
 >
 > - For $p = 1$, $\det(\mathbf{A}) = a_{11}$.
 > - For $p \ge 2$, $$\det(\mathbf{A}) = \sum_{j=1}^p(-1)^{1+j}\, a_{1j} {\det\mathopen{}\left(\mathbf{A}_{(1j)}\right)\mathclose{}},$$ where $\mathbf{A}_{(1j)}$ is the $(p-1) \times (p-1)$ matrix left after deleting row $1$ and column $j$ of $\mathbf{A}$.
 
 > **NOTE:**
 >
-> **Example 46 (Determinant of a** $2 \times 2$ matrix) For $\mathbf{A} = \begin{bmatrix} a & b \\ c & d \end{bmatrix}$, deleting row 1 and column 1 leaves $\begin{bmatrix} d \end{bmatrix}$, and deleting row 1 and column 2 leaves $\begin{bmatrix} c \end{bmatrix}$. So:
+> **Example 48 (Determinant of a** $2 \times 2$ matrix) For $\mathbf{A} = \begin{bmatrix} a & b \\ c & d \end{bmatrix}$, deleting row 1 and column 1 leaves $\begin{bmatrix} d \end{bmatrix}$, and deleting row 1 and column 2 leaves $\begin{bmatrix} c \end{bmatrix}$. So:
 >
 > $$\begin{aligned}
 > \det(\mathbf{A})
@@ -2956,13 +3149,13 @@ See also [\[12\]](#ref-wikipedia_definite_matrix).
 
 > **NOTE:**
 >
-> *Remark 22* (Cofactor expansion). The recursive formula in [Definition 30](#def-determinant) is the *cofactor expansion* along the first row. Other sources define the determinant as a sum over all orderings of the columns and derive this expansion from it; the two definitions agree [\[6\]](#ref-banerjee2014linear).
+> *Remark 24* (Cofactor expansion). The recursive formula in [Definition 32](#def-determinant) is the *cofactor expansion* along the first row. Other sources define the determinant as a sum over all orderings of the columns and derive this expansion from it; the two definitions agree [\[6\]](#ref-banerjee2014linear).
 >
 > Each ordering picks one entry from each row, from the column that the ordering assigns to that row, and multiplies them. Its sign is $+1$ if the ordering takes an even number of swaps of two columns to reach from $(1, 2, \ldots, p)$, and $-1$ if it takes an odd number.
 >
-> For $p = 2$, the columns have two orderings. The ordering $(1, 2)$ keeps each column in place, picks the entries $a_{11}$ and $a_{22}$, and has sign $+1$. The ordering $(2, 1)$ swaps the two columns, picks the entries $a_{12}$ and $a_{21}$, and has sign $-1$. The sum $a_{11} a_{22} - a_{12} a_{21}$ is the value $a d - b c$ from [Example 46](#exm-determinant).
+> For $p = 2$, the columns have two orderings. The ordering $(1, 2)$ keeps each column in place, picks the entries $a_{11}$ and $a_{22}$, and has sign $+1$. The ordering $(2, 1)$ swaps the two columns, picks the entries $a_{12}$ and $a_{21}$, and has sign $-1$. The sum $a_{11} a_{22} - a_{12} a_{21}$ is the value $a d - b c$ from [Example 48](#exm-determinant).
 
-See also [\[16\]](#ref-wikipedia_determinant).
+See also [\[17\]](#ref-wikipedia_determinant).
 
 > **TIP:**
 >
@@ -2972,7 +3165,7 @@ See also [\[16\]](#ref-wikipedia_determinant).
 
 > **NOTE:**
 >
-> **Theorem 24 (Determinant of a diagonal matrix)** The determinant ([Definition 30](#def-determinant)) of a $p \times p$ diagonal matrix ([Definition 4](#def-diagonal-matrix)) is the product of its diagonal entries:
+> **Theorem 25 (Determinant of a diagonal matrix)** The determinant ([Definition 32](#def-determinant)) of a $p \times p$ diagonal matrix ([Definition 4](#def-diagonal-matrix)) is the product of its diagonal entries:
 >
 > $${\det\mathopen{}\left(
 > \begin{bmatrix}
@@ -3006,17 +3199,17 @@ See also [\[16\]](#ref-wikipedia_determinant).
 
 > **NOTE:**
 >
-> **Example 47 (Determinant of a scaled identity matrix)** For a number $c$, $c\,\mathbf{I}_p$ is diagonal with every diagonal entry equal to $c$, so $\det(c\,\mathbf{I}_p) = c^p$. In particular, $\det(\mathbf{I}_p) = 1$.
+> **Example 49 (Determinant of a scaled identity matrix)** For a number $c$, $c\,\mathbf{I}_p$ is diagonal with every diagonal entry equal to $c$, so $\det(c\,\mathbf{I}_p) = c^p$. In particular, $\det(\mathbf{I}_p) = 1$.
 
 > **NOTE:**
 >
-> **Theorem 25 (Determinant of a product)** For $p \times p$ matrices $\mathbf{A}$ and $\mathbf{B}$,
+> **Theorem 26 (Determinant of a product)** For $p \times p$ matrices $\mathbf{A}$ and $\mathbf{B}$,
 >
 > $$\det(\mathbf{A}\mathbf{B}) = \det(\mathbf{A}) \det(\mathbf{B}).$$
 
 > **NOTE:**
 >
-> **Example 48 (Checking the product rule)** For $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}$ and $\mathbf{B} = \begin{bmatrix} 1 & 0 \\ 3 & 1 \end{bmatrix}$, [Example 46](#exm-determinant) gives
+> **Example 50 (Checking the product rule)** For $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}$ and $\mathbf{B} = \begin{bmatrix} 1 & 0 \\ 3 & 1 \end{bmatrix}$, [Example 48](#exm-determinant) gives
 >
 > $$\begin{aligned}
 > \det(\mathbf{A}) &= 2 \cdot 1 - 1 \cdot 0 \\
@@ -3048,13 +3241,13 @@ See also [\[16\]](#ref-wikipedia_determinant).
 
 > **NOTE:**
 >
-> *Remark 23* (An example is not a proof). [Example 48](#exm-det-product) checks [Theorem 25](#thm-det-product) for one pair of $2 \times 2$ matrices, which shows the theorem holds there but does not prove it for every pair. The proof needs properties of the determinant that these notes don’t develop; see Banerjee and Roy [\[6\]](#ref-banerjee2014linear).
+> *Remark 25* (An example is not a proof). [Example 50](#exm-det-product) checks [Theorem 26](#thm-det-product) for one pair of $2 \times 2$ matrices, which shows the theorem holds there but does not prove it for every pair. The proof needs properties of the determinant that these notes don’t develop; see Banerjee and Roy [\[6\]](#ref-banerjee2014linear).
 
-See also [\[16\]](#ref-wikipedia_determinant).
+See also [\[17\]](#ref-wikipedia_determinant).
 
 > **NOTE:**
 >
-> **Theorem 26 (The determinant of a symmetric matrix is the product of its eigenvalues)** Let $\mathbf{A}$ be a $p \times p$ symmetric matrix with real entries, with eigendecomposition $\mathbf{A} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}$ ([Definition 18](#def-eigendecomposition)) and eigenvalues $\lambda_1, \ldots, \lambda_p$ on the diagonal of $\mathbf{\Lambda}$. Then
+> **Theorem 27 (The determinant of a symmetric matrix is the product of its eigenvalues)** Let $\mathbf{A}$ be a $p \times p$ symmetric matrix with real entries, with eigendecomposition $\mathbf{A} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}$ ([Definition 20](#def-eigendecomposition)) and eigenvalues $\lambda_1, \ldots, \lambda_p$ on the diagonal of $\mathbf{\Lambda}$. Then
 >
 > $$\det(\mathbf{A}) = \prod_{i=1}^p \lambda_i.$$
 
@@ -3094,26 +3287,26 @@ See also [\[16\]](#ref-wikipedia_determinant).
 > && \text{(determinant of a diagonal matrix)}
 > \end{aligned}$$
 >
-> The product steps are [Theorem 25](#thm-det-product), the orthogonality step is [Definition 10](#def-orthogonal-matrix), and the identity and diagonal steps are [Theorem 24](#thm-det-diagonal) and [Example 47](#exm-det-diagonal).
+> The product steps are [Theorem 26](#thm-det-product), the orthogonality step is [Definition 10](#def-orthogonal-matrix), and the identity and diagonal steps are [Theorem 25](#thm-det-diagonal) and [Example 49](#exm-det-diagonal).
 
 > **NOTE:**
 >
-> **Corollary 6 (A positive definite matrix has a positive determinant)** If $\mathbf{A}$ is positive definite ([Definition 22](#def-positive-definite)), then $\det(\mathbf{A}) > 0$.
+> **Corollary 6 (A positive definite matrix has a positive determinant)** If $\mathbf{A}$ is positive definite ([Definition 24](#def-positive-definite)), then $\det(\mathbf{A}) > 0$.
 
 > **NOTE:**
 >
-> *Proof*. By [Theorem 19](#thm-definite-eigenvalues), every eigenvalue of $\mathbf{A}$ is positive, so their product, which is $\det(\mathbf{A})$ by [Theorem 26](#thm-det-eigenvalues), is positive.
+> *Proof*. By [Theorem 20](#thm-definite-eigenvalues), every eigenvalue of $\mathbf{A}$ is positive, so their product, which is $\det(\mathbf{A})$ by [Theorem 27](#thm-det-eigenvalues), is positive.
 
 > **NOTE:**
 >
-> **Example 49 (Two ways to the same determinant)** $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ has eigenvalues $3$ and $1$ ([Example 27](#exm-eigenvalue)), so [Theorem 26](#thm-det-eigenvalues) gives
+> **Example 51 (Two ways to the same determinant)** $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ has eigenvalues $3$ and $1$ ([Example 29](#exm-eigenvalue)), so [Theorem 27](#thm-det-eigenvalues) gives
 >
 > $$\begin{aligned}
 > \det(\mathbf{A}) &= 3 \cdot 1 \\
 > &= 3,
 > \end{aligned}$$
 >
-> matching $2 \cdot 2 - 1 \cdot 1 = 3$ from [Example 46](#exm-determinant).
+> matching $2 \cdot 2 - 1 \cdot 1 = 3$ from [Example 48](#exm-determinant).
 
 # Definitions on this page
 
@@ -3127,26 +3320,28 @@ See also [\[16\]](#ref-wikipedia_determinant).
 - [Definition 8 (Orthogonal projection matrix)](#def-projection-matrix)
 - [Definition 9 (Oblique projection)](#def-oblique-projection)
 - [Definition 10 (Orthogonal matrix)](#def-orthogonal-matrix)
-- [Definition 11 (Quadratic form)](#def-quadratic-form)
-- [Definition 12 (Symmetric part of a square matrix)](#def-symmetric-part)
-- [Definition 13 (Trace)](#def-trace)
-- [Definition 14 (Matrix inner product)](#def-matrix-inner-product)
-- [Definition 15 (Frobenius norm)](#def-frobenius-norm)
-- [Definition 16 (Eigenvalue)](#def-eigenvalue)
-- [Definition 17 (Eigenvector)](#def-eigenvector)
-- [Definition 18 (Eigendecomposition, spectral decomposition)](#def-eigendecomposition)
-- [Definition 19 (Singular value decomposition)](#def-svd)
-- [Definition 20 (Singular values)](#def-singular-values)
-- [Definition 21 (Positive semidefinite matrix)](#def-positive-semidefinite)
-- [Definition 22 (Positive definite matrix)](#def-positive-definite)
-- [Definition 23 (Condition number of a positive definite matrix)](#def-condition-number)
-- [Definition 24 (Condition number of a matrix)](#def-matrix-condition-number)
-- [Definition 25 (Ill-conditioned matrix)](#def-ill-conditioned)
-- [Definition 26 (Well-conditioned matrix)](#def-well-conditioned)
-- [Definition 27 (Paraboloid)](#def-paraboloid)
-- [Definition 28 (Elliptic paraboloid)](#def-elliptic-paraboloid)
-- [Definition 29 (Matrix-induced inner product (](#def-matrix-induced-inner-product)$\mathbf{A}$-inner product))
-- [Definition 30 (Determinant)](#def-determinant)
+- [Definition 11 (Bilinear form)](#def-bilinear-form)
+- [Definition 12 (Symmetric bilinear form)](#def-symmetric-bilinear-form)
+- [Definition 13 (Quadratic form)](#def-quadratic-form)
+- [Definition 14 (Symmetric part of a square matrix)](#def-symmetric-part)
+- [Definition 15 (Trace)](#def-trace)
+- [Definition 16 (Matrix inner product)](#def-matrix-inner-product)
+- [Definition 17 (Frobenius norm)](#def-frobenius-norm)
+- [Definition 18 (Eigenvalue)](#def-eigenvalue)
+- [Definition 19 (Eigenvector)](#def-eigenvector)
+- [Definition 20 (Eigendecomposition, spectral decomposition)](#def-eigendecomposition)
+- [Definition 21 (Singular value decomposition)](#def-svd)
+- [Definition 22 (Singular values)](#def-singular-values)
+- [Definition 23 (Positive semidefinite matrix)](#def-positive-semidefinite)
+- [Definition 24 (Positive definite matrix)](#def-positive-definite)
+- [Definition 25 (Condition number of a positive definite matrix)](#def-condition-number)
+- [Definition 26 (Condition number of a matrix)](#def-matrix-condition-number)
+- [Definition 27 (Ill-conditioned matrix)](#def-ill-conditioned)
+- [Definition 28 (Well-conditioned matrix)](#def-well-conditioned)
+- [Definition 29 (Paraboloid)](#def-paraboloid)
+- [Definition 30 (Elliptic paraboloid)](#def-elliptic-paraboloid)
+- [Definition 31 (Matrix-induced inner product (](#def-matrix-induced-inner-product)$\mathbf{A}$-inner product))
+- [Definition 32 (Determinant)](#def-determinant)
 
 Back to top
 
@@ -3178,40 +3373,44 @@ S. Banerjee and A. Roy, *Linear algebra and matrix analysis for statistics*, vol
 
 \[7\]
 
-Wikipedia contributors, “Quadratic form — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Quadratic_form>
+Wikipedia contributors, “Bilinear form — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Bilinear_form>
 
 \[8\]
 
-Wikipedia contributors, “Trace (linear algebra) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Trace_(linear_algebra)>
+Wikipedia contributors, “Quadratic form — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Quadratic_form>
 
 \[9\]
 
-Wikipedia contributors, “Frobenius norm — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Frobenius_norm>
+Wikipedia contributors, “Trace (linear algebra) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Trace_(linear_algebra)>
 
 \[10\]
 
-Wikipedia contributors, “Eigendecomposition of a matrix — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Eigendecomposition_of_a_matrix>
+Wikipedia contributors, “Frobenius norm — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Frobenius_norm>
 
 \[11\]
 
-Wikipedia contributors, “Singular value decomposition — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Singular_value_decomposition>
+Wikipedia contributors, “Eigendecomposition of a matrix — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Eigendecomposition_of_a_matrix>
 
 \[12\]
 
-Wikipedia contributors, “Definite matrix — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Definite_matrix>
+Wikipedia contributors, “Singular value decomposition — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Singular_value_decomposition>
 
 \[13\]
 
-Wikipedia contributors, “Condition number — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Condition_number>
+Wikipedia contributors, “Definite matrix — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Definite_matrix>
 
 \[14\]
 
-L. N. Trefethen and D. Bau III, *Numerical linear algebra*. SIAM, 1997. doi: [10.1137/1.9780898719574](https://doi.org/10.1137/1.9780898719574).
+Wikipedia contributors, “Condition number — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Condition_number>
 
 \[15\]
 
-Wikipedia contributors, “Paraboloid — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Paraboloid>
+L. N. Trefethen and D. Bau III, *Numerical linear algebra*. SIAM, 1997. doi: [10.1137/1.9780898719574](https://doi.org/10.1137/1.9780898719574).
 
 \[16\]
+
+Wikipedia contributors, “Paraboloid — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Paraboloid>
+
+\[17\]
 
 Wikipedia contributors, “Determinant — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Determinant>

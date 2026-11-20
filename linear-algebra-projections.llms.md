@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-19 15:36:46 (PST)
+Last modified: 2026-11-19 18:13:07 (PST)
 
 # 1 Design Matrix
 
@@ -1068,7 +1068,7 @@ Last modified: 2026-11-19 15:36:46 (PST)
 
 > **NOTE:**
 >
-> **Theorem 14 (The Moore-Penrose inverse of a symmetric matrix from its eigendecomposition)** Let $\mathbf{S} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}$ be an eigendecomposition ([Definition 18 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-eigendecomposition)) of a [symmetric matrix](linear-algebra-special-matrices.llms.md#def-symmetric-matrix) $\mathbf{S}$, with [diagonal entries](linear-algebra-matrices.llms.md#def-diagonal-entry) $\lambda_1, \ldots, \lambda_p$ in the [diagonal matrix](linear-algebra-special-matrices.llms.md#def-diagonal-matrix) $\mathbf{\Lambda}$. Let $\mathbf{\Lambda}^+$ be the diagonal matrix with $j$th [diagonal entry](linear-algebra-matrices.llms.md#def-diagonal-entry) $1/\lambda_j$ if $\lambda_j \ne 0$ and $0$ if $\lambda_j = 0$. Then
+> **Theorem 14 (The Moore-Penrose inverse of a symmetric matrix from its eigendecomposition)** Let $\mathbf{S} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}$ be an eigendecomposition ([Definition 20 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-eigendecomposition)) of a [symmetric matrix](linear-algebra-special-matrices.llms.md#def-symmetric-matrix) $\mathbf{S}$, with [diagonal entries](linear-algebra-matrices.llms.md#def-diagonal-entry) $\lambda_1, \ldots, \lambda_p$ in the [diagonal matrix](linear-algebra-special-matrices.llms.md#def-diagonal-matrix) $\mathbf{\Lambda}$. Let $\mathbf{\Lambda}^+$ be the diagonal matrix with $j$th [diagonal entry](linear-algebra-matrices.llms.md#def-diagonal-entry) $1/\lambda_j$ if $\lambda_j \ne 0$ and $0$ if $\lambda_j = 0$. Then
 >
 > $$\mathbf{S}^+ = \mathbf{Q}\mathbf{\Lambda}^+{\mathbf{Q}}^{\top}.$$
 
