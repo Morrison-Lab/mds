@@ -4,7 +4,7 @@
 Let $f(x) = \minf{x^2, 1}$, as in @exm-convex-on.
 
 - $f$ is [convex at](#def-convex-at) $0$:
-  the [open ball](vector-calculus.qmd#def-ball) of radius $1$ around $0$ is $(-1, 1)$,
+  the [open ball](vector-calculus-hessian.qmd#def-ball) of radius $1$ around $0$ is $(-1, 1)$,
   a [subset](https://morrison-lab.github.io/mcs/sets.html#def-subset) of $[-1, 1]$,
   and $f$ is [convex on](#def-convex-on) $[-1, 1]$ by @exm-convex-on,
   so the defining [inequality](https://morrison-lab.github.io/mcs/proof-writing.html#def-inequality) holds [for all](https://morrison-lab.github.io/mcs/proof-writing.html#def-universal-quantifier) $x, y \in (-1, 1)$ as well.

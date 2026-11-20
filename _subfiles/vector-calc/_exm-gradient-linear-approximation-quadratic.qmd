@@ -3,8 +3,8 @@
 
 For $f(\vx) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)$,
 the second function of @exm-quadratic-model,
-the [gradient](vector-calculus.qmd#def-vector-derivative) is $\vecf{g} = \tp{(x_1,\ 3 x_2)}$,
-and the [Hessian](vector-calculus.qmd#def-hessian) is $\sbmat{ 1 & 0 \\ 0 & 3 }$ at every point.
+the [gradient](vector-calculus-gradients.qmd#def-vector-derivative) is $\vecf{g} = \tp{(x_1,\ 3 x_2)}$,
+and the [Hessian](vector-calculus-hessian.qmd#def-hessian) is $\sbmat{ 1 & 0 \\ 0 & 3 }$ at every [point](linear-algebra-vectors.qmd#def-real-coordinate-space).
 By @lem-gradient-linear-approximation,
 the [linear approximation of the gradient](#def-gradient-linear-approximation) at $\vx$ is
 

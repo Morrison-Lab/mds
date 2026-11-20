@@ -75,6 +75,14 @@ page-xrefs:
       - linear-algebra-diagonalization.qmd
       - linear-algebra-cholesky.qmd
       - linear-algebra-complex.qmd
+  # vector-calculus.qmd was split (mds#156), so @id references resolve
+  # across its pages, and links to it from before that split (index#id)
+  # go on to the page now holding #id.
+  - index: vector-calculus.qmd
+    pages:
+      - vector-calculus-gradients.qmd
+      - vector-calculus-derivative-rules.qmd
+      - vector-calculus-hessian.qmd
   # The critical points section moved from calculus-derivatives.qmd to
   # optimization.qmd, so links to its ids on the calculus pages go on there.
   # The Taylor series section moved from calculus-derivatives.qmd to

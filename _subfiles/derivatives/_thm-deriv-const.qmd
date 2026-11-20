@@ -1,7 +1,7 @@
 :::{#thm-deriv-const}
 #### Constant rule
 
-If $c$ is [constant with respect to](vector-calculus.qmd#def-constant-wrt-vector) $x$, then
+If $c$ is [constant with respect to](vector-calculus-derivative-rules.qmd#def-constant-wrt-vector) $x$, then
 
 $$\deriv{x}c = 0$$
 

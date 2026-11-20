@@ -2,7 +2,7 @@
 #### A strictly concave quadratic function
 
 Let $f(\vx) = 1 - x_1^2 - x_2^2$ for $\vx = \tp{(x_1, x_2)}$.
-Its [Hessian](vector-calculus.qmd#def-hessian) is $\matr{H}_f(\vx) = -2 \matr{I}_2$ at every $\vx$,
+Its [Hessian](vector-calculus-hessian.qmd#def-hessian) is $\matr{H}_f(\vx) = -2 \matr{I}_2$ at every $\vx$,
 so $-\matr{H}_f(\vx) = 2 \matr{I}_2$.
 For every $\vecf{v} \ne \vzero$,
 

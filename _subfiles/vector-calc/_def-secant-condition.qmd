@@ -1,10 +1,10 @@
 :::{#def-secant-condition}
 #### Secant condition
 
-Let $f : \reals^p \to \reals$ have first [partial derivatives](vector-calculus.qmd#def-partial-derivative),
+Let $f : \reals^p \to \reals$ have first [partial derivatives](vector-calculus-gradients.qmd#def-partial-derivative),
 and let $\vx, \vx^+ \in \reals^p$.
 Write $\vecf{s} \eqdef \vx^+ - \vx$ for the step
-and $\vy \eqdef \deriv{\vx} f(\vx^+) - \deriv{\vx} f(\vx)$ for the change in the [gradient](vector-calculus.qmd#def-vector-derivative).
+and $\vy \eqdef \deriv{\vx} f(\vx^+) - \deriv{\vx} f(\vx)$ for the change in the [gradient](vector-calculus-gradients.qmd#def-vector-derivative).
 A [symmetric matrix](linear-algebra.qmd#def-symmetric-matrix) $\matr{B}$ satisfies the **secant condition**
 [@nocedal2006numerical, Chapter 6]
 for $(\vecf{s}, \vy)$ when

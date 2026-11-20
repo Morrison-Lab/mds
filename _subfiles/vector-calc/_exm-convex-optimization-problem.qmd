@@ -2,7 +2,7 @@
 #### Minimizing over a line, and over a circle
 
 Let $f(\vx) = x_1^2 + x_2^2$.
-Its [Hessian](vector-calculus.qmd#def-hessian) is $2 \matr{I}_2$ at every $\vx$,
+Its [Hessian](vector-calculus-hessian.qmd#def-hessian) is $2 \matr{I}_2$ at every $\vx$,
 which is [positive semidefinite](linear-algebra-definite-matrices.qmd#def-positive-semidefinite),
 so $f$ is [convex](algebra-sums.qmd#def-convex-function) by part 1 of @thm-convex-hessian.
 
