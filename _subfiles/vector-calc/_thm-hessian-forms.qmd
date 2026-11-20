@@ -30,7 +30,7 @@ By @thm-row-deriv-tp-col-deriv, the transposed gradient $\tp{\paren{\deriv{\vx} 
 equals the row-vector derivative $\derivf{f(\vx)}{\tp{\vx}}$.
 Substituting it into @eq-hessian gives the first line.
 The second line is the same expression written as a second derivative.
-It follows the [shape rule](linear-algebra-matrices.qmd#def-shape-rule) of [matrix multiplication](linear-algebra-matrices.qmd#def-matrix-mult) (@rem-row-derivative-shape):
+It follows the [shape rule](linear-algebra-matrix-multiplication.qmd#def-shape-rule) of [matrix multiplication](linear-algebra-matrix-multiplication.qmd#def-matrix-mult) (@rem-row-derivative-shape):
 the $p \times 1$ column-vector operator $\deriv{\vx}$ stands on the left of a $1 \times p$ row vector,
 giving a $p \times p$ matrix.
 

@@ -1,9 +1,9 @@
 :::{#exr-matvec-practice}
 #### A matrix-vector product with more columns than rows
 
-A [matrix-vector product](#def-matvec-mult) $\matr{A}\vx$ computes one [weighted sum](linear-algebra-vectors.qmd#def-weighted-sum) of the entries of $\vx$ for each [row of $\matr{A}$](#def-matrix-row),
+A [matrix-vector product](#def-matvec-mult) $\matr{A}\vx$ computes one [weighted sum](linear-algebra-vectors.qmd#def-weighted-sum) of the entries of $\vx$ for each [row of $\matr{A}$](linear-algebra-matrices.qmd#def-matrix-row),
 so one multiplication computes several weighted sums at once.
-The [matrix](#def-matrix) $\matr{A}$ below has more [column](#def-matrix-column)s than [row](#def-matrix-row)s,
+The [matrix](linear-algebra-matrices.qmd#def-matrix) $\matr{A}$ below has more [column](linear-algebra-matrices.qmd#def-matrix-column)s than [row](linear-algebra-matrices.qmd#def-matrix-row)s,
 so $\matr{A}\vx$ is shorter than $\vx$.
 Let
 
@@ -18,7 +18,7 @@ Compute $\matr{A}\vx$.
 ::: {.callout-tip}
 #### Hint
 
-Entry $i$ of $\matr{A}\vx$ is the [dot product](linear-algebra-vectors.qmd#def-dot-product) of the $i$th [row of $\matr{A}$](#def-matrix-row) with $\vx$,
+Entry $i$ of $\matr{A}\vx$ is the [dot product](linear-algebra-vectors.qmd#def-dot-product) of the $i$th [row of $\matr{A}$](linear-algebra-matrices.qmd#def-matrix-row) with $\vx$,
 as in @rem-matvec-row-dot-products.
 
 :::

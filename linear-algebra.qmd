@@ -10,7 +10,16 @@ The linear algebra notes are split across these pages:
 - [Vectors](linear-algebra-vectors.qmd):
   column vectors, transposes, linear combinations, special vectors, and orthogonality.
 - [Matrices](linear-algebra-matrices.qmd):
-  matrix arithmetic, matrix-vector products, linear and affine maps, and hyperplanes.
+  matrices, their [rows](linear-algebra-matrices.qmd#def-matrix-row) and [columns](linear-algebra-matrices.qmd#def-matrix-column),
+  transposes, addition, and [scalar multiplication](linear-algebra-matrices.qmd#def-scalar-mult).
+- The [Matrix Multiplication](linear-algebra-matrix-multiplication.qmd) page:
+  [matrix products](linear-algebra-matrix-multiplication.qmd#def-matrix-mult),
+  [square matrices](linear-algebra-matrix-multiplication.qmd#def-square-matrix), [identity matrices](linear-algebra-matrix-multiplication.qmd#def-identity-matrix),
+  [matrix-vector products](linear-algebra-matrix-multiplication.qmd#def-matvec-mult),
+  and the transpose rules for addition and multiplication.
+- The [Linear and Affine Maps](linear-algebra-linear-maps.qmd) page:
+  linear and affine maps, and [hyperplanes](linear-algebra-linear-maps.qmd#def-hyperplane).
+  <!-- no-figure: an overview list of page topics, and the hyperplane figures are on the linked page -->
 - [Subspaces and Rank](linear-algebra-subspaces.qmd):
   rank, subspaces, and bases.
 - [Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.qmd):
