@@ -26,6 +26,6 @@ This is the [hyperplane](linear-algebra-linear-maps.qmd#def-hyperplane) with [no
 and [offset](linear-algebra-linear-maps.qmd#def-affine-offset) $\intcoef - c$.
 Changing $c$ changes only the offset, so the [level sets](#def-level-set) share the normal vector and are parallel.
 A hyperplane in $\reals^p$ has [dimension](linear-algebra-subspaces.qmd#def-dimension) $p - 1$
-by [the hyperplane theorem](linear-algebra-rank-nullity.qmd#thm-hyperplane-subspace),
+by [the hyperplane theorem](linear-algebra-affine-subspaces.qmd#thm-hyperplane-subspace),
 which gives the point, line and plane cases for $p = 1, 2, 3$.
 :::

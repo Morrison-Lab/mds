@@ -3,7 +3,7 @@
 
 Part 2 of @thm-fundamental-subspaces says that $\mathcal{C}(\matr{A}) = \mathcal{N}(\tp{\matr{A}})^\perp$,
 so a [linear system](linear-algebra-matrix-multiplication.qmd#def-linear-system) $\matr{A}\vecf{x} = \vecf{b}$ has a solution
-exactly when $\vecf{b}$ is [orthogonal](linear-algebra-vectors.qmd#def-orthogonal-vectors) to every vector of the [left null space](linear-algebra-rank-nullity.qmd#def-left-null-space).
+exactly when $\vecf{b}$ is [orthogonal](linear-algebra-vectors.qmd#def-orthogonal-vectors) to every vector of the [left null space](linear-algebra-column-null-space.qmd#def-left-null-space).
 Let
 
 $$

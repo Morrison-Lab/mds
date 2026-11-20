@@ -22,8 +22,14 @@ The linear algebra notes are split across these pages:
   <!-- no-figure: an overview list of page topics, and the hyperplane figures are on the linked page -->
 - [Subspaces and Rank](linear-algebra-subspaces.qmd):
   rank, subspaces, and bases.
-- [Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.qmd):
-  column and null spaces, the rank-nullity theorem, and rank factorization.
+- The [Column Space and Null Space](linear-algebra-column-null-space.qmd) page:
+  column, row and null spaces of a matrix,
+  and [Gram matrices](linear-algebra-column-null-space.qmd#def-gram-matrix).
+- The [Rank-Nullity and Rank Factorization](linear-algebra-rank-nullity.qmd) page:
+  [rank-nullity](linear-algebra-rank-nullity.qmd#thm-rank-nullity),
+  the rank of matrix products, and rank factorization.
+- The [Affine Subspaces and Half-Spaces](linear-algebra-affine-subspaces.qmd) page:
+  affine subspaces, hyperplanes, and half-spaces.
 - [Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.qmd):
   sums and direct sums, orthogonal complements,
   and the fundamental theorem of linear algebra.
