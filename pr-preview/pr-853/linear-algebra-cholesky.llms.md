@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-19 18:32:32 (PST)
+Last modified: 2026-11-19 23:44:22 (PST)
 
 # 1 Gram matrices, Schur complements and Cholesky
 
@@ -157,7 +157,7 @@ Last modified: 2026-11-19 18:32:32 (PST)
 > $$\begin{aligned}
 > {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
 > &= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\,(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})
-> && \text{(}\href{linear-algebra-special-matrices.qmd#def-quadratic-form}{\text{Definition~11 in Special Matrices, Quadratic Forms and Trace}}\text{)}
+> && \text{(}\href{linear-algebra-special-matrices.qmd#def-quadratic-form}{\text{Definition~13 in Special Matrices, Quadratic Forms and Trace}}\text{)}
 > \\
 > &= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_p
 > && \text{(} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_p \text{)}
@@ -339,7 +339,7 @@ Last modified: 2026-11-19 18:32:32 (PST)
 > &> 0
 > \end{aligned}$$
 >
-> ([Definition 10 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#def-determinant)); a positive determinant alone does not make a matrix positive definite. And positive diagonal entries are not enough: $\mathbf{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}$ of [Example 4 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#exm-positive-definite) has them but is not positive definite.
+> ([Definition 11 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#def-determinant)); a positive determinant alone does not make a matrix positive definite. And positive diagonal entries are not enough: $\mathbf{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}$ of [Example 4 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#exm-positive-definite) has them but is not positive definite.
 
 > **NOTE:**
 >
