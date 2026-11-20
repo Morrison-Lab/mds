@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-19 15:49:41 (PST)
+Last modified: 2026-11-20 11:25:36 (PST)
 
 # 1 Special Matrices
 
@@ -656,7 +656,160 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> **Definition 11 (Quadratic form)** A **quadratic form** [\[7\]](#ref-wikipedia_quadratic_form) is a mathematical expression of the structure
+> **Definition 11 (Bilinear form)** The **bilinear form** of a $p \times p$ [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{A}$ [\[7\]](#ref-wikipedia_bilinear_form) is the function ${B_{\mathbf{A}}}$ that [maps](https://morrison-lab.github.io/mcs/functions.html#def-function) each pair of vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p$ to the [scalar](linear-algebra-vectors.llms.md#def-scalar)
+>
+> $${{B_{\mathbf{A}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right)\mathclose{}} \stackrel{\text{def}}{=}{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}.$$
+
+> **NOTE:**
+>
+> **Example 17 (A bilinear form that depends on the order of its vectors)**  
+>
+> Let
+>
+> $$\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix}, \quad \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix} 1 \\ 2 \end{bmatrix}, \quad \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= \begin{bmatrix} 3 \\ -1 \end{bmatrix}.$$
+>
+> The [bilinear form](#def-bilinear-form) of $\mathbf{A}$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ is
+>
+> $$\begin{aligned}
+> {{B_{\mathbf{A}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right)\mathclose{}}
+> &= \begin{bmatrix} 1 & 2 \end{bmatrix}
+> \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix}
+> \begin{bmatrix} 3 \\ -1 \end{bmatrix}
+> && \text{(}\href{#def-bilinear-form}{\text{Definition~11}}\text{)}
+> \\
+> &= \begin{bmatrix} 1 & 2 \end{bmatrix}
+> \begin{bmatrix} 1 \cdot 3 + 2 \cdot(-1) \\ 0 \cdot 3 + 3 \cdot(-1) \end{bmatrix}
+> && \text{(multiply the matrix by } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\text{)}
+> \\
+> &= \begin{bmatrix} 1 & 2 \end{bmatrix}
+> \begin{bmatrix} 1 \\ -3 \end{bmatrix}
+> && \text{(multiply and add)}
+> \\
+> &= 1 \cdot 1 + 2 \cdot(-3)
+> && \text{(multiply the row by the column)}
+> \\
+> &= -5.
+> && \text{(multiply and add)}
+> \end{aligned}$$
+>
+> With the vectors swapped, it is
+>
+> $$\begin{aligned}
+> {{B_{\mathbf{A}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right)\mathclose{}}
+> &= \begin{bmatrix} 3 & -1 \end{bmatrix}
+> \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix}
+> \begin{bmatrix} 1 \\ 2 \end{bmatrix}
+> && \text{(}\href{#def-bilinear-form}{\text{Definition~11}}\text{)}
+> \\
+> &= \begin{bmatrix} 3 & -1 \end{bmatrix}
+> \begin{bmatrix} 1 \cdot 1 + 2 \cdot 2 \\ 0 \cdot 1 + 3 \cdot 2 \end{bmatrix}
+> && \text{(multiply the matrix by } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\text{)}
+> \\
+> &= \begin{bmatrix} 3 & -1 \end{bmatrix}
+> \begin{bmatrix} 5 \\ 6 \end{bmatrix}
+> && \text{(multiply and add)}
+> \\
+> &= 3 \cdot 5 + (-1) \cdot 6
+> && \text{(multiply the row by the column)}
+> \\
+> &= 9.
+> && \text{(multiply and add)}
+> \end{aligned}$$
+>
+> The two orders give different values.
+
+> **NOTE:**
+>
+> **Definition 12 (Symmetric bilinear form)** A **symmetric bilinear form** [\[7\]](#ref-wikipedia_bilinear_form) is a [bilinear form](#def-bilinear-form) ${B_{\mathbf{A}}}$ whose [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{A}$ is [symmetric](#def-symmetric-matrix):
+>
+> $${\mathbf{A}}^{\top} = \mathbf{A}.$$
+
+> **NOTE:**
+>
+> **Theorem 8 (A symmetric bilinear form does not depend on the order of its vectors)** If $\mathbf{A}$ is a $p \times p$ [symmetric matrix](#def-symmetric-matrix), then its [bilinear form](#def-bilinear-form) is the same with its vectors swapped, [for all](https://morrison-lab.github.io/mcs/proof-writing.html#def-universal-quantifier) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p$:
+>
+> $${{B_{\mathbf{A}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right)\mathclose{}} = {{B_{\mathbf{A}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right)\mathclose{}}.$$
+
+> **NOTE:**
+>
+> *Proof*. Swapping the vectors relies on the fact that [a](linear-algebra-matrix-multiplication.llms.md#thm-scalar-transpose) $1 \times 1$ product equals its own transpose, which justifies the step labeled with that fact:
+>
+> $$\begin{aligned}
+> {{B_{\mathbf{A}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right)\mathclose{}}
+> &= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}^{\top}\, \mathbf{A}\, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
+> && \text{(}\href{#def-bilinear-form}{\text{Definition~11}}\text{)}
+> \\
+> &= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\, {\mathbf{A}}^{\top}\, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}
+> && \text{(a } 1 \times 1 \text{ product equals its own transpose)}
+> \\
+> &= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\, \mathbf{A}\, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}
+> && \text{(}\href{#def-symmetric-matrix}{\text{Definition~3}}\text{)}
+> \\
+> &= {{B_{\mathbf{A}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right)\mathclose{}}.
+> && \text{(}\href{#def-bilinear-form}{\text{Definition~11}}\text{)}
+> \end{aligned}$$
+
+> **NOTE:**
+>
+> **Example 18 (A symmetric bilinear form)**  
+>
+> Let
+>
+> $$\mathbf{S} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}, \quad \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix} 1 \\ 2 \end{bmatrix}, \quad \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= \begin{bmatrix} 3 \\ -1 \end{bmatrix}.$$
+>
+> The [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{S}$ is [symmetric](#def-symmetric-matrix), because its two [off-diagonal entries](linear-algebra-matrix-multiplication.llms.md#def-off-diagonal-entry) are both $2$, so its [bilinear form](#def-bilinear-form) is a [symmetric bilinear form](#def-symmetric-bilinear-form). At $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$, that form is
+>
+> $$\begin{aligned}
+> {{B_{\mathbf{S}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right)\mathclose{}}
+> &= \begin{bmatrix} 1 & 2 \end{bmatrix}
+> \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}
+> \begin{bmatrix} 3 \\ -1 \end{bmatrix}
+> && \text{(}\href{#def-bilinear-form}{\text{Definition~11}}\text{)}
+> \\
+> &= \begin{bmatrix} 1 & 2 \end{bmatrix}
+> \begin{bmatrix} 1 \cdot 3 + 2 \cdot(-1) \\ 2 \cdot 3 + 1 \cdot(-1) \end{bmatrix}
+> && \text{(multiply the matrix by } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\text{)}
+> \\
+> &= \begin{bmatrix} 1 & 2 \end{bmatrix}
+> \begin{bmatrix} 1 \\ 5 \end{bmatrix}
+> && \text{(multiply and add)}
+> \\
+> &= 1 \cdot 1 + 2 \cdot 5
+> && \text{(multiply the row by the column)}
+> \\
+> &= 11.
+> && \text{(multiply and add)}
+> \end{aligned}$$
+>
+> With the vectors swapped, it is
+>
+> $$\begin{aligned}
+> {{B_{\mathbf{S}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right)\mathclose{}}
+> &= \begin{bmatrix} 3 & -1 \end{bmatrix}
+> \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}
+> \begin{bmatrix} 1 \\ 2 \end{bmatrix}
+> && \text{(}\href{#def-bilinear-form}{\text{Definition~11}}\text{)}
+> \\
+> &= \begin{bmatrix} 3 & -1 \end{bmatrix}
+> \begin{bmatrix} 1 \cdot 1 + 2 \cdot 2 \\ 2 \cdot 1 + 1 \cdot 2 \end{bmatrix}
+> && \text{(multiply the matrix by } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\text{)}
+> \\
+> &= \begin{bmatrix} 3 & -1 \end{bmatrix}
+> \begin{bmatrix} 5 \\ 4 \end{bmatrix}
+> && \text{(multiply and add)}
+> \\
+> &= 3 \cdot 5 + (-1) \cdot 4
+> && \text{(multiply the row by the column)}
+> \\
+> &= 11,
+> && \text{(multiply and add)}
+> \end{aligned}$$
+>
+> the same value, as [Theorem 8](#thm-symmetric-bilinear-form-swap) says it must be. By contrast, $\mathbf{A}$ in [Example 17](#exm-bilinear-form) is not symmetric, so its bilinear form is not a symmetric bilinear form, and swapping the vectors changed its value from $-5$ to $9$.
+
+> **NOTE:**
+>
+> **Definition 13 (Quadratic form)** A **quadratic form** [\[8\]](#ref-wikipedia_quadratic_form) is a mathematical expression of the structure
 >
 > $${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\, \mathbf{S}\, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$$
 >
@@ -680,7 +833,15 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> **Theorem 8 (A quadratic form is additive in its matrix)** If $\mathbf{A}$ and $\mathbf{B}$ are $p \times p$ matrices, $c$ is a number and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is a vector of length $p$, then
+> *Remark 8* (A quadratic form is a bilinear form with equal vectors).
+>
+> Setting $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ in the [bilinear form](#def-bilinear-form) of $\mathbf{S}$ gives the [quadratic form](#def-quadratic-form) of $\mathbf{S}$:
+>
+> $${{B_{\mathbf{S}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right)\mathclose{}} = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}.$$
+
+> **NOTE:**
+>
+> **Theorem 9 (A quadratic form is additive in its matrix)** If $\mathbf{A}$ and $\mathbf{B}$ are $p \times p$ matrices, $c$ is a number and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is a vector of length $p$, then
 >
 > $$\begin{aligned}
 > {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}(\mathbf{A} + \mathbf{B})\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}&= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \\
@@ -706,7 +867,7 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> **Example 17 (Combining two quadratic forms into one)** Take $\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix}$, $\mathbf{B} = \mathbf{I}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 2)$. Then
+> **Example 19 (Combining two quadratic forms into one)** Take $\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix}$, $\mathbf{B} = \mathbf{I}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 2)$. Then
 >
 > $$\begin{aligned}
 > {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} &= 1 + 4 + 12 = 17, \\
@@ -721,13 +882,13 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> **Definition 12 (Symmetric part of a square matrix)** The **symmetric part** of a $p \times p$ matrix $\mathbf{S}$ is
+> **Definition 14 (Symmetric part of a square matrix)** The **symmetric part** of a $p \times p$ matrix $\mathbf{S}$ is
 >
 > $$\frac{1}{2}\mathopen{}\left(\mathbf{S} + {\mathbf{S}}^{\top}\right)\mathclose{}$$
 
 > **NOTE:**
 >
-> **Example 18 (The symmetric part of a** $2 \times 2$ matrix) For $\mathbf{S} = \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix}$, the symmetric part is
+> **Example 20 (The symmetric part of a** $2 \times 2$ matrix) For $\mathbf{S} = \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix}$, the symmetric part is
 >
 > $$\begin{aligned}
 > \frac{1}{2}\mathopen{}\left(
@@ -742,13 +903,13 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> **Theorem 9 (A quadratic form depends only on the symmetric part)** If $\mathbf{S}$ is a $p \times p$ matrix and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is a vector of length $p$, then
+> **Theorem 10 (A quadratic form depends only on the symmetric part)** If $\mathbf{S}$ is a $p \times p$ matrix and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is a vector of length $p$, then
 >
 > $${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
 > =
 > {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\mathopen{}\left(\frac{1}{2}(\mathbf{S}+{\mathbf{S}}^{\top})\right)\mathclose{}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}.$$
 >
-> So the value of a quadratic form depends only on the symmetric part ([Definition 12](#def-symmetric-part)) of $\mathbf{S}$.
+> So the value of a quadratic form depends only on the symmetric part ([Definition 14](#def-symmetric-part)) of $\mathbf{S}$.
 
 > **NOTE:**
 >
@@ -784,7 +945,7 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> **Example 19 (Replacing a matrix by its symmetric part)** With $\mathbf{S} = \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix}$ from [Example 18](#exm-symmetric-part) and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 1)$:
+> **Example 21 (Replacing a matrix by its symmetric part)** With $\mathbf{S} = \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix}$ from [Example 20](#exm-symmetric-part) and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 1)$:
 >
 > $$\begin{aligned}
 > {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
@@ -801,13 +962,13 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> **Definition 13 (Trace)** The **trace** [\[8\]](#ref-wikipedia_trace_linear_algebra) of a $p \times p$ matrix $\mathbf{M}$ is the sum of its diagonal entries:
+> **Definition 15 (Trace)** The **trace** [\[9\]](#ref-wikipedia_trace_linear_algebra) of a $p \times p$ matrix $\mathbf{M}$ is the sum of its diagonal entries:
 >
 > $$\operatorname{tr}(\mathbf{M}) \stackrel{\text{def}}{=}\sum_{i=1}^pM_{ii}$$
 
 > **NOTE:**
 >
-> **Example 20 (The trace of a** $2 \times 2$ matrix) $$\begin{aligned}
+> **Example 22 (The trace of a** $2 \times 2$ matrix) $$\begin{aligned}
 > {\operatorname{tr}\mathopen{}\left(\begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}\right)\mathclose{}}
 > &= 1 + 4 \\
 > &= 5
@@ -815,7 +976,7 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> **Theorem 10 (The trace of a product does not depend on the order)** For an $m \times n$ matrix $\mathbf{A}$ and an $n \times m$ matrix $\mathbf{B}$:
+> **Theorem 11 (The trace of a product does not depend on the order)** For an $m \times n$ matrix $\mathbf{A}$ and an $n \times m$ matrix $\mathbf{B}$:
 >
 > $${\operatorname{tr}\mathopen{}\left(\underbrace{\mathbf{A}\mathbf{B}}_{m \times m}\right)\mathclose{}}
 > = {\operatorname{tr}\mathopen{}\left(\underbrace{\mathbf{B}\mathbf{A}}_{n \times n}\right)\mathclose{}}$$
@@ -845,7 +1006,7 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> **Example 21 (Traces of the two products of a** $2 \times 3$ and a $3 \times 2$ matrix) Let
+> **Example 23 (Traces of the two products of a** $2 \times 3$ and a $3 \times 2$ matrix) Let
 >
 > $$\mathbf{A} = \begin{bmatrix} 1 & 2 & 0 \\ 0 & 1 & 3 \end{bmatrix}
 > \qquad
@@ -901,7 +1062,7 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> *Remark 8* (Moving a factor of a triple product). Let $\mathbf{A}$ be $m \times n$, $\mathbf{B}$ be $n \times k$, and $\mathbf{C}$ be $k \times m$, so that $\mathbf{A}\mathbf{B}$ is $m \times k$ and $\mathbf{A}\mathbf{B}\mathbf{C}$ is square. Applying [Theorem 10](#thm-trace-cyclic) to the $m \times k$ matrix $\mathbf{A}\mathbf{B}$ and the $k \times m$ matrix $\mathbf{C}$ moves the last factor of the triple product to the front [\[6, Ch. 1\]](#ref-banerjee2014linear), Theorem 1.5 and eq. 1.17, p. 19:
+> *Remark 9* (Moving a factor of a triple product). Let $\mathbf{A}$ be $m \times n$, $\mathbf{B}$ be $n \times k$, and $\mathbf{C}$ be $k \times m$, so that $\mathbf{A}\mathbf{B}$ is $m \times k$ and $\mathbf{A}\mathbf{B}\mathbf{C}$ is square. Applying [Theorem 11](#thm-trace-cyclic) to the $m \times k$ matrix $\mathbf{A}\mathbf{B}$ and the $k \times m$ matrix $\mathbf{C}$ moves the last factor of the triple product to the front [\[6, Ch. 1\]](#ref-banerjee2014linear), Theorem 1.5 and eq. 1.17, p. 19:
 >
 > $$\begin{aligned}
 > \operatorname{tr}(\mathbf{A}\mathbf{B}\mathbf{C})
@@ -959,7 +1120,7 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> **Theorem 11 (The trace of an outer product is a dot product)** For two vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ with the same number $n$ of entries, the [trace](#def-trace) of the [outer product](linear-algebra-inner-products.llms.md#def-outer-product) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}$ and the [dot product](linear-algebra-vectors.llms.md#def-dot-product) ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ are the same number:
+> **Theorem 12 (The trace of an outer product is a dot product)** For two vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ with the same number $n$ of entries, the [trace](#def-trace) of the [outer product](linear-algebra-inner-products.llms.md#def-outer-product) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}$ and the [dot product](linear-algebra-vectors.llms.md#def-dot-product) ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ are the same number:
 >
 > $${\operatorname{tr}\mathopen{}\left(\underbrace{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top}}_{n \times n}\right)\mathclose{}}
 > = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$$
@@ -980,7 +1141,7 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> **Example 22 (The trace of an outer product)** For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}} = (1, 2)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = (3, 4)$, [the remark on outer and dot products](linear-algebra-inner-products.llms.md#rem-outer-vs-dot-product) found the [outer product](linear-algebra-inner-products.llms.md#def-outer-product) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}}^{\top}$ and the [dot product](linear-algebra-vectors.llms.md#def-dot-product) ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = 11$. The [trace](#def-trace) of the outer product is
+> **Example 24 (The trace of an outer product)** For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}} = (1, 2)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = (3, 4)$, [the remark on outer and dot products](linear-algebra-inner-products.llms.md#rem-outer-vs-dot-product) found the [outer product](linear-algebra-inner-products.llms.md#def-outer-product) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}}^{\top}$ and the [dot product](linear-algebra-vectors.llms.md#def-dot-product) ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = 11$. The [trace](#def-trace) of the outer product is
 >
 > $$\begin{aligned}
 > {\operatorname{tr}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}}^{\top}\right)\mathclose{}}
@@ -994,7 +1155,7 @@ Some special matrices appeared earlier:
 > && \text{(add)}
 > \end{aligned}$$
 >
-> The trace and the dot product are the same number, as [Theorem 11](#thm-outer-product-trace) says.
+> The trace and the dot product are the same number, as [Theorem 12](#thm-outer-product-trace) says.
 
 > **NOTE:**
 >
@@ -1016,11 +1177,11 @@ Some special matrices appeared earlier:
 > && \text{(the Euclidean norm from the dot product, squared)}
 > \end{aligned}$$
 >
-> The second step is [Theorem 11](#thm-outer-product-trace), with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ in place of both $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$. The third step takes the [square](algebra-basics.llms.md#def-square) of both sides of [the formula for the Euclidean norm from the dot product](linear-algebra-vectors.llms.md#thm-norm-dot-product).
+> The second step is [Theorem 12](#thm-outer-product-trace), with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ in place of both $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$. The third step takes the [square](algebra-basics.llms.md#def-square) of both sides of [the formula for the Euclidean norm from the dot product](linear-algebra-vectors.llms.md#thm-norm-dot-product).
 
 > **NOTE:**
 >
-> **Example 23 (The trace of a self outer product)** For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 2)$, [the example of a self outer product](linear-algebra-inner-products.llms.md#exm-self-outer-product) found $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} = \begin{bmatrix} 1 & 2 \\ 2 & 4 \end{bmatrix}$. Its [trace](#def-trace) and the squared [Euclidean norm](linear-algebra-vectors.llms.md#def-euclidean-norm) of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ are
+> **Example 25 (The trace of a self outer product)** For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 2)$, [the example of a self outer product](linear-algebra-inner-products.llms.md#exm-self-outer-product) found $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} = \begin{bmatrix} 1 & 2 \\ 2 & 4 \end{bmatrix}$. Its [trace](#def-trace) and the squared [Euclidean norm](linear-algebra-vectors.llms.md#def-euclidean-norm) of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ are
 >
 > $$\begin{aligned}
 > {\operatorname{tr}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\right)\mathclose{}}
@@ -1041,7 +1202,7 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> **Definition 14 (Matrix inner product)** The **inner product** of two $n \times p$ matrices $\mathbf{A}$ and $\mathbf{B}$ is
+> **Definition 16 (Matrix inner product)** The **inner product** of two $n \times p$ matrices $\mathbf{A}$ and $\mathbf{B}$ is
 >
 > $${\mathopen{}\left\langle \mathbf{A}, \mathbf{B}\right\rangle\mathclose{}}
 > \stackrel{\text{def}}{=}
@@ -1051,7 +1212,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 
 > **NOTE:**
 >
-> **Theorem 12 (The matrix inner product multiplies matching entries)** For two $n \times p$ matrices $\mathbf{A}$ and $\mathbf{B}$:
+> **Theorem 13 (The matrix inner product multiplies matching entries)** For two $n \times p$ matrices $\mathbf{A}$ and $\mathbf{B}$:
 >
 > $${\mathopen{}\left\langle \mathbf{A}, \mathbf{B}\right\rangle\mathclose{}} = \sum_{i=1}^n\sum_{j=1}^pa_{ij}\, b_{ij}$$
 
@@ -1077,13 +1238,13 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 
 > **NOTE:**
 >
-> **Example 24 (The inner product of two** $2 \times 2$ matrices) Let
+> **Example 26 (The inner product of two** $2 \times 2$ matrices) Let
 >
 > $$\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}
 > \qquad
 > \mathbf{B} = \begin{bmatrix} 0 & 1 \\ -1 & 2 \end{bmatrix}$$
 >
-> From [Definition 14](#def-matrix-inner-product):
+> From [Definition 16](#def-matrix-inner-product):
 >
 > $$\begin{aligned}
 > {\mathopen{}\left\langle \mathbf{A}, \mathbf{B}\right\rangle\mathclose{}}
@@ -1112,7 +1273,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 > && \text{(add)}
 > \end{aligned}$$
 >
-> From [Theorem 12](#thm-matrix-inner-product-entries):
+> From [Theorem 13](#thm-matrix-inner-product-entries):
 >
 > $$\begin{aligned}
 > {\mathopen{}\left\langle \mathbf{A}, \mathbf{B}\right\rangle\mathclose{}}
@@ -1128,9 +1289,9 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 
 > **NOTE:**
 >
-> *Remark 9* (The matrix inner product as a dot product). [Theorem 12](#thm-matrix-inner-product-entries) says that the matrix inner product is the dot product ([Definition 10 in Vectors](linear-algebra-vectors.llms.md#def-dot-product)) of the two matrices’ entries, each listed as one vector of length $np$, with both matrices’ entries listed in the same order.
+> *Remark 10* (The matrix inner product as a dot product). [Theorem 13](#thm-matrix-inner-product-entries) says that the matrix inner product is the dot product ([Definition 10 in Vectors](linear-algebra-vectors.llms.md#def-dot-product)) of the two matrices’ entries, each listed as one vector of length $np$, with both matrices’ entries listed in the same order.
 >
-> For example, listing the entries of $\mathbf{A}$ and $\mathbf{B}$ in [Example 24](#exm-matrix-inner-product) row by row gives $(1, 2, 3, 4)$ and $(0, 1, -1, 2)$, and
+> For example, listing the entries of $\mathbf{A}$ and $\mathbf{B}$ in [Example 26](#exm-matrix-inner-product) row by row gives $(1, 2, 3, 4)$ and $(0, 1, -1, 2)$, and
 >
 > $$\begin{aligned}
 > (1, 2, 3, 4) \cdot (0, 1, -1, 2) &= 7 \\
@@ -1139,15 +1300,15 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 
 > **NOTE:**
 >
-> **Definition 15 (Frobenius norm)** The **Frobenius norm** [\[9\]](#ref-wikipedia_frobenius_norm) of an $n \times p$ matrix $\mathbf{A}$ is
+> **Definition 17 (Frobenius norm)** The **Frobenius norm** [\[10\]](#ref-wikipedia_frobenius_norm) of an $n \times p$ matrix $\mathbf{A}$ is
 >
 > $$\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}_F \stackrel{\text{def}}{=}\sqrt{{\mathopen{}\left\langle \mathbf{A}, \mathbf{A}\right\rangle\mathclose{}}}$$
 >
-> where ${\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}}$ is the matrix inner product ([Definition 14](#def-matrix-inner-product)).
+> where ${\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}}$ is the matrix inner product ([Definition 16](#def-matrix-inner-product)).
 
 > **NOTE:**
 >
-> **Example 25 (The Frobenius norm of a** $2 \times 2$ matrix) For $\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$:
+> **Example 27 (The Frobenius norm of a** $2 \times 2$ matrix) For $\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$:
 >
 > $$\begin{aligned}
 > \mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}_F
@@ -1164,13 +1325,13 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 > && \text{(add)}
 > \end{aligned}$$
 >
-> The second step is [Theorem 12](#thm-matrix-inner-product-entries).
+> The second step is [Theorem 13](#thm-matrix-inner-product-entries).
 
 > **NOTE:**
 >
-> *Remark 10* (The Frobenius norm is the Euclidean norm of the entries). By [Theorem 12](#thm-matrix-inner-product-entries), $\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}_F^2 = \sum_{i=1}^n\sum_{j=1}^pa_{ij}^2$, a sum of squares, so the square root is always defined. $\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}_F$ is the Euclidean norm ([Definition 23 in Vectors](linear-algebra-vectors.llms.md#def-euclidean-norm)) of the entries of $\mathbf{A}$, listed as one vector of length $np$ [\[6, Ch. 15\]](#ref-banerjee2014linear), Definition 15.4, p. 492.
+> *Remark 11* (The Frobenius norm is the Euclidean norm of the entries). By [Theorem 13](#thm-matrix-inner-product-entries), $\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}_F^2 = \sum_{i=1}^n\sum_{j=1}^pa_{ij}^2$, a sum of squares, so the square root is always defined. $\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}_F$ is the Euclidean norm ([Definition 23 in Vectors](linear-algebra-vectors.llms.md#def-euclidean-norm)) of the entries of $\mathbf{A}$, listed as one vector of length $np$ [\[6, Ch. 15\]](#ref-banerjee2014linear), Definition 15.4, p. 492.
 >
-> For example, listing the entries of $\mathbf{A}$ in [Example 25](#exm-frobenius-norm) row by row gives the vector $(1, 2, 3, 4)$ of length $2 \cdot 2 = 4$, and
+> For example, listing the entries of $\mathbf{A}$ in [Example 27](#exm-frobenius-norm) row by row gives the vector $(1, 2, 3, 4)$ of length $2 \cdot 2 = 4$, and
 >
 > $$\begin{aligned}
 > \mathopen{}\left\lVert(1, 2, 3, 4)\right\rVert\mathclose{} &= \sqrt{1 + 4 + 9 + 16} \\
@@ -1180,7 +1341,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 
 > **NOTE:**
 >
-> **Theorem 13 (The squared Frobenius norm adds up the squared column norms)** If $\mathbf{A}$ is an $n \times p$ matrix with columns $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_p$, then
+> **Theorem 14 (The squared Frobenius norm adds up the squared column norms)** If $\mathbf{A}$ is an $n \times p$ matrix with columns $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_p$, then
 >
 > $$\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}_F^2 = \sum_{j=1}^p\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j\right\rVert\mathclose{}^2.$$
 
@@ -1191,7 +1352,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 > $$\begin{aligned}
 > \mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}_F^2
 > &= \sum_{i=1}^n\sum_{j=1}^pa_{ij}^2
-> && \text{(}\href{#rem-frobenius-norm-entries}{\text{Remark~10}}\text{)}
+> && \text{(}\href{#rem-frobenius-norm-entries}{\text{Remark~11}}\text{)}
 > \\
 > &= \sum_{j=1}^p\sum_{i=1}^na_{ij}^2
 > && \text{(swap the order of two finite sums)}
@@ -1202,12 +1363,12 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 
 > **NOTE:**
 >
-> **Example 26 (The Frobenius norm of a** $2 \times 2$ matrix, column by column) The matrix $\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$ in [Example 25](#exm-frobenius-norm) has columns $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 = (1, 3)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 = (2, 4)$, so
+> **Example 28 (The Frobenius norm of a** $2 \times 2$ matrix, column by column) The matrix $\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$ in [Example 27](#exm-frobenius-norm) has columns $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1 = (1, 3)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2 = (2, 4)$, so
 >
 > $$\begin{aligned}
 > \mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}_F^2
 > &= \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1\right\rVert\mathclose{}^2 + \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_2\right\rVert\mathclose{}^2
-> && \text{(}\href{#thm-frobenius-norm-columns}{\text{Theorem~13}}\text{)}
+> && \text{(}\href{#thm-frobenius-norm-columns}{\text{Theorem~14}}\text{)}
 > \\
 > &= (1^2 + 3^2) + (2^2 + 4^2)
 > && \text{(definition of the norm)}
@@ -1219,7 +1380,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 > && \text{(add)}
 > \end{aligned}$$
 >
-> which matches $\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}_F = \sqrt{30}$ from [Example 25](#exm-frobenius-norm).
+> which matches $\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}_F = \sqrt{30}$ from [Example 27](#exm-frobenius-norm).
 
 # Definitions on this page
 
@@ -1233,11 +1394,13 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 - [Definition 8 (Orthogonal projection matrix)](#def-projection-matrix)
 - [Definition 9 (Oblique projection)](#def-oblique-projection)
 - [Definition 10 (Orthogonal matrix)](#def-orthogonal-matrix)
-- [Definition 11 (Quadratic form)](#def-quadratic-form)
-- [Definition 12 (Symmetric part of a square matrix)](#def-symmetric-part)
-- [Definition 13 (Trace)](#def-trace)
-- [Definition 14 (Matrix inner product)](#def-matrix-inner-product)
-- [Definition 15 (Frobenius norm)](#def-frobenius-norm)
+- [Definition 11 (Bilinear form)](#def-bilinear-form)
+- [Definition 12 (Symmetric bilinear form)](#def-symmetric-bilinear-form)
+- [Definition 13 (Quadratic form)](#def-quadratic-form)
+- [Definition 14 (Symmetric part of a square matrix)](#def-symmetric-part)
+- [Definition 15 (Trace)](#def-trace)
+- [Definition 16 (Matrix inner product)](#def-matrix-inner-product)
+- [Definition 17 (Frobenius norm)](#def-frobenius-norm)
 
 Back to top
 
@@ -1269,12 +1432,16 @@ S. Banerjee and A. Roy, *Linear algebra and matrix analysis for statistics*, vol
 
 \[7\]
 
-Wikipedia contributors, “Quadratic form — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Quadratic_form>
+Wikipedia contributors, “Bilinear form — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Bilinear_form>
 
 \[8\]
 
-Wikipedia contributors, “Trace (linear algebra) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Trace_(linear_algebra)>
+Wikipedia contributors, “Quadratic form — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Quadratic_form>
 
 \[9\]
+
+Wikipedia contributors, “Trace (linear algebra) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Trace_(linear_algebra)>
+
+\[10\]
 
 Wikipedia contributors, “Frobenius norm — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Frobenius_norm>
