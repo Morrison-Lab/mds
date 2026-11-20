@@ -12,23 +12,23 @@ The linear algebra notes are split across these pages:
 - [Matrices](linear-algebra-matrices.qmd):
   matrices, their [rows](linear-algebra-matrices.qmd#def-matrix-row) and [columns](linear-algebra-matrices.qmd#def-matrix-column),
   transposes, addition, and [scalar multiplication](linear-algebra-matrices.qmd#def-scalar-mult).
-- [Matrix Multiplication](linear-algebra-matrix-multiplication.qmd):
+- The [Matrix Multiplication](linear-algebra-matrix-multiplication.qmd) page:
   [matrix products](linear-algebra-matrix-multiplication.qmd#def-matrix-mult),
   [square matrices](linear-algebra-matrix-multiplication.qmd#def-square-matrix), [identity matrices](linear-algebra-matrix-multiplication.qmd#def-identity-matrix),
   [matrix-vector products](linear-algebra-matrix-multiplication.qmd#def-matvec-mult),
   and the transpose rules for addition and multiplication.
-- [Linear and Affine Maps](linear-algebra-linear-maps.qmd):
+- The [Linear and Affine Maps](linear-algebra-linear-maps.qmd) page:
   linear and affine maps, and [hyperplanes](linear-algebra-linear-maps.qmd#def-hyperplane).
   <!-- no-figure: an overview list of page topics, and the hyperplane figures are on the linked page -->
 - [Subspaces and Rank](linear-algebra-subspaces.qmd):
   rank, subspaces, and bases.
-- [Column Space and Null Space](linear-algebra-column-null-space.qmd):
+- The [Column Space and Null Space](linear-algebra-column-null-space.qmd) page:
   column, row and null spaces of a matrix,
   and [Gram matrices](linear-algebra-column-null-space.qmd#def-gram-matrix).
-- [Rank-Nullity and Rank Factorization](linear-algebra-rank-nullity.qmd):
+- The [Rank-Nullity and Rank Factorization](linear-algebra-rank-nullity.qmd) page:
   [rank-nullity](linear-algebra-rank-nullity.qmd#thm-rank-nullity),
   the rank of matrix products, and rank factorization.
-- [Affine Subspaces and Half-Spaces](linear-algebra-affine-subspaces.qmd):
+- The [Affine Subspaces and Half-Spaces](linear-algebra-affine-subspaces.qmd) page:
   affine subspaces, hyperplanes, and half-spaces.
 - [Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.qmd):
   sums and direct sums, orthogonal complements,
