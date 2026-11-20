@@ -33,12 +33,12 @@ The linear algebra notes are split across these pages:
 - [Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.qmd):
   sums and direct sums, orthogonal complements,
   and the fundamental theorem of linear algebra.
-- [Inner Products and the Cauchy-Schwarz Inequality](linear-algebra-inner-products.qmd):
+- The [Inner Products and the Cauchy-Schwarz Inequality](linear-algebra-inner-products.qmd) page:
   inner products, the Cauchy-Schwarz inequality,
   the [triangle inequality](linear-algebra-inner-products.qmd#thm-triangle-inequality),
   the [norm](linear-algebra-inner-products.qmd#def-norm) of a vector,
   and the [angle between two vectors](linear-algebra-inner-products.qmd#def-angle).
-- [Orthonormal Bases, Outer Products and Hilbert Spaces](linear-algebra-orthonormal-bases.qmd):
+- The [Orthonormal Bases, Outer Products and Hilbert Spaces](linear-algebra-orthonormal-bases.qmd) page:
   orthonormal bases, Gram-Schmidt, outer products,
   the [Kronecker product](linear-algebra-orthonormal-bases.qmd#def-kronecker-product), and Hilbert spaces.
 - The [Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.qmd) page:
