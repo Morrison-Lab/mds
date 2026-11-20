@@ -3,7 +3,7 @@
 
 Let $f : \reals^p \to \reals$ have first and [second partial derivatives](vector-calculus-hessian.qmd#def-second-partial-derivative)
 that are [continuous on](vector-calculus-hessian.qmd#def-continuous-on) $\reals^p$.
-If $f$ is [convex](algebra-sums.qmd#def-convex-function),
+If $f$ is [convex](algebra-convexity.qmd#def-convex-function),
 then the [Hessian](vector-calculus-hessian.qmd#def-hessian) $\matr{H}_f(\vx)$ is [positive semidefinite](linear-algebra-definite-matrices.qmd#def-positive-semidefinite) for every $\vx \in \reals^p$.
 
 :::
@@ -36,7 +36,7 @@ f(\vx + h\vecf{v}) + f(\vx - h\vecf{v}) - 2 f(\vx)
 = \frac{h^2}{2}\,\tp{\vecf{v}}\paren{\matr{H}_f(\vecf{w}_+) + \matr{H}_f(\vecf{w}_-)}\vecf{v}.
 $$
 
-Since $f$ is [convex](algebra-sums.qmd#def-convex-function) and $\vx = \frac{1}{2}(\vx + h\vecf{v}) + \frac{1}{2}(\vx - h\vecf{v})$,
+Since $f$ is [convex](algebra-convexity.qmd#def-convex-function) and $\vx = \frac{1}{2}(\vx + h\vecf{v}) + \frac{1}{2}(\vx - h\vecf{v})$,
 
 $$
 f(\vx) \le \frac{1}{2} f(\vx + h\vecf{v}) + \frac{1}{2} f(\vx - h\vecf{v}),

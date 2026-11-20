@@ -59,6 +59,7 @@ website:
           - text: "Overview"
             href: algebra.qmd
           - algebra-basics.qmd
+          - algebra-convexity.qmd
           - algebra-sums.qmd
           - algebra-polynomials.qmd
           - algebra-exponentials.qmd
@@ -155,6 +156,7 @@ website:
         href: algebra.qmd
         contents:
           - algebra-basics.qmd
+          - algebra-convexity.qmd
           - algebra-sums.qmd
           - algebra-polynomials.qmd
           - algebra-exponentials.qmd

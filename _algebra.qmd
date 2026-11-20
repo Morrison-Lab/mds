@@ -2,6 +2,8 @@
 
 {{< include mds/_subfiles/_sec_algebra_basics.qmd >}}
 
+{{< include mds/_subfiles/_sec_algebra_convexity.qmd >}}
+
 {{< include mds/_subfiles/_sec_algebra_sums.qmd >}}
 
 {{< include mds/_subfiles/_sec_algebra_polynomials.qmd >}}

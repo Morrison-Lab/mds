@@ -10,8 +10,9 @@ The algebra notes are split across these pages:
 - The [Equalities, Inequalities and Minimizers](algebra-basics.qmd) page:
   equalities, inequalities, powers, square roots and absolute values,
   minima and maxima, and global and local minimizers.
-- The [Convexity, Infimum and Sums](algebra-sums.qmd) page:
-  convex functions, the infimum and supremum,
+- The [Convexity, Infimum and Supremum](algebra-convexity.qmd) page:
+  [convex functions](algebra-convexity.qmd#def-convex-function), and the [infimum](algebra-convexity.qmd#def-infimum) and [supremum](algebra-convexity.qmd#def-supremum).
+- The [Sums, Products and Quotients](algebra-sums.qmd) page:
   sums, products and quotients, summation notation, limits of sums, and notational shorthands.
 - The [Polynomials, Affine Functions and Series](algebra-polynomials.qmd) page:
   polynomials, affine and linear functions of one variable,

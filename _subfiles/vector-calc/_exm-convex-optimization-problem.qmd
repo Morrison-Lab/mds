@@ -4,7 +4,7 @@
 Let $f(\vx) = x_1^2 + x_2^2$.
 Its [Hessian](vector-calculus-hessian.qmd#def-hessian) is $2 \matr{I}_2$ at every $\vx$,
 which is [positive semidefinite](linear-algebra-definite-matrices.qmd#def-positive-semidefinite),
-so $f$ is [convex](algebra-sums.qmd#def-convex-function) by part 1 of @thm-convex-hessian.
+so $f$ is [convex](algebra-convexity.qmd#def-convex-function) by part 1 of @thm-convex-hessian.
 
 - Minimizing $f$ subject to $3 x_1 + 4 x_2 = 5$,
   as in [the example of a minimization problem](optimization-constrained.qmd#exm-minimization-problem),

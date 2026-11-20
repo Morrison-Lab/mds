@@ -31,7 +31,7 @@ Let $f(x) = \minf{x^2, 1}$, as in @exm-convex-on.
 
   so the defining inequality fails on every open ball around $1$.
 
-In @fig-convex-at, the [chord](algebra-sums.qmd#def-chord) from $1 - \smallconst$ to $1 + \smallconst$ passes below the [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) at $1$.
+In @fig-convex-at, the [chord](algebra-convexity.qmd#def-chord) from $1 - \smallconst$ to $1 + \smallconst$ passes below the [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) at $1$.
 
 {{< include mds/_subfiles/vector-calc/_fig-convex-at.qmd >}}
 
