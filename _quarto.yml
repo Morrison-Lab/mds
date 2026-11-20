@@ -69,6 +69,8 @@ page-xrefs:
       - linear-algebra-decompositions.qmd
       - linear-algebra-definite-matrices.qmd
       - linear-algebra-projections.qmd
+      - linear-algebra-generalized-inverses.qmd
+      - linear-algebra-least-squares.qmd
       - linear-algebra-diagonalization.qmd
       - linear-algebra-complex.qmd
   # The critical points section moved from calculus-derivatives.qmd to
@@ -97,6 +99,12 @@ page-xrefs:
     pages:
       - linear-algebra-matrix-multiplication.qmd
       - linear-algebra-linear-maps.qmd
+  # linear-algebra-projections.qmd was split (mds#156), so links to it
+  # from before that split (index#id) go on to the page now holding #id.
+  - index: linear-algebra-projections.qmd
+    pages:
+      - linear-algebra-generalized-inverses.qmd
+      - linear-algebra-least-squares.qmd
   # linear-algebra-special-matrices.qmd was split (mds#156), so links to
   # it from before that split (index#id) go on to the page now holding #id.
   - index: linear-algebra-special-matrices.qmd

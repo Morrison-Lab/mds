@@ -99,6 +99,8 @@ website:
           - linear-algebra-decompositions.qmd
           - linear-algebra-definite-matrices.qmd
           - linear-algebra-projections.qmd
+          - linear-algebra-generalized-inverses.qmd
+          - linear-algebra-least-squares.qmd
           - linear-algebra-diagonalization.qmd
           - linear-algebra-complex.qmd
       - text: "Vector Calculus"
@@ -180,6 +182,8 @@ website:
           - linear-algebra-decompositions.qmd
           - linear-algebra-definite-matrices.qmd
           - linear-algebra-projections.qmd
+          - linear-algebra-generalized-inverses.qmd
+          - linear-algebra-least-squares.qmd
           - linear-algebra-diagonalization.qmd
           - linear-algebra-complex.qmd
       - vector-calculus.qmd

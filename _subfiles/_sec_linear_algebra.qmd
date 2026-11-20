@@ -68,6 +68,14 @@
 
 {{< include mds/_subfiles/_sec_linear_algebra_projections.qmd >}}
 
+## Generalized inverses and linear systems {#sec-generalized-inverse}
+
+{{< include mds/_subfiles/_sec_linear_algebra_generalized_inverses.qmd >}}
+
+## Solving linear systems and least squares {#sec-solving-linear-systems}
+
+{{< include mds/_subfiles/_sec_linear_algebra_least_squares.qmd >}}
+
 {{< include mds/_subfiles/_sec_linear_algebra_diagonalization.qmd >}}
 
 # Complex vectors and matrices {#sec-complex-vectors-matrices}
