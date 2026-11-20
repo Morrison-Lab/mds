@@ -1,0 +1,15 @@
+---
+title: "Jacobians and Derivative Rules"
+format:
+  html: default
+  revealjs:
+    output-file: vector-calculus-derivative-rules-slides.html
+  pdf:
+    output-file: vector-calculus-derivative-rules-handout.pdf
+  docx:
+    output-file: vector-calculus-derivative-rules.docx
+---
+
+{{< include latex-macros/macros.qmd >}}
+
+{{< include mds/_subfiles/_sec_vector_calc_derivative_rules.qmd >}}

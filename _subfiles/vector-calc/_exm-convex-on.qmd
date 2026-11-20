@@ -4,7 +4,7 @@
 Let $f(x) = \minf{x^2, 1}$.
 
 - $f$ is [convex on](#def-convex-on) $[-1, 1]$,
-  which is the [closed ball](vector-calculus.qmd#def-closed-ball) of radius $1$ around $0$ and so [convex](#def-convex-set) by @exm-convex-set.
+  which is the [closed ball](vector-calculus-hessian.qmd#def-closed-ball) of radius $1$ around $0$ and so [convex](#def-convex-set) by @exm-convex-set.
   For $x, y \in [-1, 1]$ and $t \in [0, 1]$, the point $t x + (1 - t) y$ is also in $[-1, 1]$,
   where $f$ agrees with $x^2$,
   so the defining [inequality](https://morrison-lab.github.io/mcs/proof-writing.html#def-inequality) of $f$ is the defining inequality of $x^2$,

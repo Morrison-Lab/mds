@@ -79,7 +79,7 @@ plt.show();
 
 The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $f(x) = \minf{x^2, 1}$ near $1$, from @exm-convex-at,
 with $r = \tfrac{1}{2}$ and $\smallconst = \tfrac{1}{4}$.
-The dashed [chord](algebra-sums.qmd#def-chord) from $\tfrac{3}{4}$ to $\tfrac{5}{4}$ stays inside the shaded [open ball](vector-calculus.qmd#def-ball) of radius $r$ around $1$,
+The dashed [chord](algebra-sums.qmd#def-chord) from $\tfrac{3}{4}$ to $\tfrac{5}{4}$ stays inside the shaded [open ball](vector-calculus-hessian.qmd#def-ball) of radius $r$ around $1$,
 and is at $\tfrac{25}{32}$ above $x = 1$, below $f(1) = 1$.
 
 :::

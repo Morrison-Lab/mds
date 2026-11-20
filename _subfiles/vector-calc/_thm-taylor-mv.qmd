@@ -2,7 +2,7 @@
 #### Second-order Taylor theorem in several variables
 
 Let $f : \reals^p \to \reals$ have first and second partial derivatives
-that are [continuous on](vector-calculus.qmd#def-continuous-on) $\reals^p$,
+that are [continuous on](vector-calculus-hessian.qmd#def-continuous-on) $\reals^p$,
 and let $\vecf{z}, \vecf{h} \in \reals^p$.
 Then there is a $\midpt \in (0, 1)$ with
 [@wikipedia_taylors_theorem]
@@ -22,8 +22,8 @@ Let $g(t) \eqdef f(\vecf{z} + t \vecf{h})$ for $t \in \reals$,
 the values of $f$ along the line through $\vecf{z}$ in the direction $\vecf{h}$.
 The [inner function](https://morrison-lab.github.io/mcs/functions.html#def-inner-function) $\vy(t) = \vecf{z} + t \vecf{h}$ has entries $y_j = z_j + t h_j$,
 so $\deriv{t} y_j = h_j$,
-and its [derivative](vector-calculus.qmd#def-vector-valued-derivative) is the $1 \times p$ [matrix](linear-algebra-matrices.qmd#def-matrix) $\tp{\vecf{h}}$.
-By the [vector chain rule](vector-calculus.qmd#thm-chain-vec) applied with the [argument](https://morrison-lab.github.io/mcs/functions.html#def-argument) $t$,
+and its [derivative](vector-calculus-derivative-rules.qmd#def-vector-valued-derivative) is the $1 \times p$ [matrix](linear-algebra-matrices.qmd#def-matrix) $\tp{\vecf{h}}$.
+By the [vector chain rule](vector-calculus-derivative-rules.qmd#thm-chain-vec) applied with the [argument](https://morrison-lab.github.io/mcs/functions.html#def-argument) $t$,
 the inner function $\vy(t) = \vecf{z} + t \vecf{h}$, and the [outer function](https://morrison-lab.github.io/mcs/functions.html#def-outer-function) $f$,
 
 $$
@@ -38,7 +38,7 @@ g'(t)
 $$
 
 The second step writes out the [matrix product](linear-algebra.qmd#def-matrix-mult).
-$g'$ is [continuous](vector-calculus.qmd#def-continuous-several):
+$g'$ is [continuous](vector-calculus-hessian.qmd#def-continuous-several):
 $t \mapsto \vecf{z} + t \vecf{h}$ is continuous, since $\norm{(\vecf{z} + s \vecf{h}) - (\vecf{z} + t \vecf{h})} = \abs{s - t}\,\norm{\vecf{h}}$,
 each $\deriv{x_j} f$ is continuous by assumption,
 and compositions, sums and constant multiples of continuous functions are continuous.

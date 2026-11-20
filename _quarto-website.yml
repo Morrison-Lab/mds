@@ -106,7 +106,12 @@ website:
           - linear-algebra-cholesky.qmd
           - linear-algebra-complex.qmd
       - text: "Vector Calculus"
-        href: vector-calculus.qmd
+        menu:
+          - text: "Overview"
+            href: vector-calculus.qmd
+          - vector-calculus-gradients.qmd
+          - vector-calculus-derivative-rules.qmd
+          - vector-calculus-hessian.qmd
       - text: "Optimization"
         menu:
           - text: "Overview"
@@ -190,7 +195,12 @@ website:
           - linear-algebra-diagonalization.qmd
           - linear-algebra-cholesky.qmd
           - linear-algebra-complex.qmd
-      - vector-calculus.qmd
+      - section: "Vector Calculus"
+        href: vector-calculus.qmd
+        contents:
+          - vector-calculus-gradients.qmd
+          - vector-calculus-derivative-rules.qmd
+          - vector-calculus-hessian.qmd
       - section: "Optimization"
         href: optimization.qmd
         contents:

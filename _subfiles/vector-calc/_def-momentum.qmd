@@ -1,7 +1,7 @@
 :::{#def-momentum}
 #### Momentum (heavy-ball method)
 
-Let $f : \reals^p \to \reals$ have first [partial derivatives](vector-calculus.qmd#def-partial-derivative),
+Let $f : \reals^p \to \reals$ have first [partial derivatives](vector-calculus-gradients.qmd#def-partial-derivative),
 let $\vx^{(0)}$ be a starting point,
 let $\steplen > 0$ be a [step length](#def-gradient-descent),
 and let $\beta \in [0, 1)$ be a [momentum coefficient](#def-momentum-coefficient).

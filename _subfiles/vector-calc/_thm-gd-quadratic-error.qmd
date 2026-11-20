@@ -21,7 +21,7 @@ $$
 ::: proof
 
 Let $\ve^{(t)} \eqdef \iterpoint{\vx}{t} - \vx^*$ be the [error](#def-iterate-error) at step $t$.
-The [gradient](vector-calculus.qmd#def-vector-derivative) of $f$ is $\deriv{\vx} f(\vx) = \matr{S}\vx - \vecf{c}$
+The [gradient](vector-calculus-gradients.qmd#def-vector-derivative) of $f$ is $\deriv{\vx} f(\vx) = \matr{S}\vx - \vecf{c}$
 (as in the proof of @thm-newton-quadratic),
 and $\vecf{c} = \matr{S}\vx^*$,
 so

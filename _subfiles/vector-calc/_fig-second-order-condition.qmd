@@ -87,9 +87,9 @@ plt.show();
 
 :::
 
-[Level curves](vector-calculus.qmd#def-level-set) of the two [functions](https://morrison-lab.github.io/mcs/functions.html#def-function) in @exm-second-order-condition.
+[Level curves](vector-calculus-gradients.qmd#def-level-set) of the two [functions](https://morrison-lab.github.io/mcs/functions.html#def-function) in @exm-second-order-condition.
 At the [stationary point](#def-stationary-point) $\tp{(1, 0)}$ of $x_1^2 + x_2^2 - 2 x_1$ (blue circle),
-the [Hessian](vector-calculus.qmd#def-hessian) is [positive definite](linear-algebra.qmd#def-positive-definite).
+the [Hessian](vector-calculus-hessian.qmd#def-hessian) is [positive definite](linear-algebra.qmd#def-positive-definite).
 The level curves close around a [strict local minimizer](#def-strict-local-minimizer).
 At the stationary point $\vzero$ of $x_1^2 - x_2^2$ (vermilion triangle),
 the Hessian is not positive definite.
