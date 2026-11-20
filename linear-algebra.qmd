@@ -45,12 +45,12 @@ The linear algebra notes are split across these pages:
   [positive definite](linear-algebra-definite-matrices.qmd#def-positive-definite) and semidefinite matrices,
   [condition numbers](linear-algebra-definite-matrices.qmd#def-condition-number),
   [matrix-induced inner products](linear-algebra-definite-matrices.qmd#def-matrix-induced-inner-product), and determinants.
-- [Design Matrices and Projections](linear-algebra-projections.qmd):
+- The [Design Matrices and Projections](linear-algebra-projections.qmd) page:
   design matrices, the [hat matrix](linear-algebra-projections.qmd#def-hat-matrix) and [orthogonal projection](linear-algebra-projections.qmd#def-orthogonal-projection).
-- [Generalized Inverses and Linear Systems](linear-algebra-generalized-inverses.qmd):
+- The [Generalized Inverses and Linear Systems](linear-algebra-generalized-inverses.qmd) page:
   generalized inverses, the [Moore-Penrose inverse](linear-algebra-generalized-inverses.qmd#def-moore-penrose),
   and when a linear system has a solution.
-- [Solving Linear Systems and Least Squares](linear-algebra-least-squares.qmd):
+- The [Solving Linear Systems and Least Squares](linear-algebra-least-squares.qmd) page:
   back substitution, the QR factorization, the [LU factorization](linear-algebra-least-squares.qmd#def-lu),
   least squares and the [normal equations](linear-algebra-least-squares.qmd#def-normal-equations).
 - [Diagonalization and Cholesky](linear-algebra-diagonalization.qmd):
