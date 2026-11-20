@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-11-20 00:10:33 (PST)
+Last modified: 2026-11-20 09:01:42 (PST)
 
 # 1 Polynomials
 
@@ -270,7 +270,7 @@ Last modified: 2026-11-20 00:10:33 (PST)
 
 > **NOTE:**
 >
-> *Remark 3* (Elementary algebra calls $m x + b$ “linear”). Elementary algebra usually calls $f(x) = m x + b$ a *linear function*, because its graph is a straight line. This site calls that an affine function and keeps “linear” for the case $b = 0$, because that is the sense used in linear algebra, where a [linear map](linear-algebra-matrices.llms.md#def-linear-map) must send $0$ to $0$ ([theorem](linear-algebra-matrices.llms.md#thm-linear-map-zero)).
+> *Remark 3* (Elementary algebra calls $m x + b$ “linear”). Elementary algebra usually calls $f(x) = m x + b$ a *linear function*, because its graph is a straight line. This site calls that an affine function and keeps “linear” for the case $b = 0$, because that is the sense used in linear algebra, where a [linear map](linear-algebra-linear-maps.llms.md#def-linear-map) must send $0$ to $0$ ([theorem](linear-algebra-linear-maps.llms.md#thm-linear-map-zero)).
 
 # 3 Limits of sequences
 

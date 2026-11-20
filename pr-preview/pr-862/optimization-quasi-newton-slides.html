@@ -366,7 +366,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-20 00:10:33 (PST)</p>
+  <p class="date">Last modified: 2026-11-20 09:01:42 (PST)</p>
 </section><section class="slide level2"><p><span id="sec-quasi-newton"></span></p>
 <!-- check-term-links: ignore-file -->
 <!-- This note names source material by its own words, so its terms are mentions, not first uses. -->
@@ -734,7 +734,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 </section><section class="slide level2 smaller scrollable" id="references"><div id="exm-lbfgs-step" class="theorem example">
 <p><span class="theorem-title"><strong>Example 4 (L-BFGS applies the update without forming the matrix)</strong></span> &nbsp;</p>
 <!-- no-figure: the example compares two numerically equal vectors, and a plot of identical points shows nothing the printed table does not -->
-<p>Continue <a href="#/exm-bfgs-step" class="quarto-xref">Example&nbsp;3</a> with <span class="math inline">\(m = 1\)</span> stored pair <span class="math inline">\((\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}^{(0)}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}^{(0)})\)</span> and starting <a href="./linear-algebra-matrices.html#def-matrix">matrix</a> <span class="math inline">\(\mathbf{I}_2\)</span>. Below, <span class="math inline">\(\mathbf{H}^+ \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)})\)</span> is formed from vectors alone, starting from <code>H0</code>, then compared with the <a href="./linear-algebra-matrices.html#def-matrix-mult">matrix product</a>.</p>
+<p>Continue <a href="#/exm-bfgs-step" class="quarto-xref">Example&nbsp;3</a> with <span class="math inline">\(m = 1\)</span> stored pair <span class="math inline">\((\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}^{(0)}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}^{(0)})\)</span> and starting <a href="./linear-algebra-matrices.html#def-matrix">matrix</a> <span class="math inline">\(\mathbf{I}_2\)</span>. Below, <span class="math inline">\(\mathbf{H}^+ \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)})\)</span> is formed from vectors alone, starting from <code>H0</code>, then compared with the <a href="./linear-algebra-matrix-multiplication.html#def-matrix-mult">matrix product</a>.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a aria-label="1"></a>g1 <span class="ot">&lt;-</span> grad1</span>
 <span id="cb7-2"><a aria-label="2"></a>alpha <span class="ot">&lt;-</span> rho <span class="sc">*</span> <span class="fu">sum</span>(s <span class="sc">*</span> g1)</span>

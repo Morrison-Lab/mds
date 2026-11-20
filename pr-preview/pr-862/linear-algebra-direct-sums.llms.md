@@ -4,13 +4,13 @@ Code
 
 Published
 
-Last modified: 2026-11-20 00:10:33 (PST)
+Last modified: 2026-11-20 09:01:42 (PST)
 
 # 1 Sums and direct sums
 
 > **NOTE:**
 >
-> This section, [Section 2](#sec-orthogonal-complements) and [Section 3](#sec-fundamental-theorem) are adapted from Zhou [\[1\]](#ref-zhou2024orthproj), used under the MIT License (see the license text in [Section  in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). The source proves that a subspace and its orthogonal complement together make up $\mathbb{R}^p$ by extending an orthonormal basis; the proof here uses the rank-nullity theorem ([Theorem 8 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-nullity)) instead. The source defines the orthogonal complement inside an ambient vector space $V \subseteq \mathbb{R}^m$; here the ambient space is always $\mathbb{R}^p$, which is all that the fundamental theorem and the projections need.
+> This section, [Section 2](#sec-orthogonal-complements) and [Section 3](#sec-fundamental-theorem) are adapted from Zhou [\[1\]](#ref-zhou2024orthproj), used under the MIT License (see the license text in [Section  in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). The source proves that a subspace and its orthogonal complement together make up $\mathbb{R}^p$ by extending an orthonormal basis; the proof here uses the rank-nullity theorem ([Theorem 2 in Rank-Nullity and Rank Factorization](linear-algebra-rank-nullity.llms.md#thm-rank-nullity)) instead. The source defines the orthogonal complement inside an ambient vector space $V \subseteq \mathbb{R}^m$; here the ambient space is always $\mathbb{R}^p$, which is all that the fundamental theorem and the projections need.
 
 > **NOTE:**
 >
@@ -241,14 +241,14 @@ Last modified: 2026-11-20 00:10:33 (PST)
 
 > **NOTE:**
 >
-> *Proof*. $\mathcal{C}(\mathbf{A} + \mathbf{B}) \subseteq \mathcal{C}(\mathbf{A}) + \mathcal{C}(\mathbf{B})$. Any vector of $\mathcal{C}(\mathbf{A} + \mathbf{B})$ is $(\mathbf{A} + \mathbf{B})\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ for some $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \in \mathbb{R}^n$ ([Definition 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-column-space)), and $(\mathbf{A} + \mathbf{B})\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ ([Theorem 8 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-distrib), with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ as an $n \times 1$ matrix), a vector of $\mathcal{C}(\mathbf{A})$ plus a vector of $\mathcal{C}(\mathbf{B})$.
+> *Proof*. $\mathcal{C}(\mathbf{A} + \mathbf{B}) \subseteq \mathcal{C}(\mathbf{A}) + \mathcal{C}(\mathbf{B})$. Any vector of $\mathcal{C}(\mathbf{A} + \mathbf{B})$ is $(\mathbf{A} + \mathbf{B})\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ for some $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \in \mathbb{R}^n$ ([Definition 1 in Column Space and Null Space](linear-algebra-column-null-space.llms.md#def-column-space)), and $(\mathbf{A} + \mathbf{B})\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ ([Theorem 2 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#thm-matmul-distrib), with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ as an $n \times 1$ matrix), a vector of $\mathcal{C}(\mathbf{A})$ plus a vector of $\mathcal{C}(\mathbf{B})$.
 >
-> **Compare dimensions.** All the sets involved are subspaces of $\mathbb{R}^m$ ([Theorem 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-column-space-span), [Theorem 1](#thm-sum-intersection-subspace)), so
+> **Compare dimensions.** All the sets involved are subspaces of $\mathbb{R}^m$ ([Theorem 1 in Column Space and Null Space](linear-algebra-column-null-space.llms.md#thm-column-space-span), [Theorem 1](#thm-sum-intersection-subspace)), so
 >
 > $$\begin{aligned}
 > \operatorname{rank}(\mathbf{A} + \mathbf{B})
 > &= \dim\mathopen{}\left(\mathcal{C}(\mathbf{A} + \mathbf{B})\right)\mathclose{}
-> && \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-dim}{\text{Theorem~7 in Column Space, Null Space and Rank-Nullity}}\text{)}
+> && \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-dim}{\text{Theorem~1 in Rank-Nullity and Rank Factorization}}\text{)}
 > \\
 > &\le \dim\mathopen{}\left(\mathcal{C}(\mathbf{A}) + \mathcal{C}(\mathbf{B})\right)\mathclose{}
 > && \text{(the containment, and part 2 of }\href{linear-algebra-subspaces.qmd#thm-dim-bound}{\text{Theorem~10 in Subspaces and Rank}}\text{)}
@@ -257,14 +257,14 @@ Last modified: 2026-11-20 00:10:33 (PST)
 > && \text{(}\href{#cor-dim-subadditive}{\text{Corollary~1}}\text{)}
 > \\
 > &= \operatorname{rank}(\mathbf{A}) + \operatorname{rank}(\mathbf{B}).
-> && \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-dim}{\text{Theorem~7 in Column Space, Null Space and Rank-Nullity}}\text{)}
+> && \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-dim}{\text{Theorem~1 in Rank-Nullity and Rank Factorization}}\text{)}
 > \end{aligned}$$
 
 > **NOTE:**
 >
 > **Example 6 (Subadditivity with equality and without)** Let $\mathbf{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$ and $\mathbf{B} = \begin{bmatrix} 0 & 0 \\ 0 & 1 \end{bmatrix}$. Each has one nonzero column and one zero column. The nonzero column on its own is linearly independent ($c\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2$ with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2$ forces $c = 0$), and the two columns together are not, since $1$ times the zero column is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2$; so each matrix has rank $1$ ([Definition 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-rank)). By the same argument, $-\mathbf{A}$ has rank $1$.
 >
-> - $\mathbf{A} + \mathbf{B}$ is the $2 \times 2$ identity matrix, which has rank $2$ ([Example 13 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#exm-rank-nullity)), so the bound $2 \le 1 + 1$ holds with equality.
+> - $\mathbf{A} + \mathbf{B}$ is the $2 \times 2$ identity matrix, which has rank $2$ ([Example 3 in Rank-Nullity and Rank Factorization](linear-algebra-rank-nullity.llms.md#exm-rank-nullity)), so the bound $2 \le 1 + 1$ holds with equality.
 > - $\mathbf{A} + (-\mathbf{A})$ is the $2 \times 2$ zero matrix, which has rank $0$: any nonempty list of its columns contains $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2$, and $1 \cdot\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2 = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2$. So the bound $0 \le \operatorname{rank}(\mathbf{A}) + \operatorname{rank}(-\mathbf{A}) = 1 + 1$ is strict.
 
 > **NOTE:**
@@ -738,7 +738,7 @@ Last modified: 2026-11-20 00:10:33 (PST)
 > $$\begin{aligned}
 > ({\mathbf{A}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})_j
 > &= \sum_{i=1}^{m} ({\mathbf{A}}^{\top})_{ji}\, x_i
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~17 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrix-multiplication.qmd#def-matvec-mult}{\text{Definition~8 in Matrix Multiplication}}\text{)}
 > \\
 > &= \sum_{i=1}^{m} a_{ij}\, x_i
 > && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~6 in Matrices}}\text{)}
@@ -747,11 +747,11 @@ Last modified: 2026-11-20 00:10:33 (PST)
 > && \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~10 in Vectors}}\text{)}
 > \end{aligned}$$
 >
-> So $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \in \mathcal{N}({\mathbf{A}}^{\top})$ ([Definition 3 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-null-space)) exactly when $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = 0$ for every column $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j$.
+> So $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \in \mathcal{N}({\mathbf{A}}^{\top})$ ([Definition 3 in Column Space and Null Space](linear-algebra-column-null-space.llms.md#def-null-space)) exactly when $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = 0$ for every column $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j$.
 >
-> $\mathcal{C}(\mathbf{A})^\perp \subseteq \mathcal{N}({\mathbf{A}}^{\top})$. Each column $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j$ is in $\mathcal{C}(\mathbf{A})$ ([Theorem 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-column-space-span)), so a vector orthogonal to all of $\mathcal{C}(\mathbf{A})$ is orthogonal to every column.
+> $\mathcal{C}(\mathbf{A})^\perp \subseteq \mathcal{N}({\mathbf{A}}^{\top})$. Each column $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j$ is in $\mathcal{C}(\mathbf{A})$ ([Theorem 1 in Column Space and Null Space](linear-algebra-column-null-space.llms.md#thm-column-space-span)), so a vector orthogonal to all of $\mathcal{C}(\mathbf{A})$ is orthogonal to every column.
 >
-> $\mathcal{N}({\mathbf{A}}^{\top}) \subseteq \mathcal{C}(\mathbf{A})^\perp$. Suppose $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = 0$ for every $j$, and take any $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} \in \mathcal{C}(\mathbf{A})$, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}$ for some $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} \in \mathbb{R}^n$ ([Definition 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-column-space)). Then
+> $\mathcal{N}({\mathbf{A}}^{\top}) \subseteq \mathcal{C}(\mathbf{A})^\perp$. Suppose $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = 0$ for every $j$, and take any $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} \in \mathcal{C}(\mathbf{A})$, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}$ for some $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} \in \mathbb{R}^n$ ([Definition 1 in Column Space and Null Space](linear-algebra-column-null-space.llms.md#def-column-space)). Then
 >
 > $$\begin{aligned}
 > \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
@@ -759,7 +759,7 @@ Last modified: 2026-11-20 00:10:33 (PST)
 > && \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~10 in Vectors}}\text{)}
 > \\
 > &= \sum_{i=1}^{m} \mathopen{}\left(\sum_{j=1}^na_{ij} z_j\right)\mathclose{}\, x_i
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~17 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrix-multiplication.qmd#def-matvec-mult}{\text{Definition~8 in Matrix Multiplication}}\text{)}
 > \\
 > &= \sum_{i=1}^{m} \sum_{j=1}^na_{ij}\, z_j\, x_i
 > && \text{(distribute each } x_i \text{ over the inner sum)}
@@ -784,7 +784,7 @@ Last modified: 2026-11-20 00:10:33 (PST)
 
 > **NOTE:**
 >
-> **Example 14 (The complement of the column space in [Example 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#exm-column-space))** For $\mathbf{A}$ in [Example 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#exm-column-space), $\mathcal{C}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\{(1, 3)\right\}\mathclose{}$ (1). [Example 3 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#exm-null-space) found $\mathcal{N}({\mathbf{A}}^{\top}) = \operatorname{span}\mathopen{}\left\{(-3, 1)\right\}\mathclose{}$, so by [Theorem 7](#thm-complement-null-space) this line is $\mathcal{C}(\mathbf{A})^\perp$. Directly, for any $c$,
+> **Example 14 (The complement of the column space in [Example 1 in Column Space and Null Space](linear-algebra-column-null-space.llms.md#exm-column-space))** For $\mathbf{A}$ in [Example 1 in Column Space and Null Space](linear-algebra-column-null-space.llms.md#exm-column-space), $\mathcal{C}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\{(1, 3)\right\}\mathclose{}$ (1). [Example 3 in Column Space and Null Space](linear-algebra-column-null-space.llms.md#exm-null-space) found $\mathcal{N}({\mathbf{A}}^{\top}) = \operatorname{span}\mathopen{}\left\{(-3, 1)\right\}\mathclose{}$, so by [Theorem 7](#thm-complement-null-space) this line is $\mathcal{C}(\mathbf{A})^\perp$. Directly, for any $c$,
 >
 > $$\begin{aligned}
 > \mathopen{}\left(c\,(1, 3)\right)\mathclose{} \cdot (-3, 1)
@@ -800,7 +800,7 @@ Last modified: 2026-11-20 00:10:33 (PST)
 
 > **NOTE:**
 >
-> **Exercise 13 (Finding the orthogonal complement of a column space)** [Theorem 7](#thm-complement-null-space) turns the [orthogonal complement](#def-orthogonal-complement) of a [column space](linear-algebra-rank-nullity.llms.md#def-column-space) into a [null space](linear-algebra-rank-nullity.llms.md#def-null-space), which a [linear system](linear-algebra-matrices.llms.md#def-linear-system) describes. Let
+> **Exercise 13 (Finding the orthogonal complement of a column space)** [Theorem 7](#thm-complement-null-space) turns the [orthogonal complement](#def-orthogonal-complement) of a [column space](linear-algebra-column-null-space.llms.md#def-column-space) into a [null space](linear-algebra-column-null-space.llms.md#def-null-space), which a [linear system](linear-algebra-matrix-multiplication.llms.md#def-linear-system) describes. Let
 >
 > $$\mathbf{A} = \begin{bmatrix}1 & 0 \\ 0 & 1 \\ 1 & 1\end{bmatrix}.$$
 >
@@ -845,7 +845,7 @@ Last modified: 2026-11-20 00:10:33 (PST)
 >
 > which forces every $x_i = 0$.
 >
-> **Part 2.** Let $d = \dim(\mathcal{S})$. If $d = 0$, then $\mathcal{S}$ has a basis ([Theorem 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-extend-basis)) with $0$ vectors ([Definition 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)), the empty list, whose span is $\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}$ ([Definition 5 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-span)); so $\mathcal{S} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}$, $\mathcal{S}^\perp = \mathbb{R}^p$ (every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ satisfies $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = 0$), and $0 + p = p$ ([Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension)). If $d \ge 1$, choose a basis $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_d$ of $\mathcal{S}$ ([Theorem 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-extend-basis)), and let $\mathbf{A}$ be the $p \times d$ matrix with these columns. The basis spans $\mathcal{S}$, so $\mathcal{S} = \mathcal{C}(\mathbf{A})$ ([Theorem 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-column-space-span)), and $\mathcal{S}^\perp = \mathcal{N}({\mathbf{A}}^{\top})$ ([Theorem 7](#thm-complement-null-space)). ${\mathbf{A}}^{\top}$ is $d \times p$, so
+> **Part 2.** Let $d = \dim(\mathcal{S})$. If $d = 0$, then $\mathcal{S}$ has a basis ([Theorem 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-extend-basis)) with $0$ vectors ([Definition 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)), the empty list, whose span is $\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}$ ([Definition 5 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-span)); so $\mathcal{S} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}$, $\mathcal{S}^\perp = \mathbb{R}^p$ (every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ satisfies $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = 0$), and $0 + p = p$ ([Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension)). If $d \ge 1$, choose a basis $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_d$ of $\mathcal{S}$ ([Theorem 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-extend-basis)), and let $\mathbf{A}$ be the $p \times d$ matrix with these columns. The basis spans $\mathcal{S}$, so $\mathcal{S} = \mathcal{C}(\mathbf{A})$ ([Theorem 1 in Column Space and Null Space](linear-algebra-column-null-space.llms.md#thm-column-space-span)), and $\mathcal{S}^\perp = \mathcal{N}({\mathbf{A}}^{\top})$ ([Theorem 7](#thm-complement-null-space)). ${\mathbf{A}}^{\top}$ is $d \times p$, so
 >
 > $$\begin{aligned}
 > \dim(\mathcal{S}^\perp)
@@ -853,16 +853,16 @@ Last modified: 2026-11-20 00:10:33 (PST)
 > && \text{(}\href{#thm-complement-null-space}{\text{Theorem~7}}\text{)}
 > \\
 > &= \operatorname{nullity}({\mathbf{A}}^{\top})
-> && \text{(}\href{linear-algebra-rank-nullity.qmd#def-nullity}{\text{Definition~7 in Column Space, Null Space and Rank-Nullity}}\text{)}
+> && \text{(}\href{linear-algebra-rank-nullity.qmd#def-nullity}{\text{Definition~1 in Rank-Nullity and Rank Factorization}}\text{)}
 > \\
 > &= p - \operatorname{rank}({\mathbf{A}}^{\top})
-> && \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-nullity}{\text{Theorem~8 in Column Space, Null Space and Rank-Nullity}}\text{, for the } p \text{ columns of } {\mathbf{A}}^{\top} \text{)}
+> && \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-nullity}{\text{Theorem~2 in Rank-Nullity and Rank Factorization}}\text{, for the } p \text{ columns of } {\mathbf{A}}^{\top} \text{)}
 > \\
 > &= p - \operatorname{rank}(\mathbf{A})
-> && \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-transpose}{\text{Theorem~10 in Column Space, Null Space and Rank-Nullity}}\text{)}
+> && \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-transpose}{\text{Theorem~4 in Rank-Nullity and Rank Factorization}}\text{)}
 > \\
 > &= p - \dim\mathopen{}\left(\mathcal{C}(\mathbf{A})\right)\mathclose{}
-> && \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-dim}{\text{Theorem~7 in Column Space, Null Space and Rank-Nullity}}\text{)}
+> && \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-dim}{\text{Theorem~1 in Rank-Nullity and Rank Factorization}}\text{)}
 > \\
 > &= p - d.
 > && \text{(} \mathcal{C}(\mathbf{A}) = \mathcal{S} \text{)}
@@ -972,7 +972,7 @@ Last modified: 2026-11-20 00:10:33 (PST)
 
 > **NOTE:**
 >
-> **Example 16 (Back to the line)** In [Example 15](#exm-orthogonal-direct-sum), $\mathcal{S} = \operatorname{span}\mathopen{}\left\{(1, 1, 0)\right\}\mathclose{}$ and $\mathcal{S}^\perp = \operatorname{span}\mathopen{}\left\{(1, -1, 0), (0, 0, 1)\right\}\mathclose{}$. Put those two spanning vectors in the columns of the $3 \times 2$ matrix $\mathbf{B} = \begin{bmatrix} 1 & 0 \\ -1 & 0 \\ 0 & 1 \end{bmatrix}$, so $\mathcal{S}^\perp = \mathcal{C}(\mathbf{B})$ ([Theorem 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-column-space-span)) and $(\mathcal{S}^\perp)^\perp = \mathcal{N}({\mathbf{B}}^{\top})$ ([Theorem 7](#thm-complement-null-space)). Since ${\mathbf{B}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (w_1 - w_2,\ w_3)$ ([Definition 17 in Matrices](linear-algebra-matrices.llms.md#def-matvec-mult)), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in (\mathcal{S}^\perp)^\perp$ exactly when $w_1 - w_2 = 0$ and $w_3 = 0$. So
+> **Example 16 (Back to the line)** In [Example 15](#exm-orthogonal-direct-sum), $\mathcal{S} = \operatorname{span}\mathopen{}\left\{(1, 1, 0)\right\}\mathclose{}$ and $\mathcal{S}^\perp = \operatorname{span}\mathopen{}\left\{(1, -1, 0), (0, 0, 1)\right\}\mathclose{}$. Put those two spanning vectors in the columns of the $3 \times 2$ matrix $\mathbf{B} = \begin{bmatrix} 1 & 0 \\ -1 & 0 \\ 0 & 1 \end{bmatrix}$, so $\mathcal{S}^\perp = \mathcal{C}(\mathbf{B})$ ([Theorem 1 in Column Space and Null Space](linear-algebra-column-null-space.llms.md#thm-column-space-span)) and $(\mathcal{S}^\perp)^\perp = \mathcal{N}({\mathbf{B}}^{\top})$ ([Theorem 7](#thm-complement-null-space)). Since ${\mathbf{B}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (w_1 - w_2,\ w_3)$ ([Definition 8 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#def-matvec-mult)), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in (\mathcal{S}^\perp)^\perp$ exactly when $w_1 - w_2 = 0$ and $w_3 = 0$. So
 >
 > $$\begin{aligned}
 > (\mathcal{S}^\perp)^\perp &= \mathopen{}\left\{(a, a, 0) : a \in \mathbb{R}\right\}\mathclose{} \\
@@ -1022,7 +1022,7 @@ Last modified: 2026-11-20 00:10:33 (PST)
 
 > **NOTE:**
 >
-> *Proof*. **Part 1.** The first equation is [Theorem 7](#thm-complement-null-space). $\mathcal{C}(\mathbf{A})$ is a subspace of $\mathbb{R}^m$ ([Theorem 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-column-space-span)), so
+> *Proof*. **Part 1.** The first equation is [Theorem 7](#thm-complement-null-space). $\mathcal{C}(\mathbf{A})$ is a subspace of $\mathbb{R}^m$ ([Theorem 1 in Column Space and Null Space](linear-algebra-column-null-space.llms.md#thm-column-space-span)), so
 >
 > $$\begin{aligned}
 > \mathbb{R}^m
@@ -1046,15 +1046,15 @@ Last modified: 2026-11-20 00:10:33 (PST)
 >
 > **Part 3.** Apply parts 2 and 1 to the $n \times m$ matrix ${\mathbf{A}}^{\top}$, using ${({\mathbf{A}}^{\top})}^{\top} = \mathbf{A}$: part 2 gives $\mathcal{C}({\mathbf{A}}^{\top}) = \mathcal{N}(\mathbf{A})^\perp$, and part 1 gives $\mathbb{R}^n = \mathcal{C}({\mathbf{A}}^{\top}) \oplus \mathcal{N}(\mathbf{A})$.
 >
-> **Part 4.** $\dim\mathopen{}\left(\mathcal{C}(\mathbf{A})\right)\mathclose{} = r$ by [Theorem 7 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-dim). $\dim\mathopen{}\left(\mathcal{C}({\mathbf{A}}^{\top})\right)\mathclose{} = \operatorname{rank}({\mathbf{A}}^{\top})$ by [Theorem 7 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-dim), and that is $r$ by [Theorem 10 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-transpose). $\mathbf{A}$ has $n$ columns, so $\dim\mathopen{}\left(\mathcal{N}(\mathbf{A})\right)\mathclose{} = n - r$ ([Definition 7 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-nullity), [Theorem 8 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-nullity)). ${\mathbf{A}}^{\top}$ has $m$ columns and rank $r$, so $\dim\mathopen{}\left(\mathcal{N}({\mathbf{A}}^{\top})\right)\mathclose{} = m - r$ in the same way.
+> **Part 4.** $\dim\mathopen{}\left(\mathcal{C}(\mathbf{A})\right)\mathclose{} = r$ by [Theorem 1 in Rank-Nullity and Rank Factorization](linear-algebra-rank-nullity.llms.md#thm-rank-dim). $\dim\mathopen{}\left(\mathcal{C}({\mathbf{A}}^{\top})\right)\mathclose{} = \operatorname{rank}({\mathbf{A}}^{\top})$ by [Theorem 1 in Rank-Nullity and Rank Factorization](linear-algebra-rank-nullity.llms.md#thm-rank-dim), and that is $r$ by [Theorem 4 in Rank-Nullity and Rank Factorization](linear-algebra-rank-nullity.llms.md#thm-rank-transpose). $\mathbf{A}$ has $n$ columns, so $\dim\mathopen{}\left(\mathcal{N}(\mathbf{A})\right)\mathclose{} = n - r$ ([Definition 1 in Rank-Nullity and Rank Factorization](linear-algebra-rank-nullity.llms.md#def-nullity), [Theorem 2 in Rank-Nullity and Rank Factorization](linear-algebra-rank-nullity.llms.md#thm-rank-nullity)). ${\mathbf{A}}^{\top}$ has $m$ columns and rank $r$, so $\dim\mathopen{}\left(\mathcal{N}({\mathbf{A}}^{\top})\right)\mathclose{} = m - r$ in the same way.
 
 > **NOTE:**
 >
-> **Example 18 (The four subspaces of the matrix in [Example 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#exm-column-space))** For $\mathbf{A}$ in [Example 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#exm-column-space), $m = 2$, $n = 3$ and $r = 1$ ([Example 11 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#exm-rank-dim)).
+> **Example 18 (The four subspaces of the matrix in [Example 1 in Column Space and Null Space](linear-algebra-column-null-space.llms.md#exm-column-space))** For $\mathbf{A}$ in [Example 1 in Column Space and Null Space](linear-algebra-column-null-space.llms.md#exm-column-space), $m = 2$, $n = 3$ and $r = 1$ ([Example 1 in Rank-Nullity and Rank Factorization](linear-algebra-rank-nullity.llms.md#exm-rank-dim)).
 >
 > - **In** $\mathbb{R}^3$: the row space $\mathcal{C}({\mathbf{A}}^{\top}) = \operatorname{span}\mathopen{}\left\{(1, -2, -2)\right\}\mathclose{}$
 >
->   1.  has dimension $1 = r$, and $\mathcal{N}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\{(2, 1, 0), (2, 0, 1)\right\}\mathclose{}$ has dimension $2 = n - r$ ([Example 12 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#exm-nullity)). The spanning vectors are orthogonal:
+>   1.  has dimension $1 = r$, and $\mathcal{N}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\{(2, 1, 0), (2, 0, 1)\right\}\mathclose{}$ has dimension $2 = n - r$ ([Example 2 in Rank-Nullity and Rank Factorization](linear-algebra-rank-nullity.llms.md#exm-nullity)). The spanning vectors are orthogonal:
 >
 >   $$\begin{aligned}
 >   (1, -2, -2) \cdot (2, 1, 0) &= 2 - 2 + 0 \\
@@ -1096,7 +1096,7 @@ Last modified: 2026-11-20 00:10:33 (PST)
 
 > **NOTE:**
 >
-> **Exercise 16 (Testing whether a linear system has a solution through the left null space)** Part 2 of [Theorem 10](#thm-fundamental-subspaces) says that $\mathcal{C}(\mathbf{A}) = \mathcal{N}({\mathbf{A}}^{\top})^\perp$, so a [linear system](linear-algebra-matrices.llms.md#def-linear-system) $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ has a solution exactly when $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ is [orthogonal](linear-algebra-vectors.llms.md#def-orthogonal-vectors) to every vector of the [left null space](linear-algebra-rank-nullity.llms.md#def-left-null-space). Let
+> **Exercise 16 (Testing whether a linear system has a solution through the left null space)** Part 2 of [Theorem 10](#thm-fundamental-subspaces) says that $\mathcal{C}(\mathbf{A}) = \mathcal{N}({\mathbf{A}}^{\top})^\perp$, so a [linear system](linear-algebra-matrix-multiplication.llms.md#def-linear-system) $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ has a solution exactly when $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ is [orthogonal](linear-algebra-vectors.llms.md#def-orthogonal-vectors) to every vector of the [left null space](linear-algebra-column-null-space.llms.md#def-left-null-space). Let
 >
 > $$\mathbf{A} = \begin{bmatrix}1 & 1 \\ 1 & 1 \\ 0 & 0\end{bmatrix},
 > \qquad

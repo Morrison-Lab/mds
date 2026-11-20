@@ -4,23 +4,23 @@ Code
 
 Published
 
-Last modified: 2026-11-20 00:10:33 (PST)
+Last modified: 2026-11-20 09:01:42 (PST)
 
 # 1 Special Matrices
 
 Some special matrices appeared earlier:
 
 - the zero matrix ([Definition 7 in Matrices](linear-algebra-matrices.llms.md#def-zero-matrix)), in the section on matrix addition
-- square matrices ([Definition 12 in Matrices](linear-algebra-matrices.llms.md#def-square-matrix)), in the section on square and identity matrices
-- the identity matrix ([Definition 16 in Matrices](linear-algebra-matrices.llms.md#def-identity-matrix)), in that same section
+- square matrices ([Definition 3 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#def-square-matrix)), in the section on square and identity matrices
+- the identity matrix ([Definition 7 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#def-identity-matrix)), in that same section
 
 > **NOTE:**
 >
-> **Definition 1 (Order of a square matrix)** The **order** of a square matrix ([Definition 12 in Matrices](linear-algebra-matrices.llms.md#def-square-matrix)) is its number of rows, which equals its number of columns.
+> **Definition 1 (Order of a square matrix)** The **order** of a square matrix ([Definition 3 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#def-square-matrix)) is its number of rows, which equals its number of columns.
 
 > **NOTE:**
 >
-> **Example 1 (Orders of square matrices)** $\begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$ has order $2$, and $[5]$ has order $1$. A $2 \times 3$ matrix has no order, since it is not square ([Example 12 in Matrices](linear-algebra-matrices.llms.md#exm-square-matrix)).
+> **Example 1 (Orders of square matrices)** $\begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$ has order $2$, and $[5]$ has order $1$. A $2 \times 3$ matrix has no order, since it is not square ([Example 5 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#exm-square-matrix)).
 
 > **NOTE:**
 >
@@ -50,7 +50,7 @@ Some special matrices appeared earlier:
 > && \text{(multiply and add)}
 > \end{aligned}$$
 >
-> A $2 \times 3$ matrix $\mathbf{B}$ is not square ([Definition 12 in Matrices](linear-algebra-matrices.llms.md#def-square-matrix)), so $\mathbf{B}^2$ is not defined; indeed $\mathbf{B} \mathbf{B}$ would multiply a matrix with $3$ columns by one with $2$ rows, which [Definition 10 in Matrices](linear-algebra-matrices.llms.md#def-matrix-mult) does not allow.
+> A $2 \times 3$ matrix $\mathbf{B}$ is not square ([Definition 3 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#def-square-matrix)), so $\mathbf{B}^2$ is not defined; indeed $\mathbf{B} \mathbf{B}$ would multiply a matrix with $3$ columns by one with $2$ rows, which [Definition 1 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#def-matrix-mult) does not allow.
 
 > **NOTE:**
 >
@@ -116,7 +116,7 @@ Some special matrices appeared earlier:
 > &= \mathbf{I}_p,
 > \end{aligned}$$
 >
-> where $\mathbf{I}_p$ is the identity matrix ([Definition 16 in Matrices](linear-algebra-matrices.llms.md#def-identity-matrix)). A square matrix that is not invertible is **singular**.
+> where $\mathbf{I}_p$ is the identity matrix ([Definition 7 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#def-identity-matrix)). A square matrix that is not invertible is **singular**.
 
 > **NOTE:**
 >
@@ -165,7 +165,7 @@ Some special matrices appeared earlier:
 > && \text{(identity matrix)}
 > \end{aligned}$$
 >
-> The steps use [Theorem 7 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc) and [Theorem 10 in Matrices](linear-algebra-matrices.llms.md#thm-identity). Since $\mathbf{B} = \mathbf{C}$, at most one matrix satisfies these equations, which is the uniqueness that [Definition 5](#def-matrix-inverse) asserts. When $\mathbf{A}$ is invertible, the matrix $\mathbf{B}$ in [Definition 6](#def-invertible-matrix) is therefore the inverse $\mathbf{A}^{-1}$ of $\mathbf{A}$, and $\mathbf{A}$ is invertible exactly when it has an inverse. For example, for $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}$ in [Example 5](#exm-invertible-matrix), $\begin{bmatrix} 0.5 & -0.5 \\ 0 & 1 \end{bmatrix}$ is the only $2 \times 2$ matrix $\mathbf{B}$ with
+> The steps use [Theorem 1 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#thm-matmul-assoc) and [Theorem 4 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#thm-identity). Since $\mathbf{B} = \mathbf{C}$, at most one matrix satisfies these equations, which is the uniqueness that [Definition 5](#def-matrix-inverse) asserts. When $\mathbf{A}$ is invertible, the matrix $\mathbf{B}$ in [Definition 6](#def-invertible-matrix) is therefore the inverse $\mathbf{A}^{-1}$ of $\mathbf{A}$, and $\mathbf{A}$ is invertible exactly when it has an inverse. For example, for $\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}$ in [Example 5](#exm-invertible-matrix), $\begin{bmatrix} 0.5 & -0.5 \\ 0 & 1 \end{bmatrix}$ is the only $2 \times 2$ matrix $\mathbf{B}$ with
 >
 > $$\begin{aligned}
 > \mathbf{A}\mathbf{B} &= \mathbf{B}\mathbf{A} \\
@@ -216,7 +216,7 @@ Some special matrices appeared earlier:
 > && \text{(definition of } \mathbf{B}^{-1} \text{)}
 > \end{aligned}$$
 >
-> So $\mathbf{B}^{-1}\mathbf{A}^{-1}$ satisfies [Definition 5](#def-matrix-inverse) for $\mathbf{A}\mathbf{B}$. The steps use [Theorem 7 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc) and [Theorem 10 in Matrices](linear-algebra-matrices.llms.md#thm-identity).
+> So $\mathbf{B}^{-1}\mathbf{A}^{-1}$ satisfies [Definition 5](#def-matrix-inverse) for $\mathbf{A}\mathbf{B}$. The steps use [Theorem 1 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#thm-matmul-assoc) and [Theorem 4 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#thm-identity).
 
 > **NOTE:**
 >
@@ -252,7 +252,7 @@ Some special matrices appeared earlier:
 > && \text{(} \mathbf{I}_p \text{ is symmetric)}
 > \end{aligned}$$
 >
-> So ${\mathopen{}\left(\mathbf{A}^{-1}\right)\mathclose{}}^{\top}$ satisfies [Definition 5](#def-matrix-inverse) for ${\mathbf{A}}^{\top}$. The first step of each display is [Theorem 19 in Matrices](linear-algebra-matrices.llms.md#thm-transpose-product).
+> So ${\mathopen{}\left(\mathbf{A}^{-1}\right)\mathclose{}}^{\top}$ satisfies [Definition 5](#def-matrix-inverse) for ${\mathbf{A}}^{\top}$. The first step of each display is [Theorem 6 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#thm-transpose-product).
 
 > **NOTE:**
 >
@@ -297,25 +297,25 @@ Some special matrices appeared earlier:
 > *Proof*. $$\begin{aligned}
 > \mathbf{B}
 > &= \mathbf{I}_p\,\mathbf{B}
-> && \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~10 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-identity}{\text{Theorem~4 in Matrix Multiplication}}\text{)}
 > \\
 > &= (\mathbf{A}^{-1}\mathbf{A})\,\mathbf{B}
 > && \text{(}\href{#def-matrix-inverse}{\text{Definition~5}}\text{)}
 > \\
 > &= \mathbf{A}^{-1}(\mathbf{A}\mathbf{B})
-> && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~7 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 > \\
 > &= \mathbf{A}^{-1}(\mathbf{A}\mathbf{C})
 > && \text{(} \mathbf{A}\mathbf{B} = \mathbf{A}\mathbf{C} \text{)}
 > \\
 > &= (\mathbf{A}^{-1}\mathbf{A})\,\mathbf{C}
-> && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~7 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 > \\
 > &= \mathbf{I}_p\,\mathbf{C}
 > && \text{(}\href{#def-matrix-inverse}{\text{Definition~5}}\text{)}
 > \\
 > &= \mathbf{C}.
-> && \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~10 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-identity}{\text{Theorem~4 in Matrix Multiplication}}\text{)}
 > \end{aligned}$$
 >
 > $\square$
@@ -362,10 +362,10 @@ Some special matrices appeared earlier:
 >
 > *Remark 4* (Matrix arithmetic compared with scalar arithmetic). **Sums and differences.** Matrix addition has every property that addition of numbers has: it is commutative ([Theorem 3 in Matrices](linear-algebra-matrices.llms.md#thm-matadd-commutative)), associative ([Theorem 4 in Matrices](linear-algebra-matrices.llms.md#thm-matadd-assoc)), has the zero matrix as its identity ([Theorem 5 in Matrices](linear-algebra-matrices.llms.md#thm-matadd-identity)), and gives each matrix a negative ([Theorem 6 in Matrices](linear-algebra-matrices.llms.md#thm-matadd-inverse)). The only new condition is that $\mathbf{A} + \mathbf{B}$ is defined only when $\mathbf{A}$ and $\mathbf{B}$ have the same dimensions.
 >
-> **Products.** Matrix multiplication keeps three properties of multiplication of numbers: it is associative ([Theorem 7 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc)), it is distributive over addition ([Theorem 8 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-distrib)), and it has an identity, $\mathbf{I}_p$ ([Theorem 10 in Matrices](linear-algebra-matrices.llms.md#thm-identity)). It differs from multiplication of numbers in four ways:
+> **Products.** Matrix multiplication keeps three properties of multiplication of numbers: it is associative ([Theorem 1 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#thm-matmul-assoc)), it is distributive over addition ([Theorem 2 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#thm-matmul-distrib)), and it has an identity, $\mathbf{I}_p$ ([Theorem 4 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#thm-identity)). It differs from multiplication of numbers in four ways:
 >
-> - $\mathbf{A}\mathbf{B}$ is defined only when the number of columns of $\mathbf{A}$ equals the number of rows of $\mathbf{B}$ ([Definition 10 in Matrices](linear-algebra-matrices.llms.md#def-matrix-mult)).
-> - It is not commutative: $\mathbf{A}\mathbf{B} \neq \mathbf{B}\mathbf{A}$ in general ([Remark 2 in Matrices](linear-algebra-matrices.llms.md#rem-matmul-not-commutative)).
+> - $\mathbf{A}\mathbf{B}$ is defined only when the number of columns of $\mathbf{A}$ equals the number of rows of $\mathbf{B}$ ([Definition 1 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#def-matrix-mult)).
+> - It is not commutative: $\mathbf{A}\mathbf{B} \neq \mathbf{B}\mathbf{A}$ in general ([Remark 1 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#rem-matmul-not-commutative)).
 > - A nonzero square matrix need not have an inverse ([Example 5](#exm-invertible-matrix)).
 > - $\mathbf{A}\mathbf{B} = \mathbf{0}$ can hold with $\mathbf{A} \neq \mathbf{0}$ and $\mathbf{B} \neq \mathbf{0}$ ([Example 9](#exm-matmul-zero-divisors)), so a factor cannot be canceled from $\mathbf{A}\mathbf{B} = \mathbf{A}\mathbf{C}$ unless it is invertible ([Theorem 3](#thm-invertible-cancel)).
 
@@ -617,7 +617,7 @@ Some special matrices appeared earlier:
 > && \text{(definition of the Euclidean norm)}
 > \end{aligned}$$
 >
-> Both norms are nonnegative square roots, so equal squares give $\mathopen{}\left\lVert\mathbf{Q}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{} = \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}$. The second step is [Example 10 in Matrices](linear-algebra-matrices.llms.md#exm-dot-product-matmul), the third is [Theorem 19 in Matrices](linear-algebra-matrices.llms.md#thm-transpose-product), and the fourth is [Theorem 7 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc).
+> Both norms are nonnegative square roots, so equal squares give $\mathopen{}\left\lVert\mathbf{Q}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{} = \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}$. The second step is [Example 3 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#exm-dot-product-matmul), the third is [Theorem 6 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#thm-transpose-product), and the fourth is [Theorem 1 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#thm-matmul-assoc).
 
 > **NOTE:**
 >
@@ -732,7 +732,7 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> *Proof*. Swapping the vectors relies on the fact that [a](linear-algebra-matrices.llms.md#thm-scalar-transpose) $1 \times 1$ product equals its own transpose, which justifies the step labeled with that fact:
+> *Proof*. Swapping the vectors relies on the fact that [a](linear-algebra-matrix-multiplication.llms.md#thm-scalar-transpose) $1 \times 1$ product equals its own transpose, which justifies the step labeled with that fact:
 >
 > $$\begin{aligned}
 > {{B_{\mathbf{A}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right)\mathclose{}}
@@ -757,7 +757,7 @@ Some special matrices appeared earlier:
 >
 > $$\mathbf{S} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}, \quad \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix} 1 \\ 2 \end{bmatrix}, \quad \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= \begin{bmatrix} 3 \\ -1 \end{bmatrix}.$$
 >
-> The [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{S}$ is [symmetric](#def-symmetric-matrix), because its two [off-diagonal entries](linear-algebra-matrices.llms.md#def-off-diagonal-entry) are both $2$, so its [bilinear form](#def-bilinear-form) is a [symmetric bilinear form](#def-symmetric-bilinear-form). At $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$, that form is
+> The [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{S}$ is [symmetric](#def-symmetric-matrix), because its two [off-diagonal entries](linear-algebra-matrix-multiplication.llms.md#def-off-diagonal-entry) are both $2$, so its [bilinear form](#def-bilinear-form) is a [symmetric bilinear form](#def-symmetric-bilinear-form). At $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$, that form is
 >
 > $$\begin{aligned}
 > {{B_{\mathbf{S}}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right)\mathclose{}}
@@ -852,7 +852,7 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> *Proof*. By the distributive law ([Theorem 8 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-distrib)), applied on the left and then on the right,
+> *Proof*. By the distributive law ([Theorem 2 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#thm-matmul-distrib)), applied on the left and then on the right,
 >
 > $$\begin{aligned}
 > {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}(\mathbf{A} + \mathbf{B})\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
@@ -941,7 +941,7 @@ Some special matrices appeared earlier:
 > && \text{(move the scalar } \tfrac{1}{2} \text{ inside)}
 > \end{aligned}$$
 >
-> The distributive step is [Theorem 8 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-distrib), and the transpose step is [Theorem 19 in Matrices](linear-algebra-matrices.llms.md#thm-transpose-product).
+> The distributive step is [Theorem 2 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#thm-matmul-distrib), and the transpose step is [Theorem 6 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#thm-transpose-product).
 
 > **NOTE:**
 >
@@ -1612,7 +1612,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 > && \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~10 in Vectors}}\text{)}
 > \\
 > &= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top}\,{\mathbf{A}}^{\top}\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}
-> && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~19 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-transpose-product}{\text{Theorem~6 in Matrix Multiplication}}\text{)}
 > \\
 > &= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}}^{\top}\,\mathbf{A}\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}
 > && \text{(} \mathbf{A} \text{ is symmetric)}
@@ -2194,7 +2194,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 > && \text{(transposing twice changes nothing)}
 > \end{aligned}$$
 >
-> The first step is [Theorem 19 in Matrices](linear-algebra-matrices.llms.md#thm-transpose-product), and the second follows from [Definition 6 in Matrices](linear-algebra-matrices.llms.md#def-matrix-transpose), which swaps rows and columns, so swapping them again restores $\mathbf{A}$.
+> The first step is [Theorem 6 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#thm-transpose-product), and the second follows from [Definition 6 in Matrices](linear-algebra-matrices.llms.md#def-matrix-transpose), which swaps rows and columns, so swapping them again restores $\mathbf{A}$.
 >
 > **The factorization.**
 >
@@ -2365,7 +2365,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 
 > **NOTE:**
 >
-> **Theorem 19 (Entries and symmetry of a Gram matrix)** Let $\mathbf{A}$ be an $m \times n$ matrix with columns $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_n$, and let $\mathbf{G} = {\mathbf{A}}^{\top} \mathbf{A}$ ([Definition 6 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-gram-matrix)).
+> **Theorem 19 (Entries and symmetry of a Gram matrix)** Let $\mathbf{A}$ be an $m \times n$ matrix with columns $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_n$, and let $\mathbf{G} = {\mathbf{A}}^{\top} \mathbf{A}$ ([Definition 6 in Column Space and Null Space](linear-algebra-column-null-space.llms.md#def-gram-matrix)).
 >
 > 1.  Entry $(i, j)$ of $\mathbf{G}$ is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_i \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j$.
 > 2.  $\mathbf{G}$ is symmetric ([Definition 3](#def-symmetric-matrix)).
@@ -2391,7 +2391,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 > && \text{(substitute } \mathbf{G} \text{)}
 > \\
 > &= {(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})}^{\top}\,(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})
-> && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~19 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-transpose-product}{\text{Theorem~6 in Matrix Multiplication}}\text{)}
 > \\
 > &= \mathopen{}\left\lVert\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}^2
 > && \text{(}\href{linear-algebra-vectors.qmd#eq-norm-dot-product}{\text{Equation~5 in Vectors}}\text{, squared)}
@@ -2402,7 +2402,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 
 > **NOTE:**
 >
-> **Example 36 (Checking the properties on a small Gram matrix)** For $\mathbf{A}$ in [Example 8 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#exm-gram-matrix), $\mathbf{G} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$. It is symmetric: $g_{12} = g_{21} = 1$. Take $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, -1)$. Then
+> **Example 36 (Checking the properties on a small Gram matrix)** For $\mathbf{A}$ in [Example 8 in Column Space and Null Space](linear-algebra-column-null-space.llms.md#exm-gram-matrix), $\mathbf{G} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$. It is symmetric: $g_{12} = g_{21} = 1$. Take $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, -1)$. Then
 >
 > $$\begin{aligned}
 > {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{G} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
@@ -2438,7 +2438,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 > && \text{(definition of the self outer product)}
 > \end{aligned}$$
 >
-> So $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}$ is the [Gram matrix](linear-algebra-rank-nullity.llms.md#def-gram-matrix) of $\mathbf{A}$, and [Theorem 19](#thm-gram-properties) says that a Gram matrix is [positive semidefinite](#def-positive-semidefinite).
+> So $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}$ is the [Gram matrix](linear-algebra-column-null-space.llms.md#def-gram-matrix) of $\mathbf{A}$, and [Theorem 19](#thm-gram-properties) says that a Gram matrix is [positive semidefinite](#def-positive-semidefinite).
 
 > **NOTE:**
 >
@@ -2472,7 +2472,7 @@ Banerjee and Roy [\[6, Ch. 15\]](#ref-banerjee2014linear), eq. 15.7, p. 491 def
 >
 > **Example 38 (Positive definite, semidefinite, and neither)**  
 >
-> - The identity matrix $\mathbf{I}_p$ ([Definition 16 in Matrices](linear-algebra-matrices.llms.md#def-identity-matrix)) is positive definite: ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{I}_p \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \sum_{i=1}^px_i^2$, which is positive unless every $x_i$ is $0$.
+> - The identity matrix $\mathbf{I}_p$ ([Definition 7 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#def-identity-matrix)) is positive definite: ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{I}_p \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \sum_{i=1}^px_i^2$, which is positive unless every $x_i$ is $0$.
 >
 > - $\mathbf{B} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$ from [Example 35](#exm-positive-semidefinite) is positive semidefinite but not positive definite: at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, -1) \neq \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$,
 >
@@ -2544,7 +2544,7 @@ See also [\[13\]](#ref-wikipedia_definite_matrix).
 > && \text{(} \mathbf{\Lambda} \text{ is diagonal)}
 > \end{aligned}$$
 >
-> The second step is [Theorem 19 in Matrices](linear-algebra-matrices.llms.md#thm-transpose-product). Also, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ exactly when $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$: $\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}_p$ for an orthogonal matrix ([Definition 10](#def-orthogonal-matrix)), so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathbf{Q}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$.
+> The second step is [Theorem 6 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#thm-transpose-product). Also, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ exactly when $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$: $\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}_p$ for an orthogonal matrix ([Definition 10](#def-orthogonal-matrix)), so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathbf{Q}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$.
 >
 > *If every* $\lambda_i \ge 0$, then every term $\lambda_i y_i^2 \ge 0$, so ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \ge 0$. *If every* $\lambda_i > 0$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\neq \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, then some $y_i \neq 0$, so at least one term is positive and the rest are non-negative, and ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} > 0$.
 >
@@ -2567,7 +2567,7 @@ See also [\[13\]](#ref-wikipedia_definite_matrix).
 
 > **NOTE:**
 >
-> **Example 40 (A condition number of 3)** $\mathbf{S} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ has [eigenvalues](#def-eigenvalue) $3$ and $1$ ([eigenvalue example](#exm-eigenvalue)), so $\kappa(\mathbf{S}) = 3 / 1 = 3$. The [identity matrix](linear-algebra-matrices.llms.md#def-identity-matrix) $\mathbf{I}_2$ has eigenvalues $1$ and $1$, so $\kappa(\mathbf{I}_2) = 1$.
+> **Example 40 (A condition number of 3)** $\mathbf{S} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ has [eigenvalues](#def-eigenvalue) $3$ and $1$ ([eigenvalue example](#exm-eigenvalue)), so $\kappa(\mathbf{S}) = 3 / 1 = 3$. The [identity matrix](linear-algebra-matrix-multiplication.llms.md#def-identity-matrix) $\mathbf{I}_2$ has eigenvalues $1$ and $1$, so $\kappa(\mathbf{I}_2) = 1$.
 
 > **NOTE:**
 >
@@ -2670,7 +2670,7 @@ See also [\[13\]](#ref-wikipedia_definite_matrix).
 
 > **NOTE:**
 >
-> **Definition 27 (Ill-conditioned matrix)** A [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{A}$ is **ill-conditioned** when its [condition number](#def-matrix-condition-number) is so large that small relative changes in its entries, such as those from rounding, can change the solution of a [linear system](linear-algebra-matrices.llms.md#def-linear-system) by a much larger relative amount. The relative change in the solution can be up to $\kappa(\mathbf{A})$ times the relative change in the entries. A solution computed with $\kappa(\mathbf{A}) \approx 10^k$ therefore loses about $k$ of the digits that the floating-point arithmetic carries [\[15\]](#ref-trefethen1997numerical), Lecture 12.
+> **Definition 27 (Ill-conditioned matrix)** A [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{A}$ is **ill-conditioned** when its [condition number](#def-matrix-condition-number) is so large that small relative changes in its entries, such as those from rounding, can change the [solution](linear-algebra-matrix-multiplication.llms.md#def-linear-system) to a [linear system](linear-algebra-matrix-multiplication.llms.md#def-linear-system) by a much larger relative amount. The relative change in the solution can be up to $\kappa(\mathbf{A})$ times the relative change in the entries. A solution computed with $\kappa(\mathbf{A}) \approx 10^k$ therefore loses about $k$ of the digits that the floating-point arithmetic carries [\[15\]](#ref-trefethen1997numerical), Lecture 12.
 >
 > There is no sharp threshold: how large is too large depends on how many accurate digits the answer needs.
 
@@ -2772,7 +2772,7 @@ See also [\[13\]](#ref-wikipedia_definite_matrix).
 > && \text{(} \mathbf{Q} \text{ is orthogonal)}
 > \end{aligned}$$
 >
-> The same steps, with $\mathbf{\Lambda}^{-1}$ and $\mathbf{\Lambda}$ swapped, give $\mathbf{B}\mathbf{A} = \mathbf{I}_p$, so $\mathbf{B} = \mathbf{A}^{-1}$ ([Definition 5](#def-matrix-inverse)). The steps with $\mathbf{Q}$ use [Definition 10](#def-orthogonal-matrix), whose remark records that $\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}_p$ too, and the identity step uses [Theorem 10 in Matrices](linear-algebra-matrices.llms.md#thm-identity).
+> The same steps, with $\mathbf{\Lambda}^{-1}$ and $\mathbf{\Lambda}$ swapped, give $\mathbf{B}\mathbf{A} = \mathbf{I}_p$, so $\mathbf{B} = \mathbf{A}^{-1}$ ([Definition 5](#def-matrix-inverse)). The steps with $\mathbf{Q}$ use [Definition 10](#def-orthogonal-matrix), whose remark records that $\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}_p$ too, and the identity step uses [Theorem 4 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#thm-identity).
 >
 > $\mathbf{A}^{-1}$ is symmetric by [Corollary 1](#cor-inverse-symmetric). For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\neq \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = {\mathbf{Q}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, which is not $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ because $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathbf{Q}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$. As in the proof of [Theorem 20](#thm-definite-eigenvalues):
 >
@@ -2897,13 +2897,13 @@ See also [\[13\]](#ref-wikipedia_definite_matrix).
 > && \text{(substitute vectors and matrix)}
 > \\
 > &= \begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 2 \cdot 3 + 1 \cdot(-1) \\ 1 \cdot 3 + 2 \cdot(-1) \end{bmatrix}
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~17 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrix-multiplication.qmd#def-matvec-mult}{\text{Definition~8 in Matrix Multiplication}}\text{)}
 > \\
 > &= \begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 5 \\ 1 \end{bmatrix}
 > && \text{(multiply and add)}
 > \\
 > &= 1 \cdot 5 + 2 \cdot 1
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~17 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrix-multiplication.qmd#def-matvec-mult}{\text{Definition~8 in Matrix Multiplication}}\text{)}
 > \\
 > &= 7.
 > && \text{(multiply and add)}
@@ -2974,10 +2974,10 @@ See also [\[13\]](#ref-wikipedia_definite_matrix).
 >   && \text{(definition of } {\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}}_{\mathbf{A}} \text{)}
 >   \\
 >   &= (a\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} + b\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}^{\top})\,\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}
->   && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-sum}{\text{Theorem~18 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~9 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~6 in Matrices}}\text{)}
+>   && \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-transpose-sum}{\text{Theorem~5 in Matrix Multiplication}}\text{, }\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~9 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~6 in Matrices}}\text{)}
 >   \\
 >   &= a\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + b\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}^{\top}\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}
->   && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-distrib}{\text{Theorem~8 in Matrices}}\text{)}
+>   && \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-distrib}{\text{Theorem~2 in Matrix Multiplication}}\text{)}
 >   \\
 >   &= a\,{\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}\right\rangle\mathclose{}}_{\mathbf{A}} + b\,{\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}\right\rangle\mathclose{}}_{\mathbf{A}}
 >   && \text{(definition of } {\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}}_{\mathbf{A}} \text{)}
@@ -2991,7 +2991,7 @@ See also [\[13\]](#ref-wikipedia_definite_matrix).
 >   && \text{(a scalar equals its transpose)}
 >   \\
 >   &= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}{\mathbf{A}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}
->   && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~19 in Matrices}}\text{, twice)}
+>   && \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-transpose-product}{\text{Theorem~6 in Matrix Multiplication}}\text{, twice)}
 >   \\
 >   &= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}
 >   && \text{($\mathbf{A}$ is symmetric)}
@@ -3014,7 +3014,7 @@ See also [\[13\]](#ref-wikipedia_definite_matrix).
 > && \text{(define } A_{ij} \stackrel{\text{def}}{=}{\mathopen{}\left\langle \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_i, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j\right\rangle\mathclose{}} \text{)}
 > \\
 > &= {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}.
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~17 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrix-multiplication.qmd#def-matvec-mult}{\text{Definition~8 in Matrix Multiplication}}\text{)}
 > \end{aligned}$$
 >
 > Symmetry of ${\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}}$ ensures
@@ -3093,13 +3093,13 @@ See also [\[13\]](#ref-wikipedia_definite_matrix).
 > && \text{(substitute the vector and the matrix)}
 > \\
 > &= \sqrt{\begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 2 \cdot 1 + 1 \cdot 2 \\ 1 \cdot 1 + 2 \cdot 2 \end{bmatrix}}
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~17 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrix-multiplication.qmd#def-matvec-mult}{\text{Definition~8 in Matrix Multiplication}}\text{)}
 > \\
 > &= \sqrt{\begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 4 \\ 5 \end{bmatrix}}
 > && \text{(multiply and add)}
 > \\
 > &= \sqrt{1 \cdot 4 + 2 \cdot 5}
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~17 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrix-multiplication.qmd#def-matvec-mult}{\text{Definition~8 in Matrix Multiplication}}\text{)}
 > \\
 > &= \sqrt{14}.
 > && \text{(multiply and add)}

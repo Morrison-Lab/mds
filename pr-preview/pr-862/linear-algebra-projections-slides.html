@@ -360,7 +360,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-20 00:10:33 (PST)</p>
+  <p class="date">Last modified: 2026-11-20 09:01:42 (PST)</p>
 </section><section class="slide level2"></section><section id="design-matrix" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Design Matrix</h2>
 </section><section class="slide level2"><div id="def-design-matrix" class="theorem definition">
@@ -414,7 +414,7 @@ x_{n1} &amp; x_{n2} &amp; \cdots &amp; x_{np}
 &amp;= {\mathbf{X}}^{\top}\mathbf{X}
 \end{aligned}
 \]</span></p>
-<p>(<a href="./linear-algebra-matrices.html#thm-transpose-product">Theorem&nbsp;19 in Matrices</a>). When <span class="math inline">\({\mathbf{X}}^{\top}\mathbf{X}\)</span> is invertible, it appears in the least squares solution (<a href="#/def-least-squares" class="quarto-xref">Definition&nbsp;10</a>, defined later in this chapter) <span class="math inline">\(\hat{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}= ({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span>.</p>
+<p>(<a href="./linear-algebra-matrix-multiplication.html#thm-transpose-product">Theorem&nbsp;6 in Matrix Multiplication</a>). When <span class="math inline">\({\mathbf{X}}^{\top}\mathbf{X}\)</span> is invertible, it appears in the least squares solution (<a href="#/def-least-squares" class="quarto-xref">Definition&nbsp;10</a>, defined later in this chapter) <span class="math inline">\(\hat{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\beta}}\vphantom{\beta}}}= ({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="thm-gram-invertible" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 1 (<span class="math inline">\({\mathbf{X}}^{\top}\mathbf{X}\)</span> is invertible when <span class="math inline">\(\mathbf{X}\)</span> has full column rank)</strong></span> If <span class="math inline">\(\mathbf{X}\)</span> is an <span class="math inline">\(n \times p\)</span> matrix with <span class="math inline">\(\operatorname{rank}(\mathbf{X}) = p\)</span> (<a href="./linear-algebra-subspaces.html#def-rank">Definition&nbsp;2 in Subspaces and Rank</a>), then the <span class="math inline">\(p \times p\)</span> matrix <span class="math inline">\({\mathbf{X}}^{\top}\mathbf{X}\)</span> is invertible.</p>
@@ -478,7 +478,7 @@ x_{n1} &amp; x_{n2} &amp; \cdots &amp; x_{np}
 &amp;= {\mathbf{X}}^{\top}\mathbf{X}
 \end{aligned}
 \]</span></p>
-<p>(<a href="./linear-algebra-matrices.html#thm-transpose-product">Theorem&nbsp;19 in Matrices</a>), so its inverse is symmetric too (<a href="./linear-algebra-special-matrices.html#cor-inverse-symmetric">Corollary&nbsp;1 in Special Matrices and Decompositions</a>).</p>
+<p>(<a href="./linear-algebra-matrix-multiplication.html#thm-transpose-product">Theorem&nbsp;6 in Matrix Multiplication</a>), so its inverse is symmetric too (<a href="./linear-algebra-special-matrices.html#cor-inverse-symmetric">Corollary&nbsp;1 in Special Matrices and Decompositions</a>).</p>
 <p><strong>Symmetry:</strong> <span class="math display">\[\begin{aligned}
 {\mathbf{H}}^{\top}
 &amp;= {\mathopen{}\left(\mathbf{X}({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}\right)\mathclose{}}^{\top}
@@ -613,7 +613,7 @@ x_{n1} &amp; x_{n2} &amp; \cdots &amp; x_{np}
 \begin{aligned}
 ({\mathbf{Q}}^{\top} \mathbf{Q})_{ij}
 &amp;= \sum_{k=1}^{p} ({\mathbf{Q}}^{\top})_{ik}\, q_{kj}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~10 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#def-matrix-mult}{\text{Definition~1 in Matrix Multiplication}}\text{)}
 \\
 &amp;= \sum_{k=1}^{p} q_{ki}\, q_{kj}
 &amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~6 in Matrices}}\text{)}
@@ -622,8 +622,8 @@ x_{n1} &amp; x_{n2} &amp; \cdots &amp; x_{np}
 &amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~10 in Vectors}}\text{)}
 \end{aligned}
 \]</span></p>
-<p>which is <span class="math inline">\(1\)</span> if <span class="math inline">\(i = j\)</span> and <span class="math inline">\(0\)</span> otherwise (<a href="./linear-algebra-vectors.html#def-orthonormal-vectors">Definition&nbsp;28 in Vectors</a>), so <span class="math inline">\({\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{I}_r\)</span> (<a href="./linear-algebra-matrices.html#def-identity-matrix">Definition&nbsp;16 in Matrices</a>).</p>
-<p><strong>The split.</strong> Let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = \mathbf{Q} {\mathbf{Q}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span>, so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span>. <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = \mathbf{Q}\,({\mathbf{Q}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})\)</span> (<a href="./linear-algebra-matrices.html#thm-matmul-assoc">Theorem&nbsp;7 in Matrices</a>) is in <span class="math inline">\(\mathcal{C}(\mathbf{Q})\)</span> (<a href="./linear-algebra-rank-nullity.html#def-column-space">Definition&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>), which is <span class="math inline">\(\operatorname{span}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_r\right\}\mathclose{} = \mathcal{S}\)</span> (<a href="./linear-algebra-rank-nullity.html#thm-column-space-span">Theorem&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>). For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span>,</p>
+<p>which is <span class="math inline">\(1\)</span> if <span class="math inline">\(i = j\)</span> and <span class="math inline">\(0\)</span> otherwise (<a href="./linear-algebra-vectors.html#def-orthonormal-vectors">Definition&nbsp;28 in Vectors</a>), so <span class="math inline">\({\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{I}_r\)</span> (<a href="./linear-algebra-matrix-multiplication.html#def-identity-matrix">Definition&nbsp;7 in Matrix Multiplication</a>).</p>
+<p><strong>The split.</strong> Let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = \mathbf{Q} {\mathbf{Q}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span>, so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span>. <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = \mathbf{Q}\,({\mathbf{Q}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})\)</span> (<a href="./linear-algebra-matrix-multiplication.html#thm-matmul-assoc">Theorem&nbsp;1 in Matrix Multiplication</a>) is in <span class="math inline">\(\mathcal{C}(\mathbf{Q})\)</span> (<a href="./linear-algebra-column-null-space.html#def-column-space">Definition&nbsp;1 in Column Space and Null Space</a>), which is <span class="math inline">\(\operatorname{span}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_r\right\}\mathclose{} = \mathcal{S}\)</span> (<a href="./linear-algebra-column-null-space.html#thm-column-space-span">Theorem&nbsp;1 in Column Space and Null Space</a>). For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span>,</p>
 <p><span class="math display">\[
 \begin{aligned}
 {\mathbf{Q}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}
@@ -634,13 +634,13 @@ x_{n1} &amp; x_{n2} &amp; \cdots &amp; x_{np}
 &amp;&amp; \text{(}\href{linear-algebra-subspaces.qmd#thm-matvec-linear}{\text{Theorem~4 in Subspaces and Rank}}\text{, with coefficients } 1 \text{ and } -1 \text{)}
 \\
 &amp;= {\mathbf{Q}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} - ({\mathbf{Q}}^{\top} \mathbf{Q})\,{\mathbf{Q}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 \\
 &amp;= {\mathbf{Q}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} - \mathbf{I}_r\,{\mathbf{Q}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}
 &amp;&amp; \text{(} {\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{I}_r \text{, from the first part of the proof)}
 \\
 &amp;= {\mathbf{Q}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} - {\mathbf{Q}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~10 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-identity}{\text{Theorem~4 in Matrix Multiplication}}\text{)}
 \\
 &amp;= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_r,
 &amp;&amp; \text{(arithmetic)}
@@ -659,7 +659,7 @@ x_{n1} &amp; x_{n2} &amp; \cdots &amp; x_{np}
 \begin{aligned}
 {(\mathbf{Q} {\mathbf{Q}}^{\top})}^{\top}
 &amp;= {({\mathbf{Q}}^{\top})}^{\top}\,{\mathbf{Q}}^{\top}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~19 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-transpose-product}{\text{Theorem~6 in Matrix Multiplication}}\text{)}
 \\
 &amp;= \mathbf{Q} {\mathbf{Q}}^{\top},
 &amp;&amp; \text{(transposing twice, }\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~6 in Matrices}}\text{)}
@@ -670,13 +670,13 @@ x_{n1} &amp; x_{n2} &amp; \cdots &amp; x_{np}
 \begin{aligned}
 (\mathbf{Q} {\mathbf{Q}}^{\top})(\mathbf{Q} {\mathbf{Q}}^{\top})
 &amp;= \mathbf{Q}\,({\mathbf{Q}}^{\top} \mathbf{Q})\,{\mathbf{Q}}^{\top}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 \\
 &amp;= \mathbf{Q}\,\mathbf{I}_r\,{\mathbf{Q}}^{\top}
 &amp;&amp; \text{(} {\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{I}_r \text{, from the first part of the proof)}
 \\
 &amp;= \mathbf{Q} {\mathbf{Q}}^{\top}.
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~10 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-identity}{\text{Theorem~4 in Matrix Multiplication}}\text{)}
 \end{aligned}
 \]</span></p>
 </div>
@@ -706,7 +706,7 @@ x_{n1} &amp; x_{n2} &amp; \cdots &amp; x_{np}
 </ol>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span><strong>Part 1.</strong> Write <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \mathbf{P} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} + (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} - \mathbf{P} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})\)</span>. The first term is in <span class="math inline">\(\mathcal{C}(\mathbf{P})\)</span> (<a href="./linear-algebra-rank-nullity.html#def-column-space">Definition&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>). For the second,</p>
+<p><span class="proof-title"><em>Proof</em>. </span><strong>Part 1.</strong> Write <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \mathbf{P} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} + (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} - \mathbf{P} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})\)</span>. The first term is in <span class="math inline">\(\mathcal{C}(\mathbf{P})\)</span> (<a href="./linear-algebra-column-null-space.html#def-column-space">Definition&nbsp;1 in Column Space and Null Space</a>). For the second,</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathbf{P}\,(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} - \mathbf{P} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})
@@ -714,7 +714,7 @@ x_{n1} &amp; x_{n2} &amp; \cdots &amp; x_{np}
 &amp;&amp; \text{(}\href{linear-algebra-subspaces.qmd#thm-matvec-linear}{\text{Theorem~4 in Subspaces and Rank}}\text{, with coefficients } 1 \text{ and } -1 \text{)}
 \\
 &amp;= \mathbf{P} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} - (\mathbf{P} \mathbf{P})\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 \\
 &amp;= \mathbf{P} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} - \mathbf{P}^2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}
 &amp;&amp; \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-power}{\text{Definition~2 in Special Matrices and Decompositions}}\text{)}
@@ -752,7 +752,7 @@ x_{n1} &amp; x_{n2} &amp; \cdots &amp; x_{np}
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(\mathbf{H}\)</span> is an orthogonal projection matrix (<a href="#/thm-hat-matrix" class="quarto-xref">Theorem&nbsp;2</a>), so <span class="math inline">\(\mathbf{H} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> is the orthogonal projection of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> onto <span class="math inline">\(\mathcal{C}(\mathbf{H})\)</span> (<a href="#/thm-projection-matrix-projects" class="quarto-xref">Theorem&nbsp;5</a>, part 1). It remains to show <span class="math inline">\(\mathcal{C}(\mathbf{H}) = \mathcal{C}(\mathbf{X})\)</span>.</p>
-<p><strong><span class="math inline">\(\mathcal{C}(\mathbf{H}) \subseteq \mathcal{C}(\mathbf{X})\)</span>.</strong> <span class="math inline">\(\mathbf{H} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} = \mathbf{X}\,\mathopen{}\left(({\mathbf{X}}^{\top}\mathbf{X})^{-1} {\mathbf{X}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}\right)\mathclose{}\)</span> (<a href="./linear-algebra-matrices.html#thm-matmul-assoc">Theorem&nbsp;7 in Matrices</a>), which is in <span class="math inline">\(\mathcal{C}(\mathbf{X})\)</span> (<a href="./linear-algebra-rank-nullity.html#def-column-space">Definition&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>).</p>
+<p><strong><span class="math inline">\(\mathcal{C}(\mathbf{H}) \subseteq \mathcal{C}(\mathbf{X})\)</span>.</strong> <span class="math inline">\(\mathbf{H} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} = \mathbf{X}\,\mathopen{}\left(({\mathbf{X}}^{\top}\mathbf{X})^{-1} {\mathbf{X}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}\right)\mathclose{}\)</span> (<a href="./linear-algebra-matrix-multiplication.html#thm-matmul-assoc">Theorem&nbsp;1 in Matrix Multiplication</a>), which is in <span class="math inline">\(\mathcal{C}(\mathbf{X})\)</span> (<a href="./linear-algebra-column-null-space.html#def-column-space">Definition&nbsp;1 in Column Space and Null Space</a>).</p>
 <p><strong><span class="math inline">\(\mathcal{C}(\mathbf{X}) \subseteq \mathcal{C}(\mathbf{H})\)</span>.</strong> First,</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -761,17 +761,17 @@ x_{n1} &amp; x_{n2} &amp; \cdots &amp; x_{np}
 &amp;&amp; \text{(}\href{#def-hat-matrix}{\text{Definition~2}}\text{)}
 \\
 &amp;= \mathbf{X}\,\mathopen{}\left(({\mathbf{X}}^{\top}\mathbf{X})^{-1} ({\mathbf{X}}^{\top}\mathbf{X})\right)\mathclose{}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 \\
 &amp;= \mathbf{X}\,\mathbf{I}_p
 &amp;&amp; \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices and Decompositions}}\text{)}
 \\
 &amp;= \mathbf{X}.
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~10 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-identity}{\text{Theorem~4 in Matrix Multiplication}}\text{)}
 \end{aligned}
 \]</span></p>
-<p>So for every <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^p\)</span>, <span class="math inline">\(\mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = (\mathbf{H} \mathbf{X})\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>, since <span class="math inline">\(\mathbf{H} \mathbf{X}= \mathbf{X}\)</span>, and <span class="math inline">\((\mathbf{H} \mathbf{X})\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \mathbf{H}\,(\mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}})\)</span> (<a href="./linear-algebra-matrices.html#thm-matmul-assoc">Theorem&nbsp;7 in Matrices</a>), which is in <span class="math inline">\(\mathcal{C}(\mathbf{H})\)</span>.</p>
-<p><span class="math inline">\(\mathcal{C}(\mathbf{X})\)</span> has dimension <span class="math inline">\(p \ge 1\)</span> (<a href="./linear-algebra-rank-nullity.html#thm-rank-dim">Theorem&nbsp;7 in Column Space, Null Space and Rank-Nullity</a>), so an orthonormal basis of it has <span class="math inline">\(p\)</span> vectors (<a href="./linear-algebra-subspaces.html#def-dimension">Definition&nbsp;9 in Subspaces and Rank</a>), and <span class="math inline">\(\mathbf{Q} {\mathbf{Q}}^{\top}\)</span> also gives the orthogonal projection onto <span class="math inline">\(\mathcal{C}(\mathbf{X})\)</span> (<a href="#/thm-projector-onb" class="quarto-xref">Theorem&nbsp;4</a>, with <span class="math inline">\(n\)</span> in place of <span class="math inline">\(p\)</span> and <span class="math inline">\(r = p\)</span>). By <a href="#/thm-projection-matrix-projects" class="quarto-xref">Theorem&nbsp;5</a>, part 2, <span class="math inline">\(\mathbf{H} = \mathbf{Q} {\mathbf{Q}}^{\top}\)</span>.</p>
+<p>So for every <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^p\)</span>, <span class="math inline">\(\mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = (\mathbf{H} \mathbf{X})\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>, since <span class="math inline">\(\mathbf{H} \mathbf{X}= \mathbf{X}\)</span>, and <span class="math inline">\((\mathbf{H} \mathbf{X})\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \mathbf{H}\,(\mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}})\)</span> (<a href="./linear-algebra-matrix-multiplication.html#thm-matmul-assoc">Theorem&nbsp;1 in Matrix Multiplication</a>), which is in <span class="math inline">\(\mathcal{C}(\mathbf{H})\)</span>.</p>
+<p><span class="math inline">\(\mathcal{C}(\mathbf{X})\)</span> has dimension <span class="math inline">\(p \ge 1\)</span> (<a href="./linear-algebra-rank-nullity.html#thm-rank-dim">Theorem&nbsp;1 in Rank-Nullity and Rank Factorization</a>), so an orthonormal basis of it has <span class="math inline">\(p\)</span> vectors (<a href="./linear-algebra-subspaces.html#def-dimension">Definition&nbsp;9 in Subspaces and Rank</a>), and <span class="math inline">\(\mathbf{Q} {\mathbf{Q}}^{\top}\)</span> also gives the orthogonal projection onto <span class="math inline">\(\mathcal{C}(\mathbf{X})\)</span> (<a href="#/thm-projector-onb" class="quarto-xref">Theorem&nbsp;4</a>, with <span class="math inline">\(n\)</span> in place of <span class="math inline">\(p\)</span> and <span class="math inline">\(r = p\)</span>). By <a href="#/thm-projection-matrix-projects" class="quarto-xref">Theorem&nbsp;5</a>, part 2, <span class="math inline">\(\mathbf{H} = \mathbf{Q} {\mathbf{Q}}^{\top}\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-hat-matrix-projects" class="theorem example">
 <p><span class="theorem-title"><strong>Example 9 (The intercept-only hat matrix, from an orthonormal basis)</strong></span> For the intercept-only design <span class="math inline">\(\mathbf{X}= \begin{bmatrix} 1 \\ 1 \end{bmatrix}\)</span> of <a href="#/exm-hat-matrix" class="quarto-xref">Example&nbsp;2</a>, <span class="math inline">\(\mathcal{C}(\mathbf{X}) = \operatorname{span}\mathopen{}\left\{(1, 1)\right\}\mathclose{}\)</span>, with orthonormal basis <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_1 = \tfrac{1}{\sqrt{2}}\,(1, 1)\)</span>, since</p>
@@ -809,7 +809,7 @@ x_{n1} &amp; x_{n2} &amp; \cdots &amp; x_{np}
 <p><strong>Source</strong></p>
 </div>
 <div class="callout-content">
-<p>This section is adapted from <span class="citation" data-cites="zhou2024matinv">Zhou <a href="#/references" role="doc-biblioref" onclick="">[6]</a></span>, used under the MIT License (see the license text in <a href="./linear-algebra-subspaces.html#sec-subspaces">Section&nbsp; in Subspaces and Rank</a>). The source defers the existence of the Moore-Penrose inverse to the singular value decomposition; the proof here builds it from a rank factorization (<a href="./linear-algebra-rank-nullity.html#thm-rank-factorization">Theorem&nbsp;17 in Column Space, Null Space and Rank-Nullity</a>) instead, and the section adds the projection <span class="math inline">\(\mathbf{X}\mathbf{G} {\mathbf{X}}^{\top}\)</span> for any generalized inverse <span class="math inline">\(\mathbf{G}\)</span> of <span class="math inline">\({\mathbf{X}}^{\top} \mathbf{X}\)</span>, which the source does not cover. <a href="#/thm-moore-penrose-full-rank" class="quarto-xref">Theorem&nbsp;13</a> restores the source’s formulas for the Moore-Penrose inverse of a matrix of full column rank or full row rank, and the fourth equivalent statement in <a href="#/thm-consistency" class="quarto-xref">Theorem&nbsp;16</a> restores the source’s rank test for consistency. These parts of the source are not part of this section:</p>
+<p>This section is adapted from <span class="citation" data-cites="zhou2024matinv">Zhou <a href="#/references" role="doc-biblioref" onclick="">[6]</a></span>, used under the MIT License (see the license text in <a href="./linear-algebra-subspaces.html#sec-subspaces">Section&nbsp; in Subspaces and Rank</a>). The source defers the existence of the Moore-Penrose inverse to the singular value decomposition; the proof here builds it from a rank factorization (<a href="./linear-algebra-rank-nullity.html#thm-rank-factorization">Theorem&nbsp;7 in Rank-Nullity and Rank Factorization</a>) instead, and the section adds the projection <span class="math inline">\(\mathbf{X}\mathbf{G} {\mathbf{X}}^{\top}\)</span> for any generalized inverse <span class="math inline">\(\mathbf{G}\)</span> of <span class="math inline">\({\mathbf{X}}^{\top} \mathbf{X}\)</span>, which the source does not cover. <a href="#/thm-moore-penrose-full-rank" class="quarto-xref">Theorem&nbsp;13</a> restores the source’s formulas for the Moore-Penrose inverse of a matrix of full column rank or full row rank, and the fourth equivalent statement in <a href="#/thm-consistency" class="quarto-xref">Theorem&nbsp;16</a> restores the source’s rank test for consistency. These parts of the source are not part of this section:</p>
 <ul>
 <li>the QR forms of the full-rank formulas</li>
 <li>
@@ -843,7 +843,7 @@ x_{n1} &amp; x_{n2} &amp; \cdots &amp; x_{np}
 \begin{aligned}
 \mathopen{}\left(\mathbf{A}\,(c\,\mathbf{B})\right)\mathclose{}_{ij}
 &amp;= \sum_{l=1}^{k} a_{il}\,(c\,\mathbf{B})_{lj}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~10 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#def-matrix-mult}{\text{Definition~1 in Matrix Multiplication}}\text{)}
 \\
 &amp;= \sum_{l=1}^{k} a_{il}\,(c\,b_{lj})
 &amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~9 in Matrices}}\text{)}
@@ -855,7 +855,7 @@ x_{n1} &amp; x_{n2} &amp; \cdots &amp; x_{np}
 &amp;&amp; \text{(factor } c \text{ out of the sum)}
 \\
 &amp;= c\,(\mathbf{A} \mathbf{B})_{ij}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~10 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#def-matrix-mult}{\text{Definition~1 in Matrix Multiplication}}\text{)}
 \\
 &amp;= \mathopen{}\left(c\,(\mathbf{A} \mathbf{B})\right)\mathclose{}_{ij}.
 &amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~9 in Matrices}}\text{)}
@@ -866,13 +866,13 @@ x_{n1} &amp; x_{n2} &amp; \cdots &amp; x_{np}
 \begin{aligned}
 \mathopen{}\left((c\,\mathbf{A})\,\mathbf{B}\right)\mathclose{}_{ij}
 &amp;= \sum_{l=1}^{k} (c\,a_{il})\,b_{lj}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~10 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~9 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#def-matrix-mult}{\text{Definition~1 in Matrix Multiplication}}\text{, }\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~9 in Matrices}}\text{)}
 \\
 &amp;= c \sum_{l=1}^{k} a_{il}\,b_{lj}
 &amp;&amp; \text{(factor } c \text{ out of the sum)}
 \\
 &amp;= \mathopen{}\left(c\,(\mathbf{A} \mathbf{B})\right)\mathclose{}_{ij}.
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~10 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~9 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#def-matrix-mult}{\text{Definition~1 in Matrix Multiplication}}\text{, }\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~9 in Matrices}}\text{)}
 \end{aligned}
 \]</span></p>
 <p><strong>Differences.</strong></p>
@@ -883,7 +883,7 @@ x_{n1} &amp; x_{n2} &amp; \cdots &amp; x_{np}
 &amp;&amp; \text{(the difference as a sum)}
 \\
 &amp;= \mathbf{A} \mathbf{B} + \mathbf{A}\,((-1)\,\mathbf{C})
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-distrib}{\text{Theorem~8 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-distrib}{\text{Theorem~2 in Matrix Multiplication}}\text{)}
 \\
 &amp;= \mathbf{A} \mathbf{B} + (-1)\,(\mathbf{A} \mathbf{C})
 &amp;&amp; \text{(first part)}
@@ -892,7 +892,7 @@ x_{n1} &amp; x_{n2} &amp; \cdots &amp; x_{np}
 &amp;&amp; \text{(the difference as a sum)}
 \end{aligned}
 \]</span></p>
-<p>and <span class="math inline">\((\mathbf{B} - \mathbf{C})\,\mathbf{D} = \mathbf{B} \mathbf{D} - \mathbf{C} \mathbf{D}\)</span> the same way, using the second law in <a href="./linear-algebra-matrices.html#thm-matmul-distrib">Theorem&nbsp;8 in Matrices</a> and the second part. A column vector is a matrix with one column, so all of this applies with <span class="math inline">\(\mathbf{B}\)</span>, <span class="math inline">\(\mathbf{C}\)</span> or <span class="math inline">\(\mathbf{D}\)</span> a vector.</p>
+<p>and <span class="math inline">\((\mathbf{B} - \mathbf{C})\,\mathbf{D} = \mathbf{B} \mathbf{D} - \mathbf{C} \mathbf{D}\)</span> the same way, using the second law in <a href="./linear-algebra-matrix-multiplication.html#thm-matmul-distrib">Theorem&nbsp;2 in Matrix Multiplication</a> and the second part. A column vector is a matrix with one column, so all of this applies with <span class="math inline">\(\mathbf{B}\)</span>, <span class="math inline">\(\mathbf{C}\)</span> or <span class="math inline">\(\mathbf{D}\)</span> a vector.</p>
 </div>
 </section><section class="slide level2"><div id="exm-scalar-matmul" class="theorem example">
 <p><span class="theorem-title"><strong>Example 10 (Pulling a scalar out of a product)</strong></span> With <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 1 &amp; 2 \end{bmatrix}\)</span> and <span class="math inline">\(\mathbf{B} = \begin{bmatrix} 3 \\ 4 \end{bmatrix}\)</span>:</p>
@@ -925,10 +925,10 @@ x_{n1} &amp; x_{n2} &amp; \cdots &amp; x_{np}
 \begin{aligned}
 \mathbf{A} \mathbf{G} \mathbf{A}
 &amp;= \begin{bmatrix} g_{11} &amp; g_{12} \\ 0 &amp; 0 \end{bmatrix} \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 0 \end{bmatrix}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~10 in Matrices}}\text{, for } \mathbf{A} \mathbf{G} \text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#def-matrix-mult}{\text{Definition~1 in Matrix Multiplication}}\text{, for } \mathbf{A} \mathbf{G} \text{)}
 \\
 &amp;= \begin{bmatrix} g_{11} &amp; 0 \\ 0 &amp; 0 \end{bmatrix},
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~10 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#def-matrix-mult}{\text{Definition~1 in Matrix Multiplication}}\text{)}
 \end{aligned}
 \]</span></p>
 <p>which equals <span class="math inline">\(\mathbf{A}\)</span> exactly when <span class="math inline">\(g_{11} = 1\)</span>. So every matrix <span class="math inline">\(\begin{bmatrix} 1 &amp; g_{12} \\ g_{21} &amp; g_{22} \end{bmatrix}\)</span> is a generalized inverse of <span class="math inline">\(\mathbf{A}\)</span>: a generalized inverse need not be unique. The zero matrix is not one, since its <span class="math inline">\((1, 1)\)</span> entry is <span class="math inline">\(0\)</span>.</p>
@@ -943,18 +943,18 @@ x_{n1} &amp; x_{n2} &amp; \cdots &amp; x_{np}
 &amp;= \mathbf{A}
 \end{aligned}
 \]</span></p>
-<p>(<a href="./linear-algebra-special-matrices.html#def-matrix-inverse">Definition&nbsp;5 in Special Matrices and Decompositions</a>, <a href="./linear-algebra-matrices.html#thm-identity">Theorem&nbsp;10 in Matrices</a>), so <span class="math inline">\(\mathbf{A}^{-1}\)</span> is a generalized inverse. If <span class="math inline">\(\mathbf{G}\)</span> is any generalized inverse, then</p>
+<p>(<a href="./linear-algebra-special-matrices.html#def-matrix-inverse">Definition&nbsp;5 in Special Matrices and Decompositions</a>, <a href="./linear-algebra-matrix-multiplication.html#thm-identity">Theorem&nbsp;4 in Matrix Multiplication</a>), so <span class="math inline">\(\mathbf{A}^{-1}\)</span> is a generalized inverse. If <span class="math inline">\(\mathbf{G}\)</span> is any generalized inverse, then</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathbf{G}
 &amp;= \mathbf{I}_p\,\mathbf{G}\,\mathbf{I}_p
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~10 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-identity}{\text{Theorem~4 in Matrix Multiplication}}\text{)}
 \\
 &amp;= (\mathbf{A}^{-1} \mathbf{A})\,\mathbf{G}\,(\mathbf{A} \mathbf{A}^{-1})
 &amp;&amp; \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices and Decompositions}}\text{)}
 \\
 &amp;= \mathbf{A}^{-1}\,(\mathbf{A} \mathbf{G} \mathbf{A})\,\mathbf{A}^{-1}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 \\
 &amp;= \mathbf{A}^{-1} \mathbf{A} \mathbf{A}^{-1}
 &amp;&amp; \text{(}\href{#def-generalized-inverse}{\text{Definition~4}}\text{)}
@@ -963,7 +963,7 @@ x_{n1} &amp; x_{n2} &amp; \cdots &amp; x_{np}
 &amp;&amp; \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices and Decompositions}}\text{)}
 \\
 &amp;= \mathbf{A}^{-1}.
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~10 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-identity}{\text{Theorem~4 in Matrix Multiplication}}\text{)}
 \end{aligned}
 \]</span></p>
 </div>
@@ -982,7 +982,7 @@ x_{n1} &amp; x_{n2} &amp; \cdots &amp; x_{np}
 &amp;&amp; \text{(substitute } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 \text{)}
 \\
 &amp;= (\mathbf{A} \mathbf{G} \mathbf{A})\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 \\
 &amp;= \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0
 &amp;&amp; \text{(}\href{#def-generalized-inverse}{\text{Definition~4}}\text{)}
@@ -1058,25 +1058,25 @@ x_{n1} &amp; x_{n2} &amp; \cdots &amp; x_{np}
 &amp;&amp; \text{(condition 3 for } \mathbf{G}_1 \text{)}
 \\
 &amp;= {\mathbf{G}_1}^{\top}\,{\mathbf{A}}^{\top}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~19 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-transpose-product}{\text{Theorem~6 in Matrix Multiplication}}\text{)}
 \\
 &amp;= {\mathbf{G}_1}^{\top}\,{(\mathbf{A} \mathbf{G}_2 \mathbf{A})}^{\top}
 &amp;&amp; \text{(condition 1 for } \mathbf{G}_2 \text{)}
 \\
 &amp;= {\mathbf{G}_1}^{\top}\,{\mathbf{A}}^{\top}\,{\mathbf{G}_2}^{\top}\,{\mathbf{A}}^{\top}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~19 in Matrices}}\text{, twice)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-transpose-product}{\text{Theorem~6 in Matrix Multiplication}}\text{, twice)}
 \\
 &amp;= ({\mathbf{G}_1}^{\top}\,{\mathbf{A}}^{\top})\,({\mathbf{G}_2}^{\top}\,{\mathbf{A}}^{\top})
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 \\
 &amp;= {(\mathbf{A} \mathbf{G}_1)}^{\top}\,{(\mathbf{A} \mathbf{G}_2)}^{\top}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~19 in Matrices}}\text{, twice)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-transpose-product}{\text{Theorem~6 in Matrix Multiplication}}\text{, twice)}
 \\
 &amp;= (\mathbf{A} \mathbf{G}_1)(\mathbf{A} \mathbf{G}_2)
 &amp;&amp; \text{(condition 3 for } \mathbf{G}_1 \text{ and } \mathbf{G}_2 \text{)}
 \\
 &amp;= (\mathbf{A} \mathbf{G}_1 \mathbf{A})\,\mathbf{G}_2
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 \\
 &amp;= \mathbf{A} \mathbf{G}_2.
 &amp;&amp; \text{(condition 1 for } \mathbf{G}_1 \text{)}
@@ -1090,25 +1090,25 @@ x_{n1} &amp; x_{n2} &amp; \cdots &amp; x_{np}
 &amp;&amp; \text{(condition 4 for } \mathbf{G}_1 \text{)}
 \\
 &amp;= {\mathbf{A}}^{\top}\,{\mathbf{G}_1}^{\top}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~19 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-transpose-product}{\text{Theorem~6 in Matrix Multiplication}}\text{)}
 \\
 &amp;= {(\mathbf{A} \mathbf{G}_2 \mathbf{A})}^{\top}\,{\mathbf{G}_1}^{\top}
 &amp;&amp; \text{(condition 1 for } \mathbf{G}_2 \text{)}
 \\
 &amp;= {\mathbf{A}}^{\top}\,{\mathbf{G}_2}^{\top}\,{\mathbf{A}}^{\top}\,{\mathbf{G}_1}^{\top}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~19 in Matrices}}\text{, twice)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-transpose-product}{\text{Theorem~6 in Matrix Multiplication}}\text{, twice)}
 \\
 &amp;= ({\mathbf{A}}^{\top}\,{\mathbf{G}_2}^{\top})\,({\mathbf{A}}^{\top}\,{\mathbf{G}_1}^{\top})
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 \\
 &amp;= {(\mathbf{G}_2 \mathbf{A})}^{\top}\,{(\mathbf{G}_1 \mathbf{A})}^{\top}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~19 in Matrices}}\text{, twice)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-transpose-product}{\text{Theorem~6 in Matrix Multiplication}}\text{, twice)}
 \\
 &amp;= (\mathbf{G}_2 \mathbf{A})(\mathbf{G}_1 \mathbf{A})
 &amp;&amp; \text{(condition 4 for } \mathbf{G}_2 \text{ and } \mathbf{G}_1 \text{)}
 \\
 &amp;= \mathbf{G}_2\,(\mathbf{A} \mathbf{G}_1 \mathbf{A})
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 \\
 &amp;= \mathbf{G}_2 \mathbf{A}.
 &amp;&amp; \text{(condition 1 for } \mathbf{G}_1 \text{)}
@@ -1122,19 +1122,19 @@ x_{n1} &amp; x_{n2} &amp; \cdots &amp; x_{np}
 &amp;&amp; \text{(condition 2 for } \mathbf{G}_1 \text{)}
 \\
 &amp;= \mathbf{G}_1\,(\mathbf{A} \mathbf{G}_1)
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 \\
 &amp;= \mathbf{G}_1\,(\mathbf{A} \mathbf{G}_2)
 &amp;&amp; \text{(the first step)}
 \\
 &amp;= (\mathbf{G}_1 \mathbf{A})\,\mathbf{G}_2
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 \\
 &amp;= (\mathbf{G}_2 \mathbf{A})\,\mathbf{G}_2
 &amp;&amp; \text{(the second step)}
 \\
 &amp;= \mathbf{G}_2 \mathbf{A} \mathbf{G}_2
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 \\
 &amp;= \mathbf{G}_2.
 &amp;&amp; \text{(condition 2 for } \mathbf{G}_2 \text{)}
@@ -1148,7 +1148,7 @@ x_{n1} &amp; x_{n2} &amp; \cdots &amp; x_{np}
 <p><span class="theorem-title"><strong>Theorem 12 (Every matrix has a Moore-Penrose inverse)</strong></span> Every <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> has a Moore-Penrose inverse (<a href="#/def-moore-penrose" class="quarto-xref">Definition&nbsp;5</a>), written <span class="math inline">\(\mathbf{A}^+\)</span>; it is unique by <a href="#/thm-moore-penrose-unique" class="quarto-xref">Theorem&nbsp;11</a>.</p>
 <ul>
 <li>If <span class="math inline">\(\mathbf{A} = \mathbf{0}_{m \times n}\)</span>, then <span class="math inline">\(\mathbf{A}^+ = \mathbf{0}_{n \times m}\)</span>.</li>
-<li>If <span class="math inline">\(\operatorname{rank}(\mathbf{A}) = r \ge 1\)</span> and <span class="math inline">\(\mathbf{A} = \mathbf{C} \mathbf{R}\)</span> is a rank factorization (<a href="./linear-algebra-rank-nullity.html#def-rank-factorization">Definition&nbsp;11 in Column Space, Null Space and Rank-Nullity</a>), then</li>
+<li>If <span class="math inline">\(\operatorname{rank}(\mathbf{A}) = r \ge 1\)</span> and <span class="math inline">\(\mathbf{A} = \mathbf{C} \mathbf{R}\)</span> is a rank factorization (<a href="./linear-algebra-rank-nullity.html#def-rank-factorization">Definition&nbsp;2 in Rank-Nullity and Rank Factorization</a>), then</li>
 </ul>
 <p><span class="math display">\[
 \underbrace{\mathbf{A}^+}_{n \times m}
@@ -1161,7 +1161,7 @@ x_{n1} &amp; x_{n2} &amp; \cdots &amp; x_{np}
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><strong>The two cases cover every matrix.</strong> If <span class="math inline">\(\mathbf{A} \ne \mathbf{0}_{m \times n}\)</span>, it has a nonzero column, which is linearly independent on its own (<span class="math inline">\(c\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> forces <span class="math inline">\(c = 0\)</span>), so <span class="math inline">\(\operatorname{rank}(\mathbf{A}) \ge 1\)</span> (<a href="./linear-algebra-subspaces.html#def-rank">Definition&nbsp;2 in Subspaces and Rank</a>).</p>
 <p><strong>The zero matrix.</strong> With <span class="math inline">\(\mathbf{A} = \mathbf{0}_{m \times n}\)</span> and <span class="math inline">\(\mathbf{G} = \mathbf{0}_{n \times m}\)</span>, every product in conditions 1 to 4 is a zero matrix, and a zero matrix equals its own transpose, so all four conditions hold.</p>
-<p><strong>The two inverses exist.</strong> Now suppose <span class="math inline">\(\operatorname{rank}(\mathbf{A}) = r \ge 1\)</span>. A rank factorization exists (<a href="./linear-algebra-rank-nullity.html#thm-rank-factorization">Theorem&nbsp;17 in Column Space, Null Space and Rank-Nullity</a>). <span class="math inline">\(\mathbf{C}\)</span> is <span class="math inline">\(m \times r\)</span> and <span class="math inline">\(\mathbf{R}\)</span> is <span class="math inline">\(r \times n\)</span>. Both have rank <span class="math inline">\(r\)</span>:</p>
+<p><strong>The two inverses exist.</strong> Now suppose <span class="math inline">\(\operatorname{rank}(\mathbf{A}) = r \ge 1\)</span>. A rank factorization exists (<a href="./linear-algebra-rank-nullity.html#thm-rank-factorization">Theorem&nbsp;7 in Rank-Nullity and Rank Factorization</a>). <span class="math inline">\(\mathbf{C}\)</span> is <span class="math inline">\(m \times r\)</span> and <span class="math inline">\(\mathbf{R}\)</span> is <span class="math inline">\(r \times n\)</span>. Both have rank <span class="math inline">\(r\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
 r
@@ -1169,24 +1169,24 @@ r
 &amp;&amp; \text{(} \mathbf{A} = \mathbf{C} \mathbf{R} \text{)}
 \\
 &amp;\le \operatorname{rank}(\mathbf{C})
-&amp;&amp; \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-product}{\text{Theorem~9 in Column Space, Null Space and Rank-Nullity}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-product}{\text{Theorem~3 in Rank-Nullity and Rank Factorization}}\text{)}
 \\
 &amp;\le r,
-&amp;&amp; \text{(}\href{linear-algebra-rank-nullity.qmd#cor-rank-bound}{\text{Corollary~1 in Column Space, Null Space and Rank-Nullity}}\text{, } \mathbf{C} \text{ has } r \text{ columns)}
+&amp;&amp; \text{(}\href{linear-algebra-rank-nullity.qmd#cor-rank-bound}{\text{Corollary~1 in Rank-Nullity and Rank Factorization}}\text{, } \mathbf{C} \text{ has } r \text{ columns)}
 \end{aligned}
 \]</span></p>
-<p>and, using <span class="math inline">\({(\mathbf{C} \mathbf{R})}^{\top} = {\mathbf{R}}^{\top} {\mathbf{C}}^{\top}\)</span> (<a href="./linear-algebra-matrices.html#thm-transpose-product">Theorem&nbsp;19 in Matrices</a>),</p>
+<p>and, using <span class="math inline">\({(\mathbf{C} \mathbf{R})}^{\top} = {\mathbf{R}}^{\top} {\mathbf{C}}^{\top}\)</span> (<a href="./linear-algebra-matrix-multiplication.html#thm-transpose-product">Theorem&nbsp;6 in Matrix Multiplication</a>),</p>
 <p><span class="math display">\[
 \begin{aligned}
 r
 &amp;= \operatorname{rank}\mathopen{}\left({\mathbf{R}}^{\top} {\mathbf{C}}^{\top}\right)\mathclose{}
-&amp;&amp; \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-transpose}{\text{Theorem~10 in Column Space, Null Space and Rank-Nullity}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-transpose}{\text{Theorem~4 in Rank-Nullity and Rank Factorization}}\text{)}
 \\
 &amp;\le \operatorname{rank}({\mathbf{R}}^{\top})
-&amp;&amp; \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-product}{\text{Theorem~9 in Column Space, Null Space and Rank-Nullity}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-product}{\text{Theorem~3 in Rank-Nullity and Rank Factorization}}\text{)}
 \\
 &amp;\le r.
-&amp;&amp; \text{(}\href{linear-algebra-rank-nullity.qmd#cor-rank-bound}{\text{Corollary~1 in Column Space, Null Space and Rank-Nullity}}\text{, } {\mathbf{R}}^{\top} \text{ has } r \text{ columns)}
+&amp;&amp; \text{(}\href{linear-algebra-rank-nullity.qmd#cor-rank-bound}{\text{Corollary~1 in Rank-Nullity and Rank Factorization}}\text{, } {\mathbf{R}}^{\top} \text{ has } r \text{ columns)}
 \end{aligned}
 \]</span></p>
 <p>So <span class="math inline">\(\mathbf{C}\)</span> and <span class="math inline">\({\mathbf{R}}^{\top}\)</span> have full column rank <span class="math inline">\(r\)</span>, and <span class="math inline">\({\mathbf{C}}^{\top} \mathbf{C}\)</span> and <span class="math inline">\(\mathbf{R} {\mathbf{R}}^{\top} = {({\mathbf{R}}^{\top})}^{\top}\,{\mathbf{R}}^{\top}\)</span> are invertible (<a href="#/thm-gram-invertible" class="quarto-xref">Theorem&nbsp;1</a>). They are symmetric:</p>
@@ -1196,7 +1196,7 @@ r
 &amp;= {\mathbf{C}}^{\top} \mathbf{C}
 \end{aligned}
 \]</span></p>
-<p>(<a href="./linear-algebra-matrices.html#thm-transpose-product">Theorem&nbsp;19 in Matrices</a>, <a href="./linear-algebra-matrices.html#def-matrix-transpose">Definition&nbsp;6 in Matrices</a>), and likewise for <span class="math inline">\(\mathbf{R} {\mathbf{R}}^{\top}\)</span>. Write <span class="math inline">\(\mathbf{S} \stackrel{\text{def}}{=}(\mathbf{R} {\mathbf{R}}^{\top})^{-1}\)</span> and <span class="math inline">\(\mathbf{T} \stackrel{\text{def}}{=}({\mathbf{C}}^{\top} \mathbf{C})^{-1}\)</span>, both symmetric (<a href="./linear-algebra-special-matrices.html#cor-inverse-symmetric">Corollary&nbsp;1 in Special Matrices and Decompositions</a>), and <span class="math inline">\(\mathbf{G} \stackrel{\text{def}}{=}{\mathbf{R}}^{\top} \mathbf{S} \mathbf{T} {\mathbf{C}}^{\top}\)</span>.</p>
+<p>(<a href="./linear-algebra-matrix-multiplication.html#thm-transpose-product">Theorem&nbsp;6 in Matrix Multiplication</a>, <a href="./linear-algebra-matrices.html#def-matrix-transpose">Definition&nbsp;6 in Matrices</a>), and likewise for <span class="math inline">\(\mathbf{R} {\mathbf{R}}^{\top}\)</span>. Write <span class="math inline">\(\mathbf{S} \stackrel{\text{def}}{=}(\mathbf{R} {\mathbf{R}}^{\top})^{-1}\)</span> and <span class="math inline">\(\mathbf{T} \stackrel{\text{def}}{=}({\mathbf{C}}^{\top} \mathbf{C})^{-1}\)</span>, both symmetric (<a href="./linear-algebra-special-matrices.html#cor-inverse-symmetric">Corollary&nbsp;1 in Special Matrices and Decompositions</a>), and <span class="math inline">\(\mathbf{G} \stackrel{\text{def}}{=}{\mathbf{R}}^{\top} \mathbf{S} \mathbf{T} {\mathbf{C}}^{\top}\)</span>.</p>
 <p><strong>Two products.</strong></p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -1205,13 +1205,13 @@ r
 &amp;&amp; \text{(substitute } \mathbf{A} \text{ and } \mathbf{G} \text{)}
 \\
 &amp;= \mathbf{C}\,(\mathbf{R} {\mathbf{R}}^{\top})\,\mathbf{S}\,\mathbf{T} {\mathbf{C}}^{\top}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 \\
 &amp;= \mathbf{C}\,\mathbf{I}_r\,\mathbf{T} {\mathbf{C}}^{\top}
 &amp;&amp; \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices and Decompositions}}\text{)}
 \\
 &amp;= \mathbf{C} \mathbf{T} {\mathbf{C}}^{\top},
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~10 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-identity}{\text{Theorem~4 in Matrix Multiplication}}\text{)}
 \end{aligned}
 \]</span></p>
 <p><span class="math display">\[
@@ -1221,13 +1221,13 @@ r
 &amp;&amp; \text{(substitute } \mathbf{G} \text{ and } \mathbf{A} \text{)}
 \\
 &amp;= {\mathbf{R}}^{\top} \mathbf{S}\,\mathbf{T}\,({\mathbf{C}}^{\top} \mathbf{C})\,\mathbf{R}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 \\
 &amp;= {\mathbf{R}}^{\top} \mathbf{S}\,\mathbf{I}_r\,\mathbf{R}
 &amp;&amp; \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices and Decompositions}}\text{)}
 \\
 &amp;= {\mathbf{R}}^{\top} \mathbf{S} \mathbf{R}.
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~10 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-identity}{\text{Theorem~4 in Matrix Multiplication}}\text{)}
 \end{aligned}
 \]</span></p>
 <p><strong>Conditions 3 and 4.</strong></p>
@@ -1238,13 +1238,13 @@ r
 &amp;&amp; \text{(first product)}
 \\
 &amp;= {\mathopen{}\left(\mathbf{C}\,(\mathbf{T} {\mathbf{C}}^{\top})\right)\mathclose{}}^{\top}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 \\
 &amp;= {(\mathbf{T} {\mathbf{C}}^{\top})}^{\top}\,{\mathbf{C}}^{\top}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~19 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-transpose-product}{\text{Theorem~6 in Matrix Multiplication}}\text{)}
 \\
 &amp;= {({\mathbf{C}}^{\top})}^{\top}\,{\mathbf{T}}^{\top}\,{\mathbf{C}}^{\top}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~19 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-transpose-product}{\text{Theorem~6 in Matrix Multiplication}}\text{)}
 \\
 &amp;= \mathbf{C}\,{\mathbf{T}}^{\top}\,{\mathbf{C}}^{\top}
 &amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~6 in Matrices}}\text{)}
@@ -1260,13 +1260,13 @@ r
 &amp;&amp; \text{(second product)}
 \\
 &amp;= {\mathopen{}\left({\mathbf{R}}^{\top}\,(\mathbf{S} \mathbf{R})\right)\mathclose{}}^{\top}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 \\
 &amp;= {(\mathbf{S} \mathbf{R})}^{\top}\,{({\mathbf{R}}^{\top})}^{\top}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~19 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-transpose-product}{\text{Theorem~6 in Matrix Multiplication}}\text{)}
 \\
 &amp;= {\mathbf{R}}^{\top}\,{\mathbf{S}}^{\top}\,{({\mathbf{R}}^{\top})}^{\top}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~19 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-transpose-product}{\text{Theorem~6 in Matrix Multiplication}}\text{)}
 \\
 &amp;= {\mathbf{R}}^{\top}\,{\mathbf{S}}^{\top}\,\mathbf{R}
 &amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~6 in Matrices}}\text{)}
@@ -1283,13 +1283,13 @@ r
 &amp;&amp; \text{(first product)}
 \\
 &amp;= \mathbf{C}\,\mathbf{T}\,({\mathbf{C}}^{\top} \mathbf{C})\,\mathbf{R}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 \\
 &amp;= \mathbf{C}\,\mathbf{I}_r\,\mathbf{R}
 &amp;&amp; \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices and Decompositions}}\text{)}
 \\
 &amp;= \mathbf{A}.
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~10 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-identity}{\text{Theorem~4 in Matrix Multiplication}}\text{)}
 \end{aligned}
 \]</span></p>
 <p><strong>Condition 2.</strong></p>
@@ -1300,18 +1300,18 @@ r
 &amp;&amp; \text{(second product)}
 \\
 &amp;= {\mathbf{R}}^{\top}\,\mathbf{S}\,(\mathbf{R} {\mathbf{R}}^{\top})\,\mathbf{S}\,\mathbf{T} {\mathbf{C}}^{\top}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 \\
 &amp;= {\mathbf{R}}^{\top}\,\mathbf{I}_r\,\mathbf{S}\,\mathbf{T} {\mathbf{C}}^{\top}
 &amp;&amp; \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices and Decompositions}}\text{)}
 \\
 &amp;= \mathbf{G}.
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~10 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-identity}{\text{Theorem~4 in Matrix Multiplication}}\text{)}
 \end{aligned}
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="exm-moore-penrose-exists" class="theorem example">
-<p><span class="theorem-title"><strong>Example 17 (The Moore-Penrose inverse of a rank-one matrix)</strong></span> For <span class="math inline">\(\mathbf{A}\)</span> in <a href="./linear-algebra-rank-nullity.html#exm-column-space">Example&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>, the rank factorization <span class="math inline">\(\mathbf{C} = \begin{bmatrix} 1 \\ 3 \end{bmatrix}\)</span>, <span class="math inline">\(\mathbf{R} = \begin{bmatrix} 1 &amp; -2 &amp; -2 \end{bmatrix}\)</span> (<a href="./linear-algebra-rank-nullity.html#exm-rank-factorization">Example&nbsp;27 in Column Space, Null Space and Rank-Nullity</a>) gives</p>
+<p><span class="theorem-title"><strong>Example 17 (The Moore-Penrose inverse of a rank-one matrix)</strong></span> For <span class="math inline">\(\mathbf{A}\)</span> in <a href="./linear-algebra-column-null-space.html#exm-column-space">Example&nbsp;1 in Column Space and Null Space</a>, the rank factorization <span class="math inline">\(\mathbf{C} = \begin{bmatrix} 1 \\ 3 \end{bmatrix}\)</span>, <span class="math inline">\(\mathbf{R} = \begin{bmatrix} 1 &amp; -2 &amp; -2 \end{bmatrix}\)</span> (<a href="./linear-algebra-rank-nullity.html#exm-rank-factorization">Example&nbsp;11 in Rank-Nullity and Rank Factorization</a>) gives</p>
 <p><span class="math display">\[
 \begin{aligned}
 {\mathbf{C}}^{\top} \mathbf{C} &amp;= 1 + 9 \\
@@ -1370,9 +1370,9 @@ r
 = \mathbf{A}\,{\mathopen{}\left({\mathopen{}\left(({\mathbf{A}}^{\top} \mathbf{A})\right)\mathclose{}}^{-1}\right)\mathclose{}}^{\top}\,{\mathbf{A}}^{\top}
 = \mathbf{A}\,{\mathopen{}\left({({\mathbf{A}}^{\top} \mathbf{A})}^{\top}\right)\mathclose{}}^{-1}\,{\mathbf{A}}^{\top}
 = \mathbf{A}\,{\mathopen{}\left(({\mathbf{A}}^{\top} \mathbf{A})\right)\mathclose{}}^{-1}\,{\mathbf{A}}^{\top}
-= \mathbf{A} \mathbf{G}\)</span>, by <a href="./linear-algebra-matrices.html#thm-transpose-product">Theorem&nbsp;19 in Matrices</a>, <a href="./linear-algebra-special-matrices.html#thm-inverse-transpose">Theorem&nbsp;2 in Special Matrices and Decompositions</a>, and because <span class="math inline">\({\mathbf{A}}^{\top} \mathbf{A}\)</span> is <a href="./linear-algebra-special-matrices.html#def-symmetric-matrix">symmetric</a>.</li>
+= \mathbf{A} \mathbf{G}\)</span>, by <a href="./linear-algebra-matrix-multiplication.html#thm-transpose-product">Theorem&nbsp;6 in Matrix Multiplication</a>, <a href="./linear-algebra-special-matrices.html#thm-inverse-transpose">Theorem&nbsp;2 in Special Matrices and Decompositions</a>, and because <span class="math inline">\({\mathbf{A}}^{\top} \mathbf{A}\)</span> is <a href="./linear-algebra-special-matrices.html#def-symmetric-matrix">symmetric</a>.</li>
 </ul>
-<p><strong>Part 2.</strong> <span class="math inline">\(\operatorname{rank}(\mathbf{A} {\mathbf{A}}^{\top}) = \operatorname{rank}(\mathbf{A}) = m\)</span> (<a href="./linear-algebra-rank-nullity.html#thm-rank-transpose">Theorem&nbsp;10 in Column Space, Null Space and Rank-Nullity</a>), and <span class="math inline">\(\mathbf{A} {\mathbf{A}}^{\top}\)</span> is <span class="math inline">\(m \times m\)</span>, so it is invertible (<a href="./linear-algebra-diagonalization.html#thm-invertible-rank">Theorem&nbsp;1 in Diagonalization and Cholesky</a>). Let <span class="math inline">\(\mathbf{G} = {\mathbf{A}}^{\top}\,{\mathopen{}\left((\mathbf{A} {\mathbf{A}}^{\top})\right)\mathclose{}}^{-1}\)</span>. Then <span class="math inline">\(\mathbf{A} \mathbf{G} = \mathbf{A} {\mathbf{A}}^{\top}\,{\mathopen{}\left((\mathbf{A} {\mathbf{A}}^{\top})\right)\mathclose{}}^{-1} = \mathbf{I}_m\)</span> (<a href="./linear-algebra-special-matrices.html#def-matrix-inverse">Definition&nbsp;5 in Special Matrices and Decompositions</a>).</p>
+<p><strong>Part 2.</strong> <span class="math inline">\(\operatorname{rank}(\mathbf{A} {\mathbf{A}}^{\top}) = \operatorname{rank}(\mathbf{A}) = m\)</span> (<a href="./linear-algebra-rank-nullity.html#thm-rank-transpose">Theorem&nbsp;4 in Rank-Nullity and Rank Factorization</a>), and <span class="math inline">\(\mathbf{A} {\mathbf{A}}^{\top}\)</span> is <span class="math inline">\(m \times m\)</span>, so it is invertible (<a href="./linear-algebra-diagonalization.html#thm-invertible-rank">Theorem&nbsp;1 in Diagonalization and Cholesky</a>). Let <span class="math inline">\(\mathbf{G} = {\mathbf{A}}^{\top}\,{\mathopen{}\left((\mathbf{A} {\mathbf{A}}^{\top})\right)\mathclose{}}^{-1}\)</span>. Then <span class="math inline">\(\mathbf{A} \mathbf{G} = \mathbf{A} {\mathbf{A}}^{\top}\,{\mathopen{}\left((\mathbf{A} {\mathbf{A}}^{\top})\right)\mathclose{}}^{-1} = \mathbf{I}_m\)</span> (<a href="./linear-algebra-special-matrices.html#def-matrix-inverse">Definition&nbsp;5 in Special Matrices and Decompositions</a>).</p>
 <ul>
 <li>Condition 3: <span class="math inline">\({(\mathbf{A} \mathbf{G})}^{\top} = {\mathbf{I}_m}^{\top} = \mathbf{I}_m = \mathbf{A} \mathbf{G}\)</span>.</li>
 <li>Condition 1: <span class="math inline">\(\mathbf{A} \mathbf{G} \mathbf{A} = \mathbf{I}_m \mathbf{A} = \mathbf{A}\)</span>.</li>
@@ -1380,7 +1380,7 @@ r
 <li>Condition 4: <span class="math inline">\({(\mathbf{G} \mathbf{A})}^{\top}
 = {\mathbf{A}}^{\top}\,{\mathopen{}\left({\mathopen{}\left((\mathbf{A} {\mathbf{A}}^{\top})\right)\mathclose{}}^{-1}\right)\mathclose{}}^{\top}\,\mathbf{A}
 = {\mathbf{A}}^{\top}\,{\mathopen{}\left((\mathbf{A} {\mathbf{A}}^{\top})\right)\mathclose{}}^{-1}\,\mathbf{A}
-= \mathbf{G} \mathbf{A}\)</span>, by <a href="./linear-algebra-matrices.html#thm-transpose-product">Theorem&nbsp;19 in Matrices</a>, <a href="./linear-algebra-special-matrices.html#thm-inverse-transpose">Theorem&nbsp;2 in Special Matrices and Decompositions</a>, and because <span class="math inline">\(\mathbf{A} {\mathbf{A}}^{\top}\)</span> is symmetric.</li>
+= \mathbf{G} \mathbf{A}\)</span>, by <a href="./linear-algebra-matrix-multiplication.html#thm-transpose-product">Theorem&nbsp;6 in Matrix Multiplication</a>, <a href="./linear-algebra-special-matrices.html#thm-inverse-transpose">Theorem&nbsp;2 in Special Matrices and Decompositions</a>, and because <span class="math inline">\(\mathbf{A} {\mathbf{A}}^{\top}\)</span> is symmetric.</li>
 </ul>
 </div>
 </section><section class="slide level2"><div id="exm-moore-penrose-full-rank" class="theorem example">
@@ -1401,14 +1401,14 @@ r
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="thm-moore-penrose-eigendecomposition" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 14 (The Moore-Penrose inverse of a symmetric matrix from its eigendecomposition)</strong></span> Let <span class="math inline">\(\mathbf{S} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}\)</span> be an eigendecomposition (<a href="./linear-algebra-special-matrices.html#def-eigendecomposition">Definition&nbsp;20 in Special Matrices and Decompositions</a>) of a <a href="./linear-algebra-special-matrices.html#def-symmetric-matrix">symmetric matrix</a> <span class="math inline">\(\mathbf{S}\)</span>, with <a href="./linear-algebra-matrices.html#def-diagonal-entry">diagonal entries</a> <span class="math inline">\(\lambda_1, \ldots, \lambda_p\)</span> in the <a href="./linear-algebra-special-matrices.html#def-diagonal-matrix">diagonal matrix</a> <span class="math inline">\(\mathbf{\Lambda}\)</span>. Let <span class="math inline">\(\mathbf{\Lambda}^+\)</span> be the diagonal matrix with <span class="math inline">\(j\)</span>th <a href="./linear-algebra-matrices.html#def-diagonal-entry">diagonal entry</a> <span class="math inline">\(1/\lambda_j\)</span> if <span class="math inline">\(\lambda_j \ne 0\)</span> and <span class="math inline">\(0\)</span> if <span class="math inline">\(\lambda_j = 0\)</span>. Then</p>
+<p><span class="theorem-title"><strong>Theorem 14 (The Moore-Penrose inverse of a symmetric matrix from its eigendecomposition)</strong></span> Let <span class="math inline">\(\mathbf{S} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}\)</span> be an eigendecomposition (<a href="./linear-algebra-special-matrices.html#def-eigendecomposition">Definition&nbsp;20 in Special Matrices and Decompositions</a>) of a <a href="./linear-algebra-special-matrices.html#def-symmetric-matrix">symmetric matrix</a> <span class="math inline">\(\mathbf{S}\)</span>, with <a href="./linear-algebra-matrix-multiplication.html#def-diagonal-entry">diagonal entries</a> <span class="math inline">\(\lambda_1, \ldots, \lambda_p\)</span> in the <a href="./linear-algebra-special-matrices.html#def-diagonal-matrix">diagonal matrix</a> <span class="math inline">\(\mathbf{\Lambda}\)</span>. Let <span class="math inline">\(\mathbf{\Lambda}^+\)</span> be the diagonal matrix with <span class="math inline">\(j\)</span>th <a href="./linear-algebra-matrix-multiplication.html#def-diagonal-entry">diagonal entry</a> <span class="math inline">\(1/\lambda_j\)</span> if <span class="math inline">\(\lambda_j \ne 0\)</span> and <span class="math inline">\(0\)</span> if <span class="math inline">\(\lambda_j = 0\)</span>. Then</p>
 <p><span class="math display">\[
 \mathbf{S}^+ = \mathbf{Q}\mathbf{\Lambda}^+{\mathbf{Q}}^{\top}.
 \]</span></p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(\mathbf{G} = \mathbf{Q}\mathbf{\Lambda}^+{\mathbf{Q}}^{\top}\)</span>. By <a href="#/thm-moore-penrose-unique" class="quarto-xref">Theorem&nbsp;11</a>, it is enough to show that <span class="math inline">\(\mathbf{G}\)</span> satisfies the four conditions of <a href="#/def-moore-penrose" class="quarto-xref">Definition&nbsp;5</a> for <span class="math inline">\(\mathbf{S}\)</span>.</p>
-<p><strong>Two facts about the diagonal matrices.</strong> The <span class="math inline">\(j\)</span>th <a href="./linear-algebra-matrices.html#def-diagonal-entry">diagonal entry</a> of <span class="math inline">\(\mathbf{\Lambda}\mathbf{\Lambda}^+\mathbf{\Lambda}\)</span> is <span class="math inline">\(\lambda_j \cdot (1/\lambda_j) \cdot \lambda_j = \lambda_j\)</span> if <span class="math inline">\(\lambda_j \ne 0\)</span>, and <span class="math inline">\(0 = \lambda_j\)</span> if <span class="math inline">\(\lambda_j = 0\)</span>. So <span class="math inline">\(\mathbf{\Lambda}\mathbf{\Lambda}^+\mathbf{\Lambda} = \mathbf{\Lambda}\)</span>. In the same way, <span class="math inline">\(\mathbf{\Lambda}^+\mathbf{\Lambda}\mathbf{\Lambda}^+ = \mathbf{\Lambda}^+\)</span>. Both <span class="math inline">\(\mathbf{\Lambda}\mathbf{\Lambda}^+\)</span> and <span class="math inline">\(\mathbf{\Lambda}^+\mathbf{\Lambda}\)</span> are diagonal, so each is <a href="./linear-algebra-special-matrices.html#def-symmetric-matrix">symmetric</a>.</p>
+<p><strong>Two facts about the diagonal matrices.</strong> The <span class="math inline">\(j\)</span>th <a href="./linear-algebra-matrix-multiplication.html#def-diagonal-entry">diagonal entry</a> of <span class="math inline">\(\mathbf{\Lambda}\mathbf{\Lambda}^+\mathbf{\Lambda}\)</span> is <span class="math inline">\(\lambda_j \cdot (1/\lambda_j) \cdot \lambda_j = \lambda_j\)</span> if <span class="math inline">\(\lambda_j \ne 0\)</span>, and <span class="math inline">\(0 = \lambda_j\)</span> if <span class="math inline">\(\lambda_j = 0\)</span>. So <span class="math inline">\(\mathbf{\Lambda}\mathbf{\Lambda}^+\mathbf{\Lambda} = \mathbf{\Lambda}\)</span>. In the same way, <span class="math inline">\(\mathbf{\Lambda}^+\mathbf{\Lambda}\mathbf{\Lambda}^+ = \mathbf{\Lambda}^+\)</span>. Both <span class="math inline">\(\mathbf{\Lambda}\mathbf{\Lambda}^+\)</span> and <span class="math inline">\(\mathbf{\Lambda}^+\mathbf{\Lambda}\)</span> are diagonal, so each is <a href="./linear-algebra-special-matrices.html#def-symmetric-matrix">symmetric</a>.</p>
 <p><strong>Conditions 1 and 2.</strong></p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -1495,7 +1495,7 @@ r
 &amp;&amp; \text{(condition 3 for } \mathbf{A}^+ \text{)}
 \\
 &amp;= {(\mathbf{A}\mathbf{A}^+\mathbf{A})}^{\top}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~19 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-transpose-product}{\text{Theorem~6 in Matrix Multiplication}}\text{)}
 \\
 &amp;= {\mathbf{A}}^{\top}.
 &amp;&amp; \text{(condition 1 for } \mathbf{A}^+ \text{)}
@@ -1512,7 +1512,7 @@ r
 &amp;&amp; ({\mathbf{A}}^{\top}\,\mathbf{A}\mathbf{A}^+ = {\mathbf{A}}^{\top})
 \\
 &amp;= {(\mathbf{A}^+\mathbf{A})}^{\top},
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~19 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-transpose-product}{\text{Theorem~6 in Matrix Multiplication}}\text{)}
 \end{aligned}
 \]</span></p>
 <p>which is <span class="math inline">\(\mathbf{A}^+\mathbf{A}\)</span> by condition 4 for <span class="math inline">\(\mathbf{A}^+\)</span>. Hence <span class="math inline">\(\mathbf{M}\mathbf{G} = \mathbf{A}^+\mathbf{A}\)</span>, and it is symmetric, which is condition 3 for <span class="math inline">\(\mathbf{G}\)</span>.</p>
@@ -1524,7 +1524,7 @@ r
 &amp;&amp; \text{(definitions of } \mathbf{G} \text{ and } \mathbf{M} \text{)}
 \\
 &amp;= \mathbf{A}^+\,{(\mathbf{A}\mathbf{A}^+)}^{\top}\,\mathbf{A}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~19 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-transpose-product}{\text{Theorem~6 in Matrix Multiplication}}\text{)}
 \\
 &amp;= \mathbf{A}^+\mathbf{A}\mathbf{A}^+\mathbf{A}
 &amp;&amp; \text{(condition 3 for } \mathbf{A}^+ \text{)}
@@ -1545,7 +1545,7 @@ r
 &amp;&amp; \text{(condition 4 for } \mathbf{A}^+ \text{)}
 \\
 &amp;= {(\mathbf{A}\mathbf{A}^+\mathbf{A})}^{\top}\,\mathbf{A}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~19 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-transpose-product}{\text{Theorem~6 in Matrix Multiplication}}\text{)}
 \\
 &amp;= {\mathbf{A}}^{\top}\mathbf{A}
 &amp;&amp; \text{(condition 1 for } \mathbf{A}^+ \text{)}
@@ -1566,7 +1566,7 @@ r
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="exm-moore-penrose-gram" class="theorem example">
-<p><span class="theorem-title"><strong>Example 20 (The Moore-Penrose inverse of the Gram matrix of a column of ones)</strong></span> For <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}\)</span>, the <a href="./linear-algebra-rank-nullity.html#def-gram-matrix">Gram matrix</a> is <span class="math inline">\({\mathbf{A}}^{\top}\mathbf{A} = \begin{bmatrix} 2 \end{bmatrix}\)</span>, so <span class="math inline">\(({\mathbf{A}}^{\top}\mathbf{A})^+ = \begin{bmatrix} 1/2 \end{bmatrix}\)</span>. By <a href="#/thm-moore-penrose-full-rank" class="quarto-xref">Theorem&nbsp;13</a>, <span class="math inline">\(\mathbf{A}^+ = {\mathopen{}\left(({\mathbf{A}}^{\top}\mathbf{A})\right)\mathclose{}}^{-1}\,{\mathbf{A}}^{\top} = \begin{bmatrix} 1/2 &amp; 1/2 \end{bmatrix}\)</span>. Then</p>
+<p><span class="theorem-title"><strong>Example 20 (The Moore-Penrose inverse of the Gram matrix of a column of ones)</strong></span> For <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}\)</span>, the <a href="./linear-algebra-column-null-space.html#def-gram-matrix">Gram matrix</a> is <span class="math inline">\({\mathbf{A}}^{\top}\mathbf{A} = \begin{bmatrix} 2 \end{bmatrix}\)</span>, so <span class="math inline">\(({\mathbf{A}}^{\top}\mathbf{A})^+ = \begin{bmatrix} 1/2 \end{bmatrix}\)</span>. By <a href="#/thm-moore-penrose-full-rank" class="quarto-xref">Theorem&nbsp;13</a>, <span class="math inline">\(\mathbf{A}^+ = {\mathopen{}\left(({\mathbf{A}}^{\top}\mathbf{A})\right)\mathclose{}}^{-1}\,{\mathbf{A}}^{\top} = \begin{bmatrix} 1/2 &amp; 1/2 \end{bmatrix}\)</span>. Then</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathbf{A}^+\,{(\mathbf{A}^+)}^{\top}
@@ -1593,7 +1593,7 @@ r
 &amp;&amp; \text{(}\href{#thm-moore-penrose-gram}{\text{Theorem~15}}\text{)}
 \\
 &amp;= \mathbf{A}^+\,{(\mathbf{A}\mathbf{A}^+)}^{\top}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~19 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-transpose-product}{\text{Theorem~6 in Matrix Multiplication}}\text{)}
 \\
 &amp;= \mathbf{A}^+\mathbf{A}\mathbf{A}^+
 &amp;&amp; \text{(condition 3 of }\href{#def-moore-penrose}{\text{Definition~5}}\text{)}
@@ -1616,10 +1616,10 @@ r
 <p>which is <span class="math inline">\(\mathbf{A}^+\)</span>, as <a href="#/cor-moore-penrose-gram" class="quarto-xref">Corollary&nbsp;1</a> states.</p>
 </div>
 </section><section class="slide level2"><div id="def-consistent-system" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6 (Consistent linear system)</strong></span> A linear system (<a href="./linear-algebra-matrices.html#def-linear-system">Definition&nbsp;18 in Matrices</a>) <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>, with <span class="math inline">\(\mathbf{A}\)</span> an <span class="math inline">\(m \times n\)</span> matrix and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m\)</span>, is <strong>consistent</strong> <span class="citation" data-cites="wikipedia_consistent_and_inconsistent_equations"><a href="#/references" role="doc-biblioref" onclick="">[9]</a></span> if it has at least one solution <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \in \mathbb{R}^n\)</span>, and <strong>inconsistent</strong> otherwise.</p>
+<p><span class="theorem-title"><strong>Definition 6 (Consistent linear system)</strong></span> A linear system (<a href="./linear-algebra-matrix-multiplication.html#def-linear-system">Definition&nbsp;9 in Matrix Multiplication</a>) <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>, with <span class="math inline">\(\mathbf{A}\)</span> an <span class="math inline">\(m \times n\)</span> matrix and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m\)</span>, is <strong>consistent</strong> <span class="citation" data-cites="wikipedia_consistent_and_inconsistent_equations"><a href="#/references" role="doc-biblioref" onclick="">[9]</a></span> if it has at least one solution <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \in \mathbb{R}^n\)</span>, and <strong>inconsistent</strong> otherwise.</p>
 </div>
 </section><section class="slide level2"><div id="exm-consistent-system" class="theorem example">
-<p><span class="theorem-title"><strong>Example 22 (A consistent system and an inconsistent one)</strong></span> With <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 0 \end{bmatrix}\)</span>, <span class="math inline">\(\mathbf{A}\,(x_1, x_2) = (x_1, 0)\)</span> (<a href="./linear-algebra-matrices.html#def-matvec-mult">Definition&nbsp;17 in Matrices</a>).</p>
+<p><span class="theorem-title"><strong>Example 22 (A consistent system and an inconsistent one)</strong></span> With <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 0 \end{bmatrix}\)</span>, <span class="math inline">\(\mathbf{A}\,(x_1, x_2) = (x_1, 0)\)</span> (<a href="./linear-algebra-matrix-multiplication.html#def-matvec-mult">Definition&nbsp;8 in Matrix Multiplication</a>).</p>
 <ul>
 <li>
 <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (2, 0)\)</span> is consistent: <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (2, 0)\)</span> is a solution.</li>
@@ -1633,7 +1633,7 @@ r
 <li>
 <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> is consistent (<a href="#/def-consistent-system" class="quarto-xref">Definition&nbsp;6</a>);</li>
 <li>
-<span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathcal{C}(\mathbf{A})\)</span> (<a href="./linear-algebra-rank-nullity.html#def-column-space">Definition&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>);</li>
+<span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathcal{C}(\mathbf{A})\)</span> (<a href="./linear-algebra-column-null-space.html#def-column-space">Definition&nbsp;1 in Column Space and Null Space</a>);</li>
 <li>
 <span class="math inline">\(\mathbf{A} \mathbf{G} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>;</li>
 <li>
@@ -1641,13 +1641,13 @@ r
 </ol>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span><strong>1 and 2 are equivalent.</strong> Statement 1 says <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> for some <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> (<a href="#/def-consistent-system" class="quarto-xref">Definition&nbsp;6</a>), and <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span> is the set of vectors <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> (<a href="./linear-algebra-rank-nullity.html#def-column-space">Definition&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>), so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> is in it exactly when <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> for some <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>.</p>
-<p><strong>1 implies 3.</strong> By <a href="#/thm-generalized-inverse-solves" class="quarto-xref">Theorem&nbsp;9</a>, <span class="math inline">\(\mathbf{G} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> is a solution, so <span class="math inline">\(\mathbf{A}\,(\mathbf{G} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>, which is statement 3 (<a href="./linear-algebra-matrices.html#thm-matmul-assoc">Theorem&nbsp;7 in Matrices</a>).</p>
-<p><strong>3 implies 1.</strong> If <span class="math inline">\(\mathbf{A} \mathbf{G} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>, then <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathbf{G} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> is a solution, since <span class="math inline">\(\mathbf{A}\,(\mathbf{G} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}) = (\mathbf{A} \mathbf{G})\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> (<a href="./linear-algebra-matrices.html#thm-matmul-assoc">Theorem&nbsp;7 in Matrices</a>).</p>
+<p><span class="proof-title"><em>Proof</em>. </span><strong>1 and 2 are equivalent.</strong> Statement 1 says <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> for some <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> (<a href="#/def-consistent-system" class="quarto-xref">Definition&nbsp;6</a>), and <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span> is the set of vectors <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> (<a href="./linear-algebra-column-null-space.html#def-column-space">Definition&nbsp;1 in Column Space and Null Space</a>), so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> is in it exactly when <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> for some <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>.</p>
+<p><strong>1 implies 3.</strong> By <a href="#/thm-generalized-inverse-solves" class="quarto-xref">Theorem&nbsp;9</a>, <span class="math inline">\(\mathbf{G} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> is a solution, so <span class="math inline">\(\mathbf{A}\,(\mathbf{G} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>, which is statement 3 (<a href="./linear-algebra-matrix-multiplication.html#thm-matmul-assoc">Theorem&nbsp;1 in Matrix Multiplication</a>).</p>
+<p><strong>3 implies 1.</strong> If <span class="math inline">\(\mathbf{A} \mathbf{G} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>, then <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathbf{G} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> is a solution, since <span class="math inline">\(\mathbf{A}\,(\mathbf{G} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}) = (\mathbf{A} \mathbf{G})\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> (<a href="./linear-algebra-matrix-multiplication.html#thm-matmul-assoc">Theorem&nbsp;1 in Matrix Multiplication</a>).</p>
 <p><strong>2 and 4 are equivalent.</strong> Every column of <span class="math inline">\(\mathbf{A}\)</span> is a column of <span class="math inline">\(\begin{bmatrix} \mathbf{A} &amp; \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \end{bmatrix}\)</span>, so <span class="math inline">\(\mathcal{C}(\mathbf{A}) \subseteq \mathcal{C}\mathopen{}\left(\begin{bmatrix} \mathbf{A} &amp; \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \end{bmatrix}\right)\mathclose{}\)</span>.</p>
 <ul>
-<li>If <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathcal{C}(\mathbf{A})\)</span>, every combination of the columns of <span class="math inline">\(\begin{bmatrix} \mathbf{A} &amp; \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \end{bmatrix}\)</span> is a combination of the columns of <span class="math inline">\(\mathbf{A}\)</span> (<a href="./linear-algebra-rank-nullity.html#def-column-space">Definition&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>), so the two column spaces (<a href="./linear-algebra-rank-nullity.html#def-column-space">Definition&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>) coincide and their <a href="./linear-algebra-subspaces.html#def-rank">ranks</a> agree (<a href="./linear-algebra-rank-nullity.html#thm-rank-dim">Theorem&nbsp;7 in Column Space, Null Space and Rank-Nullity</a>).</li>
-<li>If the ranks agree, the two column spaces have the same <a href="./linear-algebra-subspaces.html#def-dimension">dimension</a> (<a href="./linear-algebra-rank-nullity.html#thm-rank-dim">Theorem&nbsp;7 in Column Space, Null Space and Rank-Nullity</a>), so they coincide (<a href="./linear-algebra-subspaces.html#thm-subspace-equal-dim">Theorem&nbsp;11 in Subspaces and Rank</a>), and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathcal{C}\mathopen{}\left(\begin{bmatrix} \mathbf{A} &amp; \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \end{bmatrix}\right)\mathclose{} = \mathcal{C}(\mathbf{A})\)</span>.</li>
+<li>If <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathcal{C}(\mathbf{A})\)</span>, every combination of the columns of <span class="math inline">\(\begin{bmatrix} \mathbf{A} &amp; \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \end{bmatrix}\)</span> is a combination of the columns of <span class="math inline">\(\mathbf{A}\)</span> (<a href="./linear-algebra-column-null-space.html#def-column-space">Definition&nbsp;1 in Column Space and Null Space</a>), so the two column spaces (<a href="./linear-algebra-column-null-space.html#def-column-space">Definition&nbsp;1 in Column Space and Null Space</a>) coincide and their <a href="./linear-algebra-subspaces.html#def-rank">ranks</a> agree (<a href="./linear-algebra-rank-nullity.html#thm-rank-dim">Theorem&nbsp;1 in Rank-Nullity and Rank Factorization</a>).</li>
+<li>If the ranks agree, the two column spaces have the same <a href="./linear-algebra-subspaces.html#def-dimension">dimension</a> (<a href="./linear-algebra-rank-nullity.html#thm-rank-dim">Theorem&nbsp;1 in Rank-Nullity and Rank Factorization</a>), so they coincide (<a href="./linear-algebra-subspaces.html#thm-subspace-equal-dim">Theorem&nbsp;11 in Subspaces and Rank</a>), and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathcal{C}\mathopen{}\left(\begin{bmatrix} \mathbf{A} &amp; \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \end{bmatrix}\right)\mathclose{} = \mathcal{C}(\mathbf{A})\)</span>.</li>
 </ul>
 </div>
 </section><section class="slide level2"><div id="exm-consistency" class="theorem example">
@@ -1687,10 +1687,10 @@ r
 &amp;&amp; \text{(}\href{#thm-scalar-matmul}{\text{Theorem~7}}\text{)}
 \\
 &amp;= \mathbf{A} \mathbf{I}_n - \mathbf{A} \mathbf{G} \mathbf{A}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 \\
 &amp;= \mathbf{A} - \mathbf{A} \mathbf{G} \mathbf{A}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~10 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-identity}{\text{Theorem~4 in Matrix Multiplication}}\text{)}
 \\
 &amp;= \mathbf{A} - \mathbf{A}
 &amp;&amp; \text{(}\href{#def-generalized-inverse}{\text{Definition~4}}\text{)}
@@ -1699,7 +1699,7 @@ r
 &amp;&amp; \text{(arithmetic)}
 \end{aligned}
 \]</span></p>
-<p>so <span class="math inline">\(\mathbf{A}\,(\mathbf{I}_n - \mathbf{G} \mathbf{A})\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_m\)</span> for every <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}\)</span> (<a href="./linear-algebra-matrices.html#thm-matmul-assoc">Theorem&nbsp;7 in Matrices</a>), and <span class="math inline">\(\mathcal{C}(\mathbf{I}_n - \mathbf{G} \mathbf{A}) \subseteq \mathcal{N}(\mathbf{A})\)</span>. Conversely, if <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_m\)</span>, then</p>
+<p>so <span class="math inline">\(\mathbf{A}\,(\mathbf{I}_n - \mathbf{G} \mathbf{A})\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_m\)</span> for every <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}\)</span> (<a href="./linear-algebra-matrix-multiplication.html#thm-matmul-assoc">Theorem&nbsp;1 in Matrix Multiplication</a>), and <span class="math inline">\(\mathcal{C}(\mathbf{I}_n - \mathbf{G} \mathbf{A}) \subseteq \mathcal{N}(\mathbf{A})\)</span>. Conversely, if <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_m\)</span>, then</p>
 <p><span class="math display">\[
 \begin{aligned}
 (\mathbf{I}_n - \mathbf{G} \mathbf{A})\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
@@ -1707,10 +1707,10 @@ r
 &amp;&amp; \text{(}\href{#thm-scalar-matmul}{\text{Theorem~7}}\text{, with } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \text{ as the last factor)}
 \\
 &amp;= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} - (\mathbf{G} \mathbf{A})\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~10 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-identity}{\text{Theorem~4 in Matrix Multiplication}}\text{)}
 \\
 &amp;= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} - \mathbf{G}\,(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 \\
 &amp;= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} - \mathbf{G}\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_m
 &amp;&amp; \text{(} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_m \text{)}
@@ -1728,7 +1728,7 @@ r
 &amp;&amp; \text{(}\href{linear-algebra-subspaces.qmd#thm-matvec-linear}{\text{Theorem~4 in Subspaces and Rank}}\text{, with coefficients } 1 \text{ and } -1 \text{)}
 \\
 &amp;= \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} - \mathbf{A} \mathbf{G} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 \\
 &amp;= \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}},
 &amp;&amp; \text{(}\href{#thm-consistency}{\text{Theorem~16}}\text{, statement 3)}
@@ -1759,13 +1759,13 @@ r
 </ol>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span><strong>Part 1.</strong> By <a href="#/thm-consistency" class="quarto-xref">Theorem&nbsp;16</a>, the system is consistent for every <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> exactly when <span class="math inline">\(\mathcal{C}(\mathbf{A}) = \mathbb{R}^m\)</span>. <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span> is a subspace of <span class="math inline">\(\mathbb{R}^m\)</span> (<a href="./linear-algebra-rank-nullity.html#thm-column-space-span">Theorem&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>) with dimension <span class="math inline">\(\operatorname{rank}(\mathbf{A})\)</span> (<a href="./linear-algebra-rank-nullity.html#thm-rank-dim">Theorem&nbsp;7 in Column Space, Null Space and Rank-Nullity</a>), and <span class="math inline">\(\dim(\mathbb{R}^m) = m\)</span> (<a href="./linear-algebra-subspaces.html#exm-dimension">Example&nbsp;16 in Subspaces and Rank</a>). If the dimension is <span class="math inline">\(m\)</span>, then <span class="math inline">\(\mathcal{C}(\mathbf{A}) = \mathbb{R}^m\)</span> (<a href="./linear-algebra-subspaces.html#thm-subspace-equal-dim">Theorem&nbsp;11 in Subspaces and Rank</a>); if <span class="math inline">\(\mathcal{C}(\mathbf{A}) = \mathbb{R}^m\)</span>, the dimension is <span class="math inline">\(m\)</span>.</p>
-<p><strong>Part 2.</strong> By <a href="#/thm-solution-set" class="quarto-xref">Theorem&nbsp;17</a>, the solutions are a particular solution plus the vectors of <span class="math inline">\(\mathcal{N}(\mathbf{A})\)</span>, so there is exactly one solution exactly when <span class="math inline">\(\mathcal{N}(\mathbf{A}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_n\right\}\mathclose{}\)</span>, that is, when <span class="math inline">\(\operatorname{nullity}(\mathbf{A}) = 0\)</span> (a subspace of dimension <span class="math inline">\(0\)</span> has the empty list as a basis, whose span is <span class="math inline">\(\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}\)</span>, by <a href="./linear-algebra-subspaces.html#def-dimension">Definition&nbsp;9 in Subspaces and Rank</a> and <a href="./linear-algebra-subspaces.html#def-span">Definition&nbsp;5 in Subspaces and Rank</a>; and <span class="math inline">\(\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}\)</span> has dimension <span class="math inline">\(0\)</span>, by <a href="./linear-algebra-subspaces.html#exm-dimension">Example&nbsp;16 in Subspaces and Rank</a>). By <a href="./linear-algebra-rank-nullity.html#thm-rank-nullity">Theorem&nbsp;8 in Column Space, Null Space and Rank-Nullity</a>, that is when <span class="math inline">\(\operatorname{rank}(\mathbf{A}) = n\)</span>.</p>
+<p><span class="proof-title"><em>Proof</em>. </span><strong>Part 1.</strong> By <a href="#/thm-consistency" class="quarto-xref">Theorem&nbsp;16</a>, the system is consistent for every <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> exactly when <span class="math inline">\(\mathcal{C}(\mathbf{A}) = \mathbb{R}^m\)</span>. <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span> is a subspace of <span class="math inline">\(\mathbb{R}^m\)</span> (<a href="./linear-algebra-column-null-space.html#thm-column-space-span">Theorem&nbsp;1 in Column Space and Null Space</a>) with dimension <span class="math inline">\(\operatorname{rank}(\mathbf{A})\)</span> (<a href="./linear-algebra-rank-nullity.html#thm-rank-dim">Theorem&nbsp;1 in Rank-Nullity and Rank Factorization</a>), and <span class="math inline">\(\dim(\mathbb{R}^m) = m\)</span> (<a href="./linear-algebra-subspaces.html#exm-dimension">Example&nbsp;16 in Subspaces and Rank</a>). If the dimension is <span class="math inline">\(m\)</span>, then <span class="math inline">\(\mathcal{C}(\mathbf{A}) = \mathbb{R}^m\)</span> (<a href="./linear-algebra-subspaces.html#thm-subspace-equal-dim">Theorem&nbsp;11 in Subspaces and Rank</a>); if <span class="math inline">\(\mathcal{C}(\mathbf{A}) = \mathbb{R}^m\)</span>, the dimension is <span class="math inline">\(m\)</span>.</p>
+<p><strong>Part 2.</strong> By <a href="#/thm-solution-set" class="quarto-xref">Theorem&nbsp;17</a>, the solutions are a particular solution plus the vectors of <span class="math inline">\(\mathcal{N}(\mathbf{A})\)</span>, so there is exactly one solution exactly when <span class="math inline">\(\mathcal{N}(\mathbf{A}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_n\right\}\mathclose{}\)</span>, that is, when <span class="math inline">\(\operatorname{nullity}(\mathbf{A}) = 0\)</span> (a subspace of dimension <span class="math inline">\(0\)</span> has the empty list as a basis, whose span is <span class="math inline">\(\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}\)</span>, by <a href="./linear-algebra-subspaces.html#def-dimension">Definition&nbsp;9 in Subspaces and Rank</a> and <a href="./linear-algebra-subspaces.html#def-span">Definition&nbsp;5 in Subspaces and Rank</a>; and <span class="math inline">\(\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}\)</span> has dimension <span class="math inline">\(0\)</span>, by <a href="./linear-algebra-subspaces.html#exm-dimension">Example&nbsp;16 in Subspaces and Rank</a>). By <a href="./linear-algebra-rank-nullity.html#thm-rank-nullity">Theorem&nbsp;2 in Rank-Nullity and Rank Factorization</a>, that is when <span class="math inline">\(\operatorname{rank}(\mathbf{A}) = n\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-solution-unique" class="theorem example">
 <p><span class="theorem-title"><strong>Example 25 (Three systems)</strong></span> &nbsp;</p>
 <ul>
-<li><p>The <span class="math inline">\(2 \times 3\)</span> matrix <span class="math inline">\(\begin{bmatrix} 1 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 1 \end{bmatrix}\)</span> of <a href="./linear-algebra-rank-nullity.html#exm-rank-bound">Example&nbsp;16 in Column Space, Null Space and Rank-Nullity</a> has rank <span class="math inline">\(2 = m\)</span>, so every system with it is consistent, but <span class="math inline">\(2 &lt; 3 = n\)</span>, so the solutions are never unique.</p></li>
+<li><p>The <span class="math inline">\(2 \times 3\)</span> matrix <span class="math inline">\(\begin{bmatrix} 1 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 1 \end{bmatrix}\)</span> of <a href="./linear-algebra-rank-nullity.html#exm-rank-bound">Example&nbsp;6 in Rank-Nullity and Rank Factorization</a> has rank <span class="math inline">\(2 = m\)</span>, so every system with it is consistent, but <span class="math inline">\(2 &lt; 3 = n\)</span>, so the solutions are never unique.</p></li>
 <li><p>The <span class="math inline">\(3 \times 2\)</span> matrix <span class="math inline">\(\mathbf{X}= \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 2 \\ 1 &amp; 3 \end{bmatrix}\)</span> of <a href="#/exm-gram-invertible" class="quarto-xref">Example&nbsp;1</a> has rank <span class="math inline">\(2 = n\)</span>, so a consistent system has one solution, but <span class="math inline">\(2 &lt; 3 = m\)</span>, so some systems are inconsistent: <span class="math inline">\((1, 0, 0) \notin \mathcal{C}(\mathbf{X})\)</span>, because <span class="math inline">\(a\,(1, 1, 1) + b\,(1, 2, 3)\)</span> has equal differences between consecutive entries, and <span class="math inline">\((1, 0, 0)\)</span> does not.</p></li>
 <li>
 <p>An invertible <span class="math inline">\(p \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> has rank <span class="math inline">\(p\)</span>: if <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> then</p>
@@ -1775,7 +1775,7 @@ r
 &amp;= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}},
 \end{aligned}
 \]</span></p>
-<p>so its nullity is <span class="math inline">\(0\)</span> and its rank is <span class="math inline">\(p\)</span> (<a href="./linear-algebra-rank-nullity.html#thm-rank-nullity">Theorem&nbsp;8 in Column Space, Null Space and Rank-Nullity</a>). So every system with it is consistent (part 1, with <span class="math inline">\(p = m\)</span>) and has exactly one solution (part 2, with <span class="math inline">\(p = n\)</span>), namely <span class="math inline">\(\mathbf{A}^{-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>, since <span class="math inline">\(\mathbf{A}\,(\mathbf{A}^{-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>.</p>
+<p>so its nullity is <span class="math inline">\(0\)</span> and its rank is <span class="math inline">\(p\)</span> (<a href="./linear-algebra-rank-nullity.html#thm-rank-nullity">Theorem&nbsp;2 in Rank-Nullity and Rank Factorization</a>). So every system with it is consistent (part 1, with <span class="math inline">\(p = m\)</span>) and has exactly one solution (part 2, with <span class="math inline">\(p = n\)</span>), namely <span class="math inline">\(\mathbf{A}^{-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>, since <span class="math inline">\(\mathbf{A}\,(\mathbf{A}^{-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>.</p>
 </li>
 </ul>
 </div>
@@ -1783,7 +1783,7 @@ r
 <p><span class="theorem-title"><strong>Theorem 18 (The projection onto a column space, with any generalized inverse)</strong></span> Let <span class="math inline">\(\mathbf{X}\)</span> be an <span class="math inline">\(n \times p\)</span> matrix of any rank, and let <span class="math inline">\(\mathbf{G}\)</span> be any generalized inverse of <span class="math inline">\({\mathbf{X}}^{\top} \mathbf{X}\)</span> (<a href="#/def-generalized-inverse" class="quarto-xref">Definition&nbsp;4</a>). Then for every <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^n\)</span>, <span class="math inline">\(\mathbf{X}\mathbf{G} {\mathbf{X}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> is the orthogonal projection of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> onto <span class="math inline">\(\mathcal{C}(\mathbf{X})\)</span> (<a href="#/def-orthogonal-projection" class="quarto-xref">Definition&nbsp;3</a>). So the matrix <span class="math inline">\(\mathbf{X}\mathbf{G} {\mathbf{X}}^{\top}\)</span> is the same for every choice of <span class="math inline">\(\mathbf{G}\)</span>, and when <span class="math inline">\(\operatorname{rank}(\mathbf{X}) = p\)</span> it is the hat matrix <span class="math inline">\(\mathbf{H}\)</span> (<a href="#/def-hat-matrix" class="quarto-xref">Definition&nbsp;2</a>).</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span><strong><span class="math inline">\({\mathbf{X}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> is in <span class="math inline">\(\mathcal{C}({\mathbf{X}}^{\top} \mathbf{X})\)</span>.</strong> <span class="math inline">\(\mathcal{C}({\mathbf{X}}^{\top} \mathbf{X}) \subseteq \mathcal{C}({\mathbf{X}}^{\top})\)</span>, since <span class="math inline">\(({\mathbf{X}}^{\top} \mathbf{X})\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} = {\mathbf{X}}^{\top}\,(\mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}})\)</span> (<a href="./linear-algebra-matrices.html#thm-matmul-assoc">Theorem&nbsp;7 in Matrices</a>). Both are subspaces of <span class="math inline">\(\mathbb{R}^p\)</span> (<a href="./linear-algebra-rank-nullity.html#thm-column-space-span">Theorem&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>) with the same dimension: <span class="math inline">\(\operatorname{rank}({\mathbf{X}}^{\top} \mathbf{X}) = \operatorname{rank}({\mathbf{X}}^{\top})\)</span> (<a href="./linear-algebra-rank-nullity.html#thm-rank-transpose">Theorem&nbsp;10 in Column Space, Null Space and Rank-Nullity</a>, <a href="./linear-algebra-rank-nullity.html#thm-rank-dim">Theorem&nbsp;7 in Column Space, Null Space and Rank-Nullity</a>). So <span class="math inline">\(\mathcal{C}({\mathbf{X}}^{\top} \mathbf{X}) = \mathcal{C}({\mathbf{X}}^{\top})\)</span> (<a href="./linear-algebra-subspaces.html#thm-subspace-equal-dim">Theorem&nbsp;11 in Subspaces and Rank</a>), and since <span class="math inline">\({\mathbf{X}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathcal{C}({\mathbf{X}}^{\top})\)</span> (<a href="./linear-algebra-rank-nullity.html#def-column-space">Definition&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>), <span class="math inline">\({\mathbf{X}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= {\mathbf{X}}^{\top} \mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}\)</span> for some <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} \in \mathbb{R}^p\)</span>.</p>
+<p><span class="proof-title"><em>Proof</em>. </span><strong><span class="math inline">\({\mathbf{X}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> is in <span class="math inline">\(\mathcal{C}({\mathbf{X}}^{\top} \mathbf{X})\)</span>.</strong> <span class="math inline">\(\mathcal{C}({\mathbf{X}}^{\top} \mathbf{X}) \subseteq \mathcal{C}({\mathbf{X}}^{\top})\)</span>, since <span class="math inline">\(({\mathbf{X}}^{\top} \mathbf{X})\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} = {\mathbf{X}}^{\top}\,(\mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}})\)</span> (<a href="./linear-algebra-matrix-multiplication.html#thm-matmul-assoc">Theorem&nbsp;1 in Matrix Multiplication</a>). Both are subspaces of <span class="math inline">\(\mathbb{R}^p\)</span> (<a href="./linear-algebra-column-null-space.html#thm-column-space-span">Theorem&nbsp;1 in Column Space and Null Space</a>) with the same dimension: <span class="math inline">\(\operatorname{rank}({\mathbf{X}}^{\top} \mathbf{X}) = \operatorname{rank}({\mathbf{X}}^{\top})\)</span> (<a href="./linear-algebra-rank-nullity.html#thm-rank-transpose">Theorem&nbsp;4 in Rank-Nullity and Rank Factorization</a>, <a href="./linear-algebra-rank-nullity.html#thm-rank-dim">Theorem&nbsp;1 in Rank-Nullity and Rank Factorization</a>). So <span class="math inline">\(\mathcal{C}({\mathbf{X}}^{\top} \mathbf{X}) = \mathcal{C}({\mathbf{X}}^{\top})\)</span> (<a href="./linear-algebra-subspaces.html#thm-subspace-equal-dim">Theorem&nbsp;11 in Subspaces and Rank</a>), and since <span class="math inline">\({\mathbf{X}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathcal{C}({\mathbf{X}}^{\top})\)</span> (<a href="./linear-algebra-column-null-space.html#def-column-space">Definition&nbsp;1 in Column Space and Null Space</a>), <span class="math inline">\({\mathbf{X}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= {\mathbf{X}}^{\top} \mathbf{X}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}\)</span> for some <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} \in \mathbb{R}^p\)</span>.</p>
 <p><strong>The split.</strong> Let</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -1791,7 +1791,7 @@ r
 &amp;= \mathbf{X}\,(\mathbf{G} {\mathbf{X}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})
 \end{aligned}
 \]</span></p>
-<p>(<a href="./linear-algebra-matrices.html#thm-matmul-assoc">Theorem&nbsp;7 in Matrices</a>), which is in <span class="math inline">\(\mathcal{C}(\mathbf{X})\)</span> (<a href="./linear-algebra-rank-nullity.html#def-column-space">Definition&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>). For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span>,</p>
+<p>(<a href="./linear-algebra-matrix-multiplication.html#thm-matmul-assoc">Theorem&nbsp;1 in Matrix Multiplication</a>), which is in <span class="math inline">\(\mathcal{C}(\mathbf{X})\)</span> (<a href="./linear-algebra-column-null-space.html#def-column-space">Definition&nbsp;1 in Column Space and Null Space</a>). For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span>,</p>
 <p><span class="math display">\[
 \begin{aligned}
 {\mathbf{X}}^{\top}\,(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}})
@@ -1802,13 +1802,13 @@ r
 &amp;&amp; \text{(substitute } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \text{)}
 \\
 &amp;= {\mathbf{X}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- ({\mathbf{X}}^{\top} \mathbf{X})\,\mathbf{G}\,({\mathbf{X}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 \\
 &amp;= {\mathbf{X}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- ({\mathbf{X}}^{\top} \mathbf{X})\,\mathbf{G}\,({\mathbf{X}}^{\top} \mathbf{X})\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}
 &amp;&amp; \text{(first step)}
 \\
 &amp;= {\mathbf{X}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathopen{}\left(({\mathbf{X}}^{\top} \mathbf{X})\,\mathbf{G}\,({\mathbf{X}}^{\top} \mathbf{X})\right)\mathclose{}\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 \\
 &amp;= {\mathbf{X}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- ({\mathbf{X}}^{\top} \mathbf{X})\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}
 &amp;&amp; \text{(}\href{#def-generalized-inverse}{\text{Definition~4}}\text{)}
@@ -1824,15 +1824,15 @@ r
 <p><strong>Same matrix.</strong> Every choice of <span class="math inline">\(\mathbf{G}\)</span> gives a matrix that projects every <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> onto <span class="math inline">\(\mathcal{C}(\mathbf{X})\)</span>, so all choices give the same matrix (<a href="#/thm-projection-matrix-projects" class="quarto-xref">Theorem&nbsp;5</a>, part 2). When <span class="math inline">\(\operatorname{rank}(\mathbf{X}) = p\)</span>, <span class="math inline">\(({\mathbf{X}}^{\top} \mathbf{X})^{-1}\)</span> is one choice (<a href="#/thm-gram-invertible" class="quarto-xref">Theorem&nbsp;1</a>, <a href="#/thm-generalized-inverse-invertible" class="quarto-xref">Theorem&nbsp;8</a>), and it gives <span class="math inline">\(\mathbf{H}\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-projector-generalized-inverse" class="theorem example">
-<p><span class="theorem-title"><strong>Example 26 (A design matrix with a repeated column)</strong></span> Let <span class="math inline">\(\mathbf{X}= \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 1 \end{bmatrix}\)</span>, an intercept column entered twice, so <span class="math inline">\(\operatorname{rank}(\mathbf{X}) = 1 &lt; 2\)</span> and <span class="math inline">\({\mathbf{X}}^{\top} \mathbf{X}= \begin{bmatrix} 2 &amp; 2 \\ 2 &amp; 2 \end{bmatrix}\)</span> is not invertible: its rank is <span class="math inline">\(\operatorname{rank}(\mathbf{X}) = 1 &lt; 2\)</span> (<a href="./linear-algebra-rank-nullity.html#thm-rank-transpose">Theorem&nbsp;10 in Column Space, Null Space and Rank-Nullity</a>), while an invertible <span class="math inline">\(2 \times 2\)</span> matrix has rank <span class="math inline">\(2\)</span> (<a href="#/exm-solution-unique" class="quarto-xref">Example&nbsp;25</a>). The matrix <span class="math inline">\(\mathbf{G} = \begin{bmatrix} \frac{1}{2} &amp; 0 \\ 0 &amp; 0 \end{bmatrix}\)</span> is a generalized inverse of it:</p>
+<p><span class="theorem-title"><strong>Example 26 (A design matrix with a repeated column)</strong></span> Let <span class="math inline">\(\mathbf{X}= \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 1 \end{bmatrix}\)</span>, an intercept column entered twice, so <span class="math inline">\(\operatorname{rank}(\mathbf{X}) = 1 &lt; 2\)</span> and <span class="math inline">\({\mathbf{X}}^{\top} \mathbf{X}= \begin{bmatrix} 2 &amp; 2 \\ 2 &amp; 2 \end{bmatrix}\)</span> is not invertible: its rank is <span class="math inline">\(\operatorname{rank}(\mathbf{X}) = 1 &lt; 2\)</span> (<a href="./linear-algebra-rank-nullity.html#thm-rank-transpose">Theorem&nbsp;4 in Rank-Nullity and Rank Factorization</a>), while an invertible <span class="math inline">\(2 \times 2\)</span> matrix has rank <span class="math inline">\(2\)</span> (<a href="#/exm-solution-unique" class="quarto-xref">Example&nbsp;25</a>). The matrix <span class="math inline">\(\mathbf{G} = \begin{bmatrix} \frac{1}{2} &amp; 0 \\ 0 &amp; 0 \end{bmatrix}\)</span> is a generalized inverse of it:</p>
 <p><span class="math display">\[
 \begin{aligned}
 ({\mathbf{X}}^{\top} \mathbf{X})\,\mathbf{G}\,({\mathbf{X}}^{\top} \mathbf{X})
 &amp;= \begin{bmatrix} 1 &amp; 0 \\ 1 &amp; 0 \end{bmatrix} \begin{bmatrix} 2 &amp; 2 \\ 2 &amp; 2 \end{bmatrix}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~10 in Matrices}}\text{, for the first product)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#def-matrix-mult}{\text{Definition~1 in Matrix Multiplication}}\text{, for the first product)}
 \\
 &amp;= \begin{bmatrix} 2 &amp; 2 \\ 2 &amp; 2 \end{bmatrix}.
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~10 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#def-matrix-mult}{\text{Definition~1 in Matrix Multiplication}}\text{)}
 \end{aligned}
 \]</span></p>
 <p>Then</p>
@@ -1840,10 +1840,10 @@ r
 \begin{aligned}
 \mathbf{X}\mathbf{G} {\mathbf{X}}^{\top}
 &amp;= \begin{bmatrix} \frac{1}{2} &amp; 0 \\ \frac{1}{2} &amp; 0 \end{bmatrix} \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 1 \end{bmatrix}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~10 in Matrices}}\text{, for } \mathbf{X}\mathbf{G} \text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#def-matrix-mult}{\text{Definition~1 in Matrix Multiplication}}\text{, for } \mathbf{X}\mathbf{G} \text{)}
 \\
 &amp;= \begin{bmatrix} \frac{1}{2} &amp; \frac{1}{2} \\ \frac{1}{2} &amp; \frac{1}{2} \end{bmatrix},
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~10 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#def-matrix-mult}{\text{Definition~1 in Matrix Multiplication}}\text{)}
 \end{aligned}
 \]</span></p>
 <p>the hat matrix of the intercept-only model (<a href="#/exm-hat-matrix" class="quarto-xref">Example&nbsp;2</a>). Another generalized inverse, <span class="math inline">\(\mathbf{G}' = \begin{bmatrix} 0 &amp; 0 \\ 0 &amp; \frac{1}{2} \end{bmatrix}\)</span>, which is one because <span class="math inline">\(({\mathbf{X}}^{\top} \mathbf{X})\,\mathbf{G}' = \begin{bmatrix} 0 &amp; 1 \\ 0 &amp; 1 \end{bmatrix}\)</span> and that times <span class="math inline">\({\mathbf{X}}^{\top} \mathbf{X}\)</span> is again <span class="math inline">\(\begin{bmatrix} 2 &amp; 2 \\ 2 &amp; 2 \end{bmatrix}\)</span>, gives <span class="math inline">\(\mathbf{X}\mathbf{G}' = \begin{bmatrix} 0 &amp; \frac{1}{2} \\ 0 &amp; \frac{1}{2} \end{bmatrix}\)</span> and the same <span class="math inline">\(\mathbf{X}\mathbf{G}' {\mathbf{X}}^{\top} = \begin{bmatrix} \frac{1}{2} &amp; \frac{1}{2} \\ \frac{1}{2} &amp; \frac{1}{2} \end{bmatrix}\)</span>, as <a href="#/thm-projector-generalized-inverse" class="quarto-xref">Theorem&nbsp;18</a> says it must. Both project onto <span class="math inline">\(\mathcal{C}(\mathbf{X}) = \operatorname{span}\mathopen{}\left\{(1, 1)\right\}\mathclose{}\)</span>, the column space of the intercept-only design.</p>
@@ -1904,7 +1904,7 @@ x_i = \frac{1}{u_{ii}} \mathopen{}\left(b_i - \sum_{j=i+1}^{n} u_{ij}\,x_j\right
 \begin{aligned}
 b_i
 &amp;= \sum_{j=1}^nu_{ij}\,x_j
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~17 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#def-matvec-mult}{\text{Definition~8 in Matrix Multiplication}}\text{)}
 \\
 &amp;= \sum_{j=i}^{n} u_{ij}\,x_j
 &amp;&amp; \text{(} u_{ij} = 0 \text{ for } j &lt; i \text{)}
@@ -1971,7 +1971,7 @@ x_1 &amp;= \frac{1}{2} \mathopen{}\left(8 - 1 \cdot 3 - (-1)(-1)\right)\mathclos
 &amp;&amp; \text{(normalize step: } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}'_i = \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}'_i\right\rVert\mathclose{}\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_i \text{)}
 \end{aligned}
 \]</span></p>
-<p>Let <span class="math inline">\(\mathbf{R}\)</span> be the <span class="math inline">\(n \times n\)</span> matrix with <span class="math inline">\(r_{ji} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_j \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_i\)</span> for <span class="math inline">\(j &lt; i\)</span>, <span class="math inline">\(r_{ii} = \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}'_i\right\rVert\mathclose{} &gt; 0\)</span>, and <span class="math inline">\(r_{ji} = 0\)</span> for <span class="math inline">\(j &gt; i\)</span>; it is upper triangular with positive diagonal. Column <span class="math inline">\(i\)</span> of <span class="math inline">\(\mathbf{Q} \mathbf{R}\)</span> is <span class="math inline">\(\mathbf{Q}\)</span> times column <span class="math inline">\(i\)</span> of <span class="math inline">\(\mathbf{R}\)</span> (<a href="./linear-algebra-matrices.html#def-matrix-mult">Definition&nbsp;10 in Matrices</a>), and</p>
+<p>Let <span class="math inline">\(\mathbf{R}\)</span> be the <span class="math inline">\(n \times n\)</span> matrix with <span class="math inline">\(r_{ji} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}_j \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_i\)</span> for <span class="math inline">\(j &lt; i\)</span>, <span class="math inline">\(r_{ii} = \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{q}}\vphantom{q}}'_i\right\rVert\mathclose{} &gt; 0\)</span>, and <span class="math inline">\(r_{ji} = 0\)</span> for <span class="math inline">\(j &gt; i\)</span>; it is upper triangular with positive diagonal. Column <span class="math inline">\(i\)</span> of <span class="math inline">\(\mathbf{Q} \mathbf{R}\)</span> is <span class="math inline">\(\mathbf{Q}\)</span> times column <span class="math inline">\(i\)</span> of <span class="math inline">\(\mathbf{R}\)</span> (<a href="./linear-algebra-matrix-multiplication.html#def-matrix-mult">Definition&nbsp;1 in Matrix Multiplication</a>), and</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathbf{Q}\,(r_{1i}, \ldots, r_{ni})
@@ -2049,7 +2049,7 @@ x_1 &amp;= \frac{1}{2} \mathopen{}\left(8 - 1 \cdot 3 - (-1)(-1)\right)\mathclos
 </ol>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span> be the orthogonal projection of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> onto <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span>. The vectors <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>, as <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> ranges over <span class="math inline">\(\mathbb{R}^n\)</span>, are exactly the points of <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span> (<a href="./linear-algebra-rank-nullity.html#def-column-space">Definition&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>). <strong>Least squares solutions are the solutions of <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span>.</strong> If <span class="math inline">\(\mathbf{A} \hat{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span>, then for every <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>, <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \in \mathcal{C}(\mathbf{A})\)</span>, so <span class="math inline">\(\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} - \mathbf{A} \hat{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}\right\rVert\mathclose{} = \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\right\rVert\mathclose{} \le \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} - \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}\)</span> (<a href="#/thm-closest-point" class="quarto-xref">Theorem&nbsp;3</a>), and <span class="math inline">\(\hat{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}\)</span> is a least squares solution. Conversely, let <span class="math inline">\(\hat{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}\)</span> be a least squares solution. <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \in \mathcal{C}(\mathbf{A})\)</span>, so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0\)</span> for some <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0\)</span> (<a href="./linear-algebra-rank-nullity.html#def-column-space">Definition&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>), and</p>
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span> be the orthogonal projection of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> onto <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span>. The vectors <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>, as <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> ranges over <span class="math inline">\(\mathbb{R}^n\)</span>, are exactly the points of <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span> (<a href="./linear-algebra-column-null-space.html#def-column-space">Definition&nbsp;1 in Column Space and Null Space</a>). <strong>Least squares solutions are the solutions of <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span>.</strong> If <span class="math inline">\(\mathbf{A} \hat{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span>, then for every <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>, <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \in \mathcal{C}(\mathbf{A})\)</span>, so <span class="math inline">\(\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} - \mathbf{A} \hat{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}\right\rVert\mathclose{} = \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\right\rVert\mathclose{} \le \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} - \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}\)</span> (<a href="#/thm-closest-point" class="quarto-xref">Theorem&nbsp;3</a>), and <span class="math inline">\(\hat{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}\)</span> is a least squares solution. Conversely, let <span class="math inline">\(\hat{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}\)</span> be a least squares solution. <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \in \mathcal{C}(\mathbf{A})\)</span>, so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0\)</span> for some <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0\)</span> (<a href="./linear-algebra-column-null-space.html#def-column-space">Definition&nbsp;1 in Column Space and Null Space</a>), and</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} - \mathbf{A} \hat{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}\right\rVert\mathclose{}
@@ -2072,7 +2072,7 @@ x_1 &amp;= \frac{1}{2} \mathopen{}\left(8 - 1 \cdot 3 - (-1)(-1)\right)\mathclos
 &amp;&amp; \text{(}\href{#thm-scalar-matmul}{\text{Theorem~7}}\text{)}
 \\
 &amp;= {\mathbf{A}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} - {\mathbf{A}}^{\top} \mathbf{A} \hat{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}},
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 \end{aligned}
 \]</span></p>
 <p>which is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_n\)</span> exactly when the normal equations hold.</p>
@@ -2082,13 +2082,13 @@ x_1 &amp;= \frac{1}{2} \mathopen{}\left(8 - 1 \cdot 3 - (-1)(-1)\right)\mathclos
 \begin{aligned}
 \hat{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}
 &amp;= \mathbf{I}_n\,\hat{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~10 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-identity}{\text{Theorem~4 in Matrix Multiplication}}\text{)}
 \\
 &amp;= (\mathbf{M}^{-1} \mathbf{M})\,\hat{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}
 &amp;&amp; \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices and Decompositions}}\text{)}
 \\
 &amp;= \mathbf{M}^{-1}\,(\mathbf{M} \hat{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}})
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 \\
 &amp;= \mathbf{M}^{-1}\,{\mathbf{A}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}.
 &amp;&amp; \text{(the normal equations)}
@@ -2140,25 +2140,25 @@ x_1 &amp;= \frac{1}{2} \mathopen{}\left(8 - 1 \cdot 3 - (-1)(-1)\right)\mathclos
 &amp;&amp; \text{(substitute } \mathbf{A} = \mathbf{Q} \mathbf{R} \text{)}
 \\
 &amp;= {\mathbf{R}}^{\top}\,{\mathbf{Q}}^{\top}\,(\mathbf{Q} \mathbf{R})\,\hat{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~19 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-transpose-product}{\text{Theorem~6 in Matrix Multiplication}}\text{)}
 \\
 &amp;= {\mathbf{R}}^{\top}\,({\mathbf{Q}}^{\top} \mathbf{Q})\,(\mathbf{R} \hat{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}})
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 \\
 &amp;= {\mathbf{R}}^{\top}\,\mathbf{I}_n\,(\mathbf{R} \hat{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}})
 &amp;&amp; \text{(} {\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{I}_n \text{)}
 \\
 &amp;= {\mathbf{R}}^{\top}\,(\mathbf{R} \hat{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}})
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~10 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-identity}{\text{Theorem~4 in Matrix Multiplication}}\text{)}
 \\
 &amp;= {\mathbf{R}}^{\top}\,({\mathbf{Q}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}})
 &amp;&amp; \text{(} \mathbf{R} \hat{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} = {\mathbf{Q}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \text{)}
 \\
 &amp;= ({\mathbf{R}}^{\top}\,{\mathbf{Q}}^{\top})\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~7 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 \\
 &amp;= {(\mathbf{Q} \mathbf{R})}^{\top}\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~19 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-transpose-product}{\text{Theorem~6 in Matrix Multiplication}}\text{)}
 \\
 &amp;= {\mathbf{A}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}},
 &amp;&amp; \text{(} \mathbf{A} = \mathbf{Q} \mathbf{R} \text{)}
@@ -2232,7 +2232,7 @@ x_1 &amp;= \tfrac{1}{\sqrt{3}} \mathopen{}\left(\tfrac{5}{\sqrt{3}} - 2\sqrt{3} 
 &amp;&amp; ({\mathbf{P}}^{\top} = \mathbf{P})
 \\
 &amp;= {\mathbf{A}}^{\top} - {(\mathbf{P}\mathbf{A})}^{\top}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~19 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-transpose-product}{\text{Theorem~6 in Matrix Multiplication}}\text{)}
 \\
 &amp;= {\mathbf{A}}^{\top} - {\mathbf{A}}^{\top}
 &amp;&amp; (\mathbf{P}\mathbf{A} = \mathbf{A})
@@ -2251,7 +2251,7 @@ x_1 &amp;= \tfrac{1}{\sqrt{3}} \mathopen{}\left(\tfrac{5}{\sqrt{3}} - 2\sqrt{3} 
 \begin{aligned}
 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}
 &amp;= {(\mathbf{A}^+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})}^{\top}\,{\mathbf{A}}^{\top}(\mathbf{I} - \mathbf{P})\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~19 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-transpose-product}{\text{Theorem~6 in Matrix Multiplication}}\text{)}
 \\
 &amp;= 0,
 &amp;&amp; ({\mathbf{A}}^{\top}(\mathbf{I} - \mathbf{P}) = \mathbf{0})
@@ -2284,7 +2284,7 @@ x_1 &amp;= \tfrac{1}{\sqrt{3}} \mathopen{}\left(\tfrac{5}{\sqrt{3}} - 2\sqrt{3} 
 &amp;&amp; \text{(condition 4 of }\href{#def-moore-penrose}{\text{Definition~5}}\text{)}
 \\
 &amp;= {\mathbf{A}}^{\top}\,{(\mathbf{A}^+)}^{\top}\mathbf{A}^+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~19 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-transpose-product}{\text{Theorem~6 in Matrix Multiplication}}\text{)}
 \\
 &amp;= {\mathbf{A}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}.
 &amp;&amp; \text{(definition of } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \text{)}
@@ -2298,7 +2298,7 @@ x_1 &amp;= \tfrac{1}{\sqrt{3}} \mathopen{}\left(\tfrac{5}{\sqrt{3}} - 2\sqrt{3} 
 &amp;&amp; (\mathbf{A}^+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = {\mathbf{A}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}})
 \\
 &amp;= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~19 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-transpose-product}{\text{Theorem~6 in Matrix Multiplication}}\text{)}
 \\
 &amp;= 0.
 &amp;&amp; (\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}})
@@ -2331,7 +2331,7 @@ x_1 &amp;= \tfrac{1}{\sqrt{3}} \mathopen{}\left(\tfrac{5}{\sqrt{3}} - 2\sqrt{3} 
 <p><span class="theorem-title"><strong>Definition 12 (LU factorization)</strong></span> An <strong>LU factorization</strong> <span class="citation" data-cites="wikipedia_lu_decomposition"><a href="#/references" role="doc-biblioref" onclick="">[14]</a></span> of an <span class="math inline">\(n \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> is a product <span class="math inline">\(\mathbf{A} = \mathbf{L} \mathbf{U}\)</span> with <span class="math inline">\(\mathbf{L}\)</span> unit lower triangular (<a href="#/def-unit-lower-triangular-matrix" class="quarto-xref">Definition&nbsp;9</a>) and <span class="math inline">\(\mathbf{U}\)</span> upper triangular (<a href="#/def-triangular-matrix" class="quarto-xref">Definition&nbsp;7</a>).</p>
 </div>
 </section><section class="slide level2"><div id="exm-lu" class="theorem example">
-<p><span class="theorem-title"><strong>Example 35 (An LU factorization of a <span class="math inline">\(3 \times 3\)</span> matrix)</strong></span> Let <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 2 &amp; 1 &amp; -1 \\ -3 &amp; -1 &amp; 2 \\ -2 &amp; 1 &amp; 2 \end{bmatrix}\)</span>, <span class="math inline">\(\mathbf{L} = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ -\frac{3}{2} &amp; 1 &amp; 0 \\ -1 &amp; 4 &amp; 1 \end{bmatrix}\)</span> (unit lower triangular) and <span class="math inline">\(\mathbf{U} = \begin{bmatrix} 2 &amp; 1 &amp; -1 \\ 0 &amp; \frac{1}{2} &amp; \frac{1}{2} \\ 0 &amp; 0 &amp; -1 \end{bmatrix}\)</span> (upper triangular). By <a href="./linear-algebra-matrices.html#def-matrix-mult">Definition&nbsp;10 in Matrices</a>, entry <span class="math inline">\((i, j)\)</span> of <span class="math inline">\(\mathbf{L} \mathbf{U}\)</span> is <span class="math inline">\(\sum_k \ell_{ik}\,u_{kj}\)</span>, so row <span class="math inline">\(i\)</span> of <span class="math inline">\(\mathbf{L} \mathbf{U}\)</span> is <span class="math inline">\(\sum_k \ell_{ik}\)</span> times row <span class="math inline">\(k\)</span> of <span class="math inline">\(\mathbf{U}\)</span>. Row 1 is <span class="math inline">\(1 \cdot(2, 1, -1) = (2, 1, -1)\)</span>; row 2 is <span class="math inline">\(-\tfrac{3}{2}\,(2, 1, -1) + (0, \tfrac{1}{2}, \tfrac{1}{2}) = (-3, -1, 2)\)</span>, and row 3 is <span class="math inline">\(-(2, 1, -1) + 4\,(0, \tfrac{1}{2}, \tfrac{1}{2}) + (0, 0, -1) = (-2, 1, 2)\)</span>. These are the rows of <span class="math inline">\(\mathbf{A}\)</span>, so <span class="math inline">\(\mathbf{L} \mathbf{U} = \mathbf{A}\)</span> is an LU factorization. The below-diagonal entries of <span class="math inline">\(\mathbf{L}\)</span> are the negatives of the multiples of earlier rows that Gaussian elimination adds to reduce <span class="math inline">\(\mathbf{A}\)</span> to <span class="math inline">\(\mathbf{U}\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 35 (An LU factorization of a <span class="math inline">\(3 \times 3\)</span> matrix)</strong></span> Let <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 2 &amp; 1 &amp; -1 \\ -3 &amp; -1 &amp; 2 \\ -2 &amp; 1 &amp; 2 \end{bmatrix}\)</span>, <span class="math inline">\(\mathbf{L} = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ -\frac{3}{2} &amp; 1 &amp; 0 \\ -1 &amp; 4 &amp; 1 \end{bmatrix}\)</span> (unit lower triangular) and <span class="math inline">\(\mathbf{U} = \begin{bmatrix} 2 &amp; 1 &amp; -1 \\ 0 &amp; \frac{1}{2} &amp; \frac{1}{2} \\ 0 &amp; 0 &amp; -1 \end{bmatrix}\)</span> (upper triangular). By <a href="./linear-algebra-matrix-multiplication.html#def-matrix-mult">Definition&nbsp;1 in Matrix Multiplication</a>, entry <span class="math inline">\((i, j)\)</span> of <span class="math inline">\(\mathbf{L} \mathbf{U}\)</span> is <span class="math inline">\(\sum_k \ell_{ik}\,u_{kj}\)</span>, so row <span class="math inline">\(i\)</span> of <span class="math inline">\(\mathbf{L} \mathbf{U}\)</span> is <span class="math inline">\(\sum_k \ell_{ik}\)</span> times row <span class="math inline">\(k\)</span> of <span class="math inline">\(\mathbf{U}\)</span>. Row 1 is <span class="math inline">\(1 \cdot(2, 1, -1) = (2, 1, -1)\)</span>; row 2 is <span class="math inline">\(-\tfrac{3}{2}\,(2, 1, -1) + (0, \tfrac{1}{2}, \tfrac{1}{2}) = (-3, -1, 2)\)</span>, and row 3 is <span class="math inline">\(-(2, 1, -1) + 4\,(0, \tfrac{1}{2}, \tfrac{1}{2}) + (0, 0, -1) = (-2, 1, 2)\)</span>. These are the rows of <span class="math inline">\(\mathbf{A}\)</span>, so <span class="math inline">\(\mathbf{L} \mathbf{U} = \mathbf{A}\)</span> is an LU factorization. The below-diagonal entries of <span class="math inline">\(\mathbf{L}\)</span> are the negatives of the multiples of earlier rows that Gaussian elimination adds to reduce <span class="math inline">\(\mathbf{A}\)</span> to <span class="math inline">\(\mathbf{U}\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-not-lu" class="theorem example">
 <p><span class="theorem-title"><strong>Example 36 (An invertible matrix with no LU factorization)</strong></span> <span class="math inline">\(\mathbf{P} = \begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{bmatrix}\)</span> is invertible: <span class="math inline">\(\mathbf{P}^2 = \mathbf{I}_2\)</span>, so <span class="math inline">\(\mathbf{P}^{-1} = \mathbf{P}\)</span> (<a href="./linear-algebra-special-matrices.html#def-matrix-inverse">Definition&nbsp;5 in Special Matrices and Decompositions</a>); but it has no LU factorization. If <span class="math inline">\(\mathbf{P} = \mathbf{L} \mathbf{U}\)</span>, the <span class="math inline">\((1, 1)\)</span> entry gives <span class="math inline">\(0 = 1 \cdot u_{11}\)</span>, so <span class="math inline">\(u_{11} = 0\)</span>, and then the <span class="math inline">\((2, 1)\)</span> entry gives</p>
@@ -2355,7 +2355,7 @@ x_1 &amp;= \tfrac{1}{\sqrt{3}} \mathopen{}\left(\tfrac{5}{\sqrt{3}} - 2\sqrt{3} 
 &amp;= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}
 \end{aligned}
 \]</span></p>
-<p>(<a href="./linear-algebra-matrices.html#thm-matmul-assoc">Theorem&nbsp;7 in Matrices</a>), so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is a solution. Conversely, if <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>, then <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} \stackrel{\text{def}}{=}\mathbf{U} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> satisfies</p>
+<p>(<a href="./linear-algebra-matrix-multiplication.html#thm-matmul-assoc">Theorem&nbsp;1 in Matrix Multiplication</a>), so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is a solution. Conversely, if <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>, then <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} \stackrel{\text{def}}{=}\mathbf{U} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> satisfies</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathbf{L} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} &amp;= \mathbf{L}\,(\mathbf{U} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) \\
@@ -2364,7 +2364,7 @@ x_1 &amp;= \tfrac{1}{\sqrt{3}} \mathopen{}\left(\tfrac{5}{\sqrt{3}} - 2\sqrt{3} 
 &amp;= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}
 \end{aligned}
 \]</span></p>
-<p>(<a href="./linear-algebra-matrices.html#thm-matmul-assoc">Theorem&nbsp;7 in Matrices</a>), so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> is the unique solution of that system, and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is then the unique solution of <span class="math inline">\(\mathbf{U} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span>.</p>
+<p>(<a href="./linear-algebra-matrix-multiplication.html#thm-matmul-assoc">Theorem&nbsp;1 in Matrix Multiplication</a>), so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> is the unique solution of that system, and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is then the unique solution of <span class="math inline">\(\mathbf{U} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span>.</p>
 </div>
 </section><section class="slide level2 smaller scrollable" id="references"><div id="exm-lu-solve" class="theorem example">
 <p><span class="theorem-title"><strong>Example 37 (Two triangular solves)</strong></span> With <span class="math inline">\(\mathbf{L}\)</span> and <span class="math inline">\(\mathbf{U}\)</span> of <a href="#/exm-lu" class="quarto-xref">Example&nbsp;35</a>, solve <span class="math inline">\(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (8, -11, -3)\)</span>. Forward substitution on <span class="math inline">\(\mathbf{L} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = (8, -11, -3)\)</span> gives <span class="math inline">\(y_1 = 8\)</span>,</p>

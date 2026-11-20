@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-20 00:10:33 (PST)
+Last modified: 2026-11-20 09:01:42 (PST)
 
 > **NOTE:**
 >
@@ -352,7 +352,7 @@ Last modified: 2026-11-20 00:10:33 (PST)
 >
 > **Example 4 (L-BFGS applies the update without forming the matrix)**  
 >
-> Continue [Example 3](#exm-bfgs-step) with $m = 1$ stored pair $(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}^{(0)}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}^{(0)})$ and starting [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{I}_2$. Below, $\mathbf{H}^+ \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)})$ is formed from vectors alone, starting from `H0`, then compared with the [matrix product](linear-algebra-matrices.llms.md#def-matrix-mult).
+> Continue [Example 3](#exm-bfgs-step) with $m = 1$ stored pair $(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}^{(0)}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}^{(0)})$ and starting [matrix](linear-algebra-matrices.llms.md#def-matrix) $\mathbf{I}_2$. Below, $\mathbf{H}^+ \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)})$ is formed from vectors alone, starting from `H0`, then compared with the [matrix product](linear-algebra-matrix-multiplication.llms.md#def-matrix-mult).
 >
 > ``` downlit
 > g1 <- grad1

@@ -2448,6 +2448,177 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra-affine-subspaces#def-affine-subspace",
+   "site": "mds",
+   "page": "linear-algebra-affine-subspaces",
+   "div": "def-affine-subspace",
+   "kind": "def",
+   "title": "Affine subspace",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-affine-subspaces#def-closed-half-space",
+   "site": "mds",
+   "page": "linear-algebra-affine-subspaces",
+   "div": "def-closed-half-space",
+   "kind": "def",
+   "title": "Closed half-space",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-affine-subspaces#def-half-space",
+   "site": "mds",
+   "page": "linear-algebra-affine-subspaces",
+   "div": "def-half-space",
+   "kind": "def",
+   "title": "Open half-space",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-affine-subspaces#thm-half-space-dimension",
+   "site": "mds",
+   "page": "linear-algebra-affine-subspaces",
+   "div": "thm-half-space-dimension",
+   "kind": "thm",
+   "title": "Differences of points in a hyperplane and in a half-space",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-affine-subspaces#thm-hyperplane-graph",
+   "site": "mds",
+   "page": "linear-algebra-affine-subspaces",
+   "div": "thm-hyperplane-graph",
+   "kind": "thm",
+   "title": "The graph of an affine function is a hyperplane",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-affine-subspaces#thm-hyperplane-origin",
+   "site": "mds",
+   "page": "linear-algebra-affine-subspaces",
+   "div": "thm-hyperplane-origin",
+   "kind": "thm",
+   "title": "Where a hyperplane passes, and its shape in $\\reals^2$ and $\\reals^3$",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-affine-subspaces#thm-hyperplane-subspace",
+   "site": "mds",
+   "page": "linear-algebra-affine-subspaces",
+   "div": "thm-hyperplane-subspace",
+   "kind": "thm",
+   "title": "A hyperplane is a translated subspace of dimension $p - 1$",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-column-null-space#def-column-space",
+   "site": "mds",
+   "page": "linear-algebra-column-null-space",
+   "div": "def-column-space",
+   "kind": "def",
+   "title": "Column space, range, image",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-column-null-space#def-cross-product-matrix",
+   "site": "mds",
+   "page": "linear-algebra-column-null-space",
+   "div": "def-cross-product-matrix",
+   "kind": "def",
+   "title": "Cross-product matrix",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-column-null-space#def-gram-matrix",
+   "site": "mds",
+   "page": "linear-algebra-column-null-space",
+   "div": "def-gram-matrix",
+   "kind": "def",
+   "title": "Gram matrix",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-column-null-space#def-left-null-space",
+   "site": "mds",
+   "page": "linear-algebra-column-null-space",
+   "div": "def-left-null-space",
+   "kind": "def",
+   "title": "Left null space",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-column-null-space#def-null-space",
+   "site": "mds",
+   "page": "linear-algebra-column-null-space",
+   "div": "def-null-space",
+   "kind": "def",
+   "title": "Null space, kernel",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-column-null-space#def-row-space",
+   "site": "mds",
+   "page": "linear-algebra-column-null-space",
+   "div": "def-row-space",
+   "kind": "def",
+   "title": "Row space",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-column-null-space#thm-column-space-span",
+   "site": "mds",
+   "page": "linear-algebra-column-null-space",
+   "div": "thm-column-space-span",
+   "kind": "thm",
+   "title": "The column space is the span of the columns",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-column-null-space#thm-cross-product-sum-outer",
+   "site": "mds",
+   "page": "linear-algebra-column-null-space",
+   "div": "thm-cross-product-sum-outer",
+   "kind": "thm",
+   "title": "The cross-product matrix is the sum of the outer products of the rows",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-column-null-space#thm-independent-null-space",
+   "site": "mds",
+   "page": "linear-algebra-column-null-space",
+   "div": "thm-independent-null-space",
+   "kind": "thm",
+   "title": "Independent columns exactly when the null space is trivial",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-column-null-space#thm-null-gram",
+   "site": "mds",
+   "page": "linear-algebra-column-null-space",
+   "div": "thm-null-gram",
+   "kind": "thm",
+   "title": "$\\tp{\\matr{A}} \\matr{A}$ has the same null space as $\\matr{A}$",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-column-null-space#thm-null-space-subspace",
+   "site": "mds",
+   "page": "linear-algebra-column-null-space",
+   "div": "thm-null-space-subspace",
+   "kind": "thm",
+   "title": "A null space is a subspace",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-column-null-space#thm-row-null-disjoint",
+   "site": "mds",
+   "page": "linear-algebra-column-null-space",
+   "div": "thm-row-null-disjoint",
+   "kind": "thm",
+   "title": "The row space and null space share only the zero vector",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra-complex#def-complex-conjugate-matrix",
    "site": "mds",
    "page": "linear-algebra-complex",
@@ -3321,129 +3492,183 @@
    "external": false
   },
   {
-   "id": "mds/linear-algebra-matrices#cor-linear-is-affine",
+   "id": "mds/linear-algebra-linear-maps#cor-linear-is-affine",
    "site": "mds",
-   "page": "linear-algebra-matrices",
+   "page": "linear-algebra-linear-maps",
    "div": "cor-linear-is-affine",
    "kind": "cor",
    "title": "Every linear map is affine",
    "external": false
   },
   {
-   "id": "mds/linear-algebra-matrices#cor-linear-scalar",
+   "id": "mds/linear-algebra-linear-maps#cor-linear-scalar",
    "site": "mds",
-   "page": "linear-algebra-matrices",
+   "page": "linear-algebra-linear-maps",
    "div": "cor-linear-scalar",
    "kind": "cor",
    "title": "Linear functions from vectors to numbers",
    "external": false
   },
   {
-   "id": "mds/linear-algebra-matrices#def-additive-function",
+   "id": "mds/linear-algebra-linear-maps#def-additive-function",
    "site": "mds",
-   "page": "linear-algebra-matrices",
+   "page": "linear-algebra-linear-maps",
    "div": "def-additive-function",
    "kind": "def",
    "title": "Additive function",
    "external": false
   },
   {
-   "id": "mds/linear-algebra-matrices#def-affine-map",
+   "id": "mds/linear-algebra-linear-maps#def-affine-map",
    "site": "mds",
-   "page": "linear-algebra-matrices",
+   "page": "linear-algebra-linear-maps",
    "div": "def-affine-map",
    "kind": "def",
    "title": "Affine map, affine transformation, affine function",
    "external": false
   },
   {
-   "id": "mds/linear-algebra-matrices#def-affine-offset",
+   "id": "mds/linear-algebra-linear-maps#def-affine-offset",
    "site": "mds",
-   "page": "linear-algebra-matrices",
+   "page": "linear-algebra-linear-maps",
    "div": "def-affine-offset",
    "kind": "def",
    "title": "Offset of an affine map, intercept, bias",
    "external": false
   },
   {
-   "id": "mds/linear-algebra-matrices#def-augmented-vector",
+   "id": "mds/linear-algebra-linear-maps#def-augmented-vector",
    "site": "mds",
-   "page": "linear-algebra-matrices",
+   "page": "linear-algebra-linear-maps",
    "div": "def-augmented-vector",
    "kind": "def",
    "title": "Augmented vector",
    "external": false
   },
   {
-   "id": "mds/linear-algebra-matrices#def-diagonal-entry",
+   "id": "mds/linear-algebra-linear-maps#def-homogeneous-function",
    "site": "mds",
-   "page": "linear-algebra-matrices",
-   "div": "def-diagonal-entry",
-   "kind": "def",
-   "title": "Diagonal entry",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-matrices#def-homogeneous-function",
-   "site": "mds",
-   "page": "linear-algebra-matrices",
+   "page": "linear-algebra-linear-maps",
    "div": "def-homogeneous-function",
    "kind": "def",
    "title": "Homogeneous function",
    "external": false
   },
   {
-   "id": "mds/linear-algebra-matrices#def-hyperplane",
+   "id": "mds/linear-algebra-linear-maps#def-hyperplane",
    "site": "mds",
-   "page": "linear-algebra-matrices",
+   "page": "linear-algebra-linear-maps",
    "div": "def-hyperplane",
    "kind": "def",
    "title": "Hyperplane",
    "external": false
   },
   {
-   "id": "mds/linear-algebra-matrices#def-identity-matrix",
+   "id": "mds/linear-algebra-linear-maps#def-linear-map",
    "site": "mds",
-   "page": "linear-algebra-matrices",
-   "div": "def-identity-matrix",
-   "kind": "def",
-   "title": "Identity matrix",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-matrices#def-linear-map",
-   "site": "mds",
-   "page": "linear-algebra-matrices",
+   "page": "linear-algebra-linear-maps",
    "div": "def-linear-map",
    "kind": "def",
    "title": "Linear map, linear transformation, linear function",
    "external": false
   },
   {
-   "id": "mds/linear-algebra-matrices#def-linear-operator",
+   "id": "mds/linear-algebra-linear-maps#def-linear-operator",
    "site": "mds",
-   "page": "linear-algebra-matrices",
+   "page": "linear-algebra-linear-maps",
    "div": "def-linear-operator",
    "kind": "def",
    "title": "Linear operator",
    "external": false
   },
   {
-   "id": "mds/linear-algebra-matrices#def-linear-system",
+   "id": "mds/linear-algebra-linear-maps#def-matrix-of-linear-map",
    "site": "mds",
-   "page": "linear-algebra-matrices",
-   "div": "def-linear-system",
+   "page": "linear-algebra-linear-maps",
+   "div": "def-matrix-of-linear-map",
    "kind": "def",
-   "title": "Linear system, system of linear equations",
+   "title": "Matrix of a linear map",
    "external": false
   },
   {
-   "id": "mds/linear-algebra-matrices#def-main-diagonal",
+   "id": "mds/linear-algebra-linear-maps#def-normal-vector",
    "site": "mds",
-   "page": "linear-algebra-matrices",
-   "div": "def-main-diagonal",
+   "page": "linear-algebra-linear-maps",
+   "div": "def-normal-vector",
    "kind": "def",
-   "title": "Main diagonal",
+   "title": "Normal vector of a hyperplane",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-linear-maps#def-translation",
+   "site": "mds",
+   "page": "linear-algebra-linear-maps",
+   "div": "def-translation",
+   "kind": "def",
+   "title": "Translation",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-linear-maps#thm-affine-linear-iff",
+   "site": "mds",
+   "page": "linear-algebra-linear-maps",
+   "div": "thm-affine-linear-iff",
+   "kind": "thm",
+   "title": "An affine map is linear exactly when its offset is zero",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-linear-maps#thm-affine-map-unique",
+   "site": "mds",
+   "page": "linear-algebra-linear-maps",
+   "div": "thm-affine-map-unique",
+   "kind": "thm",
+   "title": "An affine map determines its matrix and offset",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-linear-maps#thm-affine-map-zero",
+   "site": "mds",
+   "page": "linear-algebra-linear-maps",
+   "div": "thm-affine-map-zero",
+   "kind": "thm",
+   "title": "An affine map sends zero to its offset",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-linear-maps#thm-linear-map-lincom",
+   "site": "mds",
+   "page": "linear-algebra-linear-maps",
+   "div": "thm-linear-map-lincom",
+   "kind": "thm",
+   "title": "A linear map preserves linear combinations",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-linear-maps#thm-linear-map-matrix",
+   "site": "mds",
+   "page": "linear-algebra-linear-maps",
+   "div": "thm-linear-map-matrix",
+   "kind": "thm",
+   "title": "Every linear map is multiplication by a matrix",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-linear-maps#thm-linear-map-zero",
+   "site": "mds",
+   "page": "linear-algebra-linear-maps",
+   "div": "thm-linear-map-zero",
+   "kind": "thm",
+   "title": "A linear map sends zero to zero",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-linear-maps#thm-matrix-map-linear",
+   "site": "mds",
+   "page": "linear-algebra-linear-maps",
+   "div": "thm-matrix-map-linear",
+   "kind": "thm",
+   "title": "Multiplying by a matrix is a linear map",
    "external": false
   },
   {
@@ -3483,24 +3708,6 @@
    "external": false
   },
   {
-   "id": "mds/linear-algebra-matrices#def-matrix-mult",
-   "site": "mds",
-   "page": "linear-algebra-matrices",
-   "div": "def-matrix-mult",
-   "kind": "def",
-   "title": "Matrix multiplication",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-matrices#def-matrix-of-linear-map",
-   "site": "mds",
-   "page": "linear-algebra-matrices",
-   "div": "def-matrix-of-linear-map",
-   "kind": "def",
-   "title": "Matrix of a linear map",
-   "external": false
-  },
-  {
    "id": "mds/linear-algebra-matrices#def-matrix-row",
    "site": "mds",
    "page": "linear-algebra-matrices",
@@ -3519,57 +3726,12 @@
    "external": false
   },
   {
-   "id": "mds/linear-algebra-matrices#def-matvec-mult",
-   "site": "mds",
-   "page": "linear-algebra-matrices",
-   "div": "def-matvec-mult",
-   "kind": "def",
-   "title": "Matrix-vector multiplication",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-matrices#def-normal-vector",
-   "site": "mds",
-   "page": "linear-algebra-matrices",
-   "div": "def-normal-vector",
-   "kind": "def",
-   "title": "Normal vector of a hyperplane",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-matrices#def-off-diagonal-entry",
-   "site": "mds",
-   "page": "linear-algebra-matrices",
-   "div": "def-off-diagonal-entry",
-   "kind": "def",
-   "title": "Off-diagonal entry",
-   "external": false
-  },
-  {
    "id": "mds/linear-algebra-matrices#def-scalar-mult",
    "site": "mds",
    "page": "linear-algebra-matrices",
    "div": "def-scalar-mult",
    "kind": "def",
    "title": "Scalar multiplication",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-matrices#def-shape-rule",
-   "site": "mds",
-   "page": "linear-algebra-matrices",
-   "div": "def-shape-rule",
-   "kind": "def",
-   "title": "Shape rule",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-matrices#def-square-matrix",
-   "site": "mds",
-   "page": "linear-algebra-matrices",
-   "div": "def-square-matrix",
-   "kind": "def",
-   "title": "Square matrix",
    "external": false
   },
   {
@@ -3582,84 +3744,12 @@
    "external": false
   },
   {
-   "id": "mds/linear-algebra-matrices#def-translation",
-   "site": "mds",
-   "page": "linear-algebra-matrices",
-   "div": "def-translation",
-   "kind": "def",
-   "title": "Translation",
-   "external": false
-  },
-  {
    "id": "mds/linear-algebra-matrices#def-zero-matrix",
    "site": "mds",
    "page": "linear-algebra-matrices",
    "div": "def-zero-matrix",
    "kind": "def",
    "title": "Zero matrix",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-matrices#thm-affine-linear-iff",
-   "site": "mds",
-   "page": "linear-algebra-matrices",
-   "div": "thm-affine-linear-iff",
-   "kind": "thm",
-   "title": "An affine map is linear exactly when its offset is zero",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-matrices#thm-affine-map-unique",
-   "site": "mds",
-   "page": "linear-algebra-matrices",
-   "div": "thm-affine-map-unique",
-   "kind": "thm",
-   "title": "An affine map determines its matrix and offset",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-matrices#thm-affine-map-zero",
-   "site": "mds",
-   "page": "linear-algebra-matrices",
-   "div": "thm-affine-map-zero",
-   "kind": "thm",
-   "title": "An affine map sends zero to its offset",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-matrices#thm-identity",
-   "site": "mds",
-   "page": "linear-algebra-matrices",
-   "div": "thm-identity",
-   "kind": "thm",
-   "title": "Identity matrix is a multiplicative identity",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-matrices#thm-linear-map-lincom",
-   "site": "mds",
-   "page": "linear-algebra-matrices",
-   "div": "thm-linear-map-lincom",
-   "kind": "thm",
-   "title": "A linear map preserves linear combinations",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-matrices#thm-linear-map-matrix",
-   "site": "mds",
-   "page": "linear-algebra-matrices",
-   "div": "thm-linear-map-matrix",
-   "kind": "thm",
-   "title": "Every linear map is multiplication by a matrix",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-matrices#thm-linear-map-zero",
-   "site": "mds",
-   "page": "linear-algebra-matrices",
-   "div": "thm-linear-map-zero",
-   "kind": "thm",
-   "title": "A linear map sends zero to zero",
    "external": false
   },
   {
@@ -3699,48 +3789,12 @@
    "external": false
   },
   {
-   "id": "mds/linear-algebra-matrices#thm-matmul-assoc",
-   "site": "mds",
-   "page": "linear-algebra-matrices",
-   "div": "thm-matmul-assoc",
-   "kind": "thm",
-   "title": "Matrix multiplication is associative",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-matrices#thm-matmul-distrib",
-   "site": "mds",
-   "page": "linear-algebra-matrices",
-   "div": "thm-matmul-distrib",
-   "kind": "thm",
-   "title": "Matrix multiplication is distributive over addition",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-matrices#thm-matmul-product-of-sums",
-   "site": "mds",
-   "page": "linear-algebra-matrices",
-   "div": "thm-matmul-product-of-sums",
-   "kind": "thm",
-   "title": "Product of two sums of matrices",
-   "external": false
-  },
-  {
    "id": "mds/linear-algebra-matrices#thm-matrix-column-of-rows",
    "site": "mds",
    "page": "linear-algebra-matrices",
    "div": "thm-matrix-column-of-rows",
    "kind": "thm",
    "title": "A matrix is a column of its rows",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-matrices#thm-matrix-map-linear",
-   "site": "mds",
-   "page": "linear-algebra-matrices",
-   "div": "thm-matrix-map-linear",
-   "kind": "thm",
-   "title": "Multiplying by a matrix is a linear map",
    "external": false
   },
   {
@@ -3753,27 +3807,144 @@
    "external": false
   },
   {
-   "id": "mds/linear-algebra-matrices#thm-scalar-transpose",
+   "id": "mds/linear-algebra-matrix-multiplication#def-diagonal-entry",
    "site": "mds",
-   "page": "linear-algebra-matrices",
+   "page": "linear-algebra-matrix-multiplication",
+   "div": "def-diagonal-entry",
+   "kind": "def",
+   "title": "Diagonal entry",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-matrix-multiplication#def-identity-matrix",
+   "site": "mds",
+   "page": "linear-algebra-matrix-multiplication",
+   "div": "def-identity-matrix",
+   "kind": "def",
+   "title": "Identity matrix",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-matrix-multiplication#def-linear-system",
+   "site": "mds",
+   "page": "linear-algebra-matrix-multiplication",
+   "div": "def-linear-system",
+   "kind": "def",
+   "title": "Linear system, system of linear equations",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-matrix-multiplication#def-main-diagonal",
+   "site": "mds",
+   "page": "linear-algebra-matrix-multiplication",
+   "div": "def-main-diagonal",
+   "kind": "def",
+   "title": "Main diagonal",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-matrix-multiplication#def-matrix-mult",
+   "site": "mds",
+   "page": "linear-algebra-matrix-multiplication",
+   "div": "def-matrix-mult",
+   "kind": "def",
+   "title": "Matrix multiplication",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-matrix-multiplication#def-matvec-mult",
+   "site": "mds",
+   "page": "linear-algebra-matrix-multiplication",
+   "div": "def-matvec-mult",
+   "kind": "def",
+   "title": "Matrix-vector multiplication",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-matrix-multiplication#def-off-diagonal-entry",
+   "site": "mds",
+   "page": "linear-algebra-matrix-multiplication",
+   "div": "def-off-diagonal-entry",
+   "kind": "def",
+   "title": "Off-diagonal entry",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-matrix-multiplication#def-shape-rule",
+   "site": "mds",
+   "page": "linear-algebra-matrix-multiplication",
+   "div": "def-shape-rule",
+   "kind": "def",
+   "title": "Shape rule",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-matrix-multiplication#def-square-matrix",
+   "site": "mds",
+   "page": "linear-algebra-matrix-multiplication",
+   "div": "def-square-matrix",
+   "kind": "def",
+   "title": "Square matrix",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-matrix-multiplication#thm-identity",
+   "site": "mds",
+   "page": "linear-algebra-matrix-multiplication",
+   "div": "thm-identity",
+   "kind": "thm",
+   "title": "Identity matrix is a multiplicative identity",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-matrix-multiplication#thm-matmul-assoc",
+   "site": "mds",
+   "page": "linear-algebra-matrix-multiplication",
+   "div": "thm-matmul-assoc",
+   "kind": "thm",
+   "title": "Matrix multiplication is associative",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-matrix-multiplication#thm-matmul-distrib",
+   "site": "mds",
+   "page": "linear-algebra-matrix-multiplication",
+   "div": "thm-matmul-distrib",
+   "kind": "thm",
+   "title": "Matrix multiplication is distributive over addition",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-matrix-multiplication#thm-matmul-product-of-sums",
+   "site": "mds",
+   "page": "linear-algebra-matrix-multiplication",
+   "div": "thm-matmul-product-of-sums",
+   "kind": "thm",
+   "title": "Product of two sums of matrices",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-matrix-multiplication#thm-scalar-transpose",
+   "site": "mds",
+   "page": "linear-algebra-matrix-multiplication",
    "div": "thm-scalar-transpose",
    "kind": "thm",
    "title": "A $1 \\times 1$ product equals its own transpose",
    "external": false
   },
   {
-   "id": "mds/linear-algebra-matrices#thm-transpose-product",
+   "id": "mds/linear-algebra-matrix-multiplication#thm-transpose-product",
    "site": "mds",
-   "page": "linear-algebra-matrices",
+   "page": "linear-algebra-matrix-multiplication",
    "div": "thm-transpose-product",
    "kind": "thm",
    "title": "Transpose of a product",
    "external": false
   },
   {
-   "id": "mds/linear-algebra-matrices#thm-transpose-sum",
+   "id": "mds/linear-algebra-matrix-multiplication#thm-transpose-sum",
    "site": "mds",
-   "page": "linear-algebra-matrices",
+   "page": "linear-algebra-matrix-multiplication",
    "div": "thm-transpose-sum",
    "kind": "thm",
    "title": "Transpose of a sum",
@@ -4158,78 +4329,6 @@
    "external": false
   },
   {
-   "id": "mds/linear-algebra-rank-nullity#def-affine-subspace",
-   "site": "mds",
-   "page": "linear-algebra-rank-nullity",
-   "div": "def-affine-subspace",
-   "kind": "def",
-   "title": "Affine subspace",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-rank-nullity#def-closed-half-space",
-   "site": "mds",
-   "page": "linear-algebra-rank-nullity",
-   "div": "def-closed-half-space",
-   "kind": "def",
-   "title": "Closed half-space",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-rank-nullity#def-column-space",
-   "site": "mds",
-   "page": "linear-algebra-rank-nullity",
-   "div": "def-column-space",
-   "kind": "def",
-   "title": "Column space, range, image",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-rank-nullity#def-cross-product-matrix",
-   "site": "mds",
-   "page": "linear-algebra-rank-nullity",
-   "div": "def-cross-product-matrix",
-   "kind": "def",
-   "title": "Cross-product matrix",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-rank-nullity#def-gram-matrix",
-   "site": "mds",
-   "page": "linear-algebra-rank-nullity",
-   "div": "def-gram-matrix",
-   "kind": "def",
-   "title": "Gram matrix",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-rank-nullity#def-half-space",
-   "site": "mds",
-   "page": "linear-algebra-rank-nullity",
-   "div": "def-half-space",
-   "kind": "def",
-   "title": "Open half-space",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-rank-nullity#def-left-null-space",
-   "site": "mds",
-   "page": "linear-algebra-rank-nullity",
-   "div": "def-left-null-space",
-   "kind": "def",
-   "title": "Left null space",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-rank-nullity#def-null-space",
-   "site": "mds",
-   "page": "linear-algebra-rank-nullity",
-   "div": "def-null-space",
-   "kind": "def",
-   "title": "Null space, kernel",
-   "external": false
-  },
-  {
    "id": "mds/linear-algebra-rank-nullity#def-nullity",
    "site": "mds",
    "page": "linear-algebra-rank-nullity",
@@ -4248,102 +4347,12 @@
    "external": false
   },
   {
-   "id": "mds/linear-algebra-rank-nullity#def-row-space",
-   "site": "mds",
-   "page": "linear-algebra-rank-nullity",
-   "div": "def-row-space",
-   "kind": "def",
-   "title": "Row space",
-   "external": false
-  },
-  {
    "id": "mds/linear-algebra-rank-nullity#thm-centered-data-rank",
    "site": "mds",
    "page": "linear-algebra-rank-nullity",
    "div": "thm-centered-data-rank",
    "kind": "thm",
    "title": "A centered data matrix has rank at most $n - 1$",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-rank-nullity#thm-column-space-span",
-   "site": "mds",
-   "page": "linear-algebra-rank-nullity",
-   "div": "thm-column-space-span",
-   "kind": "thm",
-   "title": "The column space is the span of the columns",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-rank-nullity#thm-cross-product-sum-outer",
-   "site": "mds",
-   "page": "linear-algebra-rank-nullity",
-   "div": "thm-cross-product-sum-outer",
-   "kind": "thm",
-   "title": "The cross-product matrix is the sum of the outer products of the rows",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-rank-nullity#thm-half-space-dimension",
-   "site": "mds",
-   "page": "linear-algebra-rank-nullity",
-   "div": "thm-half-space-dimension",
-   "kind": "thm",
-   "title": "Differences of points in a hyperplane and in a half-space",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-rank-nullity#thm-hyperplane-graph",
-   "site": "mds",
-   "page": "linear-algebra-rank-nullity",
-   "div": "thm-hyperplane-graph",
-   "kind": "thm",
-   "title": "The graph of an affine function is a hyperplane",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-rank-nullity#thm-hyperplane-origin",
-   "site": "mds",
-   "page": "linear-algebra-rank-nullity",
-   "div": "thm-hyperplane-origin",
-   "kind": "thm",
-   "title": "Where a hyperplane passes, and its shape in $\\reals^2$ and $\\reals^3$",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-rank-nullity#thm-hyperplane-subspace",
-   "site": "mds",
-   "page": "linear-algebra-rank-nullity",
-   "div": "thm-hyperplane-subspace",
-   "kind": "thm",
-   "title": "A hyperplane is a translated subspace of dimension $p - 1$",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-rank-nullity#thm-independent-null-space",
-   "site": "mds",
-   "page": "linear-algebra-rank-nullity",
-   "div": "thm-independent-null-space",
-   "kind": "thm",
-   "title": "Independent columns exactly when the null space is trivial",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-rank-nullity#thm-null-gram",
-   "site": "mds",
-   "page": "linear-algebra-rank-nullity",
-   "div": "thm-null-gram",
-   "kind": "thm",
-   "title": "$\\tp{\\matr{A}} \\matr{A}$ has the same null space as $\\matr{A}$",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-rank-nullity#thm-null-space-subspace",
-   "site": "mds",
-   "page": "linear-algebra-rank-nullity",
-   "div": "thm-null-space-subspace",
-   "kind": "thm",
-   "title": "A null space is a subspace",
    "external": false
   },
   {
@@ -4398,15 +4407,6 @@
    "div": "thm-rank-transpose",
    "kind": "thm",
    "title": "Fundamental theorem of ranks",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-rank-nullity#thm-row-null-disjoint",
-   "site": "mds",
-   "page": "linear-algebra-rank-nullity",
-   "div": "thm-row-null-disjoint",
-   "kind": "thm",
-   "title": "The row space and null space share only the zero vector",
    "external": false
   },
   {
@@ -8101,6 +8101,86 @@
    "mds/linear-algebra-matrices#def-matrix"
   ],
   [
+   "mds/linear-algebra-affine-subspaces#def-affine-subspace",
+   "mcs/functions#def-image"
+  ],
+  [
+   "mds/linear-algebra-affine-subspaces#def-closed-half-space",
+   "mds/linear-algebra-affine-subspaces#def-half-space"
+  ],
+  [
+   "mds/linear-algebra-affine-subspaces#thm-half-space-dimension",
+   "mds/linear-algebra-affine-subspaces#def-half-space"
+  ],
+  [
+   "mds/linear-algebra-affine-subspaces#thm-half-space-dimension",
+   "mds/linear-algebra-affine-subspaces#thm-hyperplane-subspace"
+  ],
+  [
+   "mds/linear-algebra-affine-subspaces#thm-hyperplane-graph",
+   "mcs/functions#def-function"
+  ],
+  [
+   "mds/linear-algebra-affine-subspaces#thm-hyperplane-graph",
+   "mcs/functions#def-graph"
+  ],
+  [
+   "mds/linear-algebra-affine-subspaces#thm-hyperplane-graph",
+   "mcs/sets#def-set"
+  ],
+  [
+   "mds/linear-algebra-affine-subspaces#thm-hyperplane-graph",
+   "mds/linear-algebra-linear-maps#def-hyperplane"
+  ],
+  [
+   "mds/linear-algebra-affine-subspaces#thm-hyperplane-graph",
+   "mds/linear-algebra-linear-maps#def-normal-vector"
+  ],
+  [
+   "mds/linear-algebra-affine-subspaces#thm-hyperplane-subspace",
+   "mds/linear-algebra-affine-subspaces#def-affine-subspace"
+  ],
+  [
+   "mds/linear-algebra-column-null-space#def-gram-matrix",
+   "mds/linear-algebra-column-null-space#def-cross-product-matrix"
+  ],
+  [
+   "mds/linear-algebra-column-null-space#thm-column-space-span",
+   "mds/linear-algebra-column-null-space#def-column-space"
+  ],
+  [
+   "mds/linear-algebra-column-null-space#thm-cross-product-sum-outer",
+   "mds/linear-algebra-column-null-space#def-cross-product-matrix"
+  ],
+  [
+   "mds/linear-algebra-column-null-space#thm-cross-product-sum-outer",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
+   "mds/linear-algebra-column-null-space#thm-independent-null-space",
+   "mds/linear-algebra-column-null-space#def-null-space"
+  ],
+  [
+   "mds/linear-algebra-column-null-space#thm-null-space-subspace",
+   "mds/linear-algebra-column-null-space#def-null-space"
+  ],
+  [
+   "mds/linear-algebra-column-null-space#thm-row-null-disjoint",
+   "mds/linear-algebra-column-null-space#def-column-space"
+  ],
+  [
+   "mds/linear-algebra-column-null-space#thm-row-null-disjoint",
+   "mds/linear-algebra-column-null-space#def-null-space"
+  ],
+  [
+   "mds/linear-algebra-column-null-space#thm-row-null-disjoint",
+   "mds/linear-algebra-column-null-space#thm-column-space-span"
+  ],
+  [
+   "mds/linear-algebra-column-null-space#thm-row-null-disjoint",
+   "mds/linear-algebra-column-null-space#thm-null-space-subspace"
+  ],
+  [
    "mds/linear-algebra-complex#def-hermitian-matrix",
    "mds/linear-algebra-complex#def-conjugate-transpose"
   ],
@@ -8681,96 +8761,164 @@
    "mds/linear-algebra-inner-products#def-norm"
   ],
   [
-   "mds/linear-algebra-matrices#cor-linear-is-affine",
-   "mds/linear-algebra-matrices#def-affine-map"
+   "mds/linear-algebra-linear-maps#cor-linear-is-affine",
+   "mds/linear-algebra-linear-maps#def-affine-map"
   ],
   [
-   "mds/linear-algebra-matrices#cor-linear-is-affine",
-   "mds/linear-algebra-matrices#def-linear-map"
+   "mds/linear-algebra-linear-maps#cor-linear-is-affine",
+   "mds/linear-algebra-linear-maps#def-linear-map"
   ],
   [
-   "mds/linear-algebra-matrices#cor-linear-is-affine",
-   "mds/linear-algebra-matrices#thm-linear-map-matrix"
+   "mds/linear-algebra-linear-maps#cor-linear-is-affine",
+   "mds/linear-algebra-linear-maps#thm-linear-map-matrix"
   ],
   [
-   "mds/linear-algebra-matrices#cor-linear-scalar",
-   "mds/linear-algebra-matrices#def-linear-map"
+   "mds/linear-algebra-linear-maps#cor-linear-scalar",
+   "mds/linear-algebra-linear-maps#def-linear-map"
   ],
   [
-   "mds/linear-algebra-matrices#cor-linear-scalar",
-   "mds/linear-algebra-matrices#thm-linear-map-matrix"
+   "mds/linear-algebra-linear-maps#cor-linear-scalar",
+   "mds/linear-algebra-linear-maps#thm-linear-map-matrix"
   ],
   [
-   "mds/linear-algebra-matrices#cor-linear-scalar",
-   "mds/linear-algebra-matrices#thm-matrix-map-linear"
+   "mds/linear-algebra-linear-maps#cor-linear-scalar",
+   "mds/linear-algebra-linear-maps#thm-matrix-map-linear"
   ],
   [
-   "mds/linear-algebra-matrices#def-additive-function",
+   "mds/linear-algebra-linear-maps#def-additive-function",
    "mcs/functions#def-function"
   ],
   [
-   "mds/linear-algebra-matrices#def-additive-function",
+   "mds/linear-algebra-linear-maps#def-additive-function",
    "mcs/proof-writing#def-universal-quantifier"
   ],
   [
-   "mds/linear-algebra-matrices#def-additive-function",
+   "mds/linear-algebra-linear-maps#def-additive-function",
    "mds/linear-algebra-vectors#def-vector-addition"
   ],
   [
-   "mds/linear-algebra-matrices#def-affine-map",
+   "mds/linear-algebra-linear-maps#def-affine-map",
    "mcs/functions#def-composition"
   ],
   [
-   "mds/linear-algebra-matrices#def-affine-map",
+   "mds/linear-algebra-linear-maps#def-affine-map",
    "mcs/functions#def-function"
   ],
   [
-   "mds/linear-algebra-matrices#def-affine-map",
+   "mds/linear-algebra-linear-maps#def-affine-map",
    "mcs/functions#def-inner-function"
   ],
   [
-   "mds/linear-algebra-matrices#def-affine-map",
-   "mds/linear-algebra-matrices#def-translation"
+   "mds/linear-algebra-linear-maps#def-affine-map",
+   "mds/linear-algebra-linear-maps#def-translation"
   ],
   [
-   "mds/linear-algebra-matrices#def-affine-offset",
-   "mds/linear-algebra-matrices#def-affine-map"
+   "mds/linear-algebra-linear-maps#def-affine-offset",
+   "mds/linear-algebra-linear-maps#def-affine-map"
   ],
   [
-   "mds/linear-algebra-matrices#def-diagonal-entry",
-   "mds/linear-algebra-matrices#def-main-diagonal"
-  ],
-  [
-   "mds/linear-algebra-matrices#def-homogeneous-function",
+   "mds/linear-algebra-linear-maps#def-homogeneous-function",
    "mcs/functions#def-function"
   ],
   [
-   "mds/linear-algebra-matrices#def-homogeneous-function",
+   "mds/linear-algebra-linear-maps#def-homogeneous-function",
    "mcs/proof-writing#def-universal-quantifier"
   ],
   [
-   "mds/linear-algebra-matrices#def-homogeneous-function",
+   "mds/linear-algebra-linear-maps#def-homogeneous-function",
    "mds/linear-algebra-matrices#def-scalar-mult"
   ],
   [
-   "mds/linear-algebra-matrices#def-identity-matrix",
-   "mds/linear-algebra-matrices#def-main-diagonal"
-  ],
-  [
-   "mds/linear-algebra-matrices#def-linear-map",
+   "mds/linear-algebra-linear-maps#def-linear-map",
    "mcs/functions#def-function"
   ],
   [
-   "mds/linear-algebra-matrices#def-linear-map",
-   "mds/linear-algebra-matrices#def-additive-function"
+   "mds/linear-algebra-linear-maps#def-linear-map",
+   "mds/linear-algebra-linear-maps#def-additive-function"
   ],
   [
-   "mds/linear-algebra-matrices#def-linear-map",
-   "mds/linear-algebra-matrices#def-homogeneous-function"
+   "mds/linear-algebra-linear-maps#def-linear-map",
+   "mds/linear-algebra-linear-maps#def-homogeneous-function"
   ],
   [
-   "mds/linear-algebra-matrices#def-linear-operator",
-   "mds/linear-algebra-matrices#def-linear-map"
+   "mds/linear-algebra-linear-maps#def-linear-operator",
+   "mds/linear-algebra-linear-maps#def-linear-map"
+  ],
+  [
+   "mds/linear-algebra-linear-maps#def-matrix-of-linear-map",
+   "mds/linear-algebra-linear-maps#thm-linear-map-matrix"
+  ],
+  [
+   "mds/linear-algebra-linear-maps#def-normal-vector",
+   "mds/linear-algebra-linear-maps#def-hyperplane"
+  ],
+  [
+   "mds/linear-algebra-linear-maps#thm-affine-linear-iff",
+   "mds/linear-algebra-linear-maps#def-affine-map"
+  ],
+  [
+   "mds/linear-algebra-linear-maps#thm-affine-linear-iff",
+   "mds/linear-algebra-linear-maps#def-linear-map"
+  ],
+  [
+   "mds/linear-algebra-linear-maps#thm-affine-linear-iff",
+   "mds/linear-algebra-linear-maps#thm-affine-map-zero"
+  ],
+  [
+   "mds/linear-algebra-linear-maps#thm-affine-linear-iff",
+   "mds/linear-algebra-linear-maps#thm-linear-map-zero"
+  ],
+  [
+   "mds/linear-algebra-linear-maps#thm-affine-linear-iff",
+   "mds/linear-algebra-linear-maps#thm-matrix-map-linear"
+  ],
+  [
+   "mds/linear-algebra-linear-maps#thm-affine-map-unique",
+   "mds/linear-algebra-linear-maps#def-affine-map"
+  ],
+  [
+   "mds/linear-algebra-linear-maps#thm-affine-map-unique",
+   "mds/linear-algebra-linear-maps#def-matrix-of-linear-map"
+  ],
+  [
+   "mds/linear-algebra-linear-maps#thm-affine-map-unique",
+   "mds/linear-algebra-linear-maps#thm-affine-map-zero"
+  ],
+  [
+   "mds/linear-algebra-linear-maps#thm-affine-map-unique",
+   "mds/linear-algebra-linear-maps#thm-linear-map-matrix"
+  ],
+  [
+   "mds/linear-algebra-linear-maps#thm-affine-map-unique",
+   "mds/linear-algebra-linear-maps#thm-matrix-map-linear"
+  ],
+  [
+   "mds/linear-algebra-linear-maps#thm-affine-map-zero",
+   "mds/linear-algebra-linear-maps#def-affine-map"
+  ],
+  [
+   "mds/linear-algebra-linear-maps#thm-linear-map-lincom",
+   "mcs/proof-writing#def-proof-by-induction"
+  ],
+  [
+   "mds/linear-algebra-linear-maps#thm-linear-map-lincom",
+   "mds/linear-algebra-linear-maps#def-linear-map"
+  ],
+  [
+   "mds/linear-algebra-linear-maps#thm-linear-map-matrix",
+   "mds/linear-algebra-linear-maps#def-linear-map"
+  ],
+  [
+   "mds/linear-algebra-linear-maps#thm-linear-map-matrix",
+   "mds/linear-algebra-linear-maps#thm-linear-map-lincom"
+  ],
+  [
+   "mds/linear-algebra-linear-maps#thm-linear-map-zero",
+   "mds/linear-algebra-linear-maps#def-linear-map"
+  ],
+  [
+   "mds/linear-algebra-linear-maps#thm-matrix-map-linear",
+   "mds/linear-algebra-linear-maps#def-linear-map"
   ],
   [
    "mds/linear-algebra-matrices#def-matrix-column",
@@ -8781,112 +8929,8 @@
    "mds/linear-algebra-matrices#def-matrix"
   ],
   [
-   "mds/linear-algebra-matrices#def-matrix-of-linear-map",
-   "mds/linear-algebra-matrices#thm-linear-map-matrix"
-  ],
-  [
    "mds/linear-algebra-matrices#def-matrix-row",
    "mds/linear-algebra-matrices#def-matrix"
-  ],
-  [
-   "mds/linear-algebra-matrices#def-normal-vector",
-   "mds/linear-algebra-matrices#def-hyperplane"
-  ],
-  [
-   "mds/linear-algebra-matrices#def-off-diagonal-entry",
-   "mds/linear-algebra-matrices#def-main-diagonal"
-  ],
-  [
-   "mds/linear-algebra-matrices#def-shape-rule",
-   "mds/linear-algebra-matrices#def-matrix"
-  ],
-  [
-   "mds/linear-algebra-matrices#def-shape-rule",
-   "mds/linear-algebra-matrices#def-matrix-mult"
-  ],
-  [
-   "mds/linear-algebra-matrices#thm-affine-linear-iff",
-   "mds/linear-algebra-matrices#def-affine-map"
-  ],
-  [
-   "mds/linear-algebra-matrices#thm-affine-linear-iff",
-   "mds/linear-algebra-matrices#def-linear-map"
-  ],
-  [
-   "mds/linear-algebra-matrices#thm-affine-linear-iff",
-   "mds/linear-algebra-matrices#thm-affine-map-zero"
-  ],
-  [
-   "mds/linear-algebra-matrices#thm-affine-linear-iff",
-   "mds/linear-algebra-matrices#thm-linear-map-zero"
-  ],
-  [
-   "mds/linear-algebra-matrices#thm-affine-linear-iff",
-   "mds/linear-algebra-matrices#thm-matrix-map-linear"
-  ],
-  [
-   "mds/linear-algebra-matrices#thm-affine-map-unique",
-   "mds/linear-algebra-matrices#def-affine-map"
-  ],
-  [
-   "mds/linear-algebra-matrices#thm-affine-map-unique",
-   "mds/linear-algebra-matrices#def-matrix-of-linear-map"
-  ],
-  [
-   "mds/linear-algebra-matrices#thm-affine-map-unique",
-   "mds/linear-algebra-matrices#thm-affine-map-zero"
-  ],
-  [
-   "mds/linear-algebra-matrices#thm-affine-map-unique",
-   "mds/linear-algebra-matrices#thm-linear-map-matrix"
-  ],
-  [
-   "mds/linear-algebra-matrices#thm-affine-map-unique",
-   "mds/linear-algebra-matrices#thm-matrix-map-linear"
-  ],
-  [
-   "mds/linear-algebra-matrices#thm-affine-map-zero",
-   "mds/linear-algebra-matrices#def-affine-map"
-  ],
-  [
-   "mds/linear-algebra-matrices#thm-affine-map-zero",
-   "mds/linear-algebra-matrices#def-matvec-mult"
-  ],
-  [
-   "mds/linear-algebra-matrices#thm-linear-map-lincom",
-   "mcs/proof-writing#def-proof-by-induction"
-  ],
-  [
-   "mds/linear-algebra-matrices#thm-linear-map-lincom",
-   "mds/linear-algebra-matrices#def-linear-map"
-  ],
-  [
-   "mds/linear-algebra-matrices#thm-linear-map-matrix",
-   "mds/linear-algebra-matrices#def-linear-map"
-  ],
-  [
-   "mds/linear-algebra-matrices#thm-linear-map-matrix",
-   "mds/linear-algebra-matrices#def-matvec-mult"
-  ],
-  [
-   "mds/linear-algebra-matrices#thm-linear-map-matrix",
-   "mds/linear-algebra-matrices#thm-linear-map-lincom"
-  ],
-  [
-   "mds/linear-algebra-matrices#thm-linear-map-zero",
-   "mds/linear-algebra-matrices#def-linear-map"
-  ],
-  [
-   "mds/linear-algebra-matrices#thm-linear-map-zero",
-   "mds/linear-algebra-matrices#def-scalar-mult"
-  ],
-  [
-   "mds/linear-algebra-matrices#thm-matmul-assoc",
-   "mds/linear-algebra-matrices#def-matrix-mult"
-  ],
-  [
-   "mds/linear-algebra-matrices#thm-matmul-product-of-sums",
-   "mds/linear-algebra-matrices#thm-matmul-distrib"
   ],
   [
    "mds/linear-algebra-matrices#thm-matrix-column-of-rows",
@@ -8897,18 +8941,6 @@
    "mds/linear-algebra-matrices#def-matrix-row"
   ],
   [
-   "mds/linear-algebra-matrices#thm-matrix-map-linear",
-   "mds/linear-algebra-matrices#def-linear-map"
-  ],
-  [
-   "mds/linear-algebra-matrices#thm-matrix-map-linear",
-   "mds/linear-algebra-matrices#def-matvec-mult"
-  ],
-  [
-   "mds/linear-algebra-matrices#thm-matrix-map-linear",
-   "mds/linear-algebra-matrices#def-scalar-mult"
-  ],
-  [
    "mds/linear-algebra-matrices#thm-matrix-row-of-columns",
    "mds/linear-algebra-matrices#def-matrix"
   ],
@@ -8917,8 +8949,36 @@
    "mds/linear-algebra-matrices#def-matrix-column"
   ],
   [
-   "mds/linear-algebra-matrices#thm-scalar-transpose",
-   "mds/linear-algebra-matrices#thm-transpose-product"
+   "mds/linear-algebra-matrix-multiplication#def-diagonal-entry",
+   "mds/linear-algebra-matrix-multiplication#def-main-diagonal"
+  ],
+  [
+   "mds/linear-algebra-matrix-multiplication#def-identity-matrix",
+   "mds/linear-algebra-matrix-multiplication#def-main-diagonal"
+  ],
+  [
+   "mds/linear-algebra-matrix-multiplication#def-off-diagonal-entry",
+   "mds/linear-algebra-matrix-multiplication#def-main-diagonal"
+  ],
+  [
+   "mds/linear-algebra-matrix-multiplication#def-shape-rule",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
+   "mds/linear-algebra-matrix-multiplication#def-shape-rule",
+   "mds/linear-algebra-matrix-multiplication#def-matrix-mult"
+  ],
+  [
+   "mds/linear-algebra-matrix-multiplication#thm-matmul-assoc",
+   "mds/linear-algebra-matrix-multiplication#def-matrix-mult"
+  ],
+  [
+   "mds/linear-algebra-matrix-multiplication#thm-matmul-product-of-sums",
+   "mds/linear-algebra-matrix-multiplication#thm-matmul-distrib"
+  ],
+  [
+   "mds/linear-algebra-matrix-multiplication#thm-scalar-transpose",
+   "mds/linear-algebra-matrix-multiplication#thm-transpose-product"
   ],
   [
    "mds/linear-algebra-projections#cor-moore-penrose-gram",
@@ -9046,7 +9106,7 @@
   ],
   [
    "mds/linear-algebra-projections#thm-moore-penrose-eigendecomposition",
-   "mds/linear-algebra-matrices#def-diagonal-entry"
+   "mds/linear-algebra-matrix-multiplication#def-diagonal-entry"
   ],
   [
    "mds/linear-algebra-projections#thm-moore-penrose-eigendecomposition",
@@ -9270,23 +9330,7 @@
   ],
   [
    "mds/linear-algebra-rank-nullity#cor-rank-product-full-rank",
-   "mds/linear-algebra-rank-nullity#def-column-space"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#cor-rank-product-full-rank",
-   "mds/linear-algebra-rank-nullity#def-null-space"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#cor-rank-product-full-rank",
    "mds/linear-algebra-rank-nullity#def-nullity"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#cor-rank-product-full-rank",
-   "mds/linear-algebra-rank-nullity#thm-column-space-span"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#cor-rank-product-full-rank",
-   "mds/linear-algebra-rank-nullity#thm-independent-null-space"
   ],
   [
    "mds/linear-algebra-rank-nullity#cor-rank-product-full-rank",
@@ -9321,104 +9365,12 @@
    "mds/linear-algebra-rank-nullity#thm-rank-transpose"
   ],
   [
-   "mds/linear-algebra-rank-nullity#def-affine-subspace",
-   "mcs/functions#def-image"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#def-closed-half-space",
-   "mds/linear-algebra-rank-nullity#def-half-space"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#def-gram-matrix",
-   "mds/linear-algebra-rank-nullity#def-cross-product-matrix"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#def-nullity",
-   "mds/linear-algebra-rank-nullity#def-null-space"
-  ],
-  [
    "mds/linear-algebra-rank-nullity#thm-centered-data-rank",
    "mds/linear-algebra-rank-nullity#thm-rank-nullity"
   ],
   [
    "mds/linear-algebra-rank-nullity#thm-centered-data-rank",
    "mds/linear-algebra-rank-nullity#thm-rank-transpose"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-column-space-span",
-   "mds/linear-algebra-rank-nullity#def-column-space"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-cross-product-sum-outer",
-   "mds/linear-algebra-matrices#def-matrix"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-cross-product-sum-outer",
-   "mds/linear-algebra-rank-nullity#def-cross-product-matrix"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-half-space-dimension",
-   "mds/linear-algebra-rank-nullity#def-half-space"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-half-space-dimension",
-   "mds/linear-algebra-rank-nullity#thm-hyperplane-subspace"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-hyperplane-graph",
-   "mcs/functions#def-function"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-hyperplane-graph",
-   "mcs/functions#def-graph"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-hyperplane-graph",
-   "mcs/sets#def-set"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-hyperplane-graph",
-   "mds/linear-algebra-matrices#def-hyperplane"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-hyperplane-graph",
-   "mds/linear-algebra-matrices#def-normal-vector"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-hyperplane-subspace",
-   "mds/linear-algebra-rank-nullity#cor-rank-bound"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-hyperplane-subspace",
-   "mds/linear-algebra-rank-nullity#def-affine-subspace"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-hyperplane-subspace",
-   "mds/linear-algebra-rank-nullity#def-null-space"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-hyperplane-subspace",
-   "mds/linear-algebra-rank-nullity#def-nullity"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-hyperplane-subspace",
-   "mds/linear-algebra-rank-nullity#thm-null-space-subspace"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-hyperplane-subspace",
-   "mds/linear-algebra-rank-nullity#thm-rank-nullity"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-independent-null-space",
-   "mds/linear-algebra-rank-nullity#def-null-space"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-null-space-subspace",
-   "mds/linear-algebra-rank-nullity#def-null-space"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-rank-dim",
-   "mds/linear-algebra-rank-nullity#thm-column-space-span"
   ],
   [
    "mds/linear-algebra-rank-nullity#thm-rank-factorization",
@@ -9430,19 +9382,7 @@
   ],
   [
    "mds/linear-algebra-rank-nullity#thm-rank-nullity",
-   "mds/linear-algebra-rank-nullity#def-column-space"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-rank-nullity",
    "mds/linear-algebra-rank-nullity#thm-rank-dim"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-rank-product",
-   "mds/linear-algebra-rank-nullity#def-column-space"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-rank-product",
-   "mds/linear-algebra-rank-nullity#thm-column-space-span"
   ],
   [
    "mds/linear-algebra-rank-nullity#thm-rank-product",
@@ -9462,31 +9402,11 @@
   ],
   [
    "mds/linear-algebra-rank-nullity#thm-rank-transpose",
-   "mds/linear-algebra-rank-nullity#thm-null-gram"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-rank-transpose",
    "mds/linear-algebra-rank-nullity#thm-rank-nullity"
   ],
   [
    "mds/linear-algebra-rank-nullity#thm-rank-transpose",
    "mds/linear-algebra-rank-nullity#thm-rank-product"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-row-null-disjoint",
-   "mds/linear-algebra-rank-nullity#def-column-space"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-row-null-disjoint",
-   "mds/linear-algebra-rank-nullity#def-null-space"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-row-null-disjoint",
-   "mds/linear-algebra-rank-nullity#thm-column-space-span"
-  ],
-  [
-   "mds/linear-algebra-rank-nullity#thm-row-null-disjoint",
-   "mds/linear-algebra-rank-nullity#thm-null-space-subspace"
   ],
   [
    "mds/linear-algebra-special-matrices#cor-det-pd",
@@ -9578,11 +9498,11 @@
   ],
   [
    "mds/linear-algebra-special-matrices#def-ill-conditioned",
-   "mds/linear-algebra-matrices#def-linear-system"
+   "mds/linear-algebra-matrices#def-matrix"
   ],
   [
    "mds/linear-algebra-special-matrices#def-ill-conditioned",
-   "mds/linear-algebra-matrices#def-matrix"
+   "mds/linear-algebra-matrix-multiplication#def-linear-system"
   ],
   [
    "mds/linear-algebra-special-matrices#def-ill-conditioned",
@@ -9902,7 +9822,7 @@
   ],
   [
    "mds/linear-algebra-special-matrices#thm-symmetric-bilinear-form-swap",
-   "mds/linear-algebra-matrices#thm-scalar-transpose"
+   "mds/linear-algebra-matrix-multiplication#thm-scalar-transpose"
   ],
   [
    "mds/linear-algebra-special-matrices#thm-symmetric-bilinear-form-swap",
@@ -11642,19 +11562,19 @@
   ],
   [
    "mds/vector-calculus#thm-level-sets-linear",
-   "mds/linear-algebra-matrices#def-affine-offset"
+   "mds/linear-algebra-affine-subspaces#thm-hyperplane-subspace"
   ],
   [
    "mds/vector-calculus#thm-level-sets-linear",
-   "mds/linear-algebra-matrices#def-hyperplane"
+   "mds/linear-algebra-linear-maps#def-affine-offset"
   ],
   [
    "mds/vector-calculus#thm-level-sets-linear",
-   "mds/linear-algebra-matrices#def-normal-vector"
+   "mds/linear-algebra-linear-maps#def-hyperplane"
   ],
   [
    "mds/vector-calculus#thm-level-sets-linear",
-   "mds/linear-algebra-rank-nullity#thm-hyperplane-subspace"
+   "mds/linear-algebra-linear-maps#def-normal-vector"
   ],
   [
    "mds/vector-calculus#thm-level-sets-linear",

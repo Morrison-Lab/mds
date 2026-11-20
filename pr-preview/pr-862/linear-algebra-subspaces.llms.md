@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-20 00:10:33 (PST)
+Last modified: 2026-11-20 09:01:42 (PST)
 
 # 1 Rank
 
@@ -308,7 +308,7 @@ Last modified: 2026-11-20 00:10:33 (PST)
 > $$\begin{aligned}
 > (\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})_i
 > &= a_{i1} x_1 + \cdots + a_{in} x_n
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~17 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrix-multiplication.qmd#def-matvec-mult}{\text{Definition~8 in Matrix Multiplication}}\text{)}
 > \\
 > &= x_1 a_{i1} + \cdots + x_n a_{in}
 > && \text{(multiplication of numbers is commutative)}
@@ -330,11 +330,11 @@ Last modified: 2026-11-20 00:10:33 (PST)
 > && \text{(arithmetic)}
 > \end{aligned}$$
 >
-> the same answer as computing each entry as a row-times-vector dot product ([Remark 4 in Matrices](linear-algebra-matrices.llms.md#rem-matvec-row-dot-products)).
+> the same answer as computing each entry as a row-times-vector dot product ([Remark 3 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#rem-matvec-row-dot-products)).
 
 > **NOTE:**
 >
-> **Exercise 8 (Computing a matrix-vector product as a combination of columns)** A linear model’s predictions for every observation at once are a [matrix-vector product](linear-algebra-matrices.llms.md#def-matvec-mult) $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, and [Theorem 3](#thm-matvec-columns) writes it as a combination of the [columns of](linear-algebra-matrices.llms.md#def-matrix-column) $\mathbf{A}$. Let
+> **Exercise 8 (Computing a matrix-vector product as a combination of columns)** A linear model’s predictions for every observation at once are a [matrix-vector product](linear-algebra-matrix-multiplication.llms.md#def-matvec-mult) $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, and [Theorem 3](#thm-matvec-columns) writes it as a combination of the [columns of](linear-algebra-matrices.llms.md#def-matrix-column) $\mathbf{A}$. Let
 >
 > $$\mathbf{A} = \begin{bmatrix}2 & 1 \\ 0 & 3 \\ 1 & -1\end{bmatrix},
 > \qquad
@@ -364,7 +364,7 @@ Last modified: 2026-11-20 00:10:33 (PST)
 
 > **NOTE:**
 >
-> *Proof*. The function $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\mapsto \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is a linear map by [Theorem 12 in Matrices](linear-algebra-matrices.llms.md#thm-matrix-map-linear), and a linear map preserves linear combinations by [Theorem 13 in Matrices](linear-algebra-matrices.llms.md#thm-linear-map-lincom). Applying that theorem with $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_i = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}_i$ gives the identity.
+> *Proof*. The function $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\mapsto \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is a linear map by [Theorem 2 in Linear and Affine Maps](linear-algebra-linear-maps.llms.md#thm-matrix-map-linear), and a linear map preserves linear combinations by [Theorem 3 in Linear and Affine Maps](linear-algebra-linear-maps.llms.md#thm-linear-map-lincom). Applying that theorem with $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_i = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}_i$ gives the identity.
 
 > **NOTE:**
 >
@@ -373,7 +373,7 @@ Last modified: 2026-11-20 00:10:33 (PST)
 > $$\begin{aligned}
 > \mathbf{A}\,(2, -1)
 > &= (1 \cdot 2 + 2 \cdot(-1),\; 3 \cdot 2 + 4 \cdot(-1))
-> && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~17 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrix-multiplication.qmd#def-matvec-mult}{\text{Definition~8 in Matrix Multiplication}}\text{)}
 > \\
 > &= (0, 2)
 > && \text{(arithmetic)}
@@ -386,7 +386,7 @@ Last modified: 2026-11-20 00:10:33 (PST)
 
 > **NOTE:**
 >
-> **Exercise 9 (Applying a matrix to a combination without knowing the matrix)** [Theorem 4](#thm-matvec-linear) lets a [matrix-vector product](linear-algebra-matrices.llms.md#def-matvec-mult) of a combination be found from the matrix-vector product of each part, even when the [matrix](linear-algebra-matrices.llms.md#def-matrix) itself is not known. Suppose that a matrix $\mathbf{A}$ satisfies
+> **Exercise 9 (Applying a matrix to a combination without knowing the matrix)** [Theorem 4](#thm-matvec-linear) lets a [matrix-vector product](linear-algebra-matrix-multiplication.llms.md#def-matvec-mult) of a combination be found from the matrix-vector product of each part, even when the [matrix](linear-algebra-matrices.llms.md#def-matrix) itself is not known. Suppose that a matrix $\mathbf{A}$ satisfies
 >
 > $$\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}_1 = \begin{bmatrix}1 \\ 2\end{bmatrix},
 > \qquad
@@ -638,7 +638,7 @@ Last modified: 2026-11-20 00:10:33 (PST)
 >
 > *Proof*. Let $\mathbf{A}$ be the $p \times k$ matrix with columns $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_k$, and $\mathbf{B}$ the $p \times l$ matrix with columns $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}_l$.
 >
-> **Write** $\mathbf{A}$ in terms of $\mathbf{B}$. Each $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j$ is in $\mathcal{S}$, and the $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$’s span $\mathcal{S}$ ([Definition 5](#def-span)), so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j = \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_j$ for some $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_j \in \mathbb{R}^l$ ([Definition 17 in Matrices](linear-algebra-matrices.llms.md#def-matvec-mult)). Let $\mathbf{C}$ be the $l \times k$ matrix with columns $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_k$. Then $\underbrace{\mathbf{A}}_{p \times k}
+> **Write** $\mathbf{A}$ in terms of $\mathbf{B}$. Each $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j$ is in $\mathcal{S}$, and the $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$’s span $\mathcal{S}$ ([Definition 5](#def-span)), so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j = \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_j$ for some $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_j \in \mathbb{R}^l$ ([Definition 8 in Matrix Multiplication](linear-algebra-matrix-multiplication.llms.md#def-matvec-mult)). Let $\mathbf{C}$ be the $l \times k$ matrix with columns $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_k$. Then $\underbrace{\mathbf{A}}_{p \times k}
 > = \underbrace{\mathbf{B}}_{p \times l}\,\underbrace{\mathbf{C}}_{l \times k}$, because column $j$ of $\mathbf{B} \mathbf{C}$ is $\mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_j$.
 >
 > **The columns of** $\mathbf{C}$ are linearly independent. Suppose $\mathbf{C} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ for some $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \in \mathbb{R}^k$. Then
@@ -649,7 +649,7 @@ Last modified: 2026-11-20 00:10:33 (PST)
 > && \text{(substitute } \mathbf{A} = \mathbf{B} \mathbf{C} \text{)}
 > \\
 > &= \mathbf{B}\,(\mathbf{C} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})
-> && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~7 in Matrices}}\text{)}
+> && \text{(}\href{linear-algebra-matrix-multiplication.qmd#thm-matmul-assoc}{\text{Theorem~1 in Matrix Multiplication}}\text{)}
 > \\
 > &= \mathbf{B}\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}
 > && \text{(substitute } \mathbf{C} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\text{)}

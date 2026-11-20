@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-20 00:10:33 (PST)
+Last modified: 2026-11-20 09:01:42 (PST)
 
 > **NOTE:**
 >
@@ -490,7 +490,7 @@ Last modified: 2026-11-20 00:10:33 (PST)
 >
 > *Remark 2* (Gradient descent is Euler’s method for the gradient flow). [Gradient descent](#def-gradient-descent) with a fixed [step length](#def-gradient-descent) $s$ updates ${{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{(t+1)}} = {{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{(t)}} - s\,\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f({{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{(t)}})$. This is Euler’s method with time step $s$ for the [gradient flow](#def-gradient-flow) equation.
 >
-> For a [linear function](algebra-exponentials.llms.md#def-linear-function) $f$, the velocity of the flow is the negative [normal vector](linear-algebra-matrices.llms.md#def-normal-vector).
+> For a [linear function](algebra-exponentials.llms.md#def-linear-function) $f$, the flow moves along the negative [normal vector](linear-algebra-linear-maps.llms.md#def-normal-vector).
 >
 > By the [level sets of a linear function](vector-calculus.llms.md#thm-level-sets-linear), that vector is [orthogonal](linear-algebra-vectors.llms.md#def-orthogonal-vectors) to every [level set](vector-calculus.llms.md#def-level-set), so the flow is too.
 
@@ -945,7 +945,7 @@ Last modified: 2026-11-20 00:10:33 (PST)
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > grid_bf = np.linspace(-1.6, 1.6, 321)
 > ax.plot(grid_bf, basin_cost_bf(grid_bf), color="grey")
-> #> [<matplotlib.lines.Line2D object at 0x7da5b95f2710>]
+> #> [<matplotlib.lines.Line2D object at 0x7fee2cf62850>]
 > for start in sorted(basin_starts_bs[:6], reverse=True):
 >     x = [start]
 >     for _ in range(30):
@@ -957,18 +957,18 @@ Last modified: 2026-11-20 00:10:33 (PST)
 >             marker="o" if above else "^",
 >             label=("start above 0" if above else "start below 0")
 >             if abs(start) == 0.1 else None)
-> #> [<matplotlib.lines.Line2D object at 0x7da5b95f2850>]
-> #> [<matplotlib.lines.Line2D object at 0x7da5b95f2990>]
-> #> [<matplotlib.lines.Line2D object at 0x7da5b95f2ad0>]
-> #> [<matplotlib.lines.Line2D object at 0x7da5b95f2c10>]
-> #> [<matplotlib.lines.Line2D object at 0x7da5b95f2d50>]
-> #> [<matplotlib.lines.Line2D object at 0x7da5b95f2e90>]
+> #> [<matplotlib.lines.Line2D object at 0x7fee2cf62990>]
+> #> [<matplotlib.lines.Line2D object at 0x7fee2cf62ad0>]
+> #> [<matplotlib.lines.Line2D object at 0x7fee2cf62c10>]
+> #> [<matplotlib.lines.Line2D object at 0x7fee2cf62d50>]
+> #> [<matplotlib.lines.Line2D object at 0x7fee2cf62e90>]
+> #> [<matplotlib.lines.Line2D object at 0x7fee2cf62fd0>]
 > ax.set_xlabel("x")
 > #> Text(0.5, 0, 'x')
 > ax.set_ylabel("f(x)")
 > #> Text(0, 0.5, 'f(x)')
 > fig.legend(loc="outside lower center", ncol=2)
-> #> <matplotlib.legend.Legend object at 0x7da5b95f2fd0>
+> #> <matplotlib.legend.Legend object at 0x7fee2cf63110>
 > plt.show()
 > ```
 >
@@ -1058,19 +1058,19 @@ Last modified: 2026-11-20 00:10:33 (PST)
 > >             solid_capstyle="butt")
 > >     ax.plot([dwf_cut_py, 8], [dwf_i_py] * 2, color="#D55E00", lw=8,
 > >             solid_capstyle="butt")
-> > #> [<matplotlib.lines.Line2D object at 0x7da5b948ec10>]
-> > #> [<matplotlib.lines.Line2D object at 0x7da5b948ed50>]
-> > #> [<matplotlib.lines.Line2D object at 0x7da5b948ee90>]
-> > #> [<matplotlib.lines.Line2D object at 0x7da5b948efd0>]
-> > #> [<matplotlib.lines.Line2D object at 0x7da5b948f110>]
-> > #> [<matplotlib.lines.Line2D object at 0x7da5b948f250>]
-> > #> [<matplotlib.lines.Line2D object at 0x7da5b948f390>]
-> > #> [<matplotlib.lines.Line2D object at 0x7da5b948f4d0>]
-> > #> [<matplotlib.lines.Line2D object at 0x7da5b948f610>]
+> > #> [<matplotlib.lines.Line2D object at 0x7fee2d0ec7d0>]
+> > #> [<matplotlib.lines.Line2D object at 0x7fee2d0ec910>]
+> > #> [<matplotlib.lines.Line2D object at 0x7fee2d0eca50>]
+> > #> [<matplotlib.lines.Line2D object at 0x7fee2d0ecb90>]
+> > #> [<matplotlib.lines.Line2D object at 0x7fee2d0eccd0>]
+> > #> [<matplotlib.lines.Line2D object at 0x7fee2d0ece10>]
+> > #> [<matplotlib.lines.Line2D object at 0x7fee2d0ecf50>]
+> > #> [<matplotlib.lines.Line2D object at 0x7fee2d0ed090>]
+> > #> [<matplotlib.lines.Line2D object at 0x7fee2d0ed1d0>]
 > > ax.axvline(4, linestyle=":", color="black")
-> > #> <matplotlib.lines.Line2D object at 0x7da5b948f750>
+> > #> <matplotlib.lines.Line2D object at 0x7fee2d0ed310>
 > > ax.set_yticks(range(3), [str(s) for s in dwf_step_py])
-> > #> [<matplotlib.axis.YTick object at 0x7da5b948d090>, <matplotlib.axis.YTick object at 0x7da5b948f9d0>, <matplotlib.axis.YTick object at 0x7da5b94c0190>]
+> > #> [<matplotlib.axis.YTick object at 0x7fee2cfa2c10>, <matplotlib.axis.YTick object at 0x7fee2d0ed590>, <matplotlib.axis.YTick object at 0x7fee2d0edd10>]
 > > ax.set_xlabel("starting point")
 > > #> Text(0.5, 0, 'starting point')
 > > ax.set_ylabel("step length")
@@ -1139,10 +1139,10 @@ Last modified: 2026-11-20 00:10:33 (PST)
 > plateau_marks_pf = np.array([0, 10])
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > ax.plot(plateau_grid_pf, 1 / (1 + np.exp(plateau_grid_pf)), color="#0072B2")
-> #> [<matplotlib.lines.Line2D object at 0x7da5b9447390>]
+> #> [<matplotlib.lines.Line2D object at 0x7fee2cff2210>]
 > ax.plot(plateau_marks_pf, 1 / (1 + np.exp(plateau_marks_pf)),
 >         color="#D55E00", marker="^", markersize=8, linestyle="")
-> #> [<matplotlib.lines.Line2D object at 0x7da5b9447250>]
+> #> [<matplotlib.lines.Line2D object at 0x7fee2cff2350>]
 > ax.set_yscale("log")
 > ax.set_xlabel("x")
 > #> Text(0.5, 0, 'x')
@@ -1327,11 +1327,11 @@ Last modified: 2026-11-20 00:10:33 (PST)
 > bcs_rho_pf = np.maximum(np.abs(1 - 3 * bcs_grid_pf), np.abs(1 - bcs_grid_pf))
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > ax.plot(bcs_grid_pf, bcs_rho_pf, color="#0072B2")
-> #> [<matplotlib.lines.Line2D object at 0x7da5b9247250>]
+> #> [<matplotlib.lines.Line2D object at 0x7fee2d0f2210>]
 > ax.axhline(1, color="black", linestyle=":")
-> #> <matplotlib.lines.Line2D object at 0x7da5b9247390>
+> #> <matplotlib.lines.Line2D object at 0x7fee2d0f2e90>
 > ax.axvline(0.5, color="#D55E00", linestyle="--")
-> #> <matplotlib.lines.Line2D object at 0x7da5b92474d0>
+> #> <matplotlib.lines.Line2D object at 0x7fee2d0f2ad0>
 > ax.set_xlabel("Step length")
 > #> Text(0.5, 0, 'Step length')
 > ax.set_ylabel("Error factor")
@@ -1367,7 +1367,7 @@ Last modified: 2026-11-20 00:10:33 (PST)
 
 > **NOTE:**
 >
-> *Solution 2*. $\mathbf{S}$ is diagonal, so its [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) are its [diagonal entries](linear-algebra-matrices.llms.md#def-main-diagonal) $1$ and $9$. Then
+> *Solution 2*. $\mathbf{S}$ is diagonal, so its [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) are its [diagonal entries](linear-algebra-matrix-multiplication.llms.md#def-main-diagonal) $1$ and $9$. Then
 >
 > $$s^* = \frac{2}{1 + 9} = 0.2.$$
 
