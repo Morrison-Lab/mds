@@ -1,5 +1,6 @@
 :::{#def-exponential-function}
 #### Exponential function
+<!-- no-graph: the graph is tracked in mds#859 -->
 
 The **exponential function**
 [@wikipedia_exponential_function]
