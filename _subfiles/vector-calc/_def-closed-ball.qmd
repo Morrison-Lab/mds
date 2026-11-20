@@ -1,0 +1,8 @@
+:::{#def-closed-ball}
+#### Closed ball
+
+For $\vx$ and $r$ as in @def-ball,
+the **closed ball** of radius $r$ around $\vx$ is
+$\cb{\vy \in \reals^p : \norm{\vy - \vx} \le r}$.
+
+:::
