@@ -2,12 +2,15 @@
 #### "Smooth" in statistics and machine learning
 
 Statistics and machine learning texts often use "smooth" loosely,
-for a function with as many derivatives as the argument at hand needs,
+for a function with as many [derivatives](#def-derivative) as the reasoning at hand needs,
 usually two.
-A cubic spline, for example, is called smooth
+For example, a [cubic](algebra-exponentials.qmd#def-cubic-polynomial) spline,
+a curve made of [polynomial](algebra-exponentials.qmd#def-polynomial) pieces of [degree](algebra-exponentials.qmd#def-polynomial-degree) $3$ that meet at knots
+with matching first and [second derivatives](#def-second-derivative),
+is called smooth,
 although its third derivative jumps at each knot,
 so it is not smooth in the sense of @def-smooth-function.
-When an argument depends on the number of derivatives,
+When a claim depends on the number of derivatives,
 name that number ("twice-differentiable") rather than saying "smooth".
 
 :::
