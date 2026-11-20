@@ -36,6 +36,7 @@ page-xrefs:
     pages:
       - algebra-basics.qmd
       - algebra-sums.qmd
+      - algebra-polynomials.qmd
       - algebra-exponentials.qmd
       - algebra-trigonometry.qmd
       - algebra-complex.qmd
@@ -105,6 +106,11 @@ page-xrefs:
       - optimization-newton.qmd
       - optimization-gradient-descent.qmd
       - optimization-quasi-newton.qmd
+  # algebra-exponentials.qmd was split (mds#156), so links to it from
+  # before that split (index#id) go on to the page now holding #id.
+  - index: algebra-exponentials.qmd
+    pages:
+      - algebra-polynomials.qmd
   # linear-algebra-diagonalization.qmd was split (mds#156), so links to
   # it from before that split (index#id) go on to the page now holding #id.
   - index: linear-algebra-diagonalization.qmd

@@ -9,7 +9,7 @@ the **design matrix**
 is the $n \times p$ [matrix](linear-algebra-matrices.qmd#def-matrix) whose $i$-th row $\tp{\vx_i}$ holds,
 for observation $i$,
 the $p$ entries the model uses.
-These can be covariates, a $1$ for the [intercept](algebra-exponentials.qmd#def-intercept),
+These can be covariates, a $1$ for the [intercept](algebra-polynomials.qmd#def-intercept),
 $0/1$ columns for categories,
 or [functions](https://morrison-lab.github.io/mcs/functions.html#def-function) of covariates, such as $\predvar^2$.
 For a straight-line fit, for example, the design matrix has a first column of 1s,

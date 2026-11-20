@@ -60,6 +60,7 @@ website:
             href: algebra.qmd
           - algebra-basics.qmd
           - algebra-sums.qmd
+          - algebra-polynomials.qmd
           - algebra-exponentials.qmd
           - algebra-trigonometry.qmd
           - algebra-complex.qmd
@@ -155,6 +156,7 @@ website:
         contents:
           - algebra-basics.qmd
           - algebra-sums.qmd
+          - algebra-polynomials.qmd
           - algebra-exponentials.qmd
           - algebra-trigonometry.qmd
           - algebra-complex.qmd
