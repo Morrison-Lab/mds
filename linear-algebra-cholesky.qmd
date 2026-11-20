@@ -1,0 +1,15 @@
+---
+title: "Schur Complements and the Cholesky Factorization"
+format:
+  html: default
+  revealjs:
+    output-file: linear-algebra-cholesky-slides.html
+  pdf:
+    output-file: linear-algebra-cholesky-handout.pdf
+  docx:
+    output-file: linear-algebra-cholesky.docx
+---
+
+{{< include latex-macros/macros.qmd >}}
+
+{{< include mds/_subfiles/_sec_linear_algebra_cholesky.qmd >}}
