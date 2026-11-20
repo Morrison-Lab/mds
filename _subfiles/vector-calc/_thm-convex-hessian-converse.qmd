@@ -4,7 +4,7 @@
 Let $f : \reals^p \to \reals$ have first and [second partial derivatives](vector-calculus.qmd#def-second-partial-derivative)
 that are [continuous on](vector-calculus.qmd#def-continuous-on) $\reals^p$.
 If $f$ is [convex](algebra-sums.qmd#def-convex-function),
-then the Hessian $\matr{H}_f(\vx)$ is [positive semidefinite](linear-algebra-special-matrices.qmd#def-positive-semidefinite) for every $\vx \in \reals^p$.
+then the [Hessian](vector-calculus.qmd#def-hessian) $\matr{H}_f(\vx)$ is [positive semidefinite](linear-algebra-definite-matrices.qmd#def-positive-semidefinite) for every $\vx \in \reals^p$.
 
 :::
 

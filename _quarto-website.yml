@@ -96,6 +96,8 @@ website:
           - linear-algebra-direct-sums.qmd
           - linear-algebra-inner-products.qmd
           - linear-algebra-special-matrices.qmd
+          - linear-algebra-decompositions.qmd
+          - linear-algebra-definite-matrices.qmd
           - linear-algebra-projections.qmd
           - linear-algebra-diagonalization.qmd
           - linear-algebra-complex.qmd
@@ -175,6 +177,8 @@ website:
           - linear-algebra-direct-sums.qmd
           - linear-algebra-inner-products.qmd
           - linear-algebra-special-matrices.qmd
+          - linear-algebra-decompositions.qmd
+          - linear-algebra-definite-matrices.qmd
           - linear-algebra-projections.qmd
           - linear-algebra-diagonalization.qmd
           - linear-algebra-complex.qmd

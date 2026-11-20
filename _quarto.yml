@@ -66,6 +66,8 @@ page-xrefs:
       - linear-algebra-direct-sums.qmd
       - linear-algebra-inner-products.qmd
       - linear-algebra-special-matrices.qmd
+      - linear-algebra-decompositions.qmd
+      - linear-algebra-definite-matrices.qmd
       - linear-algebra-projections.qmd
       - linear-algebra-diagonalization.qmd
       - linear-algebra-complex.qmd
@@ -95,6 +97,12 @@ page-xrefs:
     pages:
       - linear-algebra-matrix-multiplication.qmd
       - linear-algebra-linear-maps.qmd
+  # linear-algebra-special-matrices.qmd was split (mds#156), so links to
+  # it from before that split (index#id) go on to the page now holding #id.
+  - index: linear-algebra-special-matrices.qmd
+    pages:
+      - linear-algebra-decompositions.qmd
+      - linear-algebra-definite-matrices.qmd
   # linear-algebra-rank-nullity.qmd was split (mds#156), so links to it
   # from before that split (index#id) go on to the page now holding #id.
   - index: linear-algebra-rank-nullity.qmd

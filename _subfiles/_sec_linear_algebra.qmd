@@ -42,7 +42,29 @@
 
 {{< include mds/_subfiles/_sec_linear_algebra_inner_products.qmd >}}
 
+# Special Matrices {#sec-special-matrices}
+
 {{< include mds/_subfiles/_sec_linear_algebra_special_matrices.qmd >}}
+
+# Quadratic Forms {#sec-quadratic-forms}
+
+{{< include mds/_subfiles/_sec_linear_algebra_quadratic_forms.qmd >}}
+
+# Trace and Matrix Inner Product {#sec-trace}
+
+{{< include mds/_subfiles/_sec_linear_algebra_trace.qmd >}}
+
+# Matrix Decompositions {#sec-matrix-decompositions}
+
+{{< include mds/_subfiles/_sec_linear_algebra_decompositions.qmd >}}
+
+# Definite Matrices {#sec-definite-matrices}
+
+{{< include mds/_subfiles/_sec_linear_algebra_definite_matrices.qmd >}}
+
+# Determinants {#sec-determinants}
+
+{{< include mds/_subfiles/_sec_linear_algebra_determinants.qmd >}}
 
 {{< include mds/_subfiles/_sec_linear_algebra_projections.qmd >}}
 

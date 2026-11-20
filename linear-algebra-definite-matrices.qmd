@@ -1,0 +1,21 @@
+---
+title: "Definite Matrices and Determinants"
+format:
+  html: default
+  revealjs:
+    output-file: linear-algebra-definite-matrices-slides.html
+  pdf:
+    output-file: linear-algebra-definite-matrices-handout.pdf
+  docx:
+    output-file: linear-algebra-definite-matrices.docx
+---
+
+{{< include latex-macros/macros.qmd >}}
+
+# Definite Matrices {#sec-definite-matrices}
+
+{{< include mds/_subfiles/_sec_linear_algebra_definite_matrices.qmd >}}
+
+# Determinants {#sec-determinants}
+
+{{< include mds/_subfiles/_sec_linear_algebra_determinants.qmd >}}

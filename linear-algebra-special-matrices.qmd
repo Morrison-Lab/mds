@@ -1,5 +1,5 @@
 ---
-title: "Special Matrices and Decompositions"
+title: "Special Matrices, Quadratic Forms and Trace"
 format:
   html: default
   revealjs:
@@ -12,4 +12,14 @@ format:
 
 {{< include latex-macros/macros.qmd >}}
 
+# Special Matrices {#sec-special-matrices}
+
 {{< include mds/_subfiles/_sec_linear_algebra_special_matrices.qmd >}}
+
+# Quadratic Forms {#sec-quadratic-forms}
+
+{{< include mds/_subfiles/_sec_linear_algebra_quadratic_forms.qmd >}}
+
+# Trace and Matrix Inner Product {#sec-trace}
+
+{{< include mds/_subfiles/_sec_linear_algebra_trace.qmd >}}

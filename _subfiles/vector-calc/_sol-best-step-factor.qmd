@@ -8,7 +8,7 @@ bsf_kappa_ps <- max(bsf_eigs_ps) / min(bsf_eigs_ps)
 bsf_rho_ps <- (bsf_kappa_ps - 1) / (bsf_kappa_ps + 1)
 ```
 
-The [condition number](linear-algebra-special-matrices.qmd#def-condition-number) is
+The [condition number](linear-algebra-definite-matrices.qmd#def-condition-number) is
 $\condnum(\matr{S}) = 9 / 1 = `{r} bsf_kappa_ps`$,
 so by @thm-best-constant-step
 

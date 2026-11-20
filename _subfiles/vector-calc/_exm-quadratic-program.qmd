@@ -4,7 +4,7 @@
 Minimizing $x_1^2 + x_2^2$ subject to $x_1 + x_2 \ge 1$
 is a [quadratic program](#def-quadratic-program):
 the [objective](#def-objective-function) is $\tfrac{1}{2}\,\qform{\matr{S}}{\vx}$ with $\matr{S} = 2 \matr{I}_2$,
-which is [positive semidefinite](linear-algebra-special-matrices.qmd#def-positive-semidefinite);
+which is [positive semidefinite](linear-algebra-definite-matrices.qmd#def-positive-semidefinite);
 $\vecf{c} = \vzero$;
 and the single constraint is a linear [inequality](https://morrison-lab.github.io/mcs/proof-writing.html#def-inequality).
 The point $\tp{(0.5, 0.5)}$ is feasible,
