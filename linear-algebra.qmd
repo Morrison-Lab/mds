@@ -58,8 +58,13 @@ The linear algebra notes are split across these pages:
 - The [Solving Linear Systems and Least Squares](linear-algebra-least-squares.qmd) page:
   back substitution, the QR factorization, the [LU factorization](linear-algebra-least-squares.qmd#def-lu),
   least squares and the [normal equations](linear-algebra-least-squares.qmd#def-normal-equations).
-- [Diagonalization and Cholesky](linear-algebra-diagonalization.qmd):
-  similarity, diagonalization, Schur complements, and the Cholesky factorization.
+- The [Similarity and Diagonalization](linear-algebra-diagonalization.qmd) page:
+  [eigenspaces](linear-algebra-diagonalization.qmd#def-eigenspace), [similar matrices](linear-algebra-diagonalization.qmd#def-similar),
+  and [diagonalizable matrices](linear-algebra-diagonalization.qmd#def-diagonalizable).
+- The [Schur Complements and the Cholesky Factorization](linear-algebra-cholesky.qmd) page:
+  Gram matrices, [block matrices](linear-algebra-cholesky.qmd#def-block-matrix),
+  [Schur complements](linear-algebra-cholesky.qmd#def-schur-complement),
+  and the [Cholesky factorization](linear-algebra-cholesky.qmd#thm-cholesky).
 - [Complex Vectors and Matrices](linear-algebra-complex.qmd):
   conjugate transposes and Hermitian matrices.
 

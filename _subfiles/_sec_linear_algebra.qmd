@@ -80,6 +80,8 @@
 
 {{< include mds/_subfiles/_sec_linear_algebra_diagonalization.qmd >}}
 
+{{< include mds/_subfiles/_sec_linear_algebra_cholesky.qmd >}}
+
 # Complex vectors and matrices {#sec-complex-vectors-matrices}
 
 {{< include mds/_subfiles/_sec_linear_algebra_complex.qmd >}}

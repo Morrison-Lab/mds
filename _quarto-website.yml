@@ -103,6 +103,7 @@ website:
           - linear-algebra-generalized-inverses.qmd
           - linear-algebra-least-squares.qmd
           - linear-algebra-diagonalization.qmd
+          - linear-algebra-cholesky.qmd
           - linear-algebra-complex.qmd
       - text: "Vector Calculus"
         href: vector-calculus.qmd
@@ -187,6 +188,7 @@ website:
           - linear-algebra-generalized-inverses.qmd
           - linear-algebra-least-squares.qmd
           - linear-algebra-diagonalization.qmd
+          - linear-algebra-cholesky.qmd
           - linear-algebra-complex.qmd
       - vector-calculus.qmd
       - section: "Optimization"
