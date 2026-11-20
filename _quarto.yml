@@ -65,6 +65,7 @@ page-xrefs:
       - linear-algebra-affine-subspaces.qmd
       - linear-algebra-direct-sums.qmd
       - linear-algebra-inner-products.qmd
+      - linear-algebra-orthonormal-bases.qmd
       - linear-algebra-special-matrices.qmd
       - linear-algebra-decompositions.qmd
       - linear-algebra-definite-matrices.qmd
@@ -99,6 +100,11 @@ page-xrefs:
     pages:
       - linear-algebra-matrix-multiplication.qmd
       - linear-algebra-linear-maps.qmd
+  # linear-algebra-inner-products.qmd was split (mds#156), so links to
+  # it from before that split (index#id) go on to the page now holding #id.
+  - index: linear-algebra-inner-products.qmd
+    pages:
+      - linear-algebra-orthonormal-bases.qmd
   # linear-algebra-projections.qmd was split (mds#156), so links to it
   # from before that split (index#id) go on to the page now holding #id.
   - index: linear-algebra-projections.qmd

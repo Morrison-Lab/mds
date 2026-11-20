@@ -42,6 +42,8 @@
 
 {{< include mds/_subfiles/_sec_linear_algebra_inner_products.qmd >}}
 
+{{< include mds/_subfiles/_sec_linear_algebra_orthonormal_bases.qmd >}}
+
 # Special Matrices {#sec-special-matrices}
 
 {{< include mds/_subfiles/_sec_linear_algebra_special_matrices.qmd >}}

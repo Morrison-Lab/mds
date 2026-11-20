@@ -95,6 +95,7 @@ website:
           - linear-algebra-affine-subspaces.qmd
           - linear-algebra-direct-sums.qmd
           - linear-algebra-inner-products.qmd
+          - linear-algebra-orthonormal-bases.qmd
           - linear-algebra-special-matrices.qmd
           - linear-algebra-decompositions.qmd
           - linear-algebra-definite-matrices.qmd
@@ -178,6 +179,7 @@ website:
           - linear-algebra-affine-subspaces.qmd
           - linear-algebra-direct-sums.qmd
           - linear-algebra-inner-products.qmd
+          - linear-algebra-orthonormal-bases.qmd
           - linear-algebra-special-matrices.qmd
           - linear-algebra-decompositions.qmd
           - linear-algebra-definite-matrices.qmd
