@@ -64,6 +64,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_exm-strict-local-minimizer.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_lem-qf-bounds.qmd >}}
 
 {{< slidebreak >}}
@@ -99,6 +103,10 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/vector-calc/_def-local-maximizer.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-local-maximizer.qmd >}}
 
 {{< slidebreak >}}
 
