@@ -1,7 +1,7 @@
 :::{#exm-matrix-induced-norm}
 #### A matrix-induced norm calculation
 
-Take the positive definite matrix
+Take the [positive definite matrix](#def-positive-definite)
 $\matr{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$
 of @exm-matrix-induced-inner-product
 and the vector $\vx = (1, 2)$.
@@ -33,7 +33,7 @@ $$
 \ea
 $$
 
-The Euclidean length of the same vector is
+The [Euclidean norm](linear-algebra-vectors.qmd#def-euclidean-norm) of the same vector is
 $\norm{\vx} = \sqrt{1^2 + 2^2} = \sqrt{5}$,
 so the $\matr{A}$-norm of this vector is larger than its Euclidean norm.
 
