@@ -2961,6 +2961,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra-inner-products#cor-self-outer-product-rank",
+   "site": "mds",
+   "page": "linear-algebra-inner-products",
+   "div": "cor-self-outer-product-rank",
+   "kind": "cor",
+   "title": "A self outer product has rank one",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra-inner-products#def-angle",
    "site": "mds",
    "page": "linear-algebra-inner-products",
@@ -3141,12 +3150,30 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra-inner-products#def-self-outer-product",
+   "site": "mds",
+   "page": "linear-algebra-inner-products",
+   "div": "def-self-outer-product",
+   "kind": "def",
+   "title": "Self outer product",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra-inner-products#def-vector-p-norm",
    "site": "mds",
    "page": "linear-algebra-inner-products",
    "div": "def-vector-p-norm",
    "kind": "def",
    "title": "Vector $p$-norm ($\\ell_p$ norm, $\\ell_1$ norm, taxicab norm, Manhattan norm, $\\ell_2$ norm, infinity norm)",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-inner-products#def-vectorization",
+   "site": "mds",
+   "page": "linear-algebra-inner-products",
+   "div": "def-vectorization",
+   "kind": "def",
+   "title": "Vectorization",
    "external": false
   },
   {
@@ -3186,6 +3213,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra-inner-products#thm-kronecker-outer-product",
+   "site": "mds",
+   "page": "linear-algebra-inner-products",
+   "div": "thm-kronecker-outer-product",
+   "kind": "thm",
+   "title": "An outer product is a Kronecker product",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra-inner-products#thm-norm-properties",
    "site": "mds",
    "page": "linear-algebra-inner-products",
@@ -3222,12 +3258,30 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra-inner-products#thm-outer-product-matvec",
+   "site": "mds",
+   "page": "linear-algebra-inner-products",
+   "div": "thm-outer-product-matvec",
+   "kind": "thm",
+   "title": "An outer product times a vector",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra-inner-products#thm-outer-product-rank",
    "site": "mds",
    "page": "linear-algebra-inner-products",
    "div": "thm-outer-product-rank",
    "kind": "thm",
    "title": "An outer product has rank one",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-inner-products#thm-outer-product-transpose",
+   "site": "mds",
+   "page": "linear-algebra-inner-products",
+   "div": "thm-outer-product-transpose",
+   "kind": "thm",
+   "title": "The transpose of an outer product",
    "external": false
   },
   {
@@ -3246,6 +3300,15 @@
    "div": "thm-triangle-inequality",
    "kind": "thm",
    "title": "Triangle inequality",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-inner-products#thm-vec-outer-product",
+   "site": "mds",
+   "page": "linear-algebra-inner-products",
+   "div": "thm-vec-outer-product",
+   "kind": "thm",
+   "title": "The vectorization of an outer product is a Kronecker product",
    "external": false
   },
   {
@@ -4383,6 +4446,24 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra-special-matrices#cor-self-outer-product-psd",
+   "site": "mds",
+   "page": "linear-algebra-special-matrices",
+   "div": "cor-self-outer-product-psd",
+   "kind": "cor",
+   "title": "A self outer product is positive semidefinite",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-special-matrices#cor-self-outer-product-trace",
+   "site": "mds",
+   "page": "linear-algebra-special-matrices",
+   "div": "cor-self-outer-product-trace",
+   "kind": "cor",
+   "title": "The trace of a self outer product is a squared norm",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra-special-matrices#def-bilinear-form",
    "site": "mds",
    "page": "linear-algebra-special-matrices",
@@ -4785,6 +4866,15 @@
    "div": "thm-orthogonal-norm",
    "kind": "thm",
    "title": "Orthogonal matrices preserve length",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-special-matrices#thm-outer-product-trace",
+   "site": "mds",
+   "page": "linear-algebra-special-matrices",
+   "div": "thm-outer-product-trace",
+   "kind": "thm",
+   "title": "The trace of an outer product is a dot product",
    "external": false
   },
   {
@@ -8318,6 +8408,18 @@
    "mds/linear-algebra-inner-products#thm-norm-properties"
   ],
   [
+   "mds/linear-algebra-inner-products#cor-self-outer-product-rank",
+   "mds/linear-algebra-inner-products#def-outer-product"
+  ],
+  [
+   "mds/linear-algebra-inner-products#cor-self-outer-product-rank",
+   "mds/linear-algebra-inner-products#def-self-outer-product"
+  ],
+  [
+   "mds/linear-algebra-inner-products#cor-self-outer-product-rank",
+   "mds/linear-algebra-inner-products#thm-outer-product-rank"
+  ],
+  [
    "mds/linear-algebra-inner-products#def-angle",
    "mds/algebra-trigonometry#def-arccosine"
   ],
@@ -8442,6 +8544,10 @@
    "mds/linear-algebra-inner-products#def-inner-product-space"
   ],
   [
+   "mds/linear-algebra-inner-products#def-self-outer-product",
+   "mds/linear-algebra-inner-products#def-outer-product"
+  ],
+  [
    "mds/linear-algebra-inner-products#thm-cauchy-schwarz",
    "mds/linear-algebra-inner-products#thm-norm-properties"
   ],
@@ -8502,6 +8608,14 @@
    "mds/vector-calculus#def-direction"
   ],
   [
+   "mds/linear-algebra-inner-products#thm-kronecker-outer-product",
+   "mds/linear-algebra-inner-products#def-kronecker-product"
+  ],
+  [
+   "mds/linear-algebra-inner-products#thm-kronecker-outer-product",
+   "mds/linear-algebra-inner-products#def-outer-product"
+  ],
+  [
    "mds/linear-algebra-inner-products#thm-orthonormal-expansion",
    "mds/linear-algebra-inner-products#def-orthonormal-basis"
   ],
@@ -8512,6 +8626,14 @@
   [
    "mds/linear-algebra-inner-products#thm-orthonormal-independent",
    "mds/linear-algebra-inner-products#thm-dot-linear-sum"
+  ],
+  [
+   "mds/linear-algebra-inner-products#thm-outer-product-matvec",
+   "mds/linear-algebra-inner-products#def-outer-product"
+  ],
+  [
+   "mds/linear-algebra-inner-products#thm-outer-product-transpose",
+   "mds/linear-algebra-inner-products#def-outer-product"
   ],
   [
    "mds/linear-algebra-inner-products#thm-pearson-cosine-centered",
@@ -8532,6 +8654,18 @@
   [
    "mds/linear-algebra-inner-products#thm-triangle-inequality",
    "mds/linear-algebra-inner-products#thm-norm-sum-square"
+  ],
+  [
+   "mds/linear-algebra-inner-products#thm-vec-outer-product",
+   "mds/linear-algebra-inner-products#def-kronecker-product"
+  ],
+  [
+   "mds/linear-algebra-inner-products#thm-vec-outer-product",
+   "mds/linear-algebra-inner-products#def-outer-product"
+  ],
+  [
+   "mds/linear-algebra-inner-products#thm-vec-outer-product",
+   "mds/linear-algebra-inner-products#def-vectorization"
   ],
   [
    "mds/linear-algebra-inner-products#thm-vector-p-norm",
@@ -9382,6 +9516,22 @@
    "mds/linear-algebra-special-matrices#thm-spectral"
   ],
   [
+   "mds/linear-algebra-special-matrices#cor-self-outer-product-psd",
+   "mds/linear-algebra-special-matrices#def-positive-semidefinite"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#cor-self-outer-product-psd",
+   "mds/linear-algebra-special-matrices#thm-gram-properties"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#cor-self-outer-product-trace",
+   "mds/linear-algebra-special-matrices#def-trace"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#cor-self-outer-product-trace",
+   "mds/linear-algebra-special-matrices#thm-outer-product-trace"
+  ],
+  [
    "mds/linear-algebra-special-matrices#def-bilinear-form",
    "mcs/functions#def-function"
   ],
@@ -9636,6 +9786,10 @@
   [
    "mds/linear-algebra-special-matrices#thm-orthogonal-norm",
    "mds/linear-algebra-special-matrices#def-orthogonal-matrix"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#thm-outer-product-trace",
+   "mds/linear-algebra-special-matrices#def-trace"
   ],
   [
    "mds/linear-algebra-special-matrices#thm-pd-inverse",
