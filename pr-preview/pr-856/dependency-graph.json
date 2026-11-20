@@ -2988,6 +2988,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra-definite-matrices#def-matrix-induced-norm",
+   "site": "mds",
+   "page": "linear-algebra-definite-matrices",
+   "div": "def-matrix-induced-norm",
+   "kind": "def",
+   "title": "Matrix-induced norm, $\\matr{A}$-norm",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra-definite-matrices#def-paraboloid",
    "site": "mds",
    "page": "linear-algebra-definite-matrices",
@@ -4716,6 +4725,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra-special-matrices#def-bilinear-form",
+   "site": "mds",
+   "page": "linear-algebra-special-matrices",
+   "div": "def-bilinear-form",
+   "kind": "def",
+   "title": "Bilinear form",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra-special-matrices#def-diagonal-matrix",
    "site": "mds",
    "page": "linear-algebra-special-matrices",
@@ -4821,6 +4839,15 @@
    "div": "def-quadratic-form",
    "kind": "def",
    "title": "Quadratic form",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-special-matrices#def-symmetric-bilinear-form",
+   "site": "mds",
+   "page": "linear-algebra-special-matrices",
+   "div": "def-symmetric-bilinear-form",
+   "kind": "def",
+   "title": "Symmetric bilinear form",
    "external": false
   },
   {
@@ -4956,6 +4983,15 @@
    "div": "thm-quadratic-form-symmetric",
    "kind": "thm",
    "title": "A quadratic form depends only on the symmetric part",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-special-matrices#thm-symmetric-bilinear-form-swap",
+   "site": "mds",
+   "page": "linear-algebra-special-matrices",
+   "div": "thm-symmetric-bilinear-form-swap",
+   "kind": "thm",
+   "title": "A symmetric bilinear form does not depend on the order of its vectors",
    "external": false
   },
   {
@@ -8338,7 +8374,27 @@
   ],
   [
    "mds/linear-algebra-definite-matrices#def-matrix-induced-inner-product",
+   "mcs/proof-writing#def-universal-quantifier"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#def-matrix-induced-inner-product",
    "mds/linear-algebra-definite-matrices#def-positive-definite"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#def-matrix-induced-inner-product",
+   "mds/linear-algebra-inner-products#def-inner-product"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#def-matrix-induced-norm",
+   "mds/linear-algebra-definite-matrices#def-matrix-induced-inner-product"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#def-matrix-induced-norm",
+   "mds/linear-algebra-definite-matrices#def-positive-definite"
+  ],
+  [
+   "mds/linear-algebra-definite-matrices#def-matrix-induced-norm",
+   "mds/linear-algebra-inner-products#def-induced-norm"
   ],
   [
    "mds/linear-algebra-definite-matrices#def-well-conditioned",
@@ -9465,6 +9521,18 @@
    "mds/linear-algebra-special-matrices#thm-outer-product-trace"
   ],
   [
+   "mds/linear-algebra-special-matrices#def-bilinear-form",
+   "mcs/functions#def-function"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#def-bilinear-form",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#def-bilinear-form",
+   "mds/linear-algebra-vectors#def-scalar"
+  ],
+  [
    "mds/linear-algebra-special-matrices#def-frobenius-norm",
    "mds/linear-algebra-special-matrices#def-matrix-inner-product"
   ],
@@ -9482,6 +9550,18 @@
   ],
   [
    "mds/linear-algebra-special-matrices#def-projection-matrix",
+   "mds/linear-algebra-special-matrices#def-symmetric-matrix"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#def-symmetric-bilinear-form",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#def-symmetric-bilinear-form",
+   "mds/linear-algebra-special-matrices#def-bilinear-form"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#def-symmetric-bilinear-form",
    "mds/linear-algebra-special-matrices#def-symmetric-matrix"
   ],
   [
@@ -9531,6 +9611,22 @@
   [
    "mds/linear-algebra-special-matrices#thm-quadratic-form-symmetric",
    "mds/linear-algebra-special-matrices#def-symmetric-part"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#thm-symmetric-bilinear-form-swap",
+   "mcs/proof-writing#def-universal-quantifier"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#thm-symmetric-bilinear-form-swap",
+   "mds/linear-algebra-matrix-multiplication#thm-scalar-transpose"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#thm-symmetric-bilinear-form-swap",
+   "mds/linear-algebra-special-matrices#def-bilinear-form"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#thm-symmetric-bilinear-form-swap",
+   "mds/linear-algebra-special-matrices#def-symmetric-matrix"
   ],
   [
    "mds/linear-algebra-subspaces#def-basis",
