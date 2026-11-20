@@ -35,6 +35,7 @@ page-xrefs:
   - index: algebra.qmd
     pages:
       - algebra-basics.qmd
+      - algebra-convexity.qmd
       - algebra-sums.qmd
       - algebra-polynomials.qmd
       - algebra-exponentials.qmd
@@ -106,6 +107,11 @@ page-xrefs:
       - optimization-newton.qmd
       - optimization-gradient-descent.qmd
       - optimization-quasi-newton.qmd
+  # algebra-sums.qmd was split (mds#156), so links to it from
+  # before that split (index#id) go on to the page now holding #id.
+  - index: algebra-sums.qmd
+    pages:
+      - algebra-convexity.qmd
   # algebra-exponentials.qmd was split (mds#156), so links to it from
   # before that split (index#id) go on to the page now holding #id.
   - index: algebra-exponentials.qmd
