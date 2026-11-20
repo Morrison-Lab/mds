@@ -9,5 +9,8 @@ $g(x) = x \abs{x}$ is not smooth on any [open interval](https://morrison-lab.git
 Its derivative is $g'(x) = 2 \abs{x}$ at every $x$,
 and $2 \abs{x}$ is not differentiable at $0$,
 so $g''(0)$ does not exist.
+@fig-smooth-function shows $g$ and $g'$.
+
+{{< include mds/_subfiles/derivatives/_fig-smooth-function.qmd >}}
 
 :::

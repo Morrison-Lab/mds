@@ -1,0 +1,76 @@
+::: {#fig-smooth-function}
+
+::: {.panel-tabset group="language"}
+
+### R
+
+```{r}
+#| label: smooth-function-r
+#| fig-alt: >-
+#|   Two side-by-side plots on x from -1 to 1, each with a vermilion circle
+#|   at the origin. The first, g of x equals x times the absolute value of x,
+#|   is a blue curve that looks smooth, falling below zero to the left of the
+#|   origin and rising above it to the right. The second, its derivative
+#|   2 times the absolute value of x, is a blue V shape with a sharp corner
+#|   at the origin.
+#| fig-height: 3
+#| fig-width: 6
+sm_x_sm <- seq(-1, 1, length.out = 201)
+sm_labels_sm <- c("g(x) = x|x|", "g'(x) = 2|x|")
+sm_values_sm <- c(sm_x_sm * abs(sm_x_sm), 2 * abs(sm_x_sm))
+sm_n_sm <- length(sm_x_sm)
+sm_fn_sm <- rep(sm_labels_sm, each = sm_n_sm)
+sm_fn_sm <- factor(sm_fn_sm, levels = sm_labels_sm)
+sm_x_rep_sm <- rep(sm_x_sm, 2)
+sm_curves_sm <- tibble::tibble(
+  x = sm_x_rep_sm, value = sm_values_sm, fn = sm_fn_sm
+)
+sm_origin_fn_sm <- factor(sm_labels_sm, levels = sm_labels_sm)
+sm_origin_sm <- tibble::tibble(x = 0, value = 0, fn = sm_origin_fn_sm)
+sm_aes_sm <- ggplot2::aes(x = x, y = value)
+sm_facet_sm <- ggplot2::vars(fn)
+sm_curves_sm |>
+  ggplot2::ggplot() +
+  sm_aes_sm +
+  ggplot2::geom_line(colour = "#0072B2") +
+  ggplot2::geom_point(data = sm_origin_sm, colour = "#D55E00", size = 3) +
+  ggplot2::facet_wrap(sm_facet_sm, scales = "free_y") +
+  ggplot2::labs(x = "x", y = "function value")
+```
+
+### Python
+
+```{python}
+#| label: smooth-function-python
+#| fig-alt: >-
+#|   Two side-by-side plots on x from -1 to 1, each with a vermilion circle
+#|   at the origin. The first, g of x equals x times the absolute value of x,
+#|   is a blue curve that looks smooth, falling below zero to the left of the
+#|   origin and rising above it to the right. The second, its derivative
+#|   2 times the absolute value of x, is a blue V shape with a sharp corner
+#|   at the origin.
+#| fig-height: 3
+#| fig-width: 6
+import matplotlib.pyplot as plt
+import numpy as np
+
+sm_x_py = np.linspace(-1, 1, 201)
+fig, axes = plt.subplots(1, 2, figsize=(6, 3), layout="constrained")
+axes[0].plot(sm_x_py, sm_x_py * np.abs(sm_x_py), color="#0072B2")
+axes[0].plot([0], [0], "o", color="#D55E00")
+axes[0].set_title("g(x) = x|x|")
+axes[1].plot(sm_x_py, 2 * np.abs(sm_x_py), color="#0072B2")
+axes[1].plot([0], [0], "o", color="#D55E00")
+axes[1].set_title("g'(x) = 2|x|")
+for ax in axes:
+    ax.set_xlabel("x")
+plt.show();
+```
+
+:::
+
+The function $g(x) = x \abs{x}$ of @exm-smooth-function looks smooth,
+but its derivative $2 \abs{x}$ has a corner at $0$,
+where it has no derivative.
+
+:::
