@@ -9,15 +9,15 @@ format:
 
 The notes on this topic are split across these pages:
 
-- [Partial Derivatives and Gradients](vector-calculus-gradients.qmd):
+- The [Partial Derivatives and Gradients](vector-calculus-gradients.qmd) page:
   [partial derivatives](vector-calculus-gradients.qmd#def-partial-derivative),
   [gradients](vector-calculus-gradients.qmd#def-vector-derivative),
   [linear approximation](vector-calculus-gradients.qmd#def-linear-approximation-vector),
   and [level sets](vector-calculus-gradients.qmd#def-level-set). <!-- no-figure: this overview only links, and the level-set figures are on the linked page -->
-- [Jacobians and Derivative Rules](vector-calculus-derivative-rules.qmd):
+- The [Jacobians and Derivative Rules](vector-calculus-derivative-rules.qmd) page:
   [Jacobian matrices](vector-calculus-derivative-rules.qmd#def-jacobian-matrix),
   derivatives of linear forms and [quadratic forms](linear-algebra-special-matrices.qmd#def-quadratic-form), and the vector chain rule.
-- [Second Partial Derivatives and the Hessian](vector-calculus-hessian.qmd):
+- The [Second Partial Derivatives and the Hessian](vector-calculus-hessian.qmd) page:
   [Hessian matrices](vector-calculus-hessian.qmd#def-hessian),
   [continuity in several variables](vector-calculus-hessian.qmd#def-continuous-several),
   and the [symmetry of the Hessian](vector-calculus-hessian.qmd#thm-hessian-symmetric).
