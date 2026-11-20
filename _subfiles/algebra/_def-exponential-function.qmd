@@ -7,7 +7,7 @@ $\expt : \reals \to (0, \infty)$ is
 
 $$\expf{x} \eqdef \lim_{n \to \infty} \paren{1 + \frac{x}{n}}^n,$$
 
-the [limit of](algebra-polynomials.qmd#def-sequence-limit) the [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence)
+the [limit](algebra-polynomials.qmd#def-sequence-limit), as $n \to \infty$, of the [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence)
 $\paren{1 + \frac{x}{1}}^1, \paren{1 + \frac{x}{2}}^2, \paren{1 + \frac{x}{3}}^3, \ldots$.
 That limit exists for every real number $x$, and it is positive.
 
