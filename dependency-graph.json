@@ -4590,6 +4590,15 @@
    "external": false
   },
   {
+   "id": "mds/linear-algebra-special-matrices#def-matrix-induced-norm",
+   "site": "mds",
+   "page": "linear-algebra-special-matrices",
+   "div": "def-matrix-induced-norm",
+   "kind": "def",
+   "title": "Matrix-induced norm, $\\matr{A}$-norm",
+   "external": false
+  },
+  {
    "id": "mds/linear-algebra-special-matrices#def-matrix-inner-product",
    "site": "mds",
    "page": "linear-algebra-special-matrices",
@@ -9605,6 +9614,34 @@
   ],
   [
    "mds/linear-algebra-special-matrices#def-matrix-induced-inner-product",
+   "mcs/proof-writing#def-universal-quantifier"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#def-matrix-induced-inner-product",
+   "mds/linear-algebra-inner-products#def-inner-product"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#def-matrix-induced-inner-product",
+   "mds/linear-algebra-special-matrices#def-positive-definite"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#def-matrix-induced-inner-product",
+   "mds/linear-algebra-special-matrices#def-symmetric-bilinear-form"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#def-matrix-induced-inner-product",
+   "mds/linear-algebra-special-matrices#def-symmetric-matrix"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#def-matrix-induced-norm",
+   "mds/linear-algebra-inner-products#def-induced-norm"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#def-matrix-induced-norm",
+   "mds/linear-algebra-special-matrices#def-matrix-induced-inner-product"
+  ],
+  [
+   "mds/linear-algebra-special-matrices#def-matrix-induced-norm",
    "mds/linear-algebra-special-matrices#def-positive-definite"
   ],
   [

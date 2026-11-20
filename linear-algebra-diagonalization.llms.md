@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-19 18:13:07 (PST)
+Last modified: 2026-11-19 19:15:22 (PST)
 
 # 1 Similarity and diagonalization
 
@@ -977,7 +977,7 @@ Last modified: 2026-11-19 18:13:07 (PST)
 > &> 0
 > \end{aligned}$$
 >
-> ([Definition 32 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-determinant)); a positive determinant alone does not make a matrix positive definite. And positive diagonal entries are not enough: $\mathbf{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}$ of [Example 38 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#exm-positive-definite) has them but is not positive definite.
+> ([Definition 33 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-determinant)); a positive determinant alone does not make a matrix positive definite. And positive diagonal entries are not enough: $\mathbf{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}$ of [Example 38 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#exm-positive-definite) has them but is not positive definite.
 
 > **NOTE:**
 >
