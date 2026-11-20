@@ -5,6 +5,7 @@ Let $f : \reals^p \to \reals$.
 A point $\vx^* \in \reals^p$ is a **local maximizer** of $f$
 if there is a number $\tolin > 0$
 such that $f(\vx^*) \ge f(\vx)$
-for all $\vx \in \reals^p$ with $\norm{\vx - \vx^*} < \tolin$.
+for all $\vx$ in the [open ball](vector-calculus.qmd#def-ball) $\ball{\vx^*}{\tolin}$
+of radius $\tolin$ around $\vx^*$.
 
 :::

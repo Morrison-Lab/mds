@@ -4,10 +4,15 @@
 Let $\vx \in \reals^p$ and $r > 0$.
 The **open ball**
 [@wikipedia_ball_mathematics]
-of radius $r$ around $\vx$ is the set
-$\cb{\vy \in \reals^p : \norm{\vy - \vx} < r}$,
-of points whose distance from $\vx$
+of radius $r$ around $\vx$,
+written $\ball{\vx}{r}$,
+is the set of points whose distance from $\vx$
 (the [Euclidean norm](linear-algebra.qmd#def-euclidean-norm) of the difference)
-is less than $r$.
+is less than $r$:
+
+<!-- check-ball-neighborhoods: allow: defines the ball -->
+$$
+\ball{\vx}{r} \eqdef \cb{\vy \in \reals^p : \norm{\vy - \vx} < r}.
+$$
 
 :::

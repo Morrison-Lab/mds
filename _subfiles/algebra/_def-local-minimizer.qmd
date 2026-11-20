@@ -6,9 +6,8 @@ and let $f : A \to \reals$ be a [function](https://morrison-lab.github.io/mcs/fu
 A point $x^* \in A$ is a **local minimizer** of $f$
 if there is a number $\tolin > 0$
 such that $f(x^*) \le f(x)$
-for all $x \in A$ with
-$\norm{x - x^*} < \tolin$,
-where $\norm{\cdot}$ is the
-[Euclidean norm](linear-algebra.qmd#def-euclidean-norm).
+for all $x \in A$
+in the [open ball](vector-calculus.qmd#def-ball) $\ball{x^*}{\tolin}$
+of radius $\tolin$ around $x^*$.
 
 :::

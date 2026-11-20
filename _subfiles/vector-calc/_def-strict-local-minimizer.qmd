@@ -4,6 +4,8 @@
 Let $f : \reals^p \to \reals$.
 A point $\vx^*$ is a **strict local minimizer** of $f$
 if there is a number $\tolin > 0$ such that $f(\vx^*) < f(\vx)$
-for every $\vx \ne \vx^*$ with $\norm{\vx - \vx^*} < \tolin$.
+for every $\vx \ne \vx^*$
+in the [open ball](vector-calculus.qmd#def-ball) $\ball{\vx^*}{\tolin}$
+of radius $\tolin$ around $\vx^*$.
 
 :::
