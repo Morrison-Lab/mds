@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-19 13:39:34 (PST)
+Last modified: 2026-11-19 15:36:46 (PST)
 
 This page moved to [Functions](https://morrison-lab.github.io/mcs/functions.html) in the Math for Computer Science notes.
 
