@@ -2,7 +2,7 @@
 
 By @thm-linear-map-matrix,
 $f(\vx) = \matr{A}\vx$,
-where [column $j$ of $\matr{A}$](#def-matrix-column) is $f(\vecf{e}_j)$:
+where [column $j$ of $\matr{A}$](linear-algebra-matrices.qmd#def-matrix-column) is $f(\vecf{e}_j)$:
 
 $$
 \matr{A} = \begin{bmatrix} 1 & -2 \\ 3 & 0 \end{bmatrix}.

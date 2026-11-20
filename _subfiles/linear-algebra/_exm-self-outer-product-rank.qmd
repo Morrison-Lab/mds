@@ -1,0 +1,15 @@
+:::{#exm-self-outer-product-rank}
+#### The rank of a self outer product
+
+For $\vx = (1, 2)$,
+[the example of a self outer product](#exm-self-outer-product)
+found the [matrix](linear-algebra.qmd#def-matrix)
+$\soprod{\vx} = \begin{bmatrix} 1 & 2 \\ 2 & 4 \end{bmatrix}$.
+Its second [column](linear-algebra.qmd#def-matrix-column) $(2, 4)$ is $2$ times its first column $(1, 2)$,
+so the two columns are not [linearly independent](linear-algebra.qmd#def-linearly-independent),
+and the matrix has [rank](linear-algebra.qmd#def-rank) $1$,
+as @cor-self-outer-product-rank says.
+
+<!-- no-figure: the example compares two columns of one small matrix -->
+
+:::

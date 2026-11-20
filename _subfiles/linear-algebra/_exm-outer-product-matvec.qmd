@@ -1,0 +1,50 @@
+:::{#exm-outer-product-matvec}
+#### Multiplying an outer product by a vector
+
+Take $\vecf{u} = (1, 2, 3)$ and $\vecf{v} = (4, 5)$
+from [the example of an outer product](#exm-outer-product),
+and $\vecf{w} = (1, -1)$.
+[Multiplying](linear-algebra.qmd#def-matvec-mult) the [outer product](#def-outer-product) by $\vecf{w}$ directly gives
+
+$$
+\ba
+\paren{\oprod{\vecf{u}}{\vecf{v}}} \vecf{w}
+&= \begin{bmatrix}
+4 & 5 \\
+8 & 10 \\
+12 & 15
+\end{bmatrix}
+\begin{bmatrix} 1 \\ -1 \end{bmatrix}
+&& \text{(the outer product found in that example)}
+\\
+&= \begin{bmatrix}
+4 - 5 \\
+8 - 10 \\
+12 - 15
+\end{bmatrix}
+&& \text{(definition of matrix-vector multiplication)}
+\\
+&= \begin{bmatrix} -1 \\ -2 \\ -3 \end{bmatrix}
+&& \text{(subtract)}
+\ea
+$$
+
+The [dot product](linear-algebra.qmd#def-dot-product) of $\vecf{v}$ and $\vecf{w}$ is
+
+$$
+\ba
+\tprod{\vecf{v}}{\vecf{w}}
+&= 4 \cd 1 + 5 \cd (-1)
+&& \text{(definition of the dot product)}
+\\
+&= -1
+&& \text{(multiply and add)}
+\ea
+$$
+
+and $(-1)\,\vecf{u} = (-1, -2, -3)$ is the same vector,
+as @thm-outer-product-matvec says.
+
+<!-- no-figure: the example multiplies one small matrix by a vector -->
+
+:::

@@ -1,12 +1,12 @@
 :::{#sol-extend-basis-practice}
 
 One answer is $\vecf{e}_2$ and $\vecf{e}_3$.
-The list $\vecf{v}_1$ is [linearly independent](#def-linearly-independent),
+The list $\vecf{v}_1$ is [linearly independent](linear-algebra-subspaces.qmd#def-linearly-independent),
 since $\vecf{v}_1 \ne \vzero$.
 $\vecf{e}_2 = \tp{(0, 1, 0)}$ is not a multiple of $\vecf{v}_1$,
 whose first two entries match,
 so by @thm-add-outside-span the list $\vecf{v}_1, \vecf{e}_2$ is linearly independent.
-Every vector in its [span](#def-span) has third entry $0$,
+Every vector in its [span](linear-algebra-subspaces.qmd#def-span) has third entry $0$,
 so $\vecf{e}_3$ is outside it,
 and $\vecf{v}_1, \vecf{e}_2, \vecf{e}_3$ is linearly independent too.
 These three vectors span $\reals^3$,

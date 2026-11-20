@@ -2,7 +2,7 @@
 #### Finding the nullity of a $3 \times 3$ matrix
 
 The [nullity](#def-nullity) of a [matrix](linear-algebra-matrices.qmd#def-matrix)
-is the [dimension](linear-algebra-subspaces.qmd#def-dimension) of its [null space](#def-null-space).
+is the [dimension](linear-algebra-bases.qmd#def-dimension) of its [null space](linear-algebra-column-null-space.qmd#def-null-space).
 Let
 
 $$
@@ -14,7 +14,7 @@ Find $\operatorname{nullity}(\matr{A})$.
 ::: {.callout-tip}
 #### Hint
 
-Write out $\matr{A}\vecf{x}$, find the [null space](#def-null-space), and then find a [basis](linear-algebra-subspaces.qmd#def-basis) of it.
+Write out $\matr{A}\vecf{x}$, find the [null space](linear-algebra-column-null-space.qmd#def-null-space), and then find a [basis](linear-algebra-bases.qmd#def-basis) of it.
 
 :::
 

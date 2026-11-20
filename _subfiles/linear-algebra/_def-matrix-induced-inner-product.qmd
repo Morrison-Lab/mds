@@ -1,13 +1,15 @@
 :::{#def-matrix-induced-inner-product}
 #### Matrix-induced inner product ($\matr{A}$-inner product)
 
-Let $\matr{A}$ be a $p \times p$ symmetric positive definite matrix (@def-positive-definite)
-($\matr{A} = \tp{\matr{A}}$ and $\qform{\matr{A}}{\vx} > 0$ for all nonzero $\vx \in \reals^p$).
+Let $\matr{A}$ be a $p \times p$ [symmetric](linear-algebra-special-matrices.qmd#def-symmetric-matrix) [positive definite matrix](#def-positive-definite).
 The **matrix-induced inner product** (or **$\matr{A}$-inner product**)
-on $\reals^p$ is defined for all $\vx, \vy \in \reals^p$ by
+on $\reals^p$
+is the [symmetric bilinear form](linear-algebra-special-matrices.qmd#def-symmetric-bilinear-form) of $\matr{A}$,
+used as an [inner product](linear-algebra-inner-products.qmd#def-inner-product):
+[for all](https://morrison-lab.github.io/mcs/proof-writing.html#def-universal-quantifier) $\vx, \vy \in \reals^p$,
 
 $$
-\iprod{\vx}{\vy}_{\matr{A}} \eqdef \tp{\vx} \matr{A} \vy.
+\iprod{\vx}{\vy}_{\matr{A}} \eqdef \bformf{\matr{A}}{\vx}{\vy}.
 $$
 
 :::

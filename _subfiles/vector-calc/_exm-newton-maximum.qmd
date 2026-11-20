@@ -8,7 +8,7 @@ whose [second derivative](calculus-derivatives.qmd#def-second-derivative) at $-2
 so it is a strict local minimizer of $-f$ (@thm-second-order-condition),
 that is, $f$ is strictly larger at $-2$ than at all nearby points.
 [Newton's method](#def-newton-method) looks only for a stationary point.
-In this example, the [Hessian](vector-calculus.qmd#def-hessian) $H = f''(x) = 2x$ is negative at every [iterate](#def-iterate).
+In this example, the [Hessian](vector-calculus-hessian.qmd#def-hessian) $H = f''(x) = 2x$ is negative at every [iterate](#def-iterate).
 If $H < 0$, then @thm-newton-model does not apply,
 because it requires a [positive definite](linear-algebra.qmd#def-positive-definite) Hessian.
 Instead, the [quadratic approximation](#def-quadratic-model) $\quadmodelf{\step} = f + g\,\step + \tfrac{1}{2} H \step^2$

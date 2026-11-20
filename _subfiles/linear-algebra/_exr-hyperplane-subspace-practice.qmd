@@ -2,8 +2,8 @@
 #### Checking that a normal vector is orthogonal to a hyperplane
 
 Part 3 of @thm-hyperplane-subspace says that,
-for a [hyperplane](linear-algebra-matrices.qmd#def-hyperplane),
-its [normal vector](linear-algebra-matrices.qmd#def-normal-vector) is [orthogonal](linear-algebra-vectors.qmd#def-orthogonal-vectors)
+for a [hyperplane](linear-algebra-linear-maps.qmd#def-hyperplane),
+its [normal vector](linear-algebra-linear-maps.qmd#def-normal-vector) is [orthogonal](linear-algebra-vectors.qmd#def-orthogonal-vectors)
 to the difference of any two of its points.
 Let $\mathcal{H} = \cb{\vx \in \reals^3 : 2 x_1 - x_2 + x_3 - 4 = 0}$,
 with normal vector $\vec{w} = (2, -1, 1)$.

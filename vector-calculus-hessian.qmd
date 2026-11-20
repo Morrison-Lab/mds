@@ -1,0 +1,15 @@
+---
+title: "Second Partial Derivatives and the Hessian"
+format:
+  html: default
+  revealjs:
+    output-file: vector-calculus-hessian-slides.html
+  pdf:
+    output-file: vector-calculus-hessian-handout.pdf
+  docx:
+    output-file: vector-calculus-hessian.docx
+---
+
+{{< include latex-macros/macros.qmd >}}
+
+{{< include mds/_subfiles/_sec_vector_calc_hessian.qmd >}}

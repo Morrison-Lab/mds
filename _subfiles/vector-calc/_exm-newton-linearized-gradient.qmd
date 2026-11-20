@@ -21,7 +21,7 @@ $$ {#eq-newton-linearized-gradient-cubic}
 so the next [iterate](#def-iterate) is $-2.5 + 0.45 = -2.05$,
 the point where the [tangent line](calculus-derivatives.qmd#def-tangent-line) in @fig-gradient-linear-approximation crosses $0$.
 The [Newton's method](#def-newton-method) iteration $x^{(t+1)} = \tfrac{1}{2} \paren{x^{(t)} + 4 / x^{(t)}}$ of @exm-newton-method gives the same iterate.
-Here $H = [-5]$ is not [positive definite](linear-algebra-special-matrices.qmd#def-positive-definite),
+Here $H = [-5]$ is not [positive definite](linear-algebra-definite-matrices.qmd#def-positive-definite),
 so @thm-newton-model does not describe this step,
 but @thm-newton-linearized-gradient does.
 

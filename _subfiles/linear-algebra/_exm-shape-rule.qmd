@@ -1,0 +1,20 @@
+:::{#exm-shape-rule}
+#### Shape of a product of three matrices
+
+<!-- no-figure: the example works with shapes only, so there are no values to plot -->
+
+Let $\matr{A}$ be $2 \times 3$,
+let $\matr{B}$ be $3 \times 4$,
+and let $\vx \in \reals^4$,
+which is a $4 \times 1$ [matrix](linear-algebra-matrices.qmd#def-matrix).
+Apply the [shape rule](#def-shape-rule) one [product](#def-matrix-mult) at a time:
+
+- $\matr{A}\matr{B}$ is $(2 \times 3)(3 \times 4)$.
+  The inner pair $3, 3$ matches,
+  so the product is $2 \times 4$.
+- $(\matr{A}\matr{B})\vx$ is $(2 \times 4)(4 \times 1)$.
+  The inner pair $4, 4$ matches,
+  so the product is $2 \times 1$,
+  a vector in $\reals^2$.
+
+:::

@@ -25,8 +25,8 @@ $$
 $$
 
 (A derivative in one variable with the others held fixed is a
-[partial derivative](vector-calculus.qmd#def-partial-derivative),
-defined on the vector calculus page.)
+[partial derivative](vector-calculus-gradients.qmd#def-partial-derivative),
+defined on the [Partial Derivatives and Gradients](vector-calculus-gradients.qmd) page.)
 The arctangent $\arctan$ is the inverse of the tangent function from trigonometry;
 all this example needs is that $\dif{}{x}\arctan(x) = \frac{1}{1 + x^2}$,
 $\arctan(0) = 0$, and $\arctan(1) = \frac{\pi}{4}$.

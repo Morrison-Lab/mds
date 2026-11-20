@@ -1,9 +1,13 @@
 ::: {#def-taylor-polynomial}
 #### Taylor polynomial (Taylor expansion)
+<!-- def-equiv-ok: the second line writes out the terms of the defining sum, not a result -->
+<!-- no-graph: the graph is tracked in mds#859 -->
+<!-- check-definition-expectation: allow -->
+<!-- The sum above weights derivatives by powers of (x - x0), not probabilities, so no expectation fits. -->
 
 Let $f$ be a function that has at least $n$ derivatives at a point $x_0$.
 The **Taylor polynomial** (also called the **Taylor expansion**)
-of [degree](algebra-exponentials.qmd#def-polynomial-degree) $n$ for $f$ centered at $x_0$ is:
+of [degree](algebra-polynomials.qmd#def-polynomial-degree) $n$ for $f$ centered at $x_0$ is:
 
 $$
 \begin{aligned}

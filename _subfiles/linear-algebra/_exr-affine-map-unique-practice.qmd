@@ -1,7 +1,7 @@
 :::{#exr-affine-map-unique-practice}
 #### Matching the offsets of two formulas for one affine map
 
-@thm-affine-map-unique says that an [affine map](#def-affine-map) has only one [matrix](#def-matrix) and one [offset](#def-affine-offset),
+@thm-affine-map-unique says that an [affine map](#def-affine-map) has only one [matrix](linear-algebra-matrices.qmd#def-matrix) and one [offset](#def-affine-offset),
 so two ways of writing the same map must agree term by term.
 For $c \in \reals$,
 suppose that

@@ -59,7 +59,9 @@ website:
           - text: "Overview"
             href: algebra.qmd
           - algebra-basics.qmd
+          - algebra-convexity.qmd
           - algebra-sums.qmd
+          - algebra-polynomials.qmd
           - algebra-exponentials.qmd
           - algebra-trigonometry.qmd
           - algebra-complex.qmd
@@ -87,16 +89,33 @@ website:
             href: linear-algebra.qmd
           - linear-algebra-vectors.qmd
           - linear-algebra-matrices.qmd
+          - linear-algebra-matrix-multiplication.qmd
+          - linear-algebra-linear-maps.qmd
           - linear-algebra-subspaces.qmd
+          - linear-algebra-bases.qmd
+          - linear-algebra-column-null-space.qmd
           - linear-algebra-rank-nullity.qmd
+          - linear-algebra-affine-subspaces.qmd
           - linear-algebra-direct-sums.qmd
+          - linear-algebra-orthogonal-complements.qmd
           - linear-algebra-inner-products.qmd
+          - linear-algebra-orthonormal-bases.qmd
           - linear-algebra-special-matrices.qmd
+          - linear-algebra-decompositions.qmd
+          - linear-algebra-definite-matrices.qmd
           - linear-algebra-projections.qmd
+          - linear-algebra-generalized-inverses.qmd
+          - linear-algebra-least-squares.qmd
           - linear-algebra-diagonalization.qmd
+          - linear-algebra-cholesky.qmd
           - linear-algebra-complex.qmd
       - text: "Vector Calculus"
-        href: vector-calculus.qmd
+        menu:
+          - text: "Overview"
+            href: vector-calculus.qmd
+          - vector-calculus-gradients.qmd
+          - vector-calculus-derivative-rules.qmd
+          - vector-calculus-hessian.qmd
       - text: "Optimization"
         menu:
           - text: "Overview"
@@ -137,7 +156,9 @@ website:
         href: algebra.qmd
         contents:
           - algebra-basics.qmd
+          - algebra-convexity.qmd
           - algebra-sums.qmd
+          - algebra-polynomials.qmd
           - algebra-exponentials.qmd
           - algebra-trigonometry.qmd
           - algebra-complex.qmd
@@ -162,15 +183,32 @@ website:
         contents:
           - linear-algebra-vectors.qmd
           - linear-algebra-matrices.qmd
+          - linear-algebra-matrix-multiplication.qmd
+          - linear-algebra-linear-maps.qmd
           - linear-algebra-subspaces.qmd
+          - linear-algebra-bases.qmd
+          - linear-algebra-column-null-space.qmd
           - linear-algebra-rank-nullity.qmd
+          - linear-algebra-affine-subspaces.qmd
           - linear-algebra-direct-sums.qmd
+          - linear-algebra-orthogonal-complements.qmd
           - linear-algebra-inner-products.qmd
+          - linear-algebra-orthonormal-bases.qmd
           - linear-algebra-special-matrices.qmd
+          - linear-algebra-decompositions.qmd
+          - linear-algebra-definite-matrices.qmd
           - linear-algebra-projections.qmd
+          - linear-algebra-generalized-inverses.qmd
+          - linear-algebra-least-squares.qmd
           - linear-algebra-diagonalization.qmd
+          - linear-algebra-cholesky.qmd
           - linear-algebra-complex.qmd
-      - vector-calculus.qmd
+      - section: "Vector Calculus"
+        href: vector-calculus.qmd
+        contents:
+          - vector-calculus-gradients.qmd
+          - vector-calculus-derivative-rules.qmd
+          - vector-calculus-hessian.qmd
       - section: "Optimization"
         href: optimization.qmd
         contents:

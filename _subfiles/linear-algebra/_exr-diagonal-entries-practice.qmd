@@ -2,7 +2,7 @@
 #### Adding the diagonal entries of a square matrix
 
 The [sum](algebra-sums.qmd#def-summation) of the [diagonal entries](#def-diagonal-entry) of a [square matrix](#def-square-matrix)
-summarizes that [matrix](#def-matrix) in one number,
+summarizes that [matrix](linear-algebra-matrices.qmd#def-matrix) in one number,
 called its [trace](linear-algebra-special-matrices.qmd#def-trace).
 Let
 

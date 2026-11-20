@@ -1,0 +1,13 @@
+:::{#def-circle}
+#### Circle
+
+For a [point](#def-real-coordinate-space) $\va$ in the [real plane](#def-real-coordinate-space) $\reals^2$ and a number $r > 0$,
+the **circle**
+[@wikipedia_circle]
+with center $\va$ and radius $r$
+is the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of points in $\reals^2$
+at [Euclidean distance](#def-euclidean-distance) $r$ from $\va$:
+
+$$\cb{\vx \in \reals^2 : \norm{\vx - \va} = r}$$
+
+:::

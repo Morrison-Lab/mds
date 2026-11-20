@@ -19,7 +19,7 @@ $$
 \condnum = \condnum(\matr{S}),
 $$
 
-the [condition number](linear-algebra-special-matrices.qmd#def-condition-number) of $\matr{S}$.
+which is $\matr{S}$'s [condition number](linear-algebra-definite-matrices.qmd#def-condition-number).
 
 :::
 

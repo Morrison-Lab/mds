@@ -9,7 +9,7 @@ $$\dprod{\vx}{\vy} = \norm{\vx}_2 \norm{\vy}_2 \cos\angpar,$$
 so:
 
 - $\dprod{\vx}{\vy} > 0$
-  when the vectors point broadly in the same [direction](vector-calculus.qmd#def-direction) ($\angpar < \pi/2$).
+  when the vectors point broadly in the same [direction](vector-calculus-gradients.qmd#def-direction) ($\angpar < \pi/2$). <!-- check-term-links: allow: point is a verb here -->
 - $\dprod{\vx}{\vy} = 0$
   exactly when the vectors are [orthogonal](linear-algebra-vectors.qmd#def-orthogonal-vectors) ($\angpar = \pi/2$).
 - $\dprod{\vx}{\vy} < 0$

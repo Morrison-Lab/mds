@@ -31,7 +31,7 @@ goes on to the page that now holds it.
 - @calclifesaver
 - @larsonCalc11e
 - @problifesavercalc
-  The calculus review exercises and worked solutions across these pages and in [Vector Calculus](vector-calculus.qmd#def-partial-derivative) are adapted from this supplemental review chapter.
+  The calculus review exercises and worked solutions across these pages and on the [Partial Derivatives and Gradients](vector-calculus-gradients.qmd) page are adapted from this supplemental review chapter. <!-- check-term-links: allow: worked solutions are answers to exercises -->
    - <http://www.youtube.com/watch?v=xYzQL0TUtBA>
    - <http://www.youtube.com/watch?v=Ps2SBo_WjoE>
 - @realanalysislifesaver (the rigorous foundations behind these results)

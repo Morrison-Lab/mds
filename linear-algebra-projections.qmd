@@ -1,5 +1,5 @@
 ---
-title: "Projections and Linear Systems"
+title: "Design Matrices and Projections"
 format:
   html: default
   revealjs:

@@ -2,13 +2,13 @@
 #### An open ball is convex
 
 Let $\vx_0 \in \reals^p$ and $r > 0$.
-The [open ball](vector-calculus.qmd#def-ball) of radius $r$ around $\vx_0$ is a [convex set](#def-convex-set).
+The [open ball](vector-calculus-hessian.qmd#def-ball) of radius $r$ around $\vx_0$ is a [convex set](#def-convex-set).
 
 :::
 
 ::: proof
 
-Call the [open ball](vector-calculus.qmd#def-ball) $B$, and let $\vx, \vy \in B$ and $t \in [0, 1]$.
+Call the [open ball](vector-calculus-hessian.qmd#def-ball) $B$, and let $\vx, \vy \in B$ and $t \in [0, 1]$.
 The [triangle inequality](linear-algebra-inner-products.qmd#thm-triangle-inequality)
 and the [absolute homogeneity of the norm](linear-algebra-inner-products.qmd#thm-norm-properties) give
 
