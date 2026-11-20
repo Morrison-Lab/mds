@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-11-20 12:57:53 (PST)
+Last modified: 2026-11-20 14:19:57 (PST)
 
 # 1 Limits and derivatives
 
@@ -97,7 +97,7 @@ Last modified: 2026-11-20 12:57:53 (PST)
 >
 > $$\frac{f(c + h) - f(c)}{h},$$
 >
-> the [slope](algebra-exponentials.llms.md#def-slope) of the line through the points $(c, f(c))$ and $(c + h, f(c + h))$.
+> the [slope](algebra-polynomials.llms.md#def-slope) of the line through the points $(c, f(c))$ and $(c + h, f(c + h))$.
 
 > **NOTE:**
 >
@@ -238,7 +238,7 @@ Last modified: 2026-11-20 12:57:53 (PST)
 
 > **NOTE:**
 >
-> **Theorem 1 (Constant rule)** If $c$ is [constant with respect to](vector-calculus.llms.md#def-constant-wrt-vector) $x$, then
+> **Theorem 1 (Constant rule)** If $c$ is [constant with respect to](vector-calculus-derivative-rules.llms.md#def-constant-wrt-vector) $x$, then
 >
 > $$\frac{\partial}{\partial x}c = 0$$
 
@@ -250,7 +250,7 @@ Last modified: 2026-11-20 12:57:53 (PST)
 
 > **NOTE:**
 >
-> **Theorem 2 (Constant multiple rule)** If $a$ is [constant with respect to](vector-calculus.llms.md#def-constant-wrt-vector) $x$ and $y$ is a [differentiable function](#def-differentiable) of $x$, then: $$\frac{\partial}{\partial x}ay = a \frac{\partial y}{\partial x}$$
+> **Theorem 2 (Constant multiple rule)** If $a$ is [constant with respect to](vector-calculus-derivative-rules.llms.md#def-constant-wrt-vector) $x$ and $y$ is a [differentiable function](#def-differentiable) of $x$, then: $$\frac{\partial}{\partial x}ay = a \frac{\partial y}{\partial x}$$
 
 > **TIP:**
 >
@@ -885,11 +885,11 @@ Last modified: 2026-11-20 12:57:53 (PST)
 
 > **NOTE:**
 >
-> **Definition 16 (Tangent line)** Let $f$ be differentiable at $c$ ([Definition 6](#def-differentiable)). The **tangent line** to the [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $f$ at $c$ is the graph of the [affine function](algebra-exponentials.llms.md#def-affine-function)
+> **Definition 16 (Tangent line)** Let $f$ be differentiable at $c$ ([Definition 6](#def-differentiable)). The **tangent line** to the [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $f$ at $c$ is the graph of the [affine function](algebra-polynomials.llms.md#def-affine-function)
 >
 > $$x \mapsto f(c) + f'(c)\,(x - c),$$
 >
-> the line through the point $(c, f(c))$ with [slope](algebra-exponentials.llms.md#def-slope) $f'(c)$. The slope $f'(c)$ is also called the **tangent slope** of $f$ at $c$.
+> the line through the point $(c, f(c))$ with [slope](algebra-polynomials.llms.md#def-slope) $f'(c)$. The slope $f'(c)$ is also called the **tangent slope** of $f$ at $c$.
 
 > **NOTE:**
 >
@@ -918,11 +918,11 @@ $$f(w + \varepsilon) \approx f(w) + \varepsilon\,\frac{d }{d w}f(w) \tag{1}$$
 >
 > $$\hat{f}_w(\varepsilon) = f(w) + \varepsilon\,\frac{d }{d w}f(w)$$
 >
-> so [Equation 1](#eq-linear-approx) says $f(w + \varepsilon) \approx \hat{f}_w(\varepsilon)$ for small $\varepsilon$. [Figure 2](#fig-linear-approx) illustrates this approximation interactively for a [quadratic function](algebra-exponentials.llms.md#def-quadratic-polynomial).
+> so [Equation 1](#eq-linear-approx) says $f(w + \varepsilon) \approx \hat{f}_w(\varepsilon)$ for small $\varepsilon$. [Figure 2](#fig-linear-approx) illustrates this approximation interactively for a [quadratic function](algebra-polynomials.llms.md#def-quadratic-polynomial).
 
 > **NOTE:**
 >
-> *Remark 2* (The “linear” approximation is affine). The linear approximation $\hat{f}_w$ ([Definition 17](#def-linear-approximation)) is an [affine function](algebra-exponentials.llms.md#def-affine-function) of the step $\varepsilon$: its [slope](algebra-exponentials.llms.md#def-slope) is $\frac{d }{d w}f(w)$ and its [intercept](algebra-exponentials.llms.md#def-intercept) is $f(w)$. It is [linear](algebra-exponentials.llms.md#def-linear-function) in $\varepsilon$ only when $f(w) = 0$. The name “linear approximation” uses “linear” in the looser sense of elementary algebra ([remark](algebra-exponentials.llms.md#rem-linear-function-terminology)). Boyd and Vandenberghe [\[15\]](#ref-boyd2018vmls), section 2.2, treats the [first-order Taylor approximation](#def-linear-approximation) as an affine function for [functions](https://morrison-lab.github.io/mcs/functions.html#def-function) of several variables as well.
+> *Remark 2* (The “linear” approximation is affine). The linear approximation $\hat{f}_w$ ([Definition 17](#def-linear-approximation)) is an [affine function](algebra-polynomials.llms.md#def-affine-function) of the step $\varepsilon$: its [slope](algebra-polynomials.llms.md#def-slope) is $\frac{d }{d w}f(w)$ and its [intercept](algebra-polynomials.llms.md#def-intercept) is $f(w)$. It is [linear](algebra-polynomials.llms.md#def-linear-function) in $\varepsilon$ only when $f(w) = 0$. The name “linear approximation” uses “linear” in the looser sense of elementary algebra ([remark](algebra-polynomials.llms.md#rem-linear-function-terminology)). Boyd and Vandenberghe [\[15\]](#ref-boyd2018vmls), section 2.2, treats the [first-order Taylor approximation](#def-linear-approximation) as an affine function for [functions](https://morrison-lab.github.io/mcs/functions.html#def-function) of several variables as well.
 
 > **NOTE:**
 >

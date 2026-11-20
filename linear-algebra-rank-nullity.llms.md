@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-20 12:57:53 (PST)
+Last modified: 2026-11-20 14:19:57 (PST)
 
 # 1 Rank-nullity and rank factorization
 
@@ -17,7 +17,7 @@ Last modified: 2026-11-20 12:57:53 (PST)
 > - the dimension of a subspace as the largest number of linearly independent vectors in it, or the smallest number of vectors that span it
 > - the properties of a rank factorization $\mathbf{A} = \mathbf{C}\mathbf{R}$ ($\operatorname{rank}(\mathbf{C}) = \operatorname{rank}(\mathbf{R}) = r$, $\mathcal{C}(\mathbf{A}) = \mathcal{C}(\mathbf{C})$, $\mathcal{N}(\mathbf{A}) = \mathcal{N}(\mathbf{R})$), the fact that it is not unique, and the second proof of $\operatorname{rank}(\mathbf{A}) = \operatorname{rank}({\mathbf{A}}^{\top})$ that it gives
 > - calling $\mathbf{A}{\mathbf{A}}^{\top}$ a Gram matrix, and the equation $\mathcal{N}(\mathbf{A}{\mathbf{A}}^{\top}) = \mathcal{N}({\mathbf{A}}^{\top})$ ([Theorem 6 in Column Space and Null Space](linear-algebra-column-null-space.llms.md#thm-null-gram) applied to ${\mathbf{A}}^{\top}$ gives it)
-> - the statement that $\mathcal{C}(\mathbf{A})$ and $\mathcal{N}({\mathbf{A}}^{\top})$ share only the zero vector (it follows from [Theorem 10 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#thm-fundamental-subspaces))
+> - the statement that $\mathcal{C}(\mathbf{A})$ and $\mathcal{N}({\mathbf{A}}^{\top})$ share only the zero vector (it follows from [Theorem 6 in Orthogonal Complements and the Fundamental Theorem](linear-algebra-orthogonal-complements.llms.md#thm-fundamental-subspaces))
 
 > **NOTE:**
 >
@@ -27,13 +27,13 @@ Last modified: 2026-11-20 12:57:53 (PST)
 
 > **NOTE:**
 >
-> *Proof*. Let $r = \operatorname{rank}(\mathbf{A})$ ([Definition 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-rank)), and choose $r$ linearly independent columns of $\mathbf{A}$; by [Definition 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-rank), no larger set of columns is linearly independent. We show the chosen columns are a basis of $\mathcal{C}(\mathbf{A})$ ([Definition 6 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-basis)).
+> *Proof*. Let $r = \operatorname{rank}(\mathbf{A})$ ([Definition 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-rank)), and choose $r$ linearly independent columns of $\mathbf{A}$; by [Definition 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-rank), no larger set of columns is linearly independent. We show the chosen columns are a basis of $\mathcal{C}(\mathbf{A})$ ([Definition 1 in Bases and Dimension](linear-algebra-bases.llms.md#def-basis)).
 >
-> **Every column is in the span of the chosen columns.** A chosen column is in that span trivially. If some unchosen column $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j$ were not in the span, then adding it to the chosen columns would give $r + 1$ linearly independent columns ([Theorem 8 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-add-outside-span)), more than $r$. So every column of $\mathbf{A}$ is in the span of the chosen columns.
+> **Every column is in the span of the chosen columns.** A chosen column is in that span trivially. If some unchosen column $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j$ were not in the span, then adding it to the chosen columns would give $r + 1$ linearly independent columns ([Theorem 3 in Bases and Dimension](linear-algebra-bases.llms.md#thm-add-outside-span)), more than $r$. So every column of $\mathbf{A}$ is in the span of the chosen columns.
 >
 > **The chosen columns span** $\mathcal{C}(\mathbf{A})$. The span of the chosen columns is a subspace ([Theorem 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-span-subspace)), so it is closed under addition and scalar multiplication, and it contains every linear combination of the columns of $\mathbf{A}$. By [Theorem 1 in Column Space and Null Space](linear-algebra-column-null-space.llms.md#thm-column-space-span), those combinations make up $\mathcal{C}(\mathbf{A})$, so $\mathcal{C}(\mathbf{A})$ is contained in the span of the chosen columns. The chosen columns are themselves columns of $\mathbf{A}$, so their span is contained in $\mathcal{C}(\mathbf{A})$, and the two sets are equal.
 >
-> The chosen columns are linearly independent and span $\mathcal{C}(\mathbf{A})$, so they are a basis of it, and $\dim\mathopen{}\left(\mathcal{C}(\mathbf{A})\right)\mathclose{} = r$ ([Definition 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)). If $r = 0$, every column is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_m$, $\mathcal{C}(\mathbf{A}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_m\right\}\mathclose{}$, and both sides are $0$.
+> The chosen columns are linearly independent and span $\mathcal{C}(\mathbf{A})$, so they are a basis of it, and $\dim\mathopen{}\left(\mathcal{C}(\mathbf{A})\right)\mathclose{} = r$ ([Definition 4 in Bases and Dimension](linear-algebra-bases.llms.md#def-dimension)). If $r = 0$, every column is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_m$, $\mathcal{C}(\mathbf{A}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_m\right\}\mathclose{}$, and both sides are $0$.
 
 > **NOTE:**
 >
@@ -41,7 +41,7 @@ Last modified: 2026-11-20 12:57:53 (PST)
 
 > **NOTE:**
 >
-> **Exercise 1 (Finding a rank from the column space)** [Theorem 1](#thm-rank-dim) reads the [rank](linear-algebra-subspaces.llms.md#def-rank) of a [matrix](linear-algebra-matrices.llms.md#def-matrix) off the [dimension](linear-algebra-subspaces.llms.md#def-dimension) of its [column space](linear-algebra-column-null-space.llms.md#def-column-space). Let
+> **Exercise 1 (Finding a rank from the column space)** [Theorem 1](#thm-rank-dim) reads the [rank](linear-algebra-subspaces.llms.md#def-rank) of a [matrix](linear-algebra-matrices.llms.md#def-matrix) off the [dimension](linear-algebra-bases.llms.md#def-dimension) of its [column space](linear-algebra-column-null-space.llms.md#def-column-space). Let
 >
 > $$\mathbf{A} = \begin{bmatrix}1 & 2 \\ 2 & 4 \\ 3 & 6\end{bmatrix}.$$
 >
@@ -57,7 +57,7 @@ Last modified: 2026-11-20 12:57:53 (PST)
 >
 > $$\mathcal{C}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\{(1, 2, 3), (2, 4, 6)\right\}\mathclose{} = \operatorname{span}\mathopen{}\left\{(1, 2, 3)\right\}\mathclose{}.$$
 >
-> The single nonzero vector $(1, 2, 3)$ is a [basis](linear-algebra-subspaces.llms.md#def-basis) of that [span](linear-algebra-subspaces.llms.md#def-span), so $\dim\mathopen{}\left(\mathcal{C}(\mathbf{A})\right)\mathclose{} = 1$, and by [Theorem 1](#thm-rank-dim), ${\operatorname{rank}\mathopen{}\left(\mathbf{A}\right)\mathclose{}} = 1$.
+> The single nonzero vector $(1, 2, 3)$ is a [basis](linear-algebra-bases.llms.md#def-basis) of that [span](linear-algebra-subspaces.llms.md#def-span), so $\dim\mathopen{}\left(\mathcal{C}(\mathbf{A})\right)\mathclose{} = 1$, and by [Theorem 1](#thm-rank-dim), ${\operatorname{rank}\mathopen{}\left(\mathbf{A}\right)\mathclose{}} = 1$.
 
 > **NOTE:**
 >
@@ -84,7 +84,7 @@ Last modified: 2026-11-20 12:57:53 (PST)
 
 > **NOTE:**
 >
-> *Proof*. Let $\nu= \operatorname{nullity}(\mathbf{A})$. Choose a basis $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_\nu$ of $\mathcal{N}(\mathbf{A})$, and extend it to a basis $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_\nu, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_{n - \nu}$ of $\mathbb{R}^n$ ([Theorem 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-extend-basis)); it has $n$ vectors, because every basis of $\mathbb{R}^n$ has $\dim(\mathbb{R}^n) = n$ vectors ([Theorem 7 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-basis-size), [Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension)). We show that $\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_1, \ldots, \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_{n - \nu}$ are a basis of $\mathcal{C}(\mathbf{A})$, using [Theorem 4 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-matvec-linear) to apply $\mathbf{A}$ to linear combinations.
+> *Proof*. Let $\nu= \operatorname{nullity}(\mathbf{A})$. Choose a basis $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_\nu$ of $\mathcal{N}(\mathbf{A})$, and extend it to a basis $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_\nu, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_{n - \nu}$ of $\mathbb{R}^n$ ([Theorem 4 in Bases and Dimension](linear-algebra-bases.llms.md#thm-extend-basis)); it has $n$ vectors, because every basis of $\mathbb{R}^n$ has $\dim(\mathbb{R}^n) = n$ vectors ([Theorem 2 in Bases and Dimension](linear-algebra-bases.llms.md#thm-basis-size), [Example 6 in Bases and Dimension](linear-algebra-bases.llms.md#exm-dimension)). We show that $\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_1, \ldots, \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_{n - \nu}$ are a basis of $\mathcal{C}(\mathbf{A})$, using [Theorem 4 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-matvec-linear) to apply $\mathbf{A}$ to linear combinations.
 >
 > **They are linearly independent.** Suppose $\sum_{i=1}^{n-\nu} v_i\,\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_i = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_m$. Then $\mathbf{A}\,\mathopen{}\left(\sum_i v_i \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_i\right)\mathclose{} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_m$ ([Theorem 4 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-matvec-linear)), so $\sum_i v_i \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}_i \in \mathcal{N}(\mathbf{A})$, and it equals $\sum_{j=1}^{\nu} u_j \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_j$ for some numbers $u_j$, since the $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_j$ span $\mathcal{N}(\mathbf{A})$. Moving everything to one side,
 >
@@ -119,7 +119,7 @@ Last modified: 2026-11-20 12:57:53 (PST)
 
 > **NOTE:**
 >
-> **Exercise 2 (Finding the nullity of a** $3 \times 3$ matrix) The [nullity](#def-nullity) of a [matrix](linear-algebra-matrices.llms.md#def-matrix) is the [dimension](linear-algebra-subspaces.llms.md#def-dimension) of its [null space](linear-algebra-column-null-space.llms.md#def-null-space). Let
+> **Exercise 2 (Finding the nullity of a** $3 \times 3$ matrix) The [nullity](#def-nullity) of a [matrix](linear-algebra-matrices.llms.md#def-matrix) is the [dimension](linear-algebra-bases.llms.md#def-dimension) of its [null space](linear-algebra-column-null-space.llms.md#def-null-space). Let
 >
 > $$\mathbf{A} = \begin{bmatrix}2 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 5\end{bmatrix}.$$
 >
@@ -127,11 +127,11 @@ Last modified: 2026-11-20 12:57:53 (PST)
 >
 > > **TIP:**
 > >
-> > Write out $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, find the [null space](linear-algebra-column-null-space.llms.md#def-null-space), and then find a [basis](linear-algebra-subspaces.llms.md#def-basis) of it.
+> > Write out $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, find the [null space](linear-algebra-column-null-space.llms.md#def-null-space), and then find a [basis](linear-algebra-bases.llms.md#def-basis) of it.
 
 > **NOTE:**
 >
-> *Solution 2*. For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (x_1, x_2, x_3)$, $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (2 x_1, 0, 5 x_3)$, which is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_3$ exactly when $x_1 = 0$ and $x_3 = 0$. So $\mathcal{N}(\mathbf{A}) = \mathopen{}\left\{(0, x_2, 0) : x_2 \in \mathbb{R}\right\}\mathclose{} = \operatorname{span}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2\right\}\mathclose{}$. The single nonzero vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2$ is a [basis](linear-algebra-subspaces.llms.md#def-basis) of it, so $\operatorname{nullity}(\mathbf{A}) = 1$.
+> *Solution 2*. For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (x_1, x_2, x_3)$, $\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (2 x_1, 0, 5 x_3)$, which is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_3$ exactly when $x_1 = 0$ and $x_3 = 0$. So $\mathcal{N}(\mathbf{A}) = \mathopen{}\left\{(0, x_2, 0) : x_2 \in \mathbb{R}\right\}\mathclose{} = \operatorname{span}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2\right\}\mathclose{}$. The single nonzero vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2$ is a [basis](linear-algebra-bases.llms.md#def-basis) of it, so $\operatorname{nullity}(\mathbf{A}) = 1$.
 
 > **NOTE:**
 >
@@ -175,7 +175,7 @@ Last modified: 2026-11-20 12:57:53 (PST)
 > && \text{(}\href{#thm-rank-dim}{\text{Theorem~1}}\text{)}
 > \\
 > &\le \dim\mathopen{}\left(\mathcal{C}(\mathbf{A})\right)\mathclose{}
-> && \text{(}\href{linear-algebra-subspaces.qmd#thm-dim-bound}{\text{Theorem~10 in Subspaces and Rank}}\text{, part 2)}
+> && \text{(}\href{linear-algebra-bases.qmd#thm-dim-bound}{\text{Theorem~5 in Bases and Dimension}}\text{, part 2)}
 > \\
 > &= \operatorname{rank}(\mathbf{A}).
 > && \text{(}\href{#thm-rank-dim}{\text{Theorem~1}}\text{)}
@@ -394,7 +394,7 @@ Last modified: 2026-11-20 12:57:53 (PST)
 >
 > so $\mathcal{N}(\mathbf{A} \mathbf{B}) = \mathcal{N}(\mathbf{B})$ ([Definition 3 in Column Space and Null Space](linear-algebra-column-null-space.llms.md#def-null-space)), and the two matrices have the same nullity ([Definition 1](#def-nullity)). Both have $k$ columns, so by [Theorem 2](#thm-rank-nullity) they have the same [rank](linear-algebra-subspaces.llms.md#def-rank).
 >
-> **Part 2.** $\mathcal{C}(\mathbf{B})$ is a [subspace](linear-algebra-subspaces.llms.md#def-subspace) of $\mathbb{R}^n$ ([Theorem 1 in Column Space and Null Space](linear-algebra-column-null-space.llms.md#thm-column-space-span)) of [dimension](linear-algebra-subspaces.llms.md#def-dimension) $n$ ([Theorem 1](#thm-rank-dim)), so $\mathcal{C}(\mathbf{B}) = \mathbb{R}^n$ ([Theorem 11 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-subspace-equal-dim)). Every vector of $\mathcal{C}(\mathbf{A} \mathbf{B})$ is $\mathbf{A}\,(\mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ for some $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ ([Definition 1 in Column Space and Null Space](linear-algebra-column-null-space.llms.md#def-column-space)), and $\mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ takes every vector of $\mathbb{R}^n$, so $\mathcal{C}(\mathbf{A} \mathbf{B}) = \mathcal{C}(\mathbf{A})$ and the two matrices have the same rank ([Theorem 1](#thm-rank-dim)).
+> **Part 2.** $\mathcal{C}(\mathbf{B})$ is a [subspace](linear-algebra-subspaces.llms.md#def-subspace) of $\mathbb{R}^n$ ([Theorem 1 in Column Space and Null Space](linear-algebra-column-null-space.llms.md#thm-column-space-span)) of [dimension](linear-algebra-bases.llms.md#def-dimension) $n$ ([Theorem 1](#thm-rank-dim)), so $\mathcal{C}(\mathbf{B}) = \mathbb{R}^n$ ([Theorem 6 in Bases and Dimension](linear-algebra-bases.llms.md#thm-subspace-equal-dim)). Every vector of $\mathcal{C}(\mathbf{A} \mathbf{B})$ is $\mathbf{A}\,(\mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ for some $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ ([Definition 1 in Column Space and Null Space](linear-algebra-column-null-space.llms.md#def-column-space)), and $\mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ takes every vector of $\mathbb{R}^n$, so $\mathcal{C}(\mathbf{A} \mathbf{B}) = \mathcal{C}(\mathbf{A})$ and the two matrices have the same rank ([Theorem 1](#thm-rank-dim)).
 
 > **NOTE:**
 >
@@ -489,7 +489,7 @@ Last modified: 2026-11-20 12:57:53 (PST)
 > && \text{(}\href{#thm-centered-data-rank}{\text{Theorem~6}}\text{)}
 > \end{aligned}$$
 >
-> If $n \le p$, then $\operatorname{rank}(\mathbf{S}) \le n - 1 < p$, so $\mathbf{S}$ does not have full column rank, and it is not invertible by [Theorem 1 in Diagonalization and Cholesky](linear-algebra-diagonalization.llms.md#thm-invertible-rank).
+> If $n \le p$, then $\operatorname{rank}(\mathbf{S}) \le n - 1 < p$, so $\mathbf{S}$ does not have full column rank, and it is not invertible by [Theorem 1 in Similarity and Diagonalization](linear-algebra-diagonalization.llms.md#thm-invertible-rank).
 
 > **NOTE:**
 >
@@ -556,7 +556,7 @@ Last modified: 2026-11-20 12:57:53 (PST)
 
 > **NOTE:**
 >
-> *Proof*. $\mathcal{C}(\mathbf{A})$ has dimension $r$ ([Theorem 1](#thm-rank-dim)), so it has a basis $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_r$ ([Theorem 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-extend-basis)); let $\mathbf{C}$ be the $m \times r$ matrix with these columns. Each column $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j$ of $\mathbf{A}$ is in $\mathcal{C}(\mathbf{A})$, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j = r_{1j} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_1 + \cdots + r_{rj} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_r$ for some numbers $r_{ij}$, because the basis spans $\mathcal{C}(\mathbf{A})$. Let $\mathbf{R}$ be the $r \times n$ matrix with entries $r_{ij}$, whose column $j$ is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{r}}\vphantom{r}}_j = (r_{1j}, \ldots, r_{rj})$. Then column $j$ of $\mathbf{C} \mathbf{R}$ is
+> *Proof*. $\mathcal{C}(\mathbf{A})$ has dimension $r$ ([Theorem 1](#thm-rank-dim)), so it has a basis $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_r$ ([Theorem 4 in Bases and Dimension](linear-algebra-bases.llms.md#thm-extend-basis)); let $\mathbf{C}$ be the $m \times r$ matrix with these columns. Each column $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j$ of $\mathbf{A}$ is in $\mathcal{C}(\mathbf{A})$, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j = r_{1j} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_1 + \cdots + r_{rj} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}_r$ for some numbers $r_{ij}$, because the basis spans $\mathcal{C}(\mathbf{A})$. Let $\mathbf{R}$ be the $r \times n$ matrix with entries $r_{ij}$, whose column $j$ is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{r}}\vphantom{r}}_j = (r_{1j}, \ldots, r_{rj})$. Then column $j$ of $\mathbf{C} \mathbf{R}$ is
 >
 > $$\begin{aligned}
 > \mathbf{C} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{r}}\vphantom{r}}_j
@@ -598,7 +598,7 @@ Last modified: 2026-11-20 12:57:53 (PST)
 
 > **NOTE:**
 >
-> **Exercise 12 (Building a rank factorization from a basis of the column space)** [Theorem 7](#thm-rank-factorization) builds a [rank factorization](#def-rank-factorization) from a [basis](linear-algebra-subspaces.llms.md#def-basis) of the [column space](linear-algebra-column-null-space.llms.md#def-column-space). Let
+> **Exercise 12 (Building a rank factorization from a basis of the column space)** [Theorem 7](#thm-rank-factorization) builds a [rank factorization](#def-rank-factorization) from a [basis](linear-algebra-bases.llms.md#def-basis) of the [column space](linear-algebra-column-null-space.llms.md#def-column-space). Let
 >
 > $$\mathbf{A} = \begin{bmatrix}1 & 2 & 3 \\ 2 & 4 & 6 \\ 1 & 0 & 1\end{bmatrix},$$
 >

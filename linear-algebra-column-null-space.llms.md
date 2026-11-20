@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-20 12:57:53 (PST)
+Last modified: 2026-11-20 14:19:57 (PST)
 
 # 1 Column space and null space
 
@@ -517,7 +517,7 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 > && \text{(entries of the rows)}
 > \\
 > &= \sum_{i=1}^{m} \mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{r}}\vphantom{r}}_i\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}_i}^{\top}\right)\mathclose{}_{jk}
-> && \text{(}\href{linear-algebra-inner-products.qmd#def-outer-product}{\text{Definition~17 in Inner Products and Orthogonality}}\text{)}
+> && \text{(}\href{linear-algebra-orthonormal-bases.qmd#def-outer-product}{\text{Definition~3 in Orthonormal Bases, Outer Products and Hilbert Spaces}}\text{)}
 > \\
 > &= \mathopen{}\left(\sum_{i=1}^{m} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{r}}\vphantom{r}}_i\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}_i}^{\top}\right)\mathclose{}_{jk}.
 > && \text{(entries of a sum)}
@@ -527,7 +527,7 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 
 > **NOTE:**
 >
-> **Example 9 (The Gram matrix and a cross-product as sums of outer products)** Let $\mathbf{A} = \begin{bmatrix}1 & 0 \\ 1 & 1 \\ 0 & 1\end{bmatrix}$, $\mathbf{B} = \begin{bmatrix}1 \\ 2 \\ 3\end{bmatrix}$ be the matrices of [Example 7](#exm-cross-product-matrix). The rows of $\mathbf{A}$ are $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{r}}\vphantom{r}}_1 = (1, 0)$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{r}}\vphantom{r}}_2 = (1, 1)$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{r}}\vphantom{r}}_3 = (0, 1)$. Taking $\mathbf{B} = \mathbf{A}$ in [Theorem 5](#thm-cross-product-sum-outer), the [Gram matrix](#def-gram-matrix) is the [sum](algebra-sums.llms.md#def-summation) of the [outer products](linear-algebra-inner-products.llms.md#def-outer-product) of the rows with themselves:
+> **Example 9 (The Gram matrix and a cross-product as sums of outer products)** Let $\mathbf{A} = \begin{bmatrix}1 & 0 \\ 1 & 1 \\ 0 & 1\end{bmatrix}$, $\mathbf{B} = \begin{bmatrix}1 \\ 2 \\ 3\end{bmatrix}$ be the matrices of [Example 7](#exm-cross-product-matrix). The rows of $\mathbf{A}$ are $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{r}}\vphantom{r}}_1 = (1, 0)$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{r}}\vphantom{r}}_2 = (1, 1)$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{r}}\vphantom{r}}_3 = (0, 1)$. Taking $\mathbf{B} = \mathbf{A}$ in [Theorem 5](#thm-cross-product-sum-outer), the [Gram matrix](#def-gram-matrix) is the [sum](algebra-sums.llms.md#def-summation) of the [outer products](linear-algebra-orthonormal-bases.llms.md#def-outer-product) of the rows with themselves:
 >
 > $$\begin{aligned}
 > {\mathbf{A}}^{\top} \mathbf{A}
@@ -537,7 +537,7 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 > &= \begin{bmatrix}1 & 0 \\ 0 & 0\end{bmatrix}
 > + \begin{bmatrix}1 & 1 \\ 1 & 1\end{bmatrix}
 > + \begin{bmatrix}0 & 0 \\ 0 & 1\end{bmatrix}
-> && \text{(}\href{linear-algebra-inner-products.qmd#def-outer-product}{\text{Definition~17 in Inner Products and Orthogonality}}\text{)}
+> && \text{(}\href{linear-algebra-orthonormal-bases.qmd#def-outer-product}{\text{Definition~3 in Orthonormal Bases, Outer Products and Hilbert Spaces}}\text{)}
 > \\
 > &= \begin{bmatrix}2 & 1 \\ 1 & 2\end{bmatrix}.
 > && \text{(add)}
@@ -563,7 +563,7 @@ For two column vectors it is the $1 \times 1$ matrix holding their [dot product]
 
 > **NOTE:**
 >
-> **Exercise 11 (Computing a cross-product matrix one row at a time)** [Theorem 5](#thm-cross-product-sum-outer) builds a [cross-product matrix](#def-cross-product-matrix) by adding one [outer product](linear-algebra-inner-products.llms.md#def-outer-product) per [row](linear-algebra-matrices.llms.md#def-matrix-row), which is how it can be updated as observations arrive. Let
+> **Exercise 11 (Computing a cross-product matrix one row at a time)** [Theorem 5](#thm-cross-product-sum-outer) builds a [cross-product matrix](#def-cross-product-matrix) by adding one [outer product](linear-algebra-orthonormal-bases.llms.md#def-outer-product) per [row](linear-algebra-matrices.llms.md#def-matrix-row), which is how it can be updated as observations arrive. Let
 >
 > $$\mathbf{A} = \begin{bmatrix}1 & 2 \\ 0 & 1\end{bmatrix},
 > \qquad
