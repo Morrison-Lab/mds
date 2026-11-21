@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-20 17:52:26 (PST)
+Last modified: 2026-11-20 20:55:12 (PST)
 
 # 1 Linear and affine maps
 
@@ -632,7 +632,7 @@ Last modified: 2026-11-20 17:52:26 (PST)
 
 > **NOTE:**
 >
-> **Definition 8 (Offset of an affine map, intercept, bias)** In [Definition 7](#def-affine-map), the vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ is called the **offset** of $f$ (statistics also calls it the **intercept**, and machine learning the **bias**).
+> **Definition 8 (Offset of an affine map, intercept, bias)** In [Definition 7](#def-affine-map), the vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ is called the **offset** of $f$, also called the **intercept** in statistics, or the **bias** in machine learning.
 
 > **NOTE:**
 >

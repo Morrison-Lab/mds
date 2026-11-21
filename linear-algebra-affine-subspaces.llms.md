@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-11-20 17:52:26 (PST)
+Last modified: 2026-11-20 20:55:12 (PST)
 
 # 1 Affine subspaces and half-spaces
 
