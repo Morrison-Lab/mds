@@ -51,7 +51,7 @@ The linear algebra notes are split across these pages:
   eigenvalues, the spectral theorem, [eigendecompositions](linear-algebra-decompositions.qmd#def-eigendecomposition) and the SVD.
 - The [Determinants](linear-algebra-determinants.qmd) page:
   the [determinant](linear-algebra-determinants.qmd#def-determinant)
-  and its value for diagonal matrices, matrix products, and in terms of eigenvalues.
+  and its value for [diagonal matrices](linear-algebra-special-matrices.qmd#def-diagonal-matrix), matrix products, and in terms of eigenvalues.
 - The [Definite Matrices](linear-algebra-definite-matrices.qmd) page:
   [positive definite](linear-algebra-definite-matrices.qmd#def-positive-definite) and semidefinite matrices,
   [condition numbers](linear-algebra-definite-matrices.qmd#def-condition-number),
