@@ -1,4 +1,4 @@
-:::{#def-half-space}
+:::{#def-half-space-inequality}
 #### Half-space
 
 Let $\vecf{a} \in \reals^p$ be a nonzero vector and $c$ a real number.
