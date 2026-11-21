@@ -24,5 +24,36 @@ $$
 $$
 
 so $f$ is [continuous on](#def-continuous-on-interval) $[0, 1]$.
+@fig-continuous-on-sqrt shows its [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph), which has no break anywhere on $[0, 1]$.
+
+:::{#fig-continuous-on-sqrt}
+
+```{r}
+#| label: continuous-on-sqrt-plot
+#| fig-alt: >-
+#|   The graph of the square root of x for x from 0 to 1: an unbroken
+#|   curve rising steeply from the point (0, 0) and flattening as it
+#|   reaches the point (1, 1). Both endpoints are marked with filled dots.
+#| fig-height: 3.5
+#| fig-width: 4.5
+x_values <- seq(0, 1, length.out = 401)
+root_values <- sqrt(x_values)
+curve <- tibble::tibble(x = x_values, y = root_values)
+endpoints <- tibble::tribble(
+  ~x, ~y,
+  0, 0,
+  1, 1
+)
+
+curve |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = x, y = y) +
+  ggplot2::geom_line() +
+  ggplot2::geom_point(data = endpoints, size = 2.5)
+```
+
+The [square root](algebra.qmd#def-square-root) $f(x) = \sqrt{x}$ on $[0, 1]$.
+The curve meets both filled [endpoints](https://morrison-lab.github.io/mcs/sets.html#def-interval), $(0, 0)$ and $(1, 1)$, without a jump.
+:::
 
 :::
