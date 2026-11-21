@@ -1,0 +1,1757 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/tabby.min.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.11.9">
+
+  <title>Math for Data Science – Orthogonal Complements and the Fundamental Theorem</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-9f3199129f1ac5956c3166fe157a3c4b.css">
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VLDZY2T3JF"></script>
+
+  <script type="text/plain" cookie-consent="tracking">
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VLDZY2T3JF', { 'anonymize_ip': true});
+  </script>
+  
+  <script type="text/javascript" charset="UTF-8">
+  document.addEventListener('DOMContentLoaded', function () {
+  cookieconsent.run({
+    "notice_banner_type":"simple",
+    "consent_type":"express",
+    "palette":"light",
+    "language":"en",
+    "page_load_consent_levels":["strictly-necessary"],
+    "notice_banner_reject_button_hide":false,
+    "preferences_center_close_button_hide":false,
+    "website_name":""
+    ,
+  "language":"en"
+    });
+  });
+  </script> 
+    
+  <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <!--
+    Colour-theme dropdown for the qwt revealjs format: Light, Off-white,
+    Parchment, Dark. Pulled into every slide deck via the `include-in-header`
+    entry in the `revealjs:` block of `_quarto-website.yml`. Pairs with
+    `styles-reveal.scss`, which defines the palette CSS variables; the select
+    reads those vars so it stays legible in every palette. Light is the
+    default variable set, Off-white and Parchment are a data-palette attribute
+    on <html>, and Dark is the body.qwt-dark class. The choice is saved under
+    "mln-theme", the key the website's theme dropdown (theme-picker.html) uses,
+    so it carries across the site and the decks. First-time visitors get
+    Dark if their system prefers it, and Off-white otherwise.
+  -->
+  <style>
+    #qwt-theme-select {
+      position: fixed;
+      bottom: 8px;
+      left: 8px;
+      /* Matches reveal.js's `.slide-number` and the `#revealjs-html-link` chip
+         from `revealjs-html-links.lua`; the three elements occupy different
+         corners so they don't overlap. Keep them aligned if you bump this. */
+      z-index: 31;
+      padding: 2px 4px;
+      border: 1px solid var(--qwt-border, rgba(0, 0, 0, 0.2));
+      border-radius: 4px;
+      background: var(--qwt-chip-bg, rgba(255, 255, 255, 0.8));
+      color: var(--qwt-fg, #000);
+      cursor: pointer;
+      font: 12px sans-serif;
+      opacity: 0.7;
+    }
+    #qwt-theme-select:hover,
+    #qwt-theme-select:focus-visible {
+      opacity: 1;
+      border-color: var(--qwt-fg, rgba(0, 0, 0, 0.4));
+    }
+    #qwt-theme-select:focus-visible {
+      outline: 2px solid var(--qwt-link, #2a76dd);
+      outline-offset: 2px;
+    }
+    @media print { #qwt-theme-select { display: none; } }
+  </style>
+  <script>
+  (function () {
+    "use strict";
+    var KEY = "mln-theme";
+    var DARK_CLASS = "qwt-dark";
+    var OPTIONS = [["light", "Light"], ["offwhite", "Off-white"], ["parchment", "Parchment"], ["dark", "Dark"]];
+    var root = document.documentElement;
+
+    function valid(choice) {
+      return OPTIONS.some(function (o) { return o[0] === choice; });
+    }
+
+    function stored() {
+      try { return localStorage.getItem(KEY); } catch (e) { return null; }
+    }
+
+    function initialTheme() {
+      var saved = stored();
+      if (valid(saved)) return saved;
+      if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        return "dark";
+      }
+      return "offwhite";
+    }
+
+    function applyTheme(choice) {
+      if (choice === "offwhite" || choice === "parchment") {
+        root.setAttribute("data-palette", choice);
+      } else {
+        root.removeAttribute("data-palette");
+      }
+      // The body can be missing when this runs from <head>; init() re-applies it.
+      if (document.body) document.body.classList.toggle(DARK_CLASS, choice === "dark");
+    }
+
+    var start = initialTheme();
+    applyTheme(start); // set the palette before first paint
+
+    function init() {
+      if (document.getElementById("qwt-theme-select")) return;
+      applyTheme(start);
+      var sel = document.createElement("select");
+      sel.id = "qwt-theme-select";
+      sel.setAttribute("aria-label", "Colour theme");
+      OPTIONS.forEach(function (o) {
+        var opt = document.createElement("option");
+        opt.value = o[0];
+        opt.textContent = o[1];
+        sel.appendChild(opt);
+      });
+      sel.value = start;
+      sel.addEventListener("change", function () {
+        applyTheme(sel.value);
+        try { localStorage.setItem(KEY, sel.value); } catch (e) { /* private mode */ }
+      });
+      document.body.appendChild(sel);
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", init);
+    } else {
+      init();
+    }
+  })();
+  </script>
+</head>
+<body class="quarto-light">
+<!-- gha-preview-page-banner:start -->
+<div class="preview-page-changes-banner" style="background: #f8f9fa; border-left: 4px solid #0d6efd; padding: 10px 15px; margin: 15px 0; border-radius: 4px;">
+    <p style="margin: 0;">
+        <strong>📝 Preview:</strong> This is a new page added in this pull request.
+    </p>
+</div>
+<!-- gha-preview-page-banner:end -->
+
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Orthogonal Complements and the Fundamental Theorem</h1>
+
+<div class="quarto-title-authors">
+</div>
+
+  <p class="date">Last modified: 2026-11-20 16:05:26 (PST)</p>
+</section>
+<section class="slide level2">
+
+
+</section>
+<section id="sec-orthogonal-complements" class="slide level2" data-number="1">
+<h2><span class="header-section-number">1</span> Orthogonal complements</h2>
+</section>
+<section class="slide level2">
+
+<div id="thm-dot-linear" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1 (The dot product is linear in each slot)</strong></span> For vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p\)</span> and numbers <span class="math inline">\(a, b\)</span>,</p>
+<p><span class="math display">\[
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot (a\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + b\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}})
+= a\,(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}) + b\,(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}})
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+(a\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + b\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}) \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
+= a\,(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) + b\,(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}).
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><strong>Second slot.</strong></p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot (a\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + b\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}})
+&amp;= \sum_{i=1}^px_i\,(a\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + b\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}})_i
+&amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~10 in Vectors}}\text{)}
+\\
+&amp;= \sum_{i=1}^px_i\,(a u_i + b w_i)
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~9 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-vector-addition}{\text{Definition~9 in Vectors}}\text{)}
+\\
+&amp;= \sum_{i=1}^p\mathopen{}\left(x_i a u_i + x_i b w_i\right)\mathclose{}
+&amp;&amp; \text{(distribute each } x_i \text{)}
+\\
+&amp;= \sum_{i=1}^p\mathopen{}\left(a\,x_i u_i + b\,x_i w_i\right)\mathclose{}
+&amp;&amp; \text{(commute the factors in each product)}
+\\
+&amp;= \sum_{i=1}^pa\,x_i u_i + \sum_{i=1}^pb\,x_i w_i
+&amp;&amp; \text{(split the finite sum)}
+\\
+&amp;= a \sum_{i=1}^px_i u_i + b \sum_{i=1}^px_i w_i
+&amp;&amp; \text{(factor } a \text{ and } b \text{ out of the sums)}
+\\
+&amp;= a\,(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}) + b\,(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}).
+&amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~10 in Vectors}}\text{)}
+\end{aligned}
+\]</span></p>
+<p><strong>First slot.</strong></p>
+<p><span class="math display">\[
+\begin{aligned}
+(a\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + b\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}) \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
+&amp;= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot (a\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + b\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}})
+&amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#thm-lincom-symmetric}{\text{Theorem~1 in Vectors}}\text{)}
+\\
+&amp;= a\,(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}) + b\,(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}})
+&amp;&amp; \text{(second slot)}
+\\
+&amp;= a\,(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) + b\,(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}).
+&amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#thm-lincom-symmetric}{\text{Theorem~1 in Vectors}}\text{, twice)}
+\end{aligned}
+\]</span></p>
+<p>Two special cases are used often. With</p>
+<p><span class="math display">\[
+\begin{aligned}
+a &amp;= b \\
+&amp;= 1,
+\end{aligned}
+\]</span></p>
+<p>and <span class="math inline">\(1\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span>, the theorem gives <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>. With <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span> and <span class="math inline">\(b = 0\)</span>, and <span class="math inline">\(0\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, it gives <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot (a\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}) = a\,(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}})\)</span>, and likewise in the first slot.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-dot-linear" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1 (Splitting a dot product)</strong></span> Let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = (1, 2)\)</span>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = (3, 0)\)</span>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (0, 1)\)</span>, <span class="math inline">\(a = 2\)</span> and <span class="math inline">\(b = -1\)</span>. Directly, <span class="math inline">\(a\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + b\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (6, -1)\)</span> and</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot (6, -1) &amp;= 6 - 2 \\
+&amp;= 4.
+\end{aligned}
+\]</span></p>
+<p>By <a href="#/thm-dot-linear" class="quarto-xref">Theorem&nbsp;1</a>,</p>
+<p><span class="math display">\[
+\begin{aligned}
+a\,(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}) + b\,(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}) &amp;= 2 \cdot 3 + (-1) \cdot 2 \\
+&amp;= 4,
+\end{aligned}
+\]</span></p>
+<p>the same number.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exr-dot-linear-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1 (Finding a dot product from two known dot products)</strong></span> <a href="#/thm-dot-linear" class="quarto-xref">Theorem&nbsp;1</a> lets a <a href="./linear-algebra-vectors.html#def-dot-product">dot product</a> with a combination be found from the dot products with its parts. Suppose that <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = 3\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = -1\)</span>.</p>
+<p>Find <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot (2\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + 5\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}})\)</span>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Use <a href="#/thm-dot-linear" class="quarto-xref">Theorem&nbsp;1</a> with <span class="math inline">\(a = 2\)</span> and <span class="math inline">\(b = 5\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-dot-linear-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 1</em>. </span>By <a href="#/thm-dot-linear" class="quarto-xref">Theorem&nbsp;1</a>,</p>
+<p><span class="math display">\[
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot (2\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + 5\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}})
+= 2\,(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}) + 5\,(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}})
+= 2 \cdot 3 + 5 \cdot(-1)
+= 1.
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-orthogonal-complement" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1 (Orthogonal complement)</strong></span> The <strong>orthogonal complement</strong> <span class="citation" data-cites="wikipedia_orthogonal_complement"><a href="#/references" role="doc-biblioref" onclick="">[1]</a></span> of a set <span class="math inline">\(\mathcal{X}\)</span> of vectors in <span class="math inline">\(\mathbb{R}^p\)</span> is the set of vectors orthogonal (<a href="./linear-algebra-vectors.html#def-orthogonal-vectors">Definition&nbsp;22 in Vectors</a>) to every vector of <span class="math inline">\(\mathcal{X}\)</span>:</p>
+<p><span class="math display">\[
+\mathcal{X}^\perp
+\stackrel{\text{def}}{=}
+\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \in \mathbb{R}^p : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = 0 \text{ for all } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \in \mathcal{X}\right\}\mathclose{}.
+\]</span></p>
+<p><span class="math inline">\(\mathcal{X}^\perp\)</span> is read “<span class="math inline">\(\mathcal{X}\)</span> perp”.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-orthogonal-complement" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2 (Orthogonal complements in <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> &nbsp;</p>
+<ul>
+<li><p><strong>A plane.</strong> Let <span class="math inline">\(\mathcal{X} = \mathopen{}\left\{(a, b, 0) : a, b \in \mathbb{R}\right\}\mathclose{}\)</span>, the plane <span class="math inline">\(z = 0\)</span>. A vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span> is in <span class="math inline">\(\mathcal{X}^\perp\)</span> when</p>
+<p><span class="math display">\[
+\begin{aligned}
+(a, b, 0) \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} &amp;= a u_1 + b u_2 \\
+&amp;= 0
+\end{aligned}
+\]</span></p>
+<p>for all <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>. Taking <span class="math inline">\((a, b) = (1, 0)\)</span> forces <span class="math inline">\(u_1 = 0\)</span>, and taking <span class="math inline">\((a, b) = (0, 1)\)</span> forces <span class="math inline">\(u_2 = 0\)</span>; conversely, if</p>
+<p><span class="math display">\[
+\begin{aligned}
+u_1 &amp;= u_2 \\
+&amp;= 0,
+\end{aligned}
+\]</span></p>
+<p>then <span class="math inline">\(a u_1 + b u_2 = 0\)</span> for all <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>. So <span class="math inline">\(\mathcal{X}^\perp = \mathopen{}\left\{(0, 0, c) : c \in \mathbb{R}\right\}\mathclose{}\)</span>, the <span class="math inline">\(z\)</span>-axis.</p></li>
+<li><p><strong>Two vectors.</strong> The two-element set <span class="math inline">\(\mathopen{}\left\{(1, 0, 0), (0, 1, 0)\right\}\mathclose{}\)</span> is not a subspace, and its orthogonal complement is the <span class="math inline">\(z\)</span>-axis too: the two conditions <span class="math inline">\(u_1 = 0\)</span> and <span class="math inline">\(u_2 = 0\)</span> are the same as for the plane.</p></li>
+<li><p><strong>The extremes.</strong> <span class="math inline">\(\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}^\perp = \mathbb{R}^3\)</span>, because <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = 0\)</span> for every <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span>. <span class="math inline">\((\mathbb{R}^3)^\perp = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}\)</span>, because a <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span> in it is orthogonal to itself, and</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} &amp;= u_1^2 + u_2^2 + u_3^2 \\
+&amp;= 0
+\end{aligned}
+\]</span></p>
+<p>forces <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>.</p></li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exr-orthogonal-complement-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2 (Testing whether a vector is in an orthogonal complement)</strong></span> A vector is in the <a href="#/def-orthogonal-complement">orthogonal complement</a> of a <a href="https://morrison-lab.github.io/mcs/sets.html#def-set">set</a> when it is <a href="./linear-algebra-vectors.html#def-orthogonal-vectors">orthogonal</a> to every vector of the set. Let <span class="math inline">\(\mathcal{X} = \mathopen{}\left\{(1, 2, 0), (0, 3, 1)\right\}\mathclose{}\)</span>, a set of two vectors in <span class="math inline">\(\mathbb{R}^3\)</span>.</p>
+<p>Decide whether the vector <span class="math inline">\((2, -1, 3)\)</span> is in <span class="math inline">\(\mathcal{X}^\perp\)</span>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Take the <a href="./linear-algebra-vectors.html#def-dot-product">dot product</a> of <span class="math inline">\((2, -1, 3)\)</span> with each vector of <span class="math inline">\(\mathcal{X}\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-orthogonal-complement-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 2</em>. </span>Here</p>
+<p><span class="math display">\[
+\begin{aligned}
+(1, 2, 0) \cdot (2, -1, 3) &amp;= 2 - 2 + 0 = 0,
+\\
+(0, 3, 1) \cdot (2, -1, 3) &amp;= 0 - 3 + 3 = 0,
+\end{aligned}
+\]</span></p>
+<p>so <span class="math inline">\((2, -1, 3)\)</span> is <a href="./linear-algebra-vectors.html#def-orthogonal-vectors">orthogonal</a> to both vectors of <span class="math inline">\(\mathcal{X}\)</span>, and it is in <span class="math inline">\(\mathcal{X}^\perp\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-orthogonal-complement-any-set" class="proof remark">
+<p><span class="proof-title"><em>Remark 1</em> (The orthogonal complement of a set that is not a subspace). </span><span class="math inline">\(\mathcal{X}\)</span> in <a href="#/def-orthogonal-complement" class="quarto-xref">Definition&nbsp;1</a> need not be a subspace.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="thm-orthogonal-complement-subspace" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 2 (An orthogonal complement is a subspace)</strong></span> For any set <span class="math inline">\(\mathcal{X}\)</span> of vectors in <span class="math inline">\(\mathbb{R}^p\)</span>, <span class="math inline">\(\mathcal{X}^\perp\)</span> (<a href="#/def-orthogonal-complement" class="quarto-xref">Definition&nbsp;1</a>) is a subspace of <span class="math inline">\(\mathbb{R}^p\)</span> (<a href="./linear-algebra-subspaces.html#def-subspace">Definition&nbsp;4 in Subspaces and Rank</a>).</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(\mathcal{X}^\perp\)</span> is not empty:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}&amp;= \sum_i x_i \cdot 0 \\
+&amp;= 0
+\end{aligned}
+\]</span></p>
+<p>for every <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span>, so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\in \mathcal{X}^\perp\)</span>. Let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathcal{X}^\perp\)</span>, let <span class="math inline">\(c \in \mathbb{R}\)</span>, and let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \in \mathcal{X}\)</span>.</p>
+<p><strong>Addition.</strong></p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}})
+&amp;= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}
+&amp;&amp; \text{(}\href{#thm-dot-linear}{\text{Theorem~1}}\text{, special case } a \text{ and } b \text{ both equal to } 1 \text{)}
+\\
+&amp;= 0 + 0
+&amp;&amp; \text{(} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathcal{X}^\perp \text{)}
+\\
+&amp;= 0.
+&amp;&amp; \text{(arithmetic)}
+\end{aligned}
+\]</span></p>
+<p><strong>Scalar multiplication.</strong></p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot (c\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}})
+&amp;= c\,(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}})
+&amp;&amp; \text{(}\href{#thm-dot-linear}{\text{Theorem~1}}\text{, special case } b = 0 \text{)}
+\\
+&amp;= c \cdot 0
+&amp;&amp; \text{(} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \in \mathcal{X}^\perp \text{)}
+\\
+&amp;= 0.
+&amp;&amp; \text{(arithmetic)}
+\end{aligned}
+\]</span></p>
+<p>These two equations hold for every <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \in \mathcal{X}\)</span>, so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> and <span class="math inline">\(c\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span> are in <span class="math inline">\(\mathcal{X}^\perp\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-orthogonal-complement-subspace" class="theorem example">
+<p><span class="theorem-title"><strong>Example 3 (The complement of a single vector is a line)</strong></span> The one-element set <span class="math inline">\(\mathcal{X} = \mathopen{}\left\{(1, 2)\right\}\mathclose{}\)</span> in <span class="math inline">\(\mathbb{R}^2\)</span> is not a subspace: <span class="math inline">\(2\,(1, 2) = (2, 4)\)</span> is not in it. Its orthogonal complement is</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathcal{X}^\perp
+&amp;= \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \in \mathbb{R}^2 : u_1 + 2 u_2 = 0\right\}\mathclose{} \\
+&amp;= \mathopen{}\left\{c\,(-2, 1) : c \in \mathbb{R}\right\}\mathclose{},
+\end{aligned}
+\]</span></p>
+<p>since <span class="math inline">\(u_1 + 2u_2 = 0\)</span> means</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} &amp;= (-2u_2, u_2) \\
+&amp;= u_2\,(-2, 1).
+\end{aligned}
+\]</span></p>
+<p>That set is <span class="math inline">\(\operatorname{span}\mathopen{}\left\{(-2, 1)\right\}\mathclose{}\)</span>, a subspace by <a href="./linear-algebra-subspaces.html#thm-span-subspace">Theorem&nbsp;2 in Subspaces and Rank</a>, as <a href="#/thm-orthogonal-complement-subspace" class="quarto-xref">Theorem&nbsp;2</a> says it must be. It contains <span class="math inline">\((-2, 1)\)</span>, the vector <a href="./linear-algebra-vectors.html#rem-orthogonal-perpendicular">Remark&nbsp;8 in Vectors</a> found perpendicular to <span class="math inline">\((1, 2)\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exr-orthogonal-complement-subspace-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 3 (Finding the orthogonal complement of two vectors)</strong></span> <a href="#/thm-orthogonal-complement-subspace" class="quarto-xref">Theorem&nbsp;2</a> says that an <a href="#/def-orthogonal-complement">orthogonal complement</a> is always a <a href="./linear-algebra-subspaces.html#def-subspace">subspace</a>, even when the original <a href="https://morrison-lab.github.io/mcs/sets.html#def-set">set</a> is not. Let <span class="math inline">\(\mathcal{X} = \mathopen{}\left\{(1, 0, 1), (1, 0, -1)\right\}\mathclose{}\)</span>, a set of two vectors in <span class="math inline">\(\mathbb{R}^3\)</span>.</p>
+<p>Find <span class="math inline">\(\mathcal{X}^\perp\)</span> as a <a href="./linear-algebra-subspaces.html#def-span">span</a>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>A vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span> is in <span class="math inline">\(\mathcal{X}^\perp\)</span> when <span class="math inline">\(u_1 + u_3 = 0\)</span> and <span class="math inline">\(u_1 - u_3 = 0\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-orthogonal-complement-subspace-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 3</em>. </span>A vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span> is in <span class="math inline">\(\mathcal{X}^\perp\)</span> exactly when <span class="math inline">\((1, 0, 1) \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = u_1 + u_3 = 0\)</span> and <span class="math inline">\((1, 0, -1) \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = u_1 - u_3 = 0\)</span>. Adding the two equations gives <span class="math inline">\(u_1 = 0\)</span>, and then <span class="math inline">\(u_3 = 0\)</span>, while <span class="math inline">\(u_2\)</span> is free. So</p>
+<p><span class="math display">\[
+\mathcal{X}^\perp = \mathopen{}\left\{(0, u_2, 0) : u_2 \in \mathbb{R}\right\}\mathclose{} = \operatorname{span}\mathopen{}\left\{(0, 1, 0)\right\}\mathclose{},
+\]</span></p>
+<p>the second coordinate axis, which is a <a href="./linear-algebra-subspaces.html#def-subspace">subspace</a>, as <a href="#/thm-orthogonal-complement-subspace" class="quarto-xref">Theorem&nbsp;2</a> says.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="thm-complement-null-space" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 3 (The orthogonal complement of a column space is a null space)</strong></span> For any <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span>,</p>
+<p><span class="math display">\[
+\mathcal{C}(\mathbf{A})^\perp = \mathcal{N}({\mathbf{A}}^{\top}).
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_n\)</span> be the columns of <span class="math inline">\(\mathbf{A}\)</span>, so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j = (a_{1j}, \ldots, a_{mj})\)</span>. For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \in \mathbb{R}^m\)</span>, entry <span class="math inline">\(j\)</span> of <span class="math inline">\({\mathbf{A}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is</p>
+<p><span class="math display">\[
+\begin{aligned}
+({\mathbf{A}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})_j
+&amp;= \sum_{i=1}^{m} ({\mathbf{A}}^{\top})_{ji}\, x_i
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#def-matvec-mult}{\text{Definition~8 in Matrix Multiplication}}\text{)}
+\\
+&amp;= \sum_{i=1}^{m} a_{ij}\, x_i
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~6 in Matrices}}\text{)}
+\\
+&amp;= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}.
+&amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~10 in Vectors}}\text{)}
+\end{aligned}
+\]</span></p>
+<p>So <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \in \mathcal{N}({\mathbf{A}}^{\top})\)</span> (<a href="./linear-algebra-column-null-space.html#def-null-space">Definition&nbsp;3 in Column Space and Null Space</a>) exactly when <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = 0\)</span> for every column <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j\)</span>.</p>
+<p><strong><span class="math inline">\(\mathcal{C}(\mathbf{A})^\perp \subseteq \mathcal{N}({\mathbf{A}}^{\top})\)</span>.</strong> Each column <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j\)</span> is in <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span> (<a href="./linear-algebra-column-null-space.html#thm-column-space-span">Theorem&nbsp;1 in Column Space and Null Space</a>), so a vector orthogonal to all of <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span> is orthogonal to every column.</p>
+<p><strong><span class="math inline">\(\mathcal{N}({\mathbf{A}}^{\top}) \subseteq \mathcal{C}(\mathbf{A})^\perp\)</span>.</strong> Suppose <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = 0\)</span> for every <span class="math inline">\(j\)</span>, and take any <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} \in \mathcal{C}(\mathbf{A})\)</span>, so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}\)</span> for some <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} \in \mathbb{R}^n\)</span> (<a href="./linear-algebra-column-null-space.html#def-column-space">Definition&nbsp;1 in Column Space and Null Space</a>). Then</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
+&amp;= \sum_{i=1}^{m} (\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}})_i\, x_i
+&amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~10 in Vectors}}\text{)}
+\\
+&amp;= \sum_{i=1}^{m} \mathopen{}\left(\sum_{j=1}^na_{ij} z_j\right)\mathclose{}\, x_i
+&amp;&amp; \text{(}\href{linear-algebra-matrix-multiplication.qmd#def-matvec-mult}{\text{Definition~8 in Matrix Multiplication}}\text{)}
+\\
+&amp;= \sum_{i=1}^{m} \sum_{j=1}^na_{ij}\, z_j\, x_i
+&amp;&amp; \text{(distribute each } x_i \text{ over the inner sum)}
+\\
+&amp;= \sum_{j=1}^n\sum_{i=1}^{m} a_{ij}\, z_j\, x_i
+&amp;&amp; \text{(swap the order of the finite sums)}
+\\
+&amp;= \sum_{j=1}^nz_j \sum_{i=1}^{m} a_{ij}\, x_i
+&amp;&amp; \text{(commute, then factor } z_j \text{ out of the inner sum)}
+\\
+&amp;= \sum_{j=1}^nz_j\, (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})
+&amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~10 in Vectors}}\text{)}
+\\
+&amp;= \sum_{j=1}^nz_j \cdot 0
+&amp;&amp; \text{(each } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_j \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = 0 \text{)}
+\\
+&amp;= 0.
+&amp;&amp; \text{(arithmetic)}
+\end{aligned}
+\]</span></p>
+<p>So <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is orthogonal to every vector of <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-complement-null-space" class="theorem example">
+<p><span class="theorem-title"><strong>Example 4 (The complement of the column space in <a href="./linear-algebra-column-null-space.html#exm-column-space">Example&nbsp;1 in Column Space and Null Space</a>)</strong></span> For <span class="math inline">\(\mathbf{A}\)</span> in <a href="./linear-algebra-column-null-space.html#exm-column-space">Example&nbsp;1 in Column Space and Null Space</a>, <span class="math inline">\(\mathcal{C}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\{(1, 3)\right\}\mathclose{}\)</span> (1). <a href="./linear-algebra-column-null-space.html#exm-null-space">Example&nbsp;3 in Column Space and Null Space</a> found <span class="math inline">\(\mathcal{N}({\mathbf{A}}^{\top}) = \operatorname{span}\mathopen{}\left\{(-3, 1)\right\}\mathclose{}\)</span>, so by <a href="#/thm-complement-null-space" class="quarto-xref">Theorem&nbsp;3</a> this line is <span class="math inline">\(\mathcal{C}(\mathbf{A})^\perp\)</span>. Directly, for any <span class="math inline">\(c\)</span>,</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathopen{}\left(c\,(1, 3)\right)\mathclose{} \cdot (-3, 1)
+&amp;= c\,\mathopen{}\left((1, 3) \cdot (-3, 1)\right)\mathclose{}
+&amp;&amp; \text{(}\href{#thm-dot-linear}{\text{Theorem~1}}\text{, special case } b = 0 \text{, first slot)}
+\\
+&amp;= c\,(-3 + 3)
+&amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~10 in Vectors}}\text{)}
+\\
+&amp;= 0.
+&amp;&amp; \text{(arithmetic)}
+\end{aligned}
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exr-complement-null-space-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 4 (Finding the orthogonal complement of a column space)</strong></span> <a href="#/thm-complement-null-space" class="quarto-xref">Theorem&nbsp;3</a> turns the <a href="#/def-orthogonal-complement">orthogonal complement</a> of a <a href="./linear-algebra-column-null-space.html#def-column-space">column space</a> into a <a href="./linear-algebra-column-null-space.html#def-null-space">null space</a>, which a <a href="./linear-algebra-matrix-multiplication.html#def-linear-system">linear system</a> describes. Let</p>
+<p><span class="math display">\[
+\mathbf{A} = \begin{bmatrix}1 &amp; 0 \\ 0 &amp; 1 \\ 1 &amp; 1\end{bmatrix}.
+\]</span></p>
+<p>Find <span class="math inline">\(\mathcal{C}(\mathbf{A})^\perp\)</span> as a <a href="./linear-algebra-subspaces.html#def-span">span</a>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Solve <span class="math inline">\({\mathbf{A}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-complement-null-space-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 4</em>. </span>By <a href="#/thm-complement-null-space" class="quarto-xref">Theorem&nbsp;3</a>, <span class="math inline">\(\mathcal{C}(\mathbf{A})^\perp = \mathcal{N}({\mathbf{A}}^{\top})\)</span>. For <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = (y_1, y_2, y_3)\)</span>,</p>
+<p><span class="math display">\[
+{\mathbf{A}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \begin{bmatrix}1 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 1\end{bmatrix} \begin{bmatrix}y_1 \\ y_2 \\ y_3\end{bmatrix} = \begin{bmatrix}y_1 + y_3 \\ y_2 + y_3\end{bmatrix},
+\]</span></p>
+<p>which is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2\)</span> exactly when <span class="math inline">\(y_1 = y_2 = -y_3\)</span>. So</p>
+<p><span class="math display">\[
+\mathcal{C}(\mathbf{A})^\perp = \operatorname{span}\mathopen{}\left\{(-1, -1, 1)\right\}\mathclose{}.
+\]</span></p>
+<p>As a check, <span class="math inline">\((-1, -1, 1)\)</span> is <a href="./linear-algebra-vectors.html#def-orthogonal-vectors">orthogonal</a> to both <a href="./linear-algebra-matrices.html#def-matrix-column">columns of <span class="math inline">\(\mathbf{A}\)</span></a>: <span class="math inline">\(-1 + 0 + 1 = 0\)</span> and <span class="math inline">\(0 - 1 + 1 = 0\)</span>.</p>
+</div>
+</section>
+<section class="slide level2 scrollable">
+
+<div id="thm-orthogonal-direct-sum" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 4 (A subspace and its orthogonal complement make up the whole space)</strong></span> Let <span class="math inline">\(\mathcal{S}\)</span> be a subspace of <span class="math inline">\(\mathbb{R}^p\)</span>. Then</p>
+<ol type="1">
+<li><span class="math inline">\(\mathcal{S} \cap \mathcal{S}^\perp = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}\)</span>;</li>
+<li><span class="math inline">\(\dim(\mathcal{S}) + \dim(\mathcal{S}^\perp) = p\)</span>;</li>
+<li><span class="math inline">\(\mathbb{R}^p = \mathcal{S} \oplus \mathcal{S}^\perp\)</span> (<a href="./linear-algebra-direct-sums.html#def-direct-sum">Definition&nbsp;3 in Sums and Direct Sums</a>).</li>
+</ol>
+<p>So every <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} \in \mathbb{R}^p\)</span> can be written as <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \in \mathcal{S}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \in \mathcal{S}^\perp\)</span> in only one way (<a href="./linear-algebra-direct-sums.html#thm-direct-sum-equiv">Theorem&nbsp;4 in Sums and Direct Sums</a>).</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(\mathcal{S}^\perp\)</span> is a subspace (<a href="#/thm-orthogonal-complement-subspace" class="quarto-xref">Theorem&nbsp;2</a>), so it has a dimension (<a href="./linear-algebra-bases.html#def-dimension">Definition&nbsp;4 in Bases and Dimension</a>).</p>
+<p><strong>Part 1.</strong> Both <span class="math inline">\(\mathcal{S}\)</span> and <span class="math inline">\(\mathcal{S}^\perp\)</span> contain <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> (<a href="./linear-algebra-subspaces.html#thm-subspace-zero">Theorem&nbsp;1 in Subspaces and Rank</a>). If <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is in both, then <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> is orthogonal to every vector of <span class="math inline">\(\mathcal{S}\)</span>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> itself included, so</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} &amp;= x_1^2 + \cdots + x_p^2 \\
+&amp;= 0,
+\end{aligned}
+\]</span></p>
+<p>which forces every <span class="math inline">\(x_i = 0\)</span>.</p>
+<p><strong>Part 2.</strong> Let <span class="math inline">\(d = \dim(\mathcal{S})\)</span>. If <span class="math inline">\(d = 0\)</span>, then <span class="math inline">\(\mathcal{S}\)</span> has a basis (<a href="./linear-algebra-bases.html#thm-extend-basis">Theorem&nbsp;4 in Bases and Dimension</a>) with <span class="math inline">\(0\)</span> vectors (<a href="./linear-algebra-bases.html#def-dimension">Definition&nbsp;4 in Bases and Dimension</a>), the empty list, whose span is <span class="math inline">\(\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}\)</span> (<a href="./linear-algebra-subspaces.html#def-span">Definition&nbsp;5 in Subspaces and Rank</a>); so <span class="math inline">\(\mathcal{S} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}\)</span>, <span class="math inline">\(\mathcal{S}^\perp = \mathbb{R}^p\)</span> (every <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span> satisfies <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = 0\)</span>), and <span class="math inline">\(0 + p = p\)</span> (<a href="./linear-algebra-bases.html#exm-dimension">Example&nbsp;6 in Bases and Dimension</a>). If <span class="math inline">\(d \ge 1\)</span>, choose a basis <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}_d\)</span> of <span class="math inline">\(\mathcal{S}\)</span> (<a href="./linear-algebra-bases.html#thm-extend-basis">Theorem&nbsp;4 in Bases and Dimension</a>), and let <span class="math inline">\(\mathbf{A}\)</span> be the <span class="math inline">\(p \times d\)</span> matrix with these columns. The basis spans <span class="math inline">\(\mathcal{S}\)</span>, so <span class="math inline">\(\mathcal{S} = \mathcal{C}(\mathbf{A})\)</span> (<a href="./linear-algebra-column-null-space.html#thm-column-space-span">Theorem&nbsp;1 in Column Space and Null Space</a>), and <span class="math inline">\(\mathcal{S}^\perp = \mathcal{N}({\mathbf{A}}^{\top})\)</span> (<a href="#/thm-complement-null-space" class="quarto-xref">Theorem&nbsp;3</a>). <span class="math inline">\({\mathbf{A}}^{\top}\)</span> is <span class="math inline">\(d \times p\)</span>, so</p>
+<p><span class="math display">\[
+\begin{aligned}
+\dim(\mathcal{S}^\perp)
+&amp;= \dim\mathopen{}\left(\mathcal{N}({\mathbf{A}}^{\top})\right)\mathclose{}
+&amp;&amp; \text{(}\href{#thm-complement-null-space}{\text{Theorem~3}}\text{)}
+\\
+&amp;= \operatorname{nullity}({\mathbf{A}}^{\top})
+&amp;&amp; \text{(}\href{linear-algebra-rank-nullity.qmd#def-nullity}{\text{Definition~1 in Rank-Nullity and Rank Factorization}}\text{)}
+\\
+&amp;= p - \operatorname{rank}({\mathbf{A}}^{\top})
+&amp;&amp; \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-nullity}{\text{Theorem~2 in Rank-Nullity and Rank Factorization}}\text{, for the } p \text{ columns of } {\mathbf{A}}^{\top} \text{)}
+\\
+&amp;= p - \operatorname{rank}(\mathbf{A})
+&amp;&amp; \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-transpose}{\text{Theorem~4 in Rank-Nullity and Rank Factorization}}\text{)}
+\\
+&amp;= p - \dim\mathopen{}\left(\mathcal{C}(\mathbf{A})\right)\mathclose{}
+&amp;&amp; \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-dim}{\text{Theorem~1 in Rank-Nullity and Rank Factorization}}\text{)}
+\\
+&amp;= p - d.
+&amp;&amp; \text{(} \mathcal{C}(\mathbf{A}) = \mathcal{S} \text{)}
+\end{aligned}
+\]</span></p>
+<p><strong>Part 3.</strong> <span class="math inline">\(\mathcal{S} + \mathcal{S}^\perp\)</span> is a subspace of <span class="math inline">\(\mathbb{R}^p\)</span> (<a href="./linear-algebra-direct-sums.html#thm-sum-intersection-subspace">Theorem&nbsp;1 in Sums and Direct Sums</a>), and</p>
+<p><span class="math display">\[
+\begin{aligned}
+\dim(\mathcal{S} + \mathcal{S}^\perp)
+&amp;= \dim(\mathcal{S}) + \dim(\mathcal{S}^\perp) - \dim(\mathcal{S} \cap \mathcal{S}^\perp)
+&amp;&amp; \text{(}\href{linear-algebra-direct-sums.qmd#thm-dim-sum}{\text{Theorem~2 in Sums and Direct Sums}}\text{)}
+\\
+&amp;= p - \dim(\mathcal{S} \cap \mathcal{S}^\perp)
+&amp;&amp; \text{(part 2)}
+\\
+&amp;= p - 0
+&amp;&amp; \text{(part 1, and } \dim(\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}) = 0 \text{ by }\href{linear-algebra-bases.qmd#exm-dimension}{\text{Example~6 in Bases and Dimension}}\text{)}
+\\
+&amp;= p.
+&amp;&amp; \text{(arithmetic)}
+\end{aligned}
+\]</span></p>
+<p>Since <span class="math inline">\(\mathcal{S} + \mathcal{S}^\perp \subseteq \mathbb{R}^p\)</span>, <span class="math inline">\(\mathbb{R}^p\)</span> is a subspace (<a href="./linear-algebra-subspaces.html#exm-subspace">Example&nbsp;3 in Subspaces and Rank</a>) and <span class="math inline">\(\dim(\mathbb{R}^p) = p\)</span> (<a href="./linear-algebra-bases.html#exm-dimension">Example&nbsp;6 in Bases and Dimension</a>), <a href="./linear-algebra-bases.html#thm-subspace-equal-dim">Theorem&nbsp;6 in Bases and Dimension</a> gives <span class="math inline">\(\mathcal{S} + \mathcal{S}^\perp = \mathbb{R}^p\)</span>. Together with part 1, <span class="math inline">\(\mathbb{R}^p = \mathcal{S} \oplus \mathcal{S}^\perp\)</span>. The uniqueness of the split then follows from <a href="./linear-algebra-direct-sums.html#thm-direct-sum-equiv">Theorem&nbsp;4 in Sums and Direct Sums</a> (statement 1 implies statement 3).</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-orthogonal-direct-sum" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5 (Splitting a vector of <span class="math inline">\(\mathbb{R}^3\)</span> along a line and its complement)</strong></span> Let <span class="math inline">\(\mathcal{S} = \operatorname{span}\mathopen{}\left\{(1, 1, 0)\right\}\mathclose{}\)</span> in <span class="math inline">\(\mathbb{R}^3\)</span>. A single nonzero vector is linearly independent (<span class="math inline">\(c\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> forces <span class="math inline">\(c = 0\)</span>), so <span class="math inline">\((1, 1, 0)\)</span> is a basis of <span class="math inline">\(\mathcal{S}\)</span> and <span class="math inline">\(\dim(\mathcal{S}) = 1\)</span>. A vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span> is in <span class="math inline">\(\mathcal{S}^\perp\)</span> exactly when <span class="math inline">\(u_1 + u_2 = 0\)</span>: that condition says <span class="math inline">\((1, 1, 0) \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = 0\)</span>, and then</p>
+<p><span class="math display">\[
+\begin{aligned}
+c\,(1, 1, 0) \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} &amp;= c\,(u_1 + u_2) \\
+&amp;= 0
+\end{aligned}
+\]</span></p>
+<p>for every <span class="math inline">\(c\)</span>. So</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathcal{S}^\perp &amp;= \mathopen{}\left\{(a, -a, c) : a, c \in \mathbb{R}\right\}\mathclose{} \\
+&amp;= \operatorname{span}\mathopen{}\left\{(1, -1, 0), (0, 0, 1)\right\}\mathclose{}.
+\end{aligned}
+\]</span></p>
+<p>Those two vectors are linearly independent, because <span class="math inline">\(a\,(1, -1, 0) + c\,(0, 0, 1) = (a, -a, c)\)</span> is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span> only if</p>
+<p><span class="math display">\[
+\begin{aligned}
+a &amp;= c \\
+&amp;= 0,
+\end{aligned}
+\]</span></p>
+<p>so <span class="math inline">\(\dim(\mathcal{S}^\perp) = 2\)</span>, and <span class="math inline">\(1 + 2 = 3\)</span>, as part 2 says.</p>
+<p>To split <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = (3, 1, 2)\)</span>, look for <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = t\,(1, 1, 0)\)</span> with</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} &amp;= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \\
+&amp;= (3 - t, 1 - t, 2)
+\end{aligned}
+\]</span></p>
+<p>in <span class="math inline">\(\mathcal{S}^\perp\)</span>: that membership needs <span class="math inline">\((3 - t) + (1 - t) = 0\)</span>, so <span class="math inline">\(t = 2\)</span>. Then <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = (2, 2, 0)\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (1, -1, 2)\)</span>, with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (3, 1, 2)\)</span> and</p>
+<p><span class="math display">\[
+\begin{aligned}
+(1, 1, 0) \cdot (1, -1, 2) &amp;= 1 - 1 + 0 \\
+&amp;= 0.
+\end{aligned}
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exr-orthogonal-direct-sum-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5 (Splitting a vector into a piece in a line and an orthogonal piece)</strong></span> By <a href="#/thm-orthogonal-direct-sum" class="quarto-xref">Theorem&nbsp;4</a>, every vector of <span class="math inline">\(\mathbb{R}^p\)</span> splits in only one way into a piece in a <a href="./linear-algebra-subspaces.html#def-subspace">subspace</a> <span class="math inline">\(\mathcal{S}\)</span> and a piece in its <a href="#/def-orthogonal-complement">orthogonal complement</a>. Let <span class="math inline">\(\mathcal{S} = \operatorname{span}\mathopen{}\left\{(1, 2)\right\}\mathclose{}\)</span>, a line in <span class="math inline">\(\mathbb{R}^2\)</span>, and let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = (5, 0)\)</span>.</p>
+<p>Find <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \in \mathcal{S}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \in \mathcal{S}^\perp\)</span> with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Take <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = t\,(1, 2)\)</span>, and choose <span class="math inline">\(t\)</span> so that <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\)</span> is <a href="./linear-algebra-vectors.html#def-orthogonal-vectors">orthogonal</a> to <span class="math inline">\((1, 2)\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-orthogonal-direct-sum-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 5</em>. </span>Take <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = t\,(1, 2)\)</span>. Then <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = (5 - t, -2t)\)</span> is in <span class="math inline">\(\mathcal{S}^\perp\)</span> exactly when</p>
+<p><span class="math display">\[
+(1, 2) \cdot (5 - t, -2t) = 5 - t - 4t = 5 - 5t = 0,
+\]</span></p>
+<p>so <span class="math inline">\(t = 1\)</span>. Then <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} = (1, 2)\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (4, -2)\)</span>, with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (5, 0)\)</span> and <span class="math inline">\((1, 2) \cdot (4, -2) = 4 - 4 = 0\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="thm-double-complement" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 5 (The orthogonal complement of the orthogonal complement)</strong></span> For any subspace <span class="math inline">\(\mathcal{S}\)</span> of <span class="math inline">\(\mathbb{R}^p\)</span>,</p>
+<p><span class="math display">\[
+(\mathcal{S}^\perp)^\perp = \mathcal{S}.
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><strong><span class="math inline">\(\mathcal{S} \subseteq (\mathcal{S}^\perp)^\perp\)</span>.</strong> Take <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} \in \mathcal{S}\)</span> and any <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \in \mathcal{S}^\perp\)</span>. By <a href="#/def-orthogonal-complement" class="quarto-xref">Definition&nbsp;1</a>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = 0\)</span>, so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} = 0\)</span> too (<a href="./linear-algebra-vectors.html#thm-lincom-symmetric">Theorem&nbsp;1 in Vectors</a>). So <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}\)</span> is orthogonal to every vector of <span class="math inline">\(\mathcal{S}^\perp\)</span>, that is, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} \in (\mathcal{S}^\perp)^\perp\)</span>.</p>
+<p><strong>Equal dimensions.</strong> <span class="math inline">\(\mathcal{S}^\perp\)</span> is a subspace (<a href="#/thm-orthogonal-complement-subspace" class="quarto-xref">Theorem&nbsp;2</a>), so part 2 of <a href="#/thm-orthogonal-direct-sum" class="quarto-xref">Theorem&nbsp;4</a> applies to it as well as to <span class="math inline">\(\mathcal{S}\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\dim\mathopen{}\left((\mathcal{S}^\perp)^\perp\right)\mathclose{}
+&amp;= p - \dim(\mathcal{S}^\perp)
+&amp;&amp; \text{(}\href{#thm-orthogonal-direct-sum}{\text{Theorem~4}}\text{, applied to } \mathcal{S}^\perp \text{)}
+\\
+&amp;= p - \mathopen{}\left(p - \dim(\mathcal{S})\right)\mathclose{}
+&amp;&amp; \text{(}\href{#thm-orthogonal-direct-sum}{\text{Theorem~4}}\text{, applied to } \mathcal{S} \text{)}
+\\
+&amp;= \dim(\mathcal{S}).
+&amp;&amp; \text{(arithmetic)}
+\end{aligned}
+\]</span></p>
+<p><span class="math inline">\((\mathcal{S}^\perp)^\perp\)</span> is a subspace (<a href="#/thm-orthogonal-complement-subspace" class="quarto-xref">Theorem&nbsp;2</a>) that contains <span class="math inline">\(\mathcal{S}\)</span> and has the same dimension, so it equals <span class="math inline">\(\mathcal{S}\)</span> (<a href="./linear-algebra-bases.html#thm-subspace-equal-dim">Theorem&nbsp;6 in Bases and Dimension</a>).</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-double-complement" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6 (Back to the line)</strong></span> In <a href="#/exm-orthogonal-direct-sum" class="quarto-xref">Example&nbsp;5</a>, <span class="math inline">\(\mathcal{S} = \operatorname{span}\mathopen{}\left\{(1, 1, 0)\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathcal{S}^\perp = \operatorname{span}\mathopen{}\left\{(1, -1, 0), (0, 0, 1)\right\}\mathclose{}\)</span>. Put those two spanning vectors in the columns of the <span class="math inline">\(3 \times 2\)</span> matrix <span class="math inline">\(\mathbf{B} = \begin{bmatrix} 1 &amp; 0 \\ -1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}\)</span>, so <span class="math inline">\(\mathcal{S}^\perp = \mathcal{C}(\mathbf{B})\)</span> (<a href="./linear-algebra-column-null-space.html#thm-column-space-span">Theorem&nbsp;1 in Column Space and Null Space</a>) and <span class="math inline">\((\mathcal{S}^\perp)^\perp = \mathcal{N}({\mathbf{B}}^{\top})\)</span> (<a href="#/thm-complement-null-space" class="quarto-xref">Theorem&nbsp;3</a>). Since <span class="math inline">\({\mathbf{B}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = (w_1 - w_2,\ w_3)\)</span> (<a href="./linear-algebra-matrix-multiplication.html#def-matvec-mult">Definition&nbsp;8 in Matrix Multiplication</a>), <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in (\mathcal{S}^\perp)^\perp\)</span> exactly when <span class="math inline">\(w_1 - w_2 = 0\)</span> and <span class="math inline">\(w_3 = 0\)</span>. So</p>
+<p><span class="math display">\[
+\begin{aligned}
+(\mathcal{S}^\perp)^\perp &amp;= \mathopen{}\left\{(a, a, 0) : a \in \mathbb{R}\right\}\mathclose{} \\
+&amp;= \mathcal{S}.
+\end{aligned}
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-double-complement-fails" class="theorem example">
+<p><span class="theorem-title"><strong>Example 7 (A set that is not a subspace does not come back)</strong></span> The one-element set <span class="math inline">\(\mathcal{X} = \mathopen{}\left\{(1, 1, 0)\right\}\mathclose{}\)</span> is not a subspace. Its orthogonal complement is the same as that of <span class="math inline">\(\mathcal{S}\)</span> in <a href="#/exm-double-complement" class="quarto-xref">Example&nbsp;6</a>, since both are defined by the single condition <span class="math inline">\(u_1 + u_2 = 0\)</span>, so <span class="math inline">\((\mathcal{X}^\perp)^\perp = \operatorname{span}\mathopen{}\left\{(1, 1, 0)\right\}\mathclose{}\)</span>, which contains <span class="math inline">\((2, 2, 0) \notin \mathcal{X}\)</span>. <a href="#/thm-double-complement" class="quarto-xref">Theorem&nbsp;5</a> needs <span class="math inline">\(\mathcal{S}\)</span> to be a subspace.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exr-double-complement-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 6 (Taking the orthogonal complement twice)</strong></span> <a href="#/thm-double-complement" class="quarto-xref">Theorem&nbsp;5</a> says that taking the <a href="#/def-orthogonal-complement">orthogonal complement</a> of a <a href="./linear-algebra-subspaces.html#def-subspace">subspace</a> twice gives back the subspace. Let <span class="math inline">\(\mathcal{S} = \operatorname{span}\mathopen{}\left\{(1, 2)\right\}\mathclose{}\)</span> in <span class="math inline">\(\mathbb{R}^2\)</span>, whose orthogonal complement is <span class="math inline">\(\mathcal{S}^\perp = \operatorname{span}\mathopen{}\left\{(-2, 1)\right\}\mathclose{}\)</span>.</p>
+<p>Find <span class="math inline">\((\mathcal{S}^\perp)^\perp\)</span> directly from <span class="math inline">\(\mathcal{S}^\perp = \operatorname{span}\mathopen{}\left\{(-2, 1)\right\}\mathclose{}\)</span>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>A vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> is <a href="./linear-algebra-vectors.html#def-orthogonal-vectors">orthogonal</a> to every multiple of <span class="math inline">\((-2, 1)\)</span> exactly when <span class="math inline">\(-2 w_1 + w_2 = 0\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="sol-double-complement-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 6</em>. </span>A vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> is in <span class="math inline">\((\mathcal{S}^\perp)^\perp\)</span> exactly when <span class="math inline">\(c\,(-2, 1) \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = c\,(-2 w_1 + w_2) = 0\)</span> for every <span class="math inline">\(c\)</span>, that is, when <span class="math inline">\(w_2 = 2 w_1\)</span>. So</p>
+<p><span class="math display">\[
+(\mathcal{S}^\perp)^\perp = \mathopen{}\left\{(w_1, 2 w_1) : w_1 \in \mathbb{R}\right\}\mathclose{} = \operatorname{span}\mathopen{}\left\{(1, 2)\right\}\mathclose{} = \mathcal{S},
+\]</span></p>
+<p>as <a href="#/thm-double-complement" class="quarto-xref">Theorem&nbsp;5</a> says.</p>
+</div>
+</section>
+<section id="sec-fundamental-theorem" class="slide level2" data-number="2">
+<h2><span class="header-section-number">2</span> The fundamental theorem of linear algebra</h2>
+</section>
+<section class="slide level2 scrollable">
+
+<div id="thm-fundamental-subspaces" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 6 (Fundamental theorem of linear algebra)</strong></span> Let <span class="math inline">\(\mathbf{A}\)</span> be an <span class="math inline">\(m \times n\)</span> matrix with <span class="math inline">\(\operatorname{rank}(\mathbf{A}) = r\)</span>. Then</p>
+<ol type="1">
+<li><p><span class="math inline">\(\mathcal{C}(\mathbf{A})^\perp = \mathcal{N}({\mathbf{A}}^{\top})\)</span>, and <span class="math inline">\(\mathbb{R}^m = \mathcal{C}(\mathbf{A}) \oplus \mathcal{N}({\mathbf{A}}^{\top})\)</span>;</p></li>
+<li><p><span class="math inline">\(\mathcal{C}(\mathbf{A}) = \mathcal{N}({\mathbf{A}}^{\top})^\perp\)</span>;</p></li>
+<li><p><span class="math inline">\(\mathcal{N}(\mathbf{A})^\perp = \mathcal{C}({\mathbf{A}}^{\top})\)</span>, and <span class="math inline">\(\mathbb{R}^n = \mathcal{C}({\mathbf{A}}^{\top}) \oplus \mathcal{N}(\mathbf{A})\)</span>;</p></li>
+<li><p><span class="math display">\[
+\begin{aligned}
+\dim\mathopen{}\left(\mathcal{C}(\mathbf{A})\right)\mathclose{} &amp;= \dim\mathopen{}\left(\mathcal{C}({\mathbf{A}}^{\top})\right)\mathclose{} \\
+&amp;= r,
+\end{aligned}
+\]</span></p>
+<p><span class="math inline">\(\dim\mathopen{}\left(\mathcal{N}(\mathbf{A})\right)\mathclose{} = n - r\)</span>, and <span class="math inline">\(\dim\mathopen{}\left(\mathcal{N}({\mathbf{A}}^{\top})\right)\mathclose{} = m - r\)</span>.</p></li>
+</ol>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><strong>Part 1.</strong> The first equation is <a href="#/thm-complement-null-space" class="quarto-xref">Theorem&nbsp;3</a>. <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span> is a subspace of <span class="math inline">\(\mathbb{R}^m\)</span> (<a href="./linear-algebra-column-null-space.html#thm-column-space-span">Theorem&nbsp;1 in Column Space and Null Space</a>), so</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathbb{R}^m
+&amp;= \mathcal{C}(\mathbf{A}) \oplus \mathcal{C}(\mathbf{A})^\perp
+&amp;&amp; \text{(}\href{#thm-orthogonal-direct-sum}{\text{Theorem~4}}\text{)}
+\\
+&amp;= \mathcal{C}(\mathbf{A}) \oplus \mathcal{N}({\mathbf{A}}^{\top}).
+&amp;&amp; \text{(first equation)}
+\end{aligned}
+\]</span></p>
+<p><strong>Part 2.</strong></p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathcal{C}(\mathbf{A})
+&amp;= \mathopen{}\left(\mathcal{C}(\mathbf{A})^\perp\right)\mathclose{}^\perp
+&amp;&amp; \text{(}\href{#thm-double-complement}{\text{Theorem~5}}\text{)}
+\\
+&amp;= \mathcal{N}({\mathbf{A}}^{\top})^\perp.
+&amp;&amp; \text{(part 1)}
+\end{aligned}
+\]</span></p>
+<p><strong>Part 3.</strong> Apply parts 2 and 1 to the <span class="math inline">\(n \times m\)</span> matrix <span class="math inline">\({\mathbf{A}}^{\top}\)</span>, using <span class="math inline">\({({\mathbf{A}}^{\top})}^{\top} = \mathbf{A}\)</span>: part 2 gives <span class="math inline">\(\mathcal{C}({\mathbf{A}}^{\top}) = \mathcal{N}(\mathbf{A})^\perp\)</span>, and part 1 gives <span class="math inline">\(\mathbb{R}^n = \mathcal{C}({\mathbf{A}}^{\top}) \oplus \mathcal{N}(\mathbf{A})\)</span>.</p>
+<p><strong>Part 4.</strong> <span class="math inline">\(\dim\mathopen{}\left(\mathcal{C}(\mathbf{A})\right)\mathclose{} = r\)</span> by <a href="./linear-algebra-rank-nullity.html#thm-rank-dim">Theorem&nbsp;1 in Rank-Nullity and Rank Factorization</a>. <span class="math inline">\(\dim\mathopen{}\left(\mathcal{C}({\mathbf{A}}^{\top})\right)\mathclose{} = \operatorname{rank}({\mathbf{A}}^{\top})\)</span> by <a href="./linear-algebra-rank-nullity.html#thm-rank-dim">Theorem&nbsp;1 in Rank-Nullity and Rank Factorization</a>, and that is <span class="math inline">\(r\)</span> by <a href="./linear-algebra-rank-nullity.html#thm-rank-transpose">Theorem&nbsp;4 in Rank-Nullity and Rank Factorization</a>. <span class="math inline">\(\mathbf{A}\)</span> has <span class="math inline">\(n\)</span> columns, so <span class="math inline">\(\dim\mathopen{}\left(\mathcal{N}(\mathbf{A})\right)\mathclose{} = n - r\)</span> (<a href="./linear-algebra-rank-nullity.html#def-nullity">Definition&nbsp;1 in Rank-Nullity and Rank Factorization</a>, <a href="./linear-algebra-rank-nullity.html#thm-rank-nullity">Theorem&nbsp;2 in Rank-Nullity and Rank Factorization</a>). <span class="math inline">\({\mathbf{A}}^{\top}\)</span> has <span class="math inline">\(m\)</span> columns and rank <span class="math inline">\(r\)</span>, so <span class="math inline">\(\dim\mathopen{}\left(\mathcal{N}({\mathbf{A}}^{\top})\right)\mathclose{} = m - r\)</span> in the same way.</p>
+</div>
+</section>
+<section class="slide level2 scrollable">
+
+<div id="exm-fundamental-subspaces" class="theorem example">
+<p><span class="theorem-title"><strong>Example 8 (The four subspaces of the matrix in <a href="./linear-algebra-column-null-space.html#exm-column-space">Example&nbsp;1 in Column Space and Null Space</a>)</strong></span> For <span class="math inline">\(\mathbf{A}\)</span> in <a href="./linear-algebra-column-null-space.html#exm-column-space">Example&nbsp;1 in Column Space and Null Space</a>, <span class="math inline">\(m = 2\)</span>, <span class="math inline">\(n = 3\)</span> and <span class="math inline">\(r = 1\)</span> (<a href="./linear-algebra-rank-nullity.html#exm-rank-dim">Example&nbsp;1 in Rank-Nullity and Rank Factorization</a>).</p>
+<ul>
+<li><p><strong>In <span class="math inline">\(\mathbb{R}^3\)</span>:</strong> the row space <span class="math inline">\(\mathcal{C}({\mathbf{A}}^{\top}) = \operatorname{span}\mathopen{}\left\{(1, -2, -2)\right\}\mathclose{}\)</span></p>
+<ol class="example" type="1">
+<li>has dimension <span class="math inline">\(1 = r\)</span>, and <span class="math inline">\(\mathcal{N}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\{(2, 1, 0), (2, 0, 1)\right\}\mathclose{}\)</span> has dimension <span class="math inline">\(2 = n - r\)</span> (<a href="./linear-algebra-rank-nullity.html#exm-nullity">Example&nbsp;2 in Rank-Nullity and Rank Factorization</a>). The spanning vectors are orthogonal:</li>
+</ol>
+<p><span class="math display">\[
+\begin{aligned}
+(1, -2, -2) \cdot (2, 1, 0) &amp;= 2 - 2 + 0 \\
+&amp;= 0
+\end{aligned}
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\begin{aligned}
+(1, -2, -2) \cdot (2, 0, 1) &amp;= 2 + 0 - 2 \\
+&amp;= 0.
+\end{aligned}
+\]</span></p></li>
+<li><p><strong>In <span class="math inline">\(\mathbb{R}^2\)</span>:</strong> <span class="math inline">\(\mathcal{C}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\{(1, 3)\right\}\mathclose{}\)</span> has dimension <span class="math inline">\(1 = r\)</span>, and <span class="math inline">\(\mathcal{N}({\mathbf{A}}^{\top}) = \operatorname{span}\mathopen{}\left\{(-3, 1)\right\}\mathclose{}\)</span> has dimension <span class="math inline">\(1 = m - r\)</span> (<a href="#/exm-complement-null-space" class="quarto-xref">Example&nbsp;4</a>).</p></li>
+</ul>
+<p>By part 3, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = (1, 0, 0)\)</span> splits uniquely into a row-space part <span class="math inline">\(t\,(1, -2, -2)\)</span> and a null-space part. The null-space part <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} - t\,(1, -2, -2)\)</span> lies in <span class="math inline">\(\mathcal{N}(\mathbf{A})\)</span> (part 3), and <span class="math inline">\(\mathcal{N}(\mathbf{A}) = \mathcal{C}({\mathbf{A}}^{\top})^\perp\)</span> (<a href="#/thm-complement-null-space" class="quarto-xref">Theorem&nbsp;3</a> applied to <span class="math inline">\({\mathbf{A}}^{\top}\)</span>, with <span class="math inline">\({({\mathbf{A}}^{\top})}^{\top} = \mathbf{A}\)</span>), so it must be orthogonal to <span class="math inline">\((1, -2, -2)\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+0
+&amp;= (1, -2, -2) \cdot \mathopen{}\left((1, 0, 0) - t\,(1, -2, -2)\right)\mathclose{}
+&amp;&amp; \text{(orthogonality)}
+\\
+&amp;= (1, -2, -2) \cdot \mathopen{}\left(1 \cdot(1, 0, 0) + (-t)\,(1, -2, -2)\right)\mathclose{}
+&amp;&amp; \text{(write the difference as a linear combination)}
+\\
+&amp;= 1 \cdot\mathopen{}\left((1, -2, -2) \cdot (1, 0, 0)\right)\mathclose{} + (-t)\,\mathopen{}\left((1, -2, -2) \cdot (1, -2, -2)\right)\mathclose{}
+&amp;&amp; \text{(}\href{#thm-dot-linear}{\text{Theorem~1}}\text{)}
+\\
+&amp;= 1 \cdot 1 + (-t) \cdot 9
+&amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~10 in Vectors}}\text{)}
+\\
+&amp;= 1 - 9t,
+&amp;&amp; \text{(arithmetic)}
+\end{aligned}
+\]</span></p>
+<p>so <span class="math inline">\(t = \frac{1}{9}\)</span>. The row-space part is <span class="math inline">\(\mathopen{}\left(\frac{1}{9}, -\frac{2}{9}, -\frac{2}{9}\right)\mathclose{}\)</span> and the null-space part is <span class="math inline">\(\mathopen{}\left(\frac{8}{9}, \frac{2}{9}, \frac{2}{9}\right)\mathclose{}\)</span>; as a check, row 1 of <span class="math inline">\(\mathbf{A}\)</span> gives <span class="math inline">\(\frac{8}{9} - 2 \cdot\frac{2}{9} - 2 \cdot\frac{2}{9} = 0\)</span>, and row 2 is <span class="math inline">\(3\)</span> times row 1, so <span class="math inline">\(\mathbf{A}\)</span> sends the null-space part to <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2\)</span>.</p>
+<p>These four statements are the fundamental theorem of linear algebra <span class="citation" data-cites="wikipedia_fundamental_theorem_of_linear_algebra"><a href="#/references" role="doc-biblioref" onclick="">[2]</a></span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exr-fundamental-subspaces-practice" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 7 (Testing whether a linear system has a solution through the left null space)</strong></span> Part 2 of <a href="#/thm-fundamental-subspaces" class="quarto-xref">Theorem&nbsp;6</a> says that <span class="math inline">\(\mathcal{C}(\mathbf{A}) = \mathcal{N}({\mathbf{A}}^{\top})^\perp\)</span>, so a <a href="./linear-algebra-matrix-multiplication.html#def-linear-system">linear system</a> <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> has a solution exactly when <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> is <a href="./linear-algebra-vectors.html#def-orthogonal-vectors">orthogonal</a> to every vector of the <a href="./linear-algebra-column-null-space.html#def-left-null-space">left null space</a>. Let</p>
+<p><span class="math display">\[
+\mathbf{A} = \begin{bmatrix}1 &amp; 1 \\ 1 &amp; 1 \\ 0 &amp; 0\end{bmatrix},
+\qquad
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \begin{bmatrix}1 \\ 2 \\ 0\end{bmatrix}.
+\]</span></p>
+<p>Decide whether <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> has a solution, by testing <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> against <span class="math inline">\(\mathcal{N}({\mathbf{A}}^{\top})\)</span>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Hint</strong></p>
+</div>
+<div class="callout-content">
+<p>Find one nonzero vector of <span class="math inline">\(\mathcal{N}({\mathbf{A}}^{\top})\)</span> whose third entry is <span class="math inline">\(0\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2 smaller scrollable" id="references">
+
+<div id="sol-fundamental-subspaces-practice" class="proof solution">
+<p><span class="proof-title"><em>Solution 7</em>. </span>Here <span class="math inline">\({\mathbf{A}}^{\top}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}} = (y_1 + y_2, y_1 + y_2)\)</span>, so <span class="math inline">\((1, -1, 0)\)</span> is in <span class="math inline">\(\mathcal{N}({\mathbf{A}}^{\top})\)</span>. But</p>
+<p><span class="math display">\[
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \cdot (1, -1, 0) = 1 - 2 + 0 = -1 \neq 0,
+\]</span></p>
+<p>so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> is not in <span class="math inline">\(\mathcal{N}({\mathbf{A}}^{\top})^\perp = \mathcal{C}(\mathbf{A})\)</span>, and <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> has no solution. Directly, the first two entries of <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> are both <span class="math inline">\(x_1 + x_2\)</span>, while those of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> are <span class="math inline">\(1\)</span> and <span class="math inline">\(2\)</span>.</p>
+</div>
+
+
+<script>
+const defaultAnchorIconFallback = "#";
+
+function getDefaultAnchorTemplate() {
+  const defaultAnchor = document.querySelector("a.anchorjs-link[data-anchorjs-icon]");
+  if (!defaultAnchor) {
+    return null;
+  }
+
+  return {
+    icon: defaultAnchor.getAttribute("data-anchorjs-icon"),
+    style: defaultAnchor.getAttribute("style")
+  };
+}
+
+function alignEquationAnchorWithDefault(anchor, template) {
+  if (!anchor) {
+    return;
+  }
+
+  anchor.classList.remove("external");
+
+  if (template && template.icon) {
+    anchor.setAttribute("data-anchorjs-icon", template.icon);
+    anchor.textContent = "";
+  } else if (!anchor.textContent) {
+    anchor.textContent = defaultAnchorIconFallback;
+  }
+
+  if (template && template.style) {
+    anchor.setAttribute("style", template.style);
+  } else {
+    anchor.removeAttribute("style");
+  }
+}
+
+function alignEquationAnchorsWithDefault() {
+  const template = getDefaultAnchorTemplate();
+  document.querySelectorAll("a.equation-anchor").forEach(function (anchor) {
+    alignEquationAnchorWithDefault(anchor, template);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const equations = document.querySelectorAll("span[id^='eq-']");
+  equations.forEach(function (equation) {
+    if (equation.querySelector(".equation-anchor")) {
+      return;
+    }
+
+    if (!equation.querySelector(".math.display")) {
+      return;
+    }
+
+    const id = equation.getAttribute("id");
+    if (!id) {
+      return;
+    }
+
+    equation.classList.add("equation-anchor-target");
+
+    const anchor = document.createElement("a");
+    anchor.className = "equation-anchor anchorjs-link";
+    anchor.href = "#" + id;
+    anchor.setAttribute("aria-label", "Permalink to this equation");
+    equation.appendChild(anchor);
+  });
+
+  alignEquationAnchorsWithDefault();
+});
+
+window.addEventListener("load", alignEquationAnchorsWithDefault);
+</script>
+
+<script>
+(function () {
+  var css = [
+    "#revealjs-html-link {",
+    "  position: fixed;",
+    "  top: 8px;",
+    "  right: 8px;",
+    "  z-index: 31;",
+    "  font-size: 0.55em;",
+    "  line-height: 1;",
+    "}",
+    "#revealjs-html-link a {",
+    "  color: var(--qwt-muted, rgba(0, 0, 0, 0.5));",
+    "  text-decoration: none;",
+    "  border: 1px solid var(--qwt-border, rgba(0, 0, 0, 0.2));",
+    "  padding: 4px 8px;",
+    "  border-radius: 4px;",
+    "  background: var(--qwt-chip-bg, rgba(255, 255, 255, 0.8));",
+    "  transition: color 0.15s, background 0.15s, border-color 0.15s;",
+    "}",
+    "#revealjs-html-link a:hover {",
+    "  color: var(--qwt-fg, rgba(0, 0, 0, 0.9));",
+    "  background: var(--qwt-chip-bg-hover, rgba(255, 255, 255, 0.98));",
+    "  border-color: var(--qwt-fg, rgba(0, 0, 0, 0.4));",
+    "}"
+  ].join("\n");
+
+  function getHtmlBase() {
+    var url = window.location.href.split("#")[0];
+    return url.replace(/-slides\.html$/, ".html");
+  }
+
+  function getCurrentSectionId() {
+    if (typeof Reveal === "undefined" || !Reveal.getCurrentSlide) {
+      return null;
+    }
+    var slide = Reveal.getCurrentSlide();
+    if (!slide) {
+      return null;
+    }
+    // If the current slide itself has an id, use it
+    if (slide.id) {
+      return slide.id;
+    }
+    // Walk backwards through sibling sections to find the nearest one with an id
+    var sibling = slide.previousElementSibling;
+    while (sibling) {
+      if (sibling.tagName === "SECTION" && sibling.id) {
+        return sibling.id;
+      }
+      sibling = sibling.previousElementSibling;
+    }
+    // Fall back to the first section[id] inside the parent container
+    var parent = slide.parentElement;
+    if (parent && parent.tagName === "SECTION") {
+      var firstNamed = parent.querySelector("section[id]");
+      if (firstNamed) {
+        return firstNamed.id;
+      }
+    }
+    return null;
+  }
+
+  function updateHtmlLink() {
+    var anchor = document.getElementById("revealjs-html-anchor");
+    if (!anchor) {
+      return;
+    }
+    var sectionId = getCurrentSectionId();
+    anchor.href = getHtmlBase() + (sectionId ? "#" + sectionId : "");
+  }
+
+  function initRevealJsHtmlLink() {
+    var htmlBase = getHtmlBase();
+
+    // Don't add the link if the URL doesn't follow the -slides.html convention
+    if (htmlBase === window.location.href.split("#")[0]) {
+      return;
+    }
+
+    // Inject styles
+    var styleElement = document.createElement("style");
+    styleElement.textContent = css;
+    document.head.appendChild(styleElement);
+
+    // Create the link element and append it directly to body so it stays
+    // visible across all slides regardless of Reveal.js section visibility
+    var div = document.createElement("div");
+    div.id = "revealjs-html-link";
+    var anchor = document.createElement("a");
+    anchor.id = "revealjs-html-anchor";
+    anchor.href = htmlBase;
+    anchor.target = "_blank";
+    anchor.title = "View this section in the HTML notes";
+    anchor.setAttribute("aria-label", "View this section in the HTML notes");
+    anchor.innerHTML = "&#128196;&nbsp;Webpage version";
+    div.appendChild(anchor);
+    document.body.appendChild(div);
+
+    // Register Reveal.js slide-change listener to keep the link updated
+    if (typeof Reveal !== "undefined") {
+      Reveal.on("ready", updateHtmlLink);
+      Reveal.on("slidechanged", updateHtmlLink);
+    }
+
+    updateHtmlLink();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initRevealJsHtmlLink);
+  } else {
+    initRevealJsHtmlLink();
+  }
+})();
+</script>
+
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
+<div id="ref-wikipedia_orthogonal_complement" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Orthogonal complement — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Orthogonal_complement">https://en.wikipedia.org/wiki/Orthogonal_complement</a></div>
+</div>
+<div id="ref-wikipedia_fundamental_theorem_of_linear_algebra" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">Wikipedia contributors, <span>“Fundamental theorem of linear algebra — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Fundamental_theorem_of_linear_algebra">https://en.wikipedia.org/wiki/Fundamental_theorem_of_linear_algebra</a></div>
+</div>
+</div>
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': false,
+'previewLinksAuto': true,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"\u003ci class=\"fas fa-gear\">\u003c/i>","content":"\u003cul class=\"slide-menu-items\">\n\u003cli class=\"slide-tool-item active\" data-item=\"0\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\">\u003ckbd>f\u003c/kbd> Fullscreen\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"1\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\">\u003ckbd>s\u003c/kbd> Speaker View\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"2\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\">\u003ckbd>o\u003c/kbd> Slide Overview\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"3\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\">\u003ckbd>e\u003c/kbd> PDF Export Mode\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"4\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\">\u003ckbd>r\u003c/kbd> Scroll View Mode\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"5\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\">\u003ckbd>?\u003c/kbd> Keyboard Help\u003c/a>\u003c/li>\n\u003c/ul>"}],"openButton":true,"openButtonLabel":"Slide menu"},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script>
+    // Put each folded code cell inside the tab it belongs to.
+    // Quarto hoists the `details.code-fold` of a cross-referenced figure out of the figure,
+    // so an R and a Python tab end up with their folds stacked above the whole figure.
+    // For every language tabset, take the run of folds immediately before it (or before the figure
+    // that holds it), match each fold to a tab by language, and move it to the top of that tab.
+    // The selectors cover both the website tabsets (Bootstrap) and the slide tabsets (tabby).
+    document.querySelectorAll("div.panel-tabset").forEach(function (tabset) {
+      var anchor = tabset.closest("div.quarto-float") || tabset;
+      var panes = Array.prototype.slice.call(tabset.querySelectorAll(":scope > .tab-content > div"));
+      var tabs = Array.prototype.slice.call(tabset.querySelectorAll(":scope > ul > li > a"));
+      var folds = [];
+      var node = anchor.previousElementSibling;
+      while (node && node.matches("details.code-fold")) {
+        folds.unshift(node);
+        node = node.previousElementSibling;
+      }
+      if (folds.length === 0 || folds.length !== panes.length || tabs.length !== panes.length) {
+        return;
+      }
+      var language = function (fold) {
+        var code = fold.querySelector("pre.sourceCode");
+        var found = code && Array.prototype.find.call(code.classList, function (name) {
+          return name !== "sourceCode" && name !== "downlit" && name !== "code-with-copy";
+        });
+        return found ? found.toLowerCase() : "";
+      };
+      var used = {};
+      var unused = function () {
+        return tabs.findIndex(function (tab, j) {
+          return !used[j];
+        });
+      };
+      folds.forEach(function (fold) {
+        var index = tabs.findIndex(function (tab, j) {
+          return !used[j] && tab.textContent.trim().toLowerCase() === language(fold);
+        });
+        if (index < 0) {
+          index = unused();
+        }
+        used[index] = true;
+        panes[index].insertBefore(fold, panes[index].firstChild);
+      });
+    });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/morrison-lab\.github\.io\/mds\/");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+          window.quartoDecorateExternalLinks = function (root) {
+         var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+              if (!link.classList.contains('no-external-icon')) {
+              }
+            }
+          }
+          };
+          window.quartoDecorateExternalLinks(window.document);
+        // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+        // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+        const hideOnEscAndFocusOut = {
+          name: 'hideOnEscAndFocusOut',
+          defaultValue: true,
+          fn(instance) {
+            const dismiss = () => {
+              // A show scheduled by the trigger delay would otherwise reopen it
+              instance.clearDelayTimeouts();
+              instance.hide();
+            };
+            const onKeyDown = (event) => {
+              if (event.key !== 'Escape') {
+                return;
+              }
+              // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+              // except an open reveal.js slide menu, which Esc should close too.
+              // The menu handles keys only when its keyboard option is on.
+              const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+                window.Reveal.getConfig().menu?.keyboard !== false;
+              if (!menuHandlesEsc) {
+                event.stopPropagation();
+              }
+              if (instance.popper.contains(window.document.activeElement)) {
+                // Disabled while refocusing so the focus trigger does not reopen it
+                instance.disable();
+                instance.reference.focus();
+                instance.enable();
+              }
+              dismiss();
+            };
+            const onFocusOut = (event) => {
+              const target = event.relatedTarget;
+              if (target && !instance.reference.contains(target) &&
+                  !instance.popper.contains(target)) {
+                dismiss();
+              }
+            };
+            // On the trigger too: a click trigger (code-annotations: select) has no
+            // blur handling. Attached for the instance's lifetime so leaving the
+            // trigger also cancels a show still pending on the trigger delay.
+            instance.reference.addEventListener('focusout', onFocusOut);
+            return {
+              onShow() {
+                window.document.addEventListener('keydown', onKeyDown, true);
+                instance.popper.addEventListener('focusout', onFocusOut);
+              },
+              onHide() {
+                window.document.removeEventListener('keydown', onKeyDown, true);
+                instance.popper.removeEventListener('focusout', onFocusOut);
+              },
+              onDestroy() {
+                instance.reference.removeEventListener('focusout', onFocusOut);
+              },
+            };
+          },
+        };
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+            plugins: [hideOnEscAndFocusOut],
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>
