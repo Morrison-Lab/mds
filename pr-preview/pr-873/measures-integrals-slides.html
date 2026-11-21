@@ -247,9 +247,10 @@
     reads those vars so it stays legible in every palette. Light is the
     default variable set, Off-white and Parchment are a data-palette attribute
     on <html>, and Dark is the body.qwt-dark class. The choice is saved under
-    "mln-theme", the key the website's theme dropdown (theme-picker.html) uses,
-    so it carries across the site and the decks. First-time visitors get
-    Dark if their system prefers it, and Off-white otherwise.
+    "lds-theme" (falling back to "mln-theme"), the key the website's theme
+    dropdown (theme-picker.html) uses, so it carries across the site and the
+    decks. First-time visitors get Dark if their system prefers it, and
+    Off-white otherwise.
   --><style>
     #qwt-theme-select {
       position: fixed;
@@ -282,7 +283,8 @@
 <script>
   (function () {
     "use strict";
-    var KEY = "mln-theme";
+    var KEY = "lds-theme";
+    var LEGACY_KEY = "mln-theme";
     var DARK_CLASS = "qwt-dark";
     var OPTIONS = [["light", "Light"], ["offwhite", "Off-white"], ["parchment", "Parchment"], ["dark", "Dark"]];
     var root = document.documentElement;
@@ -292,7 +294,7 @@
     }
 
     function stored() {
-      try { return localStorage.getItem(KEY); } catch (e) { return null; }
+      try { return localStorage.getItem(KEY) || localStorage.getItem(LEGACY_KEY); } catch (e) { return null; }
     }
 
     function initialTheme() {
@@ -363,7 +365,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-20 16:05:26 (PST)</p>
+  <p class="date">Last modified: 2026-11-20 17:22:37 (PST)</p>
 </section><section class="slide level2"><div id="def-measurable-function" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 1 (Measurable function)</strong></span> Let <span class="math inline">\((S, \mathcal{S})\)</span> be a <a href="./measures-measure-spaces.html#def-measurable-space">measurable space</a>. A <a href="https://morrison-lab.github.io/mcs/functions.html#def-function">function</a> <span class="math inline">\(f : S \to \mathbb{R}\)</span> is <strong>measurable</strong> (with respect to <span class="math inline">\(\mathcal{S}\)</span>) <span class="citation" data-cites="wikipedia_measurable_function"><a href="#/references" role="doc-biblioref" onclick="">[1]</a></span> if, for every real number <span class="math inline">\(c\)</span>, the set of elements where <span class="math inline">\(f\)</span> is at most <span class="math inline">\(c\)</span> is measurable:</p>
 <p><span class="math display">\[{\mathopen{}\left\{s \in S : f(s) \le c\right\}\mathclose{}} \in \mathcal{S}\]</span></p>

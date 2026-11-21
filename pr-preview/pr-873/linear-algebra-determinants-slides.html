@@ -185,9 +185,10 @@
     reads those vars so it stays legible in every palette. Light is the
     default variable set, Off-white and Parchment are a data-palette attribute
     on <html>, and Dark is the body.qwt-dark class. The choice is saved under
-    "mln-theme", the key the website's theme dropdown (theme-picker.html) uses,
-    so it carries across the site and the decks. First-time visitors get
-    Dark if their system prefers it, and Off-white otherwise.
+    "lds-theme" (falling back to "mln-theme"), the key the website's theme
+    dropdown (theme-picker.html) uses, so it carries across the site and the
+    decks. First-time visitors get Dark if their system prefers it, and
+    Off-white otherwise.
   -->
   <style>
     #qwt-theme-select {
@@ -221,7 +222,8 @@
   <script>
   (function () {
     "use strict";
-    var KEY = "mln-theme";
+    var KEY = "lds-theme";
+    var LEGACY_KEY = "mln-theme";
     var DARK_CLASS = "qwt-dark";
     var OPTIONS = [["light", "Light"], ["offwhite", "Off-white"], ["parchment", "Parchment"], ["dark", "Dark"]];
     var root = document.documentElement;
@@ -231,7 +233,7 @@
     }
 
     function stored() {
-      try { return localStorage.getItem(KEY); } catch (e) { return null; }
+      try { return localStorage.getItem(KEY) || localStorage.getItem(LEGACY_KEY); } catch (e) { return null; }
     }
 
     function initialTheme() {
@@ -302,14 +304,14 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-20 16:05:26 (PST)</p>
+  <p class="date">Last modified: 2026-11-20 17:22:37 (PST)</p>
 </section>
 <section class="slide level2">
 
 
 </section>
 <section id="sec-determinants" class="slide level2" data-number="1">
-<h2><span class="header-section-number">1</span> Determinants</h2>
+<h2><span class="header-section-number">1</span> Definition</h2>
 </section>
 <section class="slide level2">
 
@@ -387,6 +389,9 @@
 </div>
 </div>
 </section>
+<section id="sec-det-diagonal" class="slide level2" data-number="2">
+<h2><span class="header-section-number">2</span> Diagonal matrices</h2>
+</section>
 <section class="slide level2">
 
 <div id="thm-det-diagonal" class="theorem">
@@ -428,6 +433,9 @@ d_1    &amp; \cdots &amp; 0      \\
 <div id="exm-det-diagonal" class="theorem example">
 <p><span class="theorem-title"><strong>Example 2 (Determinant of a scaled identity matrix)</strong></span> For a number <span class="math inline">\(c\)</span>, <span class="math inline">\(c\,\mathbf{I}_p\)</span> is diagonal with every diagonal entry equal to <span class="math inline">\(c\)</span>, so <span class="math inline">\(\det(c\,\mathbf{I}_p) = c^p\)</span>. In particular, <span class="math inline">\(\det(\mathbf{I}_p) = 1\)</span>.</p>
 </div>
+</section>
+<section id="sec-det-product" class="slide level2" data-number="3">
+<h2><span class="header-section-number">3</span> Matrix products</h2>
 </section>
 <section class="slide level2">
 
@@ -491,6 +499,9 @@ d_1    &amp; \cdots &amp; 0      \\
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
+</section>
+<section id="sec-det-eigenvalues" class="slide level2" data-number="4">
+<h2><span class="header-section-number">4</span> Eigenvalues</h2>
 </section>
 <section class="slide level2">
 

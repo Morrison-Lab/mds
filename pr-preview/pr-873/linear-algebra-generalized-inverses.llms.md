@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-20 16:05:26 (PST)
+Last modified: 2026-11-20 17:22:37 (PST)
 
 # 1 Generalized inverses and linear systems
 

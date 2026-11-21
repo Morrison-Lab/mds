@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-11-20 16:05:26 (PST)
+Last modified: 2026-11-20 17:22:37 (PST)
 
-# 1 Determinants
+# 1 Definition
 
 > **NOTE:**
 >
@@ -52,6 +52,8 @@ See also [\[1\]](#ref-wikipedia_determinant).
 >
 > - [The determinant](https://www.youtube.com/watch?v=Ip3X9LOh2dk) shows how the determinant measures the factor by which a linear transformation scales areas and volumes, and why a zero determinant corresponds to compressing space into a lower dimension.
 
+# 2 Diagonal matrices
+
 > **NOTE:**
 >
 > **Theorem 1 (Determinant of a diagonal matrix)** The determinant ([Definition 1](#def-determinant)) of a $p \times p$ diagonal matrix ([Definition 4 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#def-diagonal-matrix)) is the product of its diagonal entries:
@@ -89,6 +91,8 @@ See also [\[1\]](#ref-wikipedia_determinant).
 > **NOTE:**
 >
 > **Example 2 (Determinant of a scaled identity matrix)** For a number $c$, $c\,\mathbf{I}_p$ is diagonal with every diagonal entry equal to $c$, so $\det(c\,\mathbf{I}_p) = c^p$. In particular, $\det(\mathbf{I}_p) = 1$.
+
+# 3 Matrix products
 
 > **NOTE:**
 >
@@ -133,6 +137,8 @@ See also [\[1\]](#ref-wikipedia_determinant).
 > *Remark 2* (An example is not a proof). [Example 3](#exm-det-product) checks [Theorem 2](#thm-det-product) for one pair of $2 \times 2$ matrices, which shows the theorem holds there but does not prove it for every pair. The proof needs properties of the determinant that these notes don’t develop; see Banerjee and Roy [\[2\]](#ref-banerjee2014linear).
 
 See also [\[1\]](#ref-wikipedia_determinant).
+
+# 4 Eigenvalues
 
 > **NOTE:**
 >
