@@ -12,6 +12,26 @@ format:
 
 {{< include latex-macros/macros.qmd >}}
 
-# Determinants {#sec-determinants}
+# Definition {#sec-determinants}
 
-{{< include mds/_subfiles/_sec_linear_algebra_determinants.qmd >}}
+{{< include mds/_subfiles/linear-algebra/_def-determinant.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_note-video-determinant.qmd >}}
+
+# Diagonal matrices {#sec-det-diagonal}
+
+{{< include mds/_subfiles/linear-algebra/_thm-det-diagonal.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-det-diagonal.qmd >}}
+
+# Matrix products {#sec-det-product}
+
+{{< include mds/_subfiles/linear-algebra/_thm-det-product.qmd >}}
+
+# Eigenvalues {#sec-det-eigenvalues}
+
+{{< include mds/_subfiles/linear-algebra/_thm-det-eigenvalues.qmd >}}
