@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-16 08:39:14 (PST)
+Last modified: 2026-11-20 15:21:59 (PST)
 
 > **NOTE:**
 >
@@ -99,11 +99,50 @@ Last modified: 2026-11-16 08:39:14 (PST)
 
 > **NOTE:**
 >
-> **Definition 3 (Scalar)** In linear algebra, a **scalar** [\[2\]](#ref-wikipedia_scalar_mathematics) is a single [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers), as opposed to a vector or a matrix, which holds several numbers.
+> **Definition 3 (**$k$-sparse vector) For a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ in $\mathbb{R}^p$ and a whole number $k \le p$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is $k$-sparse if at most $k$ of its $p$ entries are nonzero.
 
 > **NOTE:**
 >
-> **Example 1 (Scalars and a vector)** The numbers $5$ and $-0.2$ are scalars. The column vector $(5, -0.2)$ is not a scalar: it has $2$ entries, so it is in $\mathbb{R}^2$ ([Definition 2](#def-real-coordinate-space)), and each of its $2$ entries is a scalar.
+> **Example 1 (A** $2$-sparse vector) Take $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= {(0, 3, 0, 0, -1)}^{\top} \in \mathbb{R}^5$. It has two nonzero entries, $x_2 = 3$ and $x_5 = -1$, so it is $2$-sparse. It is also $3$-sparse, $4$-sparse and $5$-sparse, since “at most $k$” allows fewer. It is not $1$-sparse, because two of its entries are nonzero. [Figure 1](#fig-sparse-vector) draws each entry as a stem from zero.
+>
+> > **NOTE:**
+> >
+> > Show code
+> >
+> > ``` downlit
+> > values <- c(0, 3, 0, 0, -1)
+> > entries <- tibble::tibble(position = 1:5, value = values)
+> >
+> > entries |>
+> >   ggplot2::ggplot() +
+> >   ggplot2::aes(x = position, y = value) +
+> >   ggplot2::geom_hline(yintercept = 0, colour = "grey60") +
+> >   ggplot2::geom_segment(
+> >     mapping = ggplot2::aes(xend = position, yend = 0)
+> >   ) +
+> >   ggplot2::geom_point(size = 3) +
+> >   ggplot2::labs(x = "entry position", y = "entry value")
+> > ```
+> >
+> > [![Stem plot of the five entries of the vector (0, 3, 0, 0, -1) against their positions 1 to 5. Only position 2, with a stem up to 3, and position 5, with a stem down to -1, leave the horizontal zero line; the other three entries sit on it.](linear-algebra-vectors_files/figure-html/sparse-vector-plot-1.png)](linear-algebra-vectors_files/figure-html/sparse-vector-plot-1.png "Figure 1: The entries of {(0, 3, 0, 0, -1)}^{\top}. Only two stems leave zero, so the vector is 2-sparse.")
+> >
+> > Figure 1: The entries of ${(0, 3, 0, 0, -1)}^{\top}$. Only two stems leave zero, so the vector is $2$-sparse.
+
+> **NOTE:**
+>
+> **Definition 4 (Sparsity)** The **sparsity** of a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ in $\mathbb{R}^p$ [\[2\]](#ref-wikipedia_sparse_matrix) is the [fraction](algebra-sums.llms.md#def-quotient) of its $p$ entries that are zero.
+
+> **NOTE:**
+>
+> **Example 2 (The sparsity of a** $2$-sparse vector) The vector ${(0, 3, 0, 0, -1)}^{\top}$ of [Example 1](#exm-sparse-vector) has three zero entries out of five, so its [sparsity](#def-sparsity) is $3/5$. In [Figure 1](#fig-sparse-vector), the three zero entries are the ones whose stems do not leave zero.
+
+> **NOTE:**
+>
+> **Definition 5 (Scalar)** In linear algebra, a **scalar** [\[3\]](#ref-wikipedia_scalar_mathematics) is a single [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers), as opposed to a vector or a matrix, which holds several numbers.
+
+> **NOTE:**
+>
+> **Example 3 (Scalars and a vector)** The numbers $5$ and $-0.2$ are scalars. The column vector $(5, -0.2)$ is not a scalar: it has $2$ entries, so it is in $\mathbb{R}^2$ ([Definition 2](#def-real-coordinate-space)), and each of its $2$ entries is a scalar.
 
 > **NOTE:**
 >
@@ -117,7 +156,7 @@ Last modified: 2026-11-16 08:39:14 (PST)
 >
 > > **TIP:**
 > >
-> > By [Definition 3](#def-scalar), a [scalar](#def-scalar) is one [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers). Count the numbers in each quantity.
+> > By [Definition 5](#def-scalar), a [scalar](#def-scalar) is one [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers). Count the numbers in each quantity.
 
 > **NOTE:**
 >
@@ -125,15 +164,15 @@ Last modified: 2026-11-16 08:39:14 (PST)
 
 > **NOTE:**
 >
-> **Definition 4 (Real-valued function, scalar-valued function)** A [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f : A \to \mathbb{R}$, whose values are numbers, is **real-valued** (also called **scalar-valued**, since its values are [scalars](#def-scalar)).
+> **Definition 6 (Real-valued function, scalar-valued function)** A [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f : A \to \mathbb{R}$, whose values are numbers, is **real-valued** (also called **scalar-valued**, since its values are [scalars](#def-scalar)).
 
 > **NOTE:**
 >
-> **Definition 5 (Vector-valued function)** A function $f : A \to \mathbb{R}^m$, whose values are vectors ([Definition 2](#def-real-coordinate-space)), is **vector-valued**.
+> **Definition 7 (Vector-valued function)** A function $f : A \to \mathbb{R}^m$, whose values are vectors ([Definition 2](#def-real-coordinate-space)), is **vector-valued**.
 
 > **NOTE:**
 >
-> **Example 2 (A real-valued and a vector-valued function)** On $\mathbb{R}^2$, $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1 + x_2$ is real-valued and $g(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \begin{bmatrix}x_1 + x_2 \\ x_1 - x_2\end{bmatrix}$ is vector-valued:
+> **Example 4 (A real-valued and a vector-valued function)** On $\mathbb{R}^2$, $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = x_1 + x_2$ is real-valued and $g(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \begin{bmatrix}x_1 + x_2 \\ x_1 - x_2\end{bmatrix}$ is vector-valued:
 >
 > $$f\mathopen{}\left(\begin{bmatrix}3 \\ 4\end{bmatrix}\right)\mathclose{} = 3 + 4 = 7,
 > \qquad
@@ -165,7 +204,7 @@ Last modified: 2026-11-16 08:39:14 (PST)
 >
 > > **TIP:**
 > >
-> > Substitute $x_1 = 2$ and $x_2 = 3$ into each entry, as in [Example 2](#exm-real-vector-valued).
+> > Substitute $x_1 = 2$ and $x_2 = 3$ into each entry, as in [Example 4](#exm-real-vector-valued).
 
 > **NOTE:**
 >
@@ -177,13 +216,13 @@ Last modified: 2026-11-16 08:39:14 (PST)
 
 > **NOTE:**
 >
-> **Definition 6 (Transpose)** The **transpose** of a column vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is the row vector with the same [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) of entries, written horizontally:
+> **Definition 8 (Transpose)** The **transpose** of a column vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is the row vector with the same [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) of entries, written horizontally:
 >
 > $${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \equiv \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}' \equiv [x_1,\; x_2,\; \ldots,\; x_p]$$
 
 > **NOTE:**
 >
-> **Example 3 (Transposing a column vector)** The transpose of the column vector with entries $2$, $-1$, $5$ is the row vector with the same entries:
+> **Example 5 (Transposing a column vector)** The transpose of the column vector with entries $2$, $-1$, $5$ is the row vector with the same entries:
 >
 > $${\begin{bmatrix} 2 \\ -1 \\ 5 \end{bmatrix}}^{\top}
 > = [2,\; -1,\; 5].$$
@@ -198,23 +237,23 @@ Last modified: 2026-11-16 08:39:14 (PST)
 >
 > > **TIP:**
 > >
-> > By [Definition 6](#def-transpose), keep the entries in the same order and write them horizontally.
+> > By [Definition 8](#def-transpose), keep the entries in the same order and write them horizontally.
 
 > **NOTE:**
 >
-> *Solution 7*. By [Definition 6](#def-transpose),
+> *Solution 7*. By [Definition 8](#def-transpose),
 >
 > $${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} = [4,\; -1,\; 0].$$
 
 > **NOTE:**
 >
-> **Definition 7 (Vector addition)** The **sum** of two column vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ of the same length $p$ is the column vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ of length $p$ obtained by adding entry by entry:
+> **Definition 9 (Vector addition)** The **sum** of two column vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ of the same length $p$ is the column vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ of length $p$ obtained by adding entry by entry:
 >
 > $$(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})_i \stackrel{\text{def}}{=}x_i + y_i, \quad i = 1, \ldots, p$$
 
 > **NOTE:**
 >
-> **Example 4 (Adding two vectors)** $$\begin{aligned}
+> **Example 6 (Adding two vectors)** $$\begin{aligned}
 > \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}
 > +
 > \begin{bmatrix} 4 \\ 5 \\ 6 \end{bmatrix}
@@ -238,25 +277,25 @@ Last modified: 2026-11-16 08:39:14 (PST)
 >
 > > **TIP:**
 > >
-> > Use [Definition 7](#def-vector-addition), as in [Example 4](#exm-vector-addition).
+> > Use [Definition 9](#def-vector-addition), as in [Example 6](#exm-vector-addition).
 
 > **NOTE:**
 >
-> *Solution 8*. By [Definition 7](#def-vector-addition),
+> *Solution 8*. By [Definition 9](#def-vector-addition),
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= \begin{bmatrix}12 + 10 \\ 5 + 7 \\ 8 + 3\end{bmatrix} = \begin{bmatrix}22 \\ 12 \\ 11\end{bmatrix}.$$
 
 > **NOTE:**
 >
-> **Definition 8 (Dot product)** For any two real-valued vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (x_1, \ldots, x_p)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (y_1, \ldots, y_p)$ of the same length $p$, the **dot product** of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ is:
+> **Definition 10 (Dot product)** For any two real-valued vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (x_1, \ldots, x_p)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (y_1, \ldots, y_p)$ of the same length $p$, the **dot product** of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ is:
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\stackrel{\text{def}}{=}\sum_{i=1}^px_i y_i \tag{1}$$
 
 See also the definitions in:
 
-- Dobson and Barnett [\[3\]](#ref-dobson4e), Section 1.3 (equation 1.1, page 7)
+- Dobson and Barnett [\[4\]](#ref-dobson4e), Section 1.3 (equation 1.1, page 7)
 
-- Kaplan [\[4\]](#ref-mosaiccalc), chapter on vectors
+- Kaplan [\[5\]](#ref-mosaiccalc), chapter on vectors
 
 - [wikipedia](https://en.wikipedia.org/wiki/Linear_combination)
 
@@ -264,7 +303,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Example 5 (A dot product)** For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 2, 3)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (4, 5, 6)$:
+> **Example 7 (A dot product)** For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (1, 2, 3)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (4, 5, 6)$:
 >
 > $$\begin{aligned}
 > \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}
@@ -280,7 +319,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Definition 9 (Linear combination)** A **linear combination** of the numbers $a_1, \ldots, a_k$ with coefficients $c_1, \ldots, c_k$ is the [sum](algebra-sums.llms.md#def-summation)
+> **Definition 11 (Linear combination)** A **linear combination** of the numbers $a_1, \ldots, a_k$ with coefficients $c_1, \ldots, c_k$ is the [sum](algebra-sums.llms.md#def-summation)
 >
 > $$c_1 a_1 + \cdots + c_k a_k = \sum_{i=1}^{k} c_i a_i$$
 >
@@ -288,15 +327,15 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Definition 10 (Coefficients of a linear combination)** The numbers $c_1, \ldots, c_k$ in a linear combination ([Definition 9](#def-linear-combination)) $\sum_{i=1}^{k} c_i a_i$ are its **coefficients**.
+> **Definition 12 (Coefficients of a linear combination)** The numbers $c_1, \ldots, c_k$ in a linear combination ([Definition 11](#def-linear-combination)) $\sum_{i=1}^{k} c_i a_i$ are its **coefficients**.
 
 > **NOTE:**
 >
-> **Example 6 (Coefficients of a linear combination of numbers)** The linear combination of the numbers $4$ and $5$ with coefficients $2$ and $3$ is $2 \cdot 4 + 3 \cdot 5 = 8 + 15 = 23$.
+> **Example 8 (Coefficients of a linear combination of numbers)** The linear combination of the numbers $4$ and $5$ with coefficients $2$ and $3$ is $2 \cdot 4 + 3 \cdot 5 = 8 + 15 = 23$.
 
 > **NOTE:**
 >
-> **Definition 11 (Weighted sum)** A **weighted sum** of the [numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $a_1, \ldots, a_k$ is a [linear combination](#def-linear-combination) of them, with [coefficients](#def-lincom-coefficient) $w_1, \ldots, w_k$:
+> **Definition 13 (Weighted sum)** A **weighted sum** of the [numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $a_1, \ldots, a_k$ is a [linear combination](#def-linear-combination) of them, with [coefficients](#def-lincom-coefficient) $w_1, \ldots, w_k$:
 >
 > $$w_1 a_1 + \cdots + w_k a_k = \sum_{i=1}^{k} w_i a_i$$
 >
@@ -304,11 +343,11 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Definition 12 (Weight)** The [coefficients](#def-lincom-coefficient) $w_1, \ldots, w_k$ of a [weighted sum](#def-weighted-sum) $\sum_{i=1}^{k} w_i a_i$ are called its **weights**. The weight $w_i$ says how much $a_i$ counts.
+> **Definition 14 (Weight)** The [coefficients](#def-lincom-coefficient) $w_1, \ldots, w_k$ of a [weighted sum](#def-weighted-sum) $\sum_{i=1}^{k} w_i a_i$ are called its **weights**. The weight $w_i$ says how much $a_i$ counts.
 
 > **NOTE:**
 >
-> **Example 7 (The total price of a shopping basket)** A basket holds $3$ items that cost $\$2$ each and $2$ items that cost $\$5$ each. The total price is the [weighted sum](#def-weighted-sum) of the prices $2$ and $5$ with [weights](#def-weight) $3$ and $2$, the count of items at each price:
+> **Example 9 (The total price of a shopping basket)** A basket holds $3$ items that cost $\$2$ each and $2$ items that cost $\$5$ each. The total price is the [weighted sum](#def-weighted-sum) of the prices $2$ and $5$ with [weights](#def-weight) $3$ and $2$, the count of items at each price:
 >
 > $$\begin{aligned}
 > 3 \cdot 2 + 2 \cdot 5
@@ -321,7 +360,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Definition 13 (Weighted average, weighted mean)** A **weighted average** (or **weighted mean**) of the [numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $a_1, \ldots, a_k$ is a [weighted sum](#def-weighted-sum) of them whose [weights](#def-weight) $w_1, \ldots, w_k$ are non-negative and add to $1$:
+> **Definition 15 (Weighted average, weighted mean)** A **weighted average** (or **weighted mean**) of the [numbers](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $a_1, \ldots, a_k$ is a [weighted sum](#def-weighted-sum) of them whose [weights](#def-weight) $w_1, \ldots, w_k$ are non-negative and add to $1$:
 >
 > $$\sum_{i=1}^{k} w_i a_i
 > \quad\text{with}\quad
@@ -333,7 +372,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Example 8 (A course grade)** A course grade counts the midterm for $1/4$ and the final for $3/4$. A student scores $70$ on the midterm and $90$ on the final. The [weights](#def-weight) $1/4$ and $3/4$ are non-negative and add to $1$, so the grade is a [weighted average](#def-weighted-average) of $70$ and $90$:
+> **Example 10 (A course grade)** A course grade counts the midterm for $1/4$ and the final for $3/4$. A student scores $70$ on the midterm and $90$ on the final. The [weights](#def-weight) $1/4$ and $3/4$ are non-negative and add to $1$, so the grade is a [weighted average](#def-weighted-average) of $70$ and $90$:
 >
 > $$\begin{aligned}
 > \frac{1}{4} \cdot 70 + \frac{3}{4} \cdot 90
@@ -348,13 +387,13 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Example 9 (A linear combination of two vectors)** The linear combination of ${(1, 0)}^{\top}$ and ${(0, 1)}^{\top}$ with coefficients $2$ and $3$ is ${(2 \cdot 1 + 3 \cdot 0,\ 2 \cdot 0 + 3 \cdot 1)}^{\top} = {(2, 3)}^{\top}$.
+> **Example 11 (A linear combination of two vectors)** The linear combination of ${(1, 0)}^{\top}$ and ${(0, 1)}^{\top}$ with coefficients $2$ and $3$ is ${(2 \cdot 1 + 3 \cdot 0,\ 2 \cdot 0 + 3 \cdot 1)}^{\top} = {(2, 3)}^{\top}$.
 
 > **NOTE:**
 >
-> *Remark 4* (The dot product is a linear combination). The dot product $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ is a linear combination ([Definition 9](#def-linear-combination)) of the entries of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$, with coefficients $x_1, \ldots, x_p$. In [Example 5](#exm-dot-product), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= 1 \cdot 4 + 2 \cdot 5 + 3 \cdot 6$ is the linear combination of $4$, $5$, and $6$ with coefficients $1$, $2$, and $3$.
+> *Remark 4* (The dot product is a linear combination). The dot product $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ is a linear combination ([Definition 11](#def-linear-combination)) of the entries of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$, with coefficients $x_1, \ldots, x_p$. In [Example 7](#exm-dot-product), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= 1 \cdot 4 + 2 \cdot 5 + 3 \cdot 6$ is the linear combination of $4$, $5$, and $6$ with coefficients $1$, $2$, and $3$.
 >
-> The dot product is also the standard *inner product* on $\mathbb{R}^p$; “inner product” is the general notion ([Definition 5 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#def-inner-product), later in these notes), of which the dot product is one example.
+> The dot product is also the standard *inner product* on $\mathbb{R}^p$; “inner product” is the general notion ([Definition 5 in Inner Products and the Cauchy-Schwarz Inequality](linear-algebra-inner-products.llms.md#def-inner-product), later in these notes), of which the dot product is one example.
 
 > **NOTE:**
 >
@@ -380,7 +419,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Definition 14 (Zero vector)** The **zero vector** $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ of length $p$ has all entries equal to zero:
+> **Definition 16 (Zero vector)** The **zero vector** $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ of length $p$ has all entries equal to zero:
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}=
 > \begin{bmatrix}
@@ -392,7 +431,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> *Remark 5* (The zero vector is the additive identity). Adding the zero vector to a vector leaves it unchanged ([Definition 7](#def-vector-addition)): $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ for any vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ of the same length, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ is the [identity element](algebra-sums.llms.md#def-identity-element) for vector addition. For example,
+> *Remark 5* (The zero vector is the additive identity). Adding the zero vector to a vector leaves it unchanged ([Definition 9](#def-vector-addition)): $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ for any vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ of the same length, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ is the [identity element](algebra-sums.llms.md#def-identity-element) for vector addition. For example,
 >
 > $$\begin{aligned}
 > (2, -1) + (0, 0) &= (2 + 0, -1 + 0) \\
@@ -413,7 +452,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 >
 > > **TIP:**
 > >
-> > [Definition 14](#def-zero-vector) has two conditions: $3$ entries, and $0$ in every entry.
+> > [Definition 16](#def-zero-vector) has two conditions: $3$ entries, and $0$ in every entry.
 
 > **NOTE:**
 >
@@ -421,13 +460,13 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Definition 15 (Mean, average)** The **mean** [\[5\]](#ref-wikipedia_arithmetic_mean) (or **average**) of $n$ numbers $y_1, \ldots, y_n$ is their [sum](algebra-sums.llms.md#def-summation) divided by how many there are:
+> **Definition 17 (Mean, average)** The **mean** [\[6\]](#ref-wikipedia_arithmetic_mean) (or **average**) of $n$ numbers $y_1, \ldots, y_n$ is their [sum](algebra-sums.llms.md#def-summation) divided by how many there are:
 >
 > $$\bar{y} \stackrel{\text{def}}{=}\frac{1}{n}\sum_{i=1}^ny_i$$
 
 > **NOTE:**
 >
-> **Example 10 (The mean of three numbers)** For $y_1 = 2$, $y_2 = -1$ and $y_3 = 5$:
+> **Example 12 (The mean of three numbers)** For $y_1 = 2$, $y_2 = -1$ and $y_3 = 5$:
 >
 > $$\begin{aligned}
 > \bar{y}
@@ -453,11 +492,11 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 >
 > > **TIP:**
 > >
-> > Use [Definition 15](#def-mean) with $n = 4$, as in [Example 10](#exm-mean).
+> > Use [Definition 17](#def-mean) with $n = 4$, as in [Example 12](#exm-mean).
 
 > **NOTE:**
 >
-> *Solution 10*. By [Definition 15](#def-mean) with $n = 4$,
+> *Solution 10*. By [Definition 17](#def-mean) with $n = 4$,
 >
 > $$\bar{y} = \frac{1}{4}\,\mathopen{}\left(3 + 7 + 10 + 12\right)\mathclose{} = \frac{32}{4} = 8,$$
 >
@@ -465,15 +504,15 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Definition 16 (Harmonic mean)** The **harmonic mean** of two positive numbers $x$ and $y$ is the [reciprocal](https://morrison-lab.github.io/mcs/number-systems.html#def-reciprocal) of the [average](#def-mean) of their reciprocals:
+> **Definition 18 (Harmonic mean)** The **harmonic mean** of two positive numbers $x$ and $y$ is the [reciprocal](https://morrison-lab.github.io/mcs/number-systems.html#def-reciprocal) of the [average](#def-mean) of their reciprocals:
 >
 > $$H(x, y) \stackrel{\text{def}}{=}\frac{2}{\frac{1}{x} + \frac{1}{y}} \tag{2}$$
 >
-> Source: Wikipedia contributors [\[6\]](#ref-wikipedia_harmonic_mean).
+> Source: Wikipedia contributors [\[7\]](#ref-wikipedia_harmonic_mean).
 
 > **NOTE:**
 >
-> **Example 11 (Harmonic mean of 0.5 and 1)** By [Definition 16](#def-harmonic-mean):
+> **Example 13 (Harmonic mean of 0.5 and 1)** By [Definition 18](#def-harmonic-mean):
 >
 > $$\begin{aligned}
 > H(0.5, 1)
@@ -492,7 +531,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Definition 17 (Ones vector)** The **ones vector** $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}}$ of length $p$ has all entries equal to one:
+> **Definition 19 (Ones vector)** The **ones vector** $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}}$ of length $p$ has all entries equal to one:
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}} =
 > \begin{bmatrix}
@@ -512,17 +551,17 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 >
 > > **TIP:**
 > >
-> > Write out $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}}$ with [Definition 17](#def-ones-vector), then use [Definition 7](#def-vector-addition).
+> > Write out $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}}$ with [Definition 19](#def-ones-vector), then use [Definition 9](#def-vector-addition).
 
 > **NOTE:**
 >
-> *Solution 11*. By [Definition 17](#def-ones-vector), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}} = {(1, 1, 1)}^{\top}$, so by [Definition 7](#def-vector-addition)
+> *Solution 11*. By [Definition 19](#def-ones-vector), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}} = {(1, 1, 1)}^{\top}$, so by [Definition 9](#def-vector-addition)
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}} = \begin{bmatrix}2 + 1 \\ 0 + 1 \\ -1 + 1\end{bmatrix} = \begin{bmatrix}3 \\ 1 \\ 0\end{bmatrix}.$$
 
 > **NOTE:**
 >
-> **Definition 18 (Sum of the elements of a vector)** The **sum of the elements** of a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$ is the [sum](algebra-sums.llms.md#def-summation) of its entries:
+> **Definition 20 (Sum of the elements of a vector)** The **sum of the elements** of a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$ is the [sum](algebra-sums.llms.md#def-summation) of its entries:
 >
 > $${s_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}} \stackrel{\text{def}}{=}\sum_{i=1}^px_i.$$
 >
@@ -530,7 +569,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Example 12 (The sum of the elements of a vector with three entries)** For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (2, -1, 5)$,
+> **Example 14 (The sum of the elements of a vector with three entries)** For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (2, -1, 5)$,
 >
 > $$\begin{aligned}
 > {s_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}}
@@ -543,7 +582,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Exercise 12 (Totalling the units sold across three items)** A shop sells $22$, $12$ and $11$ units of three items over two months, stored as
+> **Exercise 12 (Totaling the units sold across three items)** A shop sells $22$, $12$ and $11$ units of three items over two months, stored as
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix}22 \\ 12 \\ 11\end{bmatrix}.$$
 >
@@ -551,11 +590,11 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 >
 > > **TIP:**
 > >
-> > Use [Definition 18](#def-sum-of-elements) with $p = 3$, as in [Example 12](#exm-sum-of-elements).
+> > Use [Definition 20](#def-sum-of-elements) with $p = 3$, as in [Example 14](#exm-sum-of-elements).
 
 > **NOTE:**
 >
-> *Solution 12*. By [Definition 18](#def-sum-of-elements),
+> *Solution 12*. By [Definition 20](#def-sum-of-elements),
 >
 > $${s_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}} = 22 + 12 + 11 = 45,$$
 >
@@ -572,29 +611,29 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 > *Proof*. $$\begin{aligned}
 > \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
 > &= \sum_{i=1}^p1 \cdot x_i
-> && \text{(}\href{#def-dot-product}{\text{Definition~8}}\text{, with every entry of } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}} \text{ equal to } 1 \text{)}
+> && \text{(}\href{#def-dot-product}{\text{Definition~10}}\text{, with every entry of } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}} \text{ equal to } 1 \text{)}
 > \\
 > &= \sum_{i=1}^px_i
 > && \text{(multiply each entry by } 1 \text{)}
 > \\
 > &= {s_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}}.
-> && \text{(}\href{#def-sum-of-elements}{\text{Definition~18}}\text{)}
+> && \text{(}\href{#def-sum-of-elements}{\text{Definition~20}}\text{)}
 > \end{aligned}$$
 
 > **NOTE:**
 >
-> **Example 13 (The ones vector applied to a vector with three entries)** For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (2, -1, 5)$ and the [ones vector](#def-ones-vector) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}}$ with three entries,
+> **Example 15 (The ones vector applied to a vector with three entries)** For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (2, -1, 5)$ and the [ones vector](#def-ones-vector) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}}$ with three entries,
 >
 > $$\begin{aligned}
 > \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{1}}\vphantom{1}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
 > &= 1 \cdot 2 + 1 \cdot(-1) + 1 \cdot 5
-> && \text{(}\href{#def-dot-product}{\text{Definition~8}}\text{)}
+> && \text{(}\href{#def-dot-product}{\text{Definition~10}}\text{)}
 > \\
 > &= 6,
 > && \text{(multiply and add)}
 > \end{aligned}$$
 >
-> which is ${s_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}}$, as in [Example 12](#exm-sum-of-elements). Dividing by $p = 3$ gives the [mean](#def-mean) of the entries, $6 / 3 = 2$.
+> which is ${s_{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}}$, as in [Example 14](#exm-sum-of-elements). Dividing by $p = 3$ gives the [mean](#def-mean) of the entries, $6 / 3 = 2$.
 
 > **NOTE:**
 >
@@ -618,7 +657,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Definition 19 (Indicator vector, standard basis vector)** The $j$-th **indicator vector** (or **standard basis vector** [\[7\]](#ref-wikipedia_standard_basis) ) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j$ of length $p$ has a $1$ in position $j$ and $0$s elsewhere:
+> **Definition 21 (Indicator vector, standard basis vector)** The $j$-th **indicator vector** (or **standard basis vector** [\[8\]](#ref-wikipedia_standard_basis) ) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j$ of length $p$ has a $1$ in position $j$ and $0$s elsewhere:
 >
 > $$(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j)_i =
 > \begin{cases}
@@ -650,11 +689,11 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 >
 > > **TIP:**
 > >
-> > By [Definition 19](#def-indicator-vector), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2$ has a $1$ in position $2$ and $0$s elsewhere.
+> > By [Definition 21](#def-indicator-vector), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2$ has a $1$ in position $2$ and $0$s elsewhere.
 
 > **NOTE:**
 >
-> *Solution 14*. By [Definition 19](#def-indicator-vector) with $j = 2$ and $p = 4$,
+> *Solution 14*. By [Definition 21](#def-indicator-vector) with $j = 2$ and $p = 4$,
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2 = \begin{bmatrix}0 \\ 1 \\ 0 \\ 0\end{bmatrix}.$$
 
@@ -702,7 +741,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Theorem 4 (A vector is a linear combination of indicator vectors)** Every vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$ is the linear combination ([Definition 9](#def-linear-combination)) of the indicator vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_p$ ([Definition 19](#def-indicator-vector)) with coefficients $x_1, \ldots, x_p$:
+> **Theorem 4 (A vector is a linear combination of indicator vectors)** Every vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$ is the linear combination ([Definition 11](#def-linear-combination)) of the indicator vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_p$ ([Definition 21](#def-indicator-vector)) with coefficients $x_1, \ldots, x_p$:
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \sum_{j=1}^px_j \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j$$
 
@@ -713,13 +752,13 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 > $$\begin{aligned}
 > \mathopen{}\left(\sum_{j=1}^px_j \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j\right)\mathclose{}_i
 > &= \sum_{j=1}^px_j (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j)_i
-> && \text{(}\href{#def-linear-combination}{\text{Definition~9}}\text{, entry by entry)}
+> && \text{(}\href{#def-linear-combination}{\text{Definition~11}}\text{, entry by entry)}
 > \\&= \sum_{j=1}^p
 >    \begin{cases}
 >    x_j \cdot 1 & \text{if } j = i \\
 >    x_j \cdot 0 & \text{if } j \neq i
 >    \end{cases}
-> && \text{(}\href{#def-indicator-vector}{\text{Definition~19}}\text{)}
+> && \text{(}\href{#def-indicator-vector}{\text{Definition~21}}\text{)}
 > \\&= x_i \cdot 1 + \sum_{j \neq i} x_j \cdot 0
 > && \text{(split off the } j = i \text{ term)}
 > \\&= x_i + 0
@@ -730,7 +769,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Example 14 (Expanding a vector in indicator vectors)** $$\begin{aligned}
+> **Example 16 (Expanding a vector in indicator vectors)** $$\begin{aligned}
 > \begin{bmatrix}4 \\ -1 \\ 2\end{bmatrix}
 > &= 4 \begin{bmatrix}1 \\ 0 \\ 0\end{bmatrix} + (-1) \begin{bmatrix}0 \\ 1 \\ 0\end{bmatrix} + 2 \begin{bmatrix}0 \\ 0 \\ 1\end{bmatrix} \\
 > &= 4 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1 - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2 + 2 \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_3
@@ -746,7 +785,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 >
 > > **TIP:**
 > >
-> > Use [Theorem 4](#thm-standard-basis-expansion), as in [Example 14](#exm-standard-basis-expansion).
+> > Use [Theorem 4](#thm-standard-basis-expansion), as in [Example 16](#exm-standard-basis-expansion).
 
 > **NOTE:**
 >
@@ -758,7 +797,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Definition 20 (Orthogonal vectors)** Two vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ of the same length are **orthogonal** [\[8\]](#ref-wikipedia_orthogonality) (written $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\perp \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$) if their dot product ([Definition 8](#def-dot-product)) is zero:
+> **Definition 22 (Orthogonal vectors)** Two vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ of the same length are **orthogonal** [\[9\]](#ref-wikipedia_orthogonality) (written $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\perp \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$) if their dot product ([Definition 10](#def-dot-product)) is zero:
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\perp \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\iff \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= 0$$
 
@@ -775,7 +814,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Example 15 (Vectors that are not orthogonal)** $$\begin{aligned}
+> **Example 17 (Vectors that are not orthogonal)** $$\begin{aligned}
 > (1, 2) \cdot (1, 1) &= 1 \cdot 1 + 2 \cdot 1 \\
 > &= 3 \\
 > &\ne 0,
@@ -795,19 +834,19 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 >
 > > **TIP:**
 > >
-> > By [Definition 20](#def-orthogonal-vectors), solve $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= 0$ for $c$, using [Definition 8](#def-dot-product).
+> > By [Definition 22](#def-orthogonal-vectors), solve $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= 0$ for $c$, using [Definition 10](#def-dot-product).
 
 > **NOTE:**
 >
-> *Solution 17*. $c = 1$. By [Definition 20](#def-orthogonal-vectors), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\perp \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ exactly when
+> *Solution 17*. $c = 1$. By [Definition 22](#def-orthogonal-vectors), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\perp \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ exactly when
 >
 > $$\begin{aligned}
 > 0
 > &= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}
-> && \text{(}\href{#def-orthogonal-vectors}{\text{Definition~20}}\text{)}
+> && \text{(}\href{#def-orthogonal-vectors}{\text{Definition~22}}\text{)}
 > \\
 > &= 2 \cdot 1 + c \cdot 3 + 1 \cdot(-5)
-> && \text{(}\href{#def-dot-product}{\text{Definition~8}}\text{)}
+> && \text{(}\href{#def-dot-product}{\text{Definition~10}}\text{)}
 > \\
 > &= 3c - 3,
 > && \text{(multiply and collect terms)}
@@ -817,13 +856,13 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Definition 21 (Euclidean norm (length,** $L_2$ norm)) The **Euclidean norm** [\[9\]](#ref-wikipedia_euclidean_vector) (or **length**, also called the $L_2$ norm and written $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}_2$) of a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ of length $p$ is the [square root](algebra-basics.llms.md#def-square-root) of the [sum](algebra-sums.llms.md#def-summation) of the [squares](algebra-basics.llms.md#def-square) of its entries:
+> **Definition 23 (Euclidean norm (length,** $L_2$ norm)) The **Euclidean norm** [\[10\]](#ref-wikipedia_euclidean_vector) (or **length**, also called the $L_2$ norm and written $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}_2$) of a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ of length $p$ is the [square root](algebra-basics.llms.md#def-square-root) of the [sum](algebra-sums.llms.md#def-summation) of the [squares](algebra-basics.llms.md#def-square) of its entries:
 >
 > $$\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{} \stackrel{\text{def}}{=}\sqrt{\sum_{i=1}^px_i^2} \tag{4}$$
 
 > **NOTE:**
 >
-> **Example 16 (The length of a vector)** For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (3, 4)$:
+> **Example 18 (The length of a vector)** For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (3, 4)$:
 >
 > $$\begin{aligned}
 > \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}
@@ -860,7 +899,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Example 17 (The length of a vector from its dot product)** For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (3, 4)$ from [Example 16](#exm-euclidean-norm):
+> **Example 19 (The length of a vector from its dot product)** For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (3, 4)$ from [Example 18](#exm-euclidean-norm):
 >
 > $$\begin{aligned}
 > \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}
@@ -874,7 +913,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 > && \text{(add)}
 > \end{aligned}$$
 >
-> so [Theorem 5](#thm-norm-dot-product) gives $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{} = \sqrt{25} = 5$, the same [length](#def-euclidean-norm) that [Example 16](#exm-euclidean-norm) found from [Equation 4](#eq-l2-norm).
+> so [Theorem 5](#thm-norm-dot-product) gives $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{} = \sqrt{25} = 5$, the same [length](#def-euclidean-norm) that [Example 18](#exm-euclidean-norm) found from [Equation 4](#eq-l2-norm).
 
 > **NOTE:**
 >
@@ -886,21 +925,21 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 >
 > > **TIP:**
 > >
-> > Use [Definition 21](#def-euclidean-norm) with $p = 4$, as in [Example 16](#exm-euclidean-norm).
+> > Use [Definition 23](#def-euclidean-norm) with $p = 4$, as in [Example 18](#exm-euclidean-norm).
 
 > **NOTE:**
 >
-> *Solution 18*. By [Definition 21](#def-euclidean-norm),
+> *Solution 18*. By [Definition 23](#def-euclidean-norm),
 >
 > $$\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{} = \sqrt{1^2 + 2^2 + 2^2 + 4^2} = \sqrt{25} = 5.$$
 
 > **NOTE:**
 >
-> **Definition 22 (Unit vector)** A **unit vector** [\[10\]](#ref-wikipedia_unit_vector) is a vector whose Euclidean norm ([Definition 21](#def-euclidean-norm)) is $1$. A unit vector is said to have *unit length*.
+> **Definition 24 (Unit vector)** A **unit vector** [\[11\]](#ref-wikipedia_unit_vector) is a vector whose Euclidean norm ([Definition 23](#def-euclidean-norm)) is $1$. A unit vector is said to have *unit length*.
 
 > **NOTE:**
 >
-> **Example 18 (A unit vector and a vector that is not one)** For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (0.6, 0.8)$:
+> **Example 20 (A unit vector and a vector that is not one)** For $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (0.6, 0.8)$:
 >
 > $$\begin{aligned}
 > \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}
@@ -959,7 +998,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Definition 23 (Euclidean distance)** The **Euclidean distance** [\[11\]](#ref-wikipedia_euclidean_distance) between two vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ of length $p$ is the [Euclidean norm](#def-euclidean-norm) of their difference:
+> **Definition 25 (Euclidean distance)** The **Euclidean distance** [\[12\]](#ref-wikipedia_euclidean_distance) between two vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}$ of length $p$ is the [Euclidean norm](#def-euclidean-norm) of their difference:
 >
 > $$d(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}) \stackrel{\text{def}}{=}\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rVert\mathclose{} = \sqrt{\sum_{i=1}^p(x_i - y_i)^2} \tag{6}$$
 
@@ -972,13 +1011,13 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 > &= \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}
 > \end{aligned}$$
 >
-> [\[12, p. 39\]](#ref-goodfellow2016deep).
+> [\[13, p. 39\]](#ref-goodfellow2016deep).
 >
-> For example, the distance from $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ to $(3, 4)$ is $\mathopen{}\left\lVert(3, 4)\right\rVert\mathclose{} = 5$, as in [Example 16](#exm-euclidean-norm).
+> For example, the distance from $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ to $(3, 4)$ is $\mathopen{}\left\lVert(3, 4)\right\rVert\mathclose{} = 5$, as in [Example 18](#exm-euclidean-norm).
 
 > **NOTE:**
 >
-> **Exercise 20 (Finding the distance between two customers’ feature vectors)** A nearest-neighbour method compares two customers through the [Euclidean distance](#def-euclidean-distance) between their feature vectors. Two customers have feature vectors
+> **Exercise 20 (Finding the distance between two customers’ feature vectors)** A nearest-neighbor method compares two customers through the [Euclidean distance](#def-euclidean-distance) between their feature vectors. Two customers have feature vectors
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \begin{bmatrix}1 \\ 0 \\ 3\end{bmatrix},
 > \qquad
@@ -988,16 +1027,16 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 >
 > > **TIP:**
 > >
-> > Use [Definition 23](#def-euclidean-distance) with $p = 3$.
+> > Use [Definition 25](#def-euclidean-distance) with $p = 3$.
 
 > **NOTE:**
 >
-> *Solution 20*. By [Definition 23](#def-euclidean-distance),
+> *Solution 20*. By [Definition 25](#def-euclidean-distance),
 >
 > $$\begin{aligned}
 > d(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})
 > &= \sqrt{(1 - 3)^2 + (0 - 1)^2 + (3 - 1)^2}
-> && \text{(}\href{#def-euclidean-distance}{\text{Definition~23}}\text{)}
+> && \text{(}\href{#def-euclidean-distance}{\text{Definition~25}}\text{)}
 > \\
 > &= \sqrt{4 + 1 + 4}
 > && \text{(subtract and square)}
@@ -1008,7 +1047,155 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Definition 24 (Orthonormal vectors)** A set of vectors $\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_2, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_k\}$ is **orthonormal** if the vectors are mutually orthogonal ([Definition 20](#def-orthogonal-vectors)) and each has norm $1$ ([Definition 21](#def-euclidean-norm)), that is, [unit length](#def-unit-vector):
+> **Definition 26 (Circle)** For a [point](#def-real-coordinate-space) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}$ in the [real plane](#def-real-coordinate-space) $\mathbb{R}^2$ and a number $r > 0$, the **circle** [\[14\]](#ref-wikipedia_circle) with center $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}$ and radius $r$ is the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of points in $\mathbb{R}^2$ at [Euclidean distance](#def-euclidean-distance) $r$ from $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}$:
+>
+> $$\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^2 : \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}\right\rVert\mathclose{} = r\right\}\mathclose{}$$
+
+> **NOTE:**
+>
+> **Example 21 (Points on a circle)** Take the [circle](#def-circle) with center $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}= (1, 2)$ and radius $r = 5$. The [point](#def-real-coordinate-space) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (4, 6)$ is on it:
+>
+> $$\begin{aligned}
+> \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}\right\rVert\mathclose{}
+> &= \sqrt{(4 - 1)^2 + (6 - 2)^2}
+> && \text{(}\href{#def-euclidean-distance}{\text{Definition~25}}\text{)}
+> \\
+> &= \sqrt{9 + 16}
+> && \text{(subtract and square)}
+> \\
+> &= 5.
+> && \text{(add and take the square root)}
+> \end{aligned}$$
+>
+> The center $(1, 2)$ itself is not on the circle, because its distance from $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{a}}\vphantom{a}}$ is $0$, not $5$.
+>
+> > **NOTE:**
+> >
+> > Show code
+> >
+> > ``` downlit
+> > # The circle with center (1, 2) and radius 5, traced by its angle.
+> > angle <- seq(0, 2 * pi, length.out = 400)
+> > circle <- tibble::tibble(
+> >   x1 = 1 + 5 * cos(angle),
+> >   x2 = 2 + 5 * sin(angle)
+> > )
+> > marks <- tibble::tribble(
+> >   ~x1, ~x2, ~label, ~kind,
+> >   1, 2, "center (1, 2)", "center",
+> >   4, 6, "(4, 6)", "on the circle"
+> > )
+> > radius <- tibble::tibble(x1 = 1, x2 = 2, x1_end = 4, x2_end = 6)
+> > shapes <- c(center = 1, "on the circle" = 16)
+> >
+> > circle |>
+> >   ggplot2::ggplot() +
+> >   ggplot2::aes(x = x1, y = x2) +
+> >   ggplot2::geom_path() +
+> >   ggplot2::geom_segment(
+> >     data = radius,
+> >     mapping = ggplot2::aes(xend = x1_end, yend = x2_end),
+> >     linetype = "dashed"
+> >   ) +
+> >   ggplot2::geom_point(
+> >     data = marks,
+> >     mapping = ggplot2::aes(shape = kind),
+> >     size = 3
+> >   ) +
+> >   ggplot2::geom_text(
+> >     data = marks,
+> >     mapping = ggplot2::aes(label = label),
+> >     vjust = -1
+> >   ) +
+> >   ggplot2::scale_shape_manual(values = shapes, guide = "none") +
+> >   ggplot2::coord_fixed() +
+> >   ggplot2::labs(x = "first coordinate", y = "second coordinate")
+> > ```
+> >
+> > [![A circle of radius 5 around the point (1, 2), drawn on equal axes. A hollow dot marks the center (1, 2), a solid dot marks the point (4, 6) on the circle, and a dashed segment of length 5 joins them.](linear-algebra-vectors_files/figure-html/circle-example-plot-1.png)](linear-algebra-vectors_files/figure-html/circle-example-plot-1.png "Figure 2: The circle with center (1, 2) and radius 5. The dashed segment from the center to (4, 6) is 5 units long.")
+> >
+> > Figure 2: The [circle](#def-circle) with center $(1, 2)$ and radius $5$. The dashed segment from the center to $(4, 6)$ is $5$ units long.
+
+> **NOTE:**
+>
+> **Definition 27 (Ellipse)** For two [points](#def-real-coordinate-space) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ in the [real plane](#def-real-coordinate-space) $\mathbb{R}^2$ and a number $s > \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\right\rVert\mathclose{}$, the **ellipse** [\[15\]](#ref-wikipedia_ellipse) with foci $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ is the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of points in $\mathbb{R}^2$ whose [Euclidean distances](#def-euclidean-distance) to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ and to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ add up to $s$:
+>
+> $$\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^2 : \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\right\rVert\mathclose{} + \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\right\rVert\mathclose{} = s\right\}\mathclose{}$$
+
+> **NOTE:**
+>
+> **Example 22 (Points on an ellipse)** Take the [ellipse](#def-ellipse) with foci $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}= (-4, 0)$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}= (4, 0)$ and $s = 10$, which is larger than $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\right\rVert\mathclose{} = 8$. The [point](#def-real-coordinate-space) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (0, 3)$ is on it:
+>
+> $$\begin{aligned}
+> \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\right\rVert\mathclose{} + \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\right\rVert\mathclose{}
+> &= \sqrt{(0 + 4)^2 + 3^2} + \sqrt{(0 - 4)^2 + 3^2}
+> && \text{(}\href{#def-euclidean-distance}{\text{Definition~25}}\text{)}
+> \\
+> &= \sqrt{25} + \sqrt{25}
+> && \text{(square and add)}
+> \\
+> &= 10.
+> && \text{(take the square roots and add)}
+> \end{aligned}$$
+>
+> So is $(5, 0)$, whose distances to the foci are $9$ and $1$. When the foci coincide, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$, both distances are $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\right\rVert\mathclose{}$, so $2\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}\right\rVert\mathclose{} = s$. Every point of the ellipse is therefore at distance $s / 2$ from $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$, so the ellipse is the [circle](#def-circle) with center $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$ and radius $s / 2$.
+>
+> > **NOTE:**
+> >
+> > Show code
+> >
+> > ``` downlit
+> > # With foci (-4, 0) and (4, 0) and s = 10, the ellipse reaches s / 2 = 5 along
+> > # the axis through the foci and sqrt(5^2 - 4^2) = 3 across it.
+> > angle <- seq(0, 2 * pi, length.out = 400)
+> > ellipse <- tibble::tibble(
+> >   x1 = 5 * cos(angle),
+> >   x2 = 3 * sin(angle)
+> > )
+> > marks <- tibble::tribble(
+> >   ~x1, ~x2, ~label, ~kind, ~nudge,
+> >   -4, 0, "focus (-4, 0)", "focus", -0.6,
+> >   4, 0, "focus (4, 0)", "focus", -0.6,
+> >   0, 3, "(0, 3)", "on the ellipse", 0.6,
+> >   5, 0, "(5, 0)", "on the ellipse", 0.6
+> > )
+> > to_foci <- tibble::tribble(
+> >   ~x1, ~x2, ~x1_end, ~x2_end,
+> >   0, 3, -4, 0,
+> >   0, 3, 4, 0
+> > )
+> > shapes <- c(focus = 1, "on the ellipse" = 16)
+> >
+> > ellipse |>
+> >   ggplot2::ggplot() +
+> >   ggplot2::aes(x = x1, y = x2) +
+> >   ggplot2::geom_path() +
+> >   ggplot2::geom_segment(
+> >     data = to_foci,
+> >     mapping = ggplot2::aes(xend = x1_end, yend = x2_end),
+> >     linetype = "dashed"
+> >   ) +
+> >   ggplot2::geom_point(
+> >     data = marks,
+> >     mapping = ggplot2::aes(shape = kind),
+> >     size = 3
+> >   ) +
+> >   ggplot2::geom_text(
+> >     data = marks,
+> >     mapping = ggplot2::aes(y = x2 + nudge, label = label)
+> >   ) +
+> >   ggplot2::scale_shape_manual(values = shapes, guide = "none") +
+> >   ggplot2::coord_fixed() +
+> >   ggplot2::labs(x = "first coordinate", y = "second coordinate")
+> > ```
+> >
+> > [![An ellipse centered at the origin, 10 units wide and 6 units tall, drawn on equal axes. Hollow dots mark the foci (-4, 0) and (4, 0) on the horizontal axis. Solid dots mark the points (0, 3) and (5, 0) on the ellipse, and two dashed segments, each of length 5, join (0, 3) to the two foci.](linear-algebra-vectors_files/figure-html/ellipse-example-plot-1.png)](linear-algebra-vectors_files/figure-html/ellipse-example-plot-1.png "Figure 3: The ellipse with foci (-4, 0) and (4, 0) and s = 10. The two dashed segments from (0, 3) to the foci are each 5 units long.")
+> >
+> > Figure 3: The [ellipse](#def-ellipse) with foci $(-4, 0)$ and $(4, 0)$ and $s = 10$. The two dashed segments from $(0, 3)$ to the foci are each $5$ units long.
+
+> **NOTE:**
+>
+> **Definition 28 (Orthonormal vectors)** A set of vectors $\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_2, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_k\}$ is **orthonormal** if the vectors are mutually orthogonal ([Definition 22](#def-orthogonal-vectors)) and each has norm $1$ ([Definition 23](#def-euclidean-norm)), that is, [unit length](#def-unit-vector):
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_i \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_j =
 > \begin{cases}
@@ -1018,7 +1205,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Example 19 (Indicator vectors are orthonormal)** The indicator vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_p$ ([Definition 19](#def-indicator-vector)) form an orthonormal set. By [Theorem 3](#thm-indicator-selection), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_i \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j$ is entry $i$ of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j$, which is $1$ if $i = j$ and $0$ if $i \neq j$. For $p = 2$:
+> **Example 23 (Indicator vectors are orthonormal)** The indicator vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_2, \ldots, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_p$ ([Definition 21](#def-indicator-vector)) form an orthonormal set. By [Theorem 3](#thm-indicator-selection), $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_i \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j$ is entry $i$ of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_j$, which is $1$ if $i = j$ and $0$ if $i \neq j$. For $p = 2$:
 >
 > $$\begin{aligned}
 > \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1 \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}_1 &= 1 \cdot 1 + 0 \cdot 0 \\
@@ -1039,7 +1226,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Example 20 (Two ways to fail to be orthonormal)**  
+> **Example 24 (Two ways to fail to be orthonormal)**  
 >
 > - $(1, 1)$ and $(1, -1)$ are orthogonal, since $1 \cdot 1 + 1 \cdot(-1) = 0$, but not orthonormal: $(1, 1) \cdot (1, 1) = 2 \ne 1$.
 >
@@ -1115,34 +1302,38 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **TIP:**
 >
-> Hutchinson’s [Linear Function Basics](https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/#linear_function_basics) (24 min) covers dot products and the Euclidean norm, and goes on to hyperplanes ([Definition 27 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)) and [level sets](vector-calculus.llms.md#def-level-set) [\[13\]](#ref-hutchinson_wwu_ml_videos). The login for the video site is posted [on Canvas](https://wwu.instructure.com/courses/1906010/modules#module_3922392).
+> Hutchinson’s [Linear Function Basics](https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/#linear_function_basics) (24 min) covers dot products and the Euclidean norm, and goes on to hyperplanes ([Definition 10 in Linear and Affine Maps](linear-algebra-linear-maps.llms.md#def-hyperplane)) and [level sets](vector-calculus-gradients.llms.md#def-level-set) [\[16\]](#ref-hutchinson_wwu_ml_videos). The login for the video site is posted [on Canvas](https://wwu.instructure.com/courses/1906010/modules#module_3922392).
 
 # Definitions on this page
 
 - [Definition 1 (Column vector)](#def-column-vector)
 - [Definition 2 (The set](#def-real-coordinate-space) $\mathbb{R}^p$)
-- [Definition 3 (Scalar)](#def-scalar)
-- [Definition 4 (Real-valued function, scalar-valued function)](#def-real-vector-valued)
-- [Definition 5 (Vector-valued function)](#def-vector-valued)
-- [Definition 6 (Transpose)](#def-transpose)
-- [Definition 7 (Vector addition)](#def-vector-addition)
-- [Definition 8 (Dot product)](#def-dot-product)
-- [Definition 9 (Linear combination)](#def-linear-combination)
-- [Definition 10 (Coefficients of a linear combination)](#def-lincom-coefficient)
-- [Definition 11 (Weighted sum)](#def-weighted-sum)
-- [Definition 12 (Weight)](#def-weight)
-- [Definition 13 (Weighted average, weighted mean)](#def-weighted-average)
-- [Definition 14 (Zero vector)](#def-zero-vector)
-- [Definition 15 (Mean, average)](#def-mean)
-- [Definition 16 (Harmonic mean)](#def-harmonic-mean)
-- [Definition 17 (Ones vector)](#def-ones-vector)
-- [Definition 18 (Sum of the elements of a vector)](#def-sum-of-elements)
-- [Definition 19 (Indicator vector, standard basis vector)](#def-indicator-vector)
-- [Definition 20 (Orthogonal vectors)](#def-orthogonal-vectors)
-- [Definition 21 (Euclidean norm (length,](#def-euclidean-norm) $L_2$ norm))
-- [Definition 22 (Unit vector)](#def-unit-vector)
-- [Definition 23 (Euclidean distance)](#def-euclidean-distance)
-- [Definition 24 (Orthonormal vectors)](#def-orthonormal-vectors)
+- [Definition 3 (](#def-sparse-vector)$k$-sparse vector)
+- [Definition 4 (Sparsity)](#def-sparsity)
+- [Definition 5 (Scalar)](#def-scalar)
+- [Definition 6 (Real-valued function, scalar-valued function)](#def-real-vector-valued)
+- [Definition 7 (Vector-valued function)](#def-vector-valued)
+- [Definition 8 (Transpose)](#def-transpose)
+- [Definition 9 (Vector addition)](#def-vector-addition)
+- [Definition 10 (Dot product)](#def-dot-product)
+- [Definition 11 (Linear combination)](#def-linear-combination)
+- [Definition 12 (Coefficients of a linear combination)](#def-lincom-coefficient)
+- [Definition 13 (Weighted sum)](#def-weighted-sum)
+- [Definition 14 (Weight)](#def-weight)
+- [Definition 15 (Weighted average, weighted mean)](#def-weighted-average)
+- [Definition 16 (Zero vector)](#def-zero-vector)
+- [Definition 17 (Mean, average)](#def-mean)
+- [Definition 18 (Harmonic mean)](#def-harmonic-mean)
+- [Definition 19 (Ones vector)](#def-ones-vector)
+- [Definition 20 (Sum of the elements of a vector)](#def-sum-of-elements)
+- [Definition 21 (Indicator vector, standard basis vector)](#def-indicator-vector)
+- [Definition 22 (Orthogonal vectors)](#def-orthogonal-vectors)
+- [Definition 23 (Euclidean norm (length,](#def-euclidean-norm) $L_2$ norm))
+- [Definition 24 (Unit vector)](#def-unit-vector)
+- [Definition 25 (Euclidean distance)](#def-euclidean-distance)
+- [Definition 26 (Circle)](#def-circle)
+- [Definition 27 (Ellipse)](#def-ellipse)
+- [Definition 28 (Orthonormal vectors)](#def-orthonormal-vectors)
 
 Back to top
 
@@ -1154,48 +1345,60 @@ Wikipedia contributors, “Row and column vectors — Wikipedia, the free encycl
 
 \[2\]
 
-Wikipedia contributors, “Scalar (mathematics) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Scalar_(mathematics)>
+Wikipedia contributors, “Sparse matrix — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Sparse_matrix>
 
 \[3\]
 
-A. J. Dobson and A. G. Barnett, *An introduction to generalized linear models*, 4th ed. CRC press, 2018. doi: [10.1201/9781315182780](https://doi.org/10.1201/9781315182780).
+Wikipedia contributors, “Scalar (mathematics) — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Scalar_(mathematics)>
 
 \[4\]
 
-D. Kaplan, *MOSAIC calculus*. www.mosaic-web.org, 2022. Available: [www.mosaic-web.org](https://www.mosaic-web.org)
+A. J. Dobson and A. G. Barnett, *An introduction to generalized linear models*, 4th ed. CRC press, 2018. doi: [10.1201/9781315182780](https://doi.org/10.1201/9781315182780).
 
 \[5\]
 
-Wikipedia contributors, “Arithmetic mean — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Arithmetic_mean>
+D. Kaplan, *MOSAIC calculus*. www.mosaic-web.org, 2022. Available: [www.mosaic-web.org](https://www.mosaic-web.org)
 
 \[6\]
 
-Wikipedia contributors, “Harmonic mean — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Harmonic_mean>
+Wikipedia contributors, “Arithmetic mean — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Arithmetic_mean>
 
 \[7\]
 
-Wikipedia contributors, “Standard basis — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Standard_basis>
+Wikipedia contributors, “Harmonic mean — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Harmonic_mean>
 
 \[8\]
 
-Wikipedia contributors, “Orthogonality — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Orthogonality>
+Wikipedia contributors, “Standard basis — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Standard_basis>
 
 \[9\]
 
-Wikipedia contributors, “Euclidean vector — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Euclidean_vector>
+Wikipedia contributors, “Orthogonality — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Orthogonality>
 
 \[10\]
 
-Wikipedia contributors, “Unit vector — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Unit_vector>
+Wikipedia contributors, “Euclidean vector — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Euclidean_vector>
 
 \[11\]
 
-Wikipedia contributors, “Euclidean distance — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Euclidean_distance>
+Wikipedia contributors, “Unit vector — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Unit_vector>
 
 \[12\]
 
-I. Goodfellow, Y. Bengio, and A. Courville, *Deep learning*. MIT Press, 2016. Available: <https://www.deeplearningbook.org/>
+Wikipedia contributors, “Euclidean distance — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Euclidean_distance>
 
 \[13\]
+
+I. Goodfellow, Y. Bengio, and A. Courville, *Deep learning*. MIT Press, 2016. Available: <https://www.deeplearningbook.org/>
+
+\[14\]
+
+Wikipedia contributors, “Circle — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Circle>
+
+\[15\]
+
+Wikipedia contributors, “Ellipse — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Ellipse>
+
+\[16\]
 
 B. Hutchinson, “DATA 471/571 (machine learning) and CSCI 481/581 (deep learning) video lectures.” Western Washington University. Accessed: Sep. 28, 2026. \[Online\]. Available: <https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/>

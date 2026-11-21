@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-11-16 08:39:14 (PST)
+Last modified: 2026-11-20 15:21:59 (PST)
 
 # 1 Limits and derivatives
 
@@ -97,7 +97,7 @@ Last modified: 2026-11-16 08:39:14 (PST)
 >
 > $$\frac{f(c + h) - f(c)}{h},$$
 >
-> the [slope](algebra-exponentials.llms.md#def-slope) of the line through the points $(c, f(c))$ and $(c + h, f(c + h))$.
+> the [slope](algebra-polynomials.llms.md#def-slope) of the line through the points $(c, f(c))$ and $(c + h, f(c + h))$.
 
 > **NOTE:**
 >
@@ -234,11 +234,82 @@ Last modified: 2026-11-16 08:39:14 (PST)
 >
 > So $f''(2) = 12$, $f''(0) = 0$, and $f''(-1) = -6$.
 
+> **NOTE:**
+>
+> **Definition 14 (Smooth function (infinitely differentiable function))** A [real-valued function](linear-algebra-vectors.llms.md#def-real-vector-valued) $f$ of one variable is **smooth** on an [open interval](https://morrison-lab.github.io/mcs/sets.html#def-open-interval) $I$, also called **infinitely differentiable** on $I$, if it has a [derivative](#def-derivative) of every order at every [point](linear-algebra-vectors.llms.md#def-real-coordinate-space) of $I$: the first derivative $f'$ [exists](#def-limit) on $I$, so does the [second derivative](#def-second-derivative) $f''$, and so on, each derivative being [differentiable at](#def-differentiable) every point of $I$ [\[9\]](#ref-wikipedia_smoothness).
+
+> **NOTE:**
+>
+> **Example 8 (A smooth function and one that is not)** $f(x) = x^3$ is smooth on $\mathbb{R}$. By the [power rule](#thm-deriv-polynomial), later on this page, its [derivatives](#def-derivative) are $f'(x) = 3x^2$, $f''(x) = 6x$, $f'''(x) = 6$, and $0$ from then on, and each of them is [differentiable at](#def-differentiable) every $x$.
+>
+> $g(x) = x \mathopen{}\left|x\right|\mathclose{}$ is not smooth on any [open interval](https://morrison-lab.github.io/mcs/sets.html#def-open-interval) containing $0$. Its derivative is $g'(x) = 2 \mathopen{}\left|x\right|\mathclose{}$ at every $x$, and $2 \mathopen{}\left|x\right|\mathclose{}$ is not differentiable at $0$, so $g''(0)$ does not exist. [Figure 1](#fig-smooth-function) shows $g$ and $g'$.
+>
+> > **NOTE:**
+> >
+> > Show code
+> >
+> > ``` downlit
+> > sm_x_sm <- seq(-1, 1, length.out = 201)
+> > sm_labels_sm <- c("g(x) = x|x|", "g'(x) = 2|x|")
+> > sm_values_sm <- c(sm_x_sm * abs(sm_x_sm), 2 * abs(sm_x_sm))
+> > sm_n_sm <- length(sm_x_sm)
+> > sm_fn_sm <- rep(sm_labels_sm, each = sm_n_sm)
+> > sm_fn_sm <- factor(sm_fn_sm, levels = sm_labels_sm)
+> > sm_x_rep_sm <- rep(sm_x_sm, 2)
+> > sm_curves_sm <- tibble::tibble(
+> >   x = sm_x_rep_sm, value = sm_values_sm, fn = sm_fn_sm
+> > )
+> > sm_origin_fn_sm <- factor(sm_labels_sm, levels = sm_labels_sm)
+> > sm_origin_sm <- tibble::tibble(x = 0, value = 0, fn = sm_origin_fn_sm)
+> > sm_aes_sm <- ggplot2::aes(x = x, y = value)
+> > sm_facet_sm <- ggplot2::vars(fn)
+> > sm_curves_sm |>
+> >   ggplot2::ggplot() +
+> >   sm_aes_sm +
+> >   ggplot2::geom_line(colour = "#0072B2") +
+> >   ggplot2::geom_point(data = sm_origin_sm, colour = "#D55E00", size = 3) +
+> >   ggplot2::facet_wrap(sm_facet_sm, scales = "free_y") +
+> >   ggplot2::labs(x = "x", y = "function value")
+> > ```
+> >
+> > Show code
+> >
+> > ``` python
+> > import matplotlib.pyplot as plt
+> > import numpy as np
+> >
+> > sm_x_py = np.linspace(-1, 1, 201)
+> > fig, axes = plt.subplots(1, 2, figsize=(6, 3), layout="constrained")
+> > axes[0].plot(sm_x_py, sm_x_py * np.abs(sm_x_py), color="#0072B2")
+> > axes[0].plot([0], [0], "o", color="#D55E00")
+> > axes[0].set_title("g(x) = x|x|")
+> > axes[1].plot(sm_x_py, 2 * np.abs(sm_x_py), color="#0072B2")
+> > axes[1].plot([0], [0], "o", color="#D55E00")
+> > axes[1].set_title("g'(x) = 2|x|")
+> > for ax in axes:
+> >     ax.set_xlabel("x")
+> > plt.show();
+> > ```
+> >
+> > ## R
+> >
+> > [![Two side-by-side plots on x from -1 to 1, each with a vermilion circle at the origin. The first, g of x equals x times the absolute value of x, is a blue curve that looks smooth, falling below zero to the left of the origin and rising above it to the right. The second, its derivative 2 times the absolute value of x, is a blue V shape with a sharp corner at the origin.](calculus-derivatives_files/figure-html/smooth-function-r-1.png)](calculus-derivatives_files/figure-html/smooth-function-r-1.png "Figure 1: The function g(x) = x \mathopen{}\left|x\right|\mathclose{} of Example 8 looks smooth, but its derivative 2 \mathopen{}\left|x\right|\mathclose{} has a corner at 0, where it has no derivative.")
+> >
+> > ## Python
+> >
+> > [![Two side-by-side plots on x from -1 to 1, each with a vermilion circle at the origin. The first, g of x equals x times the absolute value of x, is a blue curve that looks smooth, falling below zero to the left of the origin and rising above it to the right. The second, its derivative 2 times the absolute value of x, is a blue V shape with a sharp corner at the origin.](calculus-derivatives_files/figure-html/smooth-function-python-1.png)](calculus-derivatives_files/figure-html/smooth-function-python-1.png "Figure 1: The function g(x) = x \mathopen{}\left|x\right|\mathclose{} of Example 8 looks smooth, but its derivative 2 \mathopen{}\left|x\right|\mathclose{} has a corner at 0, where it has no derivative.")
+> >
+> > Figure 1: The function $g(x) = x \mathopen{}\left|x\right|\mathclose{}$ of [Example 8](#exm-smooth-function) looks smooth, but its [derivative](#def-derivative) $2 \mathopen{}\left|x\right|\mathclose{}$ has a corner at $0$, where it has no derivative.
+
+> **NOTE:**
+>
+> *Remark 2* (“Smooth” in statistics and machine learning). Statistics and machine learning texts often use “smooth” loosely, for a function with as many [derivatives](#def-derivative) as the reasoning at hand needs, usually two. For example, a [cubic](algebra-polynomials.llms.md#def-cubic-polynomial) spline, a curve made of [polynomial](algebra-polynomials.llms.md#def-polynomial) pieces of [degree](algebra-polynomials.llms.md#def-polynomial-degree) $3$ that meet at knots with matching first and [second derivatives](#def-second-derivative), is called smooth, although its third derivative jumps at each knot, so it is not smooth in the sense of [Definition 14](#def-smooth-function). When a claim depends on the number of derivatives, name that number (“twice-differentiable”) rather than saying “smooth”.
+
 # 2 Derivative rules
 
 > **NOTE:**
 >
-> **Theorem 1 (Constant rule)** If $c$ is [constant with respect to](vector-calculus.llms.md#def-constant-wrt-vector) $x$, then
+> **Theorem 1 (Constant rule)** If $c$ is [constant with respect to](vector-calculus-derivative-rules.llms.md#def-constant-wrt-vector) $x$, then
 >
 > $$\frac{\partial}{\partial x}c = 0$$
 
@@ -250,7 +321,7 @@ Last modified: 2026-11-16 08:39:14 (PST)
 
 > **NOTE:**
 >
-> **Theorem 2 (Constant multiple rule)** If $a$ is [constant with respect to](vector-calculus.llms.md#def-constant-wrt-vector) $x$ and $y$ is a [differentiable function](#def-differentiable) of $x$, then: $$\frac{\partial}{\partial x}ay = a \frac{\partial y}{\partial x}$$
+> **Theorem 2 (Constant multiple rule)** If $a$ is [constant with respect to](vector-calculus-derivative-rules.llms.md#def-constant-wrt-vector) $x$ and $y$ is a [differentiable function](#def-differentiable) of $x$, then: $$\frac{\partial}{\partial x}ay = a \frac{\partial y}{\partial x}$$
 
 > **TIP:**
 >
@@ -260,7 +331,7 @@ Last modified: 2026-11-16 08:39:14 (PST)
 
 > **NOTE:**
 >
-> **Theorem 3 (Power rule)** For every [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $q$ and every $x > 0$ [\[9\]](#ref-wikipedia_power_rule), the [derivative](#def-derivative) of the [power](algebra-exponentials.llms.md#def-real-power) $x^q$ is:
+> **Theorem 3 (Power rule)** For every [real number](https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers) $q$ and every $x > 0$ [\[10\]](#ref-wikipedia_power_rule), the [derivative](#def-derivative) of the [power](algebra-exponentials.llms.md#def-real-power) $x^q$ is:
 >
 > $$\frac{\partial}{\partial x}x^q = qx^{q-1}$$
 >
@@ -276,7 +347,7 @@ Last modified: 2026-11-16 08:39:14 (PST)
 
 > **NOTE:**
 >
-> **Exercise 1 (Derivative of polynomial and power functions)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.1.
+> **Exercise 1 (Derivative of polynomial and power functions)** Adapted from Miller [\[11\]](#ref-problifesavercalc), Question 1.1.1.
 >
 > Find the derivative of
 >
@@ -303,7 +374,7 @@ Last modified: 2026-11-16 08:39:14 (PST)
 
 > **NOTE:**
 >
-> **Exercise 2 (Finding points with a prescribed slope)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.14.
+> **Exercise 2 (Finding points with a prescribed slope)** Adapted from Miller [\[11\]](#ref-problifesavercalc), Question 1.1.14.
 >
 > Let $f(x) = \frac{1}{3}x^3 + x^2 - x - 1$. Find all points on the graph of $f$ where the slope is:
 >
@@ -377,7 +448,7 @@ Last modified: 2026-11-16 08:39:14 (PST)
 
 > **NOTE:**
 >
-> **Exercise 3 (Derivative after logarithmic simplification)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.4.
+> **Exercise 3 (Derivative after logarithmic simplification)** Adapted from Miller [\[11\]](#ref-problifesavercalc), Question 1.1.4.
 >
 > Find the derivative of
 >
@@ -429,7 +500,7 @@ Last modified: 2026-11-16 08:39:14 (PST)
 
 > **NOTE:**
 >
-> **Theorem 8 (Product rule)** If $a$ and $b$ are [differentiable functions](#def-differentiable) of $x$ [\[11\]](#ref-wikipedia_product_rule), then
+> **Theorem 8 (Product rule)** If $a$ and $b$ are [differentiable functions](#def-differentiable) of $x$ [\[12\]](#ref-wikipedia_product_rule), then
 >
 > $$(ab)' = ab' + ba'$$
 
@@ -441,7 +512,7 @@ Last modified: 2026-11-16 08:39:14 (PST)
 
 > **NOTE:**
 >
-> **Exercise 4 (Derivative of a product)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.2.
+> **Exercise 4 (Derivative of a product)** Adapted from Miller [\[11\]](#ref-problifesavercalc), Question 1.1.2.
 >
 > Find the derivative of
 >
@@ -467,7 +538,7 @@ Last modified: 2026-11-16 08:39:14 (PST)
 
 > **NOTE:**
 >
-> **Exercise 5 (Second derivative of a product)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.15.
+> **Exercise 5 (Second derivative of a product)** Adapted from Miller [\[11\]](#ref-problifesavercalc), Question 1.1.15.
 >
 > Find the second derivative of
 >
@@ -497,7 +568,7 @@ Last modified: 2026-11-16 08:39:14 (PST)
 
 > **NOTE:**
 >
-> **Theorem 9 (Quotient rule)** If $a$ and $b$ are [differentiable functions](#def-differentiable) of $x$ [\[12\]](#ref-wikipedia_quotient_rule) and $b \neq 0$, then
+> **Theorem 9 (Quotient rule)** If $a$ and $b$ are [differentiable functions](#def-differentiable) of $x$ [\[13\]](#ref-wikipedia_quotient_rule) and $b \neq 0$, then
 >
 > $$(a/b)' = a'/b - (a/b^2)b'$$
 
@@ -509,7 +580,7 @@ Last modified: 2026-11-16 08:39:14 (PST)
 
 > **NOTE:**
 >
-> **Exercise 6 (Derivative of a rational function)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.12.
+> **Exercise 6 (Derivative of a rational function)** Adapted from Miller [\[11\]](#ref-problifesavercalc), Question 1.1.12.
 >
 > Find the derivative of
 >
@@ -543,7 +614,7 @@ Last modified: 2026-11-16 08:39:14 (PST)
 
 > **NOTE:**
 >
-> **Theorem 10 (Chain rule)** If $a$ is a [differentiable function](#def-differentiable) of $b$ [\[13\]](#ref-wikipedia_chain_rule), and $b$ is a differentiable function of $c$, then $a$ is a differentiable function of $c$, and
+> **Theorem 10 (Chain rule)** If $a$ is a [differentiable function](#def-differentiable) of $b$ [\[14\]](#ref-wikipedia_chain_rule), and $b$ is a differentiable function of $c$, then $a$ is a differentiable function of $c$, and
 >
 > $$\begin{aligned}
 > \frac{d a}{d c} &=
@@ -558,7 +629,7 @@ Last modified: 2026-11-16 08:39:14 (PST)
 
 > **NOTE:**
 >
-> **Exercise 7 (Derivative of the standard Gaussian kernel)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.5.
+> **Exercise 7 (Derivative of the standard Gaussian kernel)** Adapted from Miller [\[11\]](#ref-problifesavercalc), Question 1.1.5.
 >
 > Find the derivative of
 >
@@ -586,7 +657,7 @@ Last modified: 2026-11-16 08:39:14 (PST)
 
 > **NOTE:**
 >
-> **Exercise 8 (Second derivative of the Gaussian kernel)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.6.
+> **Exercise 8 (Second derivative of the Gaussian kernel)** Adapted from Miller [\[11\]](#ref-problifesavercalc), Question 1.1.6.
 >
 > Find the second derivative of
 >
@@ -624,7 +695,7 @@ Last modified: 2026-11-16 08:39:14 (PST)
 
 > **NOTE:**
 >
-> **Exercise 9 (Combining product and chain rules)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.7.
+> **Exercise 9 (Combining product and chain rules)** Adapted from Miller [\[11\]](#ref-problifesavercalc), Question 1.1.7.
 >
 > Find the derivative of
 >
@@ -654,7 +725,7 @@ Last modified: 2026-11-16 08:39:14 (PST)
 
 > **NOTE:**
 >
-> **Exercise 10 (Generalized power rule)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.13.
+> **Exercise 10 (Generalized power rule)** Adapted from Miller [\[11\]](#ref-problifesavercalc), Question 1.1.13.
 >
 > Find the derivative of
 >
@@ -711,7 +782,7 @@ Last modified: 2026-11-16 08:39:14 (PST)
 
 > **NOTE:**
 >
-> **Exercise 11 (Chain rule with logarithm)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.3.
+> **Exercise 11 (Chain rule with logarithm)** Adapted from Miller [\[11\]](#ref-problifesavercalc), Question 1.1.3.
 >
 > Find the derivative of
 >
@@ -733,7 +804,7 @@ Last modified: 2026-11-16 08:39:14 (PST)
 
 > **NOTE:**
 >
-> **Exercise 12 (Second derivative with an added constant)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.9.
+> **Exercise 12 (Second derivative with an added constant)** Adapted from Miller [\[11\]](#ref-problifesavercalc), Question 1.1.9.
 >
 > Find the second derivative of
 >
@@ -763,11 +834,11 @@ Last modified: 2026-11-16 08:39:14 (PST)
 
 > **NOTE:**
 >
-> **Definition 14 (Logarithmic derivative)** The **logarithmic derivative** $\frac{f'(x)}{f(x)}$ of a function $f$ of a real variable equals $\frac{d }{d x}{\operatorname{log}\mathopen{}\left\{f(x)\right\}\mathclose{}}$ by [Corollary 1](#cor-deriv-log-chain) and measures the rate of change of $f$ relative to its size; it needs $f(x) > 0$, and for $f(x) < 0$ the same expression is the derivative of ${\operatorname{log}\mathopen{}\left\{\mathopen{}\left|f(x)\right|\mathclose{}\right\}\mathclose{}}$.
+> **Definition 15 (Logarithmic derivative)** The **logarithmic derivative** $\frac{f'(x)}{f(x)}$ of a function $f$ of a real variable equals $\frac{d }{d x}{\operatorname{log}\mathopen{}\left\{f(x)\right\}\mathclose{}}$ by [Corollary 1](#cor-deriv-log-chain) and measures the rate of change of $f$ relative to its size; it needs $f(x) > 0$, and for $f(x) < 0$ the same expression is the derivative of ${\operatorname{log}\mathopen{}\left\{\mathopen{}\left|f(x)\right|\mathclose{}\right\}\mathclose{}}$.
 
 > **NOTE:**
 >
-> **Definition 15 (Profile of a function)** The **profile** of a function $f$ of a real variable is the list of related functions and values to work out when meeting $f$ for the first time:
+> **Definition 16 (Profile of a function)** The **profile** of a function $f$ of a real variable is the list of related functions and values to work out when meeting $f$ for the first time:
 >
 > - the logarithm ${\operatorname{log}\mathopen{}\left\{f(x)\right\}\mathclose{}}$, where $f(x) > 0$;
 > - the derivatives $f'(x)$, $f''(x)$, and so on, as far as they are informative;
@@ -781,11 +852,11 @@ Last modified: 2026-11-16 08:39:14 (PST)
 
 > **NOTE:**
 >
-> **Example 8 (The profile of the logistic function)** The **logistic function** (also called $\operatorname{expit}$ or the sigmoid) is
+> **Example 9 (The profile of the logistic function)** The **logistic function** (also called $\operatorname{expit}$ or the sigmoid) is
 >
 > $$f(x) = \frac{1}{1 + e^{-x}}.$$
 >
-> The profile in [Definition 15](#def-function-profile) of $f$ is as follows. Write $E = e^{-x}$, so that $f = \frac{1}{1 + E}$ and $1 - f = \frac{E}{1 + E}$.
+> The profile in [Definition 16](#def-function-profile) of $f$ is as follows. Write $E = e^{-x}$, so that $f = \frac{1}{1 + E}$ and $1 - f = \frac{E}{1 + E}$.
 >
 > - **Logarithm:** ${\operatorname{log}\mathopen{}\left\{f(x)\right\}\mathclose{}} = -{\operatorname{log}\mathopen{}\left\{1 + e^{-x}\right\}\mathclose{}}$, defined for every real $x$ because $f(x) > 0$.
 >
@@ -854,7 +925,7 @@ Last modified: 2026-11-16 08:39:14 (PST)
 > key_values <- c(f(0), f(1), f(10), f(-10))
 > ```
 >
-> Each entry of `checks` is the largest discrepancy between a formula above and a numerical computation; every one is below $10^{-14}$ (the chunk stops with an error otherwise), which is rounding error. The key values are $f(0) =$ 0.5 and $f(1) \approx$ 0.7311. At $x = 10$ and $x = -10$ the function is already close to its limits, $f(10) \approx$ 0.99995 and $f(-10) \approx$ 0.0000454. [Figure 1](#fig-function-profile-logistic) graphs $f$, $f'$ and ${\operatorname{log}\mathopen{}\left\{f\right\}\mathclose{}}$.
+> Each entry of `checks` is the largest discrepancy between a formula above and a numerical computation; every one is below $10^{-14}$ (the chunk stops with an error otherwise), which is rounding error. The key values are $f(0) =$ 0.5 and $f(1) \approx$ 0.7311. At $x = 10$ and $x = -10$ the function is already close to its limits, $f(10) \approx$ 0.99995 and $f(-10) \approx$ 0.0000454. [Figure 2](#fig-function-profile-logistic) graphs $f$, $f'$ and ${\operatorname{log}\mathopen{}\left\{f\right\}\mathclose{}}$.
 >
 > Show code
 >
@@ -877,23 +948,23 @@ Last modified: 2026-11-16 08:39:14 (PST)
 >
 > > **NOTE:**
 > >
-> > [![Three panels over x from -6 to 6. The first, the logistic function, rises in an S shape from near 0 to near 1 and passes through 0.5 at x = 0. The second, its derivative, is a bell-shaped bump with maximum 0.25 at x = 0 and tails near 0. The third, the logarithm of the logistic function, increases from a steep line of slope 1 on the left and flattens toward 0 on the right.](calculus-derivatives_files/figure-html/fig-function-profile-logistic-1.png)](calculus-derivatives_files/figure-html/fig-function-profile-logistic-1.png "Figure 1: The logistic function, its derivative and its logarithm")
+> > [![Three panels over x from -6 to 6. The first, the logistic function, rises in an S shape from near 0 to near 1 and passes through 0.5 at x = 0. The second, its derivative, is a bell-shaped bump with maximum 0.25 at x = 0 and tails near 0. The third, the logarithm of the logistic function, increases from a steep line of slope 1 on the left and flattens toward 0 on the right.](calculus-derivatives_files/figure-html/fig-function-profile-logistic-1.png)](calculus-derivatives_files/figure-html/fig-function-profile-logistic-1.png "Figure 2: The logistic function, its derivative and its logarithm")
 > >
-> > Figure 1: The logistic function, its derivative and its logarithm
+> > Figure 2: The logistic function, its derivative and its logarithm
 
 # 4 Tangent lines
 
 > **NOTE:**
 >
-> **Definition 16 (Tangent line)** Let $f$ be differentiable at $c$ ([Definition 6](#def-differentiable)). The **tangent line** to the [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $f$ at $c$ is the graph of the [affine function](algebra-exponentials.llms.md#def-affine-function)
+> **Definition 17 (Tangent line)** Let $f$ be differentiable at $c$ ([Definition 6](#def-differentiable)). The **tangent line** to the [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $f$ at $c$ is the graph of the [affine function](algebra-polynomials.llms.md#def-affine-function)
 >
 > $$x \mapsto f(c) + f'(c)\,(x - c),$$
 >
-> the line through the point $(c, f(c))$ with [slope](algebra-exponentials.llms.md#def-slope) $f'(c)$. The slope $f'(c)$ is also called the **tangent slope** of $f$ at $c$.
+> the line through the point $(c, f(c))$ with [slope](algebra-polynomials.llms.md#def-slope) $f'(c)$. The slope $f'(c)$ is also called the **tangent slope** of $f$ at $c$.
 
 > **NOTE:**
 >
-> **Example 9 (The tangent line to** $x^2$ at $1$) For $f(x) = x^2$ at $c = 1$, $f(1) = 1$ and $f'(1) = 2$ ([Example 5](#exm-derivative)), so the tangent line is the graph of
+> **Example 10 (The tangent line to** $x^2$ at $1$) For $f(x) = x^2$ at $c = 1$, $f(1) = 1$ and $f'(1) = 2$ ([Example 5](#exm-derivative)), so the tangent line is the graph of
 >
 > $$\begin{aligned}
 > x
@@ -914,15 +985,15 @@ $$f(w + \varepsilon) \approx f(w) + \varepsilon\,\frac{d }{d w}f(w) \tag{1}$$
 
 > **NOTE:**
 >
-> **Definition 17 (Linear approximation (first-order Taylor approximation, first-order Taylor expansion))** For a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f$ that is [differentiable at](#def-differentiable) $w$, the **linear approximation** of $f$ at $w$ [\[14\]](#ref-wikipedia_linear_approximation) (also called the **first-order Taylor approximation** or the **first-order Taylor expansion**) is the function of the step $\varepsilon$
+> **Definition 18 (Linear approximation (first-order Taylor approximation, first-order Taylor expansion))** For a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) $f$ that is [differentiable at](#def-differentiable) $w$, the **linear approximation** of $f$ at $w$ [\[15\]](#ref-wikipedia_linear_approximation) (also called the **first-order Taylor approximation** or the **first-order Taylor expansion**) is the function of the step $\varepsilon$
 >
 > $$\hat{f}_w(\varepsilon) = f(w) + \varepsilon\,\frac{d }{d w}f(w)$$
 >
-> so [Equation 1](#eq-linear-approx) says $f(w + \varepsilon) \approx \hat{f}_w(\varepsilon)$ for small $\varepsilon$. [Figure 2](#fig-linear-approx) illustrates this approximation interactively for a [quadratic function](algebra-exponentials.llms.md#def-quadratic-polynomial).
+> so [Equation 1](#eq-linear-approx) says $f(w + \varepsilon) \approx \hat{f}_w(\varepsilon)$ for small $\varepsilon$. [Figure 3](#fig-linear-approx) illustrates this approximation interactively for a [quadratic function](algebra-polynomials.llms.md#def-quadratic-polynomial).
 
 > **NOTE:**
 >
-> *Remark 2* (The “linear” approximation is affine). The linear approximation $\hat{f}_w$ ([Definition 17](#def-linear-approximation)) is an [affine function](algebra-exponentials.llms.md#def-affine-function) of the step $\varepsilon$: its [slope](algebra-exponentials.llms.md#def-slope) is $\frac{d }{d w}f(w)$ and its [intercept](algebra-exponentials.llms.md#def-intercept) is $f(w)$. It is [linear](algebra-exponentials.llms.md#def-linear-function) in $\varepsilon$ only when $f(w) = 0$. The name “linear approximation” uses “linear” in the looser sense of elementary algebra ([remark](algebra-exponentials.llms.md#rem-linear-function-terminology)). Boyd and Vandenberghe [\[15\]](#ref-boyd2018vmls), section 2.2, treats the [first-order Taylor approximation](#def-linear-approximation) as an affine function for [functions](https://morrison-lab.github.io/mcs/functions.html#def-function) of several variables as well.
+> *Remark 3* (The “linear” approximation is affine). The linear approximation $\hat{f}_w$ ([Definition 18](#def-linear-approximation)) is an [affine function](algebra-polynomials.llms.md#def-affine-function) of the step $\varepsilon$: its [slope](algebra-polynomials.llms.md#def-slope) is $\frac{d }{d w}f(w)$ and its [intercept](algebra-polynomials.llms.md#def-intercept) is $f(w)$. It is [linear](algebra-polynomials.llms.md#def-linear-function) in $\varepsilon$ only when $f(w) = 0$. The name “linear approximation” uses “linear” in the looser sense of elementary algebra ([remark](algebra-polynomials.llms.md#rem-linear-function-terminology)). Boyd and Vandenberghe [\[16\]](#ref-boyd2018vmls), section 2.2, treats the [first-order Taylor approximation](#def-linear-approximation) as an affine function for [functions](https://morrison-lab.github.io/mcs/functions.html#def-function) of several variables as well.
 
 > **NOTE:**
 >
@@ -980,13 +1051,13 @@ $$f(w + \varepsilon) \approx f(w) + \varepsilon\,\frac{d }{d w}f(w) \tag{1}$$
 > })
 > ```
 >
-> The dashed blue line is the tangent line ([Definition 16](#def-tangent-line)) at $w$; the red segment is the error of the prediction.
+> The dashed blue line is the tangent line ([Definition 17](#def-tangent-line)) at $w$; the red segment is the error of the prediction.
 >
-> Figure 2: The linear approximation [Equation 1](#eq-linear-approx) for $f(w) = w^2 - 4w + 7$, at any $w$ and step $\varepsilon$.
+> Figure 3: The linear approximation [Equation 1](#eq-linear-approx) for $f(w) = w^2 - 4w + 7$, at any $w$ and step $\varepsilon$.
 
 > **NOTE:**
 >
-> **Exercise 13 (Tangent line approximation)** Adapted from Miller [\[10\]](#ref-problifesavercalc), Question 1.1.8.
+> **Exercise 13 (Tangent line approximation)** Adapted from Miller [\[11\]](#ref-problifesavercalc), Question 1.1.8.
 >
 > Let $f(x) = 4x + \sqrt{2}\cos x$.
 >
@@ -1058,10 +1129,11 @@ $$f(w + \varepsilon) \approx f(w) + \varepsilon\,\frac{d }{d w}f(w) \tag{1}$$
 - [Definition 11 (Left-hand derivative)](#def-left-hand-derivative)
 - [Definition 12 (One-sided derivatives)](#def-one-sided-derivative)
 - [Definition 13 (Second derivative)](#def-second-derivative)
-- [Definition 14 (Logarithmic derivative)](#def-logarithmic-derivative)
-- [Definition 15 (Profile of a function)](#def-function-profile)
-- [Definition 16 (Tangent line)](#def-tangent-line)
-- [Definition 17 (Linear approximation (first-order Taylor approximation, first-order Taylor expansion))](#def-linear-approximation)
+- [Definition 14 (Smooth function (infinitely differentiable function))](#def-smooth-function)
+- [Definition 15 (Logarithmic derivative)](#def-logarithmic-derivative)
+- [Definition 16 (Profile of a function)](#def-function-profile)
+- [Definition 17 (Tangent line)](#def-tangent-line)
+- [Definition 18 (Linear approximation (first-order Taylor approximation, first-order Taylor expansion))](#def-linear-approximation)
 
 Back to top
 
@@ -1101,28 +1173,32 @@ Wikipedia contributors, “Second derivative — Wikipedia, the free encyclopedi
 
 \[9\]
 
-Wikipedia contributors, “Power rule — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Power_rule>
+Wikipedia contributors, “Smoothness — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Smoothness>
 
 \[10\]
 
-S. J. Miller, *The probability lifesaver: Calculus review problems*. 2016. Available: <https://web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/index.htm#:~:text=http%3A//web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/supplementalchap_calcreview.pdf>
+Wikipedia contributors, “Power rule — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Power_rule>
 
 \[11\]
 
-Wikipedia contributors, “Product rule — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Product_rule>
+S. J. Miller, *The probability lifesaver: Calculus review problems*. 2016. Available: <https://web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/index.htm#:~:text=http%3A//web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/supplementalchap_calcreview.pdf>
 
 \[12\]
 
-Wikipedia contributors, “Quotient rule — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Quotient_rule>
+Wikipedia contributors, “Product rule — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Product_rule>
 
 \[13\]
 
-Wikipedia contributors, “Chain rule — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Chain_rule>
+Wikipedia contributors, “Quotient rule — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Quotient_rule>
 
 \[14\]
 
-Wikipedia contributors, “Linear approximation — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Linear_approximation>
+Wikipedia contributors, “Chain rule — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Chain_rule>
 
 \[15\]
+
+Wikipedia contributors, “Linear approximation — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Linear_approximation>
+
+\[16\]
 
 S. Boyd and L. Vandenberghe, *Introduction to applied linear algebra: Vectors, matrices, and least squares*. Cambridge University Press, 2018. doi: [10.1017/9781108583664](https://doi.org/10.1017/9781108583664).

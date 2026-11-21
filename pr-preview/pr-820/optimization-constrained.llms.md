@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-16 08:39:14 (PST)
+Last modified: 2026-11-20 15:21:59 (PST)
 
 > **NOTE:**
 >
@@ -82,7 +82,7 @@ Last modified: 2026-11-16 08:39:14 (PST)
 >
 > so it returns ${(1, 0.5)}^{\top}$, a [minimizer of](#def-minimizer-over-feasible-set) $f$ over this feasible set.
 
-Here the [objective](#def-objective-function) is a quadratic $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ with $\mathbf{S}$ [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite), and the constraints ([Definition 2](#def-constraints)) are $m$ linear equations ${\mathbf{A}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$, where $\mathbf{A}$ is a $p \times m$ matrix and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m$. The only stationary point of the objective alone ([Definition 4 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#def-stationary-point)) is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{p \times 1}$ (its [gradient](vector-calculus.llms.md#def-vector-derivative) is $\nabla f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, and $\mathbf{S}$ is [invertible](linear-algebra-special-matrices.llms.md#def-invertible-matrix)), which may not satisfy the constraints. A Lagrange multiplier adds one unknown per constraint, and the minimizer over the feasible set ([Definition 1](#def-feasible-set)) is then found among the stationary points of a new function of the extended set of unknowns.
+Here the [objective](#def-objective-function) is a quadratic $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ with $\mathbf{S}$ [positive definite](linear-algebra-definite-matrices.llms.md#def-positive-definite), and the constraints ([Definition 2](#def-constraints)) are $m$ linear equations ${\mathbf{A}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$, where $\mathbf{A}$ is a $p \times m$ matrix and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m$. The only stationary point of the objective alone ([Definition 4 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#def-stationary-point)) is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{p \times 1}$ (its [gradient](vector-calculus-gradients.llms.md#def-vector-derivative) is $\nabla f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, and $\mathbf{S}$ is [invertible](linear-algebra-special-matrices.llms.md#def-invertible-matrix)), which may not satisfy the constraints. A Lagrange multiplier adds one unknown per constraint, and the minimizer over the feasible set ([Definition 1](#def-feasible-set)) is then found among the stationary points of a new function of the extended set of unknowns.
 
 > **NOTE:**
 >
@@ -96,7 +96,7 @@ Here the [objective](#def-objective-function) is a quadratic $f(\mathord{\smash[
 
 > **NOTE:**
 >
-> **Example 4 (The gradients of the Lagrangian of a quadratic)** Let $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ with $\mathbf{S}$ symmetric and constant. By the [transpose of a product](linear-algebra-matrices.llms.md#thm-transpose-product), ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\lambda}}\vphantom{\lambda}}}^{\top} {\mathbf{A}}^{\top} = {(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\lambda}}\vphantom{\lambda}})}^{\top}$, so
+> **Example 4 (The gradients of the Lagrangian of a quadratic)** Let $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ with $\mathbf{S}$ symmetric and constant. By the [transpose of a product](linear-algebra-matrix-multiplication.llms.md#thm-transpose-product), ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\lambda}}\vphantom{\lambda}}}^{\top} {\mathbf{A}}^{\top} = {(\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\lambda}}\vphantom{\lambda}})}^{\top}$, so
 >
 > $$\begin{aligned}
 > L(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\lambda}}\vphantom{\lambda}})
@@ -111,7 +111,7 @@ Here the [objective](#def-objective-function) is a quadratic $f(\mathord{\smash[
 >
 > $$L(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\lambda}}\vphantom{\lambda}}) = \tfrac{1}{2}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + {\mathopen{}\left({\mathbf{A}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\right)\mathclose{}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\lambda}}\vphantom{\lambda}}.$$
 >
-> The partial derivatives of a sum are the sums of the partial derivatives, entry by entry. Using the first of these forms, the [derivative of a quadratic form](vector-calculus.llms.md#cor-quadratic-form-symmetric) applies to the first [term](algebra-sums.llms.md#def-term), the [derivative of a linear combination](vector-calculus.llms.md#cor-deriv-lincom-tp) to the second ($\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\lambda}}\vphantom{\lambda}}$ is constant in $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$), and the third is [constant with respect to a vector](vector-calculus.llms.md#def-constant-wrt-vector),
+> The partial derivatives of a sum are the sums of the partial derivatives, entry by entry. Using the first of these forms, the [derivative of a quadratic form](vector-calculus-derivative-rules.llms.md#cor-quadratic-form-symmetric) applies to the first [term](algebra-sums.llms.md#def-term), the [derivative of a linear combination](vector-calculus-derivative-rules.llms.md#cor-deriv-lincom-tp) to the second ($\mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\lambda}}\vphantom{\lambda}}$ is constant in $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$), and the third is [constant with respect to a vector](vector-calculus-derivative-rules.llms.md#def-constant-wrt-vector),
 >
 > $$\begin{aligned}
 > \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} L(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\lambda}}\vphantom{\lambda}})
@@ -125,7 +125,7 @@ Here the [objective](#def-objective-function) is a quadratic $f(\mathord{\smash[
 > && \text{(simplify)}
 > \end{aligned}$$
 >
-> Using the second form, in which $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ and ${\mathbf{A}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ are constant in $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\lambda}}\vphantom{\lambda}}$, and the [derivative of a linear combination](vector-calculus.llms.md#cor-deriv-lincom-tp) again,
+> Using the second form, in which $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ and ${\mathbf{A}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ are constant in $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\lambda}}\vphantom{\lambda}}$, and the [derivative of a linear combination](vector-calculus-derivative-rules.llms.md#cor-deriv-lincom-tp) again,
 >
 > $$\begin{aligned}
 > \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\lambda}}\vphantom{\lambda}}} L(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\lambda}}\vphantom{\lambda}})
@@ -154,7 +154,138 @@ Here the [objective](#def-objective-function) is a quadratic $f(\mathord{\smash[
 
 > **NOTE:**
 >
-> **Theorem 1 (Minimizing a positive definite quadratic under linear constraints)** Let $\mathbf{S}$ be a $p \times p$ [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite) matrix, $\mathbf{A}$ a $p \times m$ matrix with [linearly independent](linear-algebra-subspaces.llms.md#def-linearly-independent) columns, and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m$. Then the $m \times m$ matrix $\mathbf{M} \stackrel{\text{def}}{=}{\mathbf{A}}^{\top} \mathbf{S}^{-1} \mathbf{A}$ is invertible, and $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ has exactly one minimizer over the $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$ with ${\mathbf{A}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$, namely
+> **Definition 9 (Quadratic program (quadratic programming problem))** A **quadratic program**, or **quadratic programming problem**, [\[5\]](#ref-wikipedia_quadratic_programming) is a [minimization problem](#def-minimization-problem) whose [objective](#def-objective-function) is
+>
+> $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}},$$
+>
+> for a $p \times p$ [positive semidefinite matrix](linear-algebra-definite-matrices.llms.md#def-positive-semidefinite) $\mathbf{S}$ and a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} \in \mathbb{R}^p$, and whose [constraints](#def-constraints) are linear equations and linear [inequalities](https://morrison-lab.github.io/mcs/proof-writing.html#def-inequality) in $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$.
+
+> **NOTE:**
+>
+> **Example 5 (The closest point of a half-plane to the origin)** Minimizing $x_1^2 + x_2^2$ subject to $x_1 + x_2 \ge 1$ is a [quadratic program](#def-quadratic-program): the [objective](#def-objective-function) is $\tfrac{1}{2}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ with $\mathbf{S} = 2 \mathbf{I}_2$, which is [positive semidefinite](linear-algebra-definite-matrices.llms.md#def-positive-semidefinite); $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$; and the single constraint is a linear [inequality](https://morrison-lab.github.io/mcs/proof-writing.html#def-inequality). The point ${(0.5, 0.5)}^{\top}$ is feasible, since $0.5 + 0.5 = 1$, and its objective value is
+>
+> $$\begin{aligned}
+> f(0.5, 0.5)
+> &= 0.25 + 0.25
+> \\
+> &= 0.5.
+> \end{aligned}$$
+>
+> [Figure 1](#fig-quadratic-program) shows that it is the [minimizer](#def-minimizer-over-feasible-set): it is where the smallest contour circle of the objective touches the feasible [half-plane](optimization-convexity.llms.md#def-half-space).
+>
+> > **NOTE:**
+> >
+> > Show code
+> >
+> > ``` downlit
+> > # The objective on a grid, for its contour circles.
+> > axis_values <- seq(-1.5, 1.5, length.out = 301)
+> > grid <- tidyr::expand_grid(x1 = axis_values, x2 = axis_values)
+> > grid <- dplyr::mutate(grid, f = x1^2 + x2^2)
+> >
+> > # The feasible half-plane x1 + x2 >= 1, clipped to the plotted square.
+> > feasible <- tibble::tribble(
+> >   ~x1, ~x2,
+> >   -0.5, 1.5,
+> >   1.5, 1.5,
+> >   1.5, -0.5
+> > )
+> > # Contour heights: 0.5 is the minimum over the half-plane; the others frame it.
+> > heights <- c(0.25, 0.5, 1, 2)
+> > limits <- c(-1.5, 1.5)
+> > minimizer <- tibble::tibble(x1 = 0.5, x2 = 0.5)
+> >
+> > grid |>
+> >   ggplot2::ggplot() +
+> >   ggplot2::aes(x = x1, y = x2) +
+> >   ggplot2::geom_polygon(data = feasible, fill = "grey85") +
+> >   ggplot2::geom_abline(intercept = 1, slope = -1) +
+> >   ggplot2::geom_contour(
+> >     mapping = ggplot2::aes(z = f),
+> >     breaks = heights, # check-unexplained-choices: allow
+> >     colour = "grey30"
+> >   ) +
+> >   ggplot2::geom_point(data = minimizer, size = 3) +
+> >   ggplot2::coord_fixed(xlim = limits, ylim = limits) +
+> >   ggplot2::labs(x = "first coordinate", y = "second coordinate")
+> > ```
+> >
+> > [![Contour circles of x1 squared plus x2 squared around the origin, at heights 0.25, 0.5, 1 and 2, drawn on equal axes. The shaded region above the line x1 + x2 = 1 is the feasible half-plane. A dot at (0.5, 0.5) marks where the circle at height 0.5 touches the line.](optimization-constrained_files/figure-html/quadratic-program-plot-1.png)](optimization-constrained_files/figure-html/quadratic-program-plot-1.png "Figure 1: The objective x_1^2 + x_2^2 has circular contours at heights 0.25, 0.5, 1 and 2. The shaded half-plane satisfies x_1 + x_2 \ge 1, and the dot at (0.5, 0.5) is where the contour at height 0.5 touches its edge.")
+> >
+> > Figure 1: The [objective](#def-objective-function) $x_1^2 + x_2^2$ has circular contours at heights $0.25$, $0.5$, $1$ and $2$. The shaded [half-plane](optimization-convexity.llms.md#def-half-space) satisfies $x_1 + x_2 \ge 1$, and the dot at $(0.5, 0.5)$ is where the contour at height $0.5$ touches its edge.
+>
+> [Figure 2](#fig-quadratic-program-3d) shows the same [function](https://morrison-lab.github.io/mcs/functions.html#def-function) as a surface.
+>
+> > **NOTE:**
+> >
+> > Show code
+> >
+> > ``` downlit
+> > qp_axis_sf <- seq(-1.5, 1.5, length.out = 101)
+> > qp_grid_sf <- tidyr::expand_grid(x1 = qp_axis_sf, x2 = qp_axis_sf)
+> > qp_value_sf <- qp_grid_sf$x1^2 + qp_grid_sf$x2^2
+> > qp_n_sf <- length(qp_axis_sf)
+> > qp_z_sf <- matrix(qp_value_sf, nrow = qp_n_sf)
+> > # The edge x1 + x2 = 1 of the feasible half-plane, lifted onto the surface.
+> > qp_edge_x1_sf <- seq(-0.5, 1.5, length.out = 41)
+> > qp_edge_sf <- tibble::tibble(x1 = qp_edge_x1_sf)
+> > qp_edge_sf$x2 <- 1 - qp_edge_sf$x1
+> > qp_edge_sf$z <- qp_edge_sf$x1^2 + qp_edge_sf$x2^2
+> > qp_min_sf <- tibble::tibble(x1 = 0.5, x2 = 0.5, z = 0.5)
+> > qp_dash_sf <- list(color = "#D55E00", dash = "dash", width = 5)
+> > qp_marker_sf <- list(color = "black", size = 5)
+> > qp_stops_sf <- c(0, 1)
+> > qp_cols_sf <- c("#CCE0F0", "#0072B2")
+> > qp_scale_sf <- list(qp_stops_sf, qp_cols_sf)
+> > qp_eye_sf <- list(x = 1.6, y = -1.6, z = 0.9)
+> > qp_camera_sf <- list(eye = qp_eye_sf)
+> > qp_xaxis_sf <- list(title = "x1")
+> > qp_yaxis_sf <- list(title = "x2")
+> > qp_zaxis_sf <- list(title = "f(x)")
+> > qp_scene_sf <- list(
+> >   xaxis = qp_xaxis_sf,
+> >   yaxis = qp_yaxis_sf,
+> >   zaxis = qp_zaxis_sf,
+> >   camera = qp_camera_sf
+> > )
+> > qp_legend_sf <- list(orientation = "h")
+> > plotly::plot_ly() |>
+> >   plotly::add_surface(
+> >     x = qp_axis_sf,
+> >     y = qp_axis_sf,
+> >     z = qp_z_sf,
+> >     colorscale = qp_scale_sf,
+> >     showscale = FALSE,
+> >     opacity = 0.8
+> >   ) |>
+> >   plotly::add_trace(
+> >     data = qp_edge_sf,
+> >     x = ~x1,
+> >     y = ~x2,
+> >     z = ~z,
+> >     type = "scatter3d",
+> >     mode = "lines",
+> >     line = qp_dash_sf,
+> >     name = "above x1 + x2 = 1"
+> >   ) |>
+> >   plotly::add_trace(
+> >     data = qp_min_sf,
+> >     x = ~x1,
+> >     y = ~x2,
+> >     z = ~z,
+> >     type = "scatter3d",
+> >     mode = "markers",
+> >     marker = qp_marker_sf,
+> >     name = "minimizer"
+> >   ) |>
+> >   plotly::layout(scene = qp_scene_sf, legend = qp_legend_sf)
+> > ```
+> >
+> > Figure 2: The [objective](#def-objective-function) $x_1^2 + x_2^2$ of [Example 5](#exm-quadratic-program) as a surface, whose [level curves](vector-calculus-gradients.llms.md#def-level-set) are the [circles](linear-algebra-vectors.llms.md#def-circle) in [Figure 1](#fig-quadratic-program). The dashed curve lies above the edge $x_1 + x_2 = 1$ of the feasible [half-plane](optimization-convexity.llms.md#def-half-space), and its lowest point, at ${(0.5, 0.5)}^{\top}$ and height $0.5$, is the dot.
+
+> **NOTE:**
+>
+> **Theorem 1 (Minimizing a positive definite quadratic under linear constraints)** Let $\mathbf{S}$ be a $p \times p$ [positive definite](linear-algebra-definite-matrices.llms.md#def-positive-definite) matrix, $\mathbf{A}$ a $p \times m$ matrix with [linearly independent](linear-algebra-subspaces.llms.md#def-linearly-independent) columns, and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m$. Then the $m \times m$ matrix $\mathbf{M} \stackrel{\text{def}}{=}{\mathbf{A}}^{\top} \mathbf{S}^{-1} \mathbf{A}$ is invertible, and $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ has exactly one minimizer over the $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$ with ${\mathbf{A}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$, namely
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^* = \mathbf{S}^{-1} \mathbf{A} \mathbf{M}^{-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}.$$
 >
@@ -162,9 +293,9 @@ Here the [objective](#def-objective-function) is a quadratic $f(\mathord{\smash[
 
 > **NOTE:**
 >
-> *Proof*. The steps marked “transpose of a product” use the [transpose of a product](linear-algebra-matrices.llms.md#thm-transpose-product), and $\mathbf{S}$ is symmetric because it is [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite).
+> *Proof*. The steps marked “transpose of a product” use the [transpose of a product](linear-algebra-matrix-multiplication.llms.md#thm-transpose-product), and $\mathbf{S}$ is symmetric because it is [positive definite](linear-algebra-definite-matrices.llms.md#def-positive-definite).
 >
-> $\mathbf{M}$ is invertible. $\mathbf{S}^{-1}$ is positive definite, by the [positive definite inverse theorem](linear-algebra-special-matrices.llms.md#thm-pd-inverse), so $\mathbf{M} = {\mathbf{A}}^{\top} \mathbf{S}^{-1} \mathbf{A}$ is positive definite, by [operations that preserve definiteness](linear-algebra-diagonalization.llms.md#thm-pd-operations) (part 1), and so invertible, again by the positive definite inverse. $\mathbf{S}^{-1}$ and $\mathbf{M}^{-1}$ are symmetric, by the [inverse of a symmetric matrix](linear-algebra-special-matrices.llms.md#cor-inverse-symmetric), because $\mathbf{S}$ and $\mathbf{M}$ are.
+> $\mathbf{M}$ is invertible. $\mathbf{S}^{-1}$ is positive definite, by the [positive definite inverse theorem](linear-algebra-definite-matrices.llms.md#thm-pd-inverse), so $\mathbf{M} = {\mathbf{A}}^{\top} \mathbf{S}^{-1} \mathbf{A}$ is positive definite, by [operations that preserve definiteness](linear-algebra-cholesky.llms.md#thm-pd-operations) (part 1), and so invertible, again by the positive definite inverse. $\mathbf{S}^{-1}$ and $\mathbf{M}^{-1}$ are symmetric, by the [inverse of a symmetric matrix](linear-algebra-special-matrices.llms.md#cor-inverse-symmetric), because $\mathbf{S}$ and $\mathbf{M}$ are.
 >
 > $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*$ satisfies the constraint, and the pair solves [Equation 2](#eq-kkt).
 >
@@ -274,7 +405,7 @@ Here the [objective](#def-objective-function) is a quadratic $f(\mathord{\smash[
 
 > **NOTE:**
 >
-> **Example 5 (The closest point on a line to the origin)** Minimize $x_1^2 + x_2^2$ subject to $3 x_1 + 4 x_2 = 5$. In the form of [Theorem 1](#thm-qp-equality), $x_1^2 + x_2^2 = \tfrac{1}{2}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} (2 \mathbf{I}_2) \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, so $\mathbf{S} = 2 \mathbf{I}_2$, $\mathbf{A} = {(3, 4)}^{\top}$ ($p = 2$, $m = 1$) and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = [5]$. The hypotheses hold: $2 \mathbf{I}_2$ is positive definite, and the single column ${(3, 4)}^{\top}$ is nonzero, so it is linearly independent. Also $\mathbf{S}^{-1} = \tfrac{1}{2} \mathbf{I}_2$. Then, from the formulas of [Theorem 1](#thm-qp-equality),
+> **Example 6 (The closest point on a line to the origin)** Minimize $x_1^2 + x_2^2$ subject to $3 x_1 + 4 x_2 = 5$. In the form of [Theorem 1](#thm-qp-equality), $x_1^2 + x_2^2 = \tfrac{1}{2}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} (2 \mathbf{I}_2) \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, so $\mathbf{S} = 2 \mathbf{I}_2$, $\mathbf{A} = {(3, 4)}^{\top}$ ($p = 2$, $m = 1$) and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = [5]$. The hypotheses hold: $2 \mathbf{I}_2$ is positive definite, and the single column ${(3, 4)}^{\top}$ is nonzero, so it is linearly independent. Also $\mathbf{S}^{-1} = \tfrac{1}{2} \mathbf{I}_2$. Then, from the formulas of [Theorem 1](#thm-qp-equality),
 >
 > $$\begin{aligned}
 > \mathbf{M}
@@ -389,13 +520,13 @@ Here the [objective](#def-objective-function) is a quadratic $f(\mathord{\smash[
 >
 > ## R
 >
-> [![Plot over the plane of concentric circles centered at the origin, in grey, with radii 0.5, 1 and 1.5, and a blue straight line 3 x1 plus 4 x2 equals 5 running from upper left to lower right. The line touches the circle of radius 1 at the point (0.6, 0.8), marked by a vermilion circle, and stays outside the circle everywhere else. A vermilion arrow from the origin to that point is perpendicular to the line.](optimization-constrained_files/figure-html/lagrange-line-r-1.png)](optimization-constrained_files/figure-html/lagrange-line-r-1.png "Figure 1: The level curves x_1^2 + x_2^2 = c of the objective (circles) and the constraint line 3 x_1 + 4 x_2 = 5. The line touches the circle c = 1 at the minimizer {(0.6, 0.8)}^{\top} (Example 5), and the arrow from the origin to that point points along the gradient there, which is perpendicular to the line.")
+> [![Plot over the plane of concentric circles centered at the origin, in grey, with radii 0.5, 1 and 1.5, and a blue straight line 3 x1 plus 4 x2 equals 5 running from upper left to lower right. The line touches the circle of radius 1 at the point (0.6, 0.8), marked by a vermilion circle, and stays outside the circle everywhere else. A vermilion arrow from the origin to that point is perpendicular to the line.](optimization-constrained_files/figure-html/lagrange-line-r-1.png)](optimization-constrained_files/figure-html/lagrange-line-r-1.png "Figure 3: The level curves x_1^2 + x_2^2 = c of the objective (circles) and the constraint line 3 x_1 + 4 x_2 = 5. The line touches the circle c = 1 at the minimizer {(0.6, 0.8)}^{\top} (Example 6), and the arrow from the origin to that point points along the gradient there, which is perpendicular to the line.")
 >
 > ## Python
 >
-> [![Plot over the plane of concentric circles centered at the origin, in grey, with radii 0.5, 1 and 1.5, and a blue straight line 3 x1 plus 4 x2 equals 5 running from upper left to lower right. The line touches the circle of radius 1 at the point (0.6, 0.8), marked by a vermilion circle, and stays outside the circle everywhere else. A vermilion arrow from the origin to that point is perpendicular to the line.](optimization-constrained_files/figure-html/lagrange-line-python-1.png)](optimization-constrained_files/figure-html/lagrange-line-python-1.png "Figure 1: The level curves x_1^2 + x_2^2 = c of the objective (circles) and the constraint line 3 x_1 + 4 x_2 = 5. The line touches the circle c = 1 at the minimizer {(0.6, 0.8)}^{\top} (Example 5), and the arrow from the origin to that point points along the gradient there, which is perpendicular to the line.")
+> [![Plot over the plane of concentric circles centered at the origin, in grey, with radii 0.5, 1 and 1.5, and a blue straight line 3 x1 plus 4 x2 equals 5 running from upper left to lower right. The line touches the circle of radius 1 at the point (0.6, 0.8), marked by a vermilion circle, and stays outside the circle everywhere else. A vermilion arrow from the origin to that point is perpendicular to the line.](optimization-constrained_files/figure-html/lagrange-line-python-1.png)](optimization-constrained_files/figure-html/lagrange-line-python-1.png "Figure 3: The level curves x_1^2 + x_2^2 = c of the objective (circles) and the constraint line 3 x_1 + 4 x_2 = 5. The line touches the circle c = 1 at the minimizer {(0.6, 0.8)}^{\top} (Example 6), and the arrow from the origin to that point points along the gradient there, which is perpendicular to the line.")
 >
-> Figure 1: The [level curves](vector-calculus.llms.md#def-level-curve) $x_1^2 + x_2^2 = c$ of the [objective](#def-objective-function) (circles) and the constraint line $3 x_1 + 4 x_2 = 5$. The line touches the circle $c = 1$ at the [minimizer](#def-minimizer-over-feasible-set) ${(0.6, 0.8)}^{\top}$ ([Example 5](#exm-qp-equality)), and the arrow from the origin to that point points along the [gradient](vector-calculus.llms.md#def-vector-derivative) there, which is perpendicular to the line.
+> Figure 3: The [level curves](vector-calculus-gradients.llms.md#def-level-curve) $x_1^2 + x_2^2 = c$ of the [objective](#def-objective-function) ([circles](linear-algebra-vectors.llms.md#def-circle)) and the constraint line $3 x_1 + 4 x_2 = 5$. The line touches the circle $c = 1$ at the [minimizer](#def-minimizer-over-feasible-set) ${(0.6, 0.8)}^{\top}$ ([Example 6](#exm-qp-equality)), and the arrow from the origin to that [point](linear-algebra-vectors.llms.md#def-real-coordinate-space) points along the [gradient](vector-calculus-gradients.llms.md#def-vector-derivative) there, which is perpendicular to the line.
 
 > **NOTE:**
 >
@@ -519,11 +650,11 @@ Here the [objective](#def-objective-function) is a quadratic $f(\mathord{\smash[
 >
 > ## Python
 >
-> Figure 2: The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of the [objective](#def-objective-function) $x_1^2 + x_2^2$, the surface whose [level curves](vector-calculus.llms.md#def-level-curve) (circles) are in [Figure 1](#fig-lagrange-line), with the constraint line $3 x_1 + 4 x_2 = 5$ lifted onto it. Along the constraint the objective is lowest above the [minimizer](#def-minimizer-over-feasible-set) ${(0.6, 0.8)}^{\top}$ ([Example 5](#exm-qp-equality)), where the line touches the circle $c = 1$.
+> Figure 4: The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of the [objective](#def-objective-function) $x_1^2 + x_2^2$, the surface whose [level curves](vector-calculus-gradients.llms.md#def-level-curve) ([circles](linear-algebra-vectors.llms.md#def-circle)) are in [Figure 3](#fig-lagrange-line), with the constraint line $3 x_1 + 4 x_2 = 5$ lifted onto it. Along the constraint the objective is lowest above the [minimizer](#def-minimizer-over-feasible-set) ${(0.6, 0.8)}^{\top}$ ([Example 6](#exm-qp-equality)), where the line touches the circle $c = 1$.
 
 > **NOTE:**
 >
-> **Example 6 (The hypotheses are needed)**  
+> **Example 7 (The hypotheses are needed)**  
 >
 > - If $\mathbf{S}$ is not positive definite there may be no minimizer: with $\mathbf{S} = \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix}$ and the constraint $x_1 = 1$ ($\mathbf{A} = {(1, 0)}^{\top}$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = [1]$), $f(1, x_2) = \tfrac{1}{2} (1 - x_2^2)$ decreases without bound as $x_2$ grows.
 >
@@ -534,7 +665,7 @@ Here the [objective](#def-objective-function) is a quadratic $f(\mathord{\smash[
 >   &= \begin{bmatrix} 2 & 2 \\ 2 & 2 \end{bmatrix},
 >   \end{aligned}$$
 >
->   whose columns are equal. So $\mathbf{M} {(1, -1)}^{\top} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$, and $\mathbf{M}$ is not [invertible](linear-algebra-diagonalization.llms.md#thm-invertible-rank), since a [square matrix](linear-algebra-matrices.llms.md#def-square-matrix) is invertible exactly when its [null space](linear-algebra-rank-nullity.llms.md#def-null-space) is zero. The two constraints both read $x_1 + x_2 = b_i$, so they have no solution at all when $b_1 \ne b_2$. When $b_1 = b_2$ a unique minimizer still exists,
+>   whose columns are equal. So $\mathbf{M} {(1, -1)}^{\top} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$, and $\mathbf{M}$ is not [invertible](linear-algebra-diagonalization.llms.md#thm-invertible-rank), since a [square matrix](linear-algebra-matrix-multiplication.llms.md#def-square-matrix) is invertible exactly when its [null space](linear-algebra-column-null-space.llms.md#def-null-space) is zero. The two constraints both read $x_1 + x_2 = b_i$, so they have no solution at all when $b_1 \ne b_2$. When $b_1 = b_2$ a unique minimizer still exists,
 >
 >   $$\begin{aligned}
 >   x_1 &= x_2 \\
@@ -571,25 +702,25 @@ Here the [objective](#def-objective-function) is a quadratic $f(\mathord{\smash[
 >
 > ## R
 >
-> [![Graph of the value of f along the constraint line x1 equals 1, against x2 from -3 to 3. The blue curve is a downward-opening parabola with its peak of 0.5 at x2 equal to 0, and it falls without bound on both sides, so it has no lowest point.](optimization-constrained_files/figure-html/qp-equality-fails-fig-r-1.png)](optimization-constrained_files/figure-html/qp-equality-fails-fig-r-1.png "Figure 3: The first case of Example 6: with \mathbf{S} = \operatorname{diag}(1, -1), which is not positive definite, the value f(1, x_2) along the constraint x_1 = 1 falls without bound as \mathopen{}\left|x_2\right|\mathclose{} grows, so this problem has no minimizer.")
+> [![Graph of the value of f along the constraint line x1 equals 1, against x2 from -3 to 3. The blue curve is a downward-opening parabola with its peak of 0.5 at x2 equal to 0, and it falls without bound on both sides, so it has no lowest point.](optimization-constrained_files/figure-html/qp-equality-fails-fig-r-1.png)](optimization-constrained_files/figure-html/qp-equality-fails-fig-r-1.png "Figure 5: The first case of Example 7: with \mathbf{S} = \operatorname{diag}(1, -1), which is not positive definite, the value f(1, x_2) along the constraint x_1 = 1 falls without bound as \mathopen{}\left|x_2\right|\mathclose{} grows, so this problem has no minimizer.")
 >
 > ## Python
 >
-> [![Graph of the value of f along the constraint line x1 equals 1, against x2 from -3 to 3. The blue curve is a downward-opening parabola with its peak of 0.5 at x2 equal to 0, and it falls without bound on both sides, so it has no lowest point.](optimization-constrained_files/figure-html/qp-equality-fails-fig-python-1.png)](optimization-constrained_files/figure-html/qp-equality-fails-fig-python-1.png "Figure 3: The first case of Example 6: with \mathbf{S} = \operatorname{diag}(1, -1), which is not positive definite, the value f(1, x_2) along the constraint x_1 = 1 falls without bound as \mathopen{}\left|x_2\right|\mathclose{} grows, so this problem has no minimizer.")
+> [![Graph of the value of f along the constraint line x1 equals 1, against x2 from -3 to 3. The blue curve is a downward-opening parabola with its peak of 0.5 at x2 equal to 0, and it falls without bound on both sides, so it has no lowest point.](optimization-constrained_files/figure-html/qp-equality-fails-fig-python-1.png)](optimization-constrained_files/figure-html/qp-equality-fails-fig-python-1.png "Figure 5: The first case of Example 7: with \mathbf{S} = \operatorname{diag}(1, -1), which is not positive definite, the value f(1, x_2) along the constraint x_1 = 1 falls without bound as \mathopen{}\left|x_2\right|\mathclose{} grows, so this problem has no minimizer.")
 >
-> Figure 3: The first case of [Example 6](#exm-qp-equality-fails): with $\mathbf{S} = \operatorname{diag}(1, -1)$, which is not [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite), the [value](https://morrison-lab.github.io/mcs/functions.html#def-value) $f(1, x_2)$ along the constraint $x_1 = 1$ falls without [bound](https://morrison-lab.github.io/mcs/sets.html#def-bound) as $\mathopen{}\left|x_2\right|\mathclose{}$ grows, so this problem has no [minimizer](algebra-basics.llms.md#def-global-minimizer).
+> Figure 5: The first case of [Example 7](#exm-qp-equality-fails): with $\mathbf{S} = \operatorname{diag}(1, -1)$, which is not [positive definite](linear-algebra-definite-matrices.llms.md#def-positive-definite), the [value](https://morrison-lab.github.io/mcs/functions.html#def-value) $f(1, x_2)$ along the constraint $x_1 = 1$ falls without [bound](https://morrison-lab.github.io/mcs/sets.html#def-bound) as $\mathopen{}\left|x_2\right|\mathclose{}$ grows, so this problem has no [minimizer](algebra-basics.llms.md#def-global-minimizer).
 
 > **NOTE:**
 >
-> **Definition 9 (Sensitivity)** Suppose a minimization problem ([Definition 5](#def-minimization-problem)) depends on a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m$, and let $f^*(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}})$ be its minimum value, as a function of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$. Where $f^*$ has a [gradient](vector-calculus.llms.md#def-vector-derivative) $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}} f^*(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}})$, that gradient is the **sensitivity** of the minimum value to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$: by the definition of a [partial derivative](vector-calculus.llms.md#def-partial-derivative), its entry $i$ is the [limit](calculus-derivatives.llms.md#def-limit) as a change in $b_i$ alone shrinks to $0$, of the resulting change in the minimum value divided by the change in $b_i$.
+> **Definition 10 (Sensitivity)** Suppose a minimization problem ([Definition 5](#def-minimization-problem)) depends on a vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} \in \mathbb{R}^m$, and let $f^*(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}})$ be its minimum value, as a function of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$. Where $f^*$ has a [gradient](vector-calculus-gradients.llms.md#def-vector-derivative) $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}} f^*(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}})$, that gradient is the **sensitivity** of the minimum value to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$: by the definition of a [partial derivative](vector-calculus-gradients.llms.md#def-partial-derivative), its entry $i$ is the [limit](calculus-derivatives.llms.md#def-limit) as a change in $b_i$ alone shrinks to $0$, of the resulting change in the minimum value divided by the change in $b_i$.
 
 > **NOTE:**
 >
-> **Example 7 (The sensitivity of a one-point problem)** Minimize $x^2$ subject to $x = b$, for a number $b$. The feasible set ([Definition 1](#def-feasible-set)) is $\mathopen{}\left\{b\right\}\mathclose{}$, so the minimum value is $f^*(b) = b^2$, and its sensitivity to $b$ is $\frac{d }{d b} f^*(b) = 2b$. At $b = 3$ the sensitivity is $6$: moving $b$ from $3$ to $3.1$ raises the minimum value from $9$ to $9.61$, an increase of $0.61$, close to $6 \times 0.1 = 0.6$.
+> **Example 8 (The sensitivity of a one-point problem)** Minimize $x^2$ subject to $x = b$, for a number $b$. The feasible set ([Definition 1](#def-feasible-set)) is $\mathopen{}\left\{b\right\}\mathclose{}$, so the minimum value is $f^*(b) = b^2$, and its sensitivity to $b$ is $\frac{d }{d b} f^*(b) = 2b$. At $b = 3$ the sensitivity is $6$: moving $b$ from $3$ to $3.1$ raises the minimum value from $9$ to $9.61$, an increase of $0.61$, close to $6 \times 0.1 = 0.6$.
 
 > **NOTE:**
 >
-> **Corollary 1 (The multiplier is the sensitivity of the minimum value)** In [Theorem 1](#thm-qp-equality), write the minimum value as a function of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$, $f^*(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}) = \tfrac{1}{2}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}}^{\top} \mathbf{M}^{-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$. Its sensitivity to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ ([Definition 9](#def-sensitivity)) is
+> **Corollary 1 (The multiplier is the sensitivity of the minimum value)** In [Theorem 1](#thm-qp-equality), write the minimum value as a function of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$, $f^*(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}) = \tfrac{1}{2}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}}^{\top} \mathbf{M}^{-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$. Its sensitivity to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ ([Definition 10](#def-sensitivity)) is
 >
 > $$\begin{aligned}
 > \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}} f^*(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}})
@@ -599,7 +730,7 @@ Here the [objective](#def-objective-function) is a quadratic $f(\mathord{\smash[
 
 > **NOTE:**
 >
-> *Proof*. $\mathbf{M}^{-1}$ is symmetric and does not depend on $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$, so [derivative of a quadratic form](vector-calculus.llms.md#cor-quadratic-form-symmetric) applies with $\mathbf{M}^{-1}$ in place of $\mathbf{S}$:
+> *Proof*. $\mathbf{M}^{-1}$ is symmetric and does not depend on $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$, so [derivative of a quadratic form](vector-calculus-derivative-rules.llms.md#cor-quadratic-form-symmetric) applies with $\mathbf{M}^{-1}$ in place of $\mathbf{S}$:
 >
 > $$\begin{aligned}
 > \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}} f^*(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}})
@@ -618,7 +749,7 @@ Here the [objective](#def-objective-function) is a quadratic $f(\mathord{\smash[
 
 > **NOTE:**
 >
-> **Example 8 (Moving the line)** In [Example 5](#exm-qp-equality) with a general right side $b$ in place of $5$, $\mathbf{M}^{-1} = \tfrac{2}{25}$ and
+> **Example 9 (Moving the line)** In [Example 6](#exm-qp-equality) with a general right side $b$ in place of $5$, $\mathbf{M}^{-1} = \tfrac{2}{25}$ and
 >
 > $$\begin{aligned}
 > f^*(b) &= \tfrac{1}{2} \mathopen{}\left(\tfrac{2}{25}\right)\mathclose{}\,b^2 \\
@@ -644,7 +775,8 @@ Here the [objective](#def-objective-function) is a quadratic $f(\mathord{\smash[
 - [Definition 6 (Optimization algorithm)](#def-optimization-algorithm)
 - [Definition 7 (Lagrangian)](#def-lagrangian)
 - [Definition 8 (Lagrange multipliers)](#def-lagrange-multipliers)
-- [Definition 9 (Sensitivity)](#def-sensitivity)
+- [Definition 9 (Quadratic program (quadratic programming problem))](#def-quadratic-program)
+- [Definition 10 (Sensitivity)](#def-sensitivity)
 
 Back to top
 
@@ -665,3 +797,7 @@ Wikipedia contributors, “Mathematical optimization — Wikipedia, the free enc
 \[4\]
 
 Wikipedia contributors, “Lagrange multiplier — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Lagrange_multiplier>
+
+\[5\]
+
+Wikipedia contributors, “Quadratic programming — Wikipedia, the free encyclopedia.” 2026. Available: <https://en.wikipedia.org/wiki/Quadratic_programming>
