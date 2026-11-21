@@ -21,7 +21,7 @@ f(0.5, 0.5)
 $$
 
 @fig-quadratic-program shows that it is the [minimizer](#def-minimizer-over-feasible-set):
-it is where the smallest contour circle of the objective touches the feasible [half-plane](optimization-convexity.qmd#def-half-space-inequality).
+it is where the smallest contour [circle](linear-algebra-vectors.qmd#def-circle) of the objective touches the feasible [half-plane](optimization-convexity.qmd#def-half-space-inequality).
 
 :::{#fig-quadratic-program}
 

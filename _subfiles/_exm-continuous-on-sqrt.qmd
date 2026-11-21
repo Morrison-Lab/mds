@@ -4,7 +4,7 @@
 Let $f(x) = \sqrt{x}$, the [square root](algebra.qmd#def-square-root), defined for $x \ge 0$.
 Because $f$ is undefined for $x < 0$,
 only the right-hand limit of $f$ at $0$ makes sense,
-and @def-continuous-on-interval asks only for that one-sided limit at the endpoint $0$.
+and @def-continuous-on-interval asks only for that [one-sided limit](calculus-derivatives.qmd#def-one-sided-limit) at the endpoint $0$.
 Here $f$ is continuous at every point of $(0, 1)$,
 
 $$
