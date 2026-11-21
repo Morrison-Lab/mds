@@ -49,10 +49,13 @@ The linear algebra notes are split across these pages:
   quadratic forms, the trace, and the [matrix inner product](linear-algebra-special-matrices.qmd#def-matrix-inner-product).
 - The [Eigenvalues and Matrix Decompositions](linear-algebra-decompositions.qmd) page:
   eigenvalues, the spectral theorem, [eigendecompositions](linear-algebra-decompositions.qmd#def-eigendecomposition) and the SVD.
-- The [Definite Matrices and Determinants](linear-algebra-definite-matrices.qmd) page:
+- The [Determinants](linear-algebra-determinants.qmd) page:
+  the [determinant](linear-algebra-determinants.qmd#def-determinant)
+  and its value for diagonal matrices, matrix products, and in terms of eigenvalues.
+- The [Definite Matrices](linear-algebra-definite-matrices.qmd) page:
   [positive definite](linear-algebra-definite-matrices.qmd#def-positive-definite) and semidefinite matrices,
   [condition numbers](linear-algebra-definite-matrices.qmd#def-condition-number),
-  [matrix-induced inner products](linear-algebra-definite-matrices.qmd#def-matrix-induced-inner-product), and determinants.
+  and [matrix-induced inner products](linear-algebra-definite-matrices.qmd#def-matrix-induced-inner-product).
 - The [Design Matrices and Projections](linear-algebra-projections.qmd) page:
   design matrices, the [hat matrix](linear-algebra-projections.qmd#def-hat-matrix) and [orthogonal projection](linear-algebra-projections.qmd#def-orthogonal-projection).
 - The [Generalized Inverses and Linear Systems](linear-algebra-generalized-inverses.qmd) page:
