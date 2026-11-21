@@ -1,7 +1,7 @@
 :::{#def-affine-offset}
 #### Offset of an affine map, intercept, bias
 
-In @def-affine-map, the vector $\vec{b}$ is called the **offset** of $f$
-(statistics also calls it the **intercept**, and machine learning the **bias**).
+In @def-affine-map, the vector $\vec{b}$ is called the **offset** of $f$.
+Statistics also calls it the **intercept**, and machine learning calls it the **bias**.
 
 :::
