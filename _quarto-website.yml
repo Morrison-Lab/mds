@@ -8,6 +8,11 @@ project:
   pre-render:
     - python3 tools/build_dependency_graph.py --pages . --site mds --out dependency-graph.json
     - python3 tools/skip_pdf_in_previews.py
+  # Writes _site/anchor-index.json, which page holds each id, so that
+  # anchor-landing.html sends a link to an id that moved to another page on to
+  # the page that holds it now (course sites such as lds link to mds anchors).
+  post-render:
+    - anchor-index.py
   resources:
     - dependency-graph.js
     - dependency-graph.json
