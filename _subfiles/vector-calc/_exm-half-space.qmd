@@ -1,0 +1,10 @@
+:::{#exm-half-space}
+#### The right half-plane
+
+With $\vecf{a} = \tp{(1, 0)}$ and $c = 0$,
+the half-plane $\cb{\vx \in \reals^2 : x_1 \ge 0}$ is the set of points on or to the right of the $x_2$-axis.
+$\tp{(1, 5)}$ is in it, since $1 \ge 0$;
+$\tp{(0, -3)}$ is in it, on the boundary;
+and $\tp{(-1, 0)}$ is not, since $-1 < 0$.
+
+:::

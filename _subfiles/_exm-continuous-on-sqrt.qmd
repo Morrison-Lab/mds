@@ -23,6 +23,6 @@ $$
 \end{aligned}
 $$
 
-so $f$ is continuous on $[0, 1]$ (@def-continuous-on-interval).
+so $f$ is [continuous on](#def-continuous-on-interval) $[0, 1]$.
 
 :::
