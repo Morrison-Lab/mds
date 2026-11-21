@@ -102,9 +102,9 @@ div.csl-indent {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-945790fbee74b2190a3a110e90abeebf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-e3d608924d8f07ebdc6daf50948dfd29.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-945790fbee74b2190a3a110e90abeebf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-1699165e9fb1725d309a04d83efd1a05.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-0d0f4db5a3ed3fc3e5b0eaf09fd9f9be.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-1699165e9fb1725d309a04d83efd1a05.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet">
 <script src="site_libs/quarto-contrib/callouty-theorem-1.4.2/callouty-theorem.js"></script>
 <link href="site_libs/quarto-contrib/callouty-theorem-1.4.2/callouty-theorem.css" rel="stylesheet">
@@ -221,45 +221,15 @@ cookieconsent.run({
 <script src="site_libs/crosstalk-1.2.2/js/crosstalk.min.js"></script><link href="site_libs/plotly-htmlwidgets-css-2.25.2/plotly-htmlwidgets.css" rel="stylesheet">
 <script src="site_libs/plotly-main-2.25.2/plotly-latest.min.js"></script><link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
 <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><style>
-div.callout-proof.callout {
-  border-left-color: #37474F;
+div.callout-exm.callout {
+  border-left-color: #6A1B9A;
 }
-div.callout-proof.callout-style-default .callout-header {
-  background-color: rgba(55, 71, 79, 0.13);
+div.callout-exm.callout-style-default .callout-header {
+  background-color: rgba(106, 27, 154, 0.13);
 }
-div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cor.callout {
-  border-left-color: #00838F;
-}
-div.callout-cor.callout-style-default .callout-header {
-  background-color: rgba(0, 131, 143, 0.13);
-}
-div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-solution.callout {
-  border-left-color: #4E342E;
-}
-div.callout-solution.callout-style-default .callout-header {
-  background-color: rgba(78, 52, 46, 0.13);
-}
-div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-fig.callout {
-  border-left-color: #757575;
-}
-div.callout-fig.callout-style-default .callout-header {
-  background-color: rgba(117, 117, 117, 0.13);
-}
-div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-lem.callout {
   border-left-color: #1565C0;
@@ -270,6 +240,16 @@ div.callout-lem.callout-style-default .callout-header {
 div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-proof.callout {
+  border-left-color: #37474F;
+}
+div.callout-proof.callout-style-default .callout-header {
+  background-color: rgba(55, 71, 79, 0.13);
+}
+div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-remark.callout {
   border-left-color: #AD1457;
@@ -291,25 +271,15 @@ div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-exm.callout {
-  border-left-color: #6A1B9A;
+div.callout-tbl.callout {
+  border-left-color: #757575;
 }
-div.callout-exm.callout-style-default .callout-header {
-  background-color: rgba(106, 27, 154, 0.13);
+div.callout-tbl.callout-style-default .callout-header {
+  background-color: rgba(117, 117, 117, 0.13);
 }
-div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-prp.callout {
-  border-left-color: #827717;
-}
-div.callout-prp.callout-style-default .callout-header {
-  background-color: rgba(130, 119, 23, 0.13);
-}
-div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-cnj.callout {
   border-left-color: #558B2F;
@@ -321,6 +291,26 @@ div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
+div.callout-solution.callout {
+  border-left-color: #4E342E;
+}
+div.callout-solution.callout-style-default .callout-header {
+  background-color: rgba(78, 52, 46, 0.13);
+}
+div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-prp.callout {
+  border-left-color: #827717;
+}
+div.callout-prp.callout-style-default .callout-header {
+  background-color: rgba(130, 119, 23, 0.13);
+}
+div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-def.callout {
   border-left-color: #1B5E20;
 }
@@ -331,14 +321,24 @@ div.callout-def .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-tbl.callout {
+div.callout-cor.callout {
+  border-left-color: #00838F;
+}
+div.callout-cor.callout-style-default .callout-header {
+  background-color: rgba(0, 131, 143, 0.13);
+}
+div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-fig.callout {
   border-left-color: #757575;
 }
-div.callout-tbl.callout-style-default .callout-header {
+div.callout-fig.callout-style-default .callout-header {
   background-color: rgba(117, 117, 117, 0.13);
 }
-div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
+div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
@@ -802,7 +802,11 @@ window.Quarto = {
   </li>  
         <li>
     <a class="dropdown-item" href="./optimization-critical-points.html">
- <span class="dropdown-text">Critical Points and Optimality Conditions</span></a>
+ <span class="dropdown-text">Critical Points and Optimization</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./optimization-optimality.html">
+ <span class="dropdown-text">Optimality Conditions in Several Variables</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./optimization-convexity.html">
@@ -1209,7 +1213,13 @@ window.Quarto = {
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./optimization-critical-points.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Critical Points and Optimality Conditions</span></a>
+ <span class="menu-text">Critical Points and Optimization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./optimization-optimality.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Optimality Conditions in Several Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1278,7 +1288,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-11-20 14:19:57 (PST)</p>
+      <p class="date">Last modified: 2026-11-20 15:35:14 (PST)</p>
     </div>
   </div>
   
@@ -1502,7 +1512,7 @@ x^{(2)} &amp;= \tfrac{1}{2} (2.05 + 1.951219\ldots) \\
 </li>
 <li><p><span class="math inline">\(x^{(3)} = 2.0000001\)</span> (to seven decimals).</p></li>
 </ul>
-<p>The iterates (<a href="#def-iterate" class="quarto-xref">Definition&nbsp;2</a>) approach <span class="math inline">\(2\)</span>, the local minimizer of <span class="math inline">\(f\)</span> (a stationary point, since <span class="math inline">\(f'(2) = 0\)</span>, with <span class="math inline">\(f''(2) = 4 &gt; 0\)</span>; <a href="./optimization-critical-points.html#thm-second-order-condition">Theorem&nbsp;7 in Critical Points and Optimality Conditions</a>).</p>
+<p>The iterates (<a href="#def-iterate" class="quarto-xref">Definition&nbsp;2</a>) approach <span class="math inline">\(2\)</span>, the local minimizer of <span class="math inline">\(f\)</span> (a stationary point, since <span class="math inline">\(f'(2) = 0\)</span>, with <span class="math inline">\(f''(2) = 4 &gt; 0\)</span>; <a href="./optimization-optimality.html#thm-second-order-condition">Theorem&nbsp;5 in Optimality Conditions in Several Variables</a>).</p>
 </div>
 </div>
 </div>
@@ -1556,7 +1566,7 @@ H &amp;= [2 \cdot 2.5] \\
 &amp;= [5],
 \end{aligned}
 \]</span></p>
-<p>so <span class="math inline">\({q\mathopen{}\left(\delta\right)\mathclose{}} = f(2.5) + 2.25\,\delta+ 2.5\,\delta^2\)</span>. For <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)\)</span>, whose Hessian is <span class="math inline">\(\begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 3 \end{bmatrix}\)</span> at every point, the <a href="#def-quadratic-model">quadratic approximation</a> at any <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> equals <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}})\)</span> exactly (<a href="./optimization-critical-points.html#exm-taylor-mv">Example&nbsp;12 in Critical Points and Optimality Conditions</a> with <span class="math inline">\(\mathbf{S} = \begin{bmatrix} 1/2 &amp; 0 \\ 0 &amp; 3/2 \end{bmatrix}\)</span>). <!-- check-term-links: allow: equality of two numbers, not the matrix or complex-number equality that the term names --></p>
+<p>so <span class="math inline">\({q\mathopen{}\left(\delta\right)\mathclose{}} = f(2.5) + 2.25\,\delta+ 2.5\,\delta^2\)</span>. For <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)\)</span>, whose Hessian is <span class="math inline">\(\begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 3 \end{bmatrix}\)</span> at every point, the <a href="#def-quadratic-model">quadratic approximation</a> at any <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> equals <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}})\)</span> exactly (<a href="./optimization-optimality.html#exm-taylor-mv">Example&nbsp;6 in Optimality Conditions in Several Variables</a> with <span class="math inline">\(\mathbf{S} = \begin{bmatrix} 1/2 &amp; 0 \\ 0 &amp; 3/2 \end{bmatrix}\)</span>). <!-- check-term-links: allow: equality of two numbers, not the matrix or complex-number equality that the term names --></p>
 <!-- no-figure: the approximation at x = 2.5 is graphed with its Newton step in the figure after exm-newton-model -->
 </div>
 </div>
@@ -1575,7 +1585,7 @@ H &amp;= [2 \cdot 2.5] \\
 <div id="callout-12" class="callout-12-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="rem-quadratic-model-taylor" class="proof remark">
-<p><span class="proof-title"><em>Remark 1</em> (The quadratic approximation and Taylor’s theorem). </span>When the second partial derivatives of <span class="math inline">\(f\)</span> are continuous, <a href="./optimization-critical-points.html#thm-taylor-mv">Theorem&nbsp;6 in Critical Points and Optimality Conditions</a> says that <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}})\)</span> equals the <a href="https://morrison-lab.github.io/mcs/expressions-algorithms.html#def-expression">expression</a> for <span class="math inline">\({q\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}\right)\mathclose{}}\)</span> in <a href="#def-quadratic-model" class="quarto-xref">Definition&nbsp;7</a> with the Hessian evaluated at a point between <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}\)</span>.</p>
+<p><span class="proof-title"><em>Remark 1</em> (The quadratic approximation and Taylor’s theorem). </span>When the second partial derivatives of <span class="math inline">\(f\)</span> are continuous, <a href="./optimization-optimality.html#thm-taylor-mv">Theorem&nbsp;4 in Optimality Conditions in Several Variables</a> says that <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}})\)</span> equals the <a href="https://morrison-lab.github.io/mcs/expressions-algorithms.html#def-expression">expression</a> for <span class="math inline">\({q\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}\right)\mathclose{}}\)</span> in <a href="#def-quadratic-model" class="quarto-xref">Definition&nbsp;7</a> with the Hessian evaluated at a point between <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1935,7 +1945,7 @@ f(-2.5) + f'(-2.5)\,\delta
 &amp;&amp; \text{(arithmetic)}
 \end{aligned}
 \tag{3}\]</span></span></p>
-<p>It is not the <a href="#def-gradient-linear-approximation">linear approximation of the gradient</a>: it approximates <span class="math inline">\(f\)</span>, not <span class="math inline">\(f'\)</span>. Its root, <span class="math inline">\(\delta= -\tfrac{115}{54}\)</span>, is a step toward a zero of <span class="math inline">\(f\)</span>, not toward a <a href="./optimization-critical-points.html#def-stationary-point">stationary point</a> of <span class="math inline">\(f\)</span>.</p>
+<p>It is not the <a href="#def-gradient-linear-approximation">linear approximation of the gradient</a>: it approximates <span class="math inline">\(f\)</span>, not <span class="math inline">\(f'\)</span>. Its root, <span class="math inline">\(\delta= -\tfrac{115}{54}\)</span>, is a step toward a zero of <span class="math inline">\(f\)</span>, not toward a <a href="./optimization-optimality.html#def-stationary-point">stationary point</a> of <span class="math inline">\(f\)</span>.</p>
 <!-- no-figure: a graph of the tangent line to f would not show the contrast, which is between the function approximated (f, not f') and not in the shape of the line -->
 </div>
 </div>
@@ -2135,7 +2145,7 @@ f(-2.5) + f'(-2.5)\,\delta
 <div id="callout-25" class="callout-25-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="rem-newton-root-vs-model" class="proof remark">
-<p><span class="proof-title"><em>Remark 2</em> (Two ways to read the Newton step). </span><a href="#thm-newton-model" class="quarto-xref">Theorem&nbsp;1</a> reads the <a href="#def-newton-step">Newton step</a> as the <a href="./algebra-basics.html#def-global-minimizer">minimizer</a> of the <a href="#def-quadratic-model">quadratic approximation</a>, which needs the <a href="./vector-calculus-hessian.html#def-hessian">Hessian</a> <span class="math inline">\(\mathbf{H}\)</span> to be <a href="./linear-algebra-definite-matrices.html#def-positive-definite">positive definite</a>. <a href="#thm-newton-linearized-gradient" class="quarto-xref">Theorem&nbsp;2</a> reads it as the root of the <a href="#def-gradient-linear-approximation">linear approximation of the gradient</a>, which needs only <span class="math inline">\(\mathbf{H}\)</span> <a href="./linear-algebra-special-matrices.html#def-matrix-inverse">invertible</a>. <a href="#def-newton-method">Newton’s method</a> solves <span class="math inline">\(\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{p \times 1}\)</span> by replacing the <a href="./vector-calculus-gradients.html#def-vector-derivative">gradient</a> with <a href="#def-gradient-linear-approximation">its linear approximation</a> at each <a href="#def-iterate">iterate</a>, so it looks for a <a href="./optimization-critical-points.html#def-stationary-point">stationary point</a> of any kind, not only a minimizer.</p>
+<p><span class="proof-title"><em>Remark 2</em> (Two ways to read the Newton step). </span><a href="#thm-newton-model" class="quarto-xref">Theorem&nbsp;1</a> reads the <a href="#def-newton-step">Newton step</a> as the <a href="./algebra-basics.html#def-global-minimizer">minimizer</a> of the <a href="#def-quadratic-model">quadratic approximation</a>, which needs the <a href="./vector-calculus-hessian.html#def-hessian">Hessian</a> <span class="math inline">\(\mathbf{H}\)</span> to be <a href="./linear-algebra-definite-matrices.html#def-positive-definite">positive definite</a>. <a href="#thm-newton-linearized-gradient" class="quarto-xref">Theorem&nbsp;2</a> reads it as the root of the <a href="#def-gradient-linear-approximation">linear approximation of the gradient</a>, which needs only <span class="math inline">\(\mathbf{H}\)</span> <a href="./linear-algebra-special-matrices.html#def-matrix-inverse">invertible</a>. <a href="#def-newton-method">Newton’s method</a> solves <span class="math inline">\(\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{p \times 1}\)</span> by replacing the <a href="./vector-calculus-gradients.html#def-vector-derivative">gradient</a> with <a href="#def-gradient-linear-approximation">its linear approximation</a> at each <a href="#def-iterate">iterate</a>, so it looks for a <a href="./optimization-optimality.html#def-stationary-point">stationary point</a> of any kind, not only a minimizer.</p>
 </div>
 </div>
 </div>
@@ -2299,7 +2309,7 @@ Figure&nbsp;3: The <a href="#def-iterate-error">error</a> <span class="math inli
 <div id="callout-29" class="callout-29-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-newton-maximum" class="theorem example">
-<p><span class="theorem-title"><strong>Example 11 (Newton’s method can find a maximum)</strong></span> From <span class="math inline">\(x^{(0)} = -2.5\)</span> the same iteration gives <span class="math inline">\(-2.05\)</span>, <span class="math inline">\(-2.000610\)</span>, <span class="math inline">\(-2.0000001\)</span>, approaching <span class="math inline">\(-2\)</span>. But <span class="math inline">\(-2\)</span> is not a minimizer of <span class="math inline">\(f\)</span>: it is a <a href="./optimization-critical-points.html#def-stationary-point">stationary point</a> of <span class="math inline">\(-f\)</span>, whose <a href="./calculus-derivatives.html#def-second-derivative">second derivative</a> at <span class="math inline">\(-2\)</span> is <span class="math inline">\(-f''(-2) = 4 &gt; 0\)</span>, so it is a strict local minimizer of <span class="math inline">\(-f\)</span> (<a href="./optimization-critical-points.html#thm-second-order-condition">Theorem&nbsp;7 in Critical Points and Optimality Conditions</a>), that is, <span class="math inline">\(f\)</span> is strictly larger at <span class="math inline">\(-2\)</span> than at all nearby points. <a href="#def-newton-method">Newton’s method</a> looks only for a stationary point. In this example, the <a href="./vector-calculus-hessian.html#def-hessian">Hessian</a> <span class="math inline">\(H = f''(x) = 2x\)</span> is negative at every <a href="#def-iterate">iterate</a>. If <span class="math inline">\(H &lt; 0\)</span>, then <a href="#thm-newton-model" class="quarto-xref">Theorem&nbsp;1</a> does not apply, because it requires a <a href="./linear-algebra-definite-matrices.html#def-positive-definite">positive definite</a> Hessian. Instead, the <a href="#def-quadratic-model">quadratic approximation</a> <span class="math inline">\({q\mathopen{}\left(\delta\right)\mathclose{}} = f + g\,\delta+ \tfrac{1}{2} H \delta^2\)</span> tends to <span class="math inline">\(-\infty\)</span> as <span class="math inline">\(\mathopen{}\left|\delta\right|\mathclose{} \to \infty\)</span>, so it has no minimizer.</p>
+<p><span class="theorem-title"><strong>Example 11 (Newton’s method can find a maximum)</strong></span> From <span class="math inline">\(x^{(0)} = -2.5\)</span> the same iteration gives <span class="math inline">\(-2.05\)</span>, <span class="math inline">\(-2.000610\)</span>, <span class="math inline">\(-2.0000001\)</span>, approaching <span class="math inline">\(-2\)</span>. But <span class="math inline">\(-2\)</span> is not a minimizer of <span class="math inline">\(f\)</span>: it is a <a href="./optimization-optimality.html#def-stationary-point">stationary point</a> of <span class="math inline">\(-f\)</span>, whose <a href="./calculus-derivatives.html#def-second-derivative">second derivative</a> at <span class="math inline">\(-2\)</span> is <span class="math inline">\(-f''(-2) = 4 &gt; 0\)</span>, so it is a strict local minimizer of <span class="math inline">\(-f\)</span> (<a href="./optimization-optimality.html#thm-second-order-condition">Theorem&nbsp;5 in Optimality Conditions in Several Variables</a>), that is, <span class="math inline">\(f\)</span> is strictly larger at <span class="math inline">\(-2\)</span> than at all nearby points. <a href="#def-newton-method">Newton’s method</a> looks only for a stationary point. In this example, the <a href="./vector-calculus-hessian.html#def-hessian">Hessian</a> <span class="math inline">\(H = f''(x) = 2x\)</span> is negative at every <a href="#def-iterate">iterate</a>. If <span class="math inline">\(H &lt; 0\)</span>, then <a href="#thm-newton-model" class="quarto-xref">Theorem&nbsp;1</a> does not apply, because it requires a <a href="./linear-algebra-definite-matrices.html#def-positive-definite">positive definite</a> Hessian. Instead, the <a href="#def-quadratic-model">quadratic approximation</a> <span class="math inline">\({q\mathopen{}\left(\delta\right)\mathclose{}} = f + g\,\delta+ \tfrac{1}{2} H \delta^2\)</span> tends to <span class="math inline">\(-\infty\)</span> as <span class="math inline">\(\mathopen{}\left|\delta\right|\mathclose{} \to \infty\)</span>, so it has no minimizer.</p>
 <p><a href="#fig-newton-maximum" class="quarto-xref">Figure&nbsp;4</a> shows the <a href="./algebra-polynomials.html#def-cubic-polynomial">cubic</a> and its quadratic approximation.</p>
 <div class="callout callout-style-simple callout-fig no-icon">
 <div class="callout-body d-flex">
@@ -2367,7 +2377,7 @@ Figure&nbsp;3: The <a href="#def-iterate-error">error</a> <span class="math inli
 <span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>plt.show()<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div id="fig-newton-maximum" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-newton-maximum-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: The <a href="./algebra-polynomials.html#def-cubic-polynomial">cubic</a> <span class="math inline">\(f(x) = x^3 / 3 - 4x\)</span> of <a href="#exm-newton-maximum" class="quarto-xref">Example&nbsp;11</a> is blue, and its <a href="#def-quadratic-model">quadratic approximation</a> at the start <span class="math inline">\(-2.5\)</span> is dashed vermilion. The approximation opens downward, so its <a href="./optimization-critical-points.html#def-stationary-point">stationary point</a> <span class="math inline">\(-2.05\)</span> (triangle) is the point where the approximation is largest, and the <a href="#def-newton-step">Newton step</a> moves uphill. The <a href="#def-iterate">iterates</a> approach the <a href="./optimization-critical-points.html#def-local-maximizer">local maximum</a> at <span class="math inline">\(-2\)</span> (blue marker).
+Figure&nbsp;4: The <a href="./algebra-polynomials.html#def-cubic-polynomial">cubic</a> <span class="math inline">\(f(x) = x^3 / 3 - 4x\)</span> of <a href="#exm-newton-maximum" class="quarto-xref">Example&nbsp;11</a> is blue, and its <a href="#def-quadratic-model">quadratic approximation</a> at the start <span class="math inline">\(-2.5\)</span> is dashed vermilion. The approximation opens downward, so its <a href="./optimization-optimality.html#def-stationary-point">stationary point</a> <span class="math inline">\(-2.05\)</span> (triangle) is the point where the approximation is largest, and the <a href="#def-newton-step">Newton step</a> moves uphill. The <a href="#def-iterate">iterates</a> approach the <a href="./optimization-optimality.html#def-local-maximizer">local maximum</a> at <span class="math inline">\(-2\)</span> (blue marker).
 </figcaption><div aria-describedby="fig-newton-maximum-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="tabset-margin-container"></div><div class="panel-tabset" data-group="language">
 <ul class="nav nav-tabs" role="tablist">

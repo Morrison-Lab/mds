@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-20 14:19:57 (PST)
+Last modified: 2026-11-20 15:35:14 (PST)
 
 > **NOTE:**
 >
@@ -94,7 +94,7 @@ Last modified: 2026-11-20 14:19:57 (PST)
 >
 > - $x^{(3)} = 2.0000001$ (to seven decimals).
 >
-> The iterates ([Definition 2](#def-iterate)) approach $2$, the local minimizer of $f$ (a stationary point, since $f'(2) = 0$, with $f''(2) = 4 > 0$; [Theorem 7 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#thm-second-order-condition)).
+> The iterates ([Definition 2](#def-iterate)) approach $2$, the local minimizer of $f$ (a stationary point, since $f'(2) = 0$, with $f''(2) = 4 > 0$; [Theorem 5 in Optimality Conditions in Several Variables](optimization-optimality.llms.md#thm-second-order-condition)).
 
 > **NOTE:**
 >
@@ -120,11 +120,11 @@ Last modified: 2026-11-20 14:19:57 (PST)
 > &= [5],
 > \end{aligned}$$
 >
-> so ${q\mathopen{}\left(\delta\right)\mathclose{}} = f(2.5) + 2.25\,\delta+ 2.5\,\delta^2$. For $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)$, whose Hessian is $\begin{bmatrix} 1 & 0 \\ 0 & 3 \end{bmatrix}$ at every point, the [quadratic approximation](#def-quadratic-model) at any $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ equals $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}})$ exactly ([Example 12 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#exm-taylor-mv) with $\mathbf{S} = \begin{bmatrix} 1/2 & 0 \\ 0 & 3/2 \end{bmatrix}$).
+> so ${q\mathopen{}\left(\delta\right)\mathclose{}} = f(2.5) + 2.25\,\delta+ 2.5\,\delta^2$. For $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)$, whose Hessian is $\begin{bmatrix} 1 & 0 \\ 0 & 3 \end{bmatrix}$ at every point, the [quadratic approximation](#def-quadratic-model) at any $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ equals $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}})$ exactly ([Example 6 in Optimality Conditions in Several Variables](optimization-optimality.llms.md#exm-taylor-mv) with $\mathbf{S} = \begin{bmatrix} 1/2 & 0 \\ 0 & 3/2 \end{bmatrix}$).
 
 > **NOTE:**
 >
-> *Remark 1* (The quadratic approximation and Taylor’s theorem). When the second partial derivatives of $f$ are continuous, [Theorem 6 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#thm-taylor-mv) says that $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}})$ equals the [expression](https://morrison-lab.github.io/mcs/expressions-algorithms.html#def-expression) for ${q\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}\right)\mathclose{}}$ in [Definition 7](#def-quadratic-model) with the Hessian evaluated at a point between $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}$.
+> *Remark 1* (The quadratic approximation and Taylor’s theorem). When the second partial derivatives of $f$ are continuous, [Theorem 4 in Optimality Conditions in Several Variables](optimization-optimality.llms.md#thm-taylor-mv) says that $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}})$ equals the [expression](https://morrison-lab.github.io/mcs/expressions-algorithms.html#def-expression) for ${q\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}\right)\mathclose{}}$ in [Definition 7](#def-quadratic-model) with the Hessian evaluated at a point between $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}$.
 
 > **NOTE:**
 >
@@ -357,7 +357,7 @@ Last modified: 2026-11-20 14:19:57 (PST)
 > \end{aligned}
 > \tag{3}$$
 >
-> It is not the [linear approximation of the gradient](#def-gradient-linear-approximation): it approximates $f$, not $f'$. Its root, $\delta= -\tfrac{115}{54}$, is a step toward a zero of $f$, not toward a [stationary point](optimization-critical-points.llms.md#def-stationary-point) of $f$.
+> It is not the [linear approximation of the gradient](#def-gradient-linear-approximation): it approximates $f$, not $f'$. Its root, $\delta= -\tfrac{115}{54}$, is a step toward a zero of $f$, not toward a [stationary point](optimization-optimality.llms.md#def-stationary-point) of $f$.
 
 > **NOTE:**
 >
@@ -460,7 +460,7 @@ Last modified: 2026-11-20 14:19:57 (PST)
 
 > **NOTE:**
 >
-> *Remark 2* (Two ways to read the Newton step). [Theorem 1](#thm-newton-model) reads the [Newton step](#def-newton-step) as the [minimizer](algebra-basics.llms.md#def-global-minimizer) of the [quadratic approximation](#def-quadratic-model), which needs the [Hessian](vector-calculus-hessian.llms.md#def-hessian) $\mathbf{H}$ to be [positive definite](linear-algebra-definite-matrices.llms.md#def-positive-definite). [Theorem 2](#thm-newton-linearized-gradient) reads it as the root of the [linear approximation of the gradient](#def-gradient-linear-approximation), which needs only $\mathbf{H}$ [invertible](linear-algebra-special-matrices.llms.md#def-matrix-inverse). [Newton’s method](#def-newton-method) solves $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{p \times 1}$ by replacing the [gradient](vector-calculus-gradients.llms.md#def-vector-derivative) with [its linear approximation](#def-gradient-linear-approximation) at each [iterate](#def-iterate), so it looks for a [stationary point](optimization-critical-points.llms.md#def-stationary-point) of any kind, not only a minimizer.
+> *Remark 2* (Two ways to read the Newton step). [Theorem 1](#thm-newton-model) reads the [Newton step](#def-newton-step) as the [minimizer](algebra-basics.llms.md#def-global-minimizer) of the [quadratic approximation](#def-quadratic-model), which needs the [Hessian](vector-calculus-hessian.llms.md#def-hessian) $\mathbf{H}$ to be [positive definite](linear-algebra-definite-matrices.llms.md#def-positive-definite). [Theorem 2](#thm-newton-linearized-gradient) reads it as the root of the [linear approximation of the gradient](#def-gradient-linear-approximation), which needs only $\mathbf{H}$ [invertible](linear-algebra-special-matrices.llms.md#def-matrix-inverse). [Newton’s method](#def-newton-method) solves $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{p \times 1}$ by replacing the [gradient](vector-calculus-gradients.llms.md#def-vector-derivative) with [its linear approximation](#def-gradient-linear-approximation) at each [iterate](#def-iterate), so it looks for a [stationary point](optimization-optimality.llms.md#def-stationary-point) of any kind, not only a minimizer.
 
 # 4 Convergence
 
@@ -545,7 +545,7 @@ Last modified: 2026-11-20 14:19:57 (PST)
 
 > **NOTE:**
 >
-> **Example 11 (Newton’s method can find a maximum)** From $x^{(0)} = -2.5$ the same iteration gives $-2.05$, $-2.000610$, $-2.0000001$, approaching $-2$. But $-2$ is not a minimizer of $f$: it is a [stationary point](optimization-critical-points.llms.md#def-stationary-point) of $-f$, whose [second derivative](calculus-derivatives.llms.md#def-second-derivative) at $-2$ is $-f''(-2) = 4 > 0$, so it is a strict local minimizer of $-f$ ([Theorem 7 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#thm-second-order-condition)), that is, $f$ is strictly larger at $-2$ than at all nearby points. [Newton’s method](#def-newton-method) looks only for a stationary point. In this example, the [Hessian](vector-calculus-hessian.llms.md#def-hessian) $H = f''(x) = 2x$ is negative at every [iterate](#def-iterate). If $H < 0$, then [Theorem 1](#thm-newton-model) does not apply, because it requires a [positive definite](linear-algebra-definite-matrices.llms.md#def-positive-definite) Hessian. Instead, the [quadratic approximation](#def-quadratic-model) ${q\mathopen{}\left(\delta\right)\mathclose{}} = f + g\,\delta+ \tfrac{1}{2} H \delta^2$ tends to $-\infty$ as $\mathopen{}\left|\delta\right|\mathclose{} \to \infty$, so it has no minimizer.
+> **Example 11 (Newton’s method can find a maximum)** From $x^{(0)} = -2.5$ the same iteration gives $-2.05$, $-2.000610$, $-2.0000001$, approaching $-2$. But $-2$ is not a minimizer of $f$: it is a [stationary point](optimization-optimality.llms.md#def-stationary-point) of $-f$, whose [second derivative](calculus-derivatives.llms.md#def-second-derivative) at $-2$ is $-f''(-2) = 4 > 0$, so it is a strict local minimizer of $-f$ ([Theorem 5 in Optimality Conditions in Several Variables](optimization-optimality.llms.md#thm-second-order-condition)), that is, $f$ is strictly larger at $-2$ than at all nearby points. [Newton’s method](#def-newton-method) looks only for a stationary point. In this example, the [Hessian](vector-calculus-hessian.llms.md#def-hessian) $H = f''(x) = 2x$ is negative at every [iterate](#def-iterate). If $H < 0$, then [Theorem 1](#thm-newton-model) does not apply, because it requires a [positive definite](linear-algebra-definite-matrices.llms.md#def-positive-definite) Hessian. Instead, the [quadratic approximation](#def-quadratic-model) ${q\mathopen{}\left(\delta\right)\mathclose{}} = f + g\,\delta+ \tfrac{1}{2} H \delta^2$ tends to $-\infty$ as $\mathopen{}\left|\delta\right|\mathclose{} \to \infty$, so it has no minimizer.
 >
 > [Figure 4](#fig-newton-maximum) shows the [cubic](algebra-polynomials.llms.md#def-cubic-polynomial) and its quadratic approximation.
 >
@@ -627,7 +627,7 @@ Last modified: 2026-11-20 14:19:57 (PST)
 > >
 > > [![Plot of the cubic f of x equals x cubed over 3 minus 4 x for x from -4 to -0.5, in blue, with a local maximum at x equal to -2, marked by a blue square. A dashed vermilion parabola opening downward is the quadratic approximation at the start -2.5. It touches the cubic at -2.5 and has its highest point at -2.05, marked by a vermilion triangle. A vermilion circle marks the start -2.5.](optimization-newton_files/figure-html/newton-maximum-python-1.png)](optimization-newton_files/figure-html/newton-maximum-python-1.png "Figure 4: The cubic f(x) = x^3 / 3 - 4x of Example 11 is blue, and its quadratic approximation at the start -2.5 is dashed vermilion. The approximation opens downward, so its stationary point -2.05 (triangle) is the point where the approximation is largest, and the Newton step moves uphill. The iterates approach the local maximum at -2 (blue marker).")
 > >
-> > Figure 4: The [cubic](algebra-polynomials.llms.md#def-cubic-polynomial) $f(x) = x^3 / 3 - 4x$ of [Example 11](#exm-newton-maximum) is blue, and its [quadratic approximation](#def-quadratic-model) at the start $-2.5$ is dashed vermilion. The approximation opens downward, so its [stationary point](optimization-critical-points.llms.md#def-stationary-point) $-2.05$ (triangle) is the point where the approximation is largest, and the [Newton step](#def-newton-step) moves uphill. The [iterates](#def-iterate) approach the [local maximum](optimization-critical-points.llms.md#def-local-maximizer) at $-2$ (blue marker).
+> > Figure 4: The [cubic](algebra-polynomials.llms.md#def-cubic-polynomial) $f(x) = x^3 / 3 - 4x$ of [Example 11](#exm-newton-maximum) is blue, and its [quadratic approximation](#def-quadratic-model) at the start $-2.5$ is dashed vermilion. The approximation opens downward, so its [stationary point](optimization-optimality.llms.md#def-stationary-point) $-2.05$ (triangle) is the point where the approximation is largest, and the [Newton step](#def-newton-step) moves uphill. The [iterates](#def-iterate) approach the [local maximum](optimization-optimality.llms.md#def-local-maximizer) at $-2$ (blue marker).
 
 > **NOTE:**
 >

@@ -1899,6 +1899,15 @@
    "external": false
   },
   {
+   "id": "mds/calculus-derivatives#def-smooth-function",
+   "site": "mds",
+   "page": "calculus-derivatives",
+   "div": "def-smooth-function",
+   "kind": "def",
+   "title": "Smooth function (infinitely differentiable function)",
+   "external": false
+  },
+  {
    "id": "mds/calculus-derivatives#def-tangent-line",
    "site": "mds",
    "page": "calculus-derivatives",
@@ -6219,78 +6228,6 @@
    "external": false
   },
   {
-   "id": "mds/optimization-critical-points#def-local-maximizer",
-   "site": "mds",
-   "page": "optimization-critical-points",
-   "div": "def-local-maximizer",
-   "kind": "def",
-   "title": "Local maximizer",
-   "external": false
-  },
-  {
-   "id": "mds/optimization-critical-points#def-saddle-point",
-   "site": "mds",
-   "page": "optimization-critical-points",
-   "div": "def-saddle-point",
-   "kind": "def",
-   "title": "Saddle point",
-   "external": false
-  },
-  {
-   "id": "mds/optimization-critical-points#def-stationary-point",
-   "site": "mds",
-   "page": "optimization-critical-points",
-   "div": "def-stationary-point",
-   "kind": "def",
-   "title": "Stationary point",
-   "external": false
-  },
-  {
-   "id": "mds/optimization-critical-points#def-strict-local-minimizer",
-   "site": "mds",
-   "page": "optimization-critical-points",
-   "div": "def-strict-local-minimizer",
-   "kind": "def",
-   "title": "Strict local minimizer",
-   "external": false
-  },
-  {
-   "id": "mds/optimization-critical-points#lem-qf-eigen-bound",
-   "site": "mds",
-   "page": "optimization-critical-points",
-   "div": "lem-qf-eigen-bound",
-   "kind": "lem",
-   "title": "A quadratic form is at least the smallest eigenvalue times the squared length",
-   "external": false
-  },
-  {
-   "id": "mds/optimization-critical-points#lem-qf-entry-bound",
-   "site": "mds",
-   "page": "optimization-critical-points",
-   "div": "lem-qf-entry-bound",
-   "kind": "lem",
-   "title": "A quadratic form with small entries is small",
-   "external": false
-  },
-  {
-   "id": "mds/optimization-critical-points#thm-fermat",
-   "site": "mds",
-   "page": "optimization-critical-points",
-   "div": "thm-fermat",
-   "kind": "thm",
-   "title": "A minimizer has derivative zero",
-   "external": false
-  },
-  {
-   "id": "mds/optimization-critical-points#thm-first-order-condition",
-   "site": "mds",
-   "page": "optimization-critical-points",
-   "div": "thm-first-order-condition",
-   "kind": "thm",
-   "title": "First-order necessary condition",
-   "external": false
-  },
-  {
    "id": "mds/optimization-critical-points#thm-flat-point-critical",
    "site": "mds",
    "page": "optimization-critical-points",
@@ -6306,33 +6243,6 @@
    "div": "thm-second-derivative-test",
    "kind": "thm",
    "title": "Second derivative test",
-   "external": false
-  },
-  {
-   "id": "mds/optimization-critical-points#thm-second-order-condition",
-   "site": "mds",
-   "page": "optimization-critical-points",
-   "div": "thm-second-order-condition",
-   "kind": "thm",
-   "title": "Second-order sufficient condition",
-   "external": false
-  },
-  {
-   "id": "mds/optimization-critical-points#thm-taylor-1d",
-   "site": "mds",
-   "page": "optimization-critical-points",
-   "div": "thm-taylor-1d",
-   "kind": "thm",
-   "title": "Taylor's theorem with a second-order remainder",
-   "external": false
-  },
-  {
-   "id": "mds/optimization-critical-points#thm-taylor-mv",
-   "site": "mds",
-   "page": "optimization-critical-points",
-   "div": "thm-taylor-mv",
-   "kind": "thm",
-   "title": "Second-order Taylor theorem in several variables",
    "external": false
   },
   {
@@ -6675,6 +6585,105 @@
    "div": "thm-newton-quadratic",
    "kind": "thm",
    "title": "Newton's method minimizes a quadratic in one step",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-optimality#def-local-maximizer",
+   "site": "mds",
+   "page": "optimization-optimality",
+   "div": "def-local-maximizer",
+   "kind": "def",
+   "title": "Local maximizer",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-optimality#def-saddle-point",
+   "site": "mds",
+   "page": "optimization-optimality",
+   "div": "def-saddle-point",
+   "kind": "def",
+   "title": "Saddle point",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-optimality#def-stationary-point",
+   "site": "mds",
+   "page": "optimization-optimality",
+   "div": "def-stationary-point",
+   "kind": "def",
+   "title": "Stationary point",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-optimality#def-strict-local-minimizer",
+   "site": "mds",
+   "page": "optimization-optimality",
+   "div": "def-strict-local-minimizer",
+   "kind": "def",
+   "title": "Strict local minimizer",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-optimality#lem-qf-eigen-bound",
+   "site": "mds",
+   "page": "optimization-optimality",
+   "div": "lem-qf-eigen-bound",
+   "kind": "lem",
+   "title": "A quadratic form is at least the smallest eigenvalue times the squared length",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-optimality#lem-qf-entry-bound",
+   "site": "mds",
+   "page": "optimization-optimality",
+   "div": "lem-qf-entry-bound",
+   "kind": "lem",
+   "title": "A quadratic form with small entries is small",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-optimality#thm-fermat",
+   "site": "mds",
+   "page": "optimization-optimality",
+   "div": "thm-fermat",
+   "kind": "thm",
+   "title": "A minimizer has derivative zero",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-optimality#thm-first-order-condition",
+   "site": "mds",
+   "page": "optimization-optimality",
+   "div": "thm-first-order-condition",
+   "kind": "thm",
+   "title": "First-order necessary condition",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-optimality#thm-second-order-condition",
+   "site": "mds",
+   "page": "optimization-optimality",
+   "div": "thm-second-order-condition",
+   "kind": "thm",
+   "title": "Second-order sufficient condition",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-optimality#thm-taylor-1d",
+   "site": "mds",
+   "page": "optimization-optimality",
+   "div": "thm-taylor-1d",
+   "kind": "thm",
+   "title": "Taylor's theorem with a second-order remainder",
+   "external": false
+  },
+  {
+   "id": "mds/optimization-optimality#thm-taylor-mv",
+   "site": "mds",
+   "page": "optimization-optimality",
+   "div": "thm-taylor-mv",
+   "kind": "thm",
+   "title": "Second-order Taylor theorem in several variables",
    "external": false
   },
   {
@@ -7815,6 +7824,34 @@
   [
    "mds/calculus-derivatives#def-second-derivative",
    "mds/calculus-derivatives#def-differentiable"
+  ],
+  [
+   "mds/calculus-derivatives#def-smooth-function",
+   "mcs/sets#def-open-interval"
+  ],
+  [
+   "mds/calculus-derivatives#def-smooth-function",
+   "mds/calculus-derivatives#def-derivative"
+  ],
+  [
+   "mds/calculus-derivatives#def-smooth-function",
+   "mds/calculus-derivatives#def-differentiable"
+  ],
+  [
+   "mds/calculus-derivatives#def-smooth-function",
+   "mds/calculus-derivatives#def-limit"
+  ],
+  [
+   "mds/calculus-derivatives#def-smooth-function",
+   "mds/calculus-derivatives#def-second-derivative"
+  ],
+  [
+   "mds/calculus-derivatives#def-smooth-function",
+   "mds/linear-algebra-vectors#def-real-coordinate-space"
+  ],
+  [
+   "mds/calculus-derivatives#def-smooth-function",
+   "mds/linear-algebra-vectors#def-real-vector-valued"
   ],
   [
    "mds/calculus-derivatives#def-tangent-line",
@@ -10578,7 +10615,7 @@
   ],
   [
    "mds/optimization-convexity#thm-exp-above-tangent",
-   "mds/optimization-critical-points#thm-fermat"
+   "mds/optimization-optimality#thm-fermat"
   ],
   [
    "mds/optimization-convexity#thm-open-ball-convex",
@@ -10617,30 +10654,6 @@
    "mds/calculus-derivatives#def-second-derivative"
   ],
   [
-   "mds/optimization-critical-points#def-saddle-point",
-   "mds/optimization-critical-points#def-local-maximizer"
-  ],
-  [
-   "mds/optimization-critical-points#def-saddle-point",
-   "mds/optimization-critical-points#def-stationary-point"
-  ],
-  [
-   "mds/optimization-critical-points#thm-fermat",
-   "mcs/sets#def-open-interval"
-  ],
-  [
-   "mds/optimization-critical-points#thm-first-order-condition",
-   "mds/optimization-critical-points#def-stationary-point"
-  ],
-  [
-   "mds/optimization-critical-points#thm-first-order-condition",
-   "mds/optimization-critical-points#thm-fermat"
-  ],
-  [
-   "mds/optimization-critical-points#thm-first-order-condition",
-   "mds/vector-calculus-gradients#def-vector-derivative"
-  ],
-  [
    "mds/optimization-critical-points#thm-flat-point-critical",
    "mds/optimization-critical-points#def-critical-point"
   ],
@@ -10659,70 +10672,6 @@
   [
    "mds/optimization-critical-points#thm-second-derivative-test",
    "mds/optimization-critical-points#def-flat-point"
-  ],
-  [
-   "mds/optimization-critical-points#thm-second-order-condition",
-   "mds/optimization-critical-points#def-stationary-point"
-  ],
-  [
-   "mds/optimization-critical-points#thm-second-order-condition",
-   "mds/optimization-critical-points#def-strict-local-minimizer"
-  ],
-  [
-   "mds/optimization-critical-points#thm-second-order-condition",
-   "mds/optimization-critical-points#lem-qf-eigen-bound"
-  ],
-  [
-   "mds/optimization-critical-points#thm-second-order-condition",
-   "mds/optimization-critical-points#lem-qf-entry-bound"
-  ],
-  [
-   "mds/optimization-critical-points#thm-second-order-condition",
-   "mds/optimization-critical-points#thm-taylor-mv"
-  ],
-  [
-   "mds/optimization-critical-points#thm-second-order-condition",
-   "mds/vector-calculus-hessian#def-continuous-on"
-  ],
-  [
-   "mds/optimization-critical-points#thm-second-order-condition",
-   "mds/vector-calculus-hessian#def-continuous-several"
-  ],
-  [
-   "mds/optimization-critical-points#thm-taylor-mv",
-   "mcs/functions#def-argument"
-  ],
-  [
-   "mds/optimization-critical-points#thm-taylor-mv",
-   "mcs/functions#def-inner-function"
-  ],
-  [
-   "mds/optimization-critical-points#thm-taylor-mv",
-   "mcs/functions#def-outer-function"
-  ],
-  [
-   "mds/optimization-critical-points#thm-taylor-mv",
-   "mds/linear-algebra-matrices#def-matrix"
-  ],
-  [
-   "mds/optimization-critical-points#thm-taylor-mv",
-   "mds/optimization-critical-points#thm-taylor-1d"
-  ],
-  [
-   "mds/optimization-critical-points#thm-taylor-mv",
-   "mds/vector-calculus-derivative-rules#def-vector-valued-derivative"
-  ],
-  [
-   "mds/optimization-critical-points#thm-taylor-mv",
-   "mds/vector-calculus-derivative-rules#thm-chain-vec"
-  ],
-  [
-   "mds/optimization-critical-points#thm-taylor-mv",
-   "mds/vector-calculus-hessian#def-continuous-on"
-  ],
-  [
-   "mds/optimization-critical-points#thm-taylor-mv",
-   "mds/vector-calculus-hessian#def-continuous-several"
   ],
   [
    "mds/optimization-gradient-descent#cor-double-well-basin-bound",
@@ -11043,6 +10992,94 @@
   [
    "mds/optimization-newton#thm-newton-quadratic",
    "mds/vector-calculus-hessian#thm-hessian-quadratic"
+  ],
+  [
+   "mds/optimization-optimality#def-saddle-point",
+   "mds/optimization-optimality#def-local-maximizer"
+  ],
+  [
+   "mds/optimization-optimality#def-saddle-point",
+   "mds/optimization-optimality#def-stationary-point"
+  ],
+  [
+   "mds/optimization-optimality#thm-fermat",
+   "mcs/sets#def-open-interval"
+  ],
+  [
+   "mds/optimization-optimality#thm-first-order-condition",
+   "mds/optimization-optimality#def-stationary-point"
+  ],
+  [
+   "mds/optimization-optimality#thm-first-order-condition",
+   "mds/optimization-optimality#thm-fermat"
+  ],
+  [
+   "mds/optimization-optimality#thm-first-order-condition",
+   "mds/vector-calculus-gradients#def-vector-derivative"
+  ],
+  [
+   "mds/optimization-optimality#thm-second-order-condition",
+   "mds/optimization-optimality#def-stationary-point"
+  ],
+  [
+   "mds/optimization-optimality#thm-second-order-condition",
+   "mds/optimization-optimality#def-strict-local-minimizer"
+  ],
+  [
+   "mds/optimization-optimality#thm-second-order-condition",
+   "mds/optimization-optimality#lem-qf-eigen-bound"
+  ],
+  [
+   "mds/optimization-optimality#thm-second-order-condition",
+   "mds/optimization-optimality#lem-qf-entry-bound"
+  ],
+  [
+   "mds/optimization-optimality#thm-second-order-condition",
+   "mds/optimization-optimality#thm-taylor-mv"
+  ],
+  [
+   "mds/optimization-optimality#thm-second-order-condition",
+   "mds/vector-calculus-hessian#def-continuous-on"
+  ],
+  [
+   "mds/optimization-optimality#thm-second-order-condition",
+   "mds/vector-calculus-hessian#def-continuous-several"
+  ],
+  [
+   "mds/optimization-optimality#thm-taylor-mv",
+   "mcs/functions#def-argument"
+  ],
+  [
+   "mds/optimization-optimality#thm-taylor-mv",
+   "mcs/functions#def-inner-function"
+  ],
+  [
+   "mds/optimization-optimality#thm-taylor-mv",
+   "mcs/functions#def-outer-function"
+  ],
+  [
+   "mds/optimization-optimality#thm-taylor-mv",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
+   "mds/optimization-optimality#thm-taylor-mv",
+   "mds/optimization-optimality#thm-taylor-1d"
+  ],
+  [
+   "mds/optimization-optimality#thm-taylor-mv",
+   "mds/vector-calculus-derivative-rules#def-vector-valued-derivative"
+  ],
+  [
+   "mds/optimization-optimality#thm-taylor-mv",
+   "mds/vector-calculus-derivative-rules#thm-chain-vec"
+  ],
+  [
+   "mds/optimization-optimality#thm-taylor-mv",
+   "mds/vector-calculus-hessian#def-continuous-on"
+  ],
+  [
+   "mds/optimization-optimality#thm-taylor-mv",
+   "mds/vector-calculus-hessian#def-continuous-several"
   ],
   [
    "mds/optimization-quasi-newton#def-bfgs-update",

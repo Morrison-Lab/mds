@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-20 14:19:57 (PST)
+Last modified: 2026-11-20 15:35:14 (PST)
 
 > **NOTE:**
 >
@@ -828,7 +828,7 @@ Last modified: 2026-11-20 14:19:57 (PST)
 
 > **NOTE:**
 >
-> **Example 10 (Basins of a double-well function)** Let $f(x) = x^4 - 2x^2$, so $\frac{\partial}{\partial x} f(x) = 4x(x - 1)(x + 1)$ and the [stationary points](optimization-critical-points.llms.md#def-stationary-point) are $-1$, $0$ and $1$. Both $-1$ and $1$ are [local minimizers](algebra-basics.llms.md#def-local-minimizer), with $f(\pm 1) = -1$, and $0$ is a [local maximizer](optimization-critical-points.llms.md#def-local-maximizer). We run [gradient descent](#def-gradient-descent) with the fixed [step length](#def-gradient-descent) $s= 0.05$ for 200 steps from the starting points $-1.5$, $-0.5$, $-0.1$, $0.1$, $0.5$, $1.5$ and $3$, and for three steps from ${{x}^{(0)}} = 4$.
+> **Example 10 (Basins of a double-well function)** Let $f(x) = x^4 - 2x^2$, so $\frac{\partial}{\partial x} f(x) = 4x(x - 1)(x + 1)$ and the [stationary points](optimization-optimality.llms.md#def-stationary-point) are $-1$, $0$ and $1$. Both $-1$ and $1$ are [local minimizers](algebra-basics.llms.md#def-local-minimizer), with $f(\pm 1) = -1$, and $0$ is a [local maximizer](optimization-optimality.llms.md#def-local-maximizer). We run [gradient descent](#def-gradient-descent) with the fixed [step length](#def-gradient-descent) $s= 0.05$ for 200 steps from the starting points $-1.5$, $-0.5$, $-0.1$, $0.1$, $0.5$, $1.5$ and $3$, and for three steps from ${{x}^{(0)}} = 4$.
 >
 > ## R
 >
@@ -980,7 +980,7 @@ Last modified: 2026-11-20 14:19:57 (PST)
 >
 > [![Plot of the double-well function x to the fourth minus 2 x squared for x from -1.6 to 1.6, a grey W-shaped curve with minima of -1 at x of -1 and 1 and a local maximum of 0 at x of 0. Points mark the gradient descent iterates from six starting values, three positive and three negative. Positive starts, drawn as blue circles, slide down the right well to 1. Negative starts, drawn as orange triangles, slide down the left well to -1.](optimization-gradient-descent_files/figure-html/basin-iterates-python-1.png)](optimization-gradient-descent_files/figure-html/basin-iterates-python-1.png "Figure 6: Gradient descent with step length 0.05 on the double-well function of Example 10, from six starting points between -1.5 and 1.5. Each run settles at the local minimizer on its own side of the local maximizer at 0.")
 >
-> Figure 6: [Gradient descent](#def-gradient-descent) with [step length](#def-gradient-descent) $0.05$ on the double-well [function](https://morrison-lab.github.io/mcs/functions.html#def-function) of [Example 10](#exm-basin-of-attraction), from six starting points between $-1.5$ and $1.5$. Each run settles at the [local minimizer](algebra-basics.llms.md#def-local-minimizer) on its own side of the [local maximizer](optimization-critical-points.llms.md#def-local-maximizer) at $0$.
+> Figure 6: [Gradient descent](#def-gradient-descent) with [step length](#def-gradient-descent) $0.05$ on the double-well [function](https://morrison-lab.github.io/mcs/functions.html#def-function) of [Example 10](#exm-basin-of-attraction), from six starting points between $-1.5$ and $1.5$. Each run settles at the [local minimizer](algebra-basics.llms.md#def-local-minimizer) on its own side of the [local maximizer](optimization-optimality.llms.md#def-local-maximizer) at $0$.
 
 > **NOTE:**
 >
@@ -1094,13 +1094,13 @@ Last modified: 2026-11-20 14:19:57 (PST)
 >
 > $$0 < \mathopen{}\left\lVert\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\right\rVert\mathclose{} < \epsilon$$
 >
-> at every point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ of the region. The function is then nearly flat on the region, and the region contains no [stationary point](optimization-critical-points.llms.md#def-stationary-point).
+> at every point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ of the region. The function is then nearly flat on the region, and the region contains no [stationary point](optimization-optimality.llms.md#def-stationary-point).
 
 > **NOTE:**
 >
 > **Example 12 (A cost with no stationary point)**  
 >
-> Let $f(x) = \log\mathopen{}\left(1 + \text{e}^{-x}\right)\mathclose{}$. Its [derivative](calculus-derivatives.llms.md#def-derivative) is $\frac{\partial}{\partial x} f(x) = -1 / (1 + \text{e}^{x})$, which is negative for every $x$, so $f$ has no [stationary point](optimization-critical-points.llms.md#def-stationary-point) at all.
+> Let $f(x) = \log\mathopen{}\left(1 + \text{e}^{-x}\right)\mathclose{}$. Its [derivative](calculus-derivatives.llms.md#def-derivative) is $\frac{\partial}{\partial x} f(x) = -1 / (1 + \text{e}^{x})$, which is negative for every $x$, so $f$ has no [stationary point](optimization-optimality.llms.md#def-stationary-point) at all.
 >
 > At $x = 0$ the [gradient](vector-calculus-gradients.llms.md#def-vector-derivative) has size $0.5$. At $x = 10$ it has size $4.54\times 10^{-5}$, which is small but not zero. A step of [gradient descent](#def-gradient-descent) subtracts the gradient times the [step length](#def-gradient-descent). The gradient is negative, so the [iterates](optimization-newton.llms.md#def-iterate) keep moving to the right, more and more slowly. With tolerance $\epsilon = 10^{-4}$, the region $x \ge 10$ is a plateau ([Definition 10](#def-plateau)). A run that enters this plateau has not converged; the run has only slowed down.
 
@@ -1159,7 +1159,7 @@ Last modified: 2026-11-20 14:19:57 (PST)
 >
 > [![Plot of the size of the gradient of the function log of 1 plus e to the minus x, against x from -5 to 15, on a logarithmic vertical axis. A solid blue curve falls from about 0.99 at x of -5 to about 0.0000003 at x of 15. It is always positive and never reaches 0. Two vermilion triangles mark x of 0, where the size is 0.5, and x of 10, where it is about 0.00005.](optimization-gradient-descent_files/figure-html/plateau-size-python-1.png)](optimization-gradient-descent_files/figure-html/plateau-size-python-1.png "Figure 8: The size of the gradient of the function in Example 12, with x = 0 and x = 10 marked. The size shrinks toward 0 as x grows but is never 0, which is why descent slows down on a plateau without stopping at a stationary point.")
 >
-> Figure 8: The size of the [gradient](vector-calculus-gradients.llms.md#def-vector-derivative) of the [function](https://morrison-lab.github.io/mcs/functions.html#def-function) in [Example 12](#exm-plateau), with $x = 0$ and $x = 10$ marked. The size shrinks toward $0$ as $x$ grows but is never $0$, which is why descent slows down on a [plateau](#def-plateau) without stopping at a [stationary point](optimization-critical-points.llms.md#def-stationary-point).
+> Figure 8: The size of the [gradient](vector-calculus-gradients.llms.md#def-vector-derivative) of the [function](https://morrison-lab.github.io/mcs/functions.html#def-function) in [Example 12](#exm-plateau), with $x = 0$ and $x = 10$ marked. The size shrinks toward $0$ as $x$ grows but is never $0$, which is why descent slows down on a [plateau](#def-plateau) without stopping at a [stationary point](optimization-optimality.llms.md#def-stationary-point).
 
 > **NOTE:**
 >

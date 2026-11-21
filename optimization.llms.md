@@ -4,11 +4,12 @@ Code
 
 Published
 
-Last modified: 2026-11-20 14:19:57 (PST)
+Last modified: 2026-11-20 15:35:14 (PST)
 
 The optimization notes are split across these pages:
 
-- [Critical Points and Optimality Conditions](optimization-critical-points.llms.md): flat points and critical points, Fermat’s theorem, Taylor approximations, and the first- and second-order conditions in several variables.
+- The [Critical Points and Optimization](optimization-critical-points.llms.md) page: flat points, critical points, the second derivative test, and inflection points.
+- The [Optimality Conditions in Several Variables](optimization-optimality.llms.md) page: Fermat’s theorem, stationary points, Taylor approximations, the first- and second-order conditions, and saddle points.
 - [Convexity in Several Variables](optimization-convexity.llms.md): convex sets and functions, epigraphs, tangent planes, and the first-order and Hessian characterizations of convexity.
 - [Quadratic Minimization under Linear Constraints](optimization-constrained.llms.md): minimization problems, optimization algorithms, the Lagrangian, and the sensitivity of the minimum to the constraints.
 - [Newton’s Method](optimization-newton.llms.md): iterative methods, the quadratic approximation, and quadratic convergence.
