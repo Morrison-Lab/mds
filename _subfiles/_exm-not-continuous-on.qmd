@@ -42,7 +42,7 @@ segment |>
 ```
 
 The function with $f(x) = 0$ for $0 \le x < 1$ and $f(1) = 2$.
-The open circle at $(1, 0)$ is the [left-hand limit](calculus-derivatives.qmd#def-one-sided-limit) at $1$, <!-- check-term-links: allow: "open circle" names the plot marker, not the geometric circle -->
+The open circle at $(1, 0)$ marks the [left-hand limit](calculus-derivatives.qmd#def-one-sided-limit) of $f$ at $1$, <!-- check-term-links: allow: "open circle" names the plot marker, not the geometric circle -->
 and the filled dot at $(1, 2)$ is $f(1)$.
 :::
 

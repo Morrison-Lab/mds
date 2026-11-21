@@ -24,7 +24,8 @@ $$
 $$
 
 so $f$ is [continuous on](#def-continuous-on-interval) $[0, 1]$.
-@fig-continuous-on-sqrt shows its [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph), which has no break anywhere on $[0, 1]$.
+@fig-continuous-on-sqrt shows its [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph),
+which has no break anywhere on $[0, 1]$.
 
 :::{#fig-continuous-on-sqrt}
 
