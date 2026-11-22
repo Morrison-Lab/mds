@@ -21,7 +21,7 @@ f(0.5, 0.5)
 $$
 
 @fig-quadratic-program shows that it is the [minimizer](#def-minimizer-over-feasible-set):
-it is where the smallest contour circle of the objective touches the feasible [half-plane](optimization-convexity.qmd#def-half-space).
+it is where the smallest contour [circle](linear-algebra-vectors.qmd#def-circle) of the objective touches the feasible [half-plane](optimization-convexity.qmd#def-half-space-inequality).
 
 :::{#fig-quadratic-program}
 
@@ -68,7 +68,7 @@ grid |>
 ```
 
 The [objective](#def-objective-function) $x_1^2 + x_2^2$ has circular contours at heights $0.25$, $0.5$, $1$ and $2$.
-The shaded [half-plane](optimization-convexity.qmd#def-half-space) satisfies $x_1 + x_2 \ge 1$,
+The shaded [half-plane](optimization-convexity.qmd#def-half-space-inequality) satisfies $x_1 + x_2 \ge 1$,
 and the dot at $(0.5, 0.5)$ is where the contour at height $0.5$ touches its edge.
 :::
 
