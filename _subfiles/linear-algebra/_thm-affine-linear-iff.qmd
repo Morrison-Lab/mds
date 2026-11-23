@@ -1,8 +1,8 @@
 :::{#thm-affine-linear-iff}
 #### An affine map is linear exactly when its offset is zero
 
-An affine map $f(\vx) = \matr{A}\vx + \vec{b}$ (@def-affine-map)
-is linear (@def-linear-map) if and only if $\vec{b} = \vzero$.
+An [affine map](#def-affine-map) $f(\vx) = \matr{A}\vx + \vec{b}$
+is [linear](#def-linear-map) [if and only if](https://morrison-lab.github.io/mcs/proof-writing.html#def-iff) $\vec{b} = \vzero$.
 
 :::
 

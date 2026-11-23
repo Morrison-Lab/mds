@@ -1,7 +1,7 @@
 :::{#thm-affine-map-zero}
 #### An affine map sends zero to its offset
 
-An affine map $f(\vx) = \matr{A}\vx + \vec{b}$ (@def-affine-map)
+An [affine map](#def-affine-map) $f(\vx) = \matr{A}\vx + \vec{b}$
 satisfies $f(\vzero) = \vec{b}$.
 
 :::
