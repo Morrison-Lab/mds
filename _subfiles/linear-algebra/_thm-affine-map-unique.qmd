@@ -4,7 +4,13 @@
 If an [affine map](#def-affine-map) $f$ satisfies
 $f(\vx) = \matr{A}\vx + \vec{b}$ and $f(\vx) = \matr{A}'\vx + \vec{b}'$
 [for all](https://morrison-lab.github.io/mcs/proof-writing.html#def-universal-quantifier) $\vx \in \reals^p$,
-then $\matr{A}' = \matr{A}$ and $\vec{b}' = \vec{b}$.
+then the two [formulas](https://morrison-lab.github.io/mcs/expressions-algorithms.html#def-closed-form-expression) have the same [matrix](linear-algebra-matrices.qmd#def-matrix) and the same [offset](#def-affine-offset):
+
+$$
+\matr{A}' = \matr{A}
+\quad \text{and} \quad
+\vec{b}' = \vec{b}.
+$$ {#eq-affine-map-unique}
 
 :::
 

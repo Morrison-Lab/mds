@@ -6,7 +6,7 @@ Each of the five expressions is a function of the weights
 $\vec w \in \reals^p$,
 with the data $\vx$ and $y$ held fixed.
 Say which ones are [affine](#def-affine-map), that is, have the form @eq-linear-scalar
---- an [inner product](linear-algebra-inner-products.qmd#def-inner-product) plus an [offset](#def-affine-offset) --- and which of those are also [linear](#def-linear-map).
+--- an [inner product](linear-algebra-inner-products.qmd#def-inner-product) plus an [offset](#def-affine-offset) --- and which of the affine ones are also [linear](#def-linear-map).
 
 1.  $\vec w\' \vx$
 2.  $\vec w\' \vx - y$

@@ -2,7 +2,11 @@
 #### An affine map sends zero to its offset
 
 An [affine map](#def-affine-map) $f(\vx) = \matr{A}\vx + \vec{b}$
-satisfies $f(\vzero) = \vec{b}$.
+sends the [zero vector](linear-algebra-vectors.qmd#def-zero-vector) to its [offset](#def-affine-offset) $\vec{b}$:
+
+$$
+f(\vzero) = \vec{b}.
+$$ {#eq-affine-map-zero}
 
 :::
 
