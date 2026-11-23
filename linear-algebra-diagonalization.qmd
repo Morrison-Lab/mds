@@ -1,5 +1,5 @@
 ---
-title: "Diagonalization and Cholesky"
+title: "Similarity and Diagonalization"
 format:
   html: default
   revealjs:

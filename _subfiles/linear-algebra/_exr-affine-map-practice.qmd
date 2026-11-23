@@ -15,7 +15,7 @@ Is $f$ an [affine map](#def-affine-map)?
 ::: {.callout-tip}
 #### Hint
 
-Look for a $2 \times 2$ [matrix](#def-matrix) $\matr{A}$ and a vector $\vec{b}$
+Look for a $2 \times 2$ [matrix](linear-algebra-matrices.qmd#def-matrix) $\matr{A}$ and a vector $\vec{b}$
 with $f(\vx) = \matr{A}\vx + \vec{b}$.
 
 :::

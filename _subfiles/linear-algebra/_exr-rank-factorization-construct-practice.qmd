@@ -2,7 +2,7 @@
 #### Building a rank factorization from a basis of the column space
 
 @thm-rank-factorization builds a [rank factorization](#def-rank-factorization)
-from a [basis](linear-algebra-subspaces.qmd#def-basis) of the [column space](#def-column-space).
+from a [basis](linear-algebra-bases.qmd#def-basis) of the [column space](linear-algebra-column-null-space.qmd#def-column-space).
 Let
 
 $$

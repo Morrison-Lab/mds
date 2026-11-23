@@ -1,0 +1,17 @@
+---
+title: "Affine Subspaces and Half-Spaces"
+format:
+  html: default
+  revealjs:
+    output-file: linear-algebra-affine-subspaces-slides.html
+  pdf:
+    output-file: linear-algebra-affine-subspaces-handout.pdf
+  docx:
+    output-file: linear-algebra-affine-subspaces.docx
+---
+
+{{< include latex-macros/macros.qmd >}}
+
+# Affine subspaces and half-spaces {#sec-affine-subspaces}
+
+{{< include mds/_subfiles/_sec_linear_algebra_affine_subspaces.qmd >}}

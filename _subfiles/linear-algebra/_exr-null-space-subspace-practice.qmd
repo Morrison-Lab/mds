@@ -3,7 +3,7 @@
 
 @thm-null-space-subspace turns a question about a [subspace](linear-algebra-subspaces.qmd#def-subspace)
 into a question about a [null space](#def-null-space).
-Let $\mathcal{S}$ hold the [solutions](linear-algebra-matrices.qmd#def-linear-system) $\vecf{x} \in \reals^3$ of the two equations
+Let $\mathcal{S}$ hold the [solutions](linear-algebra-matrix-multiplication.qmd#def-linear-system) $\vecf{x} \in \reals^3$ of the two equations
 $x_1 + x_2 - x_3 = 0$ and $x_2 = 2 x_3$.
 
 Show that $\mathcal{S}$ is a subspace of $\reals^3$.

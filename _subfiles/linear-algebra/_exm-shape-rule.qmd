@@ -6,7 +6,7 @@
 Let $\matr{A}$ be $2 \times 3$,
 let $\matr{B}$ be $3 \times 4$,
 and let $\vx \in \reals^4$,
-which is a $4 \times 1$ [matrix](#def-matrix).
+which is a $4 \times 1$ [matrix](linear-algebra-matrices.qmd#def-matrix).
 Apply the [shape rule](#def-shape-rule) one [product](#def-matrix-mult) at a time:
 
 - $\matr{A}\matr{B}$ is $(2 \times 3)(3 \times 4)$.

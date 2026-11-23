@@ -2,7 +2,7 @@
 
 $\matr{I}_2$ is $2 \times 2$ and $\matr{A}$ is $2 \times 3$,
 so the [product](#def-matrix-mult) is defined and is $2 \times 3$.
-The first [row of $\matr{I}_2$](#def-matrix-row) is $\begin{bmatrix} 1 & 0 \end{bmatrix}$
+The first [row of $\matr{I}_2$](linear-algebra-matrices.qmd#def-matrix-row) is $\begin{bmatrix} 1 & 0 \end{bmatrix}$
 and the second is $\begin{bmatrix} 0 & 1 \end{bmatrix}$,
 so by @def-matrix-mult
 

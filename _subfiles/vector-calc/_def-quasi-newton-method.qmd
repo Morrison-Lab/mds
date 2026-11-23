@@ -1,7 +1,7 @@
 :::{#def-quasi-newton-method}
 #### Quasi-Newton method
 
-Let $f : \reals^p \to \reals$ have first [partial derivatives](vector-calculus.qmd#def-partial-derivative),
+Let $f : \reals^p \to \reals$ have first [partial derivatives](vector-calculus-gradients.qmd#def-partial-derivative),
 let $\vx^{(0)}$ be a starting point,
 and let $\matr{H}^{(0)}$ be a [positive definite matrix](linear-algebra.qmd#def-positive-definite).
 A **quasi-Newton method**

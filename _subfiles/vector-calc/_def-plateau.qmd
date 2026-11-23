@@ -2,7 +2,7 @@
 #### Plateau
 
 Let $f : \reals^p \to \reals$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function)
-with a [gradient](vector-calculus.qmd#def-vector-derivative)
+with a [gradient](vector-calculus-gradients.qmd#def-vector-derivative)
 at every point of a region,
 and let $\epsilon > 0$ be a tolerance.
 The region is a **plateau** of $f$ if the

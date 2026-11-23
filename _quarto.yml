@@ -35,7 +35,9 @@ page-xrefs:
   - index: algebra.qmd
     pages:
       - algebra-basics.qmd
+      - algebra-convexity.qmd
       - algebra-sums.qmd
+      - algebra-polynomials.qmd
       - algebra-exponentials.qmd
       - algebra-trigonometry.qmd
       - algebra-complex.qmd
@@ -57,14 +59,34 @@ page-xrefs:
     pages:
       - linear-algebra-vectors.qmd
       - linear-algebra-matrices.qmd
+      - linear-algebra-matrix-multiplication.qmd
+      - linear-algebra-linear-maps.qmd
       - linear-algebra-subspaces.qmd
+      - linear-algebra-bases.qmd
+      - linear-algebra-column-null-space.qmd
       - linear-algebra-rank-nullity.qmd
+      - linear-algebra-affine-subspaces.qmd
       - linear-algebra-direct-sums.qmd
+      - linear-algebra-orthogonal-complements.qmd
       - linear-algebra-inner-products.qmd
+      - linear-algebra-orthonormal-bases.qmd
       - linear-algebra-special-matrices.qmd
+      - linear-algebra-decompositions.qmd
+      - linear-algebra-definite-matrices.qmd
       - linear-algebra-projections.qmd
+      - linear-algebra-generalized-inverses.qmd
+      - linear-algebra-least-squares.qmd
       - linear-algebra-diagonalization.qmd
+      - linear-algebra-cholesky.qmd
       - linear-algebra-complex.qmd
+  # vector-calculus.qmd was split (mds#156), so @id references resolve
+  # across its pages, and links to it from before that split (index#id)
+  # go on to the page now holding #id.
+  - index: vector-calculus.qmd
+    pages:
+      - vector-calculus-gradients.qmd
+      - vector-calculus-derivative-rules.qmd
+      - vector-calculus-hessian.qmd
   # The critical points section moved from calculus-derivatives.qmd to
   # optimization.qmd, so links to its ids on the calculus pages go on there.
   # The Taylor series section moved from calculus-derivatives.qmd to
@@ -73,24 +95,85 @@ page-xrefs:
     pages:
       - calculus-taylor-series.qmd
       - optimization-critical-points.qmd
+      - optimization-optimality.qmd
   - index: calculus.qmd
     pages:
       - optimization-critical-points.qmd
+      - optimization-optimality.qmd
   # optimization.qmd was split into the pages below.
   - index: optimization.qmd
     pages:
       - optimization-critical-points.qmd
+      - optimization-optimality.qmd
       - optimization-convexity.qmd
       - optimization-constrained.qmd
       - optimization-newton.qmd
       - optimization-gradient-descent.qmd
       - optimization-quasi-newton.qmd
+  # optimization-critical-points.qmd was split (mds#156), so links to it
+  # from before that split (index#id) go on to the page now holding #id.
+  - index: optimization-critical-points.qmd
+    pages:
+      - optimization-optimality.qmd
+  # algebra-sums.qmd was split (mds#156), so links to it from
+  # before that split (index#id) go on to the page now holding #id.
+  - index: algebra-sums.qmd
+    pages:
+      - algebra-convexity.qmd
+  # algebra-exponentials.qmd was split (mds#156), so links to it from
+  # before that split (index#id) go on to the page now holding #id.
+  - index: algebra-exponentials.qmd
+    pages:
+      - algebra-polynomials.qmd
+  # linear-algebra-diagonalization.qmd was split (mds#156), so links to
+  # it from before that split (index#id) go on to the page now holding #id.
+  - index: linear-algebra-diagonalization.qmd
+    pages:
+      - linear-algebra-cholesky.qmd
+  # linear-algebra-direct-sums.qmd was split (mds#156), so links to it from
+  # before that split (index#id) go on to the page now holding #id.
+  - index: linear-algebra-direct-sums.qmd
+    pages:
+      - linear-algebra-orthogonal-complements.qmd
+  # linear-algebra-matrices.qmd was split (mds#156), so links to it from
+  # before that split (index#id) go on to the page now holding #id.
+  - index: linear-algebra-matrices.qmd
+    pages:
+      - linear-algebra-matrix-multiplication.qmd
+      - linear-algebra-linear-maps.qmd
+  # linear-algebra-inner-products.qmd was split (mds#156), so links to
+  # it from before that split (index#id) go on to the page now holding #id.
+  - index: linear-algebra-inner-products.qmd
+    pages:
+      - linear-algebra-orthonormal-bases.qmd
+  # linear-algebra-projections.qmd was split (mds#156), so links to it
+  # from before that split (index#id) go on to the page now holding #id.
+  - index: linear-algebra-projections.qmd
+    pages:
+      - linear-algebra-generalized-inverses.qmd
+      - linear-algebra-least-squares.qmd
+  # linear-algebra-special-matrices.qmd was split (mds#156), so links to
+  # it from before that split (index#id) go on to the page now holding #id.
+  - index: linear-algebra-special-matrices.qmd
+    pages:
+      - linear-algebra-decompositions.qmd
+      - linear-algebra-definite-matrices.qmd
+  # linear-algebra-rank-nullity.qmd was split (mds#156), so links to it
+  # from before that split (index#id) go on to the page now holding #id.
+  - index: linear-algebra-rank-nullity.qmd
+    pages:
+      - linear-algebra-column-null-space.qmd
+      - linear-algebra-affine-subspaces.qmd
   # linear-algebra-subspaces.qmd was split again, so links to it from before
   # the second split (index#id) go on to the page now holding #id.
   - index: linear-algebra-subspaces.qmd
     pages:
+      - linear-algebra-bases.qmd
+      - linear-algebra-column-null-space.qmd
       - linear-algebra-rank-nullity.qmd
+      - linear-algebra-affine-subspaces.qmd
       - linear-algebra-direct-sums.qmd
+      - linear-algebra-orthogonal-complements.qmd
 
 format:
   pdf:

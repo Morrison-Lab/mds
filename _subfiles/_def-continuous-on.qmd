@@ -1,4 +1,4 @@
-:::{#def-continuous-on}
+:::{#def-continuous-on-interval}
 #### Continuous on a closed interval
 
 A function $f$ is **continuous on** a closed interval $[a, b]$

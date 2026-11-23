@@ -9,6 +9,6 @@ $$
 f(\vx) = \sbmat{1 & -4} \vx + 0,
 $$
 
-with the $1 \times 2$ [matrix](#def-matrix) $\sbmat{1 & -4}$ and offset $0$.
+with the $1 \times 2$ [matrix](linear-algebra-matrices.qmd#def-matrix) $\sbmat{1 & -4}$ and offset $0$.
 
 :::

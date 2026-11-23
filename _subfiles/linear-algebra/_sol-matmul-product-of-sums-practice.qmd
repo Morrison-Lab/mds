@@ -30,7 +30,7 @@ $$
 $$
 
 The entries in position $(1, 2)$ differ, $1 \ne 2$,
-so the two [matrices](#def-matrix) are not [equal](#def-matrix-equality).
+so the two [matrices](linear-algebra-matrices.qmd#def-matrix) are not [equal](linear-algebra-matrices.qmd#def-matrix-equality).
 The rule for numbers fails because
 $\matr{B}\matr{A} = \begin{bmatrix} 0 & 0 \\ 0 & 0 \end{bmatrix}$
 differs from $\matr{A}\matr{B}$:

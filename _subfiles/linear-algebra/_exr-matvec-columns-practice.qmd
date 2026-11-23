@@ -2,7 +2,7 @@
 #### Computing a matrix-vector product as a combination of columns
 
 A linear model's predictions for every observation at once
-are a [matrix-vector product](linear-algebra-matrices.qmd#def-matvec-mult) $\matr{A}\vecf{x}$,
+are a [matrix-vector product](linear-algebra-matrix-multiplication.qmd#def-matvec-mult) $\matr{A}\vecf{x}$,
 and @thm-matvec-columns writes it as a combination of the [columns of $\matr{A}$](linear-algebra-matrices.qmd#def-matrix-column).
 Let
 

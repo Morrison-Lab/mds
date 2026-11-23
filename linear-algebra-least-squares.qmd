@@ -1,0 +1,17 @@
+---
+title: "Solving Linear Systems and Least Squares"
+format:
+  html: default
+  revealjs:
+    output-file: linear-algebra-least-squares-slides.html
+  pdf:
+    output-file: linear-algebra-least-squares-handout.pdf
+  docx:
+    output-file: linear-algebra-least-squares.docx
+---
+
+{{< include latex-macros/macros.qmd >}}
+
+# Solving linear systems and least squares {#sec-solving-linear-systems}
+
+{{< include mds/_subfiles/_sec_linear_algebra_least_squares.qmd >}}

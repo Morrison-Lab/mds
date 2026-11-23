@@ -3,7 +3,7 @@ with $\matr{S}$ [positive definite](linear-algebra.qmd#def-positive-definite),
 and the constraints (@def-constraints) are $m$ linear equations $\tp{\matr{A}} \vx = \vecf{b}$,
 where $\matr{A}$ is a $p \times m$ matrix and $\vecf{b} \in \reals^m$.
 The only stationary point of the objective alone (@def-stationary-point) is $\vzero_{p \times 1}$
-(its [gradient](vector-calculus.qmd#def-vector-derivative) is $\gradf{f}(\vx) = \matr{S} \vx$,
+(its [gradient](vector-calculus-gradients.qmd#def-vector-derivative) is $\gradf{f}(\vx) = \matr{S} \vx$,
 and $\matr{S}$ is [invertible](linear-algebra.qmd#def-invertible-matrix)),
 which may not satisfy the constraints.
 A Lagrange multiplier adds one unknown per constraint,

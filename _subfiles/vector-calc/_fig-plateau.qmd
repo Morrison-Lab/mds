@@ -65,7 +65,7 @@ plt.show()
 
 :::
 
-The size of the [gradient](vector-calculus.qmd#def-vector-derivative)
+The size of the [gradient](vector-calculus-gradients.qmd#def-vector-derivative)
 of the [function](https://morrison-lab.github.io/mcs/functions.html#def-function) in @exm-plateau,
 with $x = 0$ and $x = 10$ marked.
 The size shrinks toward $0$ as $x$ grows but is never $0$,

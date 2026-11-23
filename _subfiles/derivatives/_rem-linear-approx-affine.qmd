@@ -3,7 +3,7 @@
 
 The linear approximation $\hat{f}_w$ (@def-linear-approximation)
 is an [affine function](algebra.qmd#def-affine-function) of the step $\smallconst$:
-its [slope](algebra.qmd#def-slope) is $\dif{}{w}f(w)$ and its [intercept](algebra-exponentials.qmd#def-intercept) is $f(w)$.
+its [slope](algebra.qmd#def-slope) is $\dif{}{w}f(w)$ and its [intercept](algebra-polynomials.qmd#def-intercept) is $f(w)$.
 It is [linear](algebra.qmd#def-linear-function) in $\smallconst$ only when $f(w) = 0$.
 The name "linear approximation" uses "linear" in the looser sense of elementary algebra
 ([remark](algebra.qmd#rem-linear-function-terminology)).

@@ -1,7 +1,7 @@
 :::{#exr-matmul-assoc-practice}
 #### Grouping a product of three matrices
 
-By @thm-matmul-assoc, a [product](#def-matrix-mult) of three [matrices](#def-matrix) can be grouped either way,
+By @thm-matmul-assoc, a [product](#def-matrix-mult) of three [matrices](linear-algebra-matrices.qmd#def-matrix) can be grouped either way,
 so $\matr{A}\matr{B}\vx$ can be computed as $\matr{A}(\matr{B}\vx)$,
 without ever forming $\matr{A}\matr{B}$.
 Let
@@ -21,7 +21,7 @@ Find $\matr{A}\matr{B}\vx$ by computing $\matr{B}\vx$ first.
 ::: {.callout-tip}
 #### Hint
 
-By @def-matrix-mult, $\matr{B}\vx$ is a $2 \times 1$ [matrix](#def-matrix);
+By @def-matrix-mult, $\matr{B}\vx$ is a $2 \times 1$ [matrix](linear-algebra-matrices.qmd#def-matrix);
 multiply $\matr{A}$ by it.
 
 :::

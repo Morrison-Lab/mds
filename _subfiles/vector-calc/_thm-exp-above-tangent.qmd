@@ -25,7 +25,7 @@ so $g(x) \ge 0$ for every $x$.
 Suppose $g(x) = 0$ for some $x$.
 Then $x$ is also a global minimizer of $g$,
 and so a [local minimizer](algebra.qmd#def-local-minimizer).
-[Fermat's theorem](optimization-critical-points.qmd#thm-fermat) gives $\dif{g(x)}{x} = \expf{x} - 1 = 0$.
+[Fermat's theorem](optimization-optimality.qmd#thm-fermat) gives $\dif{g(x)}{x} = \expf{x} - 1 = 0$.
 Then $\expf{x} = 1 = \expf{0}$,
 which gives $x = 0$
 because the exponential function is injective.

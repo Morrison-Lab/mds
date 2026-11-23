@@ -2,7 +2,7 @@
 #### Evaluating a product of a vector, a matrix and a vector
 
 @thm-scalar-transpose turns $\tp{\vecf{v}}\,\tp{\matr{M}}\,\vecf{u}$ back into $\tp{\vecf{u}}\matr{M}\vecf{v}$,
-which can be the easier [product](#def-matrix-mult) of a vector, a [matrix](#def-matrix) and a vector to compute.
+which can be the easier [product](#def-matrix-mult) of a vector, a [matrix](linear-algebra-matrices.qmd#def-matrix) and a vector to compute.
 Let
 
 $$
