@@ -4,13 +4,13 @@ Code
 
 Published
 
-Last modified: 2026-11-21 17:06:58 (PST)
+Last modified: 2026-11-23 17:43:07 (PST)
 
 # 1 Gram matrices, Schur complements and Cholesky
 
 > **NOTE:**
 >
-> This section is adapted from Zhou [\[1\]](#ref-zhou2024pd), used under the MIT License (see the license text in [Section  in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). The source’s eigenvalue and quadratic-form characterizations of definiteness are covered in these notes already ([Theorem 2 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#thm-definite-eigenvalues)). These parts of the source are left out:
+> This section is adapted from Zhou [\[1\]](#ref-zhou2024pd), used under the MIT License (see the license text in [Section  in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). The source’s eigenvalue and quadratic-form characterizations of definiteness are covered in these notes already ([Theorem 2 in Definite Matrices](linear-algebra-definite-matrices.llms.md#thm-definite-eigenvalues)). These parts of the source are left out:
 >
 > - its covariance test, which needs probability
 > - its material on minimization
@@ -28,8 +28,8 @@ Last modified: 2026-11-21 17:06:58 (PST)
 >
 > **Theorem 1 (Definite matrices are Gram matrices)** Let $\mathbf{A}$ be a $p \times p$ matrix.
 >
-> 1.  $\mathbf{A}$ is positive semidefinite ([Definition 1 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#def-positive-semidefinite)) exactly when $\mathbf{A} = {\mathbf{B}}^{\top} \mathbf{B}$ for some matrix $\mathbf{B}$ with $p$ columns.
-> 2.  $\mathbf{A}$ is positive definite ([Definition 2 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#def-positive-definite)) exactly when $\mathbf{A} = {\mathbf{B}}^{\top} \mathbf{B}$ for some matrix $\mathbf{B}$ with $p$ linearly independent columns.
+> 1.  $\mathbf{A}$ is positive semidefinite ([Definition 1 in Definite Matrices](linear-algebra-definite-matrices.llms.md#def-positive-semidefinite)) exactly when $\mathbf{A} = {\mathbf{B}}^{\top} \mathbf{B}$ for some matrix $\mathbf{B}$ with $p$ columns.
+> 2.  $\mathbf{A}$ is positive definite ([Definition 2 in Definite Matrices](linear-algebra-definite-matrices.llms.md#def-positive-definite)) exactly when $\mathbf{A} = {\mathbf{B}}^{\top} \mathbf{B}$ for some matrix $\mathbf{B}$ with $p$ linearly independent columns.
 
 > **NOTE:**
 >
@@ -59,7 +59,7 @@ Last modified: 2026-11-21 17:06:58 (PST)
 >
 > If the columns of $\mathbf{B}$ are linearly independent, then $\mathcal{N}(\mathbf{B}) = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\right\}\mathclose{}$ ($\mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is the combination of the columns with coefficients $x_j$, [Theorem 3 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-matvec-columns), and only the zero combination is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, [Definition 1 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-linearly-independent)), so for $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, $\mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ and $\mathopen{}\left\lVert\mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{}^2 > 0$ ([Theorem 1 in Inner Products and the Cauchy-Schwarz Inequality](linear-algebra-inner-products.llms.md#thm-norm-properties), part 1).
 >
-> **Only if.** Let $\mathbf{A}$ be positive semidefinite. It is symmetric, so $\mathbf{A} = \mathbf{Q} \mathbf{\Lambda} {\mathbf{Q}}^{\top}$ ([Theorem 1 in Eigenvalues and Matrix Decompositions](linear-algebra-decompositions.llms.md#thm-spectral)), and every $\lambda_i \ge 0$ ([Theorem 2 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#thm-definite-eigenvalues)). Let $\mathbf{\Lambda}^{1/2} \stackrel{\text{def}}{=}\operatorname{diag}(\sqrt{\lambda_1}, \ldots, \sqrt{\lambda_p})$, which is symmetric, with $\mathbf{\Lambda}^{1/2} \mathbf{\Lambda}^{1/2} = \mathbf{\Lambda}$ (the product of diagonal matrices multiplies their diagonals, as in the proof of [Theorem 9 in Similarity and Diagonalization](linear-algebra-diagonalization.llms.md#thm-diagonalizable-powers)), and let $\mathbf{B} \stackrel{\text{def}}{=}\mathbf{\Lambda}^{1/2} {\mathbf{Q}}^{\top}$. Then
+> **Only if.** Let $\mathbf{A}$ be positive semidefinite. It is symmetric, so $\mathbf{A} = \mathbf{Q} \mathbf{\Lambda} {\mathbf{Q}}^{\top}$ ([Theorem 1 in Eigenvalues and Matrix Decompositions](linear-algebra-decompositions.llms.md#thm-spectral)), and every $\lambda_i \ge 0$ ([Theorem 2 in Definite Matrices](linear-algebra-definite-matrices.llms.md#thm-definite-eigenvalues)). Let $\mathbf{\Lambda}^{1/2} \stackrel{\text{def}}{=}\operatorname{diag}(\sqrt{\lambda_1}, \ldots, \sqrt{\lambda_p})$, which is symmetric, with $\mathbf{\Lambda}^{1/2} \mathbf{\Lambda}^{1/2} = \mathbf{\Lambda}$ (the product of diagonal matrices multiplies their diagonals, as in the proof of [Theorem 9 in Similarity and Diagonalization](linear-algebra-diagonalization.llms.md#thm-diagonalizable-powers)), and let $\mathbf{B} \stackrel{\text{def}}{=}\mathbf{\Lambda}^{1/2} {\mathbf{Q}}^{\top}$. Then
 >
 > $$\begin{aligned}
 > {\mathbf{B}}^{\top} \mathbf{B}
@@ -76,21 +76,21 @@ Last modified: 2026-11-21 17:06:58 (PST)
 > && \text{(}\href{linear-algebra-decompositions.qmd#thm-spectral}{\text{Theorem~1 in Eigenvalues and Matrix Decompositions}}\text{)}
 > \end{aligned}$$
 >
-> If $\mathbf{A}$ is positive definite, it is positive semidefinite ([Remark 1 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#rem-positive-definite-symmetry)), so the same $\mathbf{B}$ gives $\mathbf{A} = {\mathbf{B}}^{\top} \mathbf{B}$; and every $\lambda_i > 0$ ([Theorem 2 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#thm-definite-eigenvalues)), so $\mathbf{\Lambda}^{1/2}$ is diagonal with nonzero diagonal, and invertible (its inverse is $\operatorname{diag}(1/\sqrt{\lambda_1}, \ldots, 1/\sqrt{\lambda_p})$); ${\mathbf{Q}}^{\top}$ is invertible with inverse $\mathbf{Q}$ ([Remark 6 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#rem-orthogonal-matrix-columns)). So $\mathbf{B}$ is invertible ([Theorem 1 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#thm-inverse-product)), and its $p$ columns are linearly independent ([Theorem 1 in Similarity and Diagonalization](linear-algebra-diagonalization.llms.md#thm-invertible-rank), [Definition 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-rank)).
+> If $\mathbf{A}$ is positive definite, it is positive semidefinite ([Remark 1 in Definite Matrices](linear-algebra-definite-matrices.llms.md#rem-positive-definite-symmetry)), so the same $\mathbf{B}$ gives $\mathbf{A} = {\mathbf{B}}^{\top} \mathbf{B}$; and every $\lambda_i > 0$ ([Theorem 2 in Definite Matrices](linear-algebra-definite-matrices.llms.md#thm-definite-eigenvalues)), so $\mathbf{\Lambda}^{1/2}$ is diagonal with nonzero diagonal, and invertible (its inverse is $\operatorname{diag}(1/\sqrt{\lambda_1}, \ldots, 1/\sqrt{\lambda_p})$); ${\mathbf{Q}}^{\top}$ is invertible with inverse $\mathbf{Q}$ ([Remark 6 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#rem-orthogonal-matrix-columns)). So $\mathbf{B}$ is invertible ([Theorem 1 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#thm-inverse-product)), and its $p$ columns are linearly independent ([Theorem 1 in Similarity and Diagonalization](linear-algebra-diagonalization.llms.md#thm-invertible-rank), [Definition 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-rank)).
 
 > **NOTE:**
 >
 > **Example 1 (Gram factorizations)**  
 >
-> - With $\mathbf{R} = \begin{bmatrix} 1 & 1 \end{bmatrix}$ ($1 \times 2$), ${\mathbf{R}}^{\top} \mathbf{R} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$, the positive semidefinite matrix of [Example 1 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#exm-positive-semidefinite); the two columns of $\mathbf{R}$, $1$ and $1$, are dependent, so part 2 does not apply to $\mathbf{R}$; ${\mathbf{R}}^{\top} \mathbf{R}$ is in fact not positive definite ([Example 4 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#exm-positive-definite)).
+> - With $\mathbf{R} = \begin{bmatrix} 1 & 1 \end{bmatrix}$ ($1 \times 2$), ${\mathbf{R}}^{\top} \mathbf{R} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$, the positive semidefinite matrix of [Example 1 in Definite Matrices](linear-algebra-definite-matrices.llms.md#exm-positive-semidefinite); the two columns of $\mathbf{R}$, $1$ and $1$, are dependent, so part 2 does not apply to $\mathbf{R}$; ${\mathbf{R}}^{\top} \mathbf{R}$ is in fact not positive definite ([Example 4 in Definite Matrices](linear-algebra-definite-matrices.llms.md#exm-positive-definite)).
 > - With $\mathbf{X}= \begin{bmatrix} 1 & 1 \\ 1 & 2 \\ 1 & 3 \end{bmatrix}$, whose columns are independent ([Example 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-rank)), ${\mathbf{X}}^{\top} \mathbf{X}= \begin{bmatrix} 3 & 6 \\ 6 & 14 \end{bmatrix}$ ([Example 1 in Design Matrices and Projections](linear-algebra-projections.llms.md#exm-gram-invertible)) is positive definite.
-> - $\mathbf{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}$ of [Example 4 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#exm-positive-definite) is symmetric but not positive semidefinite, so by part 1 it is not ${\mathbf{B}}^{\top} \mathbf{B}$ for any $\mathbf{B}$.
+> - $\mathbf{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}$ of [Example 4 in Definite Matrices](linear-algebra-definite-matrices.llms.md#exm-positive-definite) is symmetric but not positive semidefinite, so by part 1 it is not ${\mathbf{B}}^{\top} \mathbf{B}$ for any $\mathbf{B}$.
 
 > **NOTE:**
 >
 > **Theorem 2 (Operations that preserve definiteness)**  
 >
-> 1.  If $\mathbf{C}$ is a $p \times p$ positive definite matrix ([Definition 2 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#def-positive-definite)) and $\mathbf{A}$ is a $p \times k$ matrix with $k$ linearly independent columns, then the $k \times k$ matrix ${\mathbf{A}}^{\top} \mathbf{C} \mathbf{A}$ is positive definite.
+> 1.  If $\mathbf{C}$ is a $p \times p$ positive definite matrix ([Definition 2 in Definite Matrices](linear-algebra-definite-matrices.llms.md#def-positive-definite)) and $\mathbf{A}$ is a $p \times k$ matrix with $k$ linearly independent columns, then the $k \times k$ matrix ${\mathbf{A}}^{\top} \mathbf{C} \mathbf{A}$ is positive definite.
 > 2.  If $\mathbf{A}_1$ and $\mathbf{A}_2$ are positive definite $p \times p$ matrices and $\alpha_1, \alpha_2 > 0$, then $\alpha_1 \mathbf{A}_1 + \alpha_2 \mathbf{A}_2$ is positive definite.
 
 > **NOTE:**
@@ -133,7 +133,7 @@ Last modified: 2026-11-21 17:06:58 (PST)
 >
 > - With $\mathbf{C} = \mathbf{I}_3$ and $\mathbf{X}$ of [Example 1](#exm-pd-gram), part 1 gives again that ${\mathbf{X}}^{\top} \mathbf{X}$ is positive definite.
 >
-> - With $\alpha_1 = 2$, $\mathbf{A}_1 = \mathbf{I}_2$ ([Example 4 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#exm-positive-definite)), $\alpha_2 = 1$ and
+> - With $\alpha_1 = 2$, $\mathbf{A}_1 = \mathbf{I}_2$ ([Example 4 in Definite Matrices](linear-algebra-definite-matrices.llms.md#exm-positive-definite)), $\alpha_2 = 1$ and
 >
 >   $$\begin{aligned}
 >   \mathbf{A}_2 &= {\mathbf{X}}^{\top} \mathbf{X}\\
@@ -148,7 +148,7 @@ Last modified: 2026-11-21 17:06:58 (PST)
 
 > **NOTE:**
 >
-> **Theorem 3 (A positive definite matrix is invertible)** Every positive definite matrix ([Definition 2 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#def-positive-definite)) is invertible ([Definition 6 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#def-invertible-matrix)).
+> **Theorem 3 (A positive definite matrix is invertible)** Every positive definite matrix ([Definition 2 in Definite Matrices](linear-algebra-definite-matrices.llms.md#def-positive-definite)) is invertible ([Definition 6 in Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md#def-invertible-matrix)).
 
 > **NOTE:**
 >
@@ -183,11 +183,11 @@ Last modified: 2026-11-21 17:06:58 (PST)
 >
 > which is $0$ only when $x_1 = x_2 = 0$. It is invertible, with ${\mathopen{}\left(\mathbf{A}\right)\mathclose{}}^{-1} = \frac{1}{3}\begin{bmatrix} 2 & -1 \\ -1 & 2 \end{bmatrix}$.
 >
-> The converse fails. $\mathbf{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}$ of [Example 4 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#exm-positive-definite) is not positive definite, yet it is invertible: ${\mathopen{}\left(\mathbf{D}\right)\mathclose{}}^{-1} = \frac{1}{3}\begin{bmatrix} -1 & 2 \\ 2 & -1 \end{bmatrix}$.
+> The converse fails. $\mathbf{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}$ of [Example 4 in Definite Matrices](linear-algebra-definite-matrices.llms.md#exm-positive-definite) is not positive definite, yet it is invertible: ${\mathopen{}\left(\mathbf{D}\right)\mathclose{}}^{-1} = \frac{1}{3}\begin{bmatrix} -1 & 2 \\ 2 & -1 \end{bmatrix}$.
 
 > **NOTE:**
 >
-> **Theorem 4 (Adding a positive multiple of the identity makes a matrix positive definite)** Let $\mathbf{A}$ be a $p \times p$ positive semidefinite matrix ([Definition 1 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#def-positive-semidefinite)) and let $\alpha> 0$. Then $\mathbf{A} + \alpha\mathbf{I}_p$ is positive definite ([Definition 2 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#def-positive-definite)), so it is invertible ([Theorem 3](#thm-pd-invertible)).
+> **Theorem 4 (Adding a positive multiple of the identity makes a matrix positive definite)** Let $\mathbf{A}$ be a $p \times p$ positive semidefinite matrix ([Definition 1 in Definite Matrices](linear-algebra-definite-matrices.llms.md#def-positive-semidefinite)) and let $\alpha> 0$. Then $\mathbf{A} + \alpha\mathbf{I}_p$ is positive definite ([Definition 2 in Definite Matrices](linear-algebra-definite-matrices.llms.md#def-positive-definite)), so it is invertible ([Theorem 3](#thm-pd-invertible)).
 
 > **NOTE:**
 >
@@ -207,7 +207,7 @@ Last modified: 2026-11-21 17:06:58 (PST)
 
 > **NOTE:**
 >
-> **Example 4 (Repairing a singular matrix)** $\mathbf{B} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$ of [Example 1 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#exm-positive-semidefinite) is positive semidefinite and singular: $\mathbf{B} (1, -1) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2$. With $\alpha= 1$,
+> **Example 4 (Repairing a singular matrix)** $\mathbf{B} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$ of [Example 1 in Definite Matrices](linear-algebra-definite-matrices.llms.md#exm-positive-semidefinite) is positive semidefinite and singular: $\mathbf{B} (1, -1) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_2$. With $\alpha= 1$,
 >
 > $$\mathbf{B} + \mathbf{I}_2 = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix},$$
 >
@@ -291,7 +291,7 @@ Last modified: 2026-11-21 17:06:58 (PST)
 
 > **NOTE:**
 >
-> **Theorem 5 (Leading blocks of a positive definite matrix are positive definite)** Let $\mathbf{X}$ be a $p \times p$ positive definite matrix ([Definition 2 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#def-positive-definite)), and for $1 \le k \le p$ let $\mathbf{X}_k$ be its leading $k \times k$ block ([Definition 1](#def-block-matrix)), with entries $x_{ij}$ for $i, j \le k$. Then $\mathbf{X}_k$ is positive definite. Also, every diagonal entry of a positive definite matrix is positive.
+> **Theorem 5 (Leading blocks of a positive definite matrix are positive definite)** Let $\mathbf{X}$ be a $p \times p$ positive definite matrix ([Definition 2 in Definite Matrices](linear-algebra-definite-matrices.llms.md#def-positive-definite)), and for $1 \le k \le p$ let $\mathbf{X}_k$ be its leading $k \times k$ block ([Definition 1](#def-block-matrix)), with entries $x_{ij}$ for $i, j \le k$. Then $\mathbf{X}_k$ is positive definite. Also, every diagonal entry of a positive definite matrix is positive.
 
 > **NOTE:**
 >
@@ -339,7 +339,7 @@ Last modified: 2026-11-21 17:06:58 (PST)
 > &> 0
 > \end{aligned}$$
 >
-> ([Definition 11 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#def-determinant)); a positive determinant alone does not make a matrix positive definite. And positive diagonal entries are not enough: $\mathbf{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}$ of [Example 4 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#exm-positive-definite) has them but is not positive definite.
+> ([Definition 1 in Determinants](linear-algebra-determinants.llms.md#def-determinant)); a positive determinant alone does not make a matrix positive definite. And positive diagonal entries are not enough: $\mathbf{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}$ of [Example 4 in Definite Matrices](linear-algebra-definite-matrices.llms.md#exm-positive-definite) has them but is not positive definite.
 
 > **NOTE:**
 >
@@ -497,13 +497,13 @@ Last modified: 2026-11-21 17:06:58 (PST)
 
 > **NOTE:**
 >
-> **Theorem 7 (Schur complement test)** Let $\mathbf{X} = \begin{bmatrix} \mathbf{A} & \mathbf{B} \\ {\mathbf{B}}^{\top} & \mathbf{C} \end{bmatrix}$ be as in [Theorem 6](#thm-block-quadratic). Then $\mathbf{X}$ is positive definite ([Definition 2 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#def-positive-definite)) exactly when $\mathbf{A}$ is positive definite and its Schur complement $\mathbf{S}$ ([Definition 3](#def-schur-complement)) is positive definite.
+> **Theorem 7 (Schur complement test)** Let $\mathbf{X} = \begin{bmatrix} \mathbf{A} & \mathbf{B} \\ {\mathbf{B}}^{\top} & \mathbf{C} \end{bmatrix}$ be as in [Theorem 6](#thm-block-quadratic). Then $\mathbf{X}$ is positive definite ([Definition 2 in Definite Matrices](linear-algebra-definite-matrices.llms.md#def-positive-definite)) exactly when $\mathbf{A}$ is positive definite and its Schur complement $\mathbf{S}$ ([Definition 3](#def-schur-complement)) is positive definite.
 
 > **NOTE:**
 >
-> *Proof*. **If.** $\mathbf{A}$ is positive definite, so invertible ([Theorem 4 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#thm-pd-inverse)), and $\mathbf{S}$ is defined. $\mathbf{X}$ is symmetric. Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}) \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + \mathbf{A}^{-1} \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$. By [Theorem 6](#thm-block-quadratic), ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top} \mathbf{X} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$, and both terms are at least $0$. If $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, the second term is positive. If $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, then $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$, so the first term is positive. Either way ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top} \mathbf{X} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} > 0$.
+> *Proof*. **If.** $\mathbf{A}$ is positive definite, so invertible ([Theorem 4 in Definite Matrices](linear-algebra-definite-matrices.llms.md#thm-pd-inverse)), and $\mathbf{S}$ is defined. $\mathbf{X}$ is symmetric. Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}) \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} + \mathbf{A}^{-1} \mathbf{B} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$. By [Theorem 6](#thm-block-quadratic), ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top} \mathbf{X} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} = {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}}}^{\top} \mathbf{A} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} + {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$, and both terms are at least $0$. If $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, the second term is positive. If $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$, then $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{z}}\vphantom{z}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{u}}\vphantom{u}}$, so the first term is positive. Either way ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}}^{\top} \mathbf{X} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} > 0$.
 >
-> **Only if.** $\mathbf{A}$ is the top-left $k \times k$ block of $\mathbf{X}$, so it is positive definite ([Theorem 5](#thm-pd-submatrix)), and invertible ([Theorem 4 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#thm-pd-inverse)). $\mathbf{S}$ is symmetric:
+> **Only if.** $\mathbf{A}$ is the top-left $k \times k$ block of $\mathbf{X}$, so it is positive definite ([Theorem 5](#thm-pd-submatrix)), and invertible ([Theorem 4 in Definite Matrices](linear-algebra-definite-matrices.llms.md#thm-pd-inverse)). $\mathbf{S}$ is symmetric:
 >
 > $$\begin{aligned}
 > {({\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B})}^{\top} &= {\mathbf{B}}^{\top}\,{(\mathbf{A}^{-1})}^{\top}\,\mathbf{B} \\
@@ -517,7 +517,7 @@ Last modified: 2026-11-21 17:06:58 (PST)
 > **Example 10 (Testing** $2 \times 2$ matrices) A symmetric $\begin{bmatrix} a & b \\ b & c \end{bmatrix}$ is positive definite exactly when $a > 0$ and $c - \tfrac{b^2}{a} > 0$, that is, $a > 0$ and $ac > b^2$ (a $1 \times 1$ matrix $[s]$ is positive definite exactly when $s > 0$, since ${x}^{\top} s x = s x^2$).
 >
 > - $\begin{bmatrix} 5 & 4 \\ 4 & 5 \end{bmatrix}$: $5 > 0$ and $\tfrac{9}{5} > 0$ ([Example 9](#exm-schur-complement)), so it is positive definite.
-> - $\mathbf{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}$: $1 > 0$ but $\mathbf{S} = -3$, so it is not, as [Example 4 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#exm-positive-definite) found directly.
+> - $\mathbf{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}$: $1 > 0$ but $\mathbf{S} = -3$, so it is not, as [Example 4 in Definite Matrices](linear-algebra-definite-matrices.llms.md#exm-positive-definite) found directly.
 
 > **NOTE:**
 >
@@ -582,7 +582,7 @@ Last modified: 2026-11-21 17:06:58 (PST)
 
 > **NOTE:**
 >
-> **Theorem 9 (Cholesky factorization)** A $p \times p$ matrix $\mathbf{A}$ is positive definite ([Definition 2 in Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md#def-positive-definite)) exactly when $\mathbf{A} = \mathbf{L} {\mathbf{L}}^{\top}$ for some lower triangular $\mathbf{L}$ ([Definition 2 in Solving Linear Systems and Least Squares](linear-algebra-least-squares.llms.md#def-lower-triangular-matrix)) with positive diagonal entries. For a positive definite $\mathbf{A}$ that $\mathbf{L}$ is unique; it is the **Cholesky factor** [\[4\]](#ref-wikipedia_cholesky_decomposition) of $\mathbf{A}$.
+> **Theorem 9 (Cholesky factorization)** A $p \times p$ matrix $\mathbf{A}$ is positive definite ([Definition 2 in Definite Matrices](linear-algebra-definite-matrices.llms.md#def-positive-definite)) exactly when $\mathbf{A} = \mathbf{L} {\mathbf{L}}^{\top}$ for some lower triangular $\mathbf{L}$ ([Definition 2 in Solving Linear Systems and Least Squares](linear-algebra-least-squares.llms.md#def-lower-triangular-matrix)) with positive diagonal entries. For a positive definite $\mathbf{A}$ that $\mathbf{L}$ is unique; it is the **Cholesky factor** [\[4\]](#ref-wikipedia_cholesky_decomposition) of $\mathbf{A}$.
 
 > **NOTE:**
 >

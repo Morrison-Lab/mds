@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-21 17:06:58 (PST)
+Last modified: 2026-11-23 17:43:07 (PST)
 
 The linear algebra notes are split across these pages:
 
@@ -23,7 +23,8 @@ The linear algebra notes are split across these pages:
 - The [Orthonormal Bases, Outer Products and Hilbert Spaces](linear-algebra-orthonormal-bases.llms.md) page: orthonormal bases, Gram-Schmidt, outer products, the [Kronecker product](linear-algebra-orthonormal-bases.llms.md#def-kronecker-product), and Hilbert spaces.
 - The [Special Matrices, Quadratic Forms and Trace](linear-algebra-special-matrices.llms.md) page: symmetric, diagonal, inverse, projection and orthogonal matrices, quadratic forms, the trace, and the [matrix inner product](linear-algebra-special-matrices.llms.md#def-matrix-inner-product).
 - The [Eigenvalues and Matrix Decompositions](linear-algebra-decompositions.llms.md) page: eigenvalues, the spectral theorem, [eigendecompositions](linear-algebra-decompositions.llms.md#def-eigendecomposition) and the SVD.
-- The [Definite Matrices and Determinants](linear-algebra-definite-matrices.llms.md) page: [positive definite](linear-algebra-definite-matrices.llms.md#def-positive-definite) and semidefinite matrices, [condition numbers](linear-algebra-definite-matrices.llms.md#def-condition-number), [matrix-induced inner products](linear-algebra-definite-matrices.llms.md#def-matrix-induced-inner-product), and determinants.
+- The [Determinants](linear-algebra-determinants.llms.md) page: the [determinant](linear-algebra-determinants.llms.md#def-determinant) and its value for [diagonal matrices](linear-algebra-special-matrices.llms.md#def-diagonal-matrix), matrix products, and in terms of eigenvalues.
+- The [Definite Matrices](linear-algebra-definite-matrices.llms.md) page: [positive definite](linear-algebra-definite-matrices.llms.md#def-positive-definite) and semidefinite matrices, [condition numbers](linear-algebra-definite-matrices.llms.md#def-condition-number), and [matrix-induced inner products](linear-algebra-definite-matrices.llms.md#def-matrix-induced-inner-product).
 - The [Design Matrices and Projections](linear-algebra-projections.llms.md) page: design matrices, the [hat matrix](linear-algebra-projections.llms.md#def-hat-matrix) and [orthogonal projection](linear-algebra-projections.llms.md#def-orthogonal-projection).
 - The [Generalized Inverses and Linear Systems](linear-algebra-generalized-inverses.llms.md) page: generalized inverses, the [Moore-Penrose inverse](linear-algebra-generalized-inverses.llms.md#def-moore-penrose), and when a linear system has a solution.
 - The [Solving Linear Systems and Least Squares](linear-algebra-least-squares.llms.md) page: back substitution, the QR factorization, the [LU factorization](linear-algebra-least-squares.llms.md#def-lu), least squares and the [normal equations](linear-algebra-least-squares.llms.md#def-normal-equations).

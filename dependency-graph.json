@@ -3006,15 +3006,6 @@
    "external": false
   },
   {
-   "id": "mds/linear-algebra-definite-matrices#cor-det-pd",
-   "site": "mds",
-   "page": "linear-algebra-definite-matrices",
-   "div": "cor-det-pd",
-   "kind": "cor",
-   "title": "A positive definite matrix has a positive determinant",
-   "external": false
-  },
-  {
    "id": "mds/linear-algebra-definite-matrices#cor-pd-transpose-product",
    "site": "mds",
    "page": "linear-algebra-definite-matrices",
@@ -3039,15 +3030,6 @@
    "div": "def-condition-number",
    "kind": "def",
    "title": "Condition number of a positive definite matrix",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-definite-matrices#def-determinant",
-   "site": "mds",
-   "page": "linear-algebra-definite-matrices",
-   "div": "def-determinant",
-   "kind": "def",
-   "title": "Determinant",
    "external": false
   },
   {
@@ -3150,33 +3132,6 @@
    "external": false
   },
   {
-   "id": "mds/linear-algebra-definite-matrices#thm-det-diagonal",
-   "site": "mds",
-   "page": "linear-algebra-definite-matrices",
-   "div": "thm-det-diagonal",
-   "kind": "thm",
-   "title": "Determinant of a diagonal matrix",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-definite-matrices#thm-det-eigenvalues",
-   "site": "mds",
-   "page": "linear-algebra-definite-matrices",
-   "div": "thm-det-eigenvalues",
-   "kind": "thm",
-   "title": "The determinant of a symmetric matrix is the product of its eigenvalues",
-   "external": false
-  },
-  {
-   "id": "mds/linear-algebra-definite-matrices#thm-det-product",
-   "site": "mds",
-   "page": "linear-algebra-definite-matrices",
-   "div": "thm-det-product",
-   "kind": "thm",
-   "title": "Determinant of a product",
-   "external": false
-  },
-  {
    "id": "mds/linear-algebra-definite-matrices#thm-gram-properties",
    "site": "mds",
    "page": "linear-algebra-definite-matrices",
@@ -3210,6 +3165,51 @@
    "div": "thm-whitening-inner-product",
    "kind": "thm",
    "title": "A matrix-induced inner product is a dot product of transformed vectors",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-determinants#cor-det-pd",
+   "site": "mds",
+   "page": "linear-algebra-determinants",
+   "div": "cor-det-pd",
+   "kind": "cor",
+   "title": "A positive definite matrix has a positive determinant",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-determinants#def-determinant",
+   "site": "mds",
+   "page": "linear-algebra-determinants",
+   "div": "def-determinant",
+   "kind": "def",
+   "title": "Determinant",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-determinants#thm-det-diagonal",
+   "site": "mds",
+   "page": "linear-algebra-determinants",
+   "div": "thm-det-diagonal",
+   "kind": "thm",
+   "title": "Determinant of a diagonal matrix",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-determinants#thm-det-eigenvalues",
+   "site": "mds",
+   "page": "linear-algebra-determinants",
+   "div": "thm-det-eigenvalues",
+   "kind": "thm",
+   "title": "The determinant of a symmetric matrix is the product of its eigenvalues",
+   "external": false
+  },
+  {
+   "id": "mds/linear-algebra-determinants#thm-det-product",
+   "site": "mds",
+   "page": "linear-algebra-determinants",
+   "div": "thm-det-product",
+   "kind": "thm",
+   "title": "Determinant of a product",
    "external": false
   },
   {
@@ -8398,18 +8398,6 @@
    "mds/linear-algebra-decompositions#def-eigenvector"
   ],
   [
-   "mds/linear-algebra-definite-matrices#cor-det-pd",
-   "mds/linear-algebra-definite-matrices#def-positive-definite"
-  ],
-  [
-   "mds/linear-algebra-definite-matrices#cor-det-pd",
-   "mds/linear-algebra-definite-matrices#thm-definite-eigenvalues"
-  ],
-  [
-   "mds/linear-algebra-definite-matrices#cor-det-pd",
-   "mds/linear-algebra-definite-matrices#thm-det-eigenvalues"
-  ],
-  [
    "mds/linear-algebra-definite-matrices#cor-pd-transpose-product",
    "mds/linear-algebra-definite-matrices#def-positive-definite"
   ],
@@ -8538,22 +8526,6 @@
    "mds/linear-algebra-definite-matrices#def-positive-semidefinite"
   ],
   [
-   "mds/linear-algebra-definite-matrices#thm-det-diagonal",
-   "mcs/proof-writing#def-proof-by-induction"
-  ],
-  [
-   "mds/linear-algebra-definite-matrices#thm-det-diagonal",
-   "mds/linear-algebra-definite-matrices#def-determinant"
-  ],
-  [
-   "mds/linear-algebra-definite-matrices#thm-det-eigenvalues",
-   "mds/linear-algebra-definite-matrices#thm-det-diagonal"
-  ],
-  [
-   "mds/linear-algebra-definite-matrices#thm-det-eigenvalues",
-   "mds/linear-algebra-definite-matrices#thm-det-product"
-  ],
-  [
    "mds/linear-algebra-definite-matrices#thm-gram-properties",
    "mds/linear-algebra-definite-matrices#def-positive-semidefinite"
   ],
@@ -8568,6 +8540,26 @@
   [
    "mds/linear-algebra-definite-matrices#thm-whitening-inner-product",
    "mds/linear-algebra-definite-matrices#def-matrix-induced-inner-product"
+  ],
+  [
+   "mds/linear-algebra-determinants#cor-det-pd",
+   "mds/linear-algebra-determinants#thm-det-eigenvalues"
+  ],
+  [
+   "mds/linear-algebra-determinants#thm-det-diagonal",
+   "mcs/proof-writing#def-proof-by-induction"
+  ],
+  [
+   "mds/linear-algebra-determinants#thm-det-diagonal",
+   "mds/linear-algebra-determinants#def-determinant"
+  ],
+  [
+   "mds/linear-algebra-determinants#thm-det-eigenvalues",
+   "mds/linear-algebra-determinants#thm-det-diagonal"
+  ],
+  [
+   "mds/linear-algebra-determinants#thm-det-eigenvalues",
+   "mds/linear-algebra-determinants#thm-det-product"
   ],
   [
    "mds/linear-algebra-diagonalization#cor-distinct-diagonalizable",
