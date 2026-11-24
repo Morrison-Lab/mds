@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-23 23:11:26 (PST)
+Last modified: 2026-11-24 09:19:45 (PST)
 
 # 1 Critical points and optimization
 
