@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-20 08:41:16 (PST)
+Last modified: 2026-11-23 20:33:37 (PST)
 
 # 1 Linear and affine maps
 
@@ -632,7 +632,7 @@ Last modified: 2026-11-20 08:41:16 (PST)
 
 > **NOTE:**
 >
-> **Definition 8 (Offset of an affine map, intercept, bias)** In [Definition 7](#def-affine-map), the vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ is called the **offset** of $f$ (statistics also calls it the **intercept**, and machine learning the **bias**).
+> **Definition 8 (Offset of an affine map, intercept, bias)** In [Definition 7](#def-affine-map), the vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ is called the **offset** of $f$, also called the **intercept** in statistics, or the **bias** in machine learning.
 
 > **NOTE:**
 >
@@ -703,7 +703,10 @@ Last modified: 2026-11-20 08:41:16 (PST)
 
 > **NOTE:**
 >
-> **Theorem 5 (An affine map sends zero to its offset)** An affine map $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ ([Definition 7](#def-affine-map)) satisfies $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$.
+> **Theorem 5 (An affine map sends zero to its offset)** An [affine map](#def-affine-map) $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ sends the [zero vector](linear-algebra-vectors.llms.md#def-zero-vector) to its [offset](#def-affine-offset) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$:
+>
+> $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}.
+> \tag{2}$$
 
 > **NOTE:**
 >
@@ -762,7 +765,10 @@ Last modified: 2026-11-20 08:41:16 (PST)
 
 > **NOTE:**
 >
-> **Theorem 6 (An affine map is linear exactly when its offset is zero)** An affine map $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ ([Definition 7](#def-affine-map)) is linear ([Definition 3](#def-linear-map)) if and only if $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$.
+> **Theorem 6 (An affine map is linear exactly when its offset is zero)** An [affine map](#def-affine-map) $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ is [linear](#def-linear-map) [if and only if](https://morrison-lab.github.io/mcs/proof-writing.html#def-iff) its [offset](#def-affine-offset) is zero:
+>
+> $$f \text{ is linear} \iff \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}.
+> \tag{3}$$
 
 > **NOTE:**
 >
@@ -801,7 +807,11 @@ Last modified: 2026-11-20 08:41:16 (PST)
 
 > **NOTE:**
 >
-> **Corollary 2 (Every linear map is affine)** Every linear map $f : \mathbb{R}^p \to \mathbb{R}^m$ ([Definition 3](#def-linear-map)) is an affine map ([Definition 7](#def-affine-map)) with offset $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$.
+> **Corollary 2 (Every linear map is affine)** Every [linear map](#def-linear-map) $f : \mathbb{R}^p \to \mathbb{R}^m$ is an [affine map](#def-affine-map) with [offset](#def-affine-offset) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$. With $\mathbf{A}$ the [matrix of](#def-matrix-of-linear-map) $f$,
+>
+> $$f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}
+> \quad \text{for all } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p.
+> \tag{4}$$
 
 > **NOTE:**
 >
@@ -812,7 +822,7 @@ Last modified: 2026-11-20 08:41:16 (PST)
 > &= \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}},
 > \end{aligned}$$
 >
-> which is [Definition 7](#def-affine-map) with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$.
+> which is an [affine map](#def-affine-map) with [offset](#def-affine-offset) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$.
 
 > **NOTE:**
 >
@@ -834,7 +844,12 @@ Last modified: 2026-11-20 08:41:16 (PST)
 
 > **NOTE:**
 >
-> **Theorem 7 (An affine map determines its matrix and offset)** If $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ and $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}'\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}'$ for all $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$ ([Definition 7](#def-affine-map)), then $\mathbf{A}' = \mathbf{A}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}' = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$.
+> **Theorem 7 (An affine map determines its matrix and offset)** If an [affine map](#def-affine-map) $f$ satisfies $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ and $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}'\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}'$ [for all](https://morrison-lab.github.io/mcs/proof-writing.html#def-universal-quantifier) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$, then the two [formulas](https://morrison-lab.github.io/mcs/expressions-algorithms.html#def-closed-form-expression) have the same [matrix](linear-algebra-matrices.llms.md#def-matrix) and the same [offset](#def-affine-offset):
+>
+> $$\mathbf{A}' = \mathbf{A}
+> \quad \text{and} \quad
+> \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}' = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}.
+> \tag{5}$$
 
 > **NOTE:**
 >
@@ -874,7 +889,7 @@ Last modified: 2026-11-20 08:41:16 (PST)
 
 > **NOTE:**
 >
-> *Remark 3* (“Linear” in this site, and in machine learning and statistics). This site uses “linear” only in the sense of [Definition 3](#def-linear-map), so by [Theorem 6](#thm-affine-linear-iff) a function with a nonzero offset is affine but not linear. For functions of one variable, this is the same split as [affine](algebra-exponentials.llms.md#def-affine-function) $a x + b$ versus [linear](algebra-exponentials.llms.md#def-linear-function) $a x$ on the algebra page. (The algebra page writes these as $m x + b$ and $m x$; here $m$ already names the number of outputs.)
+> *Remark 3* (“Linear” in this site, and in machine learning and statistics). This site uses “linear” only in the sense of [Definition 3](#def-linear-map), so by [Theorem 6](#thm-affine-linear-iff) a function with a nonzero offset is affine but not linear. For functions of one variable, this is the same split as [affine](algebra-polynomials.llms.md#def-affine-function) $a x + b$ versus [linear](algebra-polynomials.llms.md#def-linear-function) $a x$ on the algebra page. (The algebra page writes these as $m x + b$ and $m x$; here $m$ already names the number of outputs.)
 >
 > Machine learning and statistics often call any function of the form [Equation 1](#eq-linear-scalar) “linear”, as in a *linear model* in statistics or a *linear layer* in a neural network, and call the offset $b$ the bias (machine learning) or the intercept (statistics), as [Definition 7](#def-affine-map) notes. A model with an intercept is affine in $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ but linear in its coefficients $(b, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}})$, and that is the sense of “linear” in “linear model”: it stays linear in the coefficients even when the inputs are transformed: $w_1 x + w_2 x^2 + b$ is not affine in $x$, but it is linear in $(b, w_1, w_2)$. Separately, the affine function $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b$ is a linear function of the augmented vector ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{aug}}$ ([Definition 9](#def-augmented-vector)), with $b$ as the coefficient on its first entry.
 
@@ -1096,7 +1111,7 @@ Last modified: 2026-11-20 08:41:16 (PST)
 
 > **NOTE:**
 >
-> **Exercise 23 (Which of these are affine in** $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$?) Each of the five expressions is a function of the weights $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p$, with the data $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $y$ held fixed. Say which ones are affine ([Definition 7](#def-affine-map)), that is, have the form [Equation 1](#eq-linear-scalar) — an inner product plus an offset — and which of those are also linear ([Definition 3](#def-linear-map)).
+> **Exercise 23 (Which of these are affine in** $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$?) Each of the five expressions is a function of the weights $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p$, with the data $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $y$ held fixed. Say which ones are [affine](#def-affine-map), that is, have the form [Equation 1](#eq-linear-scalar) — an [inner product](linear-algebra-inner-products.llms.md#def-inner-product) plus an [offset](#def-affine-offset) — and which of the affine ones are also [linear](#def-linear-map).
 >
 > 1.  $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$
 > 2.  $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- y$

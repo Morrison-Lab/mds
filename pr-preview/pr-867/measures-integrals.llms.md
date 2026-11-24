@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-20 08:41:16 (PST)
+Last modified: 2026-11-23 20:33:37 (PST)
 
 > **NOTE:**
 >
@@ -36,7 +36,7 @@ Last modified: 2026-11-20 08:41:16 (PST)
 > $$\int_S f \, d\mu\stackrel{\text{def}}{=}
 > \sup {\mathopen{}\left\{\sum_{i=1}^n\mathopen{}\left(\inf_{s \in A_i} f(s)\right)\mathclose{} \mu(A_i)\right\}\mathclose{}}$$
 >
-> where the [supremum](algebra-sums.llms.md#def-supremum) is over all ways of writing $S$ as the union of finitely many nonempty [pairwise disjoint](https://morrison-lab.github.io/mcs/sets.html#def-pairwise-disjoint) [sets](https://morrison-lab.github.io/mcs/sets.html#def-set) $A_1, \ldots, A_n$ in $\mathcal{S}$, and each $\inf_{s \in A_i} f(s)$ is the [infimum](algebra-sums.llms.md#def-infimum) of the values of $f$ on $A_i$. In the sums, $0 \cdot \infty \stackrel{\text{def}}{=}0$, and $x \cdot \infty \stackrel{\text{def}}{=}\infty$ for $x > 0$; the supremum is $\infty$ if some sum is $\infty$. The integral is also written $\int_S f(s) \, d\mu(s)$.
+> where the [supremum](algebra-convexity.llms.md#def-supremum) is over all ways of writing $S$ as the union of finitely many nonempty [pairwise disjoint](https://morrison-lab.github.io/mcs/sets.html#def-pairwise-disjoint) [sets](https://morrison-lab.github.io/mcs/sets.html#def-set) $A_1, \ldots, A_n$ in $\mathcal{S}$, and each $\inf_{s \in A_i} f(s)$ is the [infimum](algebra-convexity.llms.md#def-infimum) of the values of $f$ on $A_i$. In the sums, $0 \cdot \infty \stackrel{\text{def}}{=}0$, and $x \cdot \infty \stackrel{\text{def}}{=}\infty$ for $x > 0$; the supremum is $\infty$ if some sum is $\infty$. The integral is also written $\int_S f(s) \, d\mu(s)$.
 >
 > [\[3, Sec. 15\]](#ref-billingsley1995probability)
 

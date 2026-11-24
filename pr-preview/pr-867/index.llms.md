@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-20 08:41:16 (PST)
+Last modified: 2026-11-23 20:33:37 (PST)
 
 # Welcome
 
@@ -23,7 +23,7 @@ The first six topics are the foundations. Apart from a few remarks in Algebra th
   - [Functions](https://morrison-lab.github.io/mcs/functions.html): functions with their domains, codomains, and images, sequences, and countable sets
   - [Expressions and Algorithms](https://morrison-lab.github.io/mcs/expressions-algorithms.html): expressions, parse trees, and algorithms
   - [Indicator Functions](indicator-functions.llms.md): set and predicate indicators, the Iverson bracket, the Kronecker delta, and their algebraic properties
-- [Algebra](algebra.llms.md): equalities and [inequalities](https://morrison-lab.github.io/mcs/proof-writing.html#def-inequality), [infimum](algebra-sums.llms.md#def-infimum) and [supremum](algebra-sums.llms.md#def-supremum), percent, sums, products, quotients, limits of sums, notational shorthands, exponentials and logarithms
+- [Algebra](algebra.llms.md): equalities and [inequalities](https://morrison-lab.github.io/mcs/proof-writing.html#def-inequality), [infimum](algebra-convexity.llms.md#def-infimum) and [supremum](algebra-convexity.llms.md#def-supremum), percent, sums, products, quotients, limits of sums, notational shorthands, exponentials and logarithms
 - [Proof Writing](https://morrison-lab.github.io/mcs/proof-writing.html): propositions, quantifiers, proofs and [derivations](https://morrison-lab.github.io/mcs/proof-writing.html#def-derivation), and showing and annotating every step of a [derivation](https://morrison-lab.github.io/mcs/proof-writing.html#def-derivation)
 - [Induction and Recursion](https://morrison-lab.github.io/mcs/induction.html) in the Math for Computer Science notes: [recursively defined sequences](https://morrison-lab.github.io/mcs/induction.html#def-recursive-sequence) and [strong induction](https://morrison-lab.github.io/mcs/induction.html#def-strong-induction)
 

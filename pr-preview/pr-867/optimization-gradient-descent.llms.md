@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-20 08:41:16 (PST)
+Last modified: 2026-11-23 20:33:37 (PST)
 
 > **NOTE:**
 >
@@ -33,7 +33,7 @@ Last modified: 2026-11-20 08:41:16 (PST)
 
 > **NOTE:**
 >
-> **Definition 2 (Gradient ascent)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have first [partial derivatives](vector-calculus.llms.md#def-partial-derivative), let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)}$ be a starting point, and let $s^{(0)}, s^{(1)}, \ldots$ be positive [step lengths](#def-gradient-descent). **Gradient ascent** [\[1\]](#ref-wikipedia_gradient_descent) repeats, for $t = 0, 1, 2, \ldots$, the update
+> **Definition 2 (Gradient ascent)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have first [partial derivatives](vector-calculus-gradients.llms.md#def-partial-derivative), let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)}$ be a starting point, and let $s^{(0)}, s^{(1)}, \ldots$ be positive [step lengths](#def-gradient-descent). **Gradient ascent** [\[1\]](#ref-wikipedia_gradient_descent) repeats, for $t = 0, 1, 2, \ldots$, the update
 >
 > $$\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t+1)} \stackrel{\text{def}}{=}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)} + s^{(t)}\,\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)}).$$
 
@@ -72,7 +72,7 @@ Last modified: 2026-11-20 08:41:16 (PST)
 
 > **NOTE:**
 >
-> **Definition 5 (Descent direction)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have a gradient $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} \stackrel{\text{def}}{=}\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$. A [direction](vector-calculus.llms.md#def-direction) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}$ is a **descent direction** for $f$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ if $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}} < 0$. When $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{p \times 1}$, $-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}$ is a descent direction, since $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} \cdot (-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}) = -\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}\right\rVert\mathclose{}^2 < 0$.
+> **Definition 5 (Descent direction)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have a gradient $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} \stackrel{\text{def}}{=}\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$. A [direction](vector-calculus-gradients.llms.md#def-direction) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}$ is a **descent direction** for $f$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ if $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}} < 0$. When $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{p \times 1}$, $-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}$ is a descent direction, since $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} \cdot (-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}) = -\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}\right\rVert\mathclose{}^2 < 0$.
 
 > **NOTE:**
 >
@@ -97,11 +97,11 @@ Last modified: 2026-11-20 08:41:16 (PST)
 
 > **NOTE:**
 >
-> **Theorem 1 (A short enough step downhill decreases the function)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have first partial derivatives that are [continuous on](vector-calculus.llms.md#def-continuous-on) $\mathbb{R}^p$, and let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$ be a point with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} \stackrel{\text{def}}{=}\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{p \times 1}$. Then there is an $\bar{s} > 0$ with $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- s \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}) < f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ for every $s \in (0, \bar{s})$: a short enough step in the descent direction $-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}$ ([Definition 5](#def-descent-direction)) decreases $f$.
+> **Theorem 1 (A short enough step downhill decreases the function)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have first partial derivatives that are [continuous on](vector-calculus-hessian.llms.md#def-continuous-on) $\mathbb{R}^p$, and let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$ be a point with $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} \stackrel{\text{def}}{=}\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) \ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{p \times 1}$. Then there is an $\bar{s} > 0$ with $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- s \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}) < f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ for every $s \in (0, \bar{s})$: a short enough step in the descent direction $-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}$ ([Definition 5](#def-descent-direction)) decreases $f$.
 
 > **NOTE:**
 >
-> *Proof*. Let $h(s) \stackrel{\text{def}}{=}f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- s \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}})$. The [inner function](https://morrison-lab.github.io/mcs/functions.html#def-inner-function) $s \mapsto \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- s \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}$ has [derivative](vector-calculus.llms.md#def-vector-valued-derivative) $-{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}}^{\top}$, so by the [vector chain rule](vector-calculus.llms.md#thm-chain-vec)
+> *Proof*. Let $h(s) \stackrel{\text{def}}{=}f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- s \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}})$. The [inner function](https://morrison-lab.github.io/mcs/functions.html#def-inner-function) $s \mapsto \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- s \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}$ has [derivative](vector-calculus-derivative-rules.llms.md#def-vector-valued-derivative) $-{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}}^{\top}$, so by the [vector chain rule](vector-calculus-derivative-rules.llms.md#thm-chain-vec)
 >
 > $$\begin{aligned}
 > h'(s)
@@ -303,7 +303,7 @@ Last modified: 2026-11-20 08:41:16 (PST)
 >
 > [![Plot over the plane of nested elliptical level curves of f of x equal to one half of x1 squared plus 3 x2 squared, in grey, elongated along the x1 axis. A blue path of line segments with circles starts at the point (3, 1), then goes to (1.5, -0.5), (0.75, 0.25), and (0.375, -0.125), crossing the x1 axis at every step and closing in on the origin, which is marked by a vermilion triangle.](optimization-gradient-descent_files/figure-html/gd-zigzag-python-1.png)](optimization-gradient-descent_files/figure-html/gd-zigzag-python-1.png "Figure 2: The first four iterates of gradient descent with exact line search on f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2) from {(3, 1)}^{\top} (Example 6 with b = 3), drawn over the level curves of f. The second entry changes sign at every step, so the path zigzags across the long axis of the ellipses toward the minimizer \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}} (triangle).")
 >
-> Figure 2: The first four [iterates](optimization-newton.llms.md#def-iterate) of [gradient descent](#def-gradient-descent) with [exact line search](#def-exact-line-search) on $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)$ from ${(3, 1)}^{\top}$ ([Example 6](#exm-gd-zigzag) with $b = 3$), drawn over the [level curves](vector-calculus.llms.md#def-level-curve) of $f$. The second entry changes sign at every step, so the path zigzags across the long axis of the ellipses toward the [minimizer](algebra-basics.llms.md#def-global-minimizer) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ (triangle).
+> Figure 2: The first four [iterates](optimization-newton.llms.md#def-iterate) of [gradient descent](#def-gradient-descent) with [exact line search](#def-exact-line-search) on $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)$ from ${(3, 1)}^{\top}$ ([Example 6](#exm-gd-zigzag) with $b = 3$), drawn over the [level curves](vector-calculus-gradients.llms.md#def-level-curve) of $f$. The second entry changes sign at every step, so the path zigzags across the long axis of the ellipses toward the [minimizer](algebra-basics.llms.md#def-global-minimizer) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ (triangle).
 
 > **NOTE:**
 >
@@ -437,11 +437,11 @@ Last modified: 2026-11-20 08:41:16 (PST)
 >
 > ## Python
 >
-> Figure 3: The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)$, the surface whose [level curves](vector-calculus.llms.md#def-level-curve) are in [Figure 2](#fig-gd-zigzag), with the same four [iterates](optimization-newton.llms.md#def-iterate) of [gradient descent](#def-gradient-descent) lifted onto it. The surface is steeper along the $x_2$ axis than along the $x_1$ axis, so each step overshoots the bottom of the valley and the path zigzags down toward the [minimizer](algebra-basics.llms.md#def-global-minimizer) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ (diamond).
+> Figure 3: The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)$, the surface whose [level curves](vector-calculus-gradients.llms.md#def-level-curve) are in [Figure 2](#fig-gd-zigzag), with the same four [iterates](optimization-newton.llms.md#def-iterate) of [gradient descent](#def-gradient-descent) lifted onto it. The surface is steeper along the $x_2$ axis than along the $x_1$ axis, so each step overshoots the bottom of the valley and the path zigzags down toward the [minimizer](algebra-basics.llms.md#def-global-minimizer) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ (diamond).
 
 > **NOTE:**
 >
-> **Definition 6 (Gradient flow)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have first [partial derivatives](vector-calculus.llms.md#def-partial-derivative). A **gradient flow** of $f$ is a [differentiable](calculus-derivatives.llms.md#def-differentiable) curve $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}: [0, \infty) \to \mathbb{R}^p$ that satisfies
+> **Definition 6 (Gradient flow)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have first [partial derivatives](vector-calculus-gradients.llms.md#def-partial-derivative). A **gradient flow** of $f$ is a [differentiable](calculus-derivatives.llms.md#def-differentiable) curve $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}: [0, \infty) \to \mathbb{R}^p$ that satisfies
 >
 > $$\frac{d \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}(t)}{d t} = -\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}(t)).$$
 
@@ -490,9 +490,9 @@ Last modified: 2026-11-20 08:41:16 (PST)
 >
 > *Remark 2* (Gradient descent is Euler’s method for the gradient flow). [Gradient descent](#def-gradient-descent) with a fixed [step length](#def-gradient-descent) $s$ updates ${{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{(t+1)}} = {{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{(t)}} - s\,\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f({{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{(t)}})$. This is Euler’s method with time step $s$ for the [gradient flow](#def-gradient-flow) equation.
 >
-> For a [linear function](algebra-exponentials.llms.md#def-linear-function) $f$, the flow moves along the negative [normal vector](linear-algebra-linear-maps.llms.md#def-normal-vector).
+> For a [linear function](algebra-polynomials.llms.md#def-linear-function) $f$, the flow moves along the negative [normal vector](linear-algebra-linear-maps.llms.md#def-normal-vector).
 >
-> By the [level sets of a linear function](vector-calculus.llms.md#thm-level-sets-linear), that vector is [orthogonal](linear-algebra-vectors.llms.md#def-orthogonal-vectors) to every [level set](vector-calculus.llms.md#def-level-set), so the flow is too.
+> By the [level sets of a linear function](vector-calculus-gradients.llms.md#thm-level-sets-linear), that vector is [orthogonal](linear-algebra-vectors.llms.md#def-orthogonal-vectors) to every [level set](vector-calculus-gradients.llms.md#def-level-set), so the flow is too.
 
 > **NOTE:**
 >
@@ -664,7 +664,7 @@ Last modified: 2026-11-20 08:41:16 (PST)
 >
 > [![Contour plot of the Rosenbrock function over first coordinates from -2 to 2 and second coordinates from -1 to 3. The contours are nested curved bands around a narrow parabola-shaped valley along the dashed curve x2 equals x1 squared, with steep walls on both sides. Three marked points, each with its own colour and shape: the minimizer at (1, 1) on the valley floor, a blue circle, the origin on the valley floor, a green square, and the standard starting point (-1.2, 1), an orange triangle, on the left, just outside the dashed curve.](optimization-gradient-descent_files/figure-html/rosenbrock-contours-python-1.png)](optimization-gradient-descent_files/figure-html/rosenbrock-contours-python-1.png "Figure 4: Level curves of the Rosenbrock function, with the curve x_2 = x_1^2 (dashed) along the floor of the valley. The minimizer, the origin and the starting point are marked.")
 >
-> Figure 4: [Level curves](vector-calculus.llms.md#def-level-curve) of the [Rosenbrock function](#def-rosenbrock-function), with the curve $x_2 = x_1^2$ (dashed) along the floor of the valley. The [minimizer](algebra-basics.llms.md#def-global-minimizer), the origin and the starting point are marked.
+> Figure 4: [Level curves](vector-calculus-gradients.llms.md#def-level-curve) of the [Rosenbrock function](#def-rosenbrock-function), with the curve $x_2 = x_1^2$ (dashed) along the floor of the valley. The [minimizer](algebra-basics.llms.md#def-global-minimizer), the origin and the starting point are marked.
 
 > **NOTE:**
 >
@@ -820,7 +820,7 @@ Last modified: 2026-11-20 08:41:16 (PST)
 >
 > ## Python
 >
-> Figure 5: The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of the [Rosenbrock function](#def-rosenbrock-function), the surface whose [level curves](vector-calculus.llms.md#def-level-curve) are in [Figure 4](#fig-rosenbrock-function), with the curve $x_2 = x_1^2$ (dashed) along the bottom of the valley. The [minimizer](algebra-basics.llms.md#def-global-minimizer), the origin and the starting point are marked.
+> Figure 5: The [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) of the [Rosenbrock function](#def-rosenbrock-function), the surface whose [level curves](vector-calculus-gradients.llms.md#def-level-curve) are in [Figure 4](#fig-rosenbrock-function), with the curve $x_2 = x_1^2$ (dashed) along the bottom of the valley. The [minimizer](algebra-basics.llms.md#def-global-minimizer), the origin and the starting point are marked.
 
 > **NOTE:**
 >
@@ -828,7 +828,7 @@ Last modified: 2026-11-20 08:41:16 (PST)
 
 > **NOTE:**
 >
-> **Example 10 (Basins of a double-well function)** Let $f(x) = x^4 - 2x^2$, so $\frac{\partial}{\partial x} f(x) = 4x(x - 1)(x + 1)$ and the [stationary points](optimization-critical-points.llms.md#def-stationary-point) are $-1$, $0$ and $1$. Both $-1$ and $1$ are [local minimizers](algebra-basics.llms.md#def-local-minimizer), with $f(\pm 1) = -1$, and $0$ is a [local maximizer](optimization-critical-points.llms.md#def-local-maximizer). We run [gradient descent](#def-gradient-descent) with the fixed [step length](#def-gradient-descent) $s= 0.05$ for 200 steps from the starting points $-1.5$, $-0.5$, $-0.1$, $0.1$, $0.5$, $1.5$ and $3$, and for three steps from ${{x}^{(0)}} = 4$.
+> **Example 10 (Basins of a double-well function)** Let $f(x) = x^4 - 2x^2$, so $\frac{\partial}{\partial x} f(x) = 4x(x - 1)(x + 1)$ and the [stationary points](optimization-optimality.llms.md#def-stationary-point) are $-1$, $0$ and $1$. Both $-1$ and $1$ are [local minimizers](algebra-basics.llms.md#def-local-minimizer), with $f(\pm 1) = -1$, and $0$ is a [local maximizer](optimization-optimality.llms.md#def-local-maximizer). We run [gradient descent](#def-gradient-descent) with the fixed [step length](#def-gradient-descent) $s= 0.05$ for 200 steps from the starting points $-1.5$, $-0.5$, $-0.1$, $0.1$, $0.5$, $1.5$ and $3$, and for three steps from ${{x}^{(0)}} = 4$.
 >
 > ## R
 >
@@ -945,7 +945,7 @@ Last modified: 2026-11-20 08:41:16 (PST)
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > grid_bf = np.linspace(-1.6, 1.6, 321)
 > ax.plot(grid_bf, basin_cost_bf(grid_bf), color="grey")
-> #> [<matplotlib.lines.Line2D object at 0x78a453922710>]
+> #> [<matplotlib.lines.Line2D object at 0x7bfa0fc0a710>]
 > for start in sorted(basin_starts_bs[:6], reverse=True):
 >     x = [start]
 >     for _ in range(30):
@@ -957,18 +957,18 @@ Last modified: 2026-11-20 08:41:16 (PST)
 >             marker="o" if above else "^",
 >             label=("start above 0" if above else "start below 0")
 >             if abs(start) == 0.1 else None)
-> #> [<matplotlib.lines.Line2D object at 0x78a453922850>]
-> #> [<matplotlib.lines.Line2D object at 0x78a453922990>]
-> #> [<matplotlib.lines.Line2D object at 0x78a453922ad0>]
-> #> [<matplotlib.lines.Line2D object at 0x78a453922c10>]
-> #> [<matplotlib.lines.Line2D object at 0x78a453922d50>]
-> #> [<matplotlib.lines.Line2D object at 0x78a453922e90>]
+> #> [<matplotlib.lines.Line2D object at 0x7bfa0fc0a850>]
+> #> [<matplotlib.lines.Line2D object at 0x7bfa0fc0a990>]
+> #> [<matplotlib.lines.Line2D object at 0x7bfa0fc0aad0>]
+> #> [<matplotlib.lines.Line2D object at 0x7bfa0fc0ac10>]
+> #> [<matplotlib.lines.Line2D object at 0x7bfa0fc0ad50>]
+> #> [<matplotlib.lines.Line2D object at 0x7bfa0fc0ae90>]
 > ax.set_xlabel("x")
 > #> Text(0.5, 0, 'x')
 > ax.set_ylabel("f(x)")
 > #> Text(0, 0.5, 'f(x)')
 > fig.legend(loc="outside lower center", ncol=2)
-> #> <matplotlib.legend.Legend object at 0x78a453922fd0>
+> #> <matplotlib.legend.Legend object at 0x7bfa0fc0afd0>
 > plt.show()
 > ```
 >
@@ -980,7 +980,7 @@ Last modified: 2026-11-20 08:41:16 (PST)
 >
 > [![Plot of the double-well function x to the fourth minus 2 x squared for x from -1.6 to 1.6, a grey W-shaped curve with minima of -1 at x of -1 and 1 and a local maximum of 0 at x of 0. Points mark the gradient descent iterates from six starting values, three positive and three negative. Positive starts, drawn as blue circles, slide down the right well to 1. Negative starts, drawn as orange triangles, slide down the left well to -1.](optimization-gradient-descent_files/figure-html/basin-iterates-python-1.png)](optimization-gradient-descent_files/figure-html/basin-iterates-python-1.png "Figure 6: Gradient descent with step length 0.05 on the double-well function of Example 10, from six starting points between -1.5 and 1.5. Each run settles at the local minimizer on its own side of the local maximizer at 0.")
 >
-> Figure 6: [Gradient descent](#def-gradient-descent) with [step length](#def-gradient-descent) $0.05$ on the double-well [function](https://morrison-lab.github.io/mcs/functions.html#def-function) of [Example 10](#exm-basin-of-attraction), from six starting points between $-1.5$ and $1.5$. Each run settles at the [local minimizer](algebra-basics.llms.md#def-local-minimizer) on its own side of the [local maximizer](optimization-critical-points.llms.md#def-local-maximizer) at $0$.
+> Figure 6: [Gradient descent](#def-gradient-descent) with [step length](#def-gradient-descent) $0.05$ on the double-well [function](https://morrison-lab.github.io/mcs/functions.html#def-function) of [Example 10](#exm-basin-of-attraction), from six starting points between $-1.5$ and $1.5$. Each run settles at the [local minimizer](algebra-basics.llms.md#def-local-minimizer) on its own side of the [local maximizer](optimization-optimality.llms.md#def-local-maximizer) at $0$.
 
 > **NOTE:**
 >
@@ -1013,11 +1013,11 @@ Last modified: 2026-11-20 08:41:16 (PST)
 
 > **NOTE:**
 >
-> *Proof*. The [iterates](optimization-newton.llms.md#def-iterate) from a start in the basin [converge](optimization-newton.llms.md#def-vector-sequence-limit) to a [local minimizer](algebra-basics.llms.md#def-local-minimizer), so they do not [diverge to](algebra-exponentials.llms.md#def-diverges-to-infinity) $\infty$. By [Proposition 1](#prp-double-well-divergence), the start therefore does not satisfy ${{x}^{(0)}}^2 > 1 + 1 / (2s)$.
+> *Proof*. The [iterates](optimization-newton.llms.md#def-iterate) from a start in the basin [converge](optimization-newton.llms.md#def-vector-sequence-limit) to a [local minimizer](algebra-basics.llms.md#def-local-minimizer), so they do not [diverge to](algebra-polynomials.llms.md#def-diverges-to-infinity) $\infty$. By [Proposition 1](#prp-double-well-divergence), the start therefore does not satisfy ${{x}^{(0)}}^2 > 1 + 1 / (2s)$.
 
 > **NOTE:**
 >
-> **Example 11 (Divergent starts on the double-well function for three step lengths)** For $f(x) = x^4 - 2x^2$, [Proposition 1](#prp-double-well-divergence) says that [gradient descent](#def-gradient-descent) [diverges to](algebra-exponentials.llms.md#def-diverges-to-infinity) $\infty$ from every start with $\mathopen{}\left|{{x}^{(0)}}\right|\mathclose{}$ above $\sqrt{1 + 1 / (2s)}$. This [bound](https://morrison-lab.github.io/mcs/sets.html#def-bound) is $7.14$ for $s= 0.01$, $3.32$ for $s= 0.05$, and $2.45$ for $s= 0.1$. The [derivative](calculus-derivatives.llms.md#def-derivative) $4x^3 - 4x$ is unbounded, as is the [second derivative](calculus-derivatives.llms.md#def-second-derivative) $12x^2 - 4$, so the step $s\frac{\partial}{\partial x} f(x)$ grows without bound with $x$, and a far start overshoots. By [Proposition 1](#prp-double-well-divergence), every fixed [step length](#def-gradient-descent) fails to [converge](optimization-newton.llms.md#def-vector-sequence-limit) from some starts. A larger step length lowers the bound, so more starts are guaranteed to diverge. By [Corollary 1](#cor-double-well-basin-bound), each [basin of attraction](#def-basin-of-attraction) lies within the same [bounded](algebra-sums.llms.md#def-bounded) [interval](https://morrison-lab.github.io/mcs/sets.html#def-interval), which narrows as $s$ grows. In the earlier [basin example](#exm-basin-of-attraction), $s= 0.05$, and the start $4$ lies above the bound $3.32$, which is why its [iterates](optimization-newton.llms.md#def-iterate) grow. [Figure 7](#fig-double-well-divergence) shows the three bounds.
+> **Example 11 (Divergent starts on the double-well function for three step lengths)** For $f(x) = x^4 - 2x^2$, [Proposition 1](#prp-double-well-divergence) says that [gradient descent](#def-gradient-descent) [diverges to](algebra-polynomials.llms.md#def-diverges-to-infinity) $\infty$ from every start with $\mathopen{}\left|{{x}^{(0)}}\right|\mathclose{}$ above $\sqrt{1 + 1 / (2s)}$. This [bound](https://morrison-lab.github.io/mcs/sets.html#def-bound) is $7.14$ for $s= 0.01$, $3.32$ for $s= 0.05$, and $2.45$ for $s= 0.1$. The [derivative](calculus-derivatives.llms.md#def-derivative) $4x^3 - 4x$ is unbounded, as is the [second derivative](calculus-derivatives.llms.md#def-second-derivative) $12x^2 - 4$, so the step $s\frac{\partial}{\partial x} f(x)$ grows without bound with $x$, and a far start overshoots. By [Proposition 1](#prp-double-well-divergence), every fixed [step length](#def-gradient-descent) fails to [converge](optimization-newton.llms.md#def-vector-sequence-limit) from some starts. A larger step length lowers the bound, so more starts are guaranteed to diverge. By [Corollary 1](#cor-double-well-basin-bound), each [basin of attraction](#def-basin-of-attraction) lies within the same [bounded](algebra-convexity.llms.md#def-bounded) [interval](https://morrison-lab.github.io/mcs/sets.html#def-interval), which narrows as $s$ grows. In the earlier [basin example](#exm-basin-of-attraction), $s= 0.05$, and the start $4$ lies above the bound $3.32$, which is why its [iterates](optimization-newton.llms.md#def-iterate) grow. [Figure 7](#fig-double-well-divergence) shows the three bounds.
 >
 > > **NOTE:**
 > >
@@ -1058,19 +1058,19 @@ Last modified: 2026-11-20 08:41:16 (PST)
 > >             solid_capstyle="butt")
 > >     ax.plot([dwf_cut_py, 8], [dwf_i_py] * 2, color="#D55E00", lw=8,
 > >             solid_capstyle="butt")
-> > #> [<matplotlib.lines.Line2D object at 0x78a4539b6c10>]
-> > #> [<matplotlib.lines.Line2D object at 0x78a4539b6d50>]
-> > #> [<matplotlib.lines.Line2D object at 0x78a4539b6e90>]
-> > #> [<matplotlib.lines.Line2D object at 0x78a4539b6fd0>]
-> > #> [<matplotlib.lines.Line2D object at 0x78a4539b7110>]
-> > #> [<matplotlib.lines.Line2D object at 0x78a4539b7250>]
-> > #> [<matplotlib.lines.Line2D object at 0x78a4539b7390>]
-> > #> [<matplotlib.lines.Line2D object at 0x78a4539b74d0>]
-> > #> [<matplotlib.lines.Line2D object at 0x78a4539b7610>]
+> > #> [<matplotlib.lines.Line2D object at 0x7bfa0fcb2c10>]
+> > #> [<matplotlib.lines.Line2D object at 0x7bfa0fcb2d50>]
+> > #> [<matplotlib.lines.Line2D object at 0x7bfa0fcb2e90>]
+> > #> [<matplotlib.lines.Line2D object at 0x7bfa0fcb2fd0>]
+> > #> [<matplotlib.lines.Line2D object at 0x7bfa0fcb3110>]
+> > #> [<matplotlib.lines.Line2D object at 0x7bfa0fcb3250>]
+> > #> [<matplotlib.lines.Line2D object at 0x7bfa0fcb3390>]
+> > #> [<matplotlib.lines.Line2D object at 0x7bfa0fcb34d0>]
+> > #> [<matplotlib.lines.Line2D object at 0x7bfa0fcb3610>]
 > > ax.axvline(4, linestyle=":", color="black")
-> > #> <matplotlib.lines.Line2D object at 0x78a4539b7750>
+> > #> <matplotlib.lines.Line2D object at 0x7bfa0fcb3750>
 > > ax.set_yticks(range(3), [str(s) for s in dwf_step_py])
-> > #> [<matplotlib.axis.YTick object at 0x78a4539b5090>, <matplotlib.axis.YTick object at 0x78a4539b79d0>, <matplotlib.axis.YTick object at 0x78a4539e8190>]
+> > #> [<matplotlib.axis.YTick object at 0x7bfa0fcb1090>, <matplotlib.axis.YTick object at 0x7bfa0fcb39d0>, <matplotlib.axis.YTick object at 0x7bfa0fce0190>]
 > > ax.set_xlabel("starting point")
 > > #> Text(0.5, 0, 'starting point')
 > > ax.set_ylabel("step length")
@@ -1090,19 +1090,19 @@ Last modified: 2026-11-20 08:41:16 (PST)
 
 > **NOTE:**
 >
-> **Definition 10 (Plateau)** Let $f : \mathbb{R}^p \to \mathbb{R}$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) with a [gradient](vector-calculus.llms.md#def-vector-derivative) at every point of a region, and let $\epsilon > 0$ be a tolerance. The region is a **plateau** of $f$ if the [Euclidean norm](linear-algebra-vectors.llms.md#def-euclidean-norm) of the gradient satisfies
+> **Definition 10 (Plateau)** Let $f : \mathbb{R}^p \to \mathbb{R}$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function) with a [gradient](vector-calculus-gradients.llms.md#def-vector-derivative) at every point of a region, and let $\epsilon > 0$ be a tolerance. The region is a **plateau** of $f$ if the [Euclidean norm](linear-algebra-vectors.llms.md#def-euclidean-norm) of the gradient satisfies
 >
 > $$0 < \mathopen{}\left\lVert\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\right\rVert\mathclose{} < \epsilon$$
 >
-> at every point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ of the region. The function is then nearly flat on the region, and the region contains no [stationary point](optimization-critical-points.llms.md#def-stationary-point).
+> at every point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ of the region. The function is then nearly flat on the region, and the region contains no [stationary point](optimization-optimality.llms.md#def-stationary-point).
 
 > **NOTE:**
 >
 > **Example 12 (A cost with no stationary point)**  
 >
-> Let $f(x) = \log\mathopen{}\left(1 + \text{e}^{-x}\right)\mathclose{}$. Its [derivative](calculus-derivatives.llms.md#def-derivative) is $\frac{\partial}{\partial x} f(x) = -1 / (1 + \text{e}^{x})$, which is negative for every $x$, so $f$ has no [stationary point](optimization-critical-points.llms.md#def-stationary-point) at all.
+> Let $f(x) = \log\mathopen{}\left(1 + \text{e}^{-x}\right)\mathclose{}$. Its [derivative](calculus-derivatives.llms.md#def-derivative) is $\frac{\partial}{\partial x} f(x) = -1 / (1 + \text{e}^{x})$, which is negative for every $x$, so $f$ has no [stationary point](optimization-optimality.llms.md#def-stationary-point) at all.
 >
-> At $x = 0$ the [gradient](vector-calculus.llms.md#def-vector-derivative) has size $0.5$. At $x = 10$ it has size $4.54\times 10^{-5}$, which is small but not zero. A step of [gradient descent](#def-gradient-descent) subtracts the gradient times the [step length](#def-gradient-descent). The gradient is negative, so the [iterates](optimization-newton.llms.md#def-iterate) keep moving to the right, more and more slowly. With tolerance $\epsilon = 10^{-4}$, the region $x \ge 10$ is a plateau ([Definition 10](#def-plateau)). A run that enters this plateau has not converged; the run has only slowed down.
+> At $x = 0$ the [gradient](vector-calculus-gradients.llms.md#def-vector-derivative) has size $0.5$. At $x = 10$ it has size $4.54\times 10^{-5}$, which is small but not zero. A step of [gradient descent](#def-gradient-descent) subtracts the gradient times the [step length](#def-gradient-descent). The gradient is negative, so the [iterates](optimization-newton.llms.md#def-iterate) keep moving to the right, more and more slowly. With tolerance $\epsilon = 10^{-4}$, the region $x \ge 10$ is a plateau ([Definition 10](#def-plateau)). A run that enters this plateau has not converged; the run has only slowed down.
 
 > **NOTE:**
 >
@@ -1139,10 +1139,10 @@ Last modified: 2026-11-20 08:41:16 (PST)
 > plateau_marks_pf = np.array([0, 10])
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > ax.plot(plateau_grid_pf, 1 / (1 + np.exp(plateau_grid_pf)), color="#0072B2")
-> #> [<matplotlib.lines.Line2D object at 0x78a453973390>]
+> #> [<matplotlib.lines.Line2D object at 0x7bfa0fc6b390>]
 > ax.plot(plateau_marks_pf, 1 / (1 + np.exp(plateau_marks_pf)),
 >         color="#D55E00", marker="^", markersize=8, linestyle="")
-> #> [<matplotlib.lines.Line2D object at 0x78a453973250>]
+> #> [<matplotlib.lines.Line2D object at 0x7bfa0fc6b250>]
 > ax.set_yscale("log")
 > ax.set_xlabel("x")
 > #> Text(0.5, 0, 'x')
@@ -1159,7 +1159,7 @@ Last modified: 2026-11-20 08:41:16 (PST)
 >
 > [![Plot of the size of the gradient of the function log of 1 plus e to the minus x, against x from -5 to 15, on a logarithmic vertical axis. A solid blue curve falls from about 0.99 at x of -5 to about 0.0000003 at x of 15. It is always positive and never reaches 0. Two vermilion triangles mark x of 0, where the size is 0.5, and x of 10, where it is about 0.00005.](optimization-gradient-descent_files/figure-html/plateau-size-python-1.png)](optimization-gradient-descent_files/figure-html/plateau-size-python-1.png "Figure 8: The size of the gradient of the function in Example 12, with x = 0 and x = 10 marked. The size shrinks toward 0 as x grows but is never 0, which is why descent slows down on a plateau without stopping at a stationary point.")
 >
-> Figure 8: The size of the [gradient](vector-calculus.llms.md#def-vector-derivative) of the [function](https://morrison-lab.github.io/mcs/functions.html#def-function) in [Example 12](#exm-plateau), with $x = 0$ and $x = 10$ marked. The size shrinks toward $0$ as $x$ grows but is never $0$, which is why descent slows down on a [plateau](#def-plateau) without stopping at a [stationary point](optimization-critical-points.llms.md#def-stationary-point).
+> Figure 8: The size of the [gradient](vector-calculus-gradients.llms.md#def-vector-derivative) of the [function](https://morrison-lab.github.io/mcs/functions.html#def-function) in [Example 12](#exm-plateau), with $x = 0$ and $x = 10$ marked. The size shrinks toward $0$ as $x$ grows but is never $0$, which is why descent slows down on a [plateau](#def-plateau) without stopping at a [stationary point](optimization-optimality.llms.md#def-stationary-point).
 
 > **NOTE:**
 >
@@ -1197,7 +1197,7 @@ Last modified: 2026-11-20 08:41:16 (PST)
 
 > **NOTE:**
 >
-> **Theorem 2 (A bound on the error of gradient descent on a quadratic)** Let $\mathbf{S}$ be a $p \times p$ [positive definite matrix](linear-algebra-special-matrices.llms.md#def-positive-definite) with [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) $\lambda_1, \ldots, \lambda_p$, let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} \in \mathbb{R}^p$, and let $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, whose unique [minimizer](algebra-basics.llms.md#def-global-minimizer) is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^* = \mathbf{S}^{-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}$ ([Theorem 3 in Newton’s Method](optimization-newton.llms.md#thm-newton-quadratic)). [Gradient descent](#def-gradient-descent) with a fixed [step length](#def-gradient-descent) $s> 0$ from any ${{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{(0)}}$ has [errors](optimization-newton.llms.md#def-iterate-error) satisfying, for $t = 1, 2, \ldots$,
+> **Theorem 2 (A bound on the error of gradient descent on a quadratic)** Let $\mathbf{S}$ be a $p \times p$ [positive definite matrix](linear-algebra-definite-matrices.llms.md#def-positive-definite) with [eigenvalues](linear-algebra-decompositions.llms.md#def-eigenvalue) $\lambda_1, \ldots, \lambda_p$, let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} \in \mathbb{R}^p$, and let $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, whose unique [minimizer](algebra-basics.llms.md#def-global-minimizer) is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^* = \mathbf{S}^{-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}$ ([Theorem 3 in Newton’s Method](optimization-newton.llms.md#thm-newton-quadratic)). [Gradient descent](#def-gradient-descent) with a fixed [step length](#def-gradient-descent) $s> 0$ from any ${{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{(0)}}$ has [errors](optimization-newton.llms.md#def-iterate-error) satisfying, for $t = 1, 2, \ldots$,
 >
 > $$\mathopen{}\left\lVert{{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{(t)}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*\right\rVert\mathclose{} \le \rho(s)^t\,\mathopen{}\left\lVert{{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{(0)}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*\right\rVert\mathclose{},
 > \qquad
@@ -1205,7 +1205,7 @@ Last modified: 2026-11-20 08:41:16 (PST)
 
 > **NOTE:**
 >
-> *Proof*. Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}^{(t)} \stackrel{\text{def}}{=}{{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{(t)}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*$ be the [error](optimization-newton.llms.md#def-iterate-error) at step $t$. The [gradient](vector-calculus.llms.md#def-vector-derivative) of $f$ is $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{S}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}$ (as in the proof of [Theorem 3 in Newton’s Method](optimization-newton.llms.md#thm-newton-quadratic)), and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} = \mathbf{S}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*$, so
+> *Proof*. Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}^{(t)} \stackrel{\text{def}}{=}{{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{(t)}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*$ be the [error](optimization-newton.llms.md#def-iterate-error) at step $t$. The [gradient](vector-calculus-gradients.llms.md#def-vector-derivative) of $f$ is $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{S}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}$ (as in the proof of [Theorem 3 in Newton’s Method](optimization-newton.llms.md#thm-newton-quadratic)), and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} = \mathbf{S}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*$, so
 >
 > $$\begin{aligned}
 > \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}^{(t+1)}
@@ -1219,7 +1219,7 @@ Last modified: 2026-11-20 08:41:16 (PST)
 > && \text{(collect the terms in } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}^{(t)} \text{)}
 > \end{aligned}$$
 >
-> By [induction](https://morrison-lab.github.io/mcs/proof-writing.html#def-proof-by-induction) on $t$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}^{(t)} = (\mathbf{I}_p - s\,\mathbf{S})^t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}^{(0)}$. By the [spectral theorem](linear-algebra-special-matrices.llms.md#thm-spectral), write $\mathbf{S} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}$. Then $\mathbf{I}_p - s\,\mathbf{S} = \mathbf{Q}(\mathbf{I}_p - s\,\mathbf{\Lambda}){\mathbf{Q}}^{\top}$ because $\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}_p$, and the $t$th [power](linear-algebra-special-matrices.llms.md#def-matrix-power) cancels each inner ${\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}_p$, so
+> By [induction](https://morrison-lab.github.io/mcs/proof-writing.html#def-proof-by-induction) on $t$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}^{(t)} = (\mathbf{I}_p - s\,\mathbf{S})^t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}^{(0)}$. By the [spectral theorem](linear-algebra-decompositions.llms.md#thm-spectral), write $\mathbf{S} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}$. Then $\mathbf{I}_p - s\,\mathbf{S} = \mathbf{Q}(\mathbf{I}_p - s\,\mathbf{\Lambda}){\mathbf{Q}}^{\top}$ because $\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}_p$, and the $t$th [power](linear-algebra-special-matrices.llms.md#def-matrix-power) cancels each inner ${\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}_p$, so
 >
 > $$\begin{aligned}
 > \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{e}}\vphantom{e}}^{(t)}\right\rVert\mathclose{}
@@ -1240,15 +1240,15 @@ Last modified: 2026-11-20 08:41:16 (PST)
 
 > **NOTE:**
 >
-> **Example 15 (The error multiplier for a step length of one quarter)** Let $\mathbf{S} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ with [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) $3$ and $1$, and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^* = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$. With $s= 0.25$, the factors $1 - s\,\lambda_i$ are $0.25$ and $0.75$, so $\rho(s) = 0.75$ and
+> **Example 15 (The error multiplier for a step length of one quarter)** Let $\mathbf{S} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ with [eigenvalues](linear-algebra-decompositions.llms.md#def-eigenvalue) $3$ and $1$, and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$, so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^* = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$. With $s= 0.25$, the factors $1 - s\,\lambda_i$ are $0.25$ and $0.75$, so $\rho(s) = 0.75$ and
 >
 > $$\mathopen{}\left\lVert{{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{(t)}}\right\rVert\mathclose{} \le 0.75^t\,\mathopen{}\left\lVert{{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{(0)}}\right\rVert\mathclose{}.$$
 >
-> Along the [eigenvector](linear-algebra-special-matrices.llms.md#def-eigenvector) for $\lambda= 3$ the [error](optimization-newton.llms.md#def-iterate-error) shrinks fast, and along the eigenvector for $\lambda= 1$ it shrinks slowly; the [bound](https://morrison-lab.github.io/mcs/sets.html#def-bound) follows the slower one.
+> Along the [eigenvector](linear-algebra-decompositions.llms.md#def-eigenvector) for $\lambda= 3$ the [error](optimization-newton.llms.md#def-iterate-error) shrinks fast, and along the eigenvector for $\lambda= 1$ it shrinks slowly; the [bound](https://morrison-lab.github.io/mcs/sets.html#def-bound) follows the slower one.
 
 > **NOTE:**
 >
-> **Theorem 3 (The best constant step length)** In the setting of [Theorem 2](#thm-gd-quadratic-error), let $\lambda_{\min}$ and $\lambda_{\max}$ be the smallest and largest [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) of $\mathbf{S}$. The factor $\rho(s) = \max_i \mathopen{}\left|1 - s\,\lambda_i\right|\mathclose{}$ of [Theorem 2](#thm-gd-quadratic-error) is smallest over $s> 0$ at
+> **Theorem 3 (The best constant step length)** In the setting of [Theorem 2](#thm-gd-quadratic-error), let $\lambda_{\min}$ and $\lambda_{\max}$ be the smallest and largest [eigenvalues](linear-algebra-decompositions.llms.md#def-eigenvalue) of $\mathbf{S}$. The factor $\rho(s) = \max_i \mathopen{}\left|1 - s\,\lambda_i\right|\mathclose{}$ of [Theorem 2](#thm-gd-quadratic-error) is smallest over $s> 0$ at
 >
 > $$s^* = \frac{2}{\lambda_{\min} + \lambda_{\max}},$$
 >
@@ -1258,7 +1258,7 @@ Last modified: 2026-11-20 08:41:16 (PST)
 > \qquad
 > \kappa= \kappa(\mathbf{S}),$$
 >
-> the [condition number](linear-algebra-special-matrices.llms.md#def-condition-number) of $\mathbf{S}$.
+> which is $\mathbf{S}$’s [condition number](linear-algebra-definite-matrices.llms.md#def-condition-number).
 
 > **NOTE:**
 >
@@ -1295,7 +1295,7 @@ Last modified: 2026-11-20 08:41:16 (PST)
 
 > **NOTE:**
 >
-> **Example 16 (The best step length for eigenvalues 3 and 1)** For $\mathbf{S} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ with [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) $3$ and $1$, [Theorem 3](#thm-best-constant-step) gives $s^* = 2 / (3 + 1) = 0.5$, the [condition number](linear-algebra-special-matrices.llms.md#def-condition-number) $\kappa= 3$, and $\rho(s^*) = (3 - 1) / (3 + 1) = 0.5$. A grid search over $s= 0.01, 0.02, \ldots, 1$ finds the smallest $\rho(s)$ at $s= 0.5$, the same [step length](#def-gradient-descent). Each step then multiplies the [error](optimization-newton.llms.md#def-iterate-error) by at most $0.5$.
+> **Example 16 (The best step length for eigenvalues 3 and 1)** For $\mathbf{S} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ with [eigenvalues](linear-algebra-decompositions.llms.md#def-eigenvalue) $3$ and $1$, [Theorem 3](#thm-best-constant-step) gives $s^* = 2 / (3 + 1) = 0.5$, the [condition number](linear-algebra-definite-matrices.llms.md#def-condition-number) $\kappa= 3$, and $\rho(s^*) = (3 - 1) / (3 + 1) = 0.5$. A grid search over $s= 0.01, 0.02, \ldots, 1$ finds the smallest $\rho(s)$ at $s= 0.5$, the same [step length](#def-gradient-descent). Each step then multiplies the [error](optimization-newton.llms.md#def-iterate-error) by at most $0.5$.
 
 > **NOTE:**
 >
@@ -1327,11 +1327,11 @@ Last modified: 2026-11-20 08:41:16 (PST)
 > bcs_rho_pf = np.maximum(np.abs(1 - 3 * bcs_grid_pf), np.abs(1 - bcs_grid_pf))
 > fig, ax = plt.subplots(figsize=(5, 4), layout="constrained")
 > ax.plot(bcs_grid_pf, bcs_rho_pf, color="#0072B2")
-> #> [<matplotlib.lines.Line2D object at 0x78a4537d3250>]
+> #> [<matplotlib.lines.Line2D object at 0x7bfa0fa6f250>]
 > ax.axhline(1, color="black", linestyle=":")
-> #> <matplotlib.lines.Line2D object at 0x78a4537d3390>
+> #> <matplotlib.lines.Line2D object at 0x7bfa0fa6f390>
 > ax.axvline(0.5, color="#D55E00", linestyle="--")
-> #> <matplotlib.lines.Line2D object at 0x78a4537d34d0>
+> #> <matplotlib.lines.Line2D object at 0x7bfa0fa6f4d0>
 > ax.set_xlabel("Step length")
 > #> Text(0.5, 0, 'Step length')
 > ax.set_ylabel("Error factor")
@@ -1355,19 +1355,19 @@ Last modified: 2026-11-20 08:41:16 (PST)
 
 > **NOTE:**
 >
-> *Solution 1*. $\rho(s) < 1$ says that $\mathopen{}\left|1 - s\,\lambda_i\right|\mathclose{} < 1$ for every $i$, which is $-1 < 1 - s\,\lambda_i < 1$. The right [inequality](https://morrison-lab.github.io/mcs/proof-writing.html#def-inequality) holds for every $s> 0$ because $\lambda_i > 0$. The left inequality is $s\,\lambda_i < 2$, that is, $s< 2 / \lambda_i$. These $p$ [inequalities](https://morrison-lab.github.io/mcs/proof-writing.html#def-inequality), one for each [eigenvalue](linear-algebra-special-matrices.llms.md#def-eigenvalue), all hold exactly when the inequality for the largest eigenvalue holds, since it is the most restrictive:
+> *Solution 1*. $\rho(s) < 1$ says that $\mathopen{}\left|1 - s\,\lambda_i\right|\mathclose{} < 1$ for every $i$, which is $-1 < 1 - s\,\lambda_i < 1$. The right [inequality](https://morrison-lab.github.io/mcs/proof-writing.html#def-inequality) holds for every $s> 0$ because $\lambda_i > 0$. The left inequality is $s\,\lambda_i < 2$, that is, $s< 2 / \lambda_i$. These $p$ [inequalities](https://morrison-lab.github.io/mcs/proof-writing.html#def-inequality), one for each [eigenvalue](linear-algebra-decompositions.llms.md#def-eigenvalue), all hold exactly when the inequality for the largest eigenvalue holds, since it is the most restrictive:
 >
 > $$0 < s< \frac{2}{\lambda_{\max}}.$$
 
 > **NOTE:**
 >
-> **Exercise 2 (The best step length for eigenvalues 1 and 9)** In [gradient descent](#def-gradient-descent), a fixed [step length](#def-gradient-descent) that is too short [converges](algebra-exponentials.llms.md#def-convergent-sequence) slowly, and one that is too long [diverges](algebra-exponentials.llms.md#def-divergent-sequence). [Theorem 3](#thm-best-constant-step) gives the best one from the [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) of $\mathbf{S}$.
+> **Exercise 2 (The best step length for eigenvalues 1 and 9)** In [gradient descent](#def-gradient-descent), a fixed [step length](#def-gradient-descent) that is too short [converges](algebra-polynomials.llms.md#def-convergent-sequence) slowly, and one that is too long [diverges](algebra-polynomials.llms.md#def-divergent-sequence). [Theorem 3](#thm-best-constant-step) gives the best one from the [eigenvalues](linear-algebra-decompositions.llms.md#def-eigenvalue) of $\mathbf{S}$.
 >
 > Let $\mathbf{S} = \begin{bmatrix} 1 & 0 \\ 0 & 9 \end{bmatrix}$. Using [Theorem 3](#thm-best-constant-step), find $s^*$.
 
 > **NOTE:**
 >
-> *Solution 2*. $\mathbf{S}$ is diagonal, so its [eigenvalues](linear-algebra-special-matrices.llms.md#def-eigenvalue) are its [diagonal entries](linear-algebra-matrix-multiplication.llms.md#def-main-diagonal) $1$ and $9$. Then
+> *Solution 2*. $\mathbf{S}$ is diagonal, so its [eigenvalues](linear-algebra-decompositions.llms.md#def-eigenvalue) are its [diagonal entries](linear-algebra-matrix-multiplication.llms.md#def-main-diagonal) $1$ and $9$. Then
 >
 > $$s^* = \frac{2}{1 + 9} = 0.2.$$
 
@@ -1377,7 +1377,7 @@ Last modified: 2026-11-20 08:41:16 (PST)
 
 > **NOTE:**
 >
-> *Solution 3*. The [condition number](linear-algebra-special-matrices.llms.md#def-condition-number) is $\kappa(\mathbf{S}) = 9 / 1 = 9$, so by [Theorem 3](#thm-best-constant-step)
+> *Solution 3*. The [condition number](linear-algebra-definite-matrices.llms.md#def-condition-number) is $\kappa(\mathbf{S}) = 9 / 1 = 9$, so by [Theorem 3](#thm-best-constant-step)
 >
 > $$\rho(s^*) = \frac{9 - 1}{9 + 1} = 0.8.$$
 
@@ -1435,7 +1435,7 @@ Last modified: 2026-11-20 08:41:16 (PST)
 
 > **NOTE:**
 >
-> **Definition 14 (Momentum (heavy-ball method))** Let $f : \mathbb{R}^p \to \mathbb{R}$ have first [partial derivatives](vector-calculus.llms.md#def-partial-derivative), let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)}$ be a starting point, let $s> 0$ be a [step length](#def-gradient-descent), and let $\beta \in [0, 1)$ be a [momentum coefficient](#def-momentum-coefficient). **Momentum** (the **heavy-ball method**) updates, for $t = 1, 2, \ldots$, by
+> **Definition 14 (Momentum (heavy-ball method))** Let $f : \mathbb{R}^p \to \mathbb{R}$ have first [partial derivatives](vector-calculus-gradients.llms.md#def-partial-derivative), let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)}$ be a starting point, let $s> 0$ be a [step length](#def-gradient-descent), and let $\beta \in [0, 1)$ be a [momentum coefficient](#def-momentum-coefficient). **Momentum** (the **heavy-ball method**) updates, for $t = 1, 2, \ldots$, by
 >
 > $$\begin{aligned}
 > \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}^{(t)} &\stackrel{\text{def}}{=}\beta\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}^{(t-1)} + \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t-1)}) \\
@@ -1493,7 +1493,7 @@ Last modified: 2026-11-20 08:41:16 (PST)
 
 > **NOTE:**
 >
-> **Definition 15 (Adaptive method)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have first [partial derivatives](vector-calculus.llms.md#def-partial-derivative), let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)}$ be a starting point, let $s> 0$ be a [step length](#def-gradient-descent), let $\rho \in [0, 1)$ be a decay factor, and let $\epsilon > 0$. Write $g_j^{(t)}$ for coordinate $j$ of $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t-1)})$. An **adaptive method** is defined, for $t = 1, 2, \ldots$ and each coordinate $j = 1, \ldots, p$,
+> **Definition 15 (Adaptive method)** Let $f : \mathbb{R}^p \to \mathbb{R}$ have first [partial derivatives](vector-calculus-gradients.llms.md#def-partial-derivative), let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)}$ be a starting point, let $s> 0$ be a [step length](#def-gradient-descent), let $\rho \in [0, 1)$ be a decay factor, and let $\epsilon > 0$. Write $g_j^{(t)}$ for coordinate $j$ of $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t-1)})$. An **adaptive method** is defined, for $t = 1, 2, \ldots$ and each coordinate $j = 1, \ldots, p$,
 >
 > $$\begin{aligned}
 > u_j^{(t)} &\stackrel{\text{def}}{=}\rho\,u_j^{(t-1)} + (1 - \rho)\,\mathopen{}\left(g_j^{(t)}\right)\mathclose{}^2 \\

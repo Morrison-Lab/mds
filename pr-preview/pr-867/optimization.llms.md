@@ -4,11 +4,12 @@ Code
 
 Published
 
-Last modified: 2026-11-20 08:41:16 (PST)
+Last modified: 2026-11-23 20:33:37 (PST)
 
 The optimization notes are split across these pages:
 
-- [Critical Points and Optimality Conditions](optimization-critical-points.llms.md): flat points and critical points, Fermat’s theorem, Taylor approximations, and the first- and second-order conditions in several variables.
+- The [Critical Points and Optimization](optimization-critical-points.llms.md) page: flat points, critical points, the second derivative test, and inflection points.
+- The [Optimality Conditions in Several Variables](optimization-optimality.llms.md) page: Fermat’s theorem, stationary points, Taylor approximations, the first- and second-order conditions, and saddle points.
 - [Convexity in Several Variables](optimization-convexity.llms.md): convex sets and functions, epigraphs, tangent planes, and the first-order and Hessian characterizations of convexity.
 - [Quadratic Minimization under Linear Constraints](optimization-constrained.llms.md): minimization problems, optimization algorithms, the Lagrangian, and the sensitivity of the minimum to the constraints.
 - [Newton’s Method](optimization-newton.llms.md): iterative methods, the quadratic approximation, and quadratic convergence.
@@ -21,7 +22,7 @@ A link to a section, theorem or definition on this page from before the split go
 
 - Boyd and Vandenberghe [\[1\]](#ref-boyd2004convex) is the standard reference on convex optimization, covering convex sets, convex functions, convex optimization problems, duality, unconstrained minimization, and interior-point methods.
 - Nocedal and Wright [\[2\]](#ref-nocedal2006numerical) is a comprehensive reference on continuous numerical optimization, covering line search methods, trust-region methods, conjugate gradient methods, quasi-Newton methods, and nonlinear equations.
-- [M/CS 335, Linear Optimization](https://catalog.wwu.edu/preview_course_nopop.php?catoid=23&coid=126769) at Western Washington University covers optimizing [linear functions](algebra-exponentials.llms.md#def-linear-function) under linear [constraints](optimization-constrained.llms.md#def-constraints), including linear programming and duality.
+- [M/CS 335, Linear Optimization](https://catalog.wwu.edu/preview_course_nopop.php?catoid=23&coid=126769) at Western Washington University covers optimizing [linear functions](algebra-polynomials.llms.md#def-linear-function) under linear [constraints](optimization-constrained.llms.md#def-constraints), including linear programming and duality.
 - [M/CS 375, Numerical Computation](https://catalog.wwu.edu/preview_course_nopop.php?catoid=23&coid=126770) at Western Washington University covers computer arithmetic, solving nonlinear equations, optimization in a single variable, [matrix](linear-algebra-matrices.llms.md#def-matrix) factorization, and [iterative methods](optimization-newton.llms.md#def-iterative-method) for matrices.
 - [Hua Zhou](https://hua-zhou.github.io/)’s [course page for “UCLA Biostat 257 - Statistical Computing” (2025 Spring)](https://ucla-biostat-257.github.io/2025spring/) has lectures on optimization, from root finding to constrained problems. Its source is [on GitHub](https://github.com/ucla-biostat-257/2025spring) under the MIT License.
 - [Hua Zhou](https://hua-zhou.github.io/)’s [lecture notes for “UCLA Biostat 216 - Mathematical Methods for Biostatistics” (2024 Fall)](https://ucla-biostat-216.github.io/2024fall/slides/13-optim/13-optim.html)
