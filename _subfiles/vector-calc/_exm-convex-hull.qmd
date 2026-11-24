@@ -9,7 +9,7 @@ Then $\operatorname{conv}(S) = T$:
 the [convex hull](#def-convex-hull) of $S$ is $T$.
 
 - **Inclusion $\operatorname{conv}(S) \subseteq T$.**
-  $T$ is the [intersection](https://morrison-lab.github.io/mcs/sets.html#def-indexed-intersection) of three [half-planes](#def-half-space),
+  $T$ is the [intersection](https://morrison-lab.github.io/mcs/sets.html#def-indexed-intersection) of three [half-planes](#def-half-space-inequality),
   with $\vecf{a} = \tp{(1, 0)}$, $\tp{(0, 1)}$ and $\tp{(-1, -1)}$,
   and $c = 0$, $0$ and $-1$.
   Each half-plane $H = \cb{\vx : \dprod{\vecf{a}}{\vx} \ge c}$ is [convex](#def-convex-set):

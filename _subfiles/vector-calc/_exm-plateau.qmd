@@ -22,7 +22,7 @@ $\deriv{x} f(x) = -1 / (1 + \e{x})$,
 which is negative for every $x$,
 so $f$ has no [stationary point](#def-stationary-point) at all.
 
-At $x = 0$ the [gradient](vector-calculus.qmd#def-vector-derivative)
+At $x = 0$ the [gradient](vector-calculus-gradients.qmd#def-vector-derivative)
 has size $`{r} plateau_size_zero_pe`$.
 At $x = 10$ it has size $`{r} plateau_size_ten_sig_pe`$,
 which is small but not zero.

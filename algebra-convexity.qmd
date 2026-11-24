@@ -1,0 +1,15 @@
+---
+title: "Convexity, Infimum and Supremum"
+format:
+  html: default
+  revealjs:
+    output-file: algebra-convexity-slides.html
+  pdf:
+    output-file: algebra-convexity-handout.pdf
+  docx:
+    output-file: algebra-convexity.docx
+---
+
+{{< include latex-macros/macros.qmd >}}
+
+{{< include mds/_subfiles/_sec_algebra_convexity.qmd >}}

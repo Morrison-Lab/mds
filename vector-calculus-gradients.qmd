@@ -1,0 +1,15 @@
+---
+title: "Partial Derivatives and Gradients"
+format:
+  html: default
+  revealjs:
+    output-file: vector-calculus-gradients-slides.html
+  pdf:
+    output-file: vector-calculus-gradients-handout.pdf
+  docx:
+    output-file: vector-calculus-gradients.docx
+---
+
+{{< include latex-macros/macros.qmd >}}
+
+{{< include mds/_subfiles/_sec_vector_calc_gradients.qmd >}}

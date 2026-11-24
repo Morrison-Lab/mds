@@ -7,18 +7,21 @@ format:
 
 The algebra notes are split across these pages:
 
-- [Equalities, Inequalities and Minimizers](algebra-basics.qmd):
+- The [Equalities, Inequalities and Minimizers](algebra-basics.qmd) page:
   equalities, inequalities, powers, square roots and absolute values,
   minima and maxima, and global and local minimizers.
-- [Convexity, Infimum and Sums](algebra-sums.qmd):
-  convex functions, the infimum and supremum,
+- The [Convexity, Infimum and Supremum](algebra-convexity.qmd) page:
+  [convex functions](algebra-convexity.qmd#def-convex-function), and the [infimum](algebra-convexity.qmd#def-infimum) and [supremum](algebra-convexity.qmd#def-supremum).
+- The [Sums, Products and Quotients](algebra-sums.qmd) page:
   sums, products and quotients, summation notation, limits of sums, and notational shorthands.
-- [Polynomials, Exponentials and Logarithms](algebra-exponentials.qmd):
+- The [Polynomials, Affine Functions and Series](algebra-polynomials.qmd) page:
   polynomials, affine and linear functions of one variable,
-  limits of [sequences](https://morrison-lab.github.io/mcs/functions.html#def-sequence), [series](algebra-exponentials.qmd#def-infinite-sum), exponentials and logarithms.
-- [Trigonometry](algebra-trigonometry.qmd):
+  limits of [sequences](https://morrison-lab.github.io/mcs/functions.html#def-sequence), and [series](algebra-polynomials.qmd#def-infinite-sum).
+- The [Exponentials and Logarithms](algebra-exponentials.qmd) page:
+  exponentials and logarithms.
+- The [Trigonometry](algebra-trigonometry.qmd) page:
   cosine and sine on the unit circle, and the identities later pages use.
-- [Complex Numbers](algebra-complex.qmd):
+- The [Complex Numbers](algebra-complex.qmd) page:
   complex numbers and their arithmetic.
 
 A link to a section, theorem or definition on this page from before the split

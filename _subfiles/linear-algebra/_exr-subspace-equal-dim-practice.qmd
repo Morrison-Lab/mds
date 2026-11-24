@@ -1,7 +1,7 @@
 :::{#exr-subspace-equal-dim-practice}
 #### Showing that a span of two vectors is all of $\reals^2$
 
-@thm-subspace-equal-dim shows that two [subspaces](#def-subspace) coincide
+@thm-subspace-equal-dim shows that two [subspaces](linear-algebra-subspaces.qmd#def-subspace) coincide
 by comparing [dimensions](#def-dimension) instead of checking every vector.
 Let
 

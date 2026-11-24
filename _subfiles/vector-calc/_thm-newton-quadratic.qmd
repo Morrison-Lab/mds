@@ -12,8 +12,8 @@ the unique minimizer of $f$.
 ::: proof
 
 Partial derivatives of a sum or of a constant multiple are the sum or multiple of the partial derivatives,
-so the [derivative of a quadratic form](vector-calculus.qmd#cor-quadratic-form-symmetric) applies to $\tfrac{1}{2}\,\qform{\matr{S}}{\vx}$
-and the [derivative of a linear combination](vector-calculus.qmd#cor-deriv-lincom-tp) to $\dprod{\vecf{c}}{\vx}$:
+so the [derivative of a quadratic form](vector-calculus-derivative-rules.qmd#cor-quadratic-form-symmetric) applies to $\tfrac{1}{2}\,\qform{\matr{S}}{\vx}$
+and the [derivative of a linear combination](vector-calculus-derivative-rules.qmd#cor-deriv-lincom-tp) to $\dprod{\vecf{c}}{\vx}$:
 
 $$
 \begin{aligned}
@@ -22,8 +22,8 @@ $$
 \end{aligned}
 $$
 
-by the [Hessian of a quadratic form](vector-calculus.qmd#thm-hessian-quadratic) with $\tfrac{1}{2} \matr{S}$ in place of $\matr{S}$,
-and because the [gradient](vector-calculus.qmd#def-vector-derivative) $-\vecf{c}$ of the [linear](linear-algebra.qmd#def-linear-function) [term](algebra-sums.qmd#def-term) is [constant](vector-calculus.qmd#def-constant-wrt-vector),
+by the [Hessian of a quadratic form](vector-calculus-hessian.qmd#thm-hessian-quadratic) with $\tfrac{1}{2} \matr{S}$ in place of $\matr{S}$,
+and because the [gradient](vector-calculus-gradients.qmd#def-vector-derivative) $-\vecf{c}$ of the [linear](linear-algebra.qmd#def-linear-function) [term](algebra-sums.qmd#def-term) is [constant](vector-calculus-derivative-rules.qmd#def-constant-wrt-vector),
 $\matr{H}_f(\vx) = \matr{S}$,
 which is [invertible](linear-algebra.qmd#thm-pd-inverse).
 So

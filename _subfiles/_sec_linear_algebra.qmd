@@ -16,6 +16,10 @@
 
 {{< include mds/_subfiles/_sec_linear_algebra_subspaces.qmd >}}
 
+# Bases and dimension {#sec-bases-dimension}
+
+{{< include mds/_subfiles/_sec_linear_algebra_bases.qmd >}}
+
 # Column space and null space {#sec-column-null-space}
 
 {{< include mds/_subfiles/_sec_linear_algebra_rank_nullity_spaces.qmd >}}
@@ -42,11 +46,45 @@
 
 {{< include mds/_subfiles/_sec_linear_algebra_inner_products.qmd >}}
 
+{{< include mds/_subfiles/_sec_linear_algebra_orthonormal_bases.qmd >}}
+
+# Special Matrices {#sec-special-matrices}
+
 {{< include mds/_subfiles/_sec_linear_algebra_special_matrices.qmd >}}
+
+# Quadratic Forms {#sec-quadratic-forms}
+
+{{< include mds/_subfiles/_sec_linear_algebra_quadratic_forms.qmd >}}
+
+# Trace and Matrix Inner Product {#sec-trace}
+
+{{< include mds/_subfiles/_sec_linear_algebra_trace.qmd >}}
+
+# Matrix Decompositions {#sec-matrix-decompositions}
+
+{{< include mds/_subfiles/_sec_linear_algebra_decompositions.qmd >}}
+
+# Definite Matrices {#sec-definite-matrices}
+
+{{< include mds/_subfiles/_sec_linear_algebra_definite_matrices.qmd >}}
+
+# Determinants {#sec-determinants}
+
+{{< include mds/_subfiles/_sec_linear_algebra_determinants.qmd >}}
 
 {{< include mds/_subfiles/_sec_linear_algebra_projections.qmd >}}
 
+## Generalized inverses and linear systems {#sec-generalized-inverse}
+
+{{< include mds/_subfiles/_sec_linear_algebra_generalized_inverses.qmd >}}
+
+## Solving linear systems and least squares {#sec-solving-linear-systems}
+
+{{< include mds/_subfiles/_sec_linear_algebra_least_squares.qmd >}}
+
 {{< include mds/_subfiles/_sec_linear_algebra_diagonalization.qmd >}}
+
+{{< include mds/_subfiles/_sec_linear_algebra_cholesky.qmd >}}
 
 # Complex vectors and matrices {#sec-complex-vectors-matrices}
 

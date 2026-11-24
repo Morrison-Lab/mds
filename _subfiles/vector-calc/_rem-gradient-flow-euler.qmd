@@ -8,8 +8,8 @@ This is Euler's method with time step $\steplen$ for the [gradient flow](#def-gr
 For a [linear function](algebra.qmd#def-linear-function) $f$,
 the flow moves along the negative [normal vector](linear-algebra-linear-maps.qmd#def-normal-vector).
 
-By the [level sets of a linear function](vector-calculus.qmd#thm-level-sets-linear),
-that vector is [orthogonal](linear-algebra-vectors.qmd#def-orthogonal-vectors) to every [level set](vector-calculus.qmd#def-level-set),
+By the [level sets of a linear function](vector-calculus-gradients.qmd#thm-level-sets-linear),
+that vector is [orthogonal](linear-algebra-vectors.qmd#def-orthogonal-vectors) to every [level set](vector-calculus-gradients.qmd#def-level-set),
 so the flow is too.
 
 :::
