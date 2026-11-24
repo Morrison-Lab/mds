@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-23 17:43:07 (PST)
+Last modified: 2026-11-23 19:00:29 (PST)
 
 # 1 Second partial derivatives and the Hessian
 
@@ -18,7 +18,7 @@ Last modified: 2026-11-23 17:43:07 (PST)
 
 > **NOTE:**
 >
-> **Definition 3 (Unit ball)** The open and closed balls ([Definition 1](#def-ball), [Definition 2](#def-closed-ball)) of radius $1$ around $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ are the open and closed **unit balls**.
+> **Definition 3 (Unit ball)** The [open balls](#def-ball) and [closed balls](#def-closed-ball) of radius $1$ around $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}$ are the open and closed **unit balls**.
 
 > **NOTE:**
 >

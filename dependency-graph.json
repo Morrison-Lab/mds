@@ -9087,7 +9087,15 @@
   ],
   [
    "mds/linear-algebra-linear-maps#cor-linear-is-affine",
+   "mds/linear-algebra-linear-maps#def-affine-offset"
+  ],
+  [
+   "mds/linear-algebra-linear-maps#cor-linear-is-affine",
    "mds/linear-algebra-linear-maps#def-linear-map"
+  ],
+  [
+   "mds/linear-algebra-linear-maps#cor-linear-is-affine",
+   "mds/linear-algebra-linear-maps#def-matrix-of-linear-map"
   ],
   [
    "mds/linear-algebra-linear-maps#cor-linear-is-affine",
@@ -9175,7 +9183,15 @@
   ],
   [
    "mds/linear-algebra-linear-maps#thm-affine-linear-iff",
+   "mcs/proof-writing#def-iff"
+  ],
+  [
+   "mds/linear-algebra-linear-maps#thm-affine-linear-iff",
    "mds/linear-algebra-linear-maps#def-affine-map"
+  ],
+  [
+   "mds/linear-algebra-linear-maps#thm-affine-linear-iff",
+   "mds/linear-algebra-linear-maps#def-affine-offset"
   ],
   [
    "mds/linear-algebra-linear-maps#thm-affine-linear-iff",
@@ -9195,7 +9211,19 @@
   ],
   [
    "mds/linear-algebra-linear-maps#thm-affine-map-unique",
+   "mcs/expressions-algorithms#def-closed-form-expression"
+  ],
+  [
+   "mds/linear-algebra-linear-maps#thm-affine-map-unique",
+   "mcs/proof-writing#def-universal-quantifier"
+  ],
+  [
+   "mds/linear-algebra-linear-maps#thm-affine-map-unique",
    "mds/linear-algebra-linear-maps#def-affine-map"
+  ],
+  [
+   "mds/linear-algebra-linear-maps#thm-affine-map-unique",
+   "mds/linear-algebra-linear-maps#def-affine-offset"
   ],
   [
    "mds/linear-algebra-linear-maps#thm-affine-map-unique",
@@ -9214,8 +9242,20 @@
    "mds/linear-algebra-linear-maps#thm-matrix-map-linear"
   ],
   [
+   "mds/linear-algebra-linear-maps#thm-affine-map-unique",
+   "mds/linear-algebra-matrices#def-matrix"
+  ],
+  [
    "mds/linear-algebra-linear-maps#thm-affine-map-zero",
    "mds/linear-algebra-linear-maps#def-affine-map"
+  ],
+  [
+   "mds/linear-algebra-linear-maps#thm-affine-map-zero",
+   "mds/linear-algebra-linear-maps#def-affine-offset"
+  ],
+  [
+   "mds/linear-algebra-linear-maps#thm-affine-map-zero",
+   "mds/linear-algebra-vectors#def-zero-vector"
   ],
   [
    "mds/linear-algebra-linear-maps#thm-linear-map-lincom",
