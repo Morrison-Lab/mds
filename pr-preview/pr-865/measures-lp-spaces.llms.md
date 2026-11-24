@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-20 01:14:00 (PST)
+Last modified: 2026-11-23 15:18:05 (PST)
 
 > **NOTE:**
 >
@@ -249,7 +249,7 @@ Last modified: 2026-11-20 01:14:00 (PST)
 >
 > [![Plot of a function on x from 0 to 1. A solid blue diagonal line rises from an open circle at the origin to the point 1 at x of 1. A single vermilion filled point sits far above, at the value 5 at x of 0. A dashed horizontal line at height 1 marks the essential supremum.](measures-lp-spaces_files/figure-html/essential-supremum-norm-python-1.png)](measures-lp-spaces_files/figure-html/essential-supremum-norm-python-1.png "Figure 3: The function in Example 5: f(s) = s except f(0) = 5. The supremum is 5, reached only at the single point s = 0, which has measure zero, so the essential supremum norm is the dashed height 1.")
 >
-> Figure 3: The [function](https://morrison-lab.github.io/mcs/functions.html#def-function) in [Example 5](#exm-essential-supremum-norm): $f(s) = s$ except $f(0) = 5$. The [supremum](algebra-sums.llms.md#def-supremum) is $5$, reached only at the single point $s = 0$, which has [measure zero](measures-measure-spaces.llms.md#def-measure-zero), so the [essential supremum norm](#def-essential-supremum-norm) is the dashed height $1$.
+> Figure 3: The [function](https://morrison-lab.github.io/mcs/functions.html#def-function) in [Example 5](#exm-essential-supremum-norm): $f(s) = s$ except $f(0) = 5$. The [supremum](algebra-convexity.llms.md#def-supremum) is $5$, reached only at the single point $s = 0$, which has [measure zero](measures-measure-spaces.llms.md#def-measure-zero), so the [essential supremum norm](#def-essential-supremum-norm) is the dashed height $1$.
 
 > **NOTE:**
 >
@@ -316,7 +316,7 @@ Last modified: 2026-11-20 01:14:00 (PST)
 >
 > *Remark 1* ($L^p$ spaces and norms in probability and machine learning). In probability, statistics, and machine learning, $L^p$ spaces structure the geometry of random variables, estimators, and loss functions:
 >
-> 1.  **Random variables, moments, and inclusion of** $L^p$ spaces: When $\mu= \mathbb{P}$ is a probability measure ([Definition 12 in Measures and Probability Measures](measures-measure-spaces.llms.md#def-probability-measure)) with total measure ${\mathbb{P}\mathopen{}\left(S\right)\mathclose{}} = 1$, an $L^p$ function is a random variable $X$ with finite $p$-th moment: $$\mathopen{}\left\lVert X\right\rVert\mathclose{}_p = \mathopen{}\left({\mathbb{E}\mathopen{}\left[\mathopen{}\left|X\right|\mathclose{}^p\right]\mathclose{}}\right)\mathclose{}^{1/p}.$$ By [Jensen’s inequality](algebra-sums.llms.md#thm-jensen), if $1 \le p \le q \le \infty$, then $\mathopen{}\left\lVert X\right\rVert\mathclose{}_p \le \mathopen{}\left\lVert X\right\rVert\mathclose{}_q$, so $L^q(P) \subseteq L^p(P)$. For instance, every random variable with finite variance ($X \in L^2$) has finite expectation ($X \in L^1$).
+> 1.  **Random variables, moments, and inclusion of** $L^p$ spaces: When $\mu= \mathbb{P}$ is a probability measure ([Definition 12 in Measures and Probability Measures](measures-measure-spaces.llms.md#def-probability-measure)) with total measure ${\mathbb{P}\mathopen{}\left(S\right)\mathclose{}} = 1$, an $L^p$ function is a random variable $X$ with finite $p$-th moment: $$\mathopen{}\left\lVert X\right\rVert\mathclose{}_p = \mathopen{}\left({\mathbb{E}\mathopen{}\left[\mathopen{}\left|X\right|\mathclose{}^p\right]\mathclose{}}\right)\mathclose{}^{1/p}.$$ By [Jensen’s inequality](algebra-convexity.llms.md#thm-jensen), if $1 \le p \le q \le \infty$, then $\mathopen{}\left\lVert X\right\rVert\mathclose{}_p \le \mathopen{}\left\lVert X\right\rVert\mathclose{}_q$, so $L^q(P) \subseteq L^p(P)$. For instance, every random variable with finite variance ($X \in L^2$) has finite expectation ($X \in L^1$).
 >
 > 2.  **The unique Hilbert space** $L^2$ and conditional expectation: Among all $L^p$ spaces, only $L^2(\mu)$ is an [inner product space](linear-algebra-inner-products.llms.md#def-inner-product-space), equipped with the inner product ${\mathopen{}\left\langle f, g\right\rangle\mathclose{}} \stackrel{\text{def}}{=}\int_S f g \, d\mu$ (all other $L^p$ spaces fail the parallelogram law). The completeness of $L^2$ makes it a Hilbert space. In regression, the conditional expectation ${\mathbb{E}\mathopen{}\left[Y \mid X\right]\mathclose{}}$ is the orthogonal projection of $Y \in L^2$ onto the closed subspace of $L^2$ functions measurable with respect to $X$, minimizing the population mean squared error (pMSE) $\mathopen{}\left\lVert Y - g(X)\right\rVert\mathclose{}_2^2$.
 >

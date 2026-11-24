@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-20 01:14:00 (PST)
+Last modified: 2026-11-23 15:18:05 (PST)
 
 > **NOTE:**
 >
@@ -33,7 +33,7 @@ Last modified: 2026-11-20 01:14:00 (PST)
 
 > **NOTE:**
 >
-> **Definition 4 (Convergence of a sequence of vectors)** A [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)}, \ldots$ in $\mathbb{R}^p$ **converges** to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^* \in \mathbb{R}^p$ if the sequence of distances $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*\right\rVert\mathclose{}$ [converges](algebra-exponentials.llms.md#def-convergent-sequence) to $0$. For $p = 1$, $\mathopen{}\left\lVert x^{(t)} - x^*\right\rVert\mathclose{} = \mathopen{}\left|x^{(t)} - x^*\right|\mathclose{}$, and this is the convergence of a sequence of numbers to $x^*$.
+> **Definition 4 (Convergence of a sequence of vectors)** A [sequence](https://morrison-lab.github.io/mcs/functions.html#def-sequence) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)}, \ldots$ in $\mathbb{R}^p$ **converges** to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^* \in \mathbb{R}^p$ if the sequence of distances $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(t)} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*\right\rVert\mathclose{}$ [converges](algebra-polynomials.llms.md#def-convergent-sequence) to $0$. For $p = 1$, $\mathopen{}\left\lVert x^{(t)} - x^*\right\rVert\mathclose{} = \mathopen{}\left|x^{(t)} - x^*\right|\mathclose{}$, and this is the convergence of a sequence of numbers to $x^*$.
 
 > **NOTE:**
 >
@@ -94,7 +94,7 @@ Last modified: 2026-11-20 01:14:00 (PST)
 >
 > - $x^{(3)} = 2.0000001$ (to seven decimals).
 >
-> The iterates ([Definition 2](#def-iterate)) approach $2$, the local minimizer of $f$ (a stationary point, since $f'(2) = 0$, with $f''(2) = 4 > 0$; [Theorem 7 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#thm-second-order-condition)).
+> The iterates ([Definition 2](#def-iterate)) approach $2$, the local minimizer of $f$ (a stationary point, since $f'(2) = 0$, with $f''(2) = 4 > 0$; [Theorem 5 in Optimality Conditions in Several Variables](optimization-optimality.llms.md#thm-second-order-condition)).
 
 > **NOTE:**
 >
@@ -120,19 +120,19 @@ Last modified: 2026-11-20 01:14:00 (PST)
 > &= [5],
 > \end{aligned}$$
 >
-> so ${q\mathopen{}\left(\delta\right)\mathclose{}} = f(2.5) + 2.25\,\delta+ 2.5\,\delta^2$. For $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)$, whose Hessian is $\begin{bmatrix} 1 & 0 \\ 0 & 3 \end{bmatrix}$ at every point, the [quadratic approximation](#def-quadratic-model) at any $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ equals $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}})$ exactly ([Example 12 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#exm-taylor-mv) with $\mathbf{S} = \begin{bmatrix} 1/2 & 0 \\ 0 & 3/2 \end{bmatrix}$).
+> so ${q\mathopen{}\left(\delta\right)\mathclose{}} = f(2.5) + 2.25\,\delta+ 2.5\,\delta^2$. For $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)$, whose Hessian is $\begin{bmatrix} 1 & 0 \\ 0 & 3 \end{bmatrix}$ at every point, the [quadratic approximation](#def-quadratic-model) at any $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ equals $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}})$ exactly ([Example 6 in Optimality Conditions in Several Variables](optimization-optimality.llms.md#exm-taylor-mv) with $\mathbf{S} = \begin{bmatrix} 1/2 & 0 \\ 0 & 3/2 \end{bmatrix}$).
 
 > **NOTE:**
 >
-> *Remark 1* (The quadratic approximation and Taylor’s theorem). When the second partial derivatives of $f$ are continuous, [Theorem 6 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#thm-taylor-mv) says that $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}})$ equals the [expression](https://morrison-lab.github.io/mcs/expressions-algorithms.html#def-expression) for ${q\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}\right)\mathclose{}}$ in [Definition 7](#def-quadratic-model) with the Hessian evaluated at a point between $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}$.
+> *Remark 1* (The quadratic approximation and Taylor’s theorem). When the second partial derivatives of $f$ are continuous, [Theorem 4 in Optimality Conditions in Several Variables](optimization-optimality.llms.md#thm-taylor-mv) says that $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}})$ equals the [expression](https://morrison-lab.github.io/mcs/expressions-algorithms.html#def-expression) for ${q\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}\right)\mathclose{}}$ in [Definition 7](#def-quadratic-model) with the Hessian evaluated at a point between $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}$.
 
 > **NOTE:**
 >
-> **Theorem 1 (The Newton step minimizes the quadratic approximation)** Let $q$ be the [quadratic approximation](#def-quadratic-model) of $f$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, with $\mathbf{H} = \mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite). Its unique minimizer is the Newton step $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^* = -\mathbf{H}^{-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}$.
+> **Theorem 1 (The Newton step minimizes the quadratic approximation)** Let $q$ be the [quadratic approximation](#def-quadratic-model) of $f$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, with $\mathbf{H} = \mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ [positive definite](linear-algebra-definite-matrices.llms.md#def-positive-definite). Its unique minimizer is the Newton step $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^* = -\mathbf{H}^{-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}$.
 
 > **NOTE:**
 >
-> *Proof*. $\mathbf{H}$ is symmetric, by the definition of [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite), and [invertible](linear-algebra-special-matrices.llms.md#thm-pd-inverse), so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^*$ exists and $\mathbf{H} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^* = -\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}$. For any $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}} \in \mathbb{R}^p$, first
+> *Proof*. $\mathbf{H}$ is symmetric, by the definition of [positive definite](linear-algebra-definite-matrices.llms.md#def-positive-definite), and [invertible](linear-algebra-definite-matrices.llms.md#thm-pd-inverse), so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^*$ exists and $\mathbf{H} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^* = -\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}$. For any $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}} \in \mathbb{R}^p$, first
 >
 > $$\begin{aligned}
 > {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{d}}\vphantom{d}}}^{\top} \mathbf{H} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}^*
@@ -250,13 +250,13 @@ Last modified: 2026-11-20 01:14:00 (PST)
 >
 > [![Plot of the cubic f of x equals x cubed over 3 minus 4 x for x from 0.5 to 4, in blue, and its quadratic approximation at x equal to 2.5 in dashed vermilion. The approximation touches the cubic at 2.5, is a parabola opening upward, and has its lowest point at 2.05, marked by a vermilion triangle. A vermilion circle marks the starting point 2.5, and a blue square marks the minimizer 2 of the cubic.](optimization-newton_files/figure-html/newton-model-python-1.png)](optimization-newton_files/figure-html/newton-model-python-1.png "Figure 1: The cubic f(x) = \tfrac{1}{3} x^3 - 4x (blue) and its quadratic approximation at x = 2.5 (dashed). The approximation touches f at 2.5 (circle), and its minimizer 2.05 (triangle) is the iterate after one Newton step from 2.5 (Example 4). It lies close to the minimizer 2 of f (blue marker).")
 >
-> Figure 1: The [cubic](algebra-exponentials.llms.md#def-cubic-polynomial) $f(x) = \tfrac{1}{3} x^3 - 4x$ (blue) and its [quadratic approximation](#def-quadratic-model) at $x = 2.5$ (dashed). The approximation touches $f$ at $2.5$ (circle), and its [minimizer](algebra-basics.llms.md#def-global-minimizer) $2.05$ (triangle) is the [iterate](#def-iterate) after one [Newton step](#def-newton-step) from $2.5$ ([Example 4](#exm-newton-model)). It lies close to the minimizer $2$ of $f$ (blue marker).
+> Figure 1: The [cubic](algebra-polynomials.llms.md#def-cubic-polynomial) $f(x) = \tfrac{1}{3} x^3 - 4x$ (blue) and its [quadratic approximation](#def-quadratic-model) at $x = 2.5$ (dashed). The approximation touches $f$ at $2.5$ (circle), and its [minimizer](algebra-basics.llms.md#def-global-minimizer) $2.05$ (triangle) is the [iterate](#def-iterate) after one [Newton step](#def-newton-step) from $2.5$ ([Example 4](#exm-newton-model)). It lies close to the minimizer $2$ of $f$ (blue marker).
 
 # 3 The Newton step as a root of the linear approximation of the gradient
 
 > **NOTE:**
 >
-> **Definition 8 (Linear approximation of the gradient)** Let $f$ be as in [Newton’s method](#def-newton-method) and let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ be a point. The **linear approximation of the gradient** of $f$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is the $p \times 1$ [vector-valued function](linear-algebra-vectors.llms.md#def-vector-valued) ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}_{q}}$ of a step $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}\in \mathbb{R}^p$ whose $j$th entry, for $j = 1, \ldots, p$, is the function whose [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) is the [tangent plane](optimization-convexity.llms.md#def-tangent-plane) to the graph of the [partial derivative](vector-calculus.llms.md#def-partial-derivative) $\frac{\partial}{\partial x_j} f$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, evaluated at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}$:
+> **Definition 8 (Linear approximation of the gradient)** Let $f$ be as in [Newton’s method](#def-newton-method) and let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ be a point. The **linear approximation of the gradient** of $f$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is the $p \times 1$ [vector-valued function](linear-algebra-vectors.llms.md#def-vector-valued) ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}_{q}}$ of a step $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}\in \mathbb{R}^p$ whose $j$th entry, for $j = 1, \ldots, p$, is the function whose [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph) is the [tangent plane](optimization-convexity.llms.md#def-tangent-plane) to the graph of the [partial derivative](vector-calculus-gradients.llms.md#def-partial-derivative) $\frac{\partial}{\partial x_j} f$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, evaluated at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}$:
 >
 > $$\mathopen{}\left[{{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}_{q}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}\right)\mathclose{}}\right]\mathclose{}_j \stackrel{\text{def}}{=}\frac{\partial}{\partial x_j} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) + {\mathopen{}\left(\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\right)\mathclose{}\right)\mathclose{}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}.
 > \tag{1}$$
@@ -341,11 +341,11 @@ Last modified: 2026-11-20 01:14:00 (PST)
 > >
 > > [![The derivative x squared minus 4 for x from minus 3 to minus 1.5 (blue), its tangent line at minus 2.5 (dashed vermilion, with a circle at the point of tangency, height 2.25) and a horizontal line at 0. The tangent line crosses 0 at minus 2.05 (vermilion triangle), near the root minus 2 of the derivative (blue square).](optimization-newton_files/figure-html/gradient-linear-approximation-python-1.png)](optimization-newton_files/figure-html/gradient-linear-approximation-python-1.png "Figure 2: The derivative f'(x) = x^2 - 4 of the cubic f(x) = \tfrac{1}{3} x^3 - 4x (blue) and its linear approximation at x = -2.5 (dashed, Equation 2). The tangent line crosses 0 at -2.05 (triangle marker), the next Newton iterate, near the root -2 of f' (square marker). ")
 > >
-> > Figure 2: The [derivative](calculus-derivatives.llms.md#def-derivative) $f'(x) = x^2 - 4$ of the [cubic](algebra-exponentials.llms.md#def-cubic-polynomial) $f(x) = \tfrac{1}{3} x^3 - 4x$ (blue) and [its linear approximation](#def-gradient-linear-approximation) at $x = -2.5$ (dashed, [Equation 2](#eq-gradient-linear-approximation-cubic)). The [tangent line](calculus-derivatives.llms.md#def-tangent-line) crosses $0$ at $-2.05$ (triangle marker), the next Newton [iterate](#def-iterate), near the root $-2$ of $f'$ (square marker).
+> > Figure 2: The [derivative](calculus-derivatives.llms.md#def-derivative) $f'(x) = x^2 - 4$ of the [cubic](algebra-polynomials.llms.md#def-cubic-polynomial) $f(x) = \tfrac{1}{3} x^3 - 4x$ (blue) and [its linear approximation](#def-gradient-linear-approximation) at $x = -2.5$ (dashed, [Equation 2](#eq-gradient-linear-approximation-cubic)). The [tangent line](calculus-derivatives.llms.md#def-tangent-line) crosses $0$ at $-2.05$ (triangle marker), the next Newton [iterate](#def-iterate), near the root $-2$ of $f'$ (square marker).
 
 > **NOTE:**
 >
-> **Example 6 (The tangent line to** $f$ is not the linear approximation of the gradient) For the [cubic](algebra-exponentials.llms.md#def-cubic-polynomial) $f(x) = \tfrac{1}{3} x^3 - 4x$ at $x = -2.5$ ([Example 5](#exm-gradient-linear-approximation)), the [tangent line](calculus-derivatives.llms.md#def-tangent-line) to $f$ itself is
+> **Example 6 (The tangent line to** $f$ is not the linear approximation of the gradient) For the [cubic](algebra-polynomials.llms.md#def-cubic-polynomial) $f(x) = \tfrac{1}{3} x^3 - 4x$ at $x = -2.5$ ([Example 5](#exm-gradient-linear-approximation)), the [tangent line](calculus-derivatives.llms.md#def-tangent-line) to $f$ itself is
 >
 > $$\begin{aligned}
 > f(-2.5) + f'(-2.5)\,\delta
@@ -357,18 +357,18 @@ Last modified: 2026-11-20 01:14:00 (PST)
 > \end{aligned}
 > \tag{3}$$
 >
-> It is not the [linear approximation of the gradient](#def-gradient-linear-approximation): it approximates $f$, not $f'$. Its root, $\delta= -\tfrac{115}{54}$, is a step toward a zero of $f$, not toward a [stationary point](optimization-critical-points.llms.md#def-stationary-point) of $f$.
+> It is not the [linear approximation of the gradient](#def-gradient-linear-approximation): it approximates $f$, not $f'$. Its root, $\delta= -\tfrac{115}{54}$, is a step toward a zero of $f$, not toward a [stationary point](optimization-optimality.llms.md#def-stationary-point) of $f$.
 
 > **NOTE:**
 >
-> **Lemma 1 (The linear approximation of the gradient uses the Hessian)** Let $f$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, the [gradient](vector-calculus.llms.md#def-vector-derivative) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}$ and the [Hessian](vector-calculus.llms.md#def-hessian) $\mathbf{H}$ be as in the [quadratic approximation](#def-quadratic-model), and let the [second partial derivatives](vector-calculus.llms.md#def-second-partial-derivative) of $f$ be [continuous at](vector-calculus.llms.md#def-continuous-several) every point of an [open ball](vector-calculus.llms.md#def-ball) around $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$. Then the [linear approximation of the gradient](#def-gradient-linear-approximation) of $f$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is the gradient plus the Hessian times the step:
+> **Lemma 1 (The linear approximation of the gradient uses the Hessian)** Let $f$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, the [gradient](vector-calculus-gradients.llms.md#def-vector-derivative) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}$ and the [Hessian](vector-calculus-hessian.llms.md#def-hessian) $\mathbf{H}$ be as in the [quadratic approximation](#def-quadratic-model), and let the [second partial derivatives](vector-calculus-hessian.llms.md#def-second-partial-derivative) of $f$ be [continuous at](vector-calculus-hessian.llms.md#def-continuous-several) every [point](linear-algebra-vectors.llms.md#def-real-coordinate-space) of an [open ball](vector-calculus-hessian.llms.md#def-ball) around $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$. Then the [linear approximation of the gradient](#def-gradient-linear-approximation) of $f$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is the gradient plus the Hessian times the step:
 >
 > $${{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}_{q}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}\right)\mathclose{}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} + \mathbf{H} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}.
 > \tag{4}$$
 
 > **NOTE:**
 >
-> *Proof*. For each $i$ and $j$, the $i$th entry of $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\right)\mathclose{}$ is $\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\right)\mathclose{}$, which is $\mathopen{}\left[\mathbf{H}\right]\mathclose{}_{ij}$ by the definitions of the [Hessian](vector-calculus.llms.md#def-hessian) and of the [derivative of a vector-valued function](vector-calculus.llms.md#def-vector-valued-derivative). So, for each $j$,
+> *Proof*. For each $i$ and $j$, the $i$th entry of $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\right)\mathclose{}$ is $\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\right)\mathclose{}$, which is $\mathopen{}\left[\mathbf{H}\right]\mathclose{}_{ij}$ by the definitions of the [Hessian](vector-calculus-hessian.llms.md#def-hessian) and of the [derivative of a vector-valued function](vector-calculus-derivative-rules.llms.md#def-vector-valued-derivative). So, for each $j$,
 >
 > $$\begin{aligned}
 > \mathopen{}\left[{{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}_{q}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}\right)\mathclose{}}\right]\mathclose{}_j
@@ -389,11 +389,11 @@ Last modified: 2026-11-20 01:14:00 (PST)
 > \end{aligned}
 > \tag{5}$$
 >
-> The third line uses the [symmetry of the Hessian](vector-calculus.llms.md#thm-hessian-symmetric), whose hypothesis the lemma assumes.
+> The third line uses the [symmetry of the Hessian](vector-calculus-hessian.llms.md#thm-hessian-symmetric), whose hypothesis the lemma assumes.
 
 > **NOTE:**
 >
-> **Example 7 (A gradient that equals its linear approximation)** For $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)$, the second function of [Example 3](#exm-quadratic-model), the [gradient](vector-calculus.llms.md#def-vector-derivative) is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} = {(x_1,\ 3 x_2)}^{\top}$, and the [Hessian](vector-calculus.llms.md#def-hessian) is $\begin{bmatrix} 1 & 0 \\ 0 & 3 \end{bmatrix}$ at every point. By [Lemma 1](#lem-gradient-linear-approximation), the [linear approximation of the gradient](#def-gradient-linear-approximation) at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is
+> **Example 7 (A gradient that equals its linear approximation)** For $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)$, the second function of [Example 3](#exm-quadratic-model), the [gradient](vector-calculus-gradients.llms.md#def-vector-derivative) is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}} = {(x_1,\ 3 x_2)}^{\top}$, and the [Hessian](vector-calculus-hessian.llms.md#def-hessian) is $\begin{bmatrix} 1 & 0 \\ 0 & 3 \end{bmatrix}$ at every [point](linear-algebra-vectors.llms.md#def-real-coordinate-space). By [Lemma 1](#lem-gradient-linear-approximation), the [linear approximation of the gradient](#def-gradient-linear-approximation) at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is
 >
 > $$\begin{aligned}
 > {{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}_{q}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}\right)\mathclose{}}
@@ -415,7 +415,7 @@ Last modified: 2026-11-20 01:14:00 (PST)
 
 > **NOTE:**
 >
-> **Theorem 2 (The Newton step is the root of the linear approximation of the gradient)** Let $f$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}$ and the [Hessian](vector-calculus.llms.md#def-hessian) $\mathbf{H}$ be as in [Lemma 1](#lem-gradient-linear-approximation), with $\mathbf{H}$ [invertible](linear-algebra-special-matrices.llms.md#def-matrix-inverse). The only step $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}$ at which the [linear approximation of the gradient](#def-gradient-linear-approximation) is zero is the [Newton step](#def-newton-step):
+> **Theorem 2 (The Newton step is the root of the linear approximation of the gradient)** Let $f$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}$ and the [Hessian](vector-calculus-hessian.llms.md#def-hessian) $\mathbf{H}$ be as in [Lemma 1](#lem-gradient-linear-approximation), with $\mathbf{H}$ [invertible](linear-algebra-special-matrices.llms.md#def-matrix-inverse). The only step $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}$ at which the [linear approximation of the gradient](#def-gradient-linear-approximation) is zero is the [Newton step](#def-newton-step):
 >
 > $${{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{g}}\vphantom{g}}_{q}}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{\delta}}\vphantom{\delta}}\right)\mathclose{}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{p \times 1}
 > \iff
@@ -442,7 +442,7 @@ Last modified: 2026-11-20 01:14:00 (PST)
 
 > **NOTE:**
 >
-> **Example 8 (The Newton step at** $x = -2.5$ as a root) At $x = -2.5$, the [linear approximation of the gradient](#def-gradient-linear-approximation) of the [cubic](algebra-exponentials.llms.md#def-cubic-polynomial) $f(x) = \tfrac{1}{3} x^3 - 4x$ is $\ell(\delta) = 2.25 - 5 \delta$ ([Example 5](#exm-gradient-linear-approximation)). Setting it to $0$,
+> **Example 8 (The Newton step at** $x = -2.5$ as a root) At $x = -2.5$, the [linear approximation of the gradient](#def-gradient-linear-approximation) of the [cubic](algebra-polynomials.llms.md#def-cubic-polynomial) $f(x) = \tfrac{1}{3} x^3 - 4x$ is $\ell(\delta) = 2.25 - 5 \delta$ ([Example 5](#exm-gradient-linear-approximation)). Setting it to $0$,
 >
 > $$\begin{aligned}
 > 0 &= 2.25 - 5 \delta
@@ -456,11 +456,11 @@ Last modified: 2026-11-20 01:14:00 (PST)
 > \end{aligned}
 > \tag{9}$$
 >
-> so the next [iterate](#def-iterate) is $-2.5 + 0.45 = -2.05$, the point where the [tangent line](calculus-derivatives.llms.md#def-tangent-line) in [Figure 2](#fig-gradient-linear-approximation) crosses $0$. The [Newton’s method](#def-newton-method) iteration $x^{(t+1)} = \tfrac{1}{2} \mathopen{}\left(x^{(t)} + 4 / x^{(t)}\right)\mathclose{}$ of [Example 2](#exm-newton-method) gives the same iterate. Here $H = [-5]$ is not [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite), so [Theorem 1](#thm-newton-model) does not describe this step, but [Theorem 2](#thm-newton-linearized-gradient) does.
+> so the next [iterate](#def-iterate) is $-2.5 + 0.45 = -2.05$, the point where the [tangent line](calculus-derivatives.llms.md#def-tangent-line) in [Figure 2](#fig-gradient-linear-approximation) crosses $0$. The [Newton’s method](#def-newton-method) iteration $x^{(t+1)} = \tfrac{1}{2} \mathopen{}\left(x^{(t)} + 4 / x^{(t)}\right)\mathclose{}$ of [Example 2](#exm-newton-method) gives the same iterate. Here $H = [-5]$ is not [positive definite](linear-algebra-definite-matrices.llms.md#def-positive-definite), so [Theorem 1](#thm-newton-model) does not describe this step, but [Theorem 2](#thm-newton-linearized-gradient) does.
 
 > **NOTE:**
 >
-> *Remark 2* (Two ways to read the Newton step). [Theorem 1](#thm-newton-model) reads the [Newton step](#def-newton-step) as the [minimizer](algebra-basics.llms.md#def-global-minimizer) of the [quadratic approximation](#def-quadratic-model), which needs the [Hessian](vector-calculus.llms.md#def-hessian) $\mathbf{H}$ to be [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite). [Theorem 2](#thm-newton-linearized-gradient) reads it as the root of the [linear approximation of the gradient](#def-gradient-linear-approximation), which needs only $\mathbf{H}$ [invertible](linear-algebra-special-matrices.llms.md#def-matrix-inverse). [Newton’s method](#def-newton-method) solves $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{p \times 1}$ by replacing the [gradient](vector-calculus.llms.md#def-vector-derivative) with [its linear approximation](#def-gradient-linear-approximation) at each [iterate](#def-iterate), so it looks for a [stationary point](optimization-critical-points.llms.md#def-stationary-point) of any kind, not only a minimizer.
+> *Remark 2* (Two ways to read the Newton step). [Theorem 1](#thm-newton-model) reads the [Newton step](#def-newton-step) as the [minimizer](algebra-basics.llms.md#def-global-minimizer) of the [quadratic approximation](#def-quadratic-model), which needs the [Hessian](vector-calculus-hessian.llms.md#def-hessian) $\mathbf{H}$ to be [positive definite](linear-algebra-definite-matrices.llms.md#def-positive-definite). [Theorem 2](#thm-newton-linearized-gradient) reads it as the root of the [linear approximation of the gradient](#def-gradient-linear-approximation), which needs only $\mathbf{H}$ [invertible](linear-algebra-special-matrices.llms.md#def-matrix-inverse). [Newton’s method](#def-newton-method) solves $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{p \times 1}$ by replacing the [gradient](vector-calculus-gradients.llms.md#def-vector-derivative) with [its linear approximation](#def-gradient-linear-approximation) at each [iterate](#def-iterate), so it looks for a [stationary point](optimization-optimality.llms.md#def-stationary-point) of any kind, not only a minimizer.
 
 # 4 Convergence
 
@@ -523,13 +523,13 @@ Last modified: 2026-11-20 01:14:00 (PST)
 > nc_err_ax = [x - 2 for x in nc_x_ax]
 > fig, ax = plt.subplots(figsize=(5, 3.5), layout="constrained")
 > ax.semilogy(range(4), nc_err_ax, "o-", color="#0072B2")
-> #> [<matplotlib.lines.Line2D object at 0x770134f060d0>]
+> #> [<matplotlib.lines.Line2D object at 0x770234b2a0d0>]
 > ax.set_xlabel("iteration t")
 > #> Text(0.5, 0, 'iteration t')
 > ax.set_ylabel("error of the iterate")
 > #> Text(0, 0.5, 'error of the iterate')
 > ax.set_xticks(range(4))
-> #> [<matplotlib.axis.XTick object at 0x770135177b10>, <matplotlib.axis.XTick object at 0x770134f06210>, <matplotlib.axis.XTick object at 0x770134f06990>, <matplotlib.axis.XTick object at 0x770134f07110>]
+> #> [<matplotlib.axis.XTick object at 0x770234b03b10>, <matplotlib.axis.XTick object at 0x770234b2a210>, <matplotlib.axis.XTick object at 0x770234b2a990>, <matplotlib.axis.XTick object at 0x770234b2b110>]
 > plt.show();
 > ```
 >
@@ -545,9 +545,9 @@ Last modified: 2026-11-20 01:14:00 (PST)
 
 > **NOTE:**
 >
-> **Example 11 (Newton’s method can find a maximum)** From $x^{(0)} = -2.5$ the same iteration gives $-2.05$, $-2.000610$, $-2.0000001$, approaching $-2$. But $-2$ is not a minimizer of $f$: it is a [stationary point](optimization-critical-points.llms.md#def-stationary-point) of $-f$, whose [second derivative](calculus-derivatives.llms.md#def-second-derivative) at $-2$ is $-f''(-2) = 4 > 0$, so it is a strict local minimizer of $-f$ ([Theorem 7 in Critical Points and Optimality Conditions](optimization-critical-points.llms.md#thm-second-order-condition)), that is, $f$ is strictly larger at $-2$ than at all nearby points. [Newton’s method](#def-newton-method) looks only for a stationary point. In this example, the [Hessian](vector-calculus.llms.md#def-hessian) $H = f''(x) = 2x$ is negative at every [iterate](#def-iterate). If $H < 0$, then [Theorem 1](#thm-newton-model) does not apply, because it requires a [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite) Hessian. Instead, the [quadratic approximation](#def-quadratic-model) ${q\mathopen{}\left(\delta\right)\mathclose{}} = f + g\,\delta+ \tfrac{1}{2} H \delta^2$ tends to $-\infty$ as $\mathopen{}\left|\delta\right|\mathclose{} \to \infty$, so it has no minimizer.
+> **Example 11 (Newton’s method can find a maximum)** From $x^{(0)} = -2.5$ the same iteration gives $-2.05$, $-2.000610$, $-2.0000001$, approaching $-2$. But $-2$ is not a minimizer of $f$: it is a [stationary point](optimization-optimality.llms.md#def-stationary-point) of $-f$, whose [second derivative](calculus-derivatives.llms.md#def-second-derivative) at $-2$ is $-f''(-2) = 4 > 0$, so it is a strict local minimizer of $-f$ ([Theorem 5 in Optimality Conditions in Several Variables](optimization-optimality.llms.md#thm-second-order-condition)), that is, $f$ is strictly larger at $-2$ than at all nearby points. [Newton’s method](#def-newton-method) looks only for a stationary point. In this example, the [Hessian](vector-calculus-hessian.llms.md#def-hessian) $H = f''(x) = 2x$ is negative at every [iterate](#def-iterate). If $H < 0$, then [Theorem 1](#thm-newton-model) does not apply, because it requires a [positive definite](linear-algebra-definite-matrices.llms.md#def-positive-definite) Hessian. Instead, the [quadratic approximation](#def-quadratic-model) ${q\mathopen{}\left(\delta\right)\mathclose{}} = f + g\,\delta+ \tfrac{1}{2} H \delta^2$ tends to $-\infty$ as $\mathopen{}\left|\delta\right|\mathclose{} \to \infty$, so it has no minimizer.
 >
-> [Figure 4](#fig-newton-maximum) shows the [cubic](algebra-exponentials.llms.md#def-cubic-polynomial) and its quadratic approximation.
+> [Figure 4](#fig-newton-maximum) shows the [cubic](algebra-polynomials.llms.md#def-cubic-polynomial) and its quadratic approximation.
 >
 > > **NOTE:**
 > >
@@ -601,15 +601,15 @@ Last modified: 2026-11-20 01:14:00 (PST)
 > > nx_f_max_py = (-2)**3 / 3 - 4 * (-2)
 > > fig, ax = plt.subplots(figsize=(6, 4), layout="constrained")
 > > ax.plot(nx_x_py, nx_f_py, color="#0072B2")
-> > #> [<matplotlib.lines.Line2D object at 0x77013522fc50>]
+> > #> [<matplotlib.lines.Line2D object at 0x770236e2bc50>]
 > > ax.plot(nx_x_py, nx_q_py, "--", color="#D55E00")
-> > #> [<matplotlib.lines.Line2D object at 0x77013522fed0>]
+> > #> [<matplotlib.lines.Line2D object at 0x770236e2bed0>]
 > > ax.plot([-2.5], [nx_f0_py], "o", color="#D55E00")
-> > #> [<matplotlib.lines.Line2D object at 0x77013522fd90>]
+> > #> [<matplotlib.lines.Line2D object at 0x770236e2bd90>]
 > > ax.plot([-2.05], [nx_q_step_py], "^", color="#D55E00")
-> > #> [<matplotlib.lines.Line2D object at 0x77013522f250>]
+> > #> [<matplotlib.lines.Line2D object at 0x770236e2b250>]
 > > ax.plot([-2], [nx_f_max_py], "s", color="#0072B2")
-> > #> [<matplotlib.lines.Line2D object at 0x77013522ed50>]
+> > #> [<matplotlib.lines.Line2D object at 0x770236e2ad50>]
 > > ax.set_ylim(-2, 6.5)
 > > #> (-2.0, 6.5)
 > > ax.set_xlabel("x")
@@ -627,22 +627,22 @@ Last modified: 2026-11-20 01:14:00 (PST)
 > >
 > > [![Plot of the cubic f of x equals x cubed over 3 minus 4 x for x from -4 to -0.5, in blue, with a local maximum at x equal to -2, marked by a blue square. A dashed vermilion parabola opening downward is the quadratic approximation at the start -2.5. It touches the cubic at -2.5 and has its highest point at -2.05, marked by a vermilion triangle. A vermilion circle marks the start -2.5.](optimization-newton_files/figure-html/newton-maximum-python-1.png)](optimization-newton_files/figure-html/newton-maximum-python-1.png "Figure 4: The cubic f(x) = x^3 / 3 - 4x of Example 11 is blue, and its quadratic approximation at the start -2.5 is dashed vermilion. The approximation opens downward, so its stationary point -2.05 (triangle) is the point where the approximation is largest, and the Newton step moves uphill. The iterates approach the local maximum at -2 (blue marker).")
 > >
-> > Figure 4: The [cubic](algebra-exponentials.llms.md#def-cubic-polynomial) $f(x) = x^3 / 3 - 4x$ of [Example 11](#exm-newton-maximum) is blue, and its [quadratic approximation](#def-quadratic-model) at the start $-2.5$ is dashed vermilion. The approximation opens downward, so its [stationary point](optimization-critical-points.llms.md#def-stationary-point) $-2.05$ (triangle) is the point where the approximation is largest, and the [Newton step](#def-newton-step) moves uphill. The [iterates](#def-iterate) approach the [local maximum](optimization-critical-points.llms.md#def-local-maximizer) at $-2$ (blue marker).
+> > Figure 4: The [cubic](algebra-polynomials.llms.md#def-cubic-polynomial) $f(x) = x^3 / 3 - 4x$ of [Example 11](#exm-newton-maximum) is blue, and its [quadratic approximation](#def-quadratic-model) at the start $-2.5$ is dashed vermilion. The approximation opens downward, so its [stationary point](optimization-optimality.llms.md#def-stationary-point) $-2.05$ (triangle) is the point where the approximation is largest, and the [Newton step](#def-newton-step) moves uphill. The [iterates](#def-iterate) approach the [local maximum](optimization-optimality.llms.md#def-local-maximizer) at $-2$ (blue marker).
 
 > **NOTE:**
 >
-> **Theorem 3 (Newton’s method minimizes a quadratic in one step)** Let $\mathbf{S}$ be a $p \times p$ [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite) matrix, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} \in \mathbb{R}^p$, and $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$. From any $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)}$, Newton’s method ([Definition 5](#def-newton-method)) gives $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)} = \mathbf{S}^{-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}$, the unique minimizer of $f$.
+> **Theorem 3 (Newton’s method minimizes a quadratic in one step)** Let $\mathbf{S}$ be a $p \times p$ [positive definite](linear-algebra-definite-matrices.llms.md#def-positive-definite) matrix, $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} \in \mathbb{R}^p$, and $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$. From any $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)}$, Newton’s method ([Definition 5](#def-newton-method)) gives $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)} = \mathbf{S}^{-1} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}$, the unique minimizer of $f$.
 
 > **NOTE:**
 >
-> *Proof*. Partial derivatives of a sum or of a constant multiple are the sum or multiple of the partial derivatives, so the [derivative of a quadratic form](vector-calculus.llms.md#cor-quadratic-form-symmetric) applies to $\tfrac{1}{2}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and the [derivative of a linear combination](vector-calculus.llms.md#cor-deriv-lincom-tp) to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$:
+> *Proof*. Partial derivatives of a sum or of a constant multiple are the sum or multiple of the partial derivatives, so the [derivative of a quadratic form](vector-calculus-derivative-rules.llms.md#cor-quadratic-form-symmetric) applies to $\tfrac{1}{2}\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top} \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ and the [derivative of a linear combination](vector-calculus-derivative-rules.llms.md#cor-deriv-lincom-tp) to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$:
 >
 > $$\begin{aligned}
 > \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) &= \tfrac{1}{2} (2 \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) - \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} \\
 > &= \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}};
 > \end{aligned}$$
 >
-> by the [Hessian of a quadratic form](vector-calculus.llms.md#thm-hessian-quadratic) with $\tfrac{1}{2} \mathbf{S}$ in place of $\mathbf{S}$, and because the [gradient](vector-calculus.llms.md#def-vector-derivative) $-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}$ of the [linear](algebra-exponentials.llms.md#def-linear-function) [term](algebra-sums.llms.md#def-term) is [constant](vector-calculus.llms.md#def-constant-wrt-vector), $\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{S}$, which is [invertible](linear-algebra-special-matrices.llms.md#thm-pd-inverse). So
+> by the [Hessian of a quadratic form](vector-calculus-hessian.llms.md#thm-hessian-quadratic) with $\tfrac{1}{2} \mathbf{S}$ in place of $\mathbf{S}$, and because the [gradient](vector-calculus-gradients.llms.md#def-vector-derivative) $-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}}$ of the [linear](algebra-polynomials.llms.md#def-linear-function) [term](algebra-sums.llms.md#def-term) is [constant](vector-calculus-derivative-rules.llms.md#def-constant-wrt-vector), $\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{S}$, which is [invertible](linear-algebra-definite-matrices.llms.md#thm-pd-inverse). So
 >
 > $$\begin{aligned}
 > \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)}
@@ -663,7 +663,7 @@ Last modified: 2026-11-20 01:14:00 (PST)
 
 > **NOTE:**
 >
-> **Example 12 (One step to the minimizer)** Let $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)$, so $\mathbf{S} = \begin{bmatrix} 1 & 0 \\ 0 & 3 \end{bmatrix}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$. From $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)} = {(3, 1)}^{\top}$ the [gradient](vector-calculus.llms.md#def-vector-derivative) is $\nabla f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)}) = \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)} = {(3, 3)}^{\top}$, and $\mathbf{S}^{-1} = \begin{bmatrix} 1 & 0 \\ 0 & 1/3 \end{bmatrix}$, so the Newton step is $-\mathbf{S}^{-1} {(3, 3)}^{\top} = -{(3, 1)}^{\top}$ and
+> **Example 12 (One step to the minimizer)** Let $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)$, so $\mathbf{S} = \begin{bmatrix} 1 & 0 \\ 0 & 3 \end{bmatrix}$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{c}}\vphantom{c}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}_{2 \times 1}$. From $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)} = {(3, 1)}^{\top}$ the [gradient](vector-calculus-gradients.llms.md#def-vector-derivative) is $\nabla f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)}) = \mathbf{S} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(0)} = {(3, 3)}^{\top}$, and $\mathbf{S}^{-1} = \begin{bmatrix} 1 & 0 \\ 0 & 1/3 \end{bmatrix}$, so the Newton step is $-\mathbf{S}^{-1} {(3, 3)}^{\top} = -{(3, 1)}^{\top}$ and
 >
 > $$\begin{aligned}
 > \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^{(1)} &= {(3, 1)}^{\top} - {(3, 1)}^{\top} \\
@@ -672,7 +672,7 @@ Last modified: 2026-11-20 01:14:00 (PST)
 >
 > the minimizer.
 >
-> [Figure 5](#fig-newton-quadratic) shows the step on the [level curves](vector-calculus.llms.md#def-level-set) of $f$.
+> [Figure 5](#fig-newton-quadratic) shows the step on the [level curves](vector-calculus-gradients.llms.md#def-level-set) of $f$.
 >
 > > **NOTE:**
 > >
@@ -723,7 +723,7 @@ Last modified: 2026-11-20 01:14:00 (PST)
 > > nq_z_py = (nq_xx_py**2 + 3 * nq_yy_py**2) / 2
 > > fig, ax = plt.subplots(figsize=(6, 3.5), layout="constrained")
 > > ax.contour(nq_xx_py, nq_yy_py, nq_z_py, levels=10, colors="#0072B2")
-> > #> <matplotlib.contour.QuadContourSet object at 0x7701351ade80>
+> > #> <matplotlib.contour.QuadContourSet object at 0x770236ee1e80>
 > > ax.annotate("", xy=(0.764, -1.236), xytext=(3, 1),
 > >             arrowprops={"arrowstyle": "->", "color": "grey"})
 > > #> Text(3, 1, '')
@@ -731,7 +731,7 @@ Last modified: 2026-11-20 01:14:00 (PST)
 > >             arrowprops={"arrowstyle": "->", "color": "#D55E00"})
 > > #> Text(3, 1, '')
 > > ax.plot([3], [1], "ko")
-> > #> [<matplotlib.lines.Line2D object at 0x770132cda990>]
+> > #> [<matplotlib.lines.Line2D object at 0x7702349f2990>]
 > > ax.set_aspect("equal")
 > > ax.set_xlabel("x1")
 > > #> Text(0.5, 0, 'x1')
@@ -748,7 +748,7 @@ Last modified: 2026-11-20 01:14:00 (PST)
 > >
 > > [![Contour plot of f(x) = (x1^2 + 3 x2^2) / 2 for x1 from -4 to 4 and x2 from -2 to 2. The level curves are ellipses centred at the origin, wider along x1 than along x2. A point at (3, 1) lies on one ellipse. A vermilion arrow runs from that point straight to the origin, which is the Newton step. A grey arrow of the same length points along the negative gradient, down and left at 45 degrees, and does not reach the origin.](optimization-newton_files/figure-html/newton-quadratic-fig-python-1.png)](optimization-newton_files/figure-html/newton-quadratic-fig-python-1.png "Figure 5: The level curves of f in Example 12 are ellipses. From the start {(3, 1)}^{\top}, the Newton step (vermilion arrow) goes straight to the minimizer at the origin. The negative gradient -{(3, 3)}^{\top} (gray arrow, drawn as long as the Newton step) points across the narrow side of the ellipses and misses the origin.")
 > >
-> > Figure 5: The [level curves](vector-calculus.llms.md#def-level-set) of $f$ in [Example 12](#exm-newton-quadratic) are ellipses. From the start ${(3, 1)}^{\top}$, the [Newton step](#def-newton-step) (vermilion arrow) goes straight to the [minimizer](algebra-basics.llms.md#def-global-minimizer) at the origin. The negative [gradient](vector-calculus.llms.md#def-vector-derivative) $-{(3, 3)}^{\top}$ (gray arrow, drawn as long as the Newton step) points across the narrow side of the ellipses and misses the origin.
+> > Figure 5: The [level curves](vector-calculus-gradients.llms.md#def-level-set) of $f$ in [Example 12](#exm-newton-quadratic) are [ellipses](linear-algebra-vectors.llms.md#def-ellipse). From the start ${(3, 1)}^{\top}$, the [Newton step](#def-newton-step) (vermilion arrow) goes straight to the [minimizer](algebra-basics.llms.md#def-global-minimizer) at the origin. The negative [gradient](vector-calculus-gradients.llms.md#def-vector-derivative) $-{(3, 3)}^{\top}$ (gray arrow, drawn as long as the Newton step) points across the narrow side of the ellipses and misses the origin.
 >
 > [Figure 6](#fig-newton-quadratic-3d) shows the same [function](https://morrison-lab.github.io/mcs/functions.html#def-function) as a surface.
 >
@@ -826,11 +826,11 @@ Last modified: 2026-11-20 01:14:00 (PST)
 > > fig = plt.figure(figsize=(6, 4.5))
 > > ax = fig.add_subplot(projection="3d")
 > > ax.plot_surface(nq_x1_3d, nq_x2_3d, nq_z_3d, color="#0072B2", alpha=0.6)
-> > #> <mpl_toolkits.mplot3d.art3d.Poly3DCollection object at 0x7701351af620>
+> > #> <mpl_toolkits.mplot3d.art3d.Poly3DCollection object at 0x770236ee3620>
 > > ax.scatter([3], [1], [6], color="#D55E00", label="start")
-> > #> <mpl_toolkits.mplot3d.art3d.Path3DCollection object at 0x7701351af770>
+> > #> <mpl_toolkits.mplot3d.art3d.Path3DCollection object at 0x770236ee3770>
 > > ax.scatter([0], [0], [0], color="black", label="minimizer")
-> > #> <mpl_toolkits.mplot3d.art3d.Path3DCollection object at 0x770132b8ee90>
+> > #> <mpl_toolkits.mplot3d.art3d.Path3DCollection object at 0x7702348a6e90>
 > > ax.set_xlabel("x1")
 > > #> Text(0.5, 0, 'x1')
 > > ax.set_ylabel("x2")
@@ -838,7 +838,7 @@ Last modified: 2026-11-20 01:14:00 (PST)
 > > ax.set_zlabel("f(x)")
 > > #> Text(0.5, 0, 'f(x)')
 > > ax.legend(loc="upper right")
-> > #> <matplotlib.legend.Legend object at 0x7701351af8c0>
+> > #> <matplotlib.legend.Legend object at 0x770236ee38c0>
 > > plt.show();
 > > ```
 > >

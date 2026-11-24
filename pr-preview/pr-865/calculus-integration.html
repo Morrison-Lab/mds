@@ -102,9 +102,9 @@ div.csl-indent {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-1699165e9fb1725d309a04d83efd1a05.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-0d0f4db5a3ed3fc3e5b0eaf09fd9f9be.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-1699165e9fb1725d309a04d83efd1a05.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-f50b23cbd4f49061faf5f7dbc4364508.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-e3d608924d8f07ebdc6daf50948dfd29.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-f50b23cbd4f49061faf5f7dbc4364508.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet">
 <script src="site_libs/quarto-contrib/callouty-theorem-1.4.2/callouty-theorem.js"></script>
 <link href="site_libs/quarto-contrib/callouty-theorem-1.4.2/callouty-theorem.css" rel="stylesheet">
@@ -157,13 +157,14 @@ cookieconsent.run({
 </script><script>
 // Theme dropdown: Light, Off-white, Parchment, Dark. Quarto's own toggle
 // handles light/dark and remembers it; the two tinted palettes are a
-// data-palette attribute on <html>. The choice is kept under "mln-theme".
-// Off-white is the default for a first visit.
+// data-palette attribute on <html>. The choice is kept under "lds-theme"
+// (falling back to "mln-theme"). Off-white is the default for a first visit.
 (function () {
-  var KEY = "mln-theme";
+  var KEY = "lds-theme";
+  var LEGACY_KEY = "mln-theme";
   var OPTIONS = [["light", "Light"], ["offwhite", "Off-white"], ["parchment", "Parchment"], ["dark", "Dark"]];
   function stored() {
-    try { return localStorage.getItem(KEY); } catch (e) { return null; }
+    try { return localStorage.getItem(KEY) || localStorage.getItem(LEGACY_KEY); } catch (e) { return null; }
   }
   function isDark() { return document.body.classList.contains("quarto-dark"); }
   function apply(choice, remember) {
@@ -218,15 +219,15 @@ cookieconsent.run({
 })();
 </script><link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
 <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><style>
-div.callout-cor.callout {
-  border-left-color: #00838F;
+div.callout-lem.callout {
+  border-left-color: #1565C0;
 }
-div.callout-cor.callout-style-default .callout-header {
-  background-color: rgba(0, 131, 143, 0.13);
+div.callout-lem.callout-style-default .callout-header {
+  background-color: rgba(21, 101, 192, 0.13);
 }
-div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-exm.callout {
   border-left-color: #6A1B9A;
@@ -238,56 +239,6 @@ div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-fig.callout {
-  border-left-color: #757575;
-}
-div.callout-fig.callout-style-default .callout-header {
-  background-color: rgba(117, 117, 117, 0.13);
-}
-div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-remark.callout {
-  border-left-color: #AD1457;
-}
-div.callout-remark.callout-style-default .callout-header {
-  background-color: rgba(173, 20, 87, 0.13);
-}
-div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-exr.callout {
-  border-left-color: #FFA500;
-}
-div.callout-exr.callout-style-default .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
-}
-div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-solution.callout {
-  border-left-color: #4E342E;
-}
-div.callout-solution.callout-style-default .callout-header {
-  background-color: rgba(78, 52, 46, 0.13);
-}
-div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cnj.callout {
-  border-left-color: #558B2F;
-}
-div.callout-cnj.callout-style-default .callout-header {
-  background-color: rgba(85, 139, 47, 0.13);
-}
-div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
 div.callout-prp.callout {
   border-left-color: #827717;
 }
@@ -297,16 +248,6 @@ div.callout-prp.callout-style-default .callout-header {
 div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-lem.callout {
-  border-left-color: #1565C0;
-}
-div.callout-lem.callout-style-default .callout-header {
-  background-color: rgba(21, 101, 192, 0.13);
-}
-div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-proof.callout {
   border-left-color: #37474F;
@@ -318,15 +259,15 @@ div.callout-proof .callout-toggle::before {  background-image: url('data:image/s
 div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-def.callout {
-  border-left-color: #1B5E20;
+div.callout-exr.callout {
+  border-left-color: #FFA500;
 }
-div.callout-def.callout-style-default .callout-header {
-  background-color: rgba(27, 94, 32, 0.13);
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
 }
-div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-tbl.callout {
   border-left-color: #757575;
@@ -337,6 +278,66 @@ div.callout-tbl.callout-style-default .callout-header {
 div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-fig.callout {
+  border-left-color: #757575;
+}
+div.callout-fig.callout-style-default .callout-header {
+  background-color: rgba(117, 117, 117, 0.13);
+}
+div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cor.callout {
+  border-left-color: #00838F;
+}
+div.callout-cor.callout-style-default .callout-header {
+  background-color: rgba(0, 131, 143, 0.13);
+}
+div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-solution.callout {
+  border-left-color: #4E342E;
+}
+div.callout-solution.callout-style-default .callout-header {
+  background-color: rgba(78, 52, 46, 0.13);
+}
+div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-remark.callout {
+  border-left-color: #AD1457;
+}
+div.callout-remark.callout-style-default .callout-header {
+  background-color: rgba(173, 20, 87, 0.13);
+}
+div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-def.callout {
+  border-left-color: #1B5E20;
+}
+div.callout-def.callout-style-default .callout-header {
+  background-color: rgba(27, 94, 32, 0.13);
+}
+div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
+}
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
+}
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script><script type="text/javascript">
@@ -579,12 +580,20 @@ window.Quarto = {
  <span class="dropdown-text">Equalities, Inequalities and Minimizers</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="./algebra-convexity.html">
+ <span class="dropdown-text">Convexity, Infimum and Supremum</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="./algebra-sums.html">
- <span class="dropdown-text">Convexity, Infimum and Sums</span></a>
+ <span class="dropdown-text">Sums, Products and Quotients</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./algebra-polynomials.html">
+ <span class="dropdown-text">Polynomials, Affine Functions and Series</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./algebra-exponentials.html">
- <span class="dropdown-text">Polynomials, Exponentials and Logarithms</span></a>
+ <span class="dropdown-text">Exponentials and Logarithms</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./algebra-trigonometry.html">
@@ -688,6 +697,10 @@ window.Quarto = {
  <span class="dropdown-text">Subspaces and Rank</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="./linear-algebra-bases.html">
+ <span class="dropdown-text">Bases and Dimension</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="./linear-algebra-column-null-space.html">
  <span class="dropdown-text">Column Space and Null Space</span></a>
   </li>  
@@ -701,23 +714,51 @@ window.Quarto = {
   </li>  
         <li>
     <a class="dropdown-item" href="./linear-algebra-direct-sums.html">
- <span class="dropdown-text">Direct Sums and Orthogonal Complements</span></a>
+ <span class="dropdown-text">Sums and Direct Sums</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-orthogonal-complements.html">
+ <span class="dropdown-text">Orthogonal Complements and the Fundamental Theorem</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./linear-algebra-inner-products.html">
- <span class="dropdown-text">Inner Products and Orthogonality</span></a>
+ <span class="dropdown-text">Inner Products and the Cauchy-Schwarz Inequality</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-orthonormal-bases.html">
+ <span class="dropdown-text">Orthonormal Bases, Outer Products and Hilbert Spaces</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./linear-algebra-special-matrices.html">
- <span class="dropdown-text">Special Matrices and Decompositions</span></a>
+ <span class="dropdown-text">Special Matrices, Quadratic Forms and Trace</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-decompositions.html">
+ <span class="dropdown-text">Eigenvalues and Matrix Decompositions</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-definite-matrices.html">
+ <span class="dropdown-text">Definite Matrices and Determinants</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./linear-algebra-projections.html">
- <span class="dropdown-text">Projections and Linear Systems</span></a>
+ <span class="dropdown-text">Design Matrices and Projections</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-generalized-inverses.html">
+ <span class="dropdown-text">Generalized Inverses and Linear Systems</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-least-squares.html">
+ <span class="dropdown-text">Solving Linear Systems and Least Squares</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./linear-algebra-diagonalization.html">
- <span class="dropdown-text">Diagonalization and Cholesky</span></a>
+ <span class="dropdown-text">Similarity and Diagonalization</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-cholesky.html">
+ <span class="dropdown-text">Schur Complements and the Cholesky Factorization</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./linear-algebra-complex.html">
@@ -725,10 +766,29 @@ window.Quarto = {
   </li>  
     </ul>
 </li>
-  <li class="nav-item">
-    <a class="nav-link" href="./vector-calculus.html"> 
-<span class="menu-text">Vector Calculus</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-vector-calculus" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Vector Calculus</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-vector-calculus">
+<li>
+    <a class="dropdown-item" href="./vector-calculus.html">
+ <span class="dropdown-text">Overview</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./vector-calculus-gradients.html">
+ <span class="dropdown-text">Partial Derivatives and Gradients</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./vector-calculus-derivative-rules.html">
+ <span class="dropdown-text">Jacobians and Derivative Rules</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./vector-calculus-hessian.html">
+ <span class="dropdown-text">Second Partial Derivatives and the Hessian</span></a>
+  </li>  
+    </ul>
+</li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-optimization" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Optimization</span>
@@ -740,7 +800,11 @@ window.Quarto = {
   </li>  
         <li>
     <a class="dropdown-item" href="./optimization-critical-points.html">
- <span class="dropdown-text">Critical Points and Optimality Conditions</span></a>
+ <span class="dropdown-text">Critical Points and Optimization</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./optimization-optimality.html">
+ <span class="dropdown-text">Optimality Conditions in Several Variables</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./optimization-convexity.html">
@@ -845,14 +909,26 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./algebra-convexity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Convexity, Infimum and Supremum</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./algebra-sums.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Convexity, Infimum and Sums</span></a>
+ <span class="menu-text">Sums, Products and Quotients</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./algebra-polynomials.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Polynomials, Affine Functions and Series</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./algebra-exponentials.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Polynomials, Exponentials and Logarithms</span></a>
+ <span class="menu-text">Exponentials and Logarithms</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -992,6 +1068,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-bases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bases and Dimension</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./linear-algebra-column-null-space.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Column Space and Null Space</span></a>
   </div>
@@ -1011,31 +1093,73 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./linear-algebra-direct-sums.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Direct Sums and Orthogonal Complements</span></a>
+ <span class="menu-text">Sums and Direct Sums</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-orthogonal-complements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Orthogonal Complements and the Fundamental Theorem</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./linear-algebra-inner-products.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Inner Products and Orthogonality</span></a>
+ <span class="menu-text">Inner Products and the Cauchy-Schwarz Inequality</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-orthonormal-bases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Orthonormal Bases, Outer Products and Hilbert Spaces</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./linear-algebra-special-matrices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Special Matrices and Decompositions</span></a>
+ <span class="menu-text">Special Matrices, Quadratic Forms and Trace</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-decompositions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Eigenvalues and Matrix Decompositions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-definite-matrices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Definite Matrices and Determinants</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./linear-algebra-projections.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Projections and Linear Systems</span></a>
+ <span class="menu-text">Design Matrices and Projections</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-generalized-inverses.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Generalized Inverses and Linear Systems</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-least-squares.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Solving Linear Systems and Least Squares</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./linear-algebra-diagonalization.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Diagonalization and Cholesky</span></a>
+ <span class="menu-text">Similarity and Diagonalization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-cholesky.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schur Complements and the Cholesky Factorization</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1046,25 +1170,54 @@ window.Quarto = {
 </li>
       </ul>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./vector-calculus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Vector Calculus</span></a>
-  </div>
-</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./optimization.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-6-label">Optimization</span></a>
-            <button type="button" class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-controls="quarto-sidebar-section-6" aria-expanded="false" aria-label="Toggle section: Optimization">
+            <a href="./vector-calculus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text" id="quarto-sidebar-section-6-label">Vector Calculus</span></a>
+            <button type="button" class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-controls="quarto-sidebar-section-6" aria-expanded="false" aria-label="Toggle section: Vector Calculus">
               <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
             </button> 
       </div>
       <ul id="quarto-sidebar-section-6" aria-labelledby="quarto-sidebar-section-6-label" class="collapse list-unstyled sidebar-section depth1 ">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./vector-calculus-gradients.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Partial Derivatives and Gradients</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./vector-calculus-derivative-rules.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Jacobians and Derivative Rules</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./vector-calculus-hessian.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Second Partial Derivatives and the Hessian</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./optimization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text" id="quarto-sidebar-section-7-label">Optimization</span></a>
+            <button type="button" class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-controls="quarto-sidebar-section-7" aria-expanded="false" aria-label="Toggle section: Optimization">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
+      </div>
+      <ul id="quarto-sidebar-section-7" aria-labelledby="quarto-sidebar-section-7-label" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./optimization-critical-points.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Critical Points and Optimality Conditions</span></a>
+ <span class="menu-text">Critical Points and Optimization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./optimization-optimality.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Optimality Conditions in Several Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1128,7 +1281,7 @@ window.Quarto = {
 <main class="content" id="quarto-document-content" tabindex="-1"><!-- qwt-page-banners -->
 <div class="preview-changes-banner" style="background-color: #fff3cd; border: 1px solid #ffc107; border-radius: 4px; padding: 12px; margin: 16px 0;">
     <p style="margin: 0;">
-        <strong>📋 Changes in this PR:</strong> <a href="algebra-basics.html">Equalities, Inequalities and Minimizers</a>, <a href="algebra-complex.html">Complex Numbers</a>, <a href="algebra-exponentials.html">Polynomials, Exponentials and Logarithms</a>, <a href="algebra-sums.html">Convexity, Infimum and Sums</a>, <a href="algebra-trigonometry.html">Trigonometry</a>, <a href="algebra.html">Algebra</a>, <a href="calculus-derivatives.html">Derivatives</a>, <a href="calculus-double-integrals.html">Double Integrals and Fubini’s Theorem</a>, <a href="calculus-integration.html">Integrals and the Fundamental Theorem of Calculus</a>, <a href="calculus-taylor-series.html">Taylor Series</a>, <a href="calculus.html">Calculus</a>, <a href="dependency-tree.html">Dependency Tree</a>, <a href="expressions-algorithms.html">Expressions and Algorithms</a>, <a href="functions.html">Functions</a>, <a href="growth-rates.html">Growth Rates</a>, <a href="index.html">Math for Data Science</a>, <a href="indicator-functions.html">Indicator Functions</a>, <a href="induction.html">Induction and Recursion</a>, <a href="linear-algebra-affine-subspaces.html">Affine Subspaces and Half-Spaces</a>, <a href="linear-algebra-column-null-space.html">Column Space and Null Space</a>, <a href="linear-algebra-complex.html">Complex Vectors and Matrices</a>, <a href="linear-algebra-diagonalization.html">Diagonalization and Cholesky</a>, <a href="linear-algebra-direct-sums.html">Direct Sums and Orthogonal Complements</a>, <a href="linear-algebra-inner-products.html">Inner Products and Orthogonality</a>, <a href="linear-algebra-linear-maps.html">Linear and Affine Maps</a>, <a href="linear-algebra-matrices.html">Matrices</a>, <a href="linear-algebra-matrix-multiplication.html">Matrix Multiplication</a>, <a href="linear-algebra-projections.html">Projections and Linear Systems</a>, <a href="linear-algebra-rank-nullity.html">Rank-Nullity and Rank Factorization</a>, <a href="linear-algebra-special-matrices.html">Special Matrices and Decompositions</a>, <a href="linear-algebra-subspaces.html">Subspaces and Rank</a>, <a href="linear-algebra-vectors.html">Vectors</a>, <a href="linear-algebra.html">Linear Algebra</a>, <a href="measures-additivity.html">Additivity</a>, <a href="measures-integrals.html">Measurable Functions and Integrals</a>, <a href="measures-lp-spaces.html">\(L^p\) Spaces</a>, <a href="measures-measure-spaces.html">Measures and Probability Measures</a>, <a href="measures-product.html">Product Measures</a>, <a href="measures-sigma-algebras.html">Sigma-Algebras</a>, <a href="measures.html">Measures</a>, <a href="notation.html">Notation</a>, <a href="number-systems.html">Number Systems</a>, <a href="optimization-constrained.html">Quadratic Minimization under Linear Constraints</a>, <a href="optimization-convexity.html">Convexity in Several Variables</a>, <a href="optimization-critical-points.html">Critical Points and Optimality Conditions</a>, <a href="optimization-gradient-descent.html">Gradient Descent</a>, <a href="optimization-newton.html">Newton’s Method</a>, <a href="optimization-quasi-newton.html">Quasi-Newton Methods</a>, <a href="optimization.html">Optimization</a>, <a href="proof-writing.html">Proof Writing</a>, <a href="relations.html">Relations</a>, <a href="sets-functions.html">Sets and Functions</a>, <a href="sets.html">Sets</a>, <a href="site_libs/revealjs/plugin/notes/speaker-view.html">reveal.js - Speaker View</a>, <a href="vector-calculus.html">Vector Calculus</a>
+        <strong>📋 Changes in this PR:</strong> <a href="algebra-basics.html">Equalities, Inequalities and Minimizers</a>, <a href="algebra-complex.html">Complex Numbers</a>, <a href="algebra-convexity.html">Convexity, Infimum and Supremum</a>, <a href="algebra-exponentials.html">Exponentials and Logarithms</a>, <a href="algebra-polynomials.html">Polynomials, Affine Functions and Series</a>, <a href="algebra-sums.html">Sums, Products and Quotients</a>, <a href="algebra-trigonometry.html">Trigonometry</a>, <a href="algebra.html">Algebra</a>, <a href="calculus-derivatives.html">Derivatives</a>, <a href="calculus-double-integrals.html">Double Integrals and Fubini’s Theorem</a>, <a href="calculus-integration.html">Integrals and the Fundamental Theorem of Calculus</a>, <a href="calculus-taylor-series.html">Taylor Series</a>, <a href="calculus.html">Calculus</a>, <a href="dependency-tree.html">Dependency Tree</a>, <a href="expressions-algorithms.html">Expressions and Algorithms</a>, <a href="functions.html">Functions</a>, <a href="growth-rates.html">Growth Rates</a>, <a href="index.html">Math for Data Science</a>, <a href="indicator-functions.html">Indicator Functions</a>, <a href="induction.html">Induction and Recursion</a>, <a href="linear-algebra-affine-subspaces.html">Affine Subspaces and Half-Spaces</a>, <a href="linear-algebra-bases.html">Bases and Dimension</a>, <a href="linear-algebra-cholesky.html">Schur Complements and the Cholesky Factorization</a>, <a href="linear-algebra-column-null-space.html">Column Space and Null Space</a>, <a href="linear-algebra-complex.html">Complex Vectors and Matrices</a>, <a href="linear-algebra-decompositions.html">Eigenvalues and Matrix Decompositions</a>, <a href="linear-algebra-definite-matrices.html">Definite Matrices and Determinants</a>, <a href="linear-algebra-diagonalization.html">Similarity and Diagonalization</a>, <a href="linear-algebra-direct-sums.html">Sums and Direct Sums</a>, <a href="linear-algebra-generalized-inverses.html">Generalized Inverses and Linear Systems</a>, <a href="linear-algebra-inner-products.html">Inner Products and the Cauchy-Schwarz Inequality</a>, <a href="linear-algebra-least-squares.html">Solving Linear Systems and Least Squares</a>, <a href="linear-algebra-linear-maps.html">Linear and Affine Maps</a>, <a href="linear-algebra-matrices.html">Matrices</a>, <a href="linear-algebra-matrix-multiplication.html">Matrix Multiplication</a>, <a href="linear-algebra-orthogonal-complements.html">Orthogonal Complements and the Fundamental Theorem</a>, <a href="linear-algebra-orthonormal-bases.html">Orthonormal Bases, Outer Products and Hilbert Spaces</a>, <a href="linear-algebra-projections.html">Design Matrices and Projections</a>, <a href="linear-algebra-rank-nullity.html">Rank-Nullity and Rank Factorization</a>, <a href="linear-algebra-special-matrices.html">Special Matrices, Quadratic Forms and Trace</a>, <a href="linear-algebra-subspaces.html">Subspaces and Rank</a>, <a href="linear-algebra-vectors.html">Vectors</a>, <a href="linear-algebra.html">Linear Algebra</a>, <a href="measures-additivity.html">Additivity</a>, <a href="measures-integrals.html">Measurable Functions and Integrals</a>, <a href="measures-lp-spaces.html">\(L^p\) Spaces</a>, <a href="measures-measure-spaces.html">Measures and Probability Measures</a>, <a href="measures-product.html">Product Measures</a>, <a href="measures-sigma-algebras.html">Sigma-Algebras</a>, <a href="measures.html">Measures</a>, <a href="notation.html">Notation</a>, <a href="number-systems.html">Number Systems</a>, <a href="optimization-constrained.html">Quadratic Minimization under Linear Constraints</a>, <a href="optimization-convexity.html">Convexity in Several Variables</a>, <a href="optimization-critical-points.html">Critical Points and Optimization</a>, <a href="optimization-gradient-descent.html">Gradient Descent</a>, <a href="optimization-newton.html">Newton’s Method</a>, <a href="optimization-optimality.html">Optimality Conditions in Several Variables</a>, <a href="optimization-quasi-newton.html">Quasi-Newton Methods</a>, <a href="optimization.html">Optimization</a>, <a href="proof-writing.html">Proof Writing</a>, <a href="relations.html">Relations</a>, <a href="sets-functions.html">Sets and Functions</a>, <a href="sets.html">Sets</a>, <a href="site_libs/revealjs/plugin/notes/speaker-view.html">reveal.js - Speaker View</a>, <a href="vector-calculus-derivative-rules.html">Jacobians and Derivative Rules</a>, <a href="vector-calculus-gradients.html">Partial Derivatives and Gradients</a>, <a href="vector-calculus-hessian.html">Second Partial Derivatives and the Hessian</a>, <a href="vector-calculus.html">Vector Calculus</a>
         <br>
         <strong>💡 Tip:</strong> If change highlighting is glitchy, add the <code>no-preview-highlights</code> label to this PR to disable it.
     </p>
@@ -1152,7 +1305,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-11-20 01:14:00 (PST)</p>
+      <p class="date">Last modified: 2026-11-23 15:18:05 (PST)</p>
     </div>
   </div>
   
@@ -1630,13 +1783,13 @@ Figure&nbsp;1: The function <span class="math inline">\(f(x) = x^2\)</span> and 
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Def</span><a href="#def-continuous-on" class="quarto-xref">Definition&nbsp;7</a> (Continuous on a closed interval)
+<span class="screen-reader-only">Def</span><a href="#def-continuous-on-interval" class="quarto-xref">Definition&nbsp;7</a> (Continuous on a closed interval)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-15" class="callout-15-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<div id="def-continuous-on" class="theorem definition">
+<div id="def-continuous-on-interval" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 7 (Continuous on a closed interval)</strong></span> A function <span class="math inline">\(f\)</span> is <strong>continuous on</strong> a closed interval <span class="math inline">\([a, b]\)</span> if all three conditions hold:</p>
 <ol type="1">
 <li>
@@ -1664,7 +1817,7 @@ Figure&nbsp;1: The function <span class="math inline">\(f(x) = x^2\)</span> and 
 <div id="callout-16" class="callout-16-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-continuous-on-sqrt" class="theorem example">
-<p><span class="theorem-title"><strong>Example 6 (Continuity on <span class="math inline">\(\lbrack 0, 1\rbrack\)</span> uses one-sided limits at the endpoints)</strong></span> Let <span class="math inline">\(f(x) = \sqrt{x}\)</span>, the <a href="./algebra-basics.html#def-square-root">square root</a>, defined for <span class="math inline">\(x \ge 0\)</span>. Because <span class="math inline">\(f\)</span> is undefined for <span class="math inline">\(x &lt; 0\)</span>, only the right-hand limit of <span class="math inline">\(f\)</span> at <span class="math inline">\(0\)</span> makes sense, and <a href="#def-continuous-on" class="quarto-xref">Definition&nbsp;7</a> asks only for that one-sided limit at the endpoint <span class="math inline">\(0\)</span>. Here <span class="math inline">\(f\)</span> is continuous at every point of <span class="math inline">\((0, 1)\)</span>,</p>
+<p><span class="theorem-title"><strong>Example 6 (Continuity on <span class="math inline">\(\lbrack 0, 1\rbrack\)</span> uses one-sided limits at the endpoints)</strong></span> Let <span class="math inline">\(f(x) = \sqrt{x}\)</span>, the <a href="./algebra-basics.html#def-square-root">square root</a>, defined for <span class="math inline">\(x \ge 0\)</span>. Because <span class="math inline">\(f\)</span> is undefined for <span class="math inline">\(x &lt; 0\)</span>, only the right-hand limit of <span class="math inline">\(f\)</span> at <span class="math inline">\(0\)</span> makes sense, and <a href="#def-continuous-on-interval" class="quarto-xref">Definition&nbsp;7</a> asks only for that <a href="./calculus-derivatives.html#def-one-sided-limit">one-sided limit</a> at the endpoint <span class="math inline">\(0\)</span>. Here <span class="math inline">\(f\)</span> is continuous at every point of <span class="math inline">\((0, 1)\)</span>,</p>
 <p><span class="math display">\[
 \begin{aligned}
 \lim_{x \to 0^+} \sqrt{x} &amp;= 0 \\
@@ -1678,7 +1831,45 @@ Figure&nbsp;1: The function <span class="math inline">\(f(x) = x^2\)</span> and 
 &amp;= f(1),
 \end{aligned}
 \]</span></p>
-<p>so <span class="math inline">\(f\)</span> is continuous on <span class="math inline">\([0, 1]\)</span> (<a href="#def-continuous-on" class="quarto-xref">Definition&nbsp;7</a>).</p>
+<p>so <span class="math inline">\(f\)</span> is <a href="#def-continuous-on-interval">continuous on</a> <span class="math inline">\([0, 1]\)</span>. <a href="#fig-continuous-on-sqrt" class="quarto-xref">Figure&nbsp;2</a> shows its <a href="https://morrison-lab.github.io/mcs/functions.html#def-graph">graph</a>, which has no break anywhere on <span class="math inline">\([0, 1]\)</span>.</p>
+<div class="callout callout-style-simple callout-fig no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<details class="code-fold"><summary>Show code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x_values</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">1</span>, length.out <span class="op">=</span> <span class="fl">401</span><span class="op">)</span></span>
+<span><span class="va">root_values</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/MathFun.html">sqrt</a></span><span class="op">(</span><span class="va">x_values</span><span class="op">)</span></span>
+<span><span class="va">curve</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">x_values</span>, y <span class="op">=</span> <span class="va">root_values</span><span class="op">)</span></span>
+<span><span class="va">endpoints</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tribble.html">tribble</a></span><span class="op">(</span></span>
+<span>  <span class="op">~</span><span class="va">x</span>, <span class="op">~</span><span class="va">y</span>,</span>
+<span>  <span class="fl">0</span>, <span class="fl">0</span>,</span>
+<span>  <span class="fl">1</span>, <span class="fl">1</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">curve</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">x</span>, y <span class="op">=</span> <span class="va">y</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">endpoints</span>, size <span class="op">=</span> <span class="fl">2.5</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><div id="fig-continuous-on-sqrt" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-continuous-on-sqrt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: The <a href="./algebra-basics.html#def-square-root">square root</a> <span class="math inline">\(f(x) = \sqrt{x}\)</span> on <span class="math inline">\([0, 1]\)</span>. The curve meets both filled <a href="https://morrison-lab.github.io/mcs/sets.html#def-interval">endpoints</a>, <span class="math inline">\((0, 0)\)</span> and <span class="math inline">\((1, 1)\)</span>, without a jump.
+</figcaption><div aria-describedby="fig-continuous-on-sqrt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><a href="calculus-integration_files/figure-html/continuous-on-sqrt-plot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;2: The square root f(x) = \sqrt{x} on [0, 1]. The curve meets both filled endpoints, (0, 0) and (1, 1), without a jump."><img src="calculus-integration_files/figure-html/continuous-on-sqrt-plot-1.png" class="img-fluid figure-img" alt="The graph of the square root of x for x from 0 to 1: an unbroken curve rising steeply from the point (0, 0) and flattening as it reaches the point (1, 1). Both endpoints are marked with filled dots." width="432"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -1696,7 +1887,7 @@ Figure&nbsp;1: The function <span class="math inline">\(f(x) = x^2\)</span> and 
 <div id="callout-17" class="callout-17-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-not-continuous-on" class="theorem example">
-<p><span class="theorem-title"><strong>Example 7 (A function not continuous on <span class="math inline">\(\lbrack 0, 1\rbrack\)</span>)</strong></span> Let <span class="math inline">\(f(x) = 0\)</span> for <span class="math inline">\(0 \le x &lt; 1\)</span> and <span class="math inline">\(f(1) = 2\)</span>. Conditions 1 and 2 of <a href="#def-continuous-on" class="quarto-xref">Definition&nbsp;7</a> hold, but</p>
+<p><span class="theorem-title"><strong>Example 7 (A function not continuous on <span class="math inline">\(\lbrack 0, 1\rbrack\)</span>)</strong></span> Let <span class="math inline">\(f(x) = 0\)</span> for <span class="math inline">\(0 \le x &lt; 1\)</span> and <span class="math inline">\(f(1) = 2\)</span>. Conditions 1 and 2 of <a href="#def-continuous-on-interval" class="quarto-xref">Definition&nbsp;7</a> hold, but</p>
 <p><span class="math display">\[
 \begin{aligned}
 \lim_{x \to 1^-} f(x) &amp;= 0 \\
@@ -1704,7 +1895,45 @@ Figure&nbsp;1: The function <span class="math inline">\(f(x) = x^2\)</span> and 
 &amp;= f(1),
 \end{aligned}
 \]</span></p>
-<p>so condition 3 fails and <span class="math inline">\(f\)</span> is not continuous on <span class="math inline">\([0, 1]\)</span>.</p>
+<p>so condition 3 fails and <span class="math inline">\(f\)</span> is not continuous on <span class="math inline">\([0, 1]\)</span>. <a href="#fig-not-continuous-on" class="quarto-xref">Figure&nbsp;3</a> shows the jump at <span class="math inline">\(x = 1\)</span>.</p>
+<div class="callout callout-style-simple callout-fig no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<details class="code-fold"><summary>Show code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">segment</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tribble.html">tribble</a></span><span class="op">(</span></span>
+<span>  <span class="op">~</span><span class="va">x</span>, <span class="op">~</span><span class="va">y</span>,</span>
+<span>  <span class="fl">0</span>, <span class="fl">0</span>,</span>
+<span>  <span class="fl">1</span>, <span class="fl">0</span></span>
+<span><span class="op">)</span></span>
+<span><span class="va">open_end</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">1</span>, y <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span>
+<span><span class="va">value_at_one</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">1</span>, y <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">segment</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">x</span>, y <span class="op">=</span> <span class="va">y</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">open_end</span>, shape <span class="op">=</span> <span class="fl">21</span>, fill <span class="op">=</span> <span class="st">"white"</span>, size <span class="op">=</span> <span class="fl">2.5</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">value_at_one</span>, size <span class="op">=</span> <span class="fl">2.5</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><div id="fig-not-continuous-on" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-not-continuous-on-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: The function with <span class="math inline">\(f(x) = 0\)</span> for <span class="math inline">\(0 \le x &lt; 1\)</span> and <span class="math inline">\(f(1) = 2\)</span>. The open circle at <span class="math inline">\((1, 0)\)</span> marks the <a href="./calculus-derivatives.html#def-one-sided-limit">left-hand limit</a> of <span class="math inline">\(f\)</span> at <span class="math inline">\(1\)</span>, <!-- check-term-links: allow: "open circle" names the plot marker, not the geometric circle --> and the filled dot at <span class="math inline">\((1, 2)\)</span> is <span class="math inline">\(f(1)\)</span>.
+</figcaption><div aria-describedby="fig-not-continuous-on-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><a href="calculus-integration_files/figure-html/not-continuous-on-plot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;3: The function with f(x) = 0 for 0 \le x < 1 and f(1) = 2. The open circle at (1, 0) marks the left-hand limit of f at 1,  and the filled dot at (1, 2) is f(1)."><img src="calculus-integration_files/figure-html/not-continuous-on-plot-1.png" class="img-fluid figure-img" alt="A horizontal segment at height 0 from x = 0 to x = 1, ending in an open circle at (1, 0), and a separate filled dot at (1, 2) above it." width="432"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -1921,7 +2150,7 @@ a &amp;= x_0 \\
 <div id="callout-26" class="callout-26-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-riemann-integral" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 12 (Riemann integral (definite integral))</strong></span> Let <span class="math inline">\(f\)</span> be a <a href="./algebra-sums.html#def-bounded">bounded</a> function on <span class="math inline">\([a, b]\)</span>. For each partition <span class="math inline">\(\mathcal{P}\)</span> of <span class="math inline">\([a, b]\)</span> (<a href="#def-partition" class="quarto-xref">Definition&nbsp;8</a>), choose a sample point <span class="math inline">\(x_i^*\)</span> in each subinterval <span class="math inline">\([x_{i-1}, x_i]\)</span>. The <strong>Riemann integral</strong> of <span class="math inline">\(f\)</span> over <span class="math inline">\([a, b]\)</span> <span class="citation" data-cites="wikipedia_riemann_integral"><a href="#ref-wikipedia_riemann_integral" role="doc-biblioref">[7]</a></span> (also called the <strong>definite integral</strong> of <span class="math inline">\(f\)</span> from <span class="math inline">\(a\)</span> to <span class="math inline">\(b\)</span>) is the limit of the Riemann sums (<a href="#def-riemann-sum" class="quarto-xref">Definition&nbsp;11</a>) as the mesh (<a href="#def-mesh" class="quarto-xref">Definition&nbsp;9</a>) shrinks to zero:</p>
+<p><span class="theorem-title"><strong>Definition 12 (Riemann integral (definite integral))</strong></span> Let <span class="math inline">\(f\)</span> be a <a href="./algebra-convexity.html#def-bounded">bounded</a> function on <span class="math inline">\([a, b]\)</span>. For each partition <span class="math inline">\(\mathcal{P}\)</span> of <span class="math inline">\([a, b]\)</span> (<a href="#def-partition" class="quarto-xref">Definition&nbsp;8</a>), choose a sample point <span class="math inline">\(x_i^*\)</span> in each subinterval <span class="math inline">\([x_{i-1}, x_i]\)</span>. The <strong>Riemann integral</strong> of <span class="math inline">\(f\)</span> over <span class="math inline">\([a, b]\)</span> <span class="citation" data-cites="wikipedia_riemann_integral"><a href="#ref-wikipedia_riemann_integral" role="doc-biblioref">[7]</a></span> (also called the <strong>definite integral</strong> of <span class="math inline">\(f\)</span> from <span class="math inline">\(a\)</span> to <span class="math inline">\(b\)</span>) is the limit of the Riemann sums (<a href="#def-riemann-sum" class="quarto-xref">Definition&nbsp;11</a>) as the mesh (<a href="#def-mesh" class="quarto-xref">Definition&nbsp;9</a>) shrinks to zero:</p>
 <p><span class="math display">\[\int_a^b f(x)\,dx \stackrel{\text{def}}{=}\lim_{\mathopen{}\left\lVert\mathcal{P}\right\rVert\mathclose{} \to 0} \sum_{i=1}^nf(x_i^*)\,\Delta x_i,\]</span></p>
 <p>when that limit exists and has the same value for every choice of the partitions and of the sample points <span class="math inline">\(x_i^*\)</span>.</p>
 <p><span class="citation" data-cites="larsonCalc11e"><a href="#ref-larsonCalc11e" role="doc-biblioref">[2, Sec. 4.3]</a>, p.&nbsp;272</span></p>
@@ -2016,7 +2245,7 @@ a &amp;= x_0 \\
 <div id="exm-integrand" class="theorem example">
 <p><span class="theorem-title"><strong>Example 13 (Integrands)</strong></span> &nbsp;</p>
 <ul>
-<li>In <span class="math inline">\(\int_0^3 2\,dx = 6\)</span> (<a href="#exm-integrable-constant" class="quarto-xref">Example&nbsp;12</a>), the integrand is the <a href="./algebra-exponentials.html#def-constant-function">constant function</a> <span class="math inline">\(f(x) = 2\)</span>, and the <a href="./algebra-sums.html#def-limits-of-integration">limits of integration</a> are <span class="math inline">\(0\)</span> and <span class="math inline">\(3\)</span>.</li>
+<li>In <span class="math inline">\(\int_0^3 2\,dx = 6\)</span> (<a href="#exm-integrable-constant" class="quarto-xref">Example&nbsp;12</a>), the integrand is the <a href="./algebra-polynomials.html#def-constant-function">constant function</a> <span class="math inline">\(f(x) = 2\)</span>, and the <a href="./algebra-sums.html#def-limits-of-integration">limits of integration</a> are <span class="math inline">\(0\)</span> and <span class="math inline">\(3\)</span>.</li>
 <li>In <span class="math inline">\(\int \mathopen{}\left(3x^2 - 1\right)\mathclose{}\,dx = x^3 - x + C\)</span> (<a href="#exm-integral-rules-quadratic" class="quarto-xref">Example&nbsp;2</a>), the integrand is <span class="math inline">\(f(x) = 3x^2 - 1\)</span>; its value at <span class="math inline">\(x = 2\)</span> is <span class="math inline">\(3 \cdot 4 - 1 = 11\)</span>.</li>
 </ul>
 </div>
@@ -2202,26 +2431,26 @@ S_2
 \end{aligned}
 \]</span></p>
 <p>but it is not differentiable at <span class="math inline">\(x = 0\)</span>: its left-hand derivative there is <span class="math inline">\(-1\)</span> and its right-hand derivative is <span class="math inline">\(+1\)</span> (<a href="./calculus-derivatives.html#exm-one-sided-derivative">Example&nbsp;6 in Derivatives</a>).</p>
-<p>This <a href="https://morrison-lab.github.io/mcs/proof-writing.html#def-counterexample">counterexample</a> shows that the <a href="https://morrison-lab.github.io/mcs/proof-writing.html#def-converse">converse</a> of <a href="#thm-diff-implies-cont" class="quarto-xref">Theorem&nbsp;2</a> fails: continuity does not imply differentiability. See <a href="#fig-abs-value" class="quarto-xref">Figure&nbsp;2</a>.</p>
+<p>This <a href="https://morrison-lab.github.io/mcs/proof-writing.html#def-counterexample">counterexample</a> shows that the <a href="https://morrison-lab.github.io/mcs/proof-writing.html#def-converse">converse</a> of <a href="#thm-diff-implies-cont" class="quarto-xref">Theorem&nbsp;2</a> fails: continuity does not imply differentiability. See <a href="#fig-abs-value" class="quarto-xref">Figure&nbsp;4</a>.</p>
 <div class="callout callout-style-simple callout-fig no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<details class="code-fold"><summary>Show code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<details class="code-fold"><summary>Show code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_function.html">geom_function</a></span><span class="op">(</span>fun <span class="op">=</span> <span class="va">abs</span>, xlim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">2</span>, <span class="fl">2</span><span class="op">)</span>, linewidth <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">0</span>, y <span class="op">=</span> <span class="fl">0</span><span class="op">)</span>, size <span class="op">=</span> <span class="fl">3</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Input, x"</span>, y <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/expression.html">expression</a></span><span class="op">(</span><span class="st">"Output, "</span> <span class="op">*</span> <span class="fu">f</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">==</span> <span class="fu"><a href="https://rdrr.io/r/base/MathFun.html">abs</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div id="fig-abs-value" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-abs-value-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: <span class="math inline">\(f(x) = \mathopen{}\left|x\right|\mathclose{}\)</span> has a sharp corner at <span class="math inline">\(x = 0\)</span> (not differentiable there) but is continuous everywhere: no gaps or jumps.
+Figure&nbsp;4: <span class="math inline">\(f(x) = \mathopen{}\left|x\right|\mathclose{}\)</span> has a sharp corner at <span class="math inline">\(x = 0\)</span> (not differentiable there) but is continuous everywhere: no gaps or jumps.
 </figcaption><div aria-describedby="fig-abs-value-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><a href="calculus-integration_files/figure-html/abs-value-code-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;2: f(x) = \mathopen{}\left|x\right|\mathclose{} has a sharp corner at x = 0 (not differentiable there) but is continuous everywhere: no gaps or jumps."><img src="calculus-integration_files/figure-html/abs-value-code-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figure class="figure"><p><a href="calculus-integration_files/figure-html/abs-value-code-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;4: f(x) = \mathopen{}\left|x\right|\mathclose{} has a sharp corner at x = 0 (not differentiable there) but is continuous everywhere: no gaps or jumps."><img src="calculus-integration_files/figure-html/abs-value-code-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -2268,7 +2497,7 @@ Figure&nbsp;2: <span class="math inline">\(f(x) = \mathopen{}\left|x\right|\math
 <div id="callout-40" class="callout-40-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-cont-implies-int" class="theorem example">
-<p><span class="theorem-title"><strong>Example 17 (Continuous, hence integrable: polynomials)</strong></span> Every <a href="./algebra-exponentials.html#def-polynomial">polynomial</a> is continuous on <span class="math inline">\(\mathbb{R}\)</span>, so by <a href="#thm-cont-implies-int" class="quarto-xref">Theorem&nbsp;3</a> every polynomial is integrable on every closed interval <span class="math inline">\([a, b]\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 17 (Continuous, hence integrable: polynomials)</strong></span> Every <a href="./algebra-polynomials.html#def-polynomial">polynomial</a> is continuous on <span class="math inline">\(\mathbb{R}\)</span>, so by <a href="#thm-cont-implies-int" class="quarto-xref">Theorem&nbsp;3</a> every polynomial is integrable on every closed interval <span class="math inline">\([a, b]\)</span>.</p>
 </div>
 </div>
 </div>
@@ -2295,14 +2524,14 @@ Figure&nbsp;2: <span class="math inline">\(f(x) = \mathopen{}\left|x\right|\math
 &amp;= \tfrac{1}{2}.
 \end{aligned}
 \]</span></p>
-<p>This counterexample shows that the converse of <a href="#thm-cont-implies-int" class="quarto-xref">Theorem&nbsp;3</a> fails: integrability does not imply continuity. See <a href="#fig-step" class="quarto-xref">Figure&nbsp;3</a>.</p>
+<p>This counterexample shows that the converse of <a href="#thm-cont-implies-int" class="quarto-xref">Theorem&nbsp;3</a> fails: integrability does not imply continuity. See <a href="#fig-step" class="quarto-xref">Figure&nbsp;5</a>.</p>
 <div class="callout callout-style-simple callout-fig no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<details class="code-fold"><summary>Show code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">step_df</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span></span>
+<details class="code-fold"><summary>Show code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">step_df</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0.5</span>, <span class="fl">0.5</span>, <span class="fl">1</span><span class="op">)</span>,</span>
 <span>  y <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">1</span>, <span class="fl">1</span><span class="op">)</span>,</span>
 <span>  segment <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"left"</span>, <span class="st">"left"</span>, <span class="st">"right"</span>, <span class="st">"right"</span><span class="op">)</span></span>
@@ -2329,12 +2558,12 @@ Figure&nbsp;2: <span class="math inline">\(f(x) = \mathopen{}\left|x\right|\math
 <span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div id="fig-step" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-step-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: Step function: <span class="math inline">\(f(x) = 0\)</span> on <span class="math inline">\([0, \tfrac{1}{2})\)</span> (open circle at the jump) and <span class="math inline">\(f(x) = 1\)</span> on <span class="math inline">\([\tfrac{1}{2}, 1]\)</span> (filled circle). The shaded rectangle has area <span class="math inline">\(\tfrac{1}{2}\)</span>, matching the integral computed in <a href="#exm-int-not-cont" class="quarto-xref">Example&nbsp;18</a>.
+Figure&nbsp;5: Step function: <span class="math inline">\(f(x) = 0\)</span> on <span class="math inline">\([0, \tfrac{1}{2})\)</span> (open circle at the jump) and <span class="math inline">\(f(x) = 1\)</span> on <span class="math inline">\([\tfrac{1}{2}, 1]\)</span> (filled circle). The shaded rectangle has area <span class="math inline">\(\tfrac{1}{2}\)</span>, matching the integral computed in <a href="#exm-int-not-cont" class="quarto-xref">Example&nbsp;18</a>.
 </figcaption><div aria-describedby="fig-step-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><a href="calculus-integration_files/figure-html/step-code-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;3: Step function: f(x) = 0 on [0, \tfrac{1}{2}) (open circle at the jump) and f(x) = 1 on [\tfrac{1}{2}, 1] (filled circle). The shaded rectangle has area \tfrac{1}{2}, matching the integral computed in Example&nbsp;18."><img src="calculus-integration_files/figure-html/step-code-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figure class="figure"><p><a href="calculus-integration_files/figure-html/step-code-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;5: Step function: f(x) = 0 on [0, \tfrac{1}{2}) (open circle at the jump) and f(x) = 1 on [\tfrac{1}{2}, 1] (filled circle). The shaded rectangle has area \tfrac{1}{2}, matching the integral computed in Example&nbsp;18."><img src="calculus-integration_files/figure-html/step-code-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -3185,7 +3414,7 @@ F'(x) &amp;= 2x \\
 &amp;= f(x),
 \end{aligned}
 \]</span></p>
-<p>as <a href="#thm-ftc-part1" class="quarto-xref">Theorem&nbsp;5</a> predicts. <a href="#fig-ftc-part1" class="quarto-xref">Figure&nbsp;4</a> shows the integrand on the left (shaded area equals <span class="math inline">\(F(x)\)</span> at each <span class="math inline">\(x\)</span>) and the accumulation function <span class="math inline">\(F(x) = x^2\)</span> on the right (its slope at <span class="math inline">\(x\)</span> equals <span class="math inline">\(f(x) = 2x\)</span>).</p>
+<p>as <a href="#thm-ftc-part1" class="quarto-xref">Theorem&nbsp;5</a> predicts. <a href="#fig-ftc-part1" class="quarto-xref">Figure&nbsp;6</a> shows the integrand on the left (shaded area equals <span class="math inline">\(F(x)\)</span> at each <span class="math inline">\(x\)</span>) and the accumulation function <span class="math inline">\(F(x) = x^2\)</span> on the right (its slope at <span class="math inline">\(x\)</span> equals <span class="math inline">\(f(x) = 2x\)</span>).</p>
 <div class="callout callout-style-simple callout-fig no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -3194,11 +3423,11 @@ F'(x) &amp;= 2x \\
 <div class="callout-body-container">
 <div id="fig-ftc-part1" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-ftc-part1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: vertical lines mark <span class="math inline">\(x \in \{1, 1.5, 2\}\)</span>. Right: <span class="math inline">\(F(x) = x^2\)</span>; for each marked <span class="math inline">\(x\)</span>, the tangent slope equals <span class="math inline">\(f(x) = 2x\)</span>.
+Figure&nbsp;6: vertical lines mark <span class="math inline">\(x \in \{1, 1.5, 2\}\)</span>. Right: <span class="math inline">\(F(x) = x^2\)</span>; for each marked <span class="math inline">\(x\)</span>, the tangent slope equals <span class="math inline">\(f(x) = 2x\)</span>.
 </figcaption><div aria-describedby="fig-ftc-part1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-ftc-part1" style="flex-basis: 50.0%;justify-content: flex-start;">
-<details class="code-fold"><summary>Show code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<details class="code-fold"><summary>Show code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_ribbon.html">geom_area</a></span><span class="op">(</span></span>
 <span>    data <span class="op">=</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>t <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">0</span>, <span class="va">x_focus</span>, length.out <span class="op">=</span> <span class="fl">200</span><span class="op">)</span><span class="op">)</span>,</span>
 <span>    <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">t</span>, y <span class="op">=</span> <span class="fl">2</span> <span class="op">*</span> <span class="va">t</span><span class="op">)</span>,</span>
@@ -3220,7 +3449,7 @@ Figure&nbsp;4: vertical lines mark <span class="math inline">\(x \in \{1, 1.5, 2
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><a href="calculus-integration_files/figure-html/ftc-part1-left-code-1.png" class="lightbox" data-gallery="fig-ftc-part1" title="Figure&nbsp;4&nbsp;(a): f(t) = 2t; shaded area equals F(1.5) = 2.25; vertical lines mark x \in \{1, 1.5, 2\}."><img src="calculus-integration_files/figure-html/ftc-part1-left-code-1.png" class="img-fluid figure-img" data-ref-parent="fig-ftc-part1" width="672"></a></p>
+<figure class="figure"><p><a href="calculus-integration_files/figure-html/ftc-part1-left-code-1.png" class="lightbox" data-gallery="fig-ftc-part1" title="Figure&nbsp;6&nbsp;(a): f(t) = 2t; shaded area equals F(1.5) = 2.25; vertical lines mark x \in \{1, 1.5, 2\}."><img src="calculus-integration_files/figure-html/ftc-part1-left-code-1.png" class="img-fluid figure-img" data-ref-parent="fig-ftc-part1" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -3230,7 +3459,7 @@ Figure&nbsp;4: vertical lines mark <span class="math inline">\(x \in \{1, 1.5, 2
 </div>
 </div>
 <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-ftc-part1" style="flex-basis: 50.0%;justify-content: flex-start;">
-<details class="code-fold"><summary>Show code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">slope_df</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span></span>
+<details class="code-fold"><summary>Show code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">slope_df</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="va">x_marks</span>,</span>
 <span>  Fx <span class="op">=</span> <span class="va">x_marks</span><span class="op">^</span><span class="fl">2</span>,</span>
 <span>  slope <span class="op">=</span> <span class="fl">2</span> <span class="op">*</span> <span class="va">x_marks</span></span>
@@ -3266,7 +3495,7 @@ Figure&nbsp;4: vertical lines mark <span class="math inline">\(x \in \{1, 1.5, 2
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><a href="calculus-integration_files/figure-html/ftc-part1-right-code-1.png" class="lightbox" data-gallery="fig-ftc-part1" title="Figure&nbsp;4&nbsp;(b): F(x) = x^2; tangent slope at each marked x equals f(x) = 2x."><img src="calculus-integration_files/figure-html/ftc-part1-right-code-1.png" class="img-fluid figure-img" data-ref-parent="fig-ftc-part1" width="672"></a></p>
+<figure class="figure"><p><a href="calculus-integration_files/figure-html/ftc-part1-right-code-1.png" class="lightbox" data-gallery="fig-ftc-part1" title="Figure&nbsp;6&nbsp;(b): F(x) = x^2; tangent slope at each marked x equals f(x) = 2x."><img src="calculus-integration_files/figure-html/ftc-part1-right-code-1.png" class="img-fluid figure-img" data-ref-parent="fig-ftc-part1" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -3377,7 +3606,7 @@ F(2)
 &amp;= 0.865
 \end{aligned}
 \]</span></p>
-<p>See <a href="#fig-exp-pdf-cdf" class="quarto-xref">Figure&nbsp;5</a>.</p>
+<p>See <a href="#fig-exp-pdf-cdf" class="quarto-xref">Figure&nbsp;7</a>.</p>
 <div class="callout callout-style-simple callout-fig no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -3386,11 +3615,11 @@ F(2)
 <div class="callout-body-container">
 <div id="fig-exp-pdf-cdf" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-exp-pdf-cdf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5: Exponential distribution with <span class="math inline">\({\lambda}= 1\)</span>. Left: the PDF <span class="math inline">\(f(t) = {\lambda}\text{e}^{-{\lambda}t}\)</span>; the shaded area under the curve from <span class="math inline">\(0\)</span> to <span class="math inline">\(2\)</span> equals <span class="math inline">\(F(2) \approx 0.865\)</span>. Right: the CDF <span class="math inline">\(F(t) = 1 - \text{e}^{-{\lambda}t}\)</span>; the dashed lines mark the value <span class="math inline">\(F(2)\)</span> computed via FTC Part 2.
+Figure&nbsp;7: Exponential distribution with <span class="math inline">\({\lambda}= 1\)</span>. Left: the PDF <span class="math inline">\(f(t) = {\lambda}\text{e}^{-{\lambda}t}\)</span>; the shaded area under the curve from <span class="math inline">\(0\)</span> to <span class="math inline">\(2\)</span> equals <span class="math inline">\(F(2) \approx 0.865\)</span>. Right: the CDF <span class="math inline">\(F(t) = 1 - \text{e}^{-{\lambda}t}\)</span>; the dashed lines mark the value <span class="math inline">\(F(2)\)</span> computed via FTC Part 2.
 </figcaption><div aria-describedby="fig-exp-pdf-cdf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-exp-pdf-cdf" style="flex-basis: 50.0%;justify-content: flex-start;">
-<details class="code-fold"><summary>Show code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<details class="code-fold"><summary>Show code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_ribbon.html">geom_area</a></span><span class="op">(</span></span>
 <span>    data <span class="op">=</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>t <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">0</span>, <span class="va">t_focus</span>, length.out <span class="op">=</span> <span class="fl">300</span><span class="op">)</span><span class="op">)</span>,</span>
 <span>    <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">t</span>, y <span class="op">=</span> <span class="va">lambda</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/r/base/Log.html">exp</a></span><span class="op">(</span><span class="op">-</span><span class="va">lambda</span> <span class="op">*</span> <span class="va">t</span><span class="op">)</span><span class="op">)</span>,</span>
@@ -3409,7 +3638,7 @@ Figure&nbsp;5: Exponential distribution with <span class="math inline">\({\lambd
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><a href="calculus-integration_files/figure-html/exp-pdf-cdf-pdf-code-1.png" class="lightbox" data-gallery="fig-exp-pdf-cdf" title="Figure&nbsp;5&nbsp;(a): PDF with {\lambda}= 1; shaded area equals F(2) \approx 0.865."><img src="calculus-integration_files/figure-html/exp-pdf-cdf-pdf-code-1.png" class="img-fluid figure-img" data-ref-parent="fig-exp-pdf-cdf" width="672"></a></p>
+<figure class="figure"><p><a href="calculus-integration_files/figure-html/exp-pdf-cdf-pdf-code-1.png" class="lightbox" data-gallery="fig-exp-pdf-cdf" title="Figure&nbsp;7&nbsp;(a): PDF with {\lambda}= 1; shaded area equals F(2) \approx 0.865."><img src="calculus-integration_files/figure-html/exp-pdf-cdf-pdf-code-1.png" class="img-fluid figure-img" data-ref-parent="fig-exp-pdf-cdf" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -3419,7 +3648,7 @@ Figure&nbsp;5: Exponential distribution with <span class="math inline">\({\lambd
 </div>
 </div>
 <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-exp-pdf-cdf" style="flex-basis: 50.0%;justify-content: flex-start;">
-<details class="code-fold"><summary>Show code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<details class="code-fold"><summary>Show code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_function.html">geom_function</a></span><span class="op">(</span></span>
 <span>    fun <span class="op">=</span> \<span class="op">(</span><span class="va">t</span><span class="op">)</span> <span class="fl">1</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/Log.html">exp</a></span><span class="op">(</span><span class="op">-</span><span class="va">lambda</span> <span class="op">*</span> <span class="va">t</span><span class="op">)</span>,</span>
 <span>    xlim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="va">t_max</span><span class="op">)</span>, linewidth <span class="op">=</span> <span class="fl">1</span></span>
@@ -3445,7 +3674,7 @@ Figure&nbsp;5: Exponential distribution with <span class="math inline">\({\lambd
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><a href="calculus-integration_files/figure-html/exp-pdf-cdf-cdf-code-1.png" class="lightbox" data-gallery="fig-exp-pdf-cdf" title="Figure&nbsp;5&nbsp;(b): CDF with {\lambda}= 1; point marks F(2) \approx 0.865."><img src="calculus-integration_files/figure-html/exp-pdf-cdf-cdf-code-1.png" class="img-fluid figure-img" data-ref-parent="fig-exp-pdf-cdf" width="672"></a></p>
+<figure class="figure"><p><a href="calculus-integration_files/figure-html/exp-pdf-cdf-cdf-code-1.png" class="lightbox" data-gallery="fig-exp-pdf-cdf" title="Figure&nbsp;7&nbsp;(b): CDF with {\lambda}= 1; point marks F(2) \approx 0.865."><img src="calculus-integration_files/figure-html/exp-pdf-cdf-cdf-code-1.png" class="img-fluid figure-img" data-ref-parent="fig-exp-pdf-cdf" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -3917,7 +4146,7 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
 <li><a href="#def-continuous"><span class="quarto-xref">Definition&nbsp;4</span> (Continuous function)</a></li>
 <li><a href="#def-discontinuous"><span class="quarto-xref">Definition&nbsp;5</span> (Discontinuous function)</a></li>
 <li><a href="#def-jump-discontinuity"><span class="quarto-xref">Definition&nbsp;6</span> (Jump discontinuity)</a></li>
-<li><a href="#def-continuous-on"><span class="quarto-xref">Definition&nbsp;7</span> (Continuous on a closed interval)</a></li>
+<li><a href="#def-continuous-on-interval"><span class="quarto-xref">Definition&nbsp;7</span> (Continuous on a closed interval)</a></li>
 <li><a href="#def-partition"><span class="quarto-xref">Definition&nbsp;8</span></a></li>
 <li><a href="#def-mesh"><span class="quarto-xref">Definition&nbsp;9</span> (Mesh of a partition)</a></li>
 <li><a href="#def-sample-point"><span class="quarto-xref">Definition&nbsp;10</span> (Sample point)</a></li>
@@ -4180,6 +4409,46 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("resize", place);
 });
 </script><script>
+// A link to an id that has moved to another page of this site: when the page
+// holds no element with the link's #id, look the id up in anchor-index.json,
+// which the site's anchor-index.py post-render step writes at the site root,
+// and go to the page that holds it now, keeping the rest of the hash (a text
+// fragment). A site without the index, an id it does not list, or an id that
+// maps back to this page leaves the reader where they are. It runs on load
+// and again when an in-page link changes the hash.
+(function () {
+  if (!window.fetch) return;
+  var meta = document.querySelector('meta[name="quarto:offset"]');
+  var root = new URL(meta ? meta.getAttribute("content") : "./", location.href);
+  var index = null;
+  function follow() {
+    var id = "";
+    try { id = decodeURIComponent(location.hash.slice(1).replace(/:~:.*$/, "")); } catch (e) { return; }
+    if (!id || document.getElementById(id)) return;
+    index = index || fetch(new URL("anchor-index.json", root)).then(function (r) {
+      return r.ok ? r.json() : null;
+    }).catch(function () { return null; });
+    index.then(function (data) {
+      var ids = data && data.ids;
+      var page = ids && Object.prototype.hasOwnProperty.call(ids, id) ? ids[id] : null;
+      if (typeof page !== "string" || document.getElementById(id)) return;
+      var dest = new URL(page, root);
+      var here = location.pathname.replace(/\/$/, "/index.html");
+      if (dest.pathname === here) return;
+      // location.hash leaves out a text fragment; the navigation entry keeps it.
+      var hash = location.hash;
+      try {
+        var nav = performance.getEntriesByType("navigation")[0];
+        var m = nav && /#(.*)$/.exec(nav.name);
+        if (m && m[1].indexOf(hash.slice(1)) === 0) hash = "#" + m[1];
+      } catch (e) {}
+      location.replace(dest.href.replace(/#.*$/, "") + hash);
+    });
+  }
+  follow();
+  window.addEventListener("hashchange", follow);
+})();
+
 // Typesetting equations and loading images change the height of everything
 // above the reader and push the text they were reading out of view. Keep the
 // reader's place: until they scroll, that is the link target (#id or a text
@@ -4886,17 +5155,17 @@ document.querySelectorAll("main table").forEach(function (t) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Integrals and the Fundamental Theorem of Calculus"</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co">  html: default</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co">  revealjs:</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: calculus-integration-slides.html</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>{{&lt; include latex-macros/macros.qmd &gt;}}</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>{{&lt; include mds/_subfiles/_sec_calculus_integration.qmd &gt;}}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Integrals and the Fundamental Theorem of Calculus"</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co">  html: default</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="co">  revealjs:</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: calculus-integration-slides.html</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>{{&lt; include latex-macros/macros.qmd &gt;}}</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>{{&lt; include mds/_subfiles/_sec_calculus_integration.qmd &gt;}}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">

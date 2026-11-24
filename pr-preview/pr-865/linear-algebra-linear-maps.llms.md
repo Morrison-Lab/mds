@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-20 01:14:00 (PST)
+Last modified: 2026-11-23 15:18:05 (PST)
 
 # 1 Linear and affine maps
 
@@ -632,7 +632,7 @@ Last modified: 2026-11-20 01:14:00 (PST)
 
 > **NOTE:**
 >
-> **Definition 8 (Offset of an affine map, intercept, bias)** In [Definition 7](#def-affine-map), the vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ is called the **offset** of $f$ (statistics also calls it the **intercept**, and machine learning the **bias**).
+> **Definition 8 (Offset of an affine map, intercept, bias)** In [Definition 7](#def-affine-map), the vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}$ is called the **offset** of $f$, also called the **intercept** in statistics, or the **bias** in machine learning.
 
 > **NOTE:**
 >
@@ -874,7 +874,7 @@ Last modified: 2026-11-20 01:14:00 (PST)
 
 > **NOTE:**
 >
-> *Remark 3* (“Linear” in this site, and in machine learning and statistics). This site uses “linear” only in the sense of [Definition 3](#def-linear-map), so by [Theorem 6](#thm-affine-linear-iff) a function with a nonzero offset is affine but not linear. For functions of one variable, this is the same split as [affine](algebra-exponentials.llms.md#def-affine-function) $a x + b$ versus [linear](algebra-exponentials.llms.md#def-linear-function) $a x$ on the algebra page. (The algebra page writes these as $m x + b$ and $m x$; here $m$ already names the number of outputs.)
+> *Remark 3* (“Linear” in this site, and in machine learning and statistics). This site uses “linear” only in the sense of [Definition 3](#def-linear-map), so by [Theorem 6](#thm-affine-linear-iff) a function with a nonzero offset is affine but not linear. For functions of one variable, this is the same split as [affine](algebra-polynomials.llms.md#def-affine-function) $a x + b$ versus [linear](algebra-polynomials.llms.md#def-linear-function) $a x$ on the algebra page. (The algebra page writes these as $m x + b$ and $m x$; here $m$ already names the number of outputs.)
 >
 > Machine learning and statistics often call any function of the form [Equation 1](#eq-linear-scalar) “linear”, as in a *linear model* in statistics or a *linear layer* in a neural network, and call the offset $b$ the bias (machine learning) or the intercept (statistics), as [Definition 7](#def-affine-map) notes. A model with an intercept is affine in $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ but linear in its coefficients $(b, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}})$, and that is the sense of “linear” in “linear model”: it stays linear in the coefficients even when the inputs are transformed: $w_1 x + w_2 x^2 + b$ is not affine in $x$, but it is linear in $(b, w_1, w_2)$. Separately, the affine function $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b$ is a linear function of the augmented vector ${\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{aug}}$ ([Definition 9](#def-augmented-vector)), with $b$ as the coefficient on its first entry.
 

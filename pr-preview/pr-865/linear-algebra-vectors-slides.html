@@ -247,9 +247,10 @@
     reads those vars so it stays legible in every palette. Light is the
     default variable set, Off-white and Parchment are a data-palette attribute
     on <html>, and Dark is the body.qwt-dark class. The choice is saved under
-    "mln-theme", the key the website's theme dropdown (theme-picker.html) uses,
-    so it carries across the site and the decks. First-time visitors get
-    Dark if their system prefers it, and Off-white otherwise.
+    "lds-theme" (falling back to "mln-theme"), the key the website's theme
+    dropdown (theme-picker.html) uses, so it carries across the site and the
+    decks. First-time visitors get Dark if their system prefers it, and
+    Off-white otherwise.
   --><style>
     #qwt-theme-select {
       position: fixed;
@@ -282,7 +283,8 @@
 <script>
   (function () {
     "use strict";
-    var KEY = "mln-theme";
+    var KEY = "lds-theme";
+    var LEGACY_KEY = "mln-theme";
     var DARK_CLASS = "qwt-dark";
     var OPTIONS = [["light", "Light"], ["offwhite", "Off-white"], ["parchment", "Parchment"], ["dark", "Dark"]];
     var root = document.documentElement;
@@ -292,7 +294,7 @@
     }
 
     function stored() {
-      try { return localStorage.getItem(KEY); } catch (e) { return null; }
+      try { return localStorage.getItem(KEY) || localStorage.getItem(LEGACY_KEY); } catch (e) { return null; }
     }
 
     function initialTheme() {
@@ -363,7 +365,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-20 01:14:00 (PST)</p>
+  <p class="date">Last modified: 2026-11-23 15:18:05 (PST)</p>
 </section><section class="slide level2"><p><span id="vectors"></span></p>
 </section><section class="slide level2 scrollable"><div id="exr-list-as-vector" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 1 (Store a data point as one object)</strong></span> A house has a floor area of <span class="math inline">\(120\)</span> square meters, <span class="math inline">\(3\)</span> bedrooms, and an age of <span class="math inline">\(15\)</span> years.</p>
@@ -788,7 +790,7 @@ w_i \ge 0 \text{ for each } i
 </div>
 </section><section class="slide level2"><div id="rem-dot-product-lincom" class="proof remark">
 <p><span class="proof-title"><em>Remark 4</em> (The dot product is a linear combination). </span>The dot product <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span> is a linear combination (<a href="#/def-linear-combination" class="quarto-xref">Definition&nbsp;11</a>) of the entries of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\)</span>, with coefficients <span class="math inline">\(x_1, \ldots, x_p\)</span>. In <a href="#/exm-dot-product" class="quarto-xref">Example&nbsp;7</a>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= 1 \cdot 4 + 2 \cdot 5 + 3 \cdot 6\)</span> is the linear combination of <span class="math inline">\(4\)</span>, <span class="math inline">\(5\)</span>, and <span class="math inline">\(6\)</span> with coefficients <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span>, and <span class="math inline">\(3\)</span>.</p>
-<p>The dot product is also the standard <em>inner product</em> on <span class="math inline">\(\mathbb{R}^p\)</span>; “inner product” is the general notion (<a href="./linear-algebra-inner-products.html#def-inner-product">Definition&nbsp;5 in Inner Products and Orthogonality</a>, later in these notes), of which the dot product is one example.</p>
+<p>The dot product is also the standard <em>inner product</em> on <span class="math inline">\(\mathbb{R}^p\)</span>; “inner product” is the general notion (<a href="./linear-algebra-inner-products.html#def-inner-product">Definition&nbsp;5 in Inner Products and the Cauchy-Schwarz Inequality</a>, later in these notes), of which the dot product is one example.</p>
 </div>
 </section><section class="slide level2"><div id="thm-lincom-symmetric" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 1 (Dot product is symmetric)</strong></span> The dot product is symmetric:</p>
@@ -1761,7 +1763,7 @@ Figure&nbsp;3: The <a href="#/def-ellipse">ellipse</a> with foci <span class="ma
 <p><strong>Video lecture</strong></p>
 </div>
 <div class="callout-content">
-<p>Hutchinson’s <a href="https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/#linear_function_basics">Linear Function Basics</a> (24 min) covers dot products and the Euclidean norm, and goes on to hyperplanes (<a href="./linear-algebra-linear-maps.html#def-hyperplane">Definition&nbsp;10 in Linear and Affine Maps</a>) and <a href="./vector-calculus.html#def-level-set">level sets</a> <span class="citation" data-cites="hutchinson_wwu_ml_videos"><a href="#/references" role="doc-biblioref" onclick="">[16]</a></span>. The login for the video site is posted <a href="https://wwu.instructure.com/courses/1906010/modules#module_3922392">on Canvas</a>.</p>
+<p>Hutchinson’s <a href="https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/#linear_function_basics">Linear Function Basics</a> (24 min) covers dot products and the Euclidean norm, and goes on to hyperplanes (<a href="./linear-algebra-linear-maps.html#def-hyperplane">Definition&nbsp;10 in Linear and Affine Maps</a>) and <a href="./vector-calculus-gradients.html#def-level-set">level sets</a> <span class="citation" data-cites="hutchinson_wwu_ml_videos"><a href="#/references" role="doc-biblioref" onclick="">[16]</a></span>. The login for the video site is posted <a href="https://wwu.instructure.com/courses/1906010/modules#module_3922392">on Canvas</a>.</p>
 </div>
 </div>
 </div>

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-20 01:14:00 (PST)
+Last modified: 2026-11-23 15:18:05 (PST)
 
 # 1 Matrix multiplication
 
@@ -258,7 +258,7 @@ Last modified: 2026-11-20 01:14:00 (PST)
 > &= \begin{bmatrix} 5 & 4 \\ 4 & 5 \end{bmatrix}.
 > \end{aligned}$$
 >
-> Here $\mathbf{A}\mathbf{B} \neq \mathbf{B}\mathbf{A}$, so the middle terms do not combine into $2\mathbf{A}\mathbf{B}$. The squared norm of a sum of vectors, $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rVert\mathclose{}^2$, is a case where they do combine ([Theorem 2 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#thm-norm-sum-square)), because $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$. Matrices that commute, such as $\mathbf{A}$ and $\mathbf{A}^2$, combine the same way.
+> Here $\mathbf{A}\mathbf{B} \neq \mathbf{B}\mathbf{A}$, so the middle terms do not combine into $2\mathbf{A}\mathbf{B}$. The squared norm of a sum of vectors, $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\right\rVert\mathclose{}^2$, is a case where they do combine ([Theorem 2 in Inner Products and the Cauchy-Schwarz Inequality](linear-algebra-inner-products.llms.md#thm-norm-sum-square)), because $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$. Matrices that commute, such as $\mathbf{A}$ and $\mathbf{A}^2$, combine the same way.
 
 > **NOTE:**
 >
