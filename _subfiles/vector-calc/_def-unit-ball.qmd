@@ -1,7 +1,7 @@
 :::{#def-unit-ball}
 #### Unit ball
 
-The open and closed balls (@def-ball, @def-closed-ball) of radius $1$ around $\vzero$
+The [open balls](#def-ball) and [closed balls](#def-closed-ball) of radius $1$ around $\vzero$
 are the open and closed **unit balls**.
 
 :::
