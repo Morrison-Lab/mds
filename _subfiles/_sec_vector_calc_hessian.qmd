@@ -4,6 +4,18 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_def-closed-ball.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_def-unit-ball.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-ball.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_def-second-partial-derivative.qmd >}}
 
 {{< slidebreak >}}
