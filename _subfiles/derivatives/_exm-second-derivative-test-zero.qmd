@@ -30,7 +30,7 @@ Yet the three behave differently near $0$ (@fig-second-derivative-test-zero):
 - $f(x) = x^4 > 0 = f(0)$ for every $x \ne 0$,
   so $0$ is a [local minimizer](algebra.qmd#def-local-minimizer).
 - $g(x) = -x^4 < 0 = g(0)$ for every $x \ne 0$,
-  so $0$ is a [local maximizer](#def-local-maximizer).
+  so $0$ is a [local maximizer](optimization-optimality.qmd#def-local-maximizer).
 - $h(x) = x^3$ is negative for $x < 0$ and positive for $x > 0$,
   so $h(x) < h(0)$ to the left of $0$ and $h(x) > h(0)$ to the right of $0$.
   Thus $0$ is neither a local minimizer nor a local maximizer.

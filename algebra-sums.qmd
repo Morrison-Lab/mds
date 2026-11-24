@@ -1,5 +1,5 @@
 ---
-title: "Convexity, Infimum and Sums"
+title: "Sums, Products and Quotients"
 format:
   html: default
   revealjs:

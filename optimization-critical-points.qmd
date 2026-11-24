@@ -1,5 +1,5 @@
 ---
-title: "Critical Points and Optimality Conditions"
+title: "Critical Points and Optimization"
 format:
   html: default
   revealjs:
@@ -8,8 +8,6 @@ format:
     output-file: optimization-critical-points-handout.pdf
   docx:
     output-file: optimization-critical-points.docx
-resources:
-  - data/auto.csv
 ---
 
 {{< include latex-macros/macros.qmd >}}
@@ -21,7 +19,3 @@ reticulate::py_require(py_packages)
 ```
 
 {{< include mds/_subfiles/_sec_critical_points.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/_sec_optimization_optimality.qmd >}}

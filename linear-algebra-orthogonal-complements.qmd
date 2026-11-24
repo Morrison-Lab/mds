@@ -1,0 +1,21 @@
+---
+title: "Orthogonal Complements and the Fundamental Theorem"
+format:
+  html: default
+  revealjs:
+    output-file: linear-algebra-orthogonal-complements-slides.html
+  pdf:
+    output-file: linear-algebra-orthogonal-complements-handout.pdf
+  docx:
+    output-file: linear-algebra-orthogonal-complements.docx
+---
+
+{{< include latex-macros/macros.qmd >}}
+
+# Orthogonal complements {#sec-orthogonal-complements}
+
+{{< include mds/_subfiles/_sec_linear_algebra_direct_sums_complements.qmd >}}
+
+# The fundamental theorem of linear algebra {#sec-fundamental-theorem}
+
+{{< include mds/_subfiles/_sec_linear_algebra_direct_sums_fundamental.qmd >}}

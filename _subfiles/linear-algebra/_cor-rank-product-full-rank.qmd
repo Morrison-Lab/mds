@@ -28,7 +28,7 @@ and the two matrices have the same nullity (@def-nullity).
 Both have $k$ columns, so by @thm-rank-nullity they have the same [rank](linear-algebra-subspaces.qmd#def-rank).
 
 **Part 2.**
-$\mathcal{C}(\matr{B})$ is a [subspace](linear-algebra-subspaces.qmd#def-subspace) of $\reals^n$ (@thm-column-space-span) of [dimension](linear-algebra-subspaces.qmd#def-dimension) $n$ (@thm-rank-dim),
+$\mathcal{C}(\matr{B})$ is a [subspace](linear-algebra-subspaces.qmd#def-subspace) of $\reals^n$ (@thm-column-space-span) of [dimension](linear-algebra-bases.qmd#def-dimension) $n$ (@thm-rank-dim),
 so $\mathcal{C}(\matr{B}) = \reals^n$ (@thm-subspace-equal-dim).
 Every vector of $\mathcal{C}(\matr{A} \matr{B})$ is $\matr{A}\,(\matr{B} \vecf{x})$ for some $\vecf{x}$ (@def-column-space),
 and $\matr{B} \vecf{x}$ takes every vector of $\reals^n$,

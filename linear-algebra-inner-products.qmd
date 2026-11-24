@@ -1,5 +1,5 @@
 ---
-title: "Inner Products and Orthogonality"
+title: "Inner Products and the Cauchy-Schwarz Inequality"
 format:
   html: default
   revealjs:

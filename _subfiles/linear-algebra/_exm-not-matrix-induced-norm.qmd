@@ -1,7 +1,7 @@
 :::{#exm-not-matrix-induced-norm}
 #### A symmetric matrix that induces no norm
 
-The [symmetric matrix](#def-symmetric-matrix) $\matr{B} = \diag(1, -1)$ is not [positive definite](#def-positive-definite),
+The [symmetric matrix](linear-algebra-special-matrices.qmd#def-symmetric-matrix) $\matr{B} = \diag(1, -1)$ is not [positive definite](#def-positive-definite),
 so it has no [matrix-induced norm](#def-matrix-induced-norm).
 The [square root](algebra-basics.qmd#def-square-root) $\sqrt{\qform{\matr{B}}{\vx}}$ is undefined at $\vx = (0, 1)$:
 

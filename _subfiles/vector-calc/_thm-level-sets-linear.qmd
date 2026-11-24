@@ -6,7 +6,7 @@ Let $\modmemf{\vx} = \dprod{\vcoef}{\vx} + \intcoef$ with $\vcoef \neq \vzero$.
 Every [level set](#def-level-set) $\levelsetof{c}{\modmem}$ is a [hyperplane](linear-algebra-linear-maps.qmd#def-hyperplane)
 with [normal vector](linear-algebra-linear-maps.qmd#def-normal-vector) $\vcoef$,
 parallel to the level set $\levelsetof{0}{\modmem}$.
-Its [dimension](linear-algebra-subspaces.qmd#def-dimension) is $p - 1$:
+Its [dimension](linear-algebra-bases.qmd#def-dimension) is $p - 1$:
 a point for $p = 1$, a line for $p = 2$, and a two-dimensional plane for $p = 3$.
 
 :::
@@ -25,7 +25,7 @@ $$
 This is the [hyperplane](linear-algebra-linear-maps.qmd#def-hyperplane) with [normal vector](linear-algebra-linear-maps.qmd#def-normal-vector) $\vcoef$
 and [offset](linear-algebra-linear-maps.qmd#def-affine-offset) $\intcoef - c$.
 Changing $c$ changes only the offset, so the [level sets](#def-level-set) share the normal vector and are parallel.
-A hyperplane in $\reals^p$ has [dimension](linear-algebra-subspaces.qmd#def-dimension) $p - 1$
+A hyperplane in $\reals^p$ has [dimension](linear-algebra-bases.qmd#def-dimension) $p - 1$
 by [the hyperplane theorem](linear-algebra-affine-subspaces.qmd#thm-hyperplane-subspace),
 which gives the point, line and plane cases for $p = 1, 2, 3$.
 :::

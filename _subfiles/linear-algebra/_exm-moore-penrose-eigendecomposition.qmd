@@ -2,7 +2,7 @@
 #### The Moore-Penrose inverse of a rank-one symmetric matrix
 
 For the [symmetric matrix](linear-algebra-special-matrices.qmd#def-symmetric-matrix) $\matr{S} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$,
-an [eigendecomposition](linear-algebra-special-matrices.qmd#def-eigendecomposition) is
+an [eigendecomposition](linear-algebra-decompositions.qmd#def-eigendecomposition) is
 
 $$
 \matr{S}
@@ -11,7 +11,7 @@ $$
   \tp{\matr{Q}}.
 $$
 
-Inverting only the nonzero [eigenvalue](linear-algebra-special-matrices.qmd#def-eigenvalue) gives $\matr{\Eigvals}^+ = \begin{bmatrix} 1/2 & 0 \\ 0 & 0 \end{bmatrix}$, so
+Inverting only the nonzero [eigenvalue](linear-algebra-decompositions.qmd#def-eigenvalue) gives $\matr{\Eigvals}^+ = \begin{bmatrix} 1/2 & 0 \\ 0 & 0 \end{bmatrix}$, so
 
 $$
 \ba

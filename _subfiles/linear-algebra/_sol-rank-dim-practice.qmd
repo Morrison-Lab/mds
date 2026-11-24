@@ -7,7 +7,7 @@ $$
 \mathcal{C}(\matr{A}) = \operatorname{span}\cb{(1, 2, 3), (2, 4, 6)} = \operatorname{span}\cb{(1, 2, 3)}.
 $$
 
-The single nonzero vector $(1, 2, 3)$ is a [basis](linear-algebra-subspaces.qmd#def-basis) of that [span](linear-algebra-subspaces.qmd#def-span),
+The single nonzero vector $(1, 2, 3)$ is a [basis](linear-algebra-bases.qmd#def-basis) of that [span](linear-algebra-subspaces.qmd#def-span),
 so $\dim\paren{\mathcal{C}(\matr{A})} = 1$,
 and by @thm-rank-dim, $\rankf{\matr{A}} = 1$.
 

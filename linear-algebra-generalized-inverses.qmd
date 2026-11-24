@@ -1,0 +1,17 @@
+---
+title: "Generalized Inverses and Linear Systems"
+format:
+  html: default
+  revealjs:
+    output-file: linear-algebra-generalized-inverses-slides.html
+  pdf:
+    output-file: linear-algebra-generalized-inverses-handout.pdf
+  docx:
+    output-file: linear-algebra-generalized-inverses.docx
+---
+
+{{< include latex-macros/macros.qmd >}}
+
+# Generalized inverses and linear systems {#sec-generalized-inverse}
+
+{{< include mds/_subfiles/_sec_linear_algebra_generalized_inverses.qmd >}}

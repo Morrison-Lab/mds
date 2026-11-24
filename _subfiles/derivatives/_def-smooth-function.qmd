@@ -1,0 +1,12 @@
+:::{#def-smooth-function}
+#### Smooth function (infinitely differentiable function)
+
+A [real-valued function](linear-algebra-vectors.qmd#def-real-vector-valued) $f$ of one variable is **smooth** on an [open interval](https://morrison-lab.github.io/mcs/sets.html#def-open-interval) $I$,
+also called **infinitely differentiable** on $I$,
+if it has a [derivative](#def-derivative) of every order at every [point](linear-algebra-vectors.qmd#def-real-coordinate-space) of $I$:
+the first derivative $f'$ [exists](#def-limit) on $I$,
+so does the [second derivative](#def-second-derivative) $f''$,
+and so on, each derivative being [differentiable at](#def-differentiable) every point of $I$
+[@wikipedia_smoothness].
+
+:::

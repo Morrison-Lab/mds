@@ -22,6 +22,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_exm-half-space.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_thm-convex-intersection.qmd >}}
 
 {{< slidebreak >}}

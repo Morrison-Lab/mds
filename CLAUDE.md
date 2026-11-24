@@ -32,6 +32,10 @@ Authoritative style guide: [UCD-SERG Lab Manual](https://ucd-serg.github.io/lab-
 - `page-navigation.html` --- HTML include (`format.html.include-after-body`) that adds floating previous/next arrows in the page margins and highlights the navbar link for the current page; vendored from `Morrison-Lab/lbt` via [`Morrison-Lab/qwt`](https://github.com/Morrison-Lab/qwt). The previous/next order comes from `website.sidebar` in `_quarto-website.yml`, so add each new page to both the navbar and the sidebar, in the same position.
 - `offwhite.scss`, `theme-picker.html` --- the website's Light / Off-white / Parchment / Dark theme dropdown (saved under `mln-theme`, shared with the slides and the other sites on this origin)
 - `styles.css` --- website styling; `styles-reveal.scss`, `qwt-reveal-toggle.html` (the same dropdown for slides), and the `revealjs-*.lua` filters drive the reveal.js slide output
+- `anchor-landing.html`, `anchor-index.py` --- vendored from [`Morrison-Lab/qwt`](https://github.com/Morrison-Lab/qwt) by `.github/workflows/sync-site-scaffolding.yml`; do not edit them here.
+  `anchor-landing.html` keeps the reader's place while equations load, and sends a link to an id that moved to another page on to that page,
+  using `_site/anchor-index.json`, which the `anchor-index.py` `post-render` step writes.
+  So moving a definition to another page no longer breaks the links that course sites hold to it, though an id that leaves the site still does
 - `math-xrefs.lua` --- resolves `@id` cross-references written inside math (for example a `\text{(@thm-spectral)}` derivation annotation), which Quarto leaves as literal text; it numbers theorem-type divs and labelled equations the way Quarto does and writes the label ("Theorem 59"), linked in HTML
 - `assets/`, `images/` --- static image and asset files (site pages, docs, CI/PR screenshots)
 - `.github/workflows/` --- CI workflow definitions

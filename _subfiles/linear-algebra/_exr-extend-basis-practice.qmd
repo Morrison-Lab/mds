@@ -1,7 +1,7 @@
 :::{#exr-extend-basis-practice}
 #### Extending one vector to a basis of $\reals^3$
 
-@thm-extend-basis says that any [linearly independent](#def-linearly-independent) list
+@thm-extend-basis says that any [linearly independent](linear-algebra-subspaces.qmd#def-linearly-independent) list
 can be completed to a [basis](#def-basis).
 Let
 
@@ -15,7 +15,7 @@ Find two [indicator vectors](linear-algebra-vectors.qmd#def-indicator-vector) th
 #### Hint
 
 Add [indicator vectors](linear-algebra-vectors.qmd#def-indicator-vector) one at a time,
-each outside the [span](#def-span) of the list so far,
+each outside the [span](linear-algebra-subspaces.qmd#def-span) of the list so far,
 as @thm-add-outside-span allows.
 
 :::
