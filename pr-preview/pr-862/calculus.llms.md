@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-20 09:01:42 (PST)
+Last modified: 2026-11-23 20:33:36 (PST)
 
 The calculus notes are split across these pages:
 
@@ -21,7 +21,7 @@ A link to a section, theorem or definition on this page from before the split go
 - Khuri [\[2\]](#ref-khuri2003advanced)
 - Banner [\[3\]](#ref-calclifesaver)
 - Larson and Edwards [\[4\]](#ref-larsonCalc11e)
-- Miller [\[5\]](#ref-problifesavercalc) The calculus review exercises and worked solutions across these pages and in [Vector Calculus](vector-calculus.llms.md#def-partial-derivative) are adapted from this supplemental review chapter.
+- Miller [\[5\]](#ref-problifesavercalc) The calculus review exercises and worked solutions across these pages and on the [Partial Derivatives and Gradients](vector-calculus-gradients.llms.md) page are adapted from this supplemental review chapter.
   - <http://www.youtube.com/watch?v=xYzQL0TUtBA>
   - <http://www.youtube.com/watch?v=Ps2SBo_WjoE>
 - Grinberg [\[6\]](#ref-realanalysislifesaver) (the rigorous foundations behind these results)

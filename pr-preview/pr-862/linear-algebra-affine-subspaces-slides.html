@@ -247,9 +247,10 @@
     reads those vars so it stays legible in every palette. Light is the
     default variable set, Off-white and Parchment are a data-palette attribute
     on <html>, and Dark is the body.qwt-dark class. The choice is saved under
-    "mln-theme", the key the website's theme dropdown (theme-picker.html) uses,
-    so it carries across the site and the decks. First-time visitors get
-    Dark if their system prefers it, and Off-white otherwise.
+    "lds-theme" (falling back to "mln-theme"), the key the website's theme
+    dropdown (theme-picker.html) uses, so it carries across the site and the
+    decks. First-time visitors get Dark if their system prefers it, and
+    Off-white otherwise.
   --><style>
     #qwt-theme-select {
       position: fixed;
@@ -282,7 +283,8 @@
 <script>
   (function () {
     "use strict";
-    var KEY = "mln-theme";
+    var KEY = "lds-theme";
+    var LEGACY_KEY = "mln-theme";
     var DARK_CLASS = "qwt-dark";
     var OPTIONS = [["light", "Light"], ["offwhite", "Off-white"], ["parchment", "Parchment"], ["dark", "Dark"]];
     var root = document.documentElement;
@@ -292,7 +294,7 @@
     }
 
     function stored() {
-      try { return localStorage.getItem(KEY); } catch (e) { return null; }
+      try { return localStorage.getItem(KEY) || localStorage.getItem(LEGACY_KEY); } catch (e) { return null; }
     }
 
     function initialTheme() {
@@ -363,7 +365,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-20 09:01:42 (PST)</p>
+  <p class="date">Last modified: 2026-11-23 20:33:36 (PST)</p>
 </section><section class="slide level2"></section><section id="sec-affine-subspaces" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Affine subspaces and half-spaces</h2>
 </section><section class="slide level2"><div id="def-affine-subspace" class="theorem definition">
@@ -415,7 +417,7 @@
 <p><span class="theorem-title"><strong>Theorem 1 (A hyperplane is a translated subspace of dimension <span class="math inline">\(p - 1\)</span>)</strong></span> Let <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p\)</span> be nonzero, let <span class="math inline">\(b \in \mathbb{R}\)</span>, let <span class="math inline">\(\mathcal{H} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ b = 0\right\}\mathclose{}\)</span> be the hyperplane with normal vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> and offset <span class="math inline">\(b\)</span> (<a href="./linear-algebra-linear-maps.html#def-hyperplane">Definition&nbsp;10 in Linear and Affine Maps</a>), and let <span class="math inline">\(\mathcal{H}_0 = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= 0\right\}\mathclose{}\)</span> be the hyperplane with the same normal vector and offset <span class="math inline">\(0\)</span>.</p>
 <ol type="1">
 <li>
-<span class="math inline">\(\mathcal{H}_0\)</span> is a subspace of <span class="math inline">\(\mathbb{R}^p\)</span> (<a href="./linear-algebra-subspaces.html#def-subspace">Definition&nbsp;4 in Subspaces and Rank</a>) of dimension <span class="math inline">\(p - 1\)</span> (<a href="./linear-algebra-subspaces.html#def-dimension">Definition&nbsp;9 in Subspaces and Rank</a>).</li>
+<span class="math inline">\(\mathcal{H}_0\)</span> is a subspace of <span class="math inline">\(\mathbb{R}^p\)</span> (<a href="./linear-algebra-subspaces.html#def-subspace">Definition&nbsp;4 in Subspaces and Rank</a>) of dimension <span class="math inline">\(p - 1\)</span> (<a href="./linear-algebra-bases.html#def-dimension">Definition&nbsp;4 in Bases and Dimension</a>).</li>
 <li>
 <span class="math inline">\(\mathcal{H}\)</span> is not empty, and for any <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 \in \mathcal{H}\)</span>, <span class="math inline">\(\mathcal{H} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} \in \mathcal{H}_0\right\}\mathclose{}\)</span>, so <span class="math inline">\(\mathcal{H}\)</span> is an affine subspace (<a href="#/def-affine-subspace" class="quarto-xref">Definition&nbsp;1</a>).</li>
 <li>For any <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathcal{H}\)</span>, the normal vector is orthogonal to their difference: <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \perp (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})\)</span> (<a href="./linear-algebra-vectors.html#def-orthogonal-vectors">Definition&nbsp;22 in Vectors</a>).</li>
@@ -549,12 +551,12 @@
 &amp;&amp; \text{(the dot product with } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\text{ is } 0 \text{)}
 \\
 &amp;= b,
-&amp;&amp; \text{(}\href{algebra-sums.qmd#thm-add-ident}{\text{Theorem~4 in Convexity, Infimum and Sums}}\text{)}
+&amp;&amp; \text{(}\href{algebra-sums.qmd#thm-add-ident}{\text{Theorem~1 in Sums, Products and Quotients}}\text{)}
 \end{aligned}
 \]</span></p>
 <p>so <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\in \mathcal{H}\)</span> exactly when <span class="math inline">\(b = 0\)</span>.</p>
 <p><strong>Parts 2 and 3.</strong> By <a href="#/thm-hyperplane-subspace" class="quarto-xref">Theorem&nbsp;1</a>, <span class="math inline">\(\mathcal{H} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} \in \mathcal{H}_0\right\}\mathclose{}\)</span> for any <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 \in \mathcal{H}\)</span>, where <span class="math inline">\(\mathcal{H}_0\)</span> is a subspace of <span class="math inline">\(\mathbb{R}^p\)</span> of dimension <span class="math inline">\(p - 1\)</span>.</p>
-<p>For <span class="math inline">\(p = 2\)</span>, <span class="math inline">\(\mathcal{H}_0\)</span> has dimension <span class="math inline">\(1\)</span>, so it has a basis (<a href="./linear-algebra-subspaces.html#def-basis">Definition&nbsp;6 in Subspaces and Rank</a>) with one vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span>. That vector is nonzero, and <span class="math inline">\(\mathcal{H}_0 = \mathopen{}\left\{t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} : t \in \mathbb{R}\right\}\mathclose{}\)</span>.</p>
+<p>For <span class="math inline">\(p = 2\)</span>, <span class="math inline">\(\mathcal{H}_0\)</span> has dimension <span class="math inline">\(1\)</span>, so it has a basis (<a href="./linear-algebra-bases.html#def-basis">Definition&nbsp;1 in Bases and Dimension</a>) with one vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span>. That vector is nonzero, and <span class="math inline">\(\mathcal{H}_0 = \mathopen{}\left\{t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} : t \in \mathbb{R}\right\}\mathclose{}\)</span>.</p>
 <p>For <span class="math inline">\(p = 3\)</span>, <span class="math inline">\(\mathcal{H}_0\)</span> has dimension <span class="math inline">\(2\)</span>, so it has a basis with two vectors <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2\)</span>. They are linearly independent, and <span class="math inline">\(\mathcal{H}_0 = \mathopen{}\left\{s\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 + t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2 : s, t \in \mathbb{R}\right\}\mathclose{}\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-hyperplane-origin" class="theorem example">
@@ -799,7 +801,7 @@ Figure&nbsp;1: The graph of <span class="math inline">\(y = 2x + 1\)</span>, a l
 &amp;&amp; \text{(the display above)}
 \end{aligned}
 \]</span></p>
-<p>Because <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} &gt; 0\)</span>, this is positive once <span class="math inline">\(t &gt; -\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} / \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>. Choose such a <span class="math inline">\(t &gt; 0\)</span>. Then <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_t\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_t + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> are both in <span class="math inline">\(\mathcal{H}^+\)</span>, and their difference is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span>. So <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \in D(\mathcal{H}^+)\)</span>. The whole space <span class="math inline">\(\mathbb{R}^p\)</span> is a subspace of dimension <span class="math inline">\(p\)</span> (<a href="./linear-algebra-subspaces.html#def-dimension">Definition&nbsp;9 in Subspaces and Rank</a>).</p>
+<p>Because <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} &gt; 0\)</span>, this is positive once <span class="math inline">\(t &gt; -\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} / \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>. Choose such a <span class="math inline">\(t &gt; 0\)</span>. Then <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_t\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_t + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span> are both in <span class="math inline">\(\mathcal{H}^+\)</span>, and their difference is <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}\)</span>. So <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \in D(\mathcal{H}^+)\)</span>. The whole space <span class="math inline">\(\mathbb{R}^p\)</span> is a subspace of dimension <span class="math inline">\(p\)</span> (<a href="./linear-algebra-bases.html#def-dimension">Definition&nbsp;4 in Bases and Dimension</a>).</p>
 <p>The proof for <span class="math inline">\(\mathcal{H}^-\)</span> is the same with <span class="math inline">\(-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> and <span class="math inline">\(-b\)</span> in place of <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span> and <span class="math inline">\(b\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-half-space-iris" class="theorem example">

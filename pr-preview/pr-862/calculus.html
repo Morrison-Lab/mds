@@ -107,9 +107,9 @@ div.csl-indent {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-945790fbee74b2190a3a110e90abeebf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-f50b23cbd4f49061faf5f7dbc4364508.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark-e3d608924d8f07ebdc6daf50948dfd29.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-945790fbee74b2190a3a110e90abeebf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-f50b23cbd4f49061faf5f7dbc4364508.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet">
 <script src="site_libs/quarto-contrib/callouty-theorem-1.4.2/callouty-theorem.js"></script>
 <link href="site_libs/quarto-contrib/callouty-theorem-1.4.2/callouty-theorem.css" rel="stylesheet">
@@ -167,13 +167,14 @@ cookieconsent.run({
 <script>
 // Theme dropdown: Light, Off-white, Parchment, Dark. Quarto's own toggle
 // handles light/dark and remembers it; the two tinted palettes are a
-// data-palette attribute on <html>. The choice is kept under "mln-theme".
-// Off-white is the default for a first visit.
+// data-palette attribute on <html>. The choice is kept under "lds-theme"
+// (falling back to "mln-theme"). Off-white is the default for a first visit.
 (function () {
-  var KEY = "mln-theme";
+  var KEY = "lds-theme";
+  var LEGACY_KEY = "mln-theme";
   var OPTIONS = [["light", "Light"], ["offwhite", "Off-white"], ["parchment", "Parchment"], ["dark", "Dark"]];
   function stored() {
-    try { return localStorage.getItem(KEY); } catch (e) { return null; }
+    try { return localStorage.getItem(KEY) || localStorage.getItem(LEGACY_KEY); } catch (e) { return null; }
   }
   function isDark() { return document.body.classList.contains("quarto-dark"); }
   function apply(choice, remember) {
@@ -228,36 +229,6 @@ cookieconsent.run({
 })();
 </script>
 <style>
-div.callout-fig.callout {
-  border-left-color: #757575;
-}
-div.callout-fig.callout-style-default .callout-header {
-  background-color: rgba(117, 117, 117, 0.13);
-}
-div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-remark.callout {
-  border-left-color: #AD1457;
-}
-div.callout-remark.callout-style-default .callout-header {
-  background-color: rgba(173, 20, 87, 0.13);
-}
-div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-exr.callout {
-  border-left-color: #FFA500;
-}
-div.callout-exr.callout-style-default .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
-}
-div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
 div.callout-def.callout {
   border-left-color: #1B5E20;
 }
@@ -267,36 +238,6 @@ div.callout-def.callout-style-default .callout-header {
 div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cor.callout {
-  border-left-color: #00838F;
-}
-div.callout-cor.callout-style-default .callout-header {
-  background-color: rgba(0, 131, 143, 0.13);
-}
-div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-solution.callout {
-  border-left-color: #4E342E;
-}
-div.callout-solution.callout-style-default .callout-header {
-  background-color: rgba(78, 52, 46, 0.13);
-}
-div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-lem.callout {
-  border-left-color: #1565C0;
-}
-div.callout-lem.callout-style-default .callout-header {
-  background-color: rgba(21, 101, 192, 0.13);
-}
-div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-proof.callout {
   border-left-color: #37474F;
@@ -308,6 +249,16 @@ div.callout-proof .callout-toggle::before {  background-image: url('data:image/s
 div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
+}
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
+}
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-exm.callout {
   border-left-color: #6A1B9A;
 }
@@ -318,15 +269,65 @@ div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-cnj.callout {
-  border-left-color: #558B2F;
+div.callout-remark.callout {
+  border-left-color: #AD1457;
 }
-div.callout-cnj.callout-style-default .callout-header {
-  background-color: rgba(85, 139, 47, 0.13);
+div.callout-remark.callout-style-default .callout-header {
+  background-color: rgba(173, 20, 87, 0.13);
 }
-div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-lem.callout {
+  border-left-color: #1565C0;
+}
+div.callout-lem.callout-style-default .callout-header {
+  background-color: rgba(21, 101, 192, 0.13);
+}
+div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-tbl.callout {
+  border-left-color: #757575;
+}
+div.callout-tbl.callout-style-default .callout-header {
+  background-color: rgba(117, 117, 117, 0.13);
+}
+div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-solution.callout {
+  border-left-color: #4E342E;
+}
+div.callout-solution.callout-style-default .callout-header {
+  background-color: rgba(78, 52, 46, 0.13);
+}
+div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-fig.callout {
+  border-left-color: #757575;
+}
+div.callout-fig.callout-style-default .callout-header {
+  background-color: rgba(117, 117, 117, 0.13);
+}
+div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-exr.callout {
+  border-left-color: #FFA500;
+}
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
+}
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-prp.callout {
   border-left-color: #827717;
@@ -338,15 +339,15 @@ div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-tbl.callout {
-  border-left-color: #757575;
+div.callout-cor.callout {
+  border-left-color: #00838F;
 }
-div.callout-tbl.callout-style-default .callout-header {
-  background-color: rgba(117, 117, 117, 0.13);
+div.callout-cor.callout-style-default .callout-header {
+  background-color: rgba(0, 131, 143, 0.13);
 }
-div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 
@@ -598,12 +599,20 @@ window.Quarto = {
  <span class="dropdown-text">Equalities, Inequalities and Minimizers</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="./algebra-convexity.html">
+ <span class="dropdown-text">Convexity, Infimum and Supremum</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="./algebra-sums.html">
- <span class="dropdown-text">Convexity, Infimum and Sums</span></a>
+ <span class="dropdown-text">Sums, Products and Quotients</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./algebra-polynomials.html">
+ <span class="dropdown-text">Polynomials, Affine Functions and Series</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./algebra-exponentials.html">
- <span class="dropdown-text">Polynomials, Exponentials and Logarithms</span></a>
+ <span class="dropdown-text">Exponentials and Logarithms</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./algebra-trigonometry.html">
@@ -707,6 +716,10 @@ window.Quarto = {
  <span class="dropdown-text">Subspaces and Rank</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="./linear-algebra-bases.html">
+ <span class="dropdown-text">Bases and Dimension</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="./linear-algebra-column-null-space.html">
  <span class="dropdown-text">Column Space and Null Space</span></a>
   </li>  
@@ -720,23 +733,55 @@ window.Quarto = {
   </li>  
         <li>
     <a class="dropdown-item" href="./linear-algebra-direct-sums.html">
- <span class="dropdown-text">Direct Sums and Orthogonal Complements</span></a>
+ <span class="dropdown-text">Sums and Direct Sums</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-orthogonal-complements.html">
+ <span class="dropdown-text">Orthogonal Complements and the Fundamental Theorem</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./linear-algebra-inner-products.html">
- <span class="dropdown-text">Inner Products and Orthogonality</span></a>
+ <span class="dropdown-text">Inner Products and the Cauchy-Schwarz Inequality</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-orthonormal-bases.html">
+ <span class="dropdown-text">Orthonormal Bases, Outer Products and Hilbert Spaces</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./linear-algebra-special-matrices.html">
- <span class="dropdown-text">Special Matrices and Decompositions</span></a>
+ <span class="dropdown-text">Special Matrices, Quadratic Forms and Trace</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-decompositions.html">
+ <span class="dropdown-text">Eigenvalues and Matrix Decompositions</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-determinants.html">
+ <span class="dropdown-text">Determinants</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-definite-matrices.html">
+ <span class="dropdown-text">Definite Matrices</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./linear-algebra-projections.html">
- <span class="dropdown-text">Projections and Linear Systems</span></a>
+ <span class="dropdown-text">Design Matrices and Projections</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-generalized-inverses.html">
+ <span class="dropdown-text">Generalized Inverses and Linear Systems</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-least-squares.html">
+ <span class="dropdown-text">Solving Linear Systems and Least Squares</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./linear-algebra-diagonalization.html">
- <span class="dropdown-text">Diagonalization and Cholesky</span></a>
+ <span class="dropdown-text">Similarity and Diagonalization</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-cholesky.html">
+ <span class="dropdown-text">Schur Complements and the Cholesky Factorization</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./linear-algebra-complex.html">
@@ -744,10 +789,29 @@ window.Quarto = {
   </li>  
     </ul>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="./vector-calculus.html"> 
-<span class="menu-text">Vector Calculus</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-vector-calculus" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Vector Calculus</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-vector-calculus">    
+        <li>
+    <a class="dropdown-item" href="./vector-calculus.html">
+ <span class="dropdown-text">Overview</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./vector-calculus-gradients.html">
+ <span class="dropdown-text">Partial Derivatives and Gradients</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./vector-calculus-derivative-rules.html">
+ <span class="dropdown-text">Jacobians and Derivative Rules</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./vector-calculus-hessian.html">
+ <span class="dropdown-text">Second Partial Derivatives and the Hessian</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-optimization" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Optimization</span>
@@ -759,7 +823,11 @@ window.Quarto = {
   </li>  
         <li>
     <a class="dropdown-item" href="./optimization-critical-points.html">
- <span class="dropdown-text">Critical Points and Optimality Conditions</span></a>
+ <span class="dropdown-text">Critical Points and Optimization</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./optimization-optimality.html">
+ <span class="dropdown-text">Optimality Conditions in Several Variables</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./optimization-convexity.html">
@@ -870,14 +938,26 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./algebra-convexity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Convexity, Infimum and Supremum</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./algebra-sums.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Convexity, Infimum and Sums</span></a>
+ <span class="menu-text">Sums, Products and Quotients</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./algebra-polynomials.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Polynomials, Affine Functions and Series</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./algebra-exponentials.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Polynomials, Exponentials and Logarithms</span></a>
+ <span class="menu-text">Exponentials and Logarithms</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1017,6 +1097,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-bases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bases and Dimension</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./linear-algebra-column-null-space.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Column Space and Null Space</span></a>
   </div>
@@ -1036,31 +1122,79 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./linear-algebra-direct-sums.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Direct Sums and Orthogonal Complements</span></a>
+ <span class="menu-text">Sums and Direct Sums</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-orthogonal-complements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Orthogonal Complements and the Fundamental Theorem</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./linear-algebra-inner-products.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Inner Products and Orthogonality</span></a>
+ <span class="menu-text">Inner Products and the Cauchy-Schwarz Inequality</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-orthonormal-bases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Orthonormal Bases, Outer Products and Hilbert Spaces</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./linear-algebra-special-matrices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Special Matrices and Decompositions</span></a>
+ <span class="menu-text">Special Matrices, Quadratic Forms and Trace</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-decompositions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Eigenvalues and Matrix Decompositions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-determinants.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Determinants</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-definite-matrices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Definite Matrices</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./linear-algebra-projections.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Projections and Linear Systems</span></a>
+ <span class="menu-text">Design Matrices and Projections</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-generalized-inverses.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Generalized Inverses and Linear Systems</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-least-squares.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Solving Linear Systems and Least Squares</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./linear-algebra-diagonalization.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Diagonalization and Cholesky</span></a>
+ <span class="menu-text">Similarity and Diagonalization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-cholesky.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schur Complements and the Cholesky Factorization</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1071,25 +1205,54 @@ window.Quarto = {
 </li>
       </ul>
   </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./vector-calculus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Vector Calculus</span></a>
-  </div>
-</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./optimization.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-6-label">Optimization</span></a>
-            <button type="button" class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-controls="quarto-sidebar-section-6" aria-expanded="false" aria-label="Toggle section: Optimization">
+            <a href="./vector-calculus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text" id="quarto-sidebar-section-6-label">Vector Calculus</span></a>
+            <button type="button" class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-controls="quarto-sidebar-section-6" aria-expanded="false" aria-label="Toggle section: Vector Calculus">
               <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
             </button> 
       </div>
       <ul id="quarto-sidebar-section-6" aria-labelledby="quarto-sidebar-section-6-label" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./vector-calculus-gradients.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Partial Derivatives and Gradients</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./vector-calculus-derivative-rules.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Jacobians and Derivative Rules</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./vector-calculus-hessian.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Second Partial Derivatives and the Hessian</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./optimization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text" id="quarto-sidebar-section-7-label">Optimization</span></a>
+            <button type="button" class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-controls="quarto-sidebar-section-7" aria-expanded="false" aria-label="Toggle section: Optimization">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
+      </div>
+      <ul id="quarto-sidebar-section-7" aria-labelledby="quarto-sidebar-section-7-label" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./optimization-critical-points.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Critical Points and Optimality Conditions</span></a>
+ <span class="menu-text">Critical Points and Optimization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./optimization-optimality.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Optimality Conditions in Several Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1149,7 +1312,7 @@ window.Quarto = {
 <main class="content" id="quarto-document-content" tabindex="-1"><!-- qwt-page-banners -->
 <div class="preview-changes-banner" style="background-color: #fff3cd; border: 1px solid #ffc107; border-radius: 4px; padding: 12px; margin: 16px 0;">
     <p style="margin: 0;">
-        <strong>📋 Changes in this PR:</strong> <a href="algebra-basics.html">Equalities, Inequalities and Minimizers</a>, <a href="algebra-complex.html">Complex Numbers</a>, <a href="algebra-exponentials.html">Polynomials, Exponentials and Logarithms</a>, <a href="algebra-sums.html">Convexity, Infimum and Sums</a>, <a href="algebra-trigonometry.html">Trigonometry</a>, <a href="algebra.html">Algebra</a>, <a href="calculus-derivatives.html">Derivatives</a>, <a href="calculus-double-integrals.html">Double Integrals and Fubini’s Theorem</a>, <a href="calculus-integration.html">Integrals and the Fundamental Theorem of Calculus</a>, <a href="calculus-taylor-series.html">Taylor Series</a>, <a href="calculus.html">Calculus</a>, <a href="dependency-tree.html">Dependency Tree</a>, <a href="expressions-algorithms.html">Expressions and Algorithms</a>, <a href="functions.html">Functions</a>, <a href="growth-rates.html">Growth Rates</a>, <a href="index.html">Math for Data Science</a>, <a href="indicator-functions.html">Indicator Functions</a>, <a href="induction.html">Induction and Recursion</a>, <a href="linear-algebra-affine-subspaces.html">Affine Subspaces and Half-Spaces</a>, <a href="linear-algebra-column-null-space.html">Column Space and Null Space</a>, <a href="linear-algebra-complex.html">Complex Vectors and Matrices</a>, <a href="linear-algebra-diagonalization.html">Diagonalization and Cholesky</a>, <a href="linear-algebra-direct-sums.html">Direct Sums and Orthogonal Complements</a>, <a href="linear-algebra-inner-products.html">Inner Products and Orthogonality</a>, <a href="linear-algebra-linear-maps.html">Linear and Affine Maps</a>, <a href="linear-algebra-matrices.html">Matrices</a>, <a href="linear-algebra-matrix-multiplication.html">Matrix Multiplication</a>, <a href="linear-algebra-projections.html">Projections and Linear Systems</a>, <a href="linear-algebra-rank-nullity.html">Rank-Nullity and Rank Factorization</a>, <a href="linear-algebra-special-matrices.html">Special Matrices and Decompositions</a>, <a href="linear-algebra-subspaces.html">Subspaces and Rank</a>, <a href="linear-algebra-vectors.html">Vectors</a>, <a href="linear-algebra.html">Linear Algebra</a>, <a href="measures-additivity.html">Additivity</a>, <a href="measures-integrals.html">Measurable Functions and Integrals</a>, <a href="measures-lp-spaces.html">\(L^p\) Spaces</a>, <a href="measures-measure-spaces.html">Measures and Probability Measures</a>, <a href="measures-product.html">Product Measures</a>, <a href="measures-sigma-algebras.html">Sigma-Algebras</a>, <a href="measures.html">Measures</a>, <a href="notation.html">Notation</a>, <a href="number-systems.html">Number Systems</a>, <a href="optimization-constrained.html">Quadratic Minimization under Linear Constraints</a>, <a href="optimization-convexity.html">Convexity in Several Variables</a>, <a href="optimization-critical-points.html">Critical Points and Optimality Conditions</a>, <a href="optimization-gradient-descent.html">Gradient Descent</a>, <a href="optimization-newton.html">Newton’s Method</a>, <a href="optimization-quasi-newton.html">Quasi-Newton Methods</a>, <a href="optimization.html">Optimization</a>, <a href="proof-writing.html">Proof Writing</a>, <a href="relations.html">Relations</a>, <a href="sets-functions.html">Sets and Functions</a>, <a href="sets.html">Sets</a>, <a href="site_libs/revealjs/plugin/notes/speaker-view.html">reveal.js - Speaker View</a>, <a href="vector-calculus.html">Vector Calculus</a>
+        <strong>📋 Changes in this PR:</strong> <a href="algebra-basics.html">Equalities, Inequalities and Minimizers</a>, <a href="algebra-complex.html">Complex Numbers</a>, <a href="algebra-convexity.html">Convexity, Infimum and Supremum</a>, <a href="algebra-exponentials.html">Exponentials and Logarithms</a>, <a href="algebra-polynomials.html">Polynomials, Affine Functions and Series</a>, <a href="algebra-sums.html">Sums, Products and Quotients</a>, <a href="algebra-trigonometry.html">Trigonometry</a>, <a href="algebra.html">Algebra</a>, <a href="calculus-derivatives.html">Derivatives</a>, <a href="calculus-double-integrals.html">Double Integrals and Fubini’s Theorem</a>, <a href="calculus-integration.html">Integrals and the Fundamental Theorem of Calculus</a>, <a href="calculus-taylor-series.html">Taylor Series</a>, <a href="calculus.html">Calculus</a>, <a href="dependency-tree.html">Dependency Tree</a>, <a href="expressions-algorithms.html">Expressions and Algorithms</a>, <a href="functions.html">Functions</a>, <a href="growth-rates.html">Growth Rates</a>, <a href="index.html">Math for Data Science</a>, <a href="indicator-functions.html">Indicator Functions</a>, <a href="induction.html">Induction and Recursion</a>, <a href="linear-algebra-affine-subspaces.html">Affine Subspaces and Half-Spaces</a>, <a href="linear-algebra-bases.html">Bases and Dimension</a>, <a href="linear-algebra-cholesky.html">Schur Complements and the Cholesky Factorization</a>, <a href="linear-algebra-column-null-space.html">Column Space and Null Space</a>, <a href="linear-algebra-complex.html">Complex Vectors and Matrices</a>, <a href="linear-algebra-decompositions.html">Eigenvalues and Matrix Decompositions</a>, <a href="linear-algebra-definite-matrices.html">Definite Matrices</a>, <a href="linear-algebra-determinants.html">Determinants</a>, <a href="linear-algebra-diagonalization.html">Similarity and Diagonalization</a>, <a href="linear-algebra-direct-sums.html">Sums and Direct Sums</a>, <a href="linear-algebra-generalized-inverses.html">Generalized Inverses and Linear Systems</a>, <a href="linear-algebra-inner-products.html">Inner Products and the Cauchy-Schwarz Inequality</a>, <a href="linear-algebra-least-squares.html">Solving Linear Systems and Least Squares</a>, <a href="linear-algebra-linear-maps.html">Linear and Affine Maps</a>, <a href="linear-algebra-matrices.html">Matrices</a>, <a href="linear-algebra-matrix-multiplication.html">Matrix Multiplication</a>, <a href="linear-algebra-orthogonal-complements.html">Orthogonal Complements and the Fundamental Theorem</a>, <a href="linear-algebra-orthonormal-bases.html">Orthonormal Bases, Outer Products and Hilbert Spaces</a>, <a href="linear-algebra-projections.html">Design Matrices and Projections</a>, <a href="linear-algebra-rank-nullity.html">Rank-Nullity and Rank Factorization</a>, <a href="linear-algebra-special-matrices.html">Special Matrices, Quadratic Forms and Trace</a>, <a href="linear-algebra-subspaces.html">Subspaces and Rank</a>, <a href="linear-algebra-vectors.html">Vectors</a>, <a href="linear-algebra.html">Linear Algebra</a>, <a href="measures-additivity.html">Additivity</a>, <a href="measures-integrals.html">Measurable Functions and Integrals</a>, <a href="measures-lp-spaces.html">\(L^p\) Spaces</a>, <a href="measures-measure-spaces.html">Measures and Probability Measures</a>, <a href="measures-product.html">Product Measures</a>, <a href="measures-sigma-algebras.html">Sigma-Algebras</a>, <a href="measures.html">Measures</a>, <a href="notation.html">Notation</a>, <a href="number-systems.html">Number Systems</a>, <a href="optimization-constrained.html">Quadratic Minimization under Linear Constraints</a>, <a href="optimization-convexity.html">Convexity in Several Variables</a>, <a href="optimization-critical-points.html">Critical Points and Optimization</a>, <a href="optimization-gradient-descent.html">Gradient Descent</a>, <a href="optimization-newton.html">Newton’s Method</a>, <a href="optimization-optimality.html">Optimality Conditions in Several Variables</a>, <a href="optimization-quasi-newton.html">Quasi-Newton Methods</a>, <a href="optimization.html">Optimization</a>, <a href="proof-writing.html">Proof Writing</a>, <a href="relations.html">Relations</a>, <a href="sets-functions.html">Sets and Functions</a>, <a href="sets.html">Sets</a>, <a href="site_libs/revealjs/plugin/notes/speaker-view.html">reveal.js - Speaker View</a>, <a href="vector-calculus-derivative-rules.html">Jacobians and Derivative Rules</a>, <a href="vector-calculus-gradients.html">Partial Derivatives and Gradients</a>, <a href="vector-calculus-hessian.html">Second Partial Derivatives and the Hessian</a>, <a href="vector-calculus.html">Vector Calculus</a>
         <br>
         <strong>💡 Tip:</strong> If change highlighting is glitchy, add the <code>no-preview-highlights</code> label to this PR to disable it.
     </p>
@@ -1170,7 +1333,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-11-20 09:01:42 (PST)</p>
+      <p class="date">Last modified: 2026-11-23 20:33:36 (PST)</p>
     </div>
   </div>
   
@@ -1197,7 +1360,7 @@ window.Quarto = {
 <li><span class="citation" data-cites="khuri2003advanced">Khuri <a href="#ref-khuri2003advanced" role="doc-biblioref">[2]</a></span></li>
 <li><span class="citation" data-cites="calclifesaver">Banner <a href="#ref-calclifesaver" role="doc-biblioref">[3]</a></span></li>
 <li><span class="citation" data-cites="larsonCalc11e">Larson and Edwards <a href="#ref-larsonCalc11e" role="doc-biblioref">[4]</a></span></li>
-<li><span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[5]</a></span> The calculus review exercises and worked solutions across these pages and in <a href="./vector-calculus.html#def-partial-derivative">Vector Calculus</a> are adapted from this supplemental review chapter.
+<li><span class="citation" data-cites="problifesavercalc">Miller <a href="#ref-problifesavercalc" role="doc-biblioref">[5]</a></span> The calculus review exercises and worked solutions across these pages and on the <a href="./vector-calculus-gradients.html">Partial Derivatives and Gradients</a> page are adapted from this supplemental review chapter. <!-- check-term-links: allow: worked solutions are answers to exercises -->
 <ul>
 <li><a href="http://www.youtube.com/watch?v=xYzQL0TUtBA" class="uri">http://www.youtube.com/watch?v=xYzQL0TUtBA</a></li>
 <li><a href="http://www.youtube.com/watch?v=Ps2SBo_WjoE" class="uri">http://www.youtube.com/watch?v=Ps2SBo_WjoE</a></li>
@@ -1490,7 +1653,7 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
 
 <script>
 (function () {
-  var moved = {"a-constant-function-is-integrable":"calculus-integration.html","a-continuous-function-and-one-failure-of-each-condition":"calculus-integration.html","a-differentiable-function-and-a-limit-that-is-not-finite":"calculus-derivatives.html","a-double-integral-with-a-parameter":"calculus-double-integrals.html","a-function-not-continuous-on-lbrack-0-1rbrack":"calculus-integration.html","a-jump-discontinuity-and-a-discontinuity-that-is-not-a-jump":"calculus-integration.html","a-limit-exists-exactly-when-both-one-sided-limits-exist-and-are-equal":"calculus-derivatives.html","a-partition-of-lbrack-0-1rbrack":"calculus-integration.html","a-riemann-sum-for-x2-on-lbrack-0-1rbrack":"calculus-integration.html","abs-value-code":"calculus-integration.html","accumulation-function":"calculus-integration.html","an-equal-width-riemann-sum":"calculus-integration.html","an-iterated-integral":"calculus-double-integrals.html","antiderivative":"calculus-integration.html","antiderivative-of-3x2---1":"calculus-integration.html","antiderivative-of-x2":"calculus-integration.html","antiderivatives":"calculus-integration.html","antiderivatives-F-code":"calculus-integration.html","antiderivatives-f-code":"calculus-integration.html","antiderivatives-setup":"calculus-integration.html","approximate-with-the-tangent-line":"calculus-derivatives.html","basic-integration-rules":"calculus-integration.html","cdf-and-pdf-of-the-exponential-distribution":"calculus-integration.html","chain-rule":"calculus-derivatives.html","chain-rule-for-logarithms":"calculus-derivatives.html","chain-rule-with-logarithm":"calculus-derivatives.html","changing-the-order-of-integration-for-a-non-rectangular-region":"calculus-double-integrals.html","check-the-approximation":"calculus-derivatives.html","choosing-the-order-of-integration":"calculus-double-integrals.html","combining-product-and-chain-rules":"calculus-derivatives.html","constant-multiple-rule":"calculus-derivatives.html","constant-rule":"calculus-derivatives.html","continuity-implies-integrability":"calculus-integration.html","continuity-on-lbrack-0-1rbrack-uses-one-sided-limits-at-the-endpoints":"calculus-integration.html","continuous-but-not-differentiable-absx":"calculus-integration.html","continuous-function":"calculus-integration.html","continuous-functions-on-a-rectangle-corollary-of-thm-fubini":"calculus-double-integrals.html","continuous-hence-integrable-polynomials":"calculus-integration.html","continuous-on-a-closed-interval":"calculus-integration.html","convolution-of-two-uniform-densities":"calculus-integration.html","convolution-of-two-uniform-densities-1":"calculus-integration.html","cor-deriv-log-chain":"calculus-derivatives.html","cor-fubini-rect":"calculus-double-integrals.html","def-accumulation-function":"calculus-integration.html","def-antiderivative":"calculus-integration.html","def-continuous":"calculus-integration.html","def-continuous-on":"calculus-integration.html","def-derivative":"calculus-derivatives.html","def-difference-quotient":"calculus-derivatives.html","def-differentiable":"calculus-derivatives.html","def-differentiable-on":"calculus-integration.html","def-discontinuous":"calculus-integration.html","def-double-integral":"calculus-double-integrals.html","def-evaluation-bracket":"calculus-integration.html","def-function-profile":"calculus-derivatives.html","def-indefinite-integral":"calculus-integration.html","def-integrable":"calculus-integration.html","def-integrand":"calculus-integration.html","def-iterated-integral":"calculus-double-integrals.html","def-jump-discontinuity":"calculus-integration.html","def-lagrange-notation":"calculus-derivatives.html","def-left-hand-derivative":"calculus-derivatives.html","def-left-hand-limit":"calculus-derivatives.html","def-leibniz-notation":"calculus-derivatives.html","def-limit":"calculus-derivatives.html","def-linear-approximation":"calculus-derivatives.html","def-logarithmic-derivative":"calculus-derivatives.html","def-maclaurin-polynomial":"calculus-taylor-series.html","def-mesh":"calculus-integration.html","def-one-sided-derivative":"calculus-derivatives.html","def-one-sided-limit":"calculus-derivatives.html","def-partition":"calculus-integration.html","def-riemann-integral":"calculus-integration.html","def-riemann-sum":"calculus-integration.html","def-riemann-sum-equal-width":"calculus-integration.html","def-right-hand-derivative":"calculus-derivatives.html","def-right-hand-limit":"calculus-derivatives.html","def-sample-point":"calculus-integration.html","def-second-derivative":"calculus-derivatives.html","def-tangent-line":"calculus-derivatives.html","def-taylor-polynomial":"calculus-taylor-series.html","def-taylor-series":"calculus-taylor-series.html","definite-integral-of-a-polynomial":"calculus-integration.html","derivative":"calculus-derivatives.html","derivative-after-logarithmic-simplification":"calculus-derivatives.html","derivative-of-a-product":"calculus-derivatives.html","derivative-of-a-rational-function":"calculus-derivatives.html","derivative-of-cosine":"calculus-derivatives.html","derivative-of-exponential":"calculus-derivatives.html","derivative-of-natural-logarithm":"calculus-derivatives.html","derivative-of-polynomial-and-power-functions":"calculus-derivatives.html","derivative-of-sine":"calculus-derivatives.html","derivative-of-the-standard-gaussian-kernel":"calculus-derivatives.html","derivative-of-the-standard-gaussian-kernel-1":"calculus-derivatives.html","difference-quotient":"calculus-derivatives.html","differentiability-implies-continuity":"calculus-integration.html","differentiable-function":"calculus-derivatives.html","differentiable-hence-continuous-x3---x":"calculus-integration.html","differentiable-on-an-interval":"calculus-integration.html","differentiable-on-one-interval-but-not-another":"calculus-integration.html","discontinuous-function":"calculus-integration.html","double-integral":"calculus-double-integrals.html","double-integral-of-a-polynomial-over-a-rectangle":"calculus-double-integrals.html","double-integral-of-a-product-of-powers":"calculus-double-integrals.html","double-integral-of-an-affine-function":"calculus-double-integrals.html","double-integral-over-a-triangular-region":"calculus-double-integrals.html","double-integral-with-polynomial-and-radical-terms":"calculus-double-integrals.html","eq-ftc-deriv-of-integral":"calculus-integration.html","eq-ftc-integral-of-deriv":"calculus-integration.html","eq-ftc-part2":"calculus-integration.html","eq-linear-approx":"calculus-derivatives.html","eq-taylor-poly-def":"calculus-taylor-series.html","equal-width-riemann-sum":"calculus-integration.html","equal-width-riemann-sums-converge-to-the-integral":"calculus-integration.html","equal-width-sums-for-int_01-xdx":"calculus-integration.html","evaluating-a-double-integral-on-a-rectangle":"calculus-double-integrals.html","evaluating-int_13-2tdt-with-a-bracket":"calculus-integration.html","evaluation-bracket":"calculus-integration.html","exm-accumulation-function":"calculus-integration.html","exm-antiderivative-power":"calculus-integration.html","exm-cont-implies-int":"calculus-integration.html","exm-cont-not-diff":"calculus-integration.html","exm-continuous":"calculus-integration.html","exm-continuous-on-sqrt":"calculus-integration.html","exm-derivative":"calculus-derivatives.html","exm-diff-implies-cont":"calculus-integration.html","exm-difference-quotient":"calculus-derivatives.html","exm-differentiable":"calculus-derivatives.html","exm-differentiable-on":"calculus-integration.html","exm-double-integral-area":"calculus-double-integrals.html","exm-equal-width-sum":"calculus-integration.html","exm-evaluation-bracket":"calculus-integration.html","exm-ftc-cdf-pdf":"calculus-integration.html","exm-ftc-part1-accumulation":"calculus-integration.html","exm-fubini-fail":"calculus-double-integrals.html","exm-fubini-fail-tonelli":"calculus-double-integrals.html","exm-fubini-nonrect":"calculus-double-integrals.html","exm-fubini-rect":"calculus-double-integrals.html","exm-fubini-tonelli-apply":"calculus-double-integrals.html","exm-function-profile-logistic":"calculus-derivatives.html","exm-int-not-cont":"calculus-integration.html","exm-integrable-constant":"calculus-integration.html","exm-integral-rules-quadratic":"calculus-integration.html","exm-integrand":"calculus-integration.html","exm-iterated-integral":"calculus-double-integrals.html","exm-jump-discontinuity":"calculus-integration.html","exm-limit":"calculus-derivatives.html","exm-mesh":"calculus-integration.html","exm-not-continuous-on":"calculus-integration.html","exm-not-partition":"calculus-integration.html","exm-one-sided-derivative":"calculus-derivatives.html","exm-one-sided-limit":"calculus-derivatives.html","exm-partition":"calculus-integration.html","exm-riemann-equal-width":"calculus-integration.html","exm-riemann-sum":"calculus-integration.html","exm-second-derivative":"calculus-derivatives.html","exm-tangent-line":"calculus-derivatives.html","exm-taylor-polynomial-cosine":"calculus-taylor-series.html","exm-taylor-polynomial-exponential":"calculus-taylor-series.html","exm-taylor-polynomial-sine":"calculus-taylor-series.html","exp-pdf-cdf-cdf-code":"calculus-integration.html","exp-pdf-cdf-pdf-code":"calculus-integration.html","exp-pdf-cdf-setup":"calculus-integration.html","exr-miller-deriv-chain-log":"calculus-derivatives.html","exr-miller-deriv-find-slopes":"calculus-derivatives.html","exr-miller-deriv-gaussian-kernel":"calculus-derivatives.html","exr-miller-deriv-generalized-power-rule":"calculus-derivatives.html","exr-miller-deriv-log-simplify":"calculus-derivatives.html","exr-miller-deriv-polynomial-root":"calculus-derivatives.html","exr-miller-deriv-product-chain-composite":"calculus-derivatives.html","exr-miller-deriv-product-poly-cos":"calculus-derivatives.html","exr-miller-deriv-quotient-or-factor":"calculus-derivatives.html","exr-miller-deriv-second-gaussian-kernel":"calculus-derivatives.html","exr-miller-deriv-second-log-constant":"calculus-derivatives.html","exr-miller-deriv-second-product":"calculus-derivatives.html","exr-miller-deriv-tangent-line-approx":"calculus-derivatives.html","exr-miller-deriv-tangent-line-approx-approx":"calculus-derivatives.html","exr-miller-deriv-tangent-line-approx-compare":"calculus-derivatives.html","exr-miller-deriv-tangent-line-approx-tangent":"calculus-derivatives.html","exr-miller-dint-harmonic-identity":"calculus-double-integrals.html","exr-miller-dint-linear-plane":"calculus-double-integrals.html","exr-miller-dint-order-of-integration":"calculus-double-integrals.html","exr-miller-dint-polynomial-rectangle":"calculus-double-integrals.html","exr-miller-dint-separable":"calculus-double-integrals.html","exr-miller-dint-square-root-term":"calculus-double-integrals.html","exr-miller-dint-switch-order":"calculus-double-integrals.html","exr-miller-dint-triangular-region":"calculus-double-integrals.html","exr-miller-int-by-parts-gaussian":"calculus-integration.html","exr-miller-int-composite-power":"calculus-integration.html","exr-miller-int-log-substitution":"calculus-integration.html","exr-miller-int-polynomial":"calculus-integration.html","exr-miller-int-polynomial-symmetry":"calculus-integration.html","exr-miller-int-power-substitution":"calculus-integration.html","exr-miller-int-quadratic-complete":"calculus-integration.html","exr-miller-int-rayleigh-normal-kernel":"calculus-integration.html","exr-miller-int-trig-substitution":"calculus-integration.html","exr-miller-int-trig-symmetry":"calculus-integration.html","exr-miller-int-uniform-convolution":"calculus-integration.html","exr-miller-taylor-cos-cubed":"calculus-taylor-series.html","exr-miller-taylor-cos-scaled":"calculus-taylor-series.html","exr-miller-taylor-cube-root":"calculus-taylor-series.html","exr-miller-taylor-exp-base":"calculus-taylor-series.html","exr-miller-taylor-exp-power":"calculus-taylor-series.html","exr-miller-taylor-log-one-minus-x":"calculus-taylor-series.html","exr-miller-taylor-log-one-plus-x":"calculus-taylor-series.html","exr-miller-taylor-log-product-exp":"calculus-taylor-series.html","exr-miller-taylor-log-scaled":"calculus-taylor-series.html","exr-miller-taylor-normal-density":"calculus-taylor-series.html","exr-miller-taylor-poly-nonzero":"calculus-taylor-series.html","exr-miller-taylor-poly-zero":"calculus-taylor-series.html","exr-miller-taylor-product-cos-log":"calculus-taylor-series.html","exr-miller-taylor-sqrt":"calculus-taylor-series.html","exr-miller-taylor-x-log-x":"calculus-taylor-series.html","fig-abs-value":"calculus-integration.html","fig-antiderivatives":"calculus-integration.html","fig-antiderivatives-F":"calculus-integration.html","fig-antiderivatives-f":"calculus-integration.html","fig-exp-pdf-cdf":"calculus-integration.html","fig-exp-pdf-cdf-cdf":"calculus-integration.html","fig-exp-pdf-cdf-pdf":"calculus-integration.html","fig-ftc-part1":"calculus-integration.html","fig-ftc-part1-left":"calculus-integration.html","fig-ftc-part1-right":"calculus-integration.html","fig-fubini-fail":"calculus-double-integrals.html","fig-fubini-nonrect":"calculus-double-integrals.html","fig-fubini-nonrect-region":"calculus-double-integrals.html","fig-fubini-rect":"calculus-double-integrals.html","fig-fubini-rect-region":"calculus-double-integrals.html","fig-function-profile-logistic":"calculus-derivatives.html","fig-linear-approx":"calculus-derivatives.html","fig-step":"calculus-integration.html","finding-points-with-a-prescribed-slope":"calculus-derivatives.html","ftc-part-1-visualized-accumulation-function-for-ft-2t":"calculus-integration.html","ftc-part1-left-code":"calculus-integration.html","ftc-part1-right-code":"calculus-integration.html","ftc-part1-setup":"calculus-integration.html","fubinis-theorem-measure-theoretic-form":"calculus-double-integrals.html","fubinis-theorem-riemann-version":"calculus-double-integrals.html","fubinitonelli-for-probability-measures":"calculus-double-integrals.html","function-profile-logistic":"calculus-derivatives.html","fundamental-theorem-of-calculus":"calculus-integration.html","fundamental-theorem-of-calculus-part-1-derivative-of-an-integral":"calculus-integration.html","fundamental-theorem-of-calculus-part-2-evaluation-theorem":"calculus-integration.html","further-reading":"calculus-double-integrals.html","generalized-power-rule":"calculus-derivatives.html","harmonic-numbers-as-a-double-integral":"calculus-double-integrals.html","improper-gaussian-kernel-integral":"calculus-integration.html","indefinite-integral":"calculus-integration.html","integrable-but-not-continuous-a-step-function":"calculus-integration.html","integral-of-a-composite-power":"calculus-integration.html","integral-of-a-perfect-square":"calculus-integration.html","integral-of-odd-trigonometric-functions":"calculus-integration.html","integrand":"calculus-integration.html","integrands":"calculus-integration.html","integration-by-parts-with-an-exponential-factor":"calculus-integration.html","iterated-integral":"calculus-double-integrals.html","jump-discontinuity":"calculus-integration.html","lagranges-notation":"calculus-derivatives.html","left-hand-derivative":"calculus-derivatives.html","left-hand-limit":"calculus-derivatives.html","leibniz-notation":"calculus-derivatives.html","limit-of-a-function-at-a-point":"calculus-derivatives.html","linear-approximation-first-order-taylor-approximation-first-order-taylor-expansion":"calculus-derivatives.html","linear-taylor-polynomial-of-the-exponential":"calculus-taylor-series.html","lists-that-are-not-partitions-of-lbrack-0-1rbrack":"calculus-integration.html","logarithmic-derivative":"calculus-derivatives.html","maclaurin-polynomial":"calculus-taylor-series.html","maclaurin-polynomial-of-log1---x":"calculus-taylor-series.html","maclaurin-polynomial-of-log1-x":"calculus-taylor-series.html","maclaurin-polynomial-of-the-standard-normal-density":"calculus-taylor-series.html","maclaurin-series-of-log1---x":"calculus-taylor-series.html","maclaurin-series-of-log1-x":"calculus-taylor-series.html","mesh-of-a-partition":"calculus-integration.html","one-sided-derivatives":"calculus-derivatives.html","one-sided-derivatives-of-absx-at-0":"calculus-derivatives.html","one-sided-limits":"calculus-derivatives.html","one-sided-limits-of-a-step-function":"calculus-derivatives.html","partition-of-an-interval":"calculus-integration.html","positive-application-of-thm-tonelli-measure":"calculus-double-integrals.html","power-rule":"calculus-derivatives.html","product-of-single-integrals-for-separable-functions":"calculus-double-integrals.html","product-rule":"calculus-derivatives.html","profile-of-a-function":"calculus-derivatives.html","quotient-rule":"calculus-derivatives.html","regularity-conditions":"calculus-integration.html","rem-accumulation-function-dummy-variable":"calculus-integration.html","rem-evaluation-bracket-ftc":"calculus-integration.html","rem-fubini-tonelli-probability":"calculus-double-integrals.html","rem-integrable-integral":"calculus-integration.html","rem-linear-approx-affine":"calculus-derivatives.html","rem-one-sided-limit-and-limit":"calculus-derivatives.html","riemann-integrable":"calculus-integration.html","riemann-integrable-functions-and-riemann-integrals":"calculus-integration.html","riemann-integral-definite-integral":"calculus-integration.html","riemann-sum":"calculus-integration.html","right-hand-derivative":"calculus-derivatives.html","right-hand-limit":"calculus-derivatives.html","sample-point":"calculus-integration.html","sec-derivative-rules":"calculus-derivatives.html","sec-double-integrals":"calculus-double-integrals.html","sec-function-profile":"calculus-derivatives.html","sec-integration":"calculus-integration.html","sec-limits-derivatives":"calculus-derivatives.html","sec-linear-approximation":"calculus-derivatives.html","sec-tangent-lines":"calculus-derivatives.html","sec-taylor-compound":"calculus-taylor-series.html","sec-taylor-elementary":"calculus-taylor-series.html","sec-taylor-series":"calculus-taylor-series.html","second-derivative":"calculus-derivatives.html","second-derivative-of-a-product":"calculus-derivatives.html","second-derivative-of-the-gaussian-kernel":"calculus-derivatives.html","second-derivative-of-the-standard-gaussian-kernel":"calculus-derivatives.html","second-derivative-with-an-added-constant":"calculus-derivatives.html","separating-even-and-odd-parts-of-a-polynomial":"calculus-integration.html","sol-miller-deriv-chain-log":"calculus-derivatives.html","sol-miller-deriv-find-slopes":"calculus-derivatives.html","sol-miller-deriv-gaussian-kernel":"calculus-derivatives.html","sol-miller-deriv-generalized-power-rule":"calculus-derivatives.html","sol-miller-deriv-log-simplify":"calculus-derivatives.html","sol-miller-deriv-polynomial-root":"calculus-derivatives.html","sol-miller-deriv-product-chain-composite":"calculus-derivatives.html","sol-miller-deriv-product-poly-cos":"calculus-derivatives.html","sol-miller-deriv-quotient-or-factor":"calculus-derivatives.html","sol-miller-deriv-second-gaussian-kernel":"calculus-derivatives.html","sol-miller-deriv-second-log-constant":"calculus-derivatives.html","sol-miller-deriv-second-product":"calculus-derivatives.html","sol-miller-deriv-tangent-line-approx":"calculus-derivatives.html","sol-miller-deriv-tangent-line-approx-approx":"calculus-derivatives.html","sol-miller-deriv-tangent-line-approx-compare":"calculus-derivatives.html","sol-miller-deriv-tangent-line-approx-tangent":"calculus-derivatives.html","sol-miller-dint-harmonic-identity":"calculus-double-integrals.html","sol-miller-dint-linear-plane":"calculus-double-integrals.html","sol-miller-dint-order-of-integration":"calculus-double-integrals.html","sol-miller-dint-polynomial-rectangle":"calculus-double-integrals.html","sol-miller-dint-separable":"calculus-double-integrals.html","sol-miller-dint-square-root-term":"calculus-double-integrals.html","sol-miller-dint-switch-order":"calculus-double-integrals.html","sol-miller-dint-triangular-region":"calculus-double-integrals.html","sol-miller-int-by-parts-gaussian":"calculus-integration.html","sol-miller-int-composite-power":"calculus-integration.html","sol-miller-int-log-substitution":"calculus-integration.html","sol-miller-int-polynomial":"calculus-integration.html","sol-miller-int-polynomial-symmetry":"calculus-integration.html","sol-miller-int-power-substitution":"calculus-integration.html","sol-miller-int-quadratic-complete":"calculus-integration.html","sol-miller-int-rayleigh-normal-kernel":"calculus-integration.html","sol-miller-int-trig-substitution":"calculus-integration.html","sol-miller-int-trig-symmetry":"calculus-integration.html","sol-miller-int-uniform-convolution":"calculus-integration.html","sol-miller-taylor-cos-cubed":"calculus-taylor-series.html","sol-miller-taylor-cos-scaled":"calculus-taylor-series.html","sol-miller-taylor-cube-root":"calculus-taylor-series.html","sol-miller-taylor-exp-base":"calculus-taylor-series.html","sol-miller-taylor-exp-power":"calculus-taylor-series.html","sol-miller-taylor-log-one-minus-x":"calculus-taylor-series.html","sol-miller-taylor-log-one-plus-x":"calculus-taylor-series.html","sol-miller-taylor-log-product-exp":"calculus-taylor-series.html","sol-miller-taylor-log-scaled":"calculus-taylor-series.html","sol-miller-taylor-normal-density":"calculus-taylor-series.html","sol-miller-taylor-poly-nonzero":"calculus-taylor-series.html","sol-miller-taylor-poly-zero":"calculus-taylor-series.html","sol-miller-taylor-product-cos-log":"calculus-taylor-series.html","sol-miller-taylor-sqrt":"calculus-taylor-series.html","sol-miller-taylor-x-log-x":"calculus-taylor-series.html","step-code":"calculus-integration.html","substitution-leading-to-a-natural-logarithm":"calculus-integration.html","substitution-with-a-polynomial-power":"calculus-integration.html","substitution-with-a-trigonometric-integrand":"calculus-integration.html","switching-order-of-integration-on-a-non-rectangular-region":"calculus-double-integrals.html","tangent-line":"calculus-derivatives.html","tangent-line-approximation":"calculus-derivatives.html","tangent-line-at-a-point":"calculus-derivatives.html","taylor-expansion-of-a-fractional-power":"calculus-taylor-series.html","taylor-expansion-of-a-polynomial-at-a-nonzero-point":"calculus-taylor-series.html","taylor-expansion-of-a-scaled-cosine":"calculus-taylor-series.html","taylor-expansion-of-the-normal-density":"calculus-taylor-series.html","taylor-expansion-of-the-square-root":"calculus-taylor-series.html","taylor-expansion-of-x-log-x":"calculus-taylor-series.html","taylor-polynomial-of-a-polynomial-at-the-origin":"calculus-taylor-series.html","taylor-polynomial-taylor-expansion":"calculus-taylor-series.html","taylor-series":"calculus-taylor-series.html","taylor-series-of-a-composite-exponential":"calculus-taylor-series.html","taylor-series-of-a-power-of-a-function":"calculus-taylor-series.html","taylor-series-of-a-product-of-known-expansions":"calculus-taylor-series.html","taylor-series-of-log1---xex":"calculus-taylor-series.html","taylor-series-of-log1-2x":"calculus-taylor-series.html","taylor-series-of-the-cosine-function":"calculus-taylor-series.html","taylor-series-of-the-exponential-function":"calculus-taylor-series.html","taylor-series-of-the-sine-function":"calculus-taylor-series.html","the-accumulation-function-of-a-constant":"calculus-integration.html","the-derivative-of-x2":"calculus-derivatives.html","the-difference-quotient-of-x2-at-1":"calculus-derivatives.html","the-double-integral-of-1-is-an-area":"calculus-double-integrals.html","the-evaluation-bracket-and-the-fundamental-theorem-of-calculus":"calculus-integration.html","the-limit-of-3x-1-at-2":"calculus-derivatives.html","the-linear-approximation-is-affine":"calculus-derivatives.html","the-mesh-of-a-partition-of-lbrack-0-1rbrack":"calculus-integration.html","the-profile-of-the-logistic-function":"calculus-derivatives.html","the-second-derivative-of-x3":"calculus-derivatives.html","the-tangent-line-to-x2-at-1":"calculus-derivatives.html","thm-chain-rule":"calculus-derivatives.html","thm-cont-implies-int":"calculus-integration.html","thm-deriv-const":"calculus-derivatives.html","thm-deriv-const-factor":"calculus-derivatives.html","thm-deriv-cos":"calculus-derivatives.html","thm-deriv-exp":"calculus-derivatives.html","thm-deriv-gaussian-kernel":"calculus-derivatives.html","thm-deriv-log":"calculus-derivatives.html","thm-deriv-polynomial":"calculus-derivatives.html","thm-deriv-second-gaussian-kernel":"calculus-derivatives.html","thm-deriv-sin":"calculus-derivatives.html","thm-diff-implies-cont":"calculus-integration.html","thm-dint-harmonic-identity":"calculus-double-integrals.html","thm-dint-separable":"calculus-double-integrals.html","thm-ftc":"calculus-integration.html","thm-ftc-part1":"calculus-integration.html","thm-ftc-part2":"calculus-integration.html","thm-fubini":"calculus-double-integrals.html","thm-fubini-measure":"calculus-double-integrals.html","thm-fubini-tonelli":"calculus-double-integrals.html","thm-int-uniform-convolution":"calculus-integration.html","thm-integral-rules":"calculus-integration.html","thm-product-rule":"calculus-derivatives.html","thm-quotient-rule":"calculus-derivatives.html","thm-riemann-general":"calculus-integration.html","thm-taylor-log-one-minus-x":"calculus-taylor-series.html","thm-taylor-log-one-plus-x":"calculus-taylor-series.html","thm-taylor-normal-density":"calculus-taylor-series.html","thm-tonelli-measure":"calculus-double-integrals.html","tonellis-theorem-measure-theoretic-form":"calculus-double-integrals.html","when-conditions-fail-a-counterexample":"calculus-double-integrals.html","when-neither-tonellis-nor-fubinis-condition-is-satisfied":"calculus-double-integrals.html","why-the-integration-variable-is-called-t":"calculus-integration.html"};
+  var moved = {"a-constant-function-is-integrable":"calculus-integration.html","a-continuous-function-and-one-failure-of-each-condition":"calculus-integration.html","a-differentiable-function-and-a-limit-that-is-not-finite":"calculus-derivatives.html","a-double-integral-with-a-parameter":"calculus-double-integrals.html","a-function-not-continuous-on-lbrack-0-1rbrack":"calculus-integration.html","a-jump-discontinuity-and-a-discontinuity-that-is-not-a-jump":"calculus-integration.html","a-limit-exists-exactly-when-both-one-sided-limits-exist-and-are-equal":"calculus-derivatives.html","a-partition-of-lbrack-0-1rbrack":"calculus-integration.html","a-riemann-sum-for-x2-on-lbrack-0-1rbrack":"calculus-integration.html","a-smooth-function-and-one-that-is-not":"calculus-derivatives.html","abs-value-code":"calculus-integration.html","accumulation-function":"calculus-integration.html","an-equal-width-riemann-sum":"calculus-integration.html","an-iterated-integral":"calculus-double-integrals.html","antiderivative":"calculus-integration.html","antiderivative-of-3x2---1":"calculus-integration.html","antiderivative-of-x2":"calculus-integration.html","antiderivatives":"calculus-integration.html","antiderivatives-F-code":"calculus-integration.html","antiderivatives-f-code":"calculus-integration.html","antiderivatives-setup":"calculus-integration.html","approximate-with-the-tangent-line":"calculus-derivatives.html","basic-integration-rules":"calculus-integration.html","cdf-and-pdf-of-the-exponential-distribution":"calculus-integration.html","chain-rule":"calculus-derivatives.html","chain-rule-for-logarithms":"calculus-derivatives.html","chain-rule-with-logarithm":"calculus-derivatives.html","changing-the-order-of-integration-for-a-non-rectangular-region":"calculus-double-integrals.html","check-the-approximation":"calculus-derivatives.html","choosing-the-order-of-integration":"calculus-double-integrals.html","combining-product-and-chain-rules":"calculus-derivatives.html","constant-multiple-rule":"calculus-derivatives.html","constant-rule":"calculus-derivatives.html","continuity-implies-integrability":"calculus-integration.html","continuity-on-lbrack-0-1rbrack-uses-one-sided-limits-at-the-endpoints":"calculus-integration.html","continuous-but-not-differentiable-absx":"calculus-integration.html","continuous-function":"calculus-integration.html","continuous-functions-on-a-rectangle-corollary-of-thm-fubini":"calculus-double-integrals.html","continuous-hence-integrable-polynomials":"calculus-integration.html","continuous-on-a-closed-interval":"calculus-integration.html","continuous-on-sqrt-plot":"calculus-integration.html","convolution-of-two-uniform-densities":"calculus-integration.html","convolution-of-two-uniform-densities-1":"calculus-integration.html","cor-deriv-log-chain":"calculus-derivatives.html","cor-fubini-rect":"calculus-double-integrals.html","def-accumulation-function":"calculus-integration.html","def-antiderivative":"calculus-integration.html","def-continuous":"calculus-integration.html","def-continuous-on-interval":"calculus-integration.html","def-derivative":"calculus-derivatives.html","def-difference-quotient":"calculus-derivatives.html","def-differentiable":"calculus-derivatives.html","def-differentiable-on":"calculus-integration.html","def-discontinuous":"calculus-integration.html","def-double-integral":"calculus-double-integrals.html","def-evaluation-bracket":"calculus-integration.html","def-function-profile":"calculus-derivatives.html","def-indefinite-integral":"calculus-integration.html","def-integrable":"calculus-integration.html","def-integrand":"calculus-integration.html","def-iterated-integral":"calculus-double-integrals.html","def-jump-discontinuity":"calculus-integration.html","def-lagrange-notation":"calculus-derivatives.html","def-left-hand-derivative":"calculus-derivatives.html","def-left-hand-limit":"calculus-derivatives.html","def-leibniz-notation":"calculus-derivatives.html","def-limit":"calculus-derivatives.html","def-linear-approximation":"calculus-derivatives.html","def-logarithmic-derivative":"calculus-derivatives.html","def-maclaurin-polynomial":"calculus-taylor-series.html","def-mesh":"calculus-integration.html","def-one-sided-derivative":"calculus-derivatives.html","def-one-sided-limit":"calculus-derivatives.html","def-partition":"calculus-integration.html","def-riemann-integral":"calculus-integration.html","def-riemann-sum":"calculus-integration.html","def-riemann-sum-equal-width":"calculus-integration.html","def-right-hand-derivative":"calculus-derivatives.html","def-right-hand-limit":"calculus-derivatives.html","def-sample-point":"calculus-integration.html","def-second-derivative":"calculus-derivatives.html","def-smooth-function":"calculus-derivatives.html","def-tangent-line":"calculus-derivatives.html","def-taylor-polynomial":"calculus-taylor-series.html","def-taylor-series":"calculus-taylor-series.html","definite-integral-of-a-polynomial":"calculus-integration.html","derivative":"calculus-derivatives.html","derivative-after-logarithmic-simplification":"calculus-derivatives.html","derivative-of-a-product":"calculus-derivatives.html","derivative-of-a-rational-function":"calculus-derivatives.html","derivative-of-cosine":"calculus-derivatives.html","derivative-of-exponential":"calculus-derivatives.html","derivative-of-natural-logarithm":"calculus-derivatives.html","derivative-of-polynomial-and-power-functions":"calculus-derivatives.html","derivative-of-sine":"calculus-derivatives.html","derivative-of-the-standard-gaussian-kernel":"calculus-derivatives.html","derivative-of-the-standard-gaussian-kernel-1":"calculus-derivatives.html","difference-quotient":"calculus-derivatives.html","differentiability-implies-continuity":"calculus-integration.html","differentiable-function":"calculus-derivatives.html","differentiable-hence-continuous-x3---x":"calculus-integration.html","differentiable-on-an-interval":"calculus-integration.html","differentiable-on-one-interval-but-not-another":"calculus-integration.html","discontinuous-function":"calculus-integration.html","double-integral":"calculus-double-integrals.html","double-integral-of-a-polynomial-over-a-rectangle":"calculus-double-integrals.html","double-integral-of-a-product-of-powers":"calculus-double-integrals.html","double-integral-of-an-affine-function":"calculus-double-integrals.html","double-integral-over-a-triangular-region":"calculus-double-integrals.html","double-integral-with-polynomial-and-radical-terms":"calculus-double-integrals.html","eq-ftc-deriv-of-integral":"calculus-integration.html","eq-ftc-integral-of-deriv":"calculus-integration.html","eq-ftc-part2":"calculus-integration.html","eq-linear-approx":"calculus-derivatives.html","eq-taylor-poly-def":"calculus-taylor-series.html","equal-width-riemann-sum":"calculus-integration.html","equal-width-riemann-sums-converge-to-the-integral":"calculus-integration.html","equal-width-sums-for-int_01-xdx":"calculus-integration.html","evaluating-a-double-integral-on-a-rectangle":"calculus-double-integrals.html","evaluating-int_13-2tdt-with-a-bracket":"calculus-integration.html","evaluation-bracket":"calculus-integration.html","exm-accumulation-function":"calculus-integration.html","exm-antiderivative-power":"calculus-integration.html","exm-cont-implies-int":"calculus-integration.html","exm-cont-not-diff":"calculus-integration.html","exm-continuous":"calculus-integration.html","exm-continuous-on-sqrt":"calculus-integration.html","exm-derivative":"calculus-derivatives.html","exm-diff-implies-cont":"calculus-integration.html","exm-difference-quotient":"calculus-derivatives.html","exm-differentiable":"calculus-derivatives.html","exm-differentiable-on":"calculus-integration.html","exm-double-integral-area":"calculus-double-integrals.html","exm-equal-width-sum":"calculus-integration.html","exm-evaluation-bracket":"calculus-integration.html","exm-ftc-cdf-pdf":"calculus-integration.html","exm-ftc-part1-accumulation":"calculus-integration.html","exm-fubini-fail":"calculus-double-integrals.html","exm-fubini-fail-tonelli":"calculus-double-integrals.html","exm-fubini-nonrect":"calculus-double-integrals.html","exm-fubini-rect":"calculus-double-integrals.html","exm-fubini-tonelli-apply":"calculus-double-integrals.html","exm-function-profile-logistic":"calculus-derivatives.html","exm-int-not-cont":"calculus-integration.html","exm-integrable-constant":"calculus-integration.html","exm-integral-rules-quadratic":"calculus-integration.html","exm-integrand":"calculus-integration.html","exm-iterated-integral":"calculus-double-integrals.html","exm-jump-discontinuity":"calculus-integration.html","exm-limit":"calculus-derivatives.html","exm-mesh":"calculus-integration.html","exm-not-continuous-on":"calculus-integration.html","exm-not-partition":"calculus-integration.html","exm-one-sided-derivative":"calculus-derivatives.html","exm-one-sided-limit":"calculus-derivatives.html","exm-partition":"calculus-integration.html","exm-riemann-equal-width":"calculus-integration.html","exm-riemann-sum":"calculus-integration.html","exm-second-derivative":"calculus-derivatives.html","exm-smooth-function":"calculus-derivatives.html","exm-tangent-line":"calculus-derivatives.html","exm-taylor-polynomial-cosine":"calculus-taylor-series.html","exm-taylor-polynomial-exponential":"calculus-taylor-series.html","exm-taylor-polynomial-sine":"calculus-taylor-series.html","exp-pdf-cdf-cdf-code":"calculus-integration.html","exp-pdf-cdf-pdf-code":"calculus-integration.html","exp-pdf-cdf-setup":"calculus-integration.html","exr-miller-deriv-chain-log":"calculus-derivatives.html","exr-miller-deriv-find-slopes":"calculus-derivatives.html","exr-miller-deriv-gaussian-kernel":"calculus-derivatives.html","exr-miller-deriv-generalized-power-rule":"calculus-derivatives.html","exr-miller-deriv-log-simplify":"calculus-derivatives.html","exr-miller-deriv-polynomial-root":"calculus-derivatives.html","exr-miller-deriv-product-chain-composite":"calculus-derivatives.html","exr-miller-deriv-product-poly-cos":"calculus-derivatives.html","exr-miller-deriv-quotient-or-factor":"calculus-derivatives.html","exr-miller-deriv-second-gaussian-kernel":"calculus-derivatives.html","exr-miller-deriv-second-log-constant":"calculus-derivatives.html","exr-miller-deriv-second-product":"calculus-derivatives.html","exr-miller-deriv-tangent-line-approx":"calculus-derivatives.html","exr-miller-deriv-tangent-line-approx-approx":"calculus-derivatives.html","exr-miller-deriv-tangent-line-approx-compare":"calculus-derivatives.html","exr-miller-deriv-tangent-line-approx-tangent":"calculus-derivatives.html","exr-miller-dint-harmonic-identity":"calculus-double-integrals.html","exr-miller-dint-linear-plane":"calculus-double-integrals.html","exr-miller-dint-order-of-integration":"calculus-double-integrals.html","exr-miller-dint-polynomial-rectangle":"calculus-double-integrals.html","exr-miller-dint-separable":"calculus-double-integrals.html","exr-miller-dint-square-root-term":"calculus-double-integrals.html","exr-miller-dint-switch-order":"calculus-double-integrals.html","exr-miller-dint-triangular-region":"calculus-double-integrals.html","exr-miller-int-by-parts-gaussian":"calculus-integration.html","exr-miller-int-composite-power":"calculus-integration.html","exr-miller-int-log-substitution":"calculus-integration.html","exr-miller-int-polynomial":"calculus-integration.html","exr-miller-int-polynomial-symmetry":"calculus-integration.html","exr-miller-int-power-substitution":"calculus-integration.html","exr-miller-int-quadratic-complete":"calculus-integration.html","exr-miller-int-rayleigh-normal-kernel":"calculus-integration.html","exr-miller-int-trig-substitution":"calculus-integration.html","exr-miller-int-trig-symmetry":"calculus-integration.html","exr-miller-int-uniform-convolution":"calculus-integration.html","exr-miller-taylor-cos-cubed":"calculus-taylor-series.html","exr-miller-taylor-cos-scaled":"calculus-taylor-series.html","exr-miller-taylor-cube-root":"calculus-taylor-series.html","exr-miller-taylor-exp-base":"calculus-taylor-series.html","exr-miller-taylor-exp-power":"calculus-taylor-series.html","exr-miller-taylor-log-one-minus-x":"calculus-taylor-series.html","exr-miller-taylor-log-one-plus-x":"calculus-taylor-series.html","exr-miller-taylor-log-product-exp":"calculus-taylor-series.html","exr-miller-taylor-log-scaled":"calculus-taylor-series.html","exr-miller-taylor-normal-density":"calculus-taylor-series.html","exr-miller-taylor-poly-nonzero":"calculus-taylor-series.html","exr-miller-taylor-poly-zero":"calculus-taylor-series.html","exr-miller-taylor-product-cos-log":"calculus-taylor-series.html","exr-miller-taylor-sqrt":"calculus-taylor-series.html","exr-miller-taylor-x-log-x":"calculus-taylor-series.html","fig-abs-value":"calculus-integration.html","fig-antiderivatives":"calculus-integration.html","fig-antiderivatives-F":"calculus-integration.html","fig-antiderivatives-f":"calculus-integration.html","fig-continuous-on-sqrt":"calculus-integration.html","fig-exp-pdf-cdf":"calculus-integration.html","fig-exp-pdf-cdf-cdf":"calculus-integration.html","fig-exp-pdf-cdf-pdf":"calculus-integration.html","fig-ftc-part1":"calculus-integration.html","fig-ftc-part1-left":"calculus-integration.html","fig-ftc-part1-right":"calculus-integration.html","fig-fubini-fail":"calculus-double-integrals.html","fig-fubini-nonrect":"calculus-double-integrals.html","fig-fubini-nonrect-region":"calculus-double-integrals.html","fig-fubini-rect":"calculus-double-integrals.html","fig-fubini-rect-region":"calculus-double-integrals.html","fig-function-profile-logistic":"calculus-derivatives.html","fig-linear-approx":"calculus-derivatives.html","fig-not-continuous-on":"calculus-integration.html","fig-smooth-function":"calculus-derivatives.html","fig-step":"calculus-integration.html","finding-points-with-a-prescribed-slope":"calculus-derivatives.html","ftc-part-1-visualized-accumulation-function-for-ft-2t":"calculus-integration.html","ftc-part1-left-code":"calculus-integration.html","ftc-part1-right-code":"calculus-integration.html","ftc-part1-setup":"calculus-integration.html","fubinis-theorem-measure-theoretic-form":"calculus-double-integrals.html","fubinis-theorem-riemann-version":"calculus-double-integrals.html","fubinitonelli-for-probability-measures":"calculus-double-integrals.html","function-profile-logistic":"calculus-derivatives.html","fundamental-theorem-of-calculus":"calculus-integration.html","fundamental-theorem-of-calculus-part-1-derivative-of-an-integral":"calculus-integration.html","fundamental-theorem-of-calculus-part-2-evaluation-theorem":"calculus-integration.html","further-reading":"calculus-double-integrals.html","generalized-power-rule":"calculus-derivatives.html","harmonic-numbers-as-a-double-integral":"calculus-double-integrals.html","improper-gaussian-kernel-integral":"calculus-integration.html","indefinite-integral":"calculus-integration.html","integrable-but-not-continuous-a-step-function":"calculus-integration.html","integral-of-a-composite-power":"calculus-integration.html","integral-of-a-perfect-square":"calculus-integration.html","integral-of-odd-trigonometric-functions":"calculus-integration.html","integrand":"calculus-integration.html","integrands":"calculus-integration.html","integration-by-parts-with-an-exponential-factor":"calculus-integration.html","iterated-integral":"calculus-double-integrals.html","jump-discontinuity":"calculus-integration.html","lagranges-notation":"calculus-derivatives.html","left-hand-derivative":"calculus-derivatives.html","left-hand-limit":"calculus-derivatives.html","leibniz-notation":"calculus-derivatives.html","limit-of-a-function-at-a-point":"calculus-derivatives.html","linear-approximation-first-order-taylor-approximation-first-order-taylor-expansion":"calculus-derivatives.html","linear-taylor-polynomial-of-the-exponential":"calculus-taylor-series.html","lists-that-are-not-partitions-of-lbrack-0-1rbrack":"calculus-integration.html","logarithmic-derivative":"calculus-derivatives.html","maclaurin-polynomial":"calculus-taylor-series.html","maclaurin-polynomial-of-log1---x":"calculus-taylor-series.html","maclaurin-polynomial-of-log1-x":"calculus-taylor-series.html","maclaurin-polynomial-of-the-standard-normal-density":"calculus-taylor-series.html","maclaurin-series-of-log1---x":"calculus-taylor-series.html","maclaurin-series-of-log1-x":"calculus-taylor-series.html","mesh-of-a-partition":"calculus-integration.html","not-continuous-on-plot":"calculus-integration.html","one-sided-derivatives":"calculus-derivatives.html","one-sided-derivatives-of-absx-at-0":"calculus-derivatives.html","one-sided-limits":"calculus-derivatives.html","one-sided-limits-of-a-step-function":"calculus-derivatives.html","partition-of-an-interval":"calculus-integration.html","positive-application-of-thm-tonelli-measure":"calculus-double-integrals.html","power-rule":"calculus-derivatives.html","product-of-single-integrals-for-separable-functions":"calculus-double-integrals.html","product-rule":"calculus-derivatives.html","profile-of-a-function":"calculus-derivatives.html","python":"calculus-derivatives.html","quotient-rule":"calculus-derivatives.html","r":"calculus-derivatives.html","regularity-conditions":"calculus-integration.html","rem-accumulation-function-dummy-variable":"calculus-integration.html","rem-evaluation-bracket-ftc":"calculus-integration.html","rem-fubini-tonelli-probability":"calculus-double-integrals.html","rem-integrable-integral":"calculus-integration.html","rem-linear-approx-affine":"calculus-derivatives.html","rem-one-sided-limit-and-limit":"calculus-derivatives.html","rem-smooth-function-loose":"calculus-derivatives.html","riemann-integrable":"calculus-integration.html","riemann-integrable-functions-and-riemann-integrals":"calculus-integration.html","riemann-integral-definite-integral":"calculus-integration.html","riemann-sum":"calculus-integration.html","right-hand-derivative":"calculus-derivatives.html","right-hand-limit":"calculus-derivatives.html","sample-point":"calculus-integration.html","sec-derivative-rules":"calculus-derivatives.html","sec-double-integrals":"calculus-double-integrals.html","sec-function-profile":"calculus-derivatives.html","sec-integration":"calculus-integration.html","sec-limits-derivatives":"calculus-derivatives.html","sec-linear-approximation":"calculus-derivatives.html","sec-tangent-lines":"calculus-derivatives.html","sec-taylor-compound":"calculus-taylor-series.html","sec-taylor-elementary":"calculus-taylor-series.html","sec-taylor-series":"calculus-taylor-series.html","second-derivative":"calculus-derivatives.html","second-derivative-of-a-product":"calculus-derivatives.html","second-derivative-of-the-gaussian-kernel":"calculus-derivatives.html","second-derivative-of-the-standard-gaussian-kernel":"calculus-derivatives.html","second-derivative-with-an-added-constant":"calculus-derivatives.html","separating-even-and-odd-parts-of-a-polynomial":"calculus-integration.html","smooth-function-infinitely-differentiable-function":"calculus-derivatives.html","smooth-function-python":"calculus-derivatives.html","smooth-function-r":"calculus-derivatives.html","smooth-in-statistics-and-machine-learning":"calculus-derivatives.html","sol-miller-deriv-chain-log":"calculus-derivatives.html","sol-miller-deriv-find-slopes":"calculus-derivatives.html","sol-miller-deriv-gaussian-kernel":"calculus-derivatives.html","sol-miller-deriv-generalized-power-rule":"calculus-derivatives.html","sol-miller-deriv-log-simplify":"calculus-derivatives.html","sol-miller-deriv-polynomial-root":"calculus-derivatives.html","sol-miller-deriv-product-chain-composite":"calculus-derivatives.html","sol-miller-deriv-product-poly-cos":"calculus-derivatives.html","sol-miller-deriv-quotient-or-factor":"calculus-derivatives.html","sol-miller-deriv-second-gaussian-kernel":"calculus-derivatives.html","sol-miller-deriv-second-log-constant":"calculus-derivatives.html","sol-miller-deriv-second-product":"calculus-derivatives.html","sol-miller-deriv-tangent-line-approx":"calculus-derivatives.html","sol-miller-deriv-tangent-line-approx-approx":"calculus-derivatives.html","sol-miller-deriv-tangent-line-approx-compare":"calculus-derivatives.html","sol-miller-deriv-tangent-line-approx-tangent":"calculus-derivatives.html","sol-miller-dint-harmonic-identity":"calculus-double-integrals.html","sol-miller-dint-linear-plane":"calculus-double-integrals.html","sol-miller-dint-order-of-integration":"calculus-double-integrals.html","sol-miller-dint-polynomial-rectangle":"calculus-double-integrals.html","sol-miller-dint-separable":"calculus-double-integrals.html","sol-miller-dint-square-root-term":"calculus-double-integrals.html","sol-miller-dint-switch-order":"calculus-double-integrals.html","sol-miller-dint-triangular-region":"calculus-double-integrals.html","sol-miller-int-by-parts-gaussian":"calculus-integration.html","sol-miller-int-composite-power":"calculus-integration.html","sol-miller-int-log-substitution":"calculus-integration.html","sol-miller-int-polynomial":"calculus-integration.html","sol-miller-int-polynomial-symmetry":"calculus-integration.html","sol-miller-int-power-substitution":"calculus-integration.html","sol-miller-int-quadratic-complete":"calculus-integration.html","sol-miller-int-rayleigh-normal-kernel":"calculus-integration.html","sol-miller-int-trig-substitution":"calculus-integration.html","sol-miller-int-trig-symmetry":"calculus-integration.html","sol-miller-int-uniform-convolution":"calculus-integration.html","sol-miller-taylor-cos-cubed":"calculus-taylor-series.html","sol-miller-taylor-cos-scaled":"calculus-taylor-series.html","sol-miller-taylor-cube-root":"calculus-taylor-series.html","sol-miller-taylor-exp-base":"calculus-taylor-series.html","sol-miller-taylor-exp-power":"calculus-taylor-series.html","sol-miller-taylor-log-one-minus-x":"calculus-taylor-series.html","sol-miller-taylor-log-one-plus-x":"calculus-taylor-series.html","sol-miller-taylor-log-product-exp":"calculus-taylor-series.html","sol-miller-taylor-log-scaled":"calculus-taylor-series.html","sol-miller-taylor-normal-density":"calculus-taylor-series.html","sol-miller-taylor-poly-nonzero":"calculus-taylor-series.html","sol-miller-taylor-poly-zero":"calculus-taylor-series.html","sol-miller-taylor-product-cos-log":"calculus-taylor-series.html","sol-miller-taylor-sqrt":"calculus-taylor-series.html","sol-miller-taylor-x-log-x":"calculus-taylor-series.html","step-code":"calculus-integration.html","substitution-leading-to-a-natural-logarithm":"calculus-integration.html","substitution-with-a-polynomial-power":"calculus-integration.html","substitution-with-a-trigonometric-integrand":"calculus-integration.html","switching-order-of-integration-on-a-non-rectangular-region":"calculus-double-integrals.html","tangent-line":"calculus-derivatives.html","tangent-line-approximation":"calculus-derivatives.html","tangent-line-at-a-point":"calculus-derivatives.html","taylor-expansion-of-a-fractional-power":"calculus-taylor-series.html","taylor-expansion-of-a-polynomial-at-a-nonzero-point":"calculus-taylor-series.html","taylor-expansion-of-a-scaled-cosine":"calculus-taylor-series.html","taylor-expansion-of-the-normal-density":"calculus-taylor-series.html","taylor-expansion-of-the-square-root":"calculus-taylor-series.html","taylor-expansion-of-x-log-x":"calculus-taylor-series.html","taylor-polynomial-of-a-polynomial-at-the-origin":"calculus-taylor-series.html","taylor-polynomial-taylor-expansion":"calculus-taylor-series.html","taylor-series":"calculus-taylor-series.html","taylor-series-of-a-composite-exponential":"calculus-taylor-series.html","taylor-series-of-a-power-of-a-function":"calculus-taylor-series.html","taylor-series-of-a-product-of-known-expansions":"calculus-taylor-series.html","taylor-series-of-log1---xex":"calculus-taylor-series.html","taylor-series-of-log1-2x":"calculus-taylor-series.html","taylor-series-of-the-cosine-function":"calculus-taylor-series.html","taylor-series-of-the-exponential-function":"calculus-taylor-series.html","taylor-series-of-the-sine-function":"calculus-taylor-series.html","the-accumulation-function-of-a-constant":"calculus-integration.html","the-derivative-of-x2":"calculus-derivatives.html","the-difference-quotient-of-x2-at-1":"calculus-derivatives.html","the-double-integral-of-1-is-an-area":"calculus-double-integrals.html","the-evaluation-bracket-and-the-fundamental-theorem-of-calculus":"calculus-integration.html","the-limit-of-3x-1-at-2":"calculus-derivatives.html","the-linear-approximation-is-affine":"calculus-derivatives.html","the-mesh-of-a-partition-of-lbrack-0-1rbrack":"calculus-integration.html","the-profile-of-the-logistic-function":"calculus-derivatives.html","the-second-derivative-of-x3":"calculus-derivatives.html","the-tangent-line-to-x2-at-1":"calculus-derivatives.html","thm-chain-rule":"calculus-derivatives.html","thm-cont-implies-int":"calculus-integration.html","thm-deriv-const":"calculus-derivatives.html","thm-deriv-const-factor":"calculus-derivatives.html","thm-deriv-cos":"calculus-derivatives.html","thm-deriv-exp":"calculus-derivatives.html","thm-deriv-gaussian-kernel":"calculus-derivatives.html","thm-deriv-log":"calculus-derivatives.html","thm-deriv-polynomial":"calculus-derivatives.html","thm-deriv-second-gaussian-kernel":"calculus-derivatives.html","thm-deriv-sin":"calculus-derivatives.html","thm-diff-implies-cont":"calculus-integration.html","thm-dint-harmonic-identity":"calculus-double-integrals.html","thm-dint-separable":"calculus-double-integrals.html","thm-ftc":"calculus-integration.html","thm-ftc-part1":"calculus-integration.html","thm-ftc-part2":"calculus-integration.html","thm-fubini":"calculus-double-integrals.html","thm-fubini-measure":"calculus-double-integrals.html","thm-fubini-tonelli":"calculus-double-integrals.html","thm-int-uniform-convolution":"calculus-integration.html","thm-integral-rules":"calculus-integration.html","thm-product-rule":"calculus-derivatives.html","thm-quotient-rule":"calculus-derivatives.html","thm-riemann-general":"calculus-integration.html","thm-taylor-log-one-minus-x":"calculus-taylor-series.html","thm-taylor-log-one-plus-x":"calculus-taylor-series.html","thm-taylor-normal-density":"calculus-taylor-series.html","thm-tonelli-measure":"calculus-double-integrals.html","tonellis-theorem-measure-theoretic-form":"calculus-double-integrals.html","when-conditions-fail-a-counterexample":"calculus-double-integrals.html","when-neither-tonellis-nor-fubinis-condition-is-satisfied":"calculus-double-integrals.html","why-the-integration-variable-is-called-t":"calculus-integration.html"};
   function follow() {
     var id = decodeURIComponent(location.hash.slice(1));
     if (id && !document.getElementById(id) && moved[id]) {
@@ -1503,7 +1666,7 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
 </script>
 <script>
 (function () {
-  var moved = {"a-local-maximizer":"optimization-critical-points.html","a-minimizer-has-derivative-zero":"optimization-critical-points.html","a-quadratic-form-is-at-least-the-smallest-eigenvalue-times-the-squared-length":"optimization-critical-points.html","a-quadratic-form-with-small-entries-is-small":"optimization-critical-points.html","a-saddle-point":"optimization-critical-points.html","a-stationary-point-and-a-point-that-is-not-one":"optimization-critical-points.html","a-stationary-point-of-the-sum-of-squared-errors-on-real-data":"optimization-critical-points.html","an-inflection-point-of-x3":"optimization-critical-points.html","applying-the-test-and-its-limits":"optimization-critical-points.html","check-the-prediction":"optimization-critical-points.html","checking-the-bound":"optimization-critical-points.html","checking-the-bound-1":"optimization-critical-points.html","classify-the-flat-point":"optimization-critical-points.html","classifying-critical-points-with-the-second-derivative-test":"optimization-critical-points.html","classifying-stationary-points":"optimization-critical-points.html","critical-point":"optimization-critical-points.html","critical-point-python":"optimization-critical-points.html","critical-point-r":"optimization-critical-points.html","critical-points-that-are-and-are-not-flat-points":"optimization-critical-points.html","def-critical-point":"optimization-critical-points.html","def-flat-point":"optimization-critical-points.html","def-inflection-point":"optimization-critical-points.html","def-local-maximizer":"optimization-critical-points.html","def-saddle-point":"optimization-critical-points.html","def-stationary-point":"optimization-critical-points.html","def-strict-local-minimizer":"optimization-critical-points.html","differentiate-a-quadratic":"optimization-critical-points.html","every-flat-point-is-a-critical-point":"optimization-critical-points.html","exact-value":"optimization-critical-points.html","exm-critical-point":"optimization-critical-points.html","exm-fermat":"optimization-critical-points.html","exm-first-order-condition":"optimization-critical-points.html","exm-flat-point":"optimization-critical-points.html","exm-flat-point-critical":"optimization-critical-points.html","exm-inflection-point":"optimization-critical-points.html","exm-local-maximizer":"optimization-critical-points.html","exm-qf-eigen-bound":"optimization-critical-points.html","exm-qf-entry-bound":"optimization-critical-points.html","exm-saddle-point":"optimization-critical-points.html","exm-second-derivative-test":"optimization-critical-points.html","exm-second-derivative-test-zero":"optimization-critical-points.html","exm-second-order-condition":"optimization-critical-points.html","exm-second-order-inconclusive":"optimization-critical-points.html","exm-stationary-least-squares":"optimization-critical-points.html","exm-stationary-point":"optimization-critical-points.html","exm-strict-local-minimizer":"optimization-critical-points.html","exm-taylor-1d":"optimization-critical-points.html","exm-taylor-mv":"optimization-critical-points.html","exr-flat-point":"optimization-critical-points.html","exr-flat-point-compare":"optimization-critical-points.html","exr-flat-point-exact":"optimization-critical-points.html","exr-flat-point-find":"optimization-critical-points.html","exr-flat-point-minimum":"optimization-critical-points.html","exr-flat-point-predict":"optimization-critical-points.html","exr-flat-point-slope":"optimization-critical-points.html","exr-miller-deriv-classify-critical-points":"optimization-critical-points.html","exr-miller-deriv-opt-gamma-kernel":"optimization-critical-points.html","fig-critical-point":"optimization-critical-points.html","fig-flat-point":"optimization-critical-points.html","fig-flat-point-critical":"optimization-critical-points.html","fig-inflection-point":"optimization-critical-points.html","fig-saddle-point":"optimization-critical-points.html","fig-second-derivative-test-zero":"optimization-critical-points.html","fig-second-order-condition":"optimization-critical-points.html","fig-second-order-condition-3d":"optimization-critical-points.html","fig-stationary-point":"optimization-critical-points.html","fig-stationary-point-3d":"optimization-critical-points.html","find-the-flat-point":"optimization-critical-points.html","first-order-necessary-condition":"optimization-critical-points.html","flat-point-critical":"optimization-critical-points.html","flat-point-critical-python":"optimization-critical-points.html","flat-point-critical-r":"optimization-critical-points.html","flat-point-python":"optimization-critical-points.html","flat-point-r":"optimization-critical-points.html","flat-point-stationary-point":"optimization-critical-points.html","flat-points-and-a-point-that-is-not-one":"optimization-critical-points.html","for-a-quadratic-form-the-expansion-is-exact":"optimization-critical-points.html","inflection-point":"optimization-critical-points.html","inflection-point-python":"optimization-critical-points.html","inflection-point-r":"optimization-critical-points.html","inflection-points-change-the-curvature":"optimization-critical-points.html","lem-qf-eigen-bound":"optimization-critical-points.html","lem-qf-entry-bound":"optimization-critical-points.html","local-maximizer":"optimization-critical-points.html","maximizing-a-gamma-family-kernel":"optimization-critical-points.html","predict-a-nearby-value":"optimization-critical-points.html","python":"optimization-critical-points.html","python-1":"optimization-critical-points.html","python-10":"optimization-critical-points.html","python-2":"optimization-critical-points.html","python-3":"optimization-critical-points.html","python-4":"optimization-critical-points.html","python-5":"optimization-critical-points.html","python-6":"optimization-critical-points.html","python-7":"optimization-critical-points.html","python-8":"optimization-critical-points.html","python-9":"optimization-critical-points.html","r":"optimization-critical-points.html","r-1":"optimization-critical-points.html","r-10":"optimization-critical-points.html","r-2":"optimization-critical-points.html","r-3":"optimization-critical-points.html","r-4":"optimization-critical-points.html","r-5":"optimization-critical-points.html","r-6":"optimization-critical-points.html","r-7":"optimization-critical-points.html","r-8":"optimization-critical-points.html","r-9":"optimization-critical-points.html","rem-inflection-point":"optimization-critical-points.html","rem-second-derivative-test-zero":"optimization-critical-points.html","rem-stationary-point-one-variable":"optimization-critical-points.html","saddle-point":"optimization-critical-points.html","saddle-point-3d-python":"optimization-critical-points.html","saddle-point-3d-python-static":"optimization-critical-points.html","saddle-point-3d-r":"optimization-critical-points.html","sec-critical-points":"optimization-critical-points.html","sec-optimality-vector":"optimization-critical-points.html","second-derivative-test":"optimization-critical-points.html","second-derivative-test-for-powers-of-x":"optimization-critical-points.html","second-derivative-test-zero-python":"optimization-critical-points.html","second-derivative-test-zero-r":"optimization-critical-points.html","second-order-condition-3d-python":"optimization-critical-points.html","second-order-condition-3d-python-static":"optimization-critical-points.html","second-order-condition-3d-r":"optimization-critical-points.html","second-order-condition-python":"optimization-critical-points.html","second-order-condition-r":"optimization-critical-points.html","second-order-sufficient-condition":"optimization-critical-points.html","second-order-taylor-theorem-in-several-variables":"optimization-critical-points.html","slope-at-w-1":"optimization-critical-points.html","sol-flat-point":"optimization-critical-points.html","sol-flat-point-compare":"optimization-critical-points.html","sol-flat-point-exact":"optimization-critical-points.html","sol-flat-point-find":"optimization-critical-points.html","sol-flat-point-minimum":"optimization-critical-points.html","sol-flat-point-predict":"optimization-critical-points.html","sol-flat-point-slope":"optimization-critical-points.html","sol-miller-deriv-classify-critical-points":"optimization-critical-points.html","sol-miller-deriv-opt-gamma-kernel":"optimization-critical-points.html","source":"optimization-critical-points.html","stationary-least-squares-lm":"optimization-critical-points.html","stationary-least-squares-r":"optimization-critical-points.html","stationary-point":"optimization-critical-points.html","stationary-point-3d-python":"optimization-critical-points.html","stationary-point-3d-python-static":"optimization-critical-points.html","stationary-point-3d-r":"optimization-critical-points.html","stationary-point-python":"optimization-critical-points.html","stationary-point-r":"optimization-critical-points.html","stationary-points-in-one-variable":"optimization-critical-points.html","strict-and-non-strict-local-minimizers":"optimization-critical-points.html","strict-local-minimizer":"optimization-critical-points.html","taylors-theorem-with-a-second-order-remainder":"optimization-critical-points.html","the-condition-is-sufficient-not-necessary":"optimization-critical-points.html","the-flat-points-of-a-cubic-and-a-critical-point-that-is-not-flat":"optimization-critical-points.html","the-remainder-point-for-ex":"optimization-critical-points.html","the-second-derivative-test-can-fail-to-decide":"optimization-critical-points.html","thm-fermat":"optimization-critical-points.html","thm-first-order-condition":"optimization-critical-points.html","thm-flat-point-critical":"optimization-critical-points.html","thm-second-derivative-test":"optimization-critical-points.html","thm-second-order-condition":"optimization-critical-points.html","thm-taylor-1d":"optimization-critical-points.html","thm-taylor-mv":"optimization-critical-points.html","three-functions-with-second-derivative-0-at-a-flat-point":"optimization-critical-points.html","using-the-condition-to-locate-and-to-rule-out-minimizers":"optimization-critical-points.html"};
+  var moved = {"a-local-maximizer":"optimization-optimality.html","a-minimizer-has-derivative-zero":"optimization-optimality.html","a-quadratic-form-is-at-least-the-smallest-eigenvalue-times-the-squared-length":"optimization-optimality.html","a-quadratic-form-with-small-entries-is-small":"optimization-optimality.html","a-saddle-point":"optimization-optimality.html","a-stationary-point-and-a-point-that-is-not-one":"optimization-optimality.html","a-stationary-point-of-the-sum-of-squared-errors-on-real-data":"optimization-optimality.html","an-inflection-point-of-x3":"optimization-critical-points.html","applying-the-test-and-its-limits":"optimization-optimality.html","check-the-prediction":"optimization-critical-points.html","checking-the-bound":"optimization-optimality.html","checking-the-bound-1":"optimization-optimality.html","classify-the-flat-point":"optimization-critical-points.html","classifying-critical-points-with-the-second-derivative-test":"optimization-critical-points.html","classifying-stationary-points":"optimization-optimality.html","critical-point":"optimization-critical-points.html","critical-point-python":"optimization-critical-points.html","critical-point-r":"optimization-critical-points.html","critical-points-that-are-and-are-not-flat-points":"optimization-critical-points.html","def-critical-point":"optimization-critical-points.html","def-flat-point":"optimization-critical-points.html","def-inflection-point":"optimization-critical-points.html","def-local-maximizer":"optimization-optimality.html","def-saddle-point":"optimization-optimality.html","def-stationary-point":"optimization-optimality.html","def-strict-local-minimizer":"optimization-optimality.html","differentiate-a-quadratic":"optimization-critical-points.html","every-flat-point-is-a-critical-point":"optimization-critical-points.html","exact-value":"optimization-critical-points.html","exm-critical-point":"optimization-critical-points.html","exm-fermat":"optimization-optimality.html","exm-first-order-condition":"optimization-optimality.html","exm-flat-point":"optimization-critical-points.html","exm-flat-point-critical":"optimization-critical-points.html","exm-inflection-point":"optimization-critical-points.html","exm-local-maximizer":"optimization-optimality.html","exm-qf-eigen-bound":"optimization-optimality.html","exm-qf-entry-bound":"optimization-optimality.html","exm-saddle-point":"optimization-optimality.html","exm-second-derivative-test":"optimization-critical-points.html","exm-second-derivative-test-zero":"optimization-critical-points.html","exm-second-order-condition":"optimization-optimality.html","exm-second-order-inconclusive":"optimization-optimality.html","exm-stationary-least-squares":"optimization-optimality.html","exm-stationary-point":"optimization-optimality.html","exm-strict-local-minimizer":"optimization-optimality.html","exm-taylor-1d":"optimization-optimality.html","exm-taylor-mv":"optimization-optimality.html","exr-flat-point":"optimization-critical-points.html","exr-flat-point-compare":"optimization-critical-points.html","exr-flat-point-exact":"optimization-critical-points.html","exr-flat-point-find":"optimization-critical-points.html","exr-flat-point-minimum":"optimization-critical-points.html","exr-flat-point-predict":"optimization-critical-points.html","exr-flat-point-slope":"optimization-critical-points.html","exr-miller-deriv-classify-critical-points":"optimization-critical-points.html","exr-miller-deriv-opt-gamma-kernel":"optimization-critical-points.html","fig-critical-point":"optimization-critical-points.html","fig-flat-point":"optimization-critical-points.html","fig-flat-point-critical":"optimization-critical-points.html","fig-inflection-point":"optimization-critical-points.html","fig-saddle-point":"optimization-optimality.html","fig-second-derivative-test-zero":"optimization-critical-points.html","fig-second-order-condition":"optimization-optimality.html","fig-second-order-condition-3d":"optimization-optimality.html","fig-stationary-point":"optimization-optimality.html","fig-stationary-point-3d":"optimization-optimality.html","find-the-flat-point":"optimization-critical-points.html","first-order-necessary-condition":"optimization-optimality.html","flat-point-critical":"optimization-critical-points.html","flat-point-critical-python":"optimization-critical-points.html","flat-point-critical-r":"optimization-critical-points.html","flat-point-python":"optimization-critical-points.html","flat-point-r":"optimization-critical-points.html","flat-point-stationary-point":"optimization-critical-points.html","flat-points-and-a-point-that-is-not-one":"optimization-critical-points.html","for-a-quadratic-form-the-expansion-is-exact":"optimization-optimality.html","inflection-point":"optimization-critical-points.html","inflection-point-python":"optimization-critical-points.html","inflection-point-r":"optimization-critical-points.html","inflection-points-change-the-curvature":"optimization-critical-points.html","lem-qf-eigen-bound":"optimization-optimality.html","lem-qf-entry-bound":"optimization-optimality.html","local-maximizer":"optimization-optimality.html","maximizing-a-gamma-family-kernel":"optimization-critical-points.html","predict-a-nearby-value":"optimization-critical-points.html","python":"optimization-critical-points.html","python-1":"optimization-critical-points.html","python-2":"optimization-critical-points.html","python-3":"optimization-critical-points.html","python-4":"optimization-critical-points.html","python-5":"optimization-optimality.html","r":"optimization-critical-points.html","r-1":"optimization-critical-points.html","r-2":"optimization-critical-points.html","r-3":"optimization-critical-points.html","r-4":"optimization-critical-points.html","r-5":"optimization-optimality.html","rem-inflection-point":"optimization-critical-points.html","rem-second-derivative-test-zero":"optimization-critical-points.html","rem-stationary-point-one-variable":"optimization-optimality.html","saddle-point":"optimization-optimality.html","saddle-point-3d-python":"optimization-optimality.html","saddle-point-3d-python-static":"optimization-optimality.html","saddle-point-3d-r":"optimization-optimality.html","sec-critical-points":"optimization-critical-points.html","sec-optimality-vector":"optimization-optimality.html","second-derivative-test":"optimization-critical-points.html","second-derivative-test-for-powers-of-x":"optimization-critical-points.html","second-derivative-test-zero-python":"optimization-critical-points.html","second-derivative-test-zero-r":"optimization-critical-points.html","second-order-condition-3d-python":"optimization-optimality.html","second-order-condition-3d-python-static":"optimization-optimality.html","second-order-condition-3d-r":"optimization-optimality.html","second-order-condition-python":"optimization-optimality.html","second-order-condition-r":"optimization-optimality.html","second-order-sufficient-condition":"optimization-optimality.html","second-order-taylor-theorem-in-several-variables":"optimization-optimality.html","slope-at-w-1":"optimization-critical-points.html","sol-flat-point":"optimization-critical-points.html","sol-flat-point-compare":"optimization-critical-points.html","sol-flat-point-exact":"optimization-critical-points.html","sol-flat-point-find":"optimization-critical-points.html","sol-flat-point-minimum":"optimization-critical-points.html","sol-flat-point-predict":"optimization-critical-points.html","sol-flat-point-slope":"optimization-critical-points.html","sol-miller-deriv-classify-critical-points":"optimization-critical-points.html","sol-miller-deriv-opt-gamma-kernel":"optimization-critical-points.html","source":"optimization-optimality.html","stationary-least-squares-lm":"optimization-optimality.html","stationary-least-squares-r":"optimization-optimality.html","stationary-point":"optimization-optimality.html","stationary-point-3d-python":"optimization-optimality.html","stationary-point-3d-python-static":"optimization-optimality.html","stationary-point-3d-r":"optimization-optimality.html","stationary-point-python":"optimization-optimality.html","stationary-point-r":"optimization-optimality.html","stationary-points-in-one-variable":"optimization-optimality.html","strict-and-non-strict-local-minimizers":"optimization-optimality.html","strict-local-minimizer":"optimization-optimality.html","taylors-theorem-with-a-second-order-remainder":"optimization-optimality.html","the-condition-is-sufficient-not-necessary":"optimization-optimality.html","the-flat-points-of-a-cubic-and-a-critical-point-that-is-not-flat":"optimization-critical-points.html","the-remainder-point-for-ex":"optimization-optimality.html","the-second-derivative-test-can-fail-to-decide":"optimization-critical-points.html","thm-fermat":"optimization-optimality.html","thm-first-order-condition":"optimization-optimality.html","thm-flat-point-critical":"optimization-critical-points.html","thm-second-derivative-test":"optimization-critical-points.html","thm-second-order-condition":"optimization-optimality.html","thm-taylor-1d":"optimization-optimality.html","thm-taylor-mv":"optimization-optimality.html","three-functions-with-second-derivative-0-at-a-flat-point":"optimization-critical-points.html","using-the-condition-to-locate-and-to-rule-out-minimizers":"optimization-optimality.html"};
   function follow() {
     var id = decodeURIComponent(location.hash.slice(1));
     if (id && !document.getElementById(id) && moved[id]) {
@@ -1711,6 +1874,46 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 <script>
+// A link to an id that has moved to another page of this site: when the page
+// holds no element with the link's #id, look the id up in anchor-index.json,
+// which the site's anchor-index.py post-render step writes at the site root,
+// and go to the page that holds it now, keeping the rest of the hash (a text
+// fragment). A site without the index, an id it does not list, or an id that
+// maps back to this page leaves the reader where they are. It runs on load
+// and again when an in-page link changes the hash.
+(function () {
+  if (!window.fetch) return;
+  var meta = document.querySelector('meta[name="quarto:offset"]');
+  var root = new URL(meta ? meta.getAttribute("content") : "./", location.href);
+  var index = null;
+  function follow() {
+    var id = "";
+    try { id = decodeURIComponent(location.hash.slice(1).replace(/:~:.*$/, "")); } catch (e) { return; }
+    if (!id || document.getElementById(id)) return;
+    index = index || fetch(new URL("anchor-index.json", root)).then(function (r) {
+      return r.ok ? r.json() : null;
+    }).catch(function () { return null; });
+    index.then(function (data) {
+      var ids = data && data.ids;
+      var page = ids && Object.prototype.hasOwnProperty.call(ids, id) ? ids[id] : null;
+      if (typeof page !== "string" || document.getElementById(id)) return;
+      var dest = new URL(page, root);
+      var here = location.pathname.replace(/\/$/, "/index.html");
+      if (dest.pathname === here) return;
+      // location.hash leaves out a text fragment; the navigation entry keeps it.
+      var hash = location.hash;
+      try {
+        var nav = performance.getEntriesByType("navigation")[0];
+        var m = nav && /#(.*)$/.exec(nav.name);
+        if (m && m[1].indexOf(hash.slice(1)) === 0) hash = "#" + m[1];
+      } catch (e) {}
+      location.replace(dest.href.replace(/#.*$/, "") + hash);
+    });
+  }
+  follow();
+  window.addEventListener("hashchange", follow);
+})();
+
 // Typesetting equations and loading images change the height of everything
 // above the reader and push the text they were reading out of view. Keep the
 // reader's place: until they scroll, that is the link target (#id or a text
@@ -2455,7 +2658,7 @@ document.querySelectorAll("main table").forEach(function (t) {
 <span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@calclifesaver</span>
 <span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@larsonCalc11e</span>
 <span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@problifesavercalc</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>  The calculus review exercises and worked solutions across these pages and in <span class="co">[</span><span class="ot">Vector Calculus</span><span class="co">](vector-calculus.qmd#def-partial-derivative)</span> are adapted from this supplemental review chapter.</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>  The calculus review exercises and worked solutions across these pages and on the <span class="co">[</span><span class="ot">Partial Derivatives and Gradients</span><span class="co">](vector-calculus-gradients.qmd)</span> page are adapted from this supplemental review chapter. <span class="co">&lt;!-- check-term-links: allow: worked solutions are answers to exercises --&gt;</span></span>
 <span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span><span class="ot">&lt;http://www.youtube.com/watch?v=xYzQL0TUtBA&gt;</span></span>
 <span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span><span class="ot">&lt;http://www.youtube.com/watch?v=Ps2SBo_WjoE&gt;</span></span>
 <span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@realanalysislifesaver (the rigorous foundations behind these results)</span>

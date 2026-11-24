@@ -107,9 +107,9 @@ div.csl-indent {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-945790fbee74b2190a3a110e90abeebf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-f50b23cbd4f49061faf5f7dbc4364508.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark-e3d608924d8f07ebdc6daf50948dfd29.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-945790fbee74b2190a3a110e90abeebf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-f50b23cbd4f49061faf5f7dbc4364508.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet">
 <script src="site_libs/quarto-contrib/callouty-theorem-1.4.2/callouty-theorem.js"></script>
 <link href="site_libs/quarto-contrib/callouty-theorem-1.4.2/callouty-theorem.css" rel="stylesheet">
@@ -167,13 +167,14 @@ cookieconsent.run({
 <script>
 // Theme dropdown: Light, Off-white, Parchment, Dark. Quarto's own toggle
 // handles light/dark and remembers it; the two tinted palettes are a
-// data-palette attribute on <html>. The choice is kept under "mln-theme".
-// Off-white is the default for a first visit.
+// data-palette attribute on <html>. The choice is kept under "lds-theme"
+// (falling back to "mln-theme"). Off-white is the default for a first visit.
 (function () {
-  var KEY = "mln-theme";
+  var KEY = "lds-theme";
+  var LEGACY_KEY = "mln-theme";
   var OPTIONS = [["light", "Light"], ["offwhite", "Off-white"], ["parchment", "Parchment"], ["dark", "Dark"]];
   function stored() {
-    try { return localStorage.getItem(KEY); } catch (e) { return null; }
+    try { return localStorage.getItem(KEY) || localStorage.getItem(LEGACY_KEY); } catch (e) { return null; }
   }
   function isDark() { return document.body.classList.contains("quarto-dark"); }
   function apply(choice, remember) {
@@ -228,46 +229,6 @@ cookieconsent.run({
 })();
 </script>
 <style>
-div.callout-tbl.callout {
-  border-left-color: #757575;
-}
-div.callout-tbl.callout-style-default .callout-header {
-  background-color: rgba(117, 117, 117, 0.13);
-}
-div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-lem.callout {
-  border-left-color: #1565C0;
-}
-div.callout-lem.callout-style-default .callout-header {
-  background-color: rgba(21, 101, 192, 0.13);
-}
-div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cor.callout {
-  border-left-color: #00838F;
-}
-div.callout-cor.callout-style-default .callout-header {
-  background-color: rgba(0, 131, 143, 0.13);
-}
-div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-fig.callout {
-  border-left-color: #757575;
-}
-div.callout-fig.callout-style-default .callout-header {
-  background-color: rgba(117, 117, 117, 0.13);
-}
-div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
 div.callout-def.callout {
   border-left-color: #1B5E20;
 }
@@ -277,46 +238,6 @@ div.callout-def.callout-style-default .callout-header {
 div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cnj.callout {
-  border-left-color: #558B2F;
-}
-div.callout-cnj.callout-style-default .callout-header {
-  background-color: rgba(85, 139, 47, 0.13);
-}
-div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-exr.callout {
-  border-left-color: #FFA500;
-}
-div.callout-exr.callout-style-default .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
-}
-div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-proof.callout {
-  border-left-color: #37474F;
-}
-div.callout-proof.callout-style-default .callout-header {
-  background-color: rgba(55, 71, 79, 0.13);
-}
-div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-remark.callout {
-  border-left-color: #AD1457;
-}
-div.callout-remark.callout-style-default .callout-header {
-  background-color: rgba(173, 20, 87, 0.13);
-}
-div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-prp.callout {
   border-left-color: #827717;
@@ -328,6 +249,46 @@ div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
+div.callout-remark.callout {
+  border-left-color: #AD1457;
+}
+div.callout-remark.callout-style-default .callout-header {
+  background-color: rgba(173, 20, 87, 0.13);
+}
+div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-proof.callout {
+  border-left-color: #37474F;
+}
+div.callout-proof.callout-style-default .callout-header {
+  background-color: rgba(55, 71, 79, 0.13);
+}
+div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-exr.callout {
+  border-left-color: #FFA500;
+}
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
+}
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-lem.callout {
+  border-left-color: #1565C0;
+}
+div.callout-lem.callout-style-default .callout-header {
+  background-color: rgba(21, 101, 192, 0.13);
+}
+div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-exm.callout {
   border-left-color: #6A1B9A;
 }
@@ -338,6 +299,36 @@ div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
+div.callout-fig.callout {
+  border-left-color: #757575;
+}
+div.callout-fig.callout-style-default .callout-header {
+  background-color: rgba(117, 117, 117, 0.13);
+}
+div.callout-fig .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-fig.callout-style-default .callout-icon::before, div.callout-fig.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-tbl.callout {
+  border-left-color: #757575;
+}
+div.callout-tbl.callout-style-default .callout-header {
+  background-color: rgba(117, 117, 117, 0.13);
+}
+div.callout-tbl .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-tbl.callout-style-default .callout-icon::before, div.callout-tbl.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23757575" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cor.callout {
+  border-left-color: #00838F;
+}
+div.callout-cor.callout-style-default .callout-header {
+  background-color: rgba(0, 131, 143, 0.13);
+}
+div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-solution.callout {
   border-left-color: #4E342E;
 }
@@ -347,6 +338,16 @@ div.callout-solution.callout-style-default .callout-header {
 div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
+}
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
+}
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 
@@ -598,12 +599,20 @@ window.Quarto = {
  <span class="dropdown-text">Equalities, Inequalities and Minimizers</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="./algebra-convexity.html">
+ <span class="dropdown-text">Convexity, Infimum and Supremum</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="./algebra-sums.html">
- <span class="dropdown-text">Convexity, Infimum and Sums</span></a>
+ <span class="dropdown-text">Sums, Products and Quotients</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./algebra-polynomials.html">
+ <span class="dropdown-text">Polynomials, Affine Functions and Series</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./algebra-exponentials.html">
- <span class="dropdown-text">Polynomials, Exponentials and Logarithms</span></a>
+ <span class="dropdown-text">Exponentials and Logarithms</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./algebra-trigonometry.html">
@@ -707,6 +716,10 @@ window.Quarto = {
  <span class="dropdown-text">Subspaces and Rank</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="./linear-algebra-bases.html">
+ <span class="dropdown-text">Bases and Dimension</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="./linear-algebra-column-null-space.html">
  <span class="dropdown-text">Column Space and Null Space</span></a>
   </li>  
@@ -720,23 +733,55 @@ window.Quarto = {
   </li>  
         <li>
     <a class="dropdown-item" href="./linear-algebra-direct-sums.html">
- <span class="dropdown-text">Direct Sums and Orthogonal Complements</span></a>
+ <span class="dropdown-text">Sums and Direct Sums</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-orthogonal-complements.html">
+ <span class="dropdown-text">Orthogonal Complements and the Fundamental Theorem</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./linear-algebra-inner-products.html">
- <span class="dropdown-text">Inner Products and Orthogonality</span></a>
+ <span class="dropdown-text">Inner Products and the Cauchy-Schwarz Inequality</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-orthonormal-bases.html">
+ <span class="dropdown-text">Orthonormal Bases, Outer Products and Hilbert Spaces</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./linear-algebra-special-matrices.html">
- <span class="dropdown-text">Special Matrices and Decompositions</span></a>
+ <span class="dropdown-text">Special Matrices, Quadratic Forms and Trace</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-decompositions.html">
+ <span class="dropdown-text">Eigenvalues and Matrix Decompositions</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-determinants.html">
+ <span class="dropdown-text">Determinants</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-definite-matrices.html">
+ <span class="dropdown-text">Definite Matrices</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./linear-algebra-projections.html">
- <span class="dropdown-text">Projections and Linear Systems</span></a>
+ <span class="dropdown-text">Design Matrices and Projections</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-generalized-inverses.html">
+ <span class="dropdown-text">Generalized Inverses and Linear Systems</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-least-squares.html">
+ <span class="dropdown-text">Solving Linear Systems and Least Squares</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./linear-algebra-diagonalization.html">
- <span class="dropdown-text">Diagonalization and Cholesky</span></a>
+ <span class="dropdown-text">Similarity and Diagonalization</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-cholesky.html">
+ <span class="dropdown-text">Schur Complements and the Cholesky Factorization</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./linear-algebra-complex.html">
@@ -744,10 +789,29 @@ window.Quarto = {
   </li>  
     </ul>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="./vector-calculus.html"> 
-<span class="menu-text">Vector Calculus</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-vector-calculus" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Vector Calculus</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-vector-calculus">    
+        <li>
+    <a class="dropdown-item" href="./vector-calculus.html">
+ <span class="dropdown-text">Overview</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./vector-calculus-gradients.html">
+ <span class="dropdown-text">Partial Derivatives and Gradients</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./vector-calculus-derivative-rules.html">
+ <span class="dropdown-text">Jacobians and Derivative Rules</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./vector-calculus-hessian.html">
+ <span class="dropdown-text">Second Partial Derivatives and the Hessian</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-optimization" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Optimization</span>
@@ -759,7 +823,11 @@ window.Quarto = {
   </li>  
         <li>
     <a class="dropdown-item" href="./optimization-critical-points.html">
- <span class="dropdown-text">Critical Points and Optimality Conditions</span></a>
+ <span class="dropdown-text">Critical Points and Optimization</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./optimization-optimality.html">
+ <span class="dropdown-text">Optimality Conditions in Several Variables</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./optimization-convexity.html">
@@ -870,14 +938,26 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./algebra-convexity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Convexity, Infimum and Supremum</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./algebra-sums.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Convexity, Infimum and Sums</span></a>
+ <span class="menu-text">Sums, Products and Quotients</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./algebra-polynomials.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Polynomials, Affine Functions and Series</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./algebra-exponentials.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Polynomials, Exponentials and Logarithms</span></a>
+ <span class="menu-text">Exponentials and Logarithms</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1017,6 +1097,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-bases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bases and Dimension</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./linear-algebra-column-null-space.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Column Space and Null Space</span></a>
   </div>
@@ -1036,31 +1122,79 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./linear-algebra-direct-sums.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Direct Sums and Orthogonal Complements</span></a>
+ <span class="menu-text">Sums and Direct Sums</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-orthogonal-complements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Orthogonal Complements and the Fundamental Theorem</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./linear-algebra-inner-products.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Inner Products and Orthogonality</span></a>
+ <span class="menu-text">Inner Products and the Cauchy-Schwarz Inequality</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-orthonormal-bases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Orthonormal Bases, Outer Products and Hilbert Spaces</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./linear-algebra-special-matrices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Special Matrices and Decompositions</span></a>
+ <span class="menu-text">Special Matrices, Quadratic Forms and Trace</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-decompositions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Eigenvalues and Matrix Decompositions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-determinants.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Determinants</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-definite-matrices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Definite Matrices</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./linear-algebra-projections.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Projections and Linear Systems</span></a>
+ <span class="menu-text">Design Matrices and Projections</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-generalized-inverses.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Generalized Inverses and Linear Systems</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-least-squares.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Solving Linear Systems and Least Squares</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./linear-algebra-diagonalization.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Diagonalization and Cholesky</span></a>
+ <span class="menu-text">Similarity and Diagonalization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-cholesky.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schur Complements and the Cholesky Factorization</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1071,25 +1205,54 @@ window.Quarto = {
 </li>
       </ul>
   </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./vector-calculus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Vector Calculus</span></a>
-  </div>
-</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./optimization.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-6-label">Optimization</span></a>
-            <button type="button" class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-controls="quarto-sidebar-section-6" aria-expanded="false" aria-label="Toggle section: Optimization">
+            <a href="./vector-calculus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text" id="quarto-sidebar-section-6-label">Vector Calculus</span></a>
+            <button type="button" class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-controls="quarto-sidebar-section-6" aria-expanded="false" aria-label="Toggle section: Vector Calculus">
               <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
             </button> 
       </div>
       <ul id="quarto-sidebar-section-6" aria-labelledby="quarto-sidebar-section-6-label" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./vector-calculus-gradients.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Partial Derivatives and Gradients</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./vector-calculus-derivative-rules.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Jacobians and Derivative Rules</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./vector-calculus-hessian.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Second Partial Derivatives and the Hessian</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./optimization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text" id="quarto-sidebar-section-7-label">Optimization</span></a>
+            <button type="button" class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-controls="quarto-sidebar-section-7" aria-expanded="false" aria-label="Toggle section: Optimization">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
+      </div>
+      <ul id="quarto-sidebar-section-7" aria-labelledby="quarto-sidebar-section-7-label" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./optimization-critical-points.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Critical Points and Optimality Conditions</span></a>
+ <span class="menu-text">Critical Points and Optimization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./optimization-optimality.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Optimality Conditions in Several Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1149,7 +1312,7 @@ window.Quarto = {
 <main class="content" id="quarto-document-content" tabindex="-1"><!-- qwt-page-banners -->
 <div class="preview-changes-banner" style="background-color: #fff3cd; border: 1px solid #ffc107; border-radius: 4px; padding: 12px; margin: 16px 0;">
     <p style="margin: 0;">
-        <strong>📋 Changes in this PR:</strong> <a href="algebra-basics.html">Equalities, Inequalities and Minimizers</a>, <a href="algebra-complex.html">Complex Numbers</a>, <a href="algebra-exponentials.html">Polynomials, Exponentials and Logarithms</a>, <a href="algebra-sums.html">Convexity, Infimum and Sums</a>, <a href="algebra-trigonometry.html">Trigonometry</a>, <a href="algebra.html">Algebra</a>, <a href="calculus-derivatives.html">Derivatives</a>, <a href="calculus-double-integrals.html">Double Integrals and Fubini’s Theorem</a>, <a href="calculus-integration.html">Integrals and the Fundamental Theorem of Calculus</a>, <a href="calculus-taylor-series.html">Taylor Series</a>, <a href="calculus.html">Calculus</a>, <a href="dependency-tree.html">Dependency Tree</a>, <a href="expressions-algorithms.html">Expressions and Algorithms</a>, <a href="functions.html">Functions</a>, <a href="growth-rates.html">Growth Rates</a>, <a href="index.html">Math for Data Science</a>, <a href="indicator-functions.html">Indicator Functions</a>, <a href="induction.html">Induction and Recursion</a>, <a href="linear-algebra-affine-subspaces.html">Affine Subspaces and Half-Spaces</a>, <a href="linear-algebra-column-null-space.html">Column Space and Null Space</a>, <a href="linear-algebra-complex.html">Complex Vectors and Matrices</a>, <a href="linear-algebra-diagonalization.html">Diagonalization and Cholesky</a>, <a href="linear-algebra-direct-sums.html">Direct Sums and Orthogonal Complements</a>, <a href="linear-algebra-inner-products.html">Inner Products and Orthogonality</a>, <a href="linear-algebra-linear-maps.html">Linear and Affine Maps</a>, <a href="linear-algebra-matrices.html">Matrices</a>, <a href="linear-algebra-matrix-multiplication.html">Matrix Multiplication</a>, <a href="linear-algebra-projections.html">Projections and Linear Systems</a>, <a href="linear-algebra-rank-nullity.html">Rank-Nullity and Rank Factorization</a>, <a href="linear-algebra-special-matrices.html">Special Matrices and Decompositions</a>, <a href="linear-algebra-subspaces.html">Subspaces and Rank</a>, <a href="linear-algebra-vectors.html">Vectors</a>, <a href="linear-algebra.html">Linear Algebra</a>, <a href="measures-additivity.html">Additivity</a>, <a href="measures-integrals.html">Measurable Functions and Integrals</a>, <a href="measures-lp-spaces.html">\(L^p\) Spaces</a>, <a href="measures-measure-spaces.html">Measures and Probability Measures</a>, <a href="measures-product.html">Product Measures</a>, <a href="measures-sigma-algebras.html">Sigma-Algebras</a>, <a href="measures.html">Measures</a>, <a href="notation.html">Notation</a>, <a href="number-systems.html">Number Systems</a>, <a href="optimization-constrained.html">Quadratic Minimization under Linear Constraints</a>, <a href="optimization-convexity.html">Convexity in Several Variables</a>, <a href="optimization-critical-points.html">Critical Points and Optimality Conditions</a>, <a href="optimization-gradient-descent.html">Gradient Descent</a>, <a href="optimization-newton.html">Newton’s Method</a>, <a href="optimization-quasi-newton.html">Quasi-Newton Methods</a>, <a href="optimization.html">Optimization</a>, <a href="proof-writing.html">Proof Writing</a>, <a href="relations.html">Relations</a>, <a href="sets-functions.html">Sets and Functions</a>, <a href="sets.html">Sets</a>, <a href="site_libs/revealjs/plugin/notes/speaker-view.html">reveal.js - Speaker View</a>, <a href="vector-calculus.html">Vector Calculus</a>
+        <strong>📋 Changes in this PR:</strong> <a href="algebra-basics.html">Equalities, Inequalities and Minimizers</a>, <a href="algebra-complex.html">Complex Numbers</a>, <a href="algebra-convexity.html">Convexity, Infimum and Supremum</a>, <a href="algebra-exponentials.html">Exponentials and Logarithms</a>, <a href="algebra-polynomials.html">Polynomials, Affine Functions and Series</a>, <a href="algebra-sums.html">Sums, Products and Quotients</a>, <a href="algebra-trigonometry.html">Trigonometry</a>, <a href="algebra.html">Algebra</a>, <a href="calculus-derivatives.html">Derivatives</a>, <a href="calculus-double-integrals.html">Double Integrals and Fubini’s Theorem</a>, <a href="calculus-integration.html">Integrals and the Fundamental Theorem of Calculus</a>, <a href="calculus-taylor-series.html">Taylor Series</a>, <a href="calculus.html">Calculus</a>, <a href="dependency-tree.html">Dependency Tree</a>, <a href="expressions-algorithms.html">Expressions and Algorithms</a>, <a href="functions.html">Functions</a>, <a href="growth-rates.html">Growth Rates</a>, <a href="index.html">Math for Data Science</a>, <a href="indicator-functions.html">Indicator Functions</a>, <a href="induction.html">Induction and Recursion</a>, <a href="linear-algebra-affine-subspaces.html">Affine Subspaces and Half-Spaces</a>, <a href="linear-algebra-bases.html">Bases and Dimension</a>, <a href="linear-algebra-cholesky.html">Schur Complements and the Cholesky Factorization</a>, <a href="linear-algebra-column-null-space.html">Column Space and Null Space</a>, <a href="linear-algebra-complex.html">Complex Vectors and Matrices</a>, <a href="linear-algebra-decompositions.html">Eigenvalues and Matrix Decompositions</a>, <a href="linear-algebra-definite-matrices.html">Definite Matrices</a>, <a href="linear-algebra-determinants.html">Determinants</a>, <a href="linear-algebra-diagonalization.html">Similarity and Diagonalization</a>, <a href="linear-algebra-direct-sums.html">Sums and Direct Sums</a>, <a href="linear-algebra-generalized-inverses.html">Generalized Inverses and Linear Systems</a>, <a href="linear-algebra-inner-products.html">Inner Products and the Cauchy-Schwarz Inequality</a>, <a href="linear-algebra-least-squares.html">Solving Linear Systems and Least Squares</a>, <a href="linear-algebra-linear-maps.html">Linear and Affine Maps</a>, <a href="linear-algebra-matrices.html">Matrices</a>, <a href="linear-algebra-matrix-multiplication.html">Matrix Multiplication</a>, <a href="linear-algebra-orthogonal-complements.html">Orthogonal Complements and the Fundamental Theorem</a>, <a href="linear-algebra-orthonormal-bases.html">Orthonormal Bases, Outer Products and Hilbert Spaces</a>, <a href="linear-algebra-projections.html">Design Matrices and Projections</a>, <a href="linear-algebra-rank-nullity.html">Rank-Nullity and Rank Factorization</a>, <a href="linear-algebra-special-matrices.html">Special Matrices, Quadratic Forms and Trace</a>, <a href="linear-algebra-subspaces.html">Subspaces and Rank</a>, <a href="linear-algebra-vectors.html">Vectors</a>, <a href="linear-algebra.html">Linear Algebra</a>, <a href="measures-additivity.html">Additivity</a>, <a href="measures-integrals.html">Measurable Functions and Integrals</a>, <a href="measures-lp-spaces.html">\(L^p\) Spaces</a>, <a href="measures-measure-spaces.html">Measures and Probability Measures</a>, <a href="measures-product.html">Product Measures</a>, <a href="measures-sigma-algebras.html">Sigma-Algebras</a>, <a href="measures.html">Measures</a>, <a href="notation.html">Notation</a>, <a href="number-systems.html">Number Systems</a>, <a href="optimization-constrained.html">Quadratic Minimization under Linear Constraints</a>, <a href="optimization-convexity.html">Convexity in Several Variables</a>, <a href="optimization-critical-points.html">Critical Points and Optimization</a>, <a href="optimization-gradient-descent.html">Gradient Descent</a>, <a href="optimization-newton.html">Newton’s Method</a>, <a href="optimization-optimality.html">Optimality Conditions in Several Variables</a>, <a href="optimization-quasi-newton.html">Quasi-Newton Methods</a>, <a href="optimization.html">Optimization</a>, <a href="proof-writing.html">Proof Writing</a>, <a href="relations.html">Relations</a>, <a href="sets-functions.html">Sets and Functions</a>, <a href="sets.html">Sets</a>, <a href="site_libs/revealjs/plugin/notes/speaker-view.html">reveal.js - Speaker View</a>, <a href="vector-calculus-derivative-rules.html">Jacobians and Derivative Rules</a>, <a href="vector-calculus-gradients.html">Partial Derivatives and Gradients</a>, <a href="vector-calculus-hessian.html">Second Partial Derivatives and the Hessian</a>, <a href="vector-calculus.html">Vector Calculus</a>
         <br>
         <strong>💡 Tip:</strong> If change highlighting is glitchy, add the <code>no-preview-highlights</code> label to this PR to disable it.
     </p>
@@ -1170,7 +1333,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-11-20 09:01:42 (PST)</p>
+      <p class="date">Last modified: 2026-11-23 20:33:36 (PST)</p>
     </div>
   </div>
   
@@ -1184,11 +1347,13 @@ window.Quarto = {
 
 <p>The algebra notes are split across these pages:</p>
 <ul>
-<li><a href="./algebra-basics.html">Equalities, Inequalities and Minimizers</a>: equalities, inequalities, powers, square roots and absolute values, minima and maxima, and global and local minimizers.</li>
-<li><a href="./algebra-sums.html">Convexity, Infimum and Sums</a>: convex functions, the infimum and supremum, sums, products and quotients, summation notation, limits of sums, and notational shorthands.</li>
-<li><a href="./algebra-exponentials.html">Polynomials, Exponentials and Logarithms</a>: polynomials, affine and linear functions of one variable, limits of <a href="https://morrison-lab.github.io/mcs/functions.html#def-sequence">sequences</a>, <a href="./algebra-exponentials.html#def-infinite-sum">series</a>, exponentials and logarithms.</li>
-<li><a href="./algebra-trigonometry.html">Trigonometry</a>: cosine and sine on the unit circle, and the identities later pages use.</li>
-<li><a href="./algebra-complex.html">Complex Numbers</a>: complex numbers and their arithmetic.</li>
+<li>The <a href="./algebra-basics.html">Equalities, Inequalities and Minimizers</a> page: equalities, inequalities, powers, square roots and absolute values, minima and maxima, and global and local minimizers.</li>
+<li>The <a href="./algebra-convexity.html">Convexity, Infimum and Supremum</a> page: <a href="./algebra-convexity.html#def-convex-function">convex functions</a>, and the <a href="./algebra-convexity.html#def-infimum">infimum</a> and <a href="./algebra-convexity.html#def-supremum">supremum</a>.</li>
+<li>The <a href="./algebra-sums.html">Sums, Products and Quotients</a> page: sums, products and quotients, summation notation, limits of sums, and notational shorthands.</li>
+<li>The <a href="./algebra-polynomials.html">Polynomials, Affine Functions and Series</a> page: polynomials, affine and linear functions of one variable, limits of <a href="https://morrison-lab.github.io/mcs/functions.html#def-sequence">sequences</a>, and <a href="./algebra-polynomials.html#def-infinite-sum">series</a>.</li>
+<li>The <a href="./algebra-exponentials.html">Exponentials and Logarithms</a> page: exponentials and logarithms.</li>
+<li>The <a href="./algebra-trigonometry.html">Trigonometry</a> page: cosine and sine on the unit circle, and the identities later pages use.</li>
+<li>The <a href="./algebra-complex.html">Complex Numbers</a> page: complex numbers and their arithmetic.</li>
 </ul>
 <p>A link to a section, theorem or definition on this page from before the split goes on to the page that now holds it.</p>
 <section id="sec-further-reading" class="level1" data-number="1">
@@ -1466,7 +1631,7 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
 
 <script>
 (function () {
-  var moved = {"a-chord-of-x2":"algebra-sums.html","a-commutative-operation-and-one-that-is-not":"algebra-sums.html","a-complex-number-times-its-conjugate":"algebra-complex.html","a-constant-factor-comes-out-of-a-sum":"algebra-sums.html","a-convergent-sequence":"algebra-exponentials.html","a-convex-and-a-non-convex-function":"algebra-sums.html","a-dip-that-is-not-the-bottom":"algebra-basics.html","a-divergent-sequence":"algebra-exponentials.html","a-finite-and-an-infinite-sum":"algebra-exponentials.html","a-function-that-is-not-convex":"algebra-sums.html","a-line-segment-in-reals":"algebra-sums.html","a-maximum-and-a-set-without-one":"algebra-basics.html","a-negative-base":"algebra-exponentials.html","a-point-that-is-not-a-local-minimizer":"algebra-basics.html","a-positive-multiple-has-the-same-argmax":"algebra-basics.html","a-proportion-and-a-ratio-that-is-not-one":"algebra-sums.html","a-quadratic-and-its-positive-multiple":"algebra-basics.html","a-quotient":"algebra-sums.html","a-ratio-and-a-quotient-that-is-not-one":"algebra-sums.html","a-sum-of-sums-splits":"algebra-sums.html","a-sum-over-the-empty-set":"algebra-sums.html","a-transitive-relation-and-one-that-is-not":"algebra-basics.html","a-value-compared-with-an-average-of-values":"algebra-sums.html","absolute-value-as-distance":"algebra-basics.html","absolute-value-of-a-complex-number-modulus":"algebra-complex.html","absolute-value-of-a-real-number":"algebra-basics.html","absolute-values":"algebra-basics.html","absolute-values-of-complex-numbers":"algebra-complex.html","add-the-terms-in-the-new-order":"algebra-sums.html","adding-and-multiplying-complex-numbers":"algebra-complex.html","adding-and-multiplying-two-complex-numbers":"algebra-complex.html","adding-to-both-sides-of-an-inequality":"algebra-basics.html","adding-zero-changes-nothing":"algebra-sums.html","addition-does-not-distribute-over-multiplication":"algebra-sums.html","affine-function-of-one-variable":"algebra-exponentials.html","an-affine-function-and-a-linear-one":"algebra-exponentials.html","an-argmax-with-two-points-and-an-empty-one":"algebra-basics.html","an-associative-operation-and-one-that-is-not":"algebra-sums.html","an-identity-and-an-equation-that-is-not-one":"algebra-basics.html","angle-on-the-unit-circle":"algebra-trigonometry.html","angles-in-radians":"algebra-trigonometry.html","approximating-expf1":"algebra-exponentials.html","arccosine":"algebra-trigonometry.html","argmax":"algebra-basics.html","argmin":"algebra-basics.html","associative-operation":"algebra-sums.html","base-of-a-power":"algebra-basics.html","bounded":"algebra-sums.html","bounded-above":"algebra-sums.html","bounded-and-unbounded-sets":"algebra-sums.html","bounded-below":"algebra-sums.html","chaining-non-strict-inequalities":"algebra-basics.html","chaining-strict-inequalities":"algebra-basics.html","checking-foil":"algebra-sums.html","chord":"algebra-sums.html","chords-lie-on-or-above-the-graph":"algebra-sums.html","coefficients-of-a-polynomial":"algebra-exponentials.html","collecting-like-terms":"algebra-sums.html","commutative-operation":"algebra-sums.html","completeness-for-an-interval":"algebra-sums.html","completeness-of-the-real-numbers":"algebra-sums.html","complex-conjugate":"algebra-complex.html","complex-conjugates":"algebra-complex.html","complex-number":"algebra-complex.html","constant-and-non-constant-functions":"algebra-exponentials.html","constant-and-zero-polynomials":"algebra-exponentials.html","constant-function":"algebra-exponentials.html","contour-line":"algebra-exponentials.html","contour-line-3d-python":"algebra-exponentials.html","contour-line-3d-python-static":"algebra-exponentials.html","contour-line-3d-r":"algebra-exponentials.html","contour-line-alt":"algebra-exponentials.html","contour-line-plot":"algebra-exponentials.html","contour-lines-of-a-bowl":"algebra-exponentials.html","contour-lines-on-a-plot-of-a-surface":"algebra-exponentials.html","convergent-sequence-converges":"algebra-exponentials.html","convex-function":"algebra-sums.html","cor-exp-ab":"algebra-exponentials.html","cor-exp-sum":"algebra-exponentials.html","cor-log-quot":"algebra-exponentials.html","cor-log-recip":"algebra-exponentials.html","cosine":"algebra-trigonometry.html","cosine-takes-each-value-from--1-to-1-exactly-once-between-0-and-pi":"algebra-trigonometry.html","cosines-of-some-angles":"algebra-trigonometry.html","counting-person-years":"algebra-sums.html","cubic-polynomial":"algebra-exponentials.html","def-absolute-value":"algebra-basics.html","def-affine-function":"algebra-exponentials.html","def-angle-unit-circle":"algebra-trigonometry.html","def-arccosine":"algebra-trigonometry.html","def-argmax":"algebra-basics.html","def-argmin":"algebra-basics.html","def-associative":"algebra-sums.html","def-bounded":"algebra-sums.html","def-bounded-above":"algebra-sums.html","def-bounded-below":"algebra-sums.html","def-chord":"algebra-sums.html","def-collect-like-terms":"algebra-sums.html","def-commutative":"algebra-sums.html","def-complex-conjugate":"algebra-complex.html","def-complex-equality":"algebra-complex.html","def-complex-modulus":"algebra-complex.html","def-complex-number":"algebra-complex.html","def-constant-function":"algebra-exponentials.html","def-contour-line":"algebra-exponentials.html","def-convergent-sequence":"algebra-exponentials.html","def-convex-function":"algebra-sums.html","def-cosine-sine":"algebra-trigonometry.html","def-cubic-polynomial":"algebra-exponentials.html","def-denominator":"algebra-sums.html","def-distributes-over":"algebra-sums.html","def-distributive":"algebra-sums.html","def-divergent-sequence":"algebra-exponentials.html","def-diverges-to-infinity":"algebra-exponentials.html","def-empty-sum":"algebra-sums.html","def-euler-number":"algebra-exponentials.html","def-exponential-function":"algebra-exponentials.html","def-follow-up":"algebra-sums.html","def-fraction":"algebra-sums.html","def-full-form":"algebra-sums.html","def-global-minimizer":"algebra-basics.html","def-identity":"algebra-basics.html","def-identity-element":"algebra-sums.html","def-imaginary-part":"algebra-complex.html","def-imaginary-unit":"algebra-complex.html","def-infimum":"algebra-sums.html","def-infinite-sum":"algebra-exponentials.html","def-intercept":"algebra-exponentials.html","def-intercept-term":"algebra-exponentials.html","def-like-terms":"algebra-sums.html","def-limits-of-integration":"algebra-sums.html","def-line-segment":"algebra-sums.html","def-linear-function":"algebra-exponentials.html","def-local-minimizer":"algebra-basics.html","def-logarithm":"algebra-exponentials.html","def-lower-bound":"algebra-sums.html","def-lower-upper-limits":"algebra-sums.html","def-maximum":"algebra-basics.html","def-minimum":"algebra-basics.html","def-monomial":"algebra-exponentials.html","def-monomial-degree":"algebra-exponentials.html","def-natural-log":"algebra-exponentials.html","def-negative-part":"algebra-basics.html","def-non-decreasing":"algebra-exponentials.html","def-non-strict-inequality":"algebra-basics.html","def-notational-shorthand":"algebra-sums.html","def-numerator":"algebra-sums.html","def-parabola":"algebra-exponentials.html","def-partial-sum":"algebra-exponentials.html","def-percent":"algebra-basics.html","def-person-years":"algebra-sums.html","def-pi":"algebra-trigonometry.html","def-polynomial":"algebra-exponentials.html","def-polynomial-coefficient":"algebra-exponentials.html","def-polynomial-degree":"algebra-exponentials.html","def-polynomial-leading-coefficient":"algebra-exponentials.html","def-positive-negative-parts":"algebra-basics.html","def-power":"algebra-basics.html","def-power-base":"algebra-basics.html","def-power-exponent":"algebra-basics.html","def-power-integer":"algebra-basics.html","def-power-nonpositive-base":"algebra-exponentials.html","def-proportion":"algebra-sums.html","def-proportional":"algebra-sums.html","def-quadratic-cubic":"algebra-exponentials.html","def-quadratic-polynomial":"algebra-exponentials.html","def-quotient":"algebra-sums.html","def-radian":"algebra-trigonometry.html","def-range-of-variable":"algebra-sums.html","def-rate":"algebra-sums.html","def-ratio":"algebra-sums.html","def-real-part":"algebra-complex.html","def-real-power":"algebra-exponentials.html","def-sequence-limit":"algebra-exponentials.html","def-sine":"algebra-trigonometry.html","def-slope":"algebra-exponentials.html","def-square":"algebra-basics.html","def-square-root":"algebra-basics.html","def-strict-inequality":"algebra-basics.html","def-sum-over-set":"algebra-sums.html","def-summation":"algebra-sums.html","def-summation-index":"algebra-sums.html","def-supremum":"algebra-sums.html","def-term":"algebra-sums.html","def-unit-circle":"algebra-trigonometry.html","def-upper-bound":"algebra-sums.html","def-upper-limit":"algebra-sums.html","def-x-intercept":"algebra-exponentials.html","degree-of-a-monomial":"algebra-exponentials.html","degree-of-a-polynomial":"algebra-exponentials.html","degrees-of-some-monomials":"algebra-exponentials.html","degrees-of-some-polynomials":"algebra-exponentials.html","denominator":"algebra-sums.html","distances-around-the-unit-circle":"algebra-trigonometry.html","distributes-over":"algebra-sums.html","distributive-law":"algebra-sums.html","divergence-of-a-sequence-to-infinity":"algebra-exponentials.html","divergent-sequence-diverges":"algebra-exponentials.html","division":"algebra-sums.html","division-can-be-written-as-a-product":"algebra-sums.html","does-the-order-change-the-total":"algebra-sums.html","elementary-algebra-calls-m-x-b-linear":"algebra-exponentials.html","empty-sum":"algebra-sums.html","eq-double-exp-log-scale":"algebra-exponentials.html","eq-monomial":"algebra-exponentials.html","equal-complex-numbers":"algebra-complex.html","equalities":"algebra-basics.html","equalities-are-transitive":"algebra-basics.html","eulers-number":"algebra-exponentials.html","eulers-number-is-irrational":"algebra-exponentials.html","every-real-number-is-a-complex-number":"algebra-complex.html","existence-of-the-infimum-and-when-it-is-a-minimum":"algebra-sums.html","existence-of-the-supremum-and-when-it-is-a-maximum":"algebra-sums.html","exm-absolute-value":"algebra-basics.html","exm-addition-not-distributive":"algebra-sums.html","exm-affine-function":"algebra-exponentials.html","exm-angle-unit-circle":"algebra-trigonometry.html","exm-arccosine":"algebra-trigonometry.html","exm-argmax":"algebra-basics.html","exm-argmax-positive-multiple":"algebra-basics.html","exm-associative":"algebra-sums.html","exm-bounded":"algebra-sums.html","exm-chord":"algebra-sums.html","exm-commutative":"algebra-sums.html","exm-completeness":"algebra-sums.html","exm-complex-arithmetic":"algebra-complex.html","exm-complex-conjugate":"algebra-complex.html","exm-complex-modulus":"algebra-complex.html","exm-complex-number":"algebra-complex.html","exm-conj-product":"algebra-complex.html","exm-constant-function":"algebra-exponentials.html","exm-contour-line":"algebra-exponentials.html","exm-convergent-sequence":"algebra-exponentials.html","exm-convex-local-global":"algebra-sums.html","exm-cosine-sine":"algebra-trigonometry.html","exm-cosine-sine-unit-circle":"algebra-trigonometry.html","exm-cubic-not-convex":"algebra-sums.html","exm-distributive":"algebra-sums.html","exm-divergent-sequence":"algebra-exponentials.html","exm-double-exp-negative-base":"algebra-exponentials.html","exm-euler-number":"algebra-exponentials.html","exm-exp-difference":"algebra-exponentials.html","exm-exp-sum":"algebra-exponentials.html","exm-expand-index-shorthand":"algebra-sums.html","exm-exponential-function":"algebra-exponentials.html","exm-fraction":"algebra-sums.html","exm-identity":"algebra-basics.html","exm-identity-element":"algebra-sums.html","exm-imaginary-unit-powers":"algebra-complex.html","exm-infimum":"algebra-sums.html","exm-infinite-sum":"algebra-exponentials.html","exm-jensen":"algebra-sums.html","exm-leading-coefficient":"algebra-exponentials.html","exm-like-terms":"algebra-sums.html","exm-line-segment":"algebra-sums.html","exm-log-recip":"algebra-exponentials.html","exm-logarithm":"algebra-exponentials.html","exm-lower-upper-limits":"algebra-sums.html","exm-maximum":"algebra-basics.html","exm-monomial":"algebra-exponentials.html","exm-monomial-degree":"algebra-exponentials.html","exm-natural-log":"algebra-exponentials.html","exm-negative-imaginary-unit":"algebra-complex.html","exm-negative-part":"algebra-basics.html","exm-no-real-imaginary-unit":"algebra-complex.html","exm-non-decreasing":"algebra-exponentials.html","exm-not-local-minimizer":"algebra-basics.html","exm-parabola":"algebra-exponentials.html","exm-partial-sum":"algebra-exponentials.html","exm-percent":"algebra-basics.html","exm-person-years":"algebra-sums.html","exm-pi":"algebra-trigonometry.html","exm-polynomial-degree":"algebra-exponentials.html","exm-positive-negative-parts":"algebra-basics.html","exm-power":"algebra-basics.html","exm-power-nonpositive-base":"algebra-exponentials.html","exm-power-product":"algebra-exponentials.html","exm-power-sum":"algebra-exponentials.html","exm-product-of-sums":"algebra-sums.html","exm-proportion":"algebra-sums.html","exm-proportional":"algebra-sums.html","exm-quadratic-cubic":"algebra-exponentials.html","exm-quotient":"algebra-sums.html","exm-radian":"algebra-trigonometry.html","exm-ratio":"algebra-sums.html","exm-real-power":"algebra-exponentials.html","exm-reals-in-complex":"algebra-complex.html","exm-sequence-limit":"algebra-exponentials.html","exm-sine":"algebra-trigonometry.html","exm-square-root":"algebra-basics.html","exm-strict-inequality":"algebra-basics.html","exm-sum-assoc":"algebra-sums.html","exm-sum-over-empty-set":"algebra-sums.html","exm-supremum":"algebra-sums.html","exm-term":"algebra-sums.html","exm-trans-ineq":"algebra-basics.html","exm-trans-non-strict-ineq":"algebra-basics.html","exm-transitive":"algebra-basics.html","exm-unit-circle":"algebra-trigonometry.html","expand-a-squared-sum":"algebra-sums.html","expand-a-sum":"algebra-sums.html","exponent-of-a-power":"algebra-basics.html","exponential-function":"algebra-exponentials.html","exponential-of-a-difference":"algebra-exponentials.html","exponential-of-a-difference-1":"algebra-exponentials.html","exponential-of-a-sum":"algebra-exponentials.html","exponential-of-a-sum-1":"algebra-exponentials.html","exponentials-and-logarithms":"algebra-exponentials.html","exponentiation-versus-multiplication":"algebra-exponentials.html","expt-and-logt-are-mutual-inverses":"algebra-exponentials.html","exr-argmax-quadratic":"algebra-basics.html","exr-argmax-scaled-quadratic":"algebra-basics.html","exr-convex-chord":"algebra-sums.html","exr-double-exponential":"algebra-exponentials.html","exr-exp-vs-mult":"algebra-exponentials.html","exr-expand-a-sum":"algebra-sums.html","exr-local-vs-global-min":"algebra-basics.html","exr-min-and-argmin":"algebra-basics.html","exr-polynomial-degree":"algebra-exponentials.html","exr-square-of-a-sum":"algebra-sums.html","exr-sum-over-set":"algebra-sums.html","exr-sum-over-set-order-total":"algebra-sums.html","exr-sum-over-set-reorder":"algebra-sums.html","exr-sum-over-set-reorder-total":"algebra-sums.html","exr-sum-over-set-value":"algebra-sums.html","exr-sum-rules":"algebra-sums.html","fig-contour-line":"algebra-exponentials.html","fig-contour-line-3d":"algebra-exponentials.html","fig-cosine-sine-unit-circle":"algebra-trigonometry.html","fig-double-exponential":"algebra-exponentials.html","fig-double-exponential2":"algebra-exponentials.html","follow-up":"algebra-sums.html","fraction":"algebra-sums.html","full-form":"algebra-sums.html","global-minimizer":"algebra-basics.html","global-minimizers-form-the-argmin":"algebra-basics.html","graph-double-exponential":"algebra-exponentials.html","graph-double-exponential2":"algebra-exponentials.html","grouping-a-sum-two-ways":"algebra-sums.html","identity":"algebra-basics.html","identity-element":"algebra-sums.html","identity-elements-for-addition-and-multiplication":"algebra-sums.html","imaginary-part":"algebra-complex.html","imaginary-unit":"algebra-complex.html","index-of-a-sum":"algebra-sums.html","inequalities":"algebra-basics.html","infimum-and-supremum":"algebra-sums.html","infimum-greatest-lower-bound":"algebra-sums.html","infinite-sum-series":"algebra-exponentials.html","int-fxdx-has-two-readings":"algebra-sums.html","intercept-and-slope-of-an-affine-function":"algebra-exponentials.html","intercept-term":"algebra-exponentials.html","intercept-y-intercept":"algebra-exponentials.html","intercepts-of-an-affine-function":"algebra-exponentials.html","jensens-inequality-for-a-weighted-average":"algebra-sums.html","leading-coefficient":"algebra-exponentials.html","leading-coefficients":"algebra-exponentials.html","leaving-the-set-out":"algebra-sums.html","lem-nonneg-series":"algebra-exponentials.html","like-and-unlike-terms":"algebra-sums.html","like-terms":"algebra-sums.html","limit-of-a-sequence":"algebra-exponentials.html","limits-of-integration":"algebra-sums.html","line-segment":"algebra-sums.html","linear-function-of-one-variable":"algebra-exponentials.html","list-the-terms-in-a-different-order":"algebra-sums.html","local-and-global-minimizers":"algebra-basics.html","local-minimizer":"algebra-basics.html","local-minimizers-of-convex-functions-are-global":"algebra-sums.html","logarithm":"algebra-exponentials.html","logarithm-of-a-power":"algebra-exponentials.html","logarithm-of-a-product":"algebra-exponentials.html","logarithm-of-a-quotient":"algebra-exponentials.html","logarithm-of-a-reciprocal":"algebra-exponentials.html","logarithms-to-other-bases":"algebra-exponentials.html","lower-bound":"algebra-sums.html","lower-limit-of-a-sum-or-integral":"algebra-sums.html","maximum":"algebra-basics.html","minimum":"algebra-basics.html","monomial-power-product":"algebra-exponentials.html","multiplication-distributes-over-addition":"algebra-sums.html","multiplication-is-distributive":"algebra-sums.html","multiplying-3-4i-by-its-conjugate":"algebra-complex.html","multiplying-both-sides-of-an-inequality-by-a-positive-number":"algebra-basics.html","multiplying-by-1-changes-nothing":"algebra-sums.html","natural-exponential-of-a-product":"algebra-exponentials.html","natural-logarithm":"algebra-exponentials.html","natural-logarithms":"algebra-exponentials.html","negating-both-sides-of-an-inequality":"algebra-basics.html","negation-is-multiplication-by--1":"algebra-basics.html","negative-imaginary-unit":"algebra-complex.html","negative-part-of-a-function":"algebra-basics.html","no-real-number-squares-to--1":"algebra-complex.html","non-decreasing-and-not":"algebra-exponentials.html","non-decreasing-sequence":"algebra-exponentials.html","non-strict-inequalities":"algebra-basics.html","non-strict-inequalities-are-transitive":"algebra-basics.html","not-every-set-has-a-minimum":"algebra-basics.html","notational-shorthand":"algebra-sums.html","numerator":"algebra-sums.html","numerator-and-denominator-of-a-fraction":"algebra-sums.html","numerical-examples-of-infimum":"algebra-sums.html","numerical-examples-of-supremum":"algebra-sums.html","other-notations-for-the-natural-logarithm":"algebra-exponentials.html","parabola":"algebra-exponentials.html","partial-sum":"algebra-exponentials.html","partial-sums-of-halves":"algebra-exponentials.html","percent":"algebra-basics.html","person-years":"algebra-sums.html","points-on-the-unit-circle":"algebra-trigonometry.html","polynomial":"algebra-exponentials.html","positive-part-of-a-function":"algebra-basics.html","power":"algebra-basics.html","power-of-a-power":"algebra-exponentials.html","power-of-a-product":"algebra-exponentials.html","power-of-a-product-1":"algebra-exponentials.html","power-of-a-sum":"algebra-exponentials.html","power-of-a-sum-1":"algebra-exponentials.html","power-with-a-real-exponent":"algebra-exponentials.html","powers":"algebra-basics.html","powers-of-1-and-first-powers":"algebra-exponentials.html","powers-of-the-imaginary-unit":"algebra-complex.html","powers-of-zero-and-of-negative-numbers":"algebra-exponentials.html","powers-with-exponent-zero-or-a-negative-integer":"algebra-basics.html","powers-with-real-exponents":"algebra-basics.html","product-of-two-sums-foil":"algebra-sums.html","products":"algebra-sums.html","products-are-associative":"algebra-sums.html","products-are-symmetric":"algebra-sums.html","proportion":"algebra-sums.html","proportional":"algebra-sums.html","proportional-and-non-proportional-functions":"algebra-sums.html","prp-angle-unit-circle-range":"algebra-trigonometry.html","python":"algebra-exponentials.html","quadratic-and-cubic-polynomials":"algebra-exponentials.html","quadratic-polynomial":"algebra-exponentials.html","quotient":"algebra-sums.html","quotients":"algebra-sums.html","r":"algebra-exponentials.html","radian":"algebra-trigonometry.html","range-of-a-variable":"algebra-sums.html","range-of-an-angle-on-the-unit-circle":"algebra-trigonometry.html","rate":"algebra-sums.html","ratios":"algebra-sums.html","reading-a-polynomial":"algebra-exponentials.html","reading-off-limits":"algebra-sums.html","real-and-imaginary-parts":"algebra-complex.html","real-part":"algebra-complex.html","real-powers-and-ex":"algebra-exponentials.html","real-powers-of-zero-and-of-negative-numbers":"algebra-exponentials.html","reals-in-complex":"algebra-complex.html","rearrange-a-sum":"algebra-sums.html","rem-absolute-value-distance":"algebra-basics.html","rem-argmin-vs-minimum":"algebra-basics.html","rem-contour-line-surface":"algebra-exponentials.html","rem-convex-chord-above-graph":"algebra-sums.html","rem-global-minimizer-argmin":"algebra-basics.html","rem-imaginary-unit-choice":"algebra-complex.html","rem-indefinite-integral-not-shorthand":"algebra-sums.html","rem-infimum-exists":"algebra-sums.html","rem-intercepts-affine":"algebra-exponentials.html","rem-jensen-concave":"algebra-sums.html","rem-limits-two-meanings":"algebra-sums.html","rem-linear-function-terminology":"algebra-exponentials.html","rem-local-minimizer":"algebra-basics.html","rem-log-notation":"algebra-exponentials.html","rem-logarithm-formula":"algebra-exponentials.html","rem-minimum-may-not-exist":"algebra-basics.html","rem-polynomial-nonzero":"algebra-exponentials.html","rem-power-real-exponents":"algebra-basics.html","rem-square-of-a-difference":"algebra-sums.html","rem-sum-over-set-order":"algebra-sums.html","rem-sum-without-set":"algebra-sums.html","rem-summation-index":"algebra-sums.html","rem-supremum-exists":"algebra-sums.html","rem-tarski-identities":"algebra-exponentials.html","rem-tarski-incomplete":"algebra-exponentials.html","repeated-exponentiation":"algebra-exponentials.html","sec-affine-linear-functions":"algebra-exponentials.html","sec-complex-numbers":"algebra-complex.html","sec-convexity":"algebra-sums.html","sec-cosine-sine":"algebra-trigonometry.html","sec-min-max":"algebra-basics.html","sec-minimizers":"algebra-basics.html","sec-notational-shorthands":"algebra-sums.html","sec-percent":"algebra-basics.html","sec-polynomials":"algebra-exponentials.html","sec-powers-roots-abs":"algebra-basics.html","sec-sequence-limits":"algebra-exponentials.html","sec-series":"algebra-exponentials.html","sec-summation":"algebra-sums.html","sine":"algebra-trigonometry.html","sines-of-some-angles":"algebra-trigonometry.html","slope":"algebra-exponentials.html","smallest-value-and-where-it-occurs":"algebra-basics.html","smallest-value-versus-where-it-occurs":"algebra-basics.html","sol-argmax-quadratic":"algebra-basics.html","sol-argmax-scaled-quadratic":"algebra-basics.html","sol-convex-chord":"algebra-sums.html","sol-double-exponential":"algebra-exponentials.html","sol-exp-vs-mult":"algebra-exponentials.html","sol-expand-a-sum":"algebra-sums.html","sol-local-vs-global-min":"algebra-basics.html","sol-min-and-argmin":"algebra-basics.html","sol-polynomial-degree":"algebra-exponentials.html","sol-square-of-a-sum":"algebra-sums.html","sol-sum-over-set":"algebra-sums.html","sol-sum-over-set-order-total":"algebra-sums.html","sol-sum-over-set-reorder":"algebra-sums.html","sol-sum-over-set-reorder-total":"algebra-sums.html","sol-sum-over-set-value":"algebra-sums.html","sol-sum-rules":"algebra-sums.html","square":"algebra-basics.html","square-of-a-difference":"algebra-sums.html","square-of-a-sum":"algebra-sums.html","square-root":"algebra-basics.html","square-roots":"algebra-basics.html","squaring-i-and--i-in-r":"algebra-complex.html","strict-and-non-strict-inequalities":"algebra-basics.html","strict-inequalities":"algebra-basics.html","strict-inequalities-are-transitive":"algebra-basics.html","substituting-equivalent-expressions":"algebra-basics.html","sum-over-a-finite-set":"algebra-sums.html","sum-over-a-set":"algebra-sums.html","summation-notation":"algebra-sums.html","sums":"algebra-sums.html","sums-and-products-together":"algebra-sums.html","sums-are-associative":"algebra-sums.html","sums-are-symmetric":"algebra-sums.html","sums-of-non-negative-terms":"algebra-exponentials.html","supremum-least-upper-bound":"algebra-sums.html","tarskis-high-school-identities":"algebra-exponentials.html","tarskis-identities-are-not-complete":"algebra-exponentials.html","tbl-notational-shorthands":"algebra-sums.html","ten-percent-is-one-tenth":"algebra-basics.html","term-of-a-sum":"algebra-sums.html","terms-of-a-sum":"algebra-sums.html","the-argmax-of-a-quadratic":"algebra-basics.html","the-argmax-of-a-scaled-quadratic":"algebra-basics.html","the-average-of-the-squares-is-at-least-the-square-of-the-average":"algebra-sums.html","the-index-is-a-placeholder":"algebra-sums.html","the-inequality-reverses-for-concave-functions":"algebra-sums.html","the-limit-of-a-sequence":"algebra-exponentials.html","the-logarithm-of-frac1euler":"algebra-exponentials.html","the-logarithm-to-base-b-through-the-natural-logarithm":"algebra-exponentials.html","the-negative-part-of-the-identity-function":"algebra-basics.html","the-number--i-also-squares-to--1":"algebra-complex.html","the-number-pi":"algebra-trigonometry.html","the-order-of-the-terms-does-not-matter":"algebra-sums.html","the-parabola-y-x2":"algebra-exponentials.html","the-positive-part-of-the-identity-function":"algebra-basics.html","the-pythagorean-identity":"algebra-trigonometry.html","the-rule-does-not-tell-i-from--i":"algebra-complex.html","the-unit-circle-and-the-angle-pi3":"algebra-trigonometry.html","these-notes-write-the-full-form":"algebra-sums.html","thm-add-ident":"algebra-sums.html","thm-add-ineq":"algebra-basics.html","thm-affine-function-props":"algebra-exponentials.html","thm-argmax-positive-multiple":"algebra-basics.html","thm-completeness":"algebra-sums.html","thm-complex-arithmetic":"algebra-complex.html","thm-conj-product":"algebra-complex.html","thm-convex-local-global":"algebra-sums.html","thm-cosine-bijection":"algebra-trigonometry.html","thm-cosine-sine-identity":"algebra-trigonometry.html","thm-double-exp":"algebra-exponentials.html","thm-double-exponential":"algebra-exponentials.html","thm-equal-trans":"algebra-basics.html","thm-exp-log-inverse":"algebra-exponentials.html","thm-exp-sum":"algebra-exponentials.html","thm-exp-vs-mult":"algebra-exponentials.html","thm-jensen":"algebra-sums.html","thm-log-exp":"algebra-exponentials.html","thm-log-prod":"algebra-exponentials.html","thm-mult-distr":"algebra-sums.html","thm-mult-ineq":"algebra-basics.html","thm-mult-one":"algebra-sums.html","thm-neg-ineq":"algebra-basics.html","thm-negative-imaginary-unit":"algebra-complex.html","thm-negative-one":"algebra-basics.html","thm-power-one":"algebra-exponentials.html","thm-power-product":"algebra-exponentials.html","thm-power-sum":"algebra-exponentials.html","thm-prod-assoc":"algebra-sums.html","thm-prod-div":"algebra-sums.html","thm-prod-symmetric":"algebra-sums.html","thm-product-of-sums":"algebra-sums.html","thm-reals-in-complex":"algebra-complex.html","thm-square-of-a-sum":"algebra-sums.html","thm-substitution":"algebra-basics.html","thm-sum-assoc":"algebra-sums.html","thm-sum-constant-factor":"algebra-sums.html","thm-sum-of-sums":"algebra-sums.html","thm-sum-symmetric":"algebra-sums.html","thm-trans-ineq":"algebra-basics.html","thm-trans-non-strict-ineq":"algebra-basics.html","three-angles-on-the-unit-circle":"algebra-trigonometry.html","three-arccosines":"algebra-trigonometry.html","two-meanings-of-limit":"algebra-sums.html","unit-circle":"algebra-trigonometry.html","upper-bound":"algebra-sums.html","upper-limit-of-a-sum-or-integral":"algebra-sums.html","value-of-a-sum-over-a-set":"algebra-sums.html","when-exponentiation-equals-multiplication":"algebra-exponentials.html","when-repeated-exponentiation-is-not-reordered":"algebra-exponentials.html","which-complex-numbers-are-real":"algebra-complex.html","which-expressions-are-monomials":"algebra-exponentials.html","writing-out-an-index-shorthand":"algebra-sums.html","x-intercept":"algebra-exponentials.html"};
+  var moved = {"a-chord-of-x2":"algebra-convexity.html","a-commutative-operation-and-one-that-is-not":"algebra-sums.html","a-complex-number-times-its-conjugate":"algebra-complex.html","a-constant-factor-comes-out-of-a-sum":"algebra-sums.html","a-convergent-sequence":"algebra-polynomials.html","a-convex-and-a-non-convex-function":"algebra-convexity.html","a-dip-that-is-not-the-bottom":"algebra-basics.html","a-divergent-sequence":"algebra-polynomials.html","a-finite-and-an-infinite-sum":"algebra-polynomials.html","a-function-that-is-not-convex":"algebra-convexity.html","a-line-segment-in-reals":"algebra-convexity.html","a-maximum-and-a-set-without-one":"algebra-basics.html","a-negative-base":"algebra-exponentials.html","a-point-that-is-not-a-local-minimizer":"algebra-basics.html","a-positive-multiple-has-the-same-argmax":"algebra-basics.html","a-proportion-and-a-ratio-that-is-not-one":"algebra-sums.html","a-quadratic-and-its-positive-multiple":"algebra-basics.html","a-quotient":"algebra-sums.html","a-ratio-and-a-quotient-that-is-not-one":"algebra-sums.html","a-sum-of-sums-splits":"algebra-sums.html","a-sum-over-the-empty-set":"algebra-sums.html","a-transitive-relation-and-one-that-is-not":"algebra-basics.html","a-value-compared-with-an-average-of-values":"algebra-convexity.html","absolute-value-as-distance":"algebra-basics.html","absolute-value-of-a-complex-number-modulus":"algebra-complex.html","absolute-value-of-a-real-number":"algebra-basics.html","absolute-values":"algebra-basics.html","absolute-values-of-complex-numbers":"algebra-complex.html","add-the-terms-in-the-new-order":"algebra-sums.html","adding-and-multiplying-complex-numbers":"algebra-complex.html","adding-and-multiplying-two-complex-numbers":"algebra-complex.html","adding-to-both-sides-of-an-inequality":"algebra-basics.html","adding-zero-changes-nothing":"algebra-sums.html","addition-does-not-distribute-over-multiplication":"algebra-sums.html","affine-function-of-one-variable":"algebra-polynomials.html","an-affine-function-and-a-linear-one":"algebra-polynomials.html","an-argmax-with-two-points-and-an-empty-one":"algebra-basics.html","an-associative-operation-and-one-that-is-not":"algebra-sums.html","an-identity-and-an-equation-that-is-not-one":"algebra-basics.html","angle-on-the-unit-circle":"algebra-trigonometry.html","angles-in-radians":"algebra-trigonometry.html","approximating-expf1":"algebra-exponentials.html","arccosine":"algebra-trigonometry.html","argmax":"algebra-basics.html","argmin":"algebra-basics.html","associative-operation":"algebra-sums.html","base-of-a-power":"algebra-basics.html","bounded":"algebra-convexity.html","bounded-above":"algebra-convexity.html","bounded-and-unbounded-sets":"algebra-convexity.html","bounded-below":"algebra-convexity.html","chaining-non-strict-inequalities":"algebra-basics.html","chaining-strict-inequalities":"algebra-basics.html","checking-foil":"algebra-sums.html","chord":"algebra-convexity.html","chords-lie-on-or-above-the-graph":"algebra-convexity.html","coefficients-of-a-polynomial":"algebra-polynomials.html","collecting-like-terms":"algebra-sums.html","commutative-operation":"algebra-sums.html","completeness-for-an-interval":"algebra-convexity.html","completeness-of-the-real-numbers":"algebra-convexity.html","complex-conjugate":"algebra-complex.html","complex-conjugates":"algebra-complex.html","complex-number":"algebra-complex.html","constant-and-non-constant-functions":"algebra-polynomials.html","constant-and-zero-polynomials":"algebra-polynomials.html","constant-function":"algebra-polynomials.html","contour-line":"algebra-exponentials.html","contour-line-3d-python":"algebra-exponentials.html","contour-line-3d-python-static":"algebra-exponentials.html","contour-line-3d-r":"algebra-exponentials.html","contour-line-alt":"algebra-exponentials.html","contour-line-plot":"algebra-exponentials.html","contour-lines-of-a-bowl":"algebra-exponentials.html","contour-lines-on-a-plot-of-a-surface":"algebra-exponentials.html","convergent-sequence-converges":"algebra-polynomials.html","convex-function":"algebra-convexity.html","cor-exp-ab":"algebra-exponentials.html","cor-exp-sum":"algebra-exponentials.html","cor-log-quot":"algebra-exponentials.html","cor-log-recip":"algebra-exponentials.html","cosine":"algebra-trigonometry.html","cosine-takes-each-value-from--1-to-1-exactly-once-between-0-and-pi":"algebra-trigonometry.html","cosines-of-some-angles":"algebra-trigonometry.html","counting-person-years":"algebra-sums.html","cubic-polynomial":"algebra-polynomials.html","def-absolute-value":"algebra-basics.html","def-affine-function":"algebra-polynomials.html","def-angle-unit-circle":"algebra-trigonometry.html","def-arccosine":"algebra-trigonometry.html","def-argmax":"algebra-basics.html","def-argmin":"algebra-basics.html","def-associative":"algebra-sums.html","def-bounded":"algebra-convexity.html","def-bounded-above":"algebra-convexity.html","def-bounded-below":"algebra-convexity.html","def-chord":"algebra-convexity.html","def-collect-like-terms":"algebra-sums.html","def-commutative":"algebra-sums.html","def-complex-conjugate":"algebra-complex.html","def-complex-equality":"algebra-complex.html","def-complex-modulus":"algebra-complex.html","def-complex-number":"algebra-complex.html","def-constant-function":"algebra-polynomials.html","def-contour-line":"algebra-exponentials.html","def-convergent-sequence":"algebra-polynomials.html","def-convex-function":"algebra-convexity.html","def-cosine-sine":"algebra-trigonometry.html","def-cubic-polynomial":"algebra-polynomials.html","def-denominator":"algebra-sums.html","def-distributes-over":"algebra-sums.html","def-distributive":"algebra-sums.html","def-divergent-sequence":"algebra-polynomials.html","def-diverges-to-infinity":"algebra-polynomials.html","def-empty-sum":"algebra-sums.html","def-euler-number":"algebra-exponentials.html","def-exponential-function":"algebra-exponentials.html","def-follow-up":"algebra-sums.html","def-fraction":"algebra-sums.html","def-full-form":"algebra-sums.html","def-global-minimizer":"algebra-basics.html","def-identity":"algebra-basics.html","def-identity-element":"algebra-sums.html","def-imaginary-part":"algebra-complex.html","def-imaginary-unit":"algebra-complex.html","def-infimum":"algebra-convexity.html","def-infinite-sum":"algebra-polynomials.html","def-intercept":"algebra-polynomials.html","def-intercept-term":"algebra-polynomials.html","def-like-terms":"algebra-sums.html","def-limits-of-integration":"algebra-sums.html","def-line-segment":"algebra-convexity.html","def-linear-function":"algebra-polynomials.html","def-local-minimizer":"algebra-basics.html","def-logarithm":"algebra-exponentials.html","def-lower-bound":"algebra-convexity.html","def-lower-upper-limits":"algebra-sums.html","def-maximum":"algebra-basics.html","def-minimum":"algebra-basics.html","def-monomial":"algebra-polynomials.html","def-monomial-degree":"algebra-polynomials.html","def-natural-log":"algebra-exponentials.html","def-negative-part":"algebra-basics.html","def-non-decreasing":"algebra-polynomials.html","def-non-strict-inequality":"algebra-basics.html","def-notational-shorthand":"algebra-sums.html","def-numerator":"algebra-sums.html","def-parabola":"algebra-polynomials.html","def-partial-sum":"algebra-polynomials.html","def-percent":"algebra-basics.html","def-person-years":"algebra-sums.html","def-pi":"algebra-trigonometry.html","def-polynomial":"algebra-polynomials.html","def-polynomial-coefficient":"algebra-polynomials.html","def-polynomial-degree":"algebra-polynomials.html","def-polynomial-leading-coefficient":"algebra-polynomials.html","def-positive-negative-parts":"algebra-basics.html","def-power":"algebra-basics.html","def-power-base":"algebra-basics.html","def-power-exponent":"algebra-basics.html","def-power-integer":"algebra-basics.html","def-power-nonpositive-base":"algebra-exponentials.html","def-proportion":"algebra-sums.html","def-proportional":"algebra-sums.html","def-quadratic-cubic":"algebra-polynomials.html","def-quadratic-polynomial":"algebra-polynomials.html","def-quotient":"algebra-sums.html","def-radian":"algebra-trigonometry.html","def-range-of-variable":"algebra-sums.html","def-rate":"algebra-sums.html","def-ratio":"algebra-sums.html","def-real-part":"algebra-complex.html","def-real-power":"algebra-exponentials.html","def-sequence-limit":"algebra-polynomials.html","def-sine":"algebra-trigonometry.html","def-slope":"algebra-polynomials.html","def-square":"algebra-basics.html","def-square-root":"algebra-basics.html","def-strict-inequality":"algebra-basics.html","def-sum-over-set":"algebra-sums.html","def-summation":"algebra-sums.html","def-summation-index":"algebra-sums.html","def-supremum":"algebra-convexity.html","def-term":"algebra-sums.html","def-unit-circle":"algebra-trigonometry.html","def-upper-bound":"algebra-convexity.html","def-upper-limit":"algebra-sums.html","def-x-intercept":"algebra-polynomials.html","degree-of-a-monomial":"algebra-polynomials.html","degree-of-a-polynomial":"algebra-polynomials.html","degrees-of-some-monomials":"algebra-polynomials.html","degrees-of-some-polynomials":"algebra-polynomials.html","denominator":"algebra-sums.html","distances-around-the-unit-circle":"algebra-trigonometry.html","distributes-over":"algebra-sums.html","distributive-law":"algebra-sums.html","divergence-of-a-sequence-to-infinity":"algebra-polynomials.html","divergent-sequence-diverges":"algebra-polynomials.html","division":"algebra-sums.html","division-can-be-written-as-a-product":"algebra-sums.html","does-the-order-change-the-total":"algebra-sums.html","elementary-algebra-calls-m-x-b-linear":"algebra-polynomials.html","empty-sum":"algebra-sums.html","eq-double-exp-log-scale":"algebra-exponentials.html","eq-monomial":"algebra-polynomials.html","equal-complex-numbers":"algebra-complex.html","equalities":"algebra-basics.html","equalities-are-transitive":"algebra-basics.html","eulers-number":"algebra-exponentials.html","eulers-number-is-irrational":"algebra-exponentials.html","every-real-number-is-a-complex-number":"algebra-complex.html","existence-of-the-infimum-and-when-it-is-a-minimum":"algebra-convexity.html","existence-of-the-supremum-and-when-it-is-a-maximum":"algebra-convexity.html","exm-absolute-value":"algebra-basics.html","exm-addition-not-distributive":"algebra-sums.html","exm-affine-function":"algebra-polynomials.html","exm-angle-unit-circle":"algebra-trigonometry.html","exm-arccosine":"algebra-trigonometry.html","exm-argmax":"algebra-basics.html","exm-argmax-positive-multiple":"algebra-basics.html","exm-associative":"algebra-sums.html","exm-bounded":"algebra-convexity.html","exm-chord":"algebra-convexity.html","exm-commutative":"algebra-sums.html","exm-completeness":"algebra-convexity.html","exm-complex-arithmetic":"algebra-complex.html","exm-complex-conjugate":"algebra-complex.html","exm-complex-modulus":"algebra-complex.html","exm-complex-number":"algebra-complex.html","exm-conj-product":"algebra-complex.html","exm-constant-function":"algebra-polynomials.html","exm-contour-line":"algebra-exponentials.html","exm-convergent-sequence":"algebra-polynomials.html","exm-convex-local-global":"algebra-convexity.html","exm-cosine-sine":"algebra-trigonometry.html","exm-cosine-sine-unit-circle":"algebra-trigonometry.html","exm-cubic-not-convex":"algebra-convexity.html","exm-distributive":"algebra-sums.html","exm-divergent-sequence":"algebra-polynomials.html","exm-double-exp-negative-base":"algebra-exponentials.html","exm-euler-number":"algebra-exponentials.html","exm-exp-difference":"algebra-exponentials.html","exm-exp-sum":"algebra-exponentials.html","exm-expand-index-shorthand":"algebra-sums.html","exm-exponential-function":"algebra-exponentials.html","exm-fraction":"algebra-sums.html","exm-identity":"algebra-basics.html","exm-identity-element":"algebra-sums.html","exm-imaginary-unit-powers":"algebra-complex.html","exm-infimum":"algebra-convexity.html","exm-infinite-sum":"algebra-polynomials.html","exm-jensen":"algebra-convexity.html","exm-leading-coefficient":"algebra-polynomials.html","exm-like-terms":"algebra-sums.html","exm-line-segment":"algebra-convexity.html","exm-log-recip":"algebra-exponentials.html","exm-logarithm":"algebra-exponentials.html","exm-lower-upper-limits":"algebra-sums.html","exm-maximum":"algebra-basics.html","exm-monomial":"algebra-polynomials.html","exm-monomial-degree":"algebra-polynomials.html","exm-natural-log":"algebra-exponentials.html","exm-negative-imaginary-unit":"algebra-complex.html","exm-negative-part":"algebra-basics.html","exm-no-real-imaginary-unit":"algebra-complex.html","exm-non-decreasing":"algebra-polynomials.html","exm-not-local-minimizer":"algebra-basics.html","exm-parabola":"algebra-polynomials.html","exm-partial-sum":"algebra-polynomials.html","exm-percent":"algebra-basics.html","exm-person-years":"algebra-sums.html","exm-pi":"algebra-trigonometry.html","exm-polynomial-degree":"algebra-polynomials.html","exm-positive-negative-parts":"algebra-basics.html","exm-power":"algebra-basics.html","exm-power-nonpositive-base":"algebra-exponentials.html","exm-power-product":"algebra-exponentials.html","exm-power-sum":"algebra-exponentials.html","exm-product-of-sums":"algebra-sums.html","exm-proportion":"algebra-sums.html","exm-proportional":"algebra-sums.html","exm-quadratic-cubic":"algebra-polynomials.html","exm-quotient":"algebra-sums.html","exm-radian":"algebra-trigonometry.html","exm-ratio":"algebra-sums.html","exm-real-power":"algebra-exponentials.html","exm-reals-in-complex":"algebra-complex.html","exm-sequence-limit":"algebra-polynomials.html","exm-sine":"algebra-trigonometry.html","exm-square-root":"algebra-basics.html","exm-strict-inequality":"algebra-basics.html","exm-sum-assoc":"algebra-sums.html","exm-sum-over-empty-set":"algebra-sums.html","exm-supremum":"algebra-convexity.html","exm-term":"algebra-sums.html","exm-trans-ineq":"algebra-basics.html","exm-trans-non-strict-ineq":"algebra-basics.html","exm-transitive":"algebra-basics.html","exm-unit-circle":"algebra-trigonometry.html","expand-a-squared-sum":"algebra-sums.html","expand-a-sum":"algebra-sums.html","exponent-of-a-power":"algebra-basics.html","exponential-function":"algebra-exponentials.html","exponential-of-a-difference":"algebra-exponentials.html","exponential-of-a-difference-1":"algebra-exponentials.html","exponential-of-a-sum":"algebra-exponentials.html","exponential-of-a-sum-1":"algebra-exponentials.html","exponentials-and-logarithms":"algebra-exponentials.html","exponentiation-versus-multiplication":"algebra-exponentials.html","expt-and-logt-are-mutual-inverses":"algebra-exponentials.html","exr-argmax-quadratic":"algebra-basics.html","exr-argmax-scaled-quadratic":"algebra-basics.html","exr-convex-chord":"algebra-convexity.html","exr-double-exponential":"algebra-exponentials.html","exr-exp-vs-mult":"algebra-exponentials.html","exr-expand-a-sum":"algebra-sums.html","exr-local-vs-global-min":"algebra-basics.html","exr-min-and-argmin":"algebra-basics.html","exr-polynomial-degree":"algebra-polynomials.html","exr-square-of-a-sum":"algebra-sums.html","exr-sum-over-set":"algebra-sums.html","exr-sum-over-set-order-total":"algebra-sums.html","exr-sum-over-set-reorder":"algebra-sums.html","exr-sum-over-set-reorder-total":"algebra-sums.html","exr-sum-over-set-value":"algebra-sums.html","exr-sum-rules":"algebra-sums.html","fig-contour-line":"algebra-exponentials.html","fig-contour-line-3d":"algebra-exponentials.html","fig-cosine-sine-unit-circle":"algebra-trigonometry.html","fig-double-exponential":"algebra-exponentials.html","fig-double-exponential2":"algebra-exponentials.html","follow-up":"algebra-sums.html","fraction":"algebra-sums.html","full-form":"algebra-sums.html","global-minimizer":"algebra-basics.html","global-minimizers-form-the-argmin":"algebra-basics.html","graph-double-exponential":"algebra-exponentials.html","graph-double-exponential2":"algebra-exponentials.html","grouping-a-sum-two-ways":"algebra-sums.html","identity":"algebra-basics.html","identity-element":"algebra-sums.html","identity-elements-for-addition-and-multiplication":"algebra-sums.html","imaginary-part":"algebra-complex.html","imaginary-unit":"algebra-complex.html","index-of-a-sum":"algebra-sums.html","inequalities":"algebra-basics.html","infimum-and-supremum":"algebra-convexity.html","infimum-greatest-lower-bound":"algebra-convexity.html","infinite-sum-series":"algebra-polynomials.html","int-fxdx-has-two-readings":"algebra-sums.html","intercept-and-slope-of-an-affine-function":"algebra-polynomials.html","intercept-term":"algebra-polynomials.html","intercept-y-intercept":"algebra-polynomials.html","intercepts-of-an-affine-function":"algebra-polynomials.html","jensens-inequality-for-a-weighted-average":"algebra-convexity.html","leading-coefficient":"algebra-polynomials.html","leading-coefficients":"algebra-polynomials.html","leaving-the-set-out":"algebra-sums.html","lem-nonneg-series":"algebra-polynomials.html","like-and-unlike-terms":"algebra-sums.html","like-terms":"algebra-sums.html","limit-of-a-sequence":"algebra-polynomials.html","limits-of-integration":"algebra-sums.html","line-segment":"algebra-convexity.html","linear-function-of-one-variable":"algebra-polynomials.html","list-the-terms-in-a-different-order":"algebra-sums.html","local-and-global-minimizers":"algebra-basics.html","local-minimizer":"algebra-basics.html","local-minimizers-of-convex-functions-are-global":"algebra-convexity.html","logarithm":"algebra-exponentials.html","logarithm-of-a-power":"algebra-exponentials.html","logarithm-of-a-product":"algebra-exponentials.html","logarithm-of-a-quotient":"algebra-exponentials.html","logarithm-of-a-reciprocal":"algebra-exponentials.html","logarithms-to-other-bases":"algebra-exponentials.html","lower-bound":"algebra-convexity.html","lower-limit-of-a-sum-or-integral":"algebra-sums.html","maximum":"algebra-basics.html","minimum":"algebra-basics.html","monomial-power-product":"algebra-polynomials.html","multiplication-distributes-over-addition":"algebra-sums.html","multiplication-is-distributive":"algebra-sums.html","multiplying-3-4i-by-its-conjugate":"algebra-complex.html","multiplying-both-sides-of-an-inequality-by-a-positive-number":"algebra-basics.html","multiplying-by-1-changes-nothing":"algebra-sums.html","natural-exponential-of-a-product":"algebra-exponentials.html","natural-logarithm":"algebra-exponentials.html","natural-logarithms":"algebra-exponentials.html","negating-both-sides-of-an-inequality":"algebra-basics.html","negation-is-multiplication-by--1":"algebra-basics.html","negative-imaginary-unit":"algebra-complex.html","negative-part-of-a-function":"algebra-basics.html","no-real-number-squares-to--1":"algebra-complex.html","non-decreasing-and-not":"algebra-polynomials.html","non-decreasing-sequence":"algebra-polynomials.html","non-strict-inequalities":"algebra-basics.html","non-strict-inequalities-are-transitive":"algebra-basics.html","not-every-set-has-a-minimum":"algebra-basics.html","notational-shorthand":"algebra-sums.html","numerator":"algebra-sums.html","numerator-and-denominator-of-a-fraction":"algebra-sums.html","numerical-examples-of-infimum":"algebra-convexity.html","numerical-examples-of-supremum":"algebra-convexity.html","other-notations-for-the-natural-logarithm":"algebra-exponentials.html","parabola":"algebra-polynomials.html","partial-sum":"algebra-polynomials.html","partial-sums-of-halves":"algebra-polynomials.html","percent":"algebra-basics.html","person-years":"algebra-sums.html","points-on-the-unit-circle":"algebra-trigonometry.html","polynomial":"algebra-polynomials.html","positive-part-of-a-function":"algebra-basics.html","power":"algebra-basics.html","power-of-a-power":"algebra-exponentials.html","power-of-a-product":"algebra-exponentials.html","power-of-a-product-1":"algebra-exponentials.html","power-of-a-sum":"algebra-exponentials.html","power-of-a-sum-1":"algebra-exponentials.html","power-with-a-real-exponent":"algebra-exponentials.html","powers":"algebra-basics.html","powers-of-1-and-first-powers":"algebra-exponentials.html","powers-of-the-imaginary-unit":"algebra-complex.html","powers-of-zero-and-of-negative-numbers":"algebra-exponentials.html","powers-with-exponent-zero-or-a-negative-integer":"algebra-basics.html","powers-with-real-exponents":"algebra-basics.html","product-of-two-sums-foil":"algebra-sums.html","products":"algebra-sums.html","products-are-associative":"algebra-sums.html","products-are-symmetric":"algebra-sums.html","proportion":"algebra-sums.html","proportional":"algebra-sums.html","proportional-and-non-proportional-functions":"algebra-sums.html","prp-angle-unit-circle-range":"algebra-trigonometry.html","python":"algebra-exponentials.html","quadratic-and-cubic-polynomials":"algebra-polynomials.html","quadratic-polynomial":"algebra-polynomials.html","quotient":"algebra-sums.html","quotients":"algebra-sums.html","r":"algebra-exponentials.html","radian":"algebra-trigonometry.html","range-of-a-variable":"algebra-sums.html","range-of-an-angle-on-the-unit-circle":"algebra-trigonometry.html","rate":"algebra-sums.html","ratios":"algebra-sums.html","reading-a-polynomial":"algebra-polynomials.html","reading-off-limits":"algebra-sums.html","real-and-imaginary-parts":"algebra-complex.html","real-part":"algebra-complex.html","real-powers-and-ex":"algebra-exponentials.html","real-powers-of-zero-and-of-negative-numbers":"algebra-exponentials.html","reals-in-complex":"algebra-complex.html","rearrange-a-sum":"algebra-sums.html","rem-absolute-value-distance":"algebra-basics.html","rem-argmin-vs-minimum":"algebra-basics.html","rem-contour-line-surface":"algebra-exponentials.html","rem-convex-chord-above-graph":"algebra-convexity.html","rem-global-minimizer-argmin":"algebra-basics.html","rem-imaginary-unit-choice":"algebra-complex.html","rem-indefinite-integral-not-shorthand":"algebra-sums.html","rem-infimum-exists":"algebra-convexity.html","rem-intercepts-affine":"algebra-polynomials.html","rem-jensen-concave":"algebra-convexity.html","rem-limits-two-meanings":"algebra-sums.html","rem-linear-function-terminology":"algebra-polynomials.html","rem-local-minimizer":"algebra-basics.html","rem-log-notation":"algebra-exponentials.html","rem-logarithm-formula":"algebra-exponentials.html","rem-minimum-may-not-exist":"algebra-basics.html","rem-polynomial-nonzero":"algebra-polynomials.html","rem-power-real-exponents":"algebra-basics.html","rem-square-of-a-difference":"algebra-sums.html","rem-sum-over-set-order":"algebra-sums.html","rem-sum-without-set":"algebra-sums.html","rem-summation-index":"algebra-sums.html","rem-supremum-exists":"algebra-convexity.html","rem-tarski-identities":"algebra-exponentials.html","rem-tarski-incomplete":"algebra-exponentials.html","repeated-exponentiation":"algebra-exponentials.html","sec-affine-linear-functions":"algebra-polynomials.html","sec-complex-numbers":"algebra-complex.html","sec-convexity":"algebra-convexity.html","sec-cosine-sine":"algebra-trigonometry.html","sec-min-max":"algebra-basics.html","sec-minimizers":"algebra-basics.html","sec-notational-shorthands":"algebra-sums.html","sec-percent":"algebra-basics.html","sec-polynomials":"algebra-polynomials.html","sec-powers-roots-abs":"algebra-basics.html","sec-sequence-limits":"algebra-polynomials.html","sec-series":"algebra-polynomials.html","sec-summation":"algebra-sums.html","sine":"algebra-trigonometry.html","sines-of-some-angles":"algebra-trigonometry.html","slope":"algebra-polynomials.html","smallest-value-and-where-it-occurs":"algebra-basics.html","smallest-value-versus-where-it-occurs":"algebra-basics.html","sol-argmax-quadratic":"algebra-basics.html","sol-argmax-scaled-quadratic":"algebra-basics.html","sol-convex-chord":"algebra-convexity.html","sol-double-exponential":"algebra-exponentials.html","sol-exp-vs-mult":"algebra-exponentials.html","sol-expand-a-sum":"algebra-sums.html","sol-local-vs-global-min":"algebra-basics.html","sol-min-and-argmin":"algebra-basics.html","sol-polynomial-degree":"algebra-polynomials.html","sol-square-of-a-sum":"algebra-sums.html","sol-sum-over-set":"algebra-sums.html","sol-sum-over-set-order-total":"algebra-sums.html","sol-sum-over-set-reorder":"algebra-sums.html","sol-sum-over-set-reorder-total":"algebra-sums.html","sol-sum-over-set-value":"algebra-sums.html","sol-sum-rules":"algebra-sums.html","square":"algebra-basics.html","square-of-a-difference":"algebra-sums.html","square-of-a-sum":"algebra-sums.html","square-root":"algebra-basics.html","square-roots":"algebra-basics.html","squaring-i-and--i-in-r":"algebra-complex.html","strict-and-non-strict-inequalities":"algebra-basics.html","strict-inequalities":"algebra-basics.html","strict-inequalities-are-transitive":"algebra-basics.html","substituting-equivalent-expressions":"algebra-basics.html","sum-over-a-finite-set":"algebra-sums.html","sum-over-a-set":"algebra-sums.html","summation-notation":"algebra-sums.html","sums":"algebra-sums.html","sums-and-products-together":"algebra-sums.html","sums-are-associative":"algebra-sums.html","sums-are-symmetric":"algebra-sums.html","sums-of-non-negative-terms":"algebra-polynomials.html","supremum-least-upper-bound":"algebra-convexity.html","tarskis-high-school-identities":"algebra-exponentials.html","tarskis-identities-are-not-complete":"algebra-exponentials.html","tbl-notational-shorthands":"algebra-sums.html","ten-percent-is-one-tenth":"algebra-basics.html","term-of-a-sum":"algebra-sums.html","terms-of-a-sum":"algebra-sums.html","the-argmax-of-a-quadratic":"algebra-basics.html","the-argmax-of-a-scaled-quadratic":"algebra-basics.html","the-average-of-the-squares-is-at-least-the-square-of-the-average":"algebra-convexity.html","the-index-is-a-placeholder":"algebra-sums.html","the-inequality-reverses-for-concave-functions":"algebra-convexity.html","the-limit-of-a-sequence":"algebra-polynomials.html","the-logarithm-of-frac1euler":"algebra-exponentials.html","the-logarithm-to-base-b-through-the-natural-logarithm":"algebra-exponentials.html","the-negative-part-of-the-identity-function":"algebra-basics.html","the-number--i-also-squares-to--1":"algebra-complex.html","the-number-pi":"algebra-trigonometry.html","the-order-of-the-terms-does-not-matter":"algebra-sums.html","the-parabola-y-x2":"algebra-polynomials.html","the-positive-part-of-the-identity-function":"algebra-basics.html","the-pythagorean-identity":"algebra-trigonometry.html","the-rule-does-not-tell-i-from--i":"algebra-complex.html","the-unit-circle-and-the-angle-pi3":"algebra-trigonometry.html","these-notes-write-the-full-form":"algebra-sums.html","thm-add-ident":"algebra-sums.html","thm-add-ineq":"algebra-basics.html","thm-affine-function-props":"algebra-polynomials.html","thm-argmax-positive-multiple":"algebra-basics.html","thm-completeness":"algebra-convexity.html","thm-complex-arithmetic":"algebra-complex.html","thm-conj-product":"algebra-complex.html","thm-convex-local-global":"algebra-convexity.html","thm-cosine-bijection":"algebra-trigonometry.html","thm-cosine-sine-identity":"algebra-trigonometry.html","thm-double-exp":"algebra-exponentials.html","thm-double-exponential":"algebra-exponentials.html","thm-equal-trans":"algebra-basics.html","thm-exp-log-inverse":"algebra-exponentials.html","thm-exp-sum":"algebra-exponentials.html","thm-exp-vs-mult":"algebra-exponentials.html","thm-jensen":"algebra-convexity.html","thm-log-exp":"algebra-exponentials.html","thm-log-prod":"algebra-exponentials.html","thm-mult-distr":"algebra-sums.html","thm-mult-ineq":"algebra-basics.html","thm-mult-one":"algebra-sums.html","thm-neg-ineq":"algebra-basics.html","thm-negative-imaginary-unit":"algebra-complex.html","thm-negative-one":"algebra-basics.html","thm-power-one":"algebra-exponentials.html","thm-power-product":"algebra-exponentials.html","thm-power-sum":"algebra-exponentials.html","thm-prod-assoc":"algebra-sums.html","thm-prod-div":"algebra-sums.html","thm-prod-symmetric":"algebra-sums.html","thm-product-of-sums":"algebra-sums.html","thm-reals-in-complex":"algebra-complex.html","thm-square-of-a-sum":"algebra-sums.html","thm-substitution":"algebra-basics.html","thm-sum-assoc":"algebra-sums.html","thm-sum-constant-factor":"algebra-sums.html","thm-sum-of-sums":"algebra-sums.html","thm-sum-symmetric":"algebra-sums.html","thm-trans-ineq":"algebra-basics.html","thm-trans-non-strict-ineq":"algebra-basics.html","three-angles-on-the-unit-circle":"algebra-trigonometry.html","three-arccosines":"algebra-trigonometry.html","two-meanings-of-limit":"algebra-sums.html","unit-circle":"algebra-trigonometry.html","upper-bound":"algebra-convexity.html","upper-limit-of-a-sum-or-integral":"algebra-sums.html","value-of-a-sum-over-a-set":"algebra-sums.html","when-exponentiation-equals-multiplication":"algebra-exponentials.html","when-repeated-exponentiation-is-not-reordered":"algebra-exponentials.html","which-complex-numbers-are-real":"algebra-complex.html","which-expressions-are-monomials":"algebra-polynomials.html","writing-out-an-index-shorthand":"algebra-sums.html","x-intercept":"algebra-polynomials.html"};
   function follow() {
     var id = decodeURIComponent(location.hash.slice(1));
     if (id && !document.getElementById(id) && moved[id]) {
@@ -1674,6 +1839,46 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 <script>
+// A link to an id that has moved to another page of this site: when the page
+// holds no element with the link's #id, look the id up in anchor-index.json,
+// which the site's anchor-index.py post-render step writes at the site root,
+// and go to the page that holds it now, keeping the rest of the hash (a text
+// fragment). A site without the index, an id it does not list, or an id that
+// maps back to this page leaves the reader where they are. It runs on load
+// and again when an in-page link changes the hash.
+(function () {
+  if (!window.fetch) return;
+  var meta = document.querySelector('meta[name="quarto:offset"]');
+  var root = new URL(meta ? meta.getAttribute("content") : "./", location.href);
+  var index = null;
+  function follow() {
+    var id = "";
+    try { id = decodeURIComponent(location.hash.slice(1).replace(/:~:.*$/, "")); } catch (e) { return; }
+    if (!id || document.getElementById(id)) return;
+    index = index || fetch(new URL("anchor-index.json", root)).then(function (r) {
+      return r.ok ? r.json() : null;
+    }).catch(function () { return null; });
+    index.then(function (data) {
+      var ids = data && data.ids;
+      var page = ids && Object.prototype.hasOwnProperty.call(ids, id) ? ids[id] : null;
+      if (typeof page !== "string" || document.getElementById(id)) return;
+      var dest = new URL(page, root);
+      var here = location.pathname.replace(/\/$/, "/index.html");
+      if (dest.pathname === here) return;
+      // location.hash leaves out a text fragment; the navigation entry keeps it.
+      var hash = location.hash;
+      try {
+        var nav = performance.getEntriesByType("navigation")[0];
+        var m = nav && /#(.*)$/.exec(nav.name);
+        if (m && m[1].indexOf(hash.slice(1)) === 0) hash = "#" + m[1];
+      } catch (e) {}
+      location.replace(dest.href.replace(/#.*$/, "") + hash);
+    });
+  }
+  follow();
+  window.addEventListener("hashchange", follow);
+})();
+
 // Typesetting equations and loading images change the height of everything
 // above the reader and push the text they were reading out of view. Keep the
 // reader's place: until they scroll, that is the link target (#id or a text
@@ -2394,37 +2599,40 @@ document.querySelectorAll("main table").forEach(function (t) {
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>The algebra notes are split across these pages:</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Equalities, Inequalities and Minimizers</span><span class="co">](algebra-basics.qmd)</span>:</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The <span class="co">[</span><span class="ot">Equalities, Inequalities and Minimizers</span><span class="co">](algebra-basics.qmd)</span> page:</span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  equalities, inequalities, powers, square roots and absolute values,</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  minima and maxima, and global and local minimizers.</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Convexity, Infimum and Sums</span><span class="co">](algebra-sums.qmd)</span>:</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  convex functions, the infimum and supremum,</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  sums, products and quotients, summation notation, limits of sums, and notational shorthands.</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Polynomials, Exponentials and Logarithms</span><span class="co">](algebra-exponentials.qmd)</span>:</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  polynomials, affine and linear functions of one variable,</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  limits of <span class="co">[</span><span class="ot">sequences</span><span class="co">](https://morrison-lab.github.io/mcs/functions.html#def-sequence)</span>, <span class="co">[</span><span class="ot">series</span><span class="co">](algebra-exponentials.qmd#def-infinite-sum)</span>, exponentials and logarithms.</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Trigonometry</span><span class="co">](algebra-trigonometry.qmd)</span>:</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  cosine and sine on the unit circle, and the identities later pages use.</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Complex Numbers</span><span class="co">](algebra-complex.qmd)</span>:</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  complex numbers and their arithmetic.</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>A link to a section, theorem or definition on this page from before the split</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>goes on to the page that now holds it.</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The <span class="co">[</span><span class="ot">Convexity, Infimum and Supremum</span><span class="co">](algebra-convexity.qmd)</span> page:</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="co">[</span><span class="ot">convex functions</span><span class="co">](algebra-convexity.qmd#def-convex-function)</span>, and the <span class="co">[</span><span class="ot">infimum</span><span class="co">](algebra-convexity.qmd#def-infimum)</span> and <span class="co">[</span><span class="ot">supremum</span><span class="co">](algebra-convexity.qmd#def-supremum)</span>.</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The <span class="co">[</span><span class="ot">Sums, Products and Quotients</span><span class="co">](algebra-sums.qmd)</span> page:</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  sums, products and quotients, summation notation, limits of sums, and notational shorthands.</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The <span class="co">[</span><span class="ot">Polynomials, Affine Functions and Series</span><span class="co">](algebra-polynomials.qmd)</span> page:</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  polynomials, affine and linear functions of one variable,</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  limits of <span class="co">[</span><span class="ot">sequences</span><span class="co">](https://morrison-lab.github.io/mcs/functions.html#def-sequence)</span>, and <span class="co">[</span><span class="ot">series</span><span class="co">](algebra-polynomials.qmd#def-infinite-sum)</span>.</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The <span class="co">[</span><span class="ot">Exponentials and Logarithms</span><span class="co">](algebra-exponentials.qmd)</span> page:</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  exponentials and logarithms.</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The <span class="co">[</span><span class="ot">Trigonometry</span><span class="co">](algebra-trigonometry.qmd)</span> page:</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  cosine and sine on the unit circle, and the identities later pages use.</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The <span class="co">[</span><span class="ot">Complex Numbers</span><span class="co">](algebra-complex.qmd)</span> page:</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  complex numbers and their arithmetic.</span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="fu"># Further reading {#sec-further-reading}</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@abramson2021algebra</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  is a free online textbook on algebra and trigonometry.</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  It covers equations, inequalities, polynomials, exponentials, logarithms, and trigonometry,</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  which overlap with the algebra in these notes.</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@rudin1976principles</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>  develops the real numbers, including the least upper bound property</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>  behind the infimum and supremum.</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="fu"># References {.unnumbered}</span></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>A link to a section, theorem or definition on this page from before the split</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>goes on to the page that now holds it.</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="fu"># Further reading {#sec-further-reading}</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@abramson2021algebra</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  is a free online textbook on algebra and trigonometry.</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>  It covers equations, inequalities, polynomials, exponentials, logarithms, and trigonometry,</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>  which overlap with the algebra in these notes.</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@rudin1976principles</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>  develops the real numbers, including the least upper bound property</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>  behind the infimum and supremum.</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="fu"># References {.unnumbered}</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">

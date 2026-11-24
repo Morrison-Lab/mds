@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-20 09:01:42 (PST)
+Last modified: 2026-11-23 20:33:36 (PST)
 
 > **NOTE:**
 >
@@ -61,7 +61,7 @@ Last modified: 2026-11-20 09:01:42 (PST)
 
 > **NOTE:**
 >
-> *Remark 1* (The sum in countable additivity always has a value). By [sums of non-negative terms](algebra-exponentials.llms.md#lem-nonneg-series), the right-hand side of the equation in [Definition 2](#def-countable-additivity), $\sum_{i=1}^{\infty} \mu(A_i)$, always has a value, because each $\mu(A_i)$ is in $[0, \infty]$. For example, if $\mu(A_i) = 1/2^i$ for each $i$, the partial sums are $s_n = 1 - 1/2^n$, and the sum is $1$; if $\mu(A_i) = 1$ for each $i$, the partial sums are $s_n = n$, and the sum is $\infty$.
+> *Remark 1* (The sum in countable additivity always has a value). By [sums of non-negative terms](algebra-polynomials.llms.md#lem-nonneg-series), the right-hand side of the equation in [Definition 2](#def-countable-additivity), $\sum_{i=1}^{\infty} \mu(A_i)$, always has a value, because each $\mu(A_i)$ is in $[0, \infty]$. For example, if $\mu(A_i) = 1/2^i$ for each $i$, the partial sums are $s_n = 1 - 1/2^n$, and the sum is $1$; if $\mu(A_i) = 1$ for each $i$, the partial sums are $s_n = n$, and the sum is $\infty$.
 
 > **NOTE:**
 >
@@ -103,7 +103,7 @@ Last modified: 2026-11-20 09:01:42 (PST)
 > && \text{(definition of } \mu\text{)}
 > \end{aligned}$$
 >
-> and the right-hand side, the [limit](algebra-exponentials.llms.md#def-sequence-limit) of its [partial sums](algebra-exponentials.llms.md#def-partial-sum) ([sums of non-negative terms](algebra-exponentials.llms.md#lem-nonneg-series)), is:
+> and the right-hand side, the [limit](algebra-polynomials.llms.md#def-sequence-limit) of its [partial sums](algebra-polynomials.llms.md#def-partial-sum) ([sums of non-negative terms](algebra-polynomials.llms.md#lem-nonneg-series)), is:
 >
 > $$\begin{aligned}
 > \sum_{i=1}^{\infty} \mu(A_i)

@@ -244,9 +244,10 @@
     reads those vars so it stays legible in every palette. Light is the
     default variable set, Off-white and Parchment are a data-palette attribute
     on <html>, and Dark is the body.qwt-dark class. The choice is saved under
-    "mln-theme", the key the website's theme dropdown (theme-picker.html) uses,
-    so it carries across the site and the decks. First-time visitors get
-    Dark if their system prefers it, and Off-white otherwise.
+    "lds-theme" (falling back to "mln-theme"), the key the website's theme
+    dropdown (theme-picker.html) uses, so it carries across the site and the
+    decks. First-time visitors get Dark if their system prefers it, and
+    Off-white otherwise.
   --><style>
     #qwt-theme-select {
       position: fixed;
@@ -279,7 +280,8 @@
 <script>
   (function () {
     "use strict";
-    var KEY = "mln-theme";
+    var KEY = "lds-theme";
+    var LEGACY_KEY = "mln-theme";
     var DARK_CLASS = "qwt-dark";
     var OPTIONS = [["light", "Light"], ["offwhite", "Off-white"], ["parchment", "Parchment"], ["dark", "Dark"]];
     var root = document.documentElement;
@@ -289,7 +291,7 @@
     }
 
     function stored() {
-      try { return localStorage.getItem(KEY); } catch (e) { return null; }
+      try { return localStorage.getItem(KEY) || localStorage.getItem(LEGACY_KEY); } catch (e) { return null; }
     }
 
     function initialTheme() {
@@ -360,7 +362,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-20 09:01:42 (PST)</p>
+  <p class="date">Last modified: 2026-11-23 20:33:36 (PST)</p>
 </section><section class="slide level2"><p><span id="sec-complex-numbers"></span></p>
 </section><section class="slide level2"><div id="def-imaginary-unit" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 1 (Imaginary unit)</strong></span> The <strong>imaginary unit</strong> <span class="math inline">\(i\)</span> is a number whose square is <span class="math inline">\(-1\)</span> <span class="citation" data-cites="wikipedia_imaginary_unit"><a href="#/references" role="doc-biblioref" onclick="">[1]</a></span>:</p>
@@ -511,7 +513,7 @@ a + 0\,i
 &amp;&amp; \text{(} 0\,i = 0 \text{)}
 \\
 &amp;= a
-&amp;&amp; \text{(}\href{algebra-sums.qmd#thm-add-ident}{\text{Theorem~4 in Convexity, Infimum and Sums}}\text{)}
+&amp;&amp; \text{(}\href{algebra-sums.qmd#thm-add-ident}{\text{Theorem~1 in Sums, Products and Quotients}}\text{)}
 \end{aligned}
 \]</span></p>
 <p>so <span class="math inline">\(a\)</span> is the complex number <span class="math inline">\(a + 0\,i\)</span>, whose imaginary part is <span class="math inline">\(0\)</span>. The real part of <span class="math inline">\(a + 0\,i\)</span> is <span class="math inline">\(a\)</span>, and by the equality rule in <a href="#/def-complex-equality" class="quarto-xref">Definition&nbsp;5</a> no other pair of real and imaginary parts gives the same number.</p>

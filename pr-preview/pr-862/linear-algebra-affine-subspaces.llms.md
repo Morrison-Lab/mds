@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-11-20 09:01:42 (PST)
+Last modified: 2026-11-23 20:33:36 (PST)
 
 # 1 Affine subspaces and half-spaces
 
@@ -63,7 +63,7 @@ Last modified: 2026-11-20 09:01:42 (PST)
 >
 > **Theorem 1 (A hyperplane is a translated subspace of dimension** $p - 1$) Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p$ be nonzero, let $b \in \mathbb{R}$, let $\mathcal{H} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ b = 0\right\}\mathclose{}$ be the hyperplane with normal vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ and offset $b$ ([Definition 10 in Linear and Affine Maps](linear-algebra-linear-maps.llms.md#def-hyperplane)), and let $\mathcal{H}_0 = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= 0\right\}\mathclose{}$ be the hyperplane with the same normal vector and offset $0$.
 >
-> 1.  $\mathcal{H}_0$ is a subspace of $\mathbb{R}^p$ ([Definition 4 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-subspace)) of dimension $p - 1$ ([Definition 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)).
+> 1.  $\mathcal{H}_0$ is a subspace of $\mathbb{R}^p$ ([Definition 4 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-subspace)) of dimension $p - 1$ ([Definition 4 in Bases and Dimension](linear-algebra-bases.llms.md#def-dimension)).
 > 2.  $\mathcal{H}$ is not empty, and for any $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 \in \mathcal{H}$, $\mathcal{H} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} \in \mathcal{H}_0\right\}\mathclose{}$, so $\mathcal{H}$ is an affine subspace ([Definition 1](#def-affine-subspace)).
 > 3.  For any $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathcal{H}$, the normal vector is orthogonal to their difference: $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \perp (\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}})$ ([Definition 22 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors)).
 
@@ -189,14 +189,14 @@ Last modified: 2026-11-20 09:01:42 (PST)
 > && \text{(the dot product with } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\text{ is } 0 \text{)}
 > \\
 > &= b,
-> && \text{(}\href{algebra-sums.qmd#thm-add-ident}{\text{Theorem~4 in Convexity, Infimum and Sums}}\text{)}
+> && \text{(}\href{algebra-sums.qmd#thm-add-ident}{\text{Theorem~1 in Sums, Products and Quotients}}\text{)}
 > \end{aligned}$$
 >
 > so $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\in \mathcal{H}$ exactly when $b = 0$.
 >
 > **Parts 2 and 3.** By [Theorem 1](#thm-hyperplane-subspace), $\mathcal{H} = \mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} : \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}} \in \mathcal{H}_0\right\}\mathclose{}$ for any $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_0 \in \mathcal{H}$, where $\mathcal{H}_0$ is a subspace of $\mathbb{R}^p$ of dimension $p - 1$.
 >
-> For $p = 2$, $\mathcal{H}_0$ has dimension $1$, so it has a basis ([Definition 6 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-basis)) with one vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$. That vector is nonzero, and $\mathcal{H}_0 = \mathopen{}\left\{t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} : t \in \mathbb{R}\right\}\mathclose{}$.
+> For $p = 2$, $\mathcal{H}_0$ has dimension $1$, so it has a basis ([Definition 1 in Bases and Dimension](linear-algebra-bases.llms.md#def-basis)) with one vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$. That vector is nonzero, and $\mathcal{H}_0 = \mathopen{}\left\{t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} : t \in \mathbb{R}\right\}\mathclose{}$.
 >
 > For $p = 3$, $\mathcal{H}_0$ has dimension $2$, so it has a basis with two vectors $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2$. They are linearly independent, and $\mathcal{H}_0 = \mathopen{}\left\{s\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_1 + t\,\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}_2 : s, t \in \mathbb{R}\right\}\mathclose{}$.
 
@@ -421,7 +421,7 @@ Last modified: 2026-11-20 09:01:42 (PST)
 > && \text{(the display above)}
 > \end{aligned}$$
 >
-> Because $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} > 0$, this is positive once $t > -\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} / \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$. Choose such a $t > 0$. Then $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_t$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_t + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ are both in $\mathcal{H}^+$, and their difference is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$. So $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \in D(\mathcal{H}^+)$. The whole space $\mathbb{R}^p$ is a subspace of dimension $p$ ([Definition 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)).
+> Because $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} > 0$, this is positive once $t > -\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} / \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$. Choose such a $t > 0$. Then $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_t$ and $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}_t + \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$ are both in $\mathcal{H}^+$, and their difference is $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}}$. So $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{v}}\vphantom{v}} \in D(\mathcal{H}^+)$. The whole space $\mathbb{R}^p$ is a subspace of dimension $p$ ([Definition 4 in Bases and Dimension](linear-algebra-bases.llms.md#def-dimension)).
 >
 > The proof for $\mathcal{H}^-$ is the same with $-\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ and $-b$ in place of $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}$ and $b$.
 

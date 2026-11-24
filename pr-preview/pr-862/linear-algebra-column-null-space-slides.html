@@ -185,9 +185,10 @@
     reads those vars so it stays legible in every palette. Light is the
     default variable set, Off-white and Parchment are a data-palette attribute
     on <html>, and Dark is the body.qwt-dark class. The choice is saved under
-    "mln-theme", the key the website's theme dropdown (theme-picker.html) uses,
-    so it carries across the site and the decks. First-time visitors get
-    Dark if their system prefers it, and Off-white otherwise.
+    "lds-theme" (falling back to "mln-theme"), the key the website's theme
+    dropdown (theme-picker.html) uses, so it carries across the site and the
+    decks. First-time visitors get Dark if their system prefers it, and
+    Off-white otherwise.
   -->
   <style>
     #qwt-theme-select {
@@ -221,7 +222,8 @@
   <script>
   (function () {
     "use strict";
-    var KEY = "mln-theme";
+    var KEY = "lds-theme";
+    var LEGACY_KEY = "mln-theme";
     var DARK_CLASS = "qwt-dark";
     var OPTIONS = [["light", "Light"], ["offwhite", "Off-white"], ["parchment", "Parchment"], ["dark", "Dark"]];
     var root = document.documentElement;
@@ -231,7 +233,7 @@
     }
 
     function stored() {
-      try { return localStorage.getItem(KEY); } catch (e) { return null; }
+      try { return localStorage.getItem(KEY) || localStorage.getItem(LEGACY_KEY); } catch (e) { return null; }
     }
 
     function initialTheme() {
@@ -302,7 +304,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-20 09:01:42 (PST)</p>
+  <p class="date">Last modified: 2026-11-23 20:33:36 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -993,7 +995,7 @@
 &amp;&amp; \text{(entries of the rows)}
 \\
 &amp;= \sum_{i=1}^{m} \mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{r}}\vphantom{r}}_i\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}_i}^{\top}\right)\mathclose{}_{jk}
-&amp;&amp; \text{(}\href{linear-algebra-inner-products.qmd#def-outer-product}{\text{Definition~17 in Inner Products and Orthogonality}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-orthonormal-bases.qmd#def-outer-product}{\text{Definition~3 in Orthonormal Bases, Outer Products and Hilbert Spaces}}\text{)}
 \\
 &amp;= \mathopen{}\left(\sum_{i=1}^{m} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{r}}\vphantom{r}}_i\,{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{s}}\vphantom{s}}_i}^{\top}\right)\mathclose{}_{jk}.
 &amp;&amp; \text{(entries of a sum)}
@@ -1005,7 +1007,7 @@
 <section class="slide level2">
 
 <div id="exm-cross-product-sum-outer" class="theorem example">
-<p><span class="theorem-title"><strong>Example 9 (The Gram matrix and a cross-product as sums of outer products)</strong></span> Let <span class="math inline">\(\mathbf{A} = \begin{bmatrix}1 &amp; 0 \\ 1 &amp; 1 \\ 0 &amp; 1\end{bmatrix}\)</span>, <span class="math inline">\(\mathbf{B} = \begin{bmatrix}1 \\ 2 \\ 3\end{bmatrix}\)</span> be the matrices of <a href="#/exm-cross-product-matrix" class="quarto-xref">Example&nbsp;7</a>. The rows of <span class="math inline">\(\mathbf{A}\)</span> are <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{r}}\vphantom{r}}_1 = (1, 0)\)</span>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{r}}\vphantom{r}}_2 = (1, 1)\)</span>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{r}}\vphantom{r}}_3 = (0, 1)\)</span>. Taking <span class="math inline">\(\mathbf{B} = \mathbf{A}\)</span> in <a href="#/thm-cross-product-sum-outer" class="quarto-xref">Theorem&nbsp;5</a>, the <a href="#/def-gram-matrix">Gram matrix</a> is the <a href="./algebra-sums.html#def-summation">sum</a> of the <a href="./linear-algebra-inner-products.html#def-outer-product">outer products</a> of the rows with themselves:</p>
+<p><span class="theorem-title"><strong>Example 9 (The Gram matrix and a cross-product as sums of outer products)</strong></span> Let <span class="math inline">\(\mathbf{A} = \begin{bmatrix}1 &amp; 0 \\ 1 &amp; 1 \\ 0 &amp; 1\end{bmatrix}\)</span>, <span class="math inline">\(\mathbf{B} = \begin{bmatrix}1 \\ 2 \\ 3\end{bmatrix}\)</span> be the matrices of <a href="#/exm-cross-product-matrix" class="quarto-xref">Example&nbsp;7</a>. The rows of <span class="math inline">\(\mathbf{A}\)</span> are <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{r}}\vphantom{r}}_1 = (1, 0)\)</span>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{r}}\vphantom{r}}_2 = (1, 1)\)</span>, <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{r}}\vphantom{r}}_3 = (0, 1)\)</span>. Taking <span class="math inline">\(\mathbf{B} = \mathbf{A}\)</span> in <a href="#/thm-cross-product-sum-outer" class="quarto-xref">Theorem&nbsp;5</a>, the <a href="#/def-gram-matrix">Gram matrix</a> is the <a href="./algebra-sums.html#def-summation">sum</a> of the <a href="./linear-algebra-orthonormal-bases.html#def-outer-product">outer products</a> of the rows with themselves:</p>
 <p><span class="math display">\[
 \begin{aligned}
 {\mathbf{A}}^{\top} \mathbf{A}
@@ -1015,7 +1017,7 @@
 &amp;= \begin{bmatrix}1 &amp; 0 \\ 0 &amp; 0\end{bmatrix}
 + \begin{bmatrix}1 &amp; 1 \\ 1 &amp; 1\end{bmatrix}
 + \begin{bmatrix}0 &amp; 0 \\ 0 &amp; 1\end{bmatrix}
-&amp;&amp; \text{(}\href{linear-algebra-inner-products.qmd#def-outer-product}{\text{Definition~17 in Inner Products and Orthogonality}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-orthonormal-bases.qmd#def-outer-product}{\text{Definition~3 in Orthonormal Bases, Outer Products and Hilbert Spaces}}\text{)}
 \\
 &amp;= \begin{bmatrix}2 &amp; 1 \\ 1 &amp; 2\end{bmatrix}.
 &amp;&amp; \text{(add)}
@@ -1043,7 +1045,7 @@
 <section class="slide level2">
 
 <div id="exr-cross-product-sum-outer-practice" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 11 (Computing a cross-product matrix one row at a time)</strong></span> <a href="#/thm-cross-product-sum-outer" class="quarto-xref">Theorem&nbsp;5</a> builds a <a href="#/def-cross-product-matrix">cross-product matrix</a> by adding one <a href="./linear-algebra-inner-products.html#def-outer-product">outer product</a> per <a href="./linear-algebra-matrices.html#def-matrix-row">row</a>, which is how it can be updated as observations arrive. Let</p>
+<p><span class="theorem-title"><strong>Exercise 11 (Computing a cross-product matrix one row at a time)</strong></span> <a href="#/thm-cross-product-sum-outer" class="quarto-xref">Theorem&nbsp;5</a> builds a <a href="#/def-cross-product-matrix">cross-product matrix</a> by adding one <a href="./linear-algebra-orthonormal-bases.html#def-outer-product">outer product</a> per <a href="./linear-algebra-matrices.html#def-matrix-row">row</a>, which is how it can be updated as observations arrive. Let</p>
 <p><span class="math display">\[
 \mathbf{A} = \begin{bmatrix}1 &amp; 2 \\ 0 &amp; 1\end{bmatrix},
 \qquad

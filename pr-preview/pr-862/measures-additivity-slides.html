@@ -185,9 +185,10 @@
     reads those vars so it stays legible in every palette. Light is the
     default variable set, Off-white and Parchment are a data-palette attribute
     on <html>, and Dark is the body.qwt-dark class. The choice is saved under
-    "mln-theme", the key the website's theme dropdown (theme-picker.html) uses,
-    so it carries across the site and the decks. First-time visitors get
-    Dark if their system prefers it, and Off-white otherwise.
+    "lds-theme" (falling back to "mln-theme"), the key the website's theme
+    dropdown (theme-picker.html) uses, so it carries across the site and the
+    decks. First-time visitors get Dark if their system prefers it, and
+    Off-white otherwise.
   -->
   <style>
     #qwt-theme-select {
@@ -221,7 +222,8 @@
   <script>
   (function () {
     "use strict";
-    var KEY = "mln-theme";
+    var KEY = "lds-theme";
+    var LEGACY_KEY = "mln-theme";
     var DARK_CLASS = "qwt-dark";
     var OPTIONS = [["light", "Light"], ["offwhite", "Off-white"], ["parchment", "Parchment"], ["dark", "Dark"]];
     var root = document.documentElement;
@@ -231,7 +233,7 @@
     }
 
     function stored() {
-      try { return localStorage.getItem(KEY); } catch (e) { return null; }
+      try { return localStorage.getItem(KEY) || localStorage.getItem(LEGACY_KEY); } catch (e) { return null; }
     }
 
     function initialTheme() {
@@ -302,7 +304,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-20 09:01:42 (PST)</p>
+  <p class="date">Last modified: 2026-11-23 20:33:36 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -368,7 +370,7 @@
 <section class="slide level2">
 
 <div id="rem-countable-additivity-sum-exists" class="proof remark">
-<p><span class="proof-title"><em>Remark 1</em> (The sum in countable additivity always has a value). </span>By <a href="./algebra-exponentials.html#lem-nonneg-series">sums of non-negative terms</a>, the right-hand side of the equation in <a href="#/def-countable-additivity" class="quarto-xref">Definition&nbsp;2</a>, <span class="math inline">\(\sum_{i=1}^{\infty} \mu(A_i)\)</span>, always has a value, because each <span class="math inline">\(\mu(A_i)\)</span> is in <span class="math inline">\([0, \infty]\)</span>. For example, if <span class="math inline">\(\mu(A_i) = 1/2^i\)</span> for each <span class="math inline">\(i\)</span>, the partial sums are <span class="math inline">\(s_n = 1 - 1/2^n\)</span>, and the sum is <span class="math inline">\(1\)</span>; if <span class="math inline">\(\mu(A_i) = 1\)</span> for each <span class="math inline">\(i\)</span>, the partial sums are <span class="math inline">\(s_n = n\)</span>, and the sum is <span class="math inline">\(\infty\)</span>.</p>
+<p><span class="proof-title"><em>Remark 1</em> (The sum in countable additivity always has a value). </span>By <a href="./algebra-polynomials.html#lem-nonneg-series">sums of non-negative terms</a>, the right-hand side of the equation in <a href="#/def-countable-additivity" class="quarto-xref">Definition&nbsp;2</a>, <span class="math inline">\(\sum_{i=1}^{\infty} \mu(A_i)\)</span>, always has a value, because each <span class="math inline">\(\mu(A_i)\)</span> is in <span class="math inline">\([0, \infty]\)</span>. For example, if <span class="math inline">\(\mu(A_i) = 1/2^i\)</span> for each <span class="math inline">\(i\)</span>, the partial sums are <span class="math inline">\(s_n = 1 - 1/2^n\)</span>, and the sum is <span class="math inline">\(1\)</span>; if <span class="math inline">\(\mu(A_i) = 1\)</span> for each <span class="math inline">\(i\)</span>, the partial sums are <span class="math inline">\(s_n = n\)</span>, and the sum is <span class="math inline">\(\infty\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -416,7 +418,7 @@
 &amp;&amp; \text{(definition of } \mu\text{)}
 \end{aligned}
 \]</span></p>
-<p>and the right-hand side, the <a href="./algebra-exponentials.html#def-sequence-limit">limit</a> of its <a href="./algebra-exponentials.html#def-partial-sum">partial sums</a> (<a href="./algebra-exponentials.html#lem-nonneg-series">sums of non-negative terms</a>), is:</p>
+<p>and the right-hand side, the <a href="./algebra-polynomials.html#def-sequence-limit">limit</a> of its <a href="./algebra-polynomials.html#def-partial-sum">partial sums</a> (<a href="./algebra-polynomials.html#lem-nonneg-series">sums of non-negative terms</a>), is:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \sum_{i=1}^{\infty} \mu(A_i)

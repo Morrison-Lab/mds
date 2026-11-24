@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-20 09:01:42 (PST)
+Last modified: 2026-11-23 20:33:36 (PST)
 
 # 1 Equalities
 
@@ -150,7 +150,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> *Remark 1* (Powers with real exponents). [Definition 28 in Polynomials, Exponentials and Logarithms](algebra-exponentials.llms.md#def-real-power) extends powers to real exponents when the base is positive.
+> *Remark 1* (Powers with real exponents). [Definition 4 in Exponentials and Logarithms](algebra-exponentials.llms.md#def-real-power) extends powers to real exponents when the base is positive.
 
 > **NOTE:**
 >

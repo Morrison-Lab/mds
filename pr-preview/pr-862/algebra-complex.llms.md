@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-20 09:01:42 (PST)
+Last modified: 2026-11-23 20:33:36 (PST)
 
 > **NOTE:**
 >
@@ -154,7 +154,7 @@ Axler [\[2\]](#ref-axler2024linear), Definition 1.1, p. 2 defines $\mathbb{C}$ 
 > && \text{(} 0\,i = 0 \text{)}
 > \\
 > &= a
-> && \text{(}\href{algebra-sums.qmd#thm-add-ident}{\text{Theorem~4 in Convexity, Infimum and Sums}}\text{)}
+> && \text{(}\href{algebra-sums.qmd#thm-add-ident}{\text{Theorem~1 in Sums, Products and Quotients}}\text{)}
 > \end{aligned}$$
 >
 > so $a$ is the complex number $a + 0\,i$, whose imaginary part is $0$. The real part of $a + 0\,i$ is $a$, and by the equality rule in [Definition 5](#def-complex-equality) no other pair of real and imaginary parts gives the same number.

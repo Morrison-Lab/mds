@@ -251,9 +251,10 @@
     reads those vars so it stays legible in every palette. Light is the
     default variable set, Off-white and Parchment are a data-palette attribute
     on <html>, and Dark is the body.qwt-dark class. The choice is saved under
-    "mln-theme", the key the website's theme dropdown (theme-picker.html) uses,
-    so it carries across the site and the decks. First-time visitors get
-    Dark if their system prefers it, and Off-white otherwise.
+    "lds-theme" (falling back to "mln-theme"), the key the website's theme
+    dropdown (theme-picker.html) uses, so it carries across the site and the
+    decks. First-time visitors get Dark if their system prefers it, and
+    Off-white otherwise.
   -->
   <style>
     #qwt-theme-select {
@@ -287,7 +288,8 @@
   <script>
   (function () {
     "use strict";
-    var KEY = "mln-theme";
+    var KEY = "lds-theme";
+    var LEGACY_KEY = "mln-theme";
     var DARK_CLASS = "qwt-dark";
     var OPTIONS = [["light", "Light"], ["offwhite", "Off-white"], ["parchment", "Parchment"], ["dark", "Dark"]];
     var root = document.documentElement;
@@ -297,7 +299,7 @@
     }
 
     function stored() {
-      try { return localStorage.getItem(KEY); } catch (e) { return null; }
+      try { return localStorage.getItem(KEY) || localStorage.getItem(LEGACY_KEY); } catch (e) { return null; }
     }
 
     function initialTheme() {
@@ -370,7 +372,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-20 09:01:42 (PST)</p>
+  <p class="date">Last modified: 2026-11-23 20:33:36 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -1201,7 +1203,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <section class="slide level2">
 
 <div id="def-affine-offset" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8 (Offset of an affine map, intercept, bias)</strong></span> In <a href="#/def-affine-map" class="quarto-xref">Definition&nbsp;7</a>, the vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> is called the <strong>offset</strong> of <span class="math inline">\(f\)</span> (statistics also calls it the <strong>intercept</strong>, and machine learning the <strong>bias</strong>).</p>
+<p><span class="theorem-title"><strong>Definition 8 (Offset of an affine map, intercept, bias)</strong></span> In <a href="#/def-affine-map" class="quarto-xref">Definition&nbsp;7</a>, the vector <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> is called the <strong>offset</strong> of <span class="math inline">\(f\)</span>, also called the <strong>intercept</strong> in statistics, or the <strong>bias</strong> in machine learning.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -1308,7 +1310,10 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <section class="slide level2">
 
 <div id="thm-affine-map-zero" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 5 (An affine map sends zero to its offset)</strong></span> An affine map <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> (<a href="#/def-affine-map" class="quarto-xref">Definition&nbsp;7</a>) satisfies <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>.</p>
+<p><span class="theorem-title"><strong>Theorem 5 (An affine map sends zero to its offset)</strong></span> An <a href="#/def-affine-map">affine map</a> <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> sends the <a href="./linear-algebra-vectors.html#def-zero-vector">zero vector</a> to its <a href="#/def-affine-offset">offset</a> <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>:</p>
+<p><span id="eq-affine-map-zero"><span class="math display">\[
+f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}) = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}.
+\tag{2}\]</span></span></p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>First, <span class="math inline">\(\mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}= \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>: for each <span class="math inline">\(i\)</span>,</p>
@@ -1382,7 +1387,10 @@ f\mathopen{}\left(\begin{bmatrix}1 \\ 0\end{bmatrix}\right)\mathclose{} = \begin
 <section class="slide level2">
 
 <div id="thm-affine-linear-iff" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 6 (An affine map is linear exactly when its offset is zero)</strong></span> An affine map <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> (<a href="#/def-affine-map" class="quarto-xref">Definition&nbsp;7</a>) is linear (<a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;3</a>) if and only if <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>.</p>
+<p><span class="theorem-title"><strong>Theorem 6 (An affine map is linear exactly when its offset is zero)</strong></span> An <a href="#/def-affine-map">affine map</a> <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> is <a href="#/def-linear-map">linear</a> <a href="https://morrison-lab.github.io/mcs/proof-writing.html#def-iff">if and only if</a> its <a href="#/def-affine-offset">offset</a> is zero:</p>
+<p><span id="eq-affine-linear-iff"><span class="math display">\[
+f \text{ is linear} \iff \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}.
+\tag{3}\]</span></span></p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>If <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>, then</p>
@@ -1437,7 +1445,11 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <section class="slide level2">
 
 <div id="cor-linear-is-affine" class="theorem corollary">
-<p><span class="theorem-title"><strong>Corollary 2 (Every linear map is affine)</strong></span> Every linear map <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}^m\)</span> (<a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;3</a>) is an affine map (<a href="#/def-affine-map" class="quarto-xref">Definition&nbsp;7</a>) with offset <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>.</p>
+<p><span class="theorem-title"><strong>Corollary 2 (Every linear map is affine)</strong></span> Every <a href="#/def-linear-map">linear map</a> <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}^m\)</span> is an <a href="#/def-affine-map">affine map</a> with <a href="#/def-affine-offset">offset</a> <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>. With <span class="math inline">\(\mathbf{A}\)</span> the <a href="#/def-matrix-of-linear-map">matrix of <span class="math inline">\(f\)</span></a>,</p>
+<p><span id="eq-linear-is-affine"><span class="math display">\[
+f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}
+\quad \text{for all } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p.
+\tag{4}\]</span></span></p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>If <span class="math inline">\(f\)</span> is linear, <a href="#/thm-linear-map-matrix" class="quarto-xref">Theorem&nbsp;4</a> gives a matrix <span class="math inline">\(\mathbf{A}\)</span> with</p>
@@ -1447,7 +1459,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 &amp;= \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}},
 \end{aligned}
 \]</span></p>
-<p>which is <a href="#/def-affine-map" class="quarto-xref">Definition&nbsp;7</a> with <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>.</p>
+<p>which is an <a href="#/def-affine-map">affine map</a> with <a href="#/def-affine-offset">offset</a> <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}} = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{0}}\vphantom{0}}\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -1483,7 +1495,12 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <section class="slide level2">
 
 <div id="thm-affine-map-unique" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 7 (An affine map determines its matrix and offset)</strong></span> If <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> and <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}'\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}'\)</span> for all <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p\)</span> (<a href="#/def-affine-map" class="quarto-xref">Definition&nbsp;7</a>), then <span class="math inline">\(\mathbf{A}' = \mathbf{A}\)</span> and <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}' = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span>.</p>
+<p><span class="theorem-title"><strong>Theorem 7 (An affine map determines its matrix and offset)</strong></span> If an <a href="#/def-affine-map">affine map</a> <span class="math inline">\(f\)</span> satisfies <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}\)</span> and <span class="math inline">\(f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = \mathbf{A}'\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}+ \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}'\)</span> <a href="https://morrison-lab.github.io/mcs/proof-writing.html#def-universal-quantifier">for all</a> <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p\)</span>, then the two <a href="https://morrison-lab.github.io/mcs/expressions-algorithms.html#def-closed-form-expression">formulas</a> have the same <a href="./linear-algebra-matrices.html#def-matrix">matrix</a> and the same <a href="#/def-affine-offset">offset</a>:</p>
+<p><span id="eq-affine-map-unique"><span class="math display">\[
+\mathbf{A}' = \mathbf{A}
+\quad \text{and} \quad
+\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}' = \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{b}}\vphantom{b}}.
+\tag{5}\]</span></span></p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>By <a href="#/thm-affine-map-zero" class="quarto-xref">Theorem&nbsp;5</a>, applied to each formula,</p>
@@ -1537,7 +1554,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <section class="slide level2">
 
 <div id="rem-linear-affine-terminology" class="proof remark">
-<p><span class="proof-title"><em>Remark 3</em> (“Linear” in this site, and in machine learning and statistics). </span>This site uses “linear” only in the sense of <a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;3</a>, so by <a href="#/thm-affine-linear-iff" class="quarto-xref">Theorem&nbsp;6</a> a function with a nonzero offset is affine but not linear. For functions of one variable, this is the same split as <a href="./algebra-exponentials.html#def-affine-function">affine</a> <span class="math inline">\(a x + b\)</span> versus <a href="./algebra-exponentials.html#def-linear-function">linear</a> <span class="math inline">\(a x\)</span> on the algebra page. (The algebra page writes these as <span class="math inline">\(m x + b\)</span> and <span class="math inline">\(m x\)</span>; here <span class="math inline">\(m\)</span> already names the number of outputs.)</p>
+<p><span class="proof-title"><em>Remark 3</em> (“Linear” in this site, and in machine learning and statistics). </span>This site uses “linear” only in the sense of <a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;3</a>, so by <a href="#/thm-affine-linear-iff" class="quarto-xref">Theorem&nbsp;6</a> a function with a nonzero offset is affine but not linear. For functions of one variable, this is the same split as <a href="./algebra-polynomials.html#def-affine-function">affine</a> <span class="math inline">\(a x + b\)</span> versus <a href="./algebra-polynomials.html#def-linear-function">linear</a> <span class="math inline">\(a x\)</span> on the algebra page. (The algebra page writes these as <span class="math inline">\(m x + b\)</span> and <span class="math inline">\(m x\)</span>; here <span class="math inline">\(m\)</span> already names the number of outputs.)</p>
 <p>Machine learning and statistics often call any function of the form <a href="#/eq-linear-scalar" class="quarto-xref">Equation&nbsp;1</a> “linear”, as in a <em>linear model</em> in statistics or a <em>linear layer</em> in a neural network, and call the offset <span class="math inline">\(b\)</span> the bias (machine learning) or the intercept (statistics), as <a href="#/def-affine-map" class="quarto-xref">Definition&nbsp;7</a> notes. A model with an intercept is affine in <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> but linear in its coefficients <span class="math inline">\((b, \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}})\)</span>, and that is the sense of “linear” in “linear model”: it stays linear in the coefficients even when the inputs are transformed: <span class="math inline">\(w_1 x + w_2 x^2 + b\)</span> is not affine in <span class="math inline">\(x\)</span>, but it is linear in <span class="math inline">\((b, w_1, w_2)\)</span>. Separately, the affine function <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \cdot \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} + b\)</span> is a linear function of the augmented vector <span class="math inline">\({\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\mathrm{aug}}\)</span> (<a href="#/def-augmented-vector" class="quarto-xref">Definition&nbsp;9</a>), with <span class="math inline">\(b\)</span> as the coefficient on its first entry.</p>
 </div>
 <div class="callout callout-tip callout-titled callout-style-default">
@@ -1881,7 +1898,7 @@ f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom
 <section class="slide level2 smaller scrollable" id="references">
 
 <div id="exr-which-are-linear" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 23 (Which of these are affine in <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>?)</strong></span> Each of the five expressions is a function of the weights <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p\)</span>, with the data <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and <span class="math inline">\(y\)</span> held fixed. Say which ones are affine (<a href="#/def-affine-map" class="quarto-xref">Definition&nbsp;7</a>), that is, have the form <a href="#/eq-linear-scalar" class="quarto-xref">Equation&nbsp;1</a> — an inner product plus an offset — and which of those are also linear (<a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;3</a>).</p>
+<p><span class="theorem-title"><strong>Exercise 23 (Which of these are affine in <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}\)</span>?)</strong></span> Each of the five expressions is a function of the weights <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}} \in \mathbb{R}^p\)</span>, with the data <span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span> and <span class="math inline">\(y\)</span> held fixed. Say which ones are <a href="#/def-affine-map">affine</a>, that is, have the form <a href="#/eq-linear-scalar" class="quarto-xref">Equation&nbsp;1</a> — an <a href="./linear-algebra-inner-products.html#def-inner-product">inner product</a> plus an <a href="#/def-affine-offset">offset</a> — and which of the affine ones are also <a href="#/def-linear-map">linear</a>.</p>
 <ol type="1">
 <li><span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\)</span></li>
 <li><span class="math inline">\(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{w}}\vphantom{w}}^{\top} \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- y\)</span></li>

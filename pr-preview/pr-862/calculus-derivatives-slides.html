@@ -247,9 +247,10 @@
     reads those vars so it stays legible in every palette. Light is the
     default variable set, Off-white and Parchment are a data-palette attribute
     on <html>, and Dark is the body.qwt-dark class. The choice is saved under
-    "mln-theme", the key the website's theme dropdown (theme-picker.html) uses,
-    so it carries across the site and the decks. First-time visitors get
-    Dark if their system prefers it, and Off-white otherwise.
+    "lds-theme" (falling back to "mln-theme"), the key the website's theme
+    dropdown (theme-picker.html) uses, so it carries across the site and the
+    decks. First-time visitors get Dark if their system prefers it, and
+    Off-white otherwise.
   --><style>
     #qwt-theme-select {
       position: fixed;
@@ -282,7 +283,8 @@
 <script>
   (function () {
     "use strict";
-    var KEY = "mln-theme";
+    var KEY = "lds-theme";
+    var LEGACY_KEY = "mln-theme";
     var DARK_CLASS = "qwt-dark";
     var OPTIONS = [["light", "Light"], ["offwhite", "Off-white"], ["parchment", "Parchment"], ["dark", "Dark"]];
     var root = document.documentElement;
@@ -292,7 +294,7 @@
     }
 
     function stored() {
-      try { return localStorage.getItem(KEY); } catch (e) { return null; }
+      try { return localStorage.getItem(KEY) || localStorage.getItem(LEGACY_KEY); } catch (e) { return null; }
     }
 
     function initialTheme() {
@@ -364,7 +366,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-20 09:01:42 (PST)</p>
+  <p class="date">Last modified: 2026-11-23 20:33:36 (PST)</p>
 </section><section class="slide level2"></section><section id="sec-limits-derivatives" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Limits and derivatives</h2>
 </section><section class="slide level2"><div id="def-limit" class="theorem definition">
@@ -449,7 +451,7 @@
 <p><span class="math display">\[
 \frac{f(c + h) - f(c)}{h},
 \]</span></p>
-<p>the <a href="./algebra-exponentials.html#def-slope">slope</a> of the line through the points <span class="math inline">\((c, f(c))\)</span> and <span class="math inline">\((c + h, f(c + h))\)</span>.</p>
+<p>the <a href="./algebra-polynomials.html#def-slope">slope</a> of the line through the points <span class="math inline">\((c, f(c))\)</span> and <span class="math inline">\((c + h, f(c + h))\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-difference-quotient" class="theorem example">
 <p><span class="theorem-title"><strong>Example 3 (The difference quotient of <span class="math inline">\(x^2\)</span> at <span class="math inline">\(1\)</span>)</strong></span> For <span class="math inline">\(f(x) = x^2\)</span>, <span class="math inline">\(c = 1\)</span>, and <span class="math inline">\(h \ne 0\)</span>,</p>
@@ -578,10 +580,90 @@ f''(x) &amp;= 3 \cdot 2x \\
 \]</span></p>
 <p>So <span class="math inline">\(f''(2) = 12\)</span>, <span class="math inline">\(f''(0) = 0\)</span>, and <span class="math inline">\(f''(-1) = -6\)</span>.</p>
 </div>
+</section><section class="slide level2"><div id="def-smooth-function" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 14 (Smooth function (infinitely differentiable function))</strong></span> A <a href="./linear-algebra-vectors.html#def-real-vector-valued">real-valued function</a> <span class="math inline">\(f\)</span> of one variable is <strong>smooth</strong> on an <a href="https://morrison-lab.github.io/mcs/sets.html#def-open-interval">open interval</a> <span class="math inline">\(I\)</span>, also called <strong>infinitely differentiable</strong> on <span class="math inline">\(I\)</span>, if it has a <a href="#/def-derivative">derivative</a> of every order at every <a href="./linear-algebra-vectors.html#def-real-coordinate-space">point</a> of <span class="math inline">\(I\)</span>: the first derivative <span class="math inline">\(f'\)</span> <a href="#/def-limit">exists</a> on <span class="math inline">\(I\)</span>, so does the <a href="#/def-second-derivative">second derivative</a> <span class="math inline">\(f''\)</span>, and so on, each derivative being <a href="#/def-differentiable">differentiable at</a> every point of <span class="math inline">\(I\)</span> <span class="citation" data-cites="wikipedia_smoothness"><a href="#/references" role="doc-biblioref" onclick="">[9]</a></span>.</p>
+</div>
+</section><section class="slide level2"><div id="exm-smooth-function" class="theorem example">
+<p><span class="theorem-title"><strong>Example 8 (A smooth function and one that is not)</strong></span> <span class="math inline">\(f(x) = x^3\)</span> is smooth on <span class="math inline">\(\mathbb{R}\)</span>. By the <a href="#/thm-deriv-polynomial">power rule</a>, later on this page, its <a href="#/def-derivative">derivatives</a> are <span class="math inline">\(f'(x) = 3x^2\)</span>, <span class="math inline">\(f''(x) = 6x\)</span>, <span class="math inline">\(f'''(x) = 6\)</span>, and <span class="math inline">\(0\)</span> from then on, and each of them is <a href="#/def-differentiable">differentiable at</a> every <span class="math inline">\(x\)</span>.</p>
+<p><span class="math inline">\(g(x) = x \mathopen{}\left|x\right|\mathclose{}\)</span> is not smooth on any <a href="https://morrison-lab.github.io/mcs/sets.html#def-open-interval">open interval</a> containing <span class="math inline">\(0\)</span>. Its derivative is <span class="math inline">\(g'(x) = 2 \mathopen{}\left|x\right|\mathclose{}\)</span> at every <span class="math inline">\(x\)</span>, and <span class="math inline">\(2 \mathopen{}\left|x\right|\mathclose{}\)</span> is not differentiable at <span class="math inline">\(0\)</span>, so <span class="math inline">\(g''(0)\)</span> does not exist. <a href="#/fig-smooth-function" class="quarto-xref">Figure&nbsp;1</a> shows <span class="math inline">\(g\)</span> and <span class="math inline">\(g'\)</span>.</p>
+<details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-label="1"></a>sm_x_sm <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="at">length.out =</span> <span class="dv">201</span>)</span>
+<span id="cb1-2"><a aria-label="2"></a>sm_labels_sm <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"g(x) = x|x|"</span>, <span class="st">"g'(x) = 2|x|"</span>)</span>
+<span id="cb1-3"><a aria-label="3"></a>sm_values_sm <span class="ot">&lt;-</span> <span class="fu">c</span>(sm_x_sm <span class="sc">*</span> <span class="fu">abs</span>(sm_x_sm), <span class="dv">2</span> <span class="sc">*</span> <span class="fu">abs</span>(sm_x_sm))</span>
+<span id="cb1-4"><a aria-label="4"></a>sm_n_sm <span class="ot">&lt;-</span> <span class="fu">length</span>(sm_x_sm)</span>
+<span id="cb1-5"><a aria-label="5"></a>sm_fn_sm <span class="ot">&lt;-</span> <span class="fu">rep</span>(sm_labels_sm, <span class="at">each =</span> sm_n_sm)</span>
+<span id="cb1-6"><a aria-label="6"></a>sm_fn_sm <span class="ot">&lt;-</span> <span class="fu">factor</span>(sm_fn_sm, <span class="at">levels =</span> sm_labels_sm)</span>
+<span id="cb1-7"><a aria-label="7"></a>sm_x_rep_sm <span class="ot">&lt;-</span> <span class="fu">rep</span>(sm_x_sm, <span class="dv">2</span>)</span>
+<span id="cb1-8"><a aria-label="8"></a>sm_curves_sm <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(</span>
+<span id="cb1-9"><a aria-label="9"></a>  <span class="at">x =</span> sm_x_rep_sm, <span class="at">value =</span> sm_values_sm, <span class="at">fn =</span> sm_fn_sm</span>
+<span id="cb1-10"><a aria-label="10"></a>)</span>
+<span id="cb1-11"><a aria-label="11"></a>sm_origin_fn_sm <span class="ot">&lt;-</span> <span class="fu">factor</span>(sm_labels_sm, <span class="at">levels =</span> sm_labels_sm)</span>
+<span id="cb1-12"><a aria-label="12"></a>sm_origin_sm <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(<span class="at">x =</span> <span class="dv">0</span>, <span class="at">value =</span> <span class="dv">0</span>, <span class="at">fn =</span> sm_origin_fn_sm)</span>
+<span id="cb1-13"><a aria-label="13"></a>sm_aes_sm <span class="ot">&lt;-</span> ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> value)</span>
+<span id="cb1-14"><a aria-label="14"></a>sm_facet_sm <span class="ot">&lt;-</span> ggplot2<span class="sc">::</span><span class="fu">vars</span>(fn)</span>
+<span id="cb1-15"><a aria-label="15"></a>sm_curves_sm <span class="sc">|&gt;</span></span>
+<span id="cb1-16"><a aria-label="16"></a>  ggplot2<span class="sc">::</span><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb1-17"><a aria-label="17"></a>  sm_aes_sm <span class="sc">+</span></span>
+<span id="cb1-18"><a aria-label="18"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_line</span>(<span class="at">colour =</span> <span class="st">"#0072B2"</span>) <span class="sc">+</span></span>
+<span id="cb1-19"><a aria-label="19"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_point</span>(<span class="at">data =</span> sm_origin_sm, <span class="at">colour =</span> <span class="st">"#D55E00"</span>, <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb1-20"><a aria-label="20"></a>  ggplot2<span class="sc">::</span><span class="fu">facet_wrap</span>(sm_facet_sm, <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
+<span id="cb1-21"><a aria-label="21"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"x"</span>, <span class="at">y =</span> <span class="st">"function value"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a aria-label="1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-2"><a aria-label="2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-3"><a aria-label="3"></a></span>
+<span id="cb2-4"><a aria-label="4"></a>sm_x_py <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">201</span>)</span>
+<span id="cb2-5"><a aria-label="5"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">3</span>), layout<span class="op">=</span><span class="st">"constrained"</span>)</span>
+<span id="cb2-6"><a aria-label="6"></a>axes[<span class="dv">0</span>].plot(sm_x_py, sm_x_py <span class="op">*</span> np.<span class="bu">abs</span>(sm_x_py), color<span class="op">=</span><span class="st">"#0072B2"</span>)</span>
+<span id="cb2-7"><a aria-label="7"></a>axes[<span class="dv">0</span>].plot([<span class="dv">0</span>], [<span class="dv">0</span>], <span class="st">"o"</span>, color<span class="op">=</span><span class="st">"#D55E00"</span>)</span>
+<span id="cb2-8"><a aria-label="8"></a>axes[<span class="dv">0</span>].set_title(<span class="st">"g(x) = x|x|"</span>)</span>
+<span id="cb2-9"><a aria-label="9"></a>axes[<span class="dv">1</span>].plot(sm_x_py, <span class="dv">2</span> <span class="op">*</span> np.<span class="bu">abs</span>(sm_x_py), color<span class="op">=</span><span class="st">"#0072B2"</span>)</span>
+<span id="cb2-10"><a aria-label="10"></a>axes[<span class="dv">1</span>].plot([<span class="dv">0</span>], [<span class="dv">0</span>], <span class="st">"o"</span>, color<span class="op">=</span><span class="st">"#D55E00"</span>)</span>
+<span id="cb2-11"><a aria-label="11"></a>axes[<span class="dv">1</span>].set_title(<span class="st">"g'(x) = 2|x|"</span>)</span>
+<span id="cb2-12"><a aria-label="12"></a><span class="cf">for</span> ax <span class="kw">in</span> axes:</span>
+<span id="cb2-13"><a aria-label="13"></a>    ax.set_xlabel(<span class="st">"x"</span>)</span>
+<span id="cb2-14"><a aria-label="14"></a>plt.show()<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><div id="fig-smooth-function" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-smooth-function-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: The function <span class="math inline">\(g(x) = x \mathopen{}\left|x\right|\mathclose{}\)</span> of <a href="#/exm-smooth-function" class="quarto-xref">Example&nbsp;8</a> looks smooth, but its <a href="#/def-derivative">derivative</a> <span class="math inline">\(2 \mathopen{}\left|x\right|\mathclose{}\)</span> has a corner at <span class="math inline">\(0\)</span>, where it has no derivative.
+</figcaption><div aria-describedby="fig-smooth-function-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="panel-tabset" data-group="language">
+<ul id="tabset-1" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-1-1">R</a></li>
+<li><a href="#tabset-1-2">Python</a></li>
+</ul>
+<div class="tab-content" data-group="language">
+<div id="tabset-1-1">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><a href="calculus-derivatives_files/figure-html/smooth-function-r-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: The function g(x) = x \mathopen{}\left|x\right|\mathclose{} of Example&nbsp;8 looks smooth, but its derivative 2 \mathopen{}\left|x\right|\mathclose{} has a corner at 0, where it has no derivative."><img data-src="calculus-derivatives_files/figure-html/smooth-function-r-1.png" alt="Two side-by-side plots on x from -1 to 1, each with a vermilion circle at the origin. The first, g of x equals x times the absolute value of x, is a blue curve that looks smooth, falling below zero to the left of the origin and rising above it to the right. The second, its derivative 2 times the absolute value of x, is a blue V shape with a sharp corner at the origin." width="576"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-2">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><a href="calculus-derivatives_files/figure-html/smooth-function-python-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;1: The function g(x) = x \mathopen{}\left|x\right|\mathclose{} of Example&nbsp;8 looks smooth, but its derivative 2 \mathopen{}\left|x\right|\mathclose{} has a corner at 0, where it has no derivative."><img data-src="calculus-derivatives_files/figure-html/smooth-function-python-1.png" alt="Two side-by-side plots on x from -1 to 1, each with a vermilion circle at the origin. The first, g of x equals x times the absolute value of x, is a blue curve that looks smooth, falling below zero to the left of the origin and rising above it to the right. The second, its derivative 2 times the absolute value of x, is a blue V shape with a sharp corner at the origin." width="576"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+</div>
+</section><section class="slide level2"><div id="rem-smooth-function-loose" class="proof remark">
+<p><span class="proof-title"><em>Remark 2</em> (“Smooth” in statistics and machine learning). </span>Statistics and machine learning texts often use “smooth” loosely, for a function with as many <a href="#/def-derivative">derivatives</a> as the reasoning at hand needs, usually two. For example, a <a href="./algebra-polynomials.html#def-cubic-polynomial">cubic</a> spline, a curve made of <a href="./algebra-polynomials.html#def-polynomial">polynomial</a> pieces of <a href="./algebra-polynomials.html#def-polynomial-degree">degree</a> <span class="math inline">\(3\)</span> that meet at knots with matching first and <a href="#/def-second-derivative">second derivatives</a>, is called smooth, although its third derivative jumps at each knot, so it is not smooth in the sense of <a href="#/def-smooth-function" class="quarto-xref">Definition&nbsp;14</a>. When a claim depends on the number of derivatives, name that number (“twice-differentiable”) rather than saying “smooth”.</p>
+</div>
 </section><section id="sec-derivative-rules" class="slide level2" data-number="2"><h2>
 <span class="header-section-number">2</span> Derivative rules</h2>
 </section><section class="slide level2"><div id="thm-deriv-const" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 1 (Constant rule)</strong></span> If <span class="math inline">\(c\)</span> is <a href="./vector-calculus.html#def-constant-wrt-vector">constant with respect to</a> <span class="math inline">\(x\)</span>, then</p>
+<p><span class="theorem-title"><strong>Theorem 1 (Constant rule)</strong></span> If <span class="math inline">\(c\)</span> is <a href="./vector-calculus-derivative-rules.html#def-constant-wrt-vector">constant with respect to</a> <span class="math inline">\(x\)</span>, then</p>
 <p><span class="math display">\[\frac{\partial}{\partial x}c = 0\]</span></p>
 </div>
 </section><section class="slide level2"><div class="callout callout-tip callout-titled callout-style-default">
@@ -601,7 +683,7 @@ f''(x) &amp;= 3 \cdot 2x \\
 </div>
 </div>
 </section><section class="slide level2"><div id="thm-deriv-const-factor" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 2 (Constant multiple rule)</strong></span> If <span class="math inline">\(a\)</span> is <a href="./vector-calculus.html#def-constant-wrt-vector">constant with respect to</a> <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> is a <a href="#/def-differentiable">differentiable function</a> of <span class="math inline">\(x\)</span>, then: <span class="math display">\[\frac{\partial}{\partial x}ay = a \frac{\partial y}{\partial x}\]</span></p>
+<p><span class="theorem-title"><strong>Theorem 2 (Constant multiple rule)</strong></span> If <span class="math inline">\(a\)</span> is <a href="./vector-calculus-derivative-rules.html#def-constant-wrt-vector">constant with respect to</a> <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> is a <a href="#/def-differentiable">differentiable function</a> of <span class="math inline">\(x\)</span>, then: <span class="math display">\[\frac{\partial}{\partial x}ay = a \frac{\partial y}{\partial x}\]</span></p>
 </div>
 </section><section class="slide level2"><div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
@@ -620,7 +702,7 @@ f''(x) &amp;= 3 \cdot 2x \\
 </div>
 </div>
 </section><section class="slide level2"><div id="thm-deriv-polynomial" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 3 (Power rule)</strong></span> For every <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers">real number</a> <span class="math inline">\(q\)</span> and every <span class="math inline">\(x &gt; 0\)</span> <span class="citation" data-cites="wikipedia_power_rule"><a href="#/references" role="doc-biblioref" onclick="">[9]</a></span>, the <a href="#/def-derivative">derivative</a> of the <a href="./algebra-exponentials.html#def-real-power">power</a> <span class="math inline">\(x^q\)</span> is:</p>
+<p><span class="theorem-title"><strong>Theorem 3 (Power rule)</strong></span> For every <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers">real number</a> <span class="math inline">\(q\)</span> and every <span class="math inline">\(x &gt; 0\)</span> <span class="citation" data-cites="wikipedia_power_rule"><a href="#/references" role="doc-biblioref" onclick="">[10]</a></span>, the <a href="#/def-derivative">derivative</a> of the <a href="./algebra-exponentials.html#def-real-power">power</a> <span class="math inline">\(x^q\)</span> is:</p>
 <p><span class="math display">\[\frac{\partial}{\partial x}x^q = qx^{q-1}\]</span></p>
 <p>When <span class="math inline">\(q\)</span> is a <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-positive-integer">positive integer</a>, the same <a href="https://morrison-lab.github.io/mcs/expressions-algorithms.html#def-closed-form-expression">formula</a> holds for every <a href="https://morrison-lab.github.io/mcs/number-systems.html#def-real-numbers">real</a> <span class="math inline">\(x\)</span>.</p>
 </div>
@@ -643,7 +725,7 @@ f''(x) &amp;= 3 \cdot 2x \\
 </div>
 </div>
 </section><section class="slide level2"><div id="exr-miller-deriv-polynomial-root" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1 (Derivative of polynomial and power functions)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[10]</a></span>, Question 1.1.1.</p>
+<p><span class="theorem-title"><strong>Exercise 1 (Derivative of polynomial and power functions)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[11]</a></span>, Question 1.1.1.</p>
 <p>Find the derivative of</p>
 <p><span class="math display">\[f(x) = 4x^5 + 3x^2 + x^{1/3}\]</span></p>
 </div>
@@ -663,7 +745,7 @@ f''(x) &amp;= 3 \cdot 2x \\
 <p><span class="math display">\[f'(x) = 20x^4 + 6x + \frac{1}{3}x^{-2/3}\]</span></p>
 </div>
 </section><section class="slide level2 scrollable"><div id="exr-miller-deriv-find-slopes" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 2 (Finding points with a prescribed slope)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[10]</a></span>, Question 1.1.14.</p>
+<p><span class="theorem-title"><strong>Exercise 2 (Finding points with a prescribed slope)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[11]</a></span>, Question 1.1.14.</p>
 <p>Let <span class="math inline">\(f(x) = \frac{1}{3}x^3 + x^2 - x - 1\)</span>. Find all points on the graph of <span class="math inline">\(f\)</span> where the slope is:</p>
 <ol type="1">
 <li><span class="math inline">\(-1\)</span></li>
@@ -732,7 +814,7 @@ x
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="exr-miller-deriv-log-simplify" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 3 (Derivative after logarithmic simplification)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[10]</a></span>, Question 1.1.4.</p>
+<p><span class="theorem-title"><strong>Exercise 3 (Derivative after logarithmic simplification)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[11]</a></span>, Question 1.1.4.</p>
 <p>Find the derivative of</p>
 <p><span class="math display">\[f(x) = \log(4x) - \log(2x)\]</span></p>
 <p>for <span class="math inline">\(x &gt; 0\)</span>.</p>
@@ -771,7 +853,7 @@ f(x)
 <p><span class="math display">\[\frac{\partial}{\partial x}\cos x = -\sin x\]</span></p>
 </div>
 </section><section class="slide level2"><div id="thm-product-rule" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 8 (Product rule)</strong></span> If <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are <a href="#/def-differentiable">differentiable functions</a> of <span class="math inline">\(x\)</span> <span class="citation" data-cites="wikipedia_product_rule"><a href="#/references" role="doc-biblioref" onclick="">[11]</a></span>, then</p>
+<p><span class="theorem-title"><strong>Theorem 8 (Product rule)</strong></span> If <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are <a href="#/def-differentiable">differentiable functions</a> of <span class="math inline">\(x\)</span> <span class="citation" data-cites="wikipedia_product_rule"><a href="#/references" role="doc-biblioref" onclick="">[12]</a></span>, then</p>
 <p><span class="math display">\[(ab)' = ab' + ba'\]</span></p>
 </div>
 </section><section class="slide level2"><div class="callout callout-tip callout-titled callout-style-default">
@@ -791,7 +873,7 @@ f(x)
 </div>
 </div>
 </section><section class="slide level2"><div id="exr-miller-deriv-product-poly-cos" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 4 (Derivative of a product)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[10]</a></span>, Question 1.1.2.</p>
+<p><span class="theorem-title"><strong>Exercise 4 (Derivative of a product)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[11]</a></span>, Question 1.1.2.</p>
 <p>Find the derivative of</p>
 <p><span class="math display">\[f(x) = (x^4 + 3x^2 + 8)\cos x\]</span></p>
 </div>
@@ -808,7 +890,7 @@ f'(x) &amp;= u'(x)v(x) + u(x)v'(x)
 \end{aligned}\]</span></p>
 </div>
 </section><section class="slide level2"><div id="exr-miller-deriv-second-product" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 5 (Second derivative of a product)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[10]</a></span>, Question 1.1.15.</p>
+<p><span class="theorem-title"><strong>Exercise 5 (Second derivative of a product)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[11]</a></span>, Question 1.1.15.</p>
 <p>Find the second derivative of</p>
 <p><span class="math display">\[f(x) = (x^4 + 3x^2 + 8)\cos x\]</span></p>
 </div>
@@ -829,7 +911,7 @@ f''(x) &amp;= \mathopen{}\left[(12x^2 + 6) - (x^4 + 3x^2 + 8)\right]\mathclose{}
 \end{aligned}\]</span></p>
 </div>
 </section><section class="slide level2"><div id="thm-quotient-rule" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 9 (Quotient rule)</strong></span> If <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are <a href="#/def-differentiable">differentiable functions</a> of <span class="math inline">\(x\)</span> <span class="citation" data-cites="wikipedia_quotient_rule"><a href="#/references" role="doc-biblioref" onclick="">[12]</a></span> and <span class="math inline">\(b \neq 0\)</span>, then</p>
+<p><span class="theorem-title"><strong>Theorem 9 (Quotient rule)</strong></span> If <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are <a href="#/def-differentiable">differentiable functions</a> of <span class="math inline">\(x\)</span> <span class="citation" data-cites="wikipedia_quotient_rule"><a href="#/references" role="doc-biblioref" onclick="">[13]</a></span> and <span class="math inline">\(b \neq 0\)</span>, then</p>
 <p><span class="math display">\[(a/b)' = a'/b - (a/b^2)b'\]</span></p>
 </div>
 </section><section class="slide level2"><div class="callout callout-tip callout-titled callout-style-default">
@@ -849,7 +931,7 @@ f''(x) &amp;= \mathopen{}\left[(12x^2 + 6) - (x^4 + 3x^2 + 8)\right]\mathclose{}
 </div>
 </div>
 </section><section class="slide level2"><div id="exr-miller-deriv-quotient-or-factor" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 6 (Derivative of a rational function)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[10]</a></span>, Question 1.1.12.</p>
+<p><span class="theorem-title"><strong>Exercise 6 (Derivative of a rational function)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[11]</a></span>, Question 1.1.12.</p>
 <p>Find the derivative of</p>
 <p><span class="math display">\[f(x) = \frac{x^2 - 1}{x - 1}\]</span></p>
 <p>for <span class="math inline">\(x \ne 1\)</span>.</p>
@@ -877,7 +959,7 @@ f'(x)
 <p>Both methods yield <span class="math inline">\(1\)</span>, but factoring first eliminates tedious algebraic simplification.</p>
 </div>
 </section><section class="slide level2"><div id="thm-chain-rule" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 10 (Chain rule)</strong></span> If <span class="math inline">\(a\)</span> is a <a href="#/def-differentiable">differentiable function</a> of <span class="math inline">\(b\)</span> <span class="citation" data-cites="wikipedia_chain_rule"><a href="#/references" role="doc-biblioref" onclick="">[13]</a></span>, and <span class="math inline">\(b\)</span> is a differentiable function of <span class="math inline">\(c\)</span>, then <span class="math inline">\(a\)</span> is a differentiable function of <span class="math inline">\(c\)</span>, and</p>
+<p><span class="theorem-title"><strong>Theorem 10 (Chain rule)</strong></span> If <span class="math inline">\(a\)</span> is a <a href="#/def-differentiable">differentiable function</a> of <span class="math inline">\(b\)</span> <span class="citation" data-cites="wikipedia_chain_rule"><a href="#/references" role="doc-biblioref" onclick="">[14]</a></span>, and <span class="math inline">\(b\)</span> is a differentiable function of <span class="math inline">\(c\)</span>, then <span class="math inline">\(a\)</span> is a differentiable function of <span class="math inline">\(c\)</span>, and</p>
 <p><span class="math display">\[\begin{aligned}
 \frac{d a}{d c} &amp;=
 \frac{d a}{d b} \frac{d b}{d c}
@@ -889,7 +971,7 @@ f'(x)
 <p><span class="math display">\[(f(g(x)))' = g'(x) f'(g(x))\]</span></p>
 </div>
 </section><section class="slide level2"><div id="exr-miller-deriv-gaussian-kernel" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 7 (Derivative of the standard Gaussian kernel)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[10]</a></span>, Question 1.1.5.</p>
+<p><span class="theorem-title"><strong>Exercise 7 (Derivative of the standard Gaussian kernel)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[11]</a></span>, Question 1.1.5.</p>
 <p>Find the derivative of</p>
 <p><span class="math display">\[f(x) = {\operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}}\]</span></p>
 </div>
@@ -911,7 +993,7 @@ f'(x)
 <p><span class="proof-title"><em>Proof</em>. </span>This is the solution to <a href="#/exr-miller-deriv-gaussian-kernel" class="quarto-xref">Exercise&nbsp;7</a>, worked in <a href="#/sol-miller-deriv-gaussian-kernel" class="quarto-xref">Solution&nbsp;7</a>.</p>
 </div>
 </section><section class="slide level2"><div id="exr-miller-deriv-second-gaussian-kernel" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 8 (Second derivative of the Gaussian kernel)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[10]</a></span>, Question 1.1.6.</p>
+<p><span class="theorem-title"><strong>Exercise 8 (Second derivative of the Gaussian kernel)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[11]</a></span>, Question 1.1.6.</p>
 <p>Find the second derivative of</p>
 <p><span class="math display">\[f(x) = {\operatorname{exp}\mathopen{}\left\{-\frac{x^2}{2}\right\}\mathclose{}}\]</span></p>
 </div>
@@ -939,7 +1021,7 @@ f''(x) &amp;= u'(x)v(x) + u(x)v'(x)
 <p><span class="proof-title"><em>Proof</em>. </span>This is the solution to <a href="#/exr-miller-deriv-second-gaussian-kernel" class="quarto-xref">Exercise&nbsp;8</a>, worked in <a href="#/sol-miller-deriv-second-gaussian-kernel" class="quarto-xref">Solution&nbsp;8</a>.</p>
 </div>
 </section><section class="slide level2"><div id="exr-miller-deriv-product-chain-composite" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 9 (Combining product and chain rules)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[10]</a></span>, Question 1.1.7.</p>
+<p><span class="theorem-title"><strong>Exercise 9 (Combining product and chain rules)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[11]</a></span>, Question 1.1.7.</p>
 <p>Find the derivative of</p>
 <p><span class="math display">\[f(x) = {\operatorname{exp}\mathopen{}\left\{x^8\right\}\mathclose{}}\cos(3x^4)\]</span></p>
 </div>
@@ -960,7 +1042,7 @@ f'(x) &amp;= 8x^7 {\operatorname{exp}\mathopen{}\left\{x^8\right\}\mathclose{}}\
 \end{aligned}\]</span></p>
 </div>
 </section><section class="slide level2"><div id="exr-miller-deriv-generalized-power-rule" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 10 (Generalized power rule)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[10]</a></span>, Question 1.1.13.</p>
+<p><span class="theorem-title"><strong>Exercise 10 (Generalized power rule)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[11]</a></span>, Question 1.1.13.</p>
 <p>Find the derivative of</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -1024,7 +1106,7 @@ f'(x)
 </div>
 </div>
 </section><section class="slide level2"><div id="exr-miller-deriv-chain-log" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 11 (Chain rule with logarithm)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[10]</a></span>, Question 1.1.3.</p>
+<p><span class="theorem-title"><strong>Exercise 11 (Chain rule with logarithm)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[11]</a></span>, Question 1.1.3.</p>
 <p>Find the derivative of</p>
 <p><span class="math display">\[f(x) = \log(1 - x^2)\]</span></p>
 <p>for <span class="math inline">\(x \in (-1, 1)\)</span>.</p>
@@ -1041,7 +1123,7 @@ f'(x)
 <p><em>Remark:</em> A common pitfall in chain rule problems is evaluating the outer derivative at <span class="math inline">\(x\)</span> rather than at the inner value <span class="math inline">\(g(x)\)</span>. The denominator is <span class="math inline">\(g(x) = 1 - x^2\)</span>, not <span class="math inline">\(x\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exr-miller-deriv-second-log-constant" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 12 (Second derivative with an added constant)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[10]</a></span>, Question 1.1.9.</p>
+<p><span class="theorem-title"><strong>Exercise 12 (Second derivative with an added constant)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[11]</a></span>, Question 1.1.9.</p>
 <p>Find the second derivative of</p>
 <p><span class="math display">\[f(x) = \log x + \sqrt{162}\]</span></p>
 <p>for <span class="math inline">\(x &gt; 0\)</span>.</p>
@@ -1067,10 +1149,10 @@ f''(x)
 </section><section id="sec-function-profile" class="slide level2" data-number="3"><h2>
 <span class="header-section-number">3</span> Studying a new function</h2>
 </section><section class="slide level2"><div id="def-logarithmic-derivative" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 14 (Logarithmic derivative)</strong></span> The <strong>logarithmic derivative</strong> <span class="math inline">\(\frac{f'(x)}{f(x)}\)</span> of a function <span class="math inline">\(f\)</span> of a real variable equals <span class="math inline">\(\frac{d }{d x}{\operatorname{log}\mathopen{}\left\{f(x)\right\}\mathclose{}}\)</span> by <a href="#/cor-deriv-log-chain" class="quarto-xref">Corollary&nbsp;1</a> and measures the rate of change of <span class="math inline">\(f\)</span> relative to its size; it needs <span class="math inline">\(f(x) &gt; 0\)</span>, and for <span class="math inline">\(f(x) &lt; 0\)</span> the same expression is the derivative of <span class="math inline">\({\operatorname{log}\mathopen{}\left\{\mathopen{}\left|f(x)\right|\mathclose{}\right\}\mathclose{}}\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 15 (Logarithmic derivative)</strong></span> The <strong>logarithmic derivative</strong> <span class="math inline">\(\frac{f'(x)}{f(x)}\)</span> of a function <span class="math inline">\(f\)</span> of a real variable equals <span class="math inline">\(\frac{d }{d x}{\operatorname{log}\mathopen{}\left\{f(x)\right\}\mathclose{}}\)</span> by <a href="#/cor-deriv-log-chain" class="quarto-xref">Corollary&nbsp;1</a> and measures the rate of change of <span class="math inline">\(f\)</span> relative to its size; it needs <span class="math inline">\(f(x) &gt; 0\)</span>, and for <span class="math inline">\(f(x) &lt; 0\)</span> the same expression is the derivative of <span class="math inline">\({\operatorname{log}\mathopen{}\left\{\mathopen{}\left|f(x)\right|\mathclose{}\right\}\mathclose{}}\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="def-function-profile" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 15 (Profile of a function)</strong></span> The <strong>profile</strong> of a function <span class="math inline">\(f\)</span> of a real variable is the list of related functions and values to work out when meeting <span class="math inline">\(f\)</span> for the first time:</p>
+<p><span class="theorem-title"><strong>Definition 16 (Profile of a function)</strong></span> The <strong>profile</strong> of a function <span class="math inline">\(f\)</span> of a real variable is the list of related functions and values to work out when meeting <span class="math inline">\(f\)</span> for the first time:</p>
 <ul>
 <li>the logarithm <span class="math inline">\({\operatorname{log}\mathopen{}\left\{f(x)\right\}\mathclose{}}\)</span>, where <span class="math inline">\(f(x) &gt; 0\)</span>;</li>
 <li>the derivatives <span class="math inline">\(f'(x)\)</span>, <span class="math inline">\(f''(x)\)</span>, and so on, as far as they are informative;</li>
@@ -1084,11 +1166,11 @@ f''(x)
 </ul>
 </div>
 </section><section class="slide level2"><div id="exm-function-profile-logistic" class="theorem example">
-<p><span class="theorem-title"><strong>Example 8 (The profile of the logistic function)</strong></span> The <strong>logistic function</strong> (also called <span class="math inline">\(\operatorname{expit}\)</span> or the sigmoid) is</p>
+<p><span class="theorem-title"><strong>Example 9 (The profile of the logistic function)</strong></span> The <strong>logistic function</strong> (also called <span class="math inline">\(\operatorname{expit}\)</span> or the sigmoid) is</p>
 <p><span class="math display">\[
 f(x) = \frac{1}{1 + e^{-x}}.
 \]</span></p>
-<p>The profile in <a href="#/def-function-profile" class="quarto-xref">Definition&nbsp;15</a> of <span class="math inline">\(f\)</span> is as follows. Write <span class="math inline">\(E = e^{-x}\)</span>, so that <span class="math inline">\(f = \frac{1}{1 + E}\)</span> and <span class="math inline">\(1 - f = \frac{E}{1 + E}\)</span>.</p>
+<p>The profile in <a href="#/def-function-profile" class="quarto-xref">Definition&nbsp;16</a> of <span class="math inline">\(f\)</span> is as follows. Write <span class="math inline">\(E = e^{-x}\)</span>, so that <span class="math inline">\(f = \frac{1}{1 + E}\)</span> and <span class="math inline">\(1 - f = \frac{E}{1 + E}\)</span>.</p>
 <ul>
 <li><p><strong>Logarithm:</strong> <span class="math inline">\({\operatorname{log}\mathopen{}\left\{f(x)\right\}\mathclose{}} = -{\operatorname{log}\mathopen{}\left\{1 + e^{-x}\right\}\mathclose{}}\)</span>, defined for every real <span class="math inline">\(x\)</span> because <span class="math inline">\(f(x) &gt; 0\)</span>.</p></li>
 <li>
@@ -1125,55 +1207,55 @@ x &amp;= {\operatorname{log}\mathopen{}\left\{\frac{y}{1 - y}\right\}\mathclose{
 </ul>
 <p>The code checks these results numerically, using the base R functions <code><a href="https://rdrr.io/r/stats/Logistic.html">plogis()</a></code> for <span class="math inline">\(f\)</span> and <code><a href="https://rdrr.io/r/stats/Logistic.html">qlogis()</a></code> for <span class="math inline">\(f^{-1}\)</span>, and <code><a href="https://rdrr.io/r/stats/deriv.html">D()</a></code> to differentiate symbolically.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-label="1"></a>f <span class="ot">&lt;-</span> plogis</span>
-<span id="cb1-2"><a aria-label="2"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="sc">-</span><span class="fl">0.5</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">3</span>)</span>
-<span id="cb1-3"><a aria-label="3"></a></span>
-<span id="cb1-4"><a aria-label="4"></a>f_expr <span class="ot">&lt;-</span> <span class="fu">quote</span>(<span class="dv">1</span> <span class="sc">/</span> (<span class="dv">1</span> <span class="sc">+</span> <span class="fu">exp</span>(<span class="sc">-</span>x)))</span>
-<span id="cb1-5"><a aria-label="5"></a>f_prime <span class="ot">&lt;-</span> <span class="fu">eval</span>(<span class="fu">D</span>(f_expr, <span class="st">"x"</span>), <span class="fu">list</span>(<span class="at">x =</span> x))</span>
-<span id="cb1-6"><a aria-label="6"></a>f_second <span class="ot">&lt;-</span> <span class="fu">eval</span>(<span class="fu">D</span>(<span class="fu">D</span>(f_expr, <span class="st">"x"</span>), <span class="st">"x"</span>), <span class="fu">list</span>(<span class="at">x =</span> x))</span>
-<span id="cb1-7"><a aria-label="7"></a></span>
-<span id="cb1-8"><a aria-label="8"></a>checks <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="cb1-9"><a aria-label="9"></a>  <span class="at">derivative =</span> <span class="fu">max</span>(<span class="fu">abs</span>(f_prime <span class="sc">-</span> <span class="fu">f</span>(x) <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> <span class="fu">f</span>(x)))),</span>
-<span id="cb1-10"><a aria-label="10"></a>  <span class="at">second_derivative =</span> <span class="fu">max</span>(<span class="fu">abs</span>(f_second <span class="sc">-</span> <span class="fu">f</span>(x) <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> <span class="fu">f</span>(x)) <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> <span class="dv">2</span> <span class="sc">*</span> <span class="fu">f</span>(x)))),</span>
-<span id="cb1-11"><a aria-label="11"></a>  <span class="at">log_derivative =</span> <span class="fu">max</span>(<span class="fu">abs</span>(f_prime <span class="sc">/</span> <span class="fu">f</span>(x) <span class="sc">-</span> (<span class="dv">1</span> <span class="sc">-</span> <span class="fu">f</span>(x)))),</span>
-<span id="cb1-12"><a aria-label="12"></a>  <span class="at">inverse =</span> <span class="fu">max</span>(<span class="fu">abs</span>(<span class="fu">qlogis</span>(<span class="fu">f</span>(x)) <span class="sc">-</span> x)),</span>
-<span id="cb1-13"><a aria-label="13"></a>  <span class="at">complement =</span> <span class="fu">max</span>(<span class="fu">abs</span>(<span class="dv">1</span> <span class="sc">-</span> <span class="fu">f</span>(x) <span class="sc">-</span> <span class="fu">f</span>(<span class="sc">-</span>x))),</span>
-<span id="cb1-14"><a aria-label="14"></a>  <span class="at">reciprocal =</span> <span class="fu">max</span>(<span class="fu">abs</span>(<span class="dv">1</span> <span class="sc">/</span> <span class="fu">f</span>(x) <span class="sc">-</span> (<span class="dv">1</span> <span class="sc">+</span> <span class="fu">exp</span>(<span class="sc">-</span>x)))),</span>
-<span id="cb1-15"><a aria-label="15"></a>  <span class="at">antiderivative =</span> <span class="fu">abs</span>(</span>
-<span id="cb1-16"><a aria-label="16"></a>    <span class="fu">integrate</span>(f, <span class="dv">0</span>, <span class="dv">1</span>)<span class="sc">$</span>value <span class="sc">-</span> (<span class="fu">log</span>(<span class="dv">1</span> <span class="sc">+</span> <span class="fu">exp</span>(<span class="dv">1</span>)) <span class="sc">-</span> <span class="fu">log</span>(<span class="dv">2</span>))</span>
-<span id="cb1-17"><a aria-label="17"></a>  )</span>
-<span id="cb1-18"><a aria-label="18"></a>)</span>
-<span id="cb1-19"><a aria-label="19"></a><span class="fu">signif</span>(checks, <span class="dv">3</span>)</span>
-<span id="cb1-20"><a aria-label="20"></a><span class="co">#&gt;        derivative second_derivative    log_derivative           inverse </span></span>
-<span id="cb1-21"><a aria-label="21"></a><span class="co">#&gt;          1.46e-16          1.18e-16          1.53e-16          3.11e-15 </span></span>
-<span id="cb1-22"><a aria-label="22"></a><span class="co">#&gt;        complement        reciprocal    antiderivative </span></span>
-<span id="cb1-23"><a aria-label="23"></a><span class="co">#&gt;          1.46e-16          0.00e+00          0.00e+00</span></span>
-<span id="cb1-24"><a aria-label="24"></a><span class="fu">stopifnot</span>(<span class="fu">all</span>(checks <span class="sc">&lt;</span> <span class="fl">1e-14</span>))</span>
-<span id="cb1-25"><a aria-label="25"></a></span>
-<span id="cb1-26"><a aria-label="26"></a>key_values <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">f</span>(<span class="dv">0</span>), <span class="fu">f</span>(<span class="dv">1</span>), <span class="fu">f</span>(<span class="dv">10</span>), <span class="fu">f</span>(<span class="sc">-</span><span class="dv">10</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-label="1"></a>f <span class="ot">&lt;-</span> plogis</span>
+<span id="cb3-2"><a aria-label="2"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="sc">-</span><span class="fl">0.5</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">3</span>)</span>
+<span id="cb3-3"><a aria-label="3"></a></span>
+<span id="cb3-4"><a aria-label="4"></a>f_expr <span class="ot">&lt;-</span> <span class="fu">quote</span>(<span class="dv">1</span> <span class="sc">/</span> (<span class="dv">1</span> <span class="sc">+</span> <span class="fu">exp</span>(<span class="sc">-</span>x)))</span>
+<span id="cb3-5"><a aria-label="5"></a>f_prime <span class="ot">&lt;-</span> <span class="fu">eval</span>(<span class="fu">D</span>(f_expr, <span class="st">"x"</span>), <span class="fu">list</span>(<span class="at">x =</span> x))</span>
+<span id="cb3-6"><a aria-label="6"></a>f_second <span class="ot">&lt;-</span> <span class="fu">eval</span>(<span class="fu">D</span>(<span class="fu">D</span>(f_expr, <span class="st">"x"</span>), <span class="st">"x"</span>), <span class="fu">list</span>(<span class="at">x =</span> x))</span>
+<span id="cb3-7"><a aria-label="7"></a></span>
+<span id="cb3-8"><a aria-label="8"></a>checks <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb3-9"><a aria-label="9"></a>  <span class="at">derivative =</span> <span class="fu">max</span>(<span class="fu">abs</span>(f_prime <span class="sc">-</span> <span class="fu">f</span>(x) <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> <span class="fu">f</span>(x)))),</span>
+<span id="cb3-10"><a aria-label="10"></a>  <span class="at">second_derivative =</span> <span class="fu">max</span>(<span class="fu">abs</span>(f_second <span class="sc">-</span> <span class="fu">f</span>(x) <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> <span class="fu">f</span>(x)) <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> <span class="dv">2</span> <span class="sc">*</span> <span class="fu">f</span>(x)))),</span>
+<span id="cb3-11"><a aria-label="11"></a>  <span class="at">log_derivative =</span> <span class="fu">max</span>(<span class="fu">abs</span>(f_prime <span class="sc">/</span> <span class="fu">f</span>(x) <span class="sc">-</span> (<span class="dv">1</span> <span class="sc">-</span> <span class="fu">f</span>(x)))),</span>
+<span id="cb3-12"><a aria-label="12"></a>  <span class="at">inverse =</span> <span class="fu">max</span>(<span class="fu">abs</span>(<span class="fu">qlogis</span>(<span class="fu">f</span>(x)) <span class="sc">-</span> x)),</span>
+<span id="cb3-13"><a aria-label="13"></a>  <span class="at">complement =</span> <span class="fu">max</span>(<span class="fu">abs</span>(<span class="dv">1</span> <span class="sc">-</span> <span class="fu">f</span>(x) <span class="sc">-</span> <span class="fu">f</span>(<span class="sc">-</span>x))),</span>
+<span id="cb3-14"><a aria-label="14"></a>  <span class="at">reciprocal =</span> <span class="fu">max</span>(<span class="fu">abs</span>(<span class="dv">1</span> <span class="sc">/</span> <span class="fu">f</span>(x) <span class="sc">-</span> (<span class="dv">1</span> <span class="sc">+</span> <span class="fu">exp</span>(<span class="sc">-</span>x)))),</span>
+<span id="cb3-15"><a aria-label="15"></a>  <span class="at">antiderivative =</span> <span class="fu">abs</span>(</span>
+<span id="cb3-16"><a aria-label="16"></a>    <span class="fu">integrate</span>(f, <span class="dv">0</span>, <span class="dv">1</span>)<span class="sc">$</span>value <span class="sc">-</span> (<span class="fu">log</span>(<span class="dv">1</span> <span class="sc">+</span> <span class="fu">exp</span>(<span class="dv">1</span>)) <span class="sc">-</span> <span class="fu">log</span>(<span class="dv">2</span>))</span>
+<span id="cb3-17"><a aria-label="17"></a>  )</span>
+<span id="cb3-18"><a aria-label="18"></a>)</span>
+<span id="cb3-19"><a aria-label="19"></a><span class="fu">signif</span>(checks, <span class="dv">3</span>)</span>
+<span id="cb3-20"><a aria-label="20"></a><span class="co">#&gt;        derivative second_derivative    log_derivative           inverse </span></span>
+<span id="cb3-21"><a aria-label="21"></a><span class="co">#&gt;          1.46e-16          1.18e-16          1.53e-16          3.11e-15 </span></span>
+<span id="cb3-22"><a aria-label="22"></a><span class="co">#&gt;        complement        reciprocal    antiderivative </span></span>
+<span id="cb3-23"><a aria-label="23"></a><span class="co">#&gt;          1.46e-16          0.00e+00          0.00e+00</span></span>
+<span id="cb3-24"><a aria-label="24"></a><span class="fu">stopifnot</span>(<span class="fu">all</span>(checks <span class="sc">&lt;</span> <span class="fl">1e-14</span>))</span>
+<span id="cb3-25"><a aria-label="25"></a></span>
+<span id="cb3-26"><a aria-label="26"></a>key_values <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">f</span>(<span class="dv">0</span>), <span class="fu">f</span>(<span class="dv">1</span>), <span class="fu">f</span>(<span class="dv">10</span>), <span class="fu">f</span>(<span class="sc">-</span><span class="dv">10</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>Each entry of <code>checks</code> is the largest discrepancy between a formula above and a numerical computation; every one is below <span class="math inline">\(10^{-14}\)</span> (the chunk stops with an error otherwise), which is rounding error. The key values are <span class="math inline">\(f(0) =\)</span> 0.5 and <span class="math inline">\(f(1) \approx\)</span> 0.7311. At <span class="math inline">\(x = 10\)</span> and <span class="math inline">\(x = -10\)</span> the function is already close to its limits, <span class="math inline">\(f(10) \approx\)</span> 0.99995 and <span class="math inline">\(f(-10) \approx\)</span> 0.0000454. <a href="#/fig-function-profile-logistic" class="quarto-xref">Figure&nbsp;1</a> graphs <span class="math inline">\(f\)</span>, <span class="math inline">\(f'\)</span> and <span class="math inline">\({\operatorname{log}\mathopen{}\left\{f\right\}\mathclose{}}\)</span>.</p>
+<p>Each entry of <code>checks</code> is the largest discrepancy between a formula above and a numerical computation; every one is below <span class="math inline">\(10^{-14}\)</span> (the chunk stops with an error otherwise), which is rounding error. The key values are <span class="math inline">\(f(0) =\)</span> 0.5 and <span class="math inline">\(f(1) \approx\)</span> 0.7311. At <span class="math inline">\(x = 10\)</span> and <span class="math inline">\(x = -10\)</span> the function is already close to its limits, <span class="math inline">\(f(10) \approx\)</span> 0.99995 and <span class="math inline">\(f(-10) \approx\)</span> 0.0000454. <a href="#/fig-function-profile-logistic" class="quarto-xref">Figure&nbsp;2</a> graphs <span class="math inline">\(f\)</span>, <span class="math inline">\(f'\)</span> and <span class="math inline">\({\operatorname{log}\mathopen{}\left\{f\right\}\mathclose{}}\)</span>.</p>
 <div class="cell">
-<details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-label="1"></a>grid <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">6</span>, <span class="dv">6</span>, <span class="at">length.out =</span> <span class="dv">241</span>)</span>
-<span id="cb2-2"><a aria-label="2"></a>panels <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb2-3"><a aria-label="3"></a>  <span class="at">x =</span> <span class="fu">rep</span>(grid, <span class="dv">3</span>),</span>
-<span id="cb2-4"><a aria-label="4"></a>  <span class="at">panel =</span> <span class="fu">factor</span>(</span>
-<span id="cb2-5"><a aria-label="5"></a>    <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"f(x)"</span>, <span class="st">"f'(x)"</span>, <span class="st">"log f(x)"</span>), <span class="at">each =</span> <span class="fu">length</span>(grid)),</span>
-<span id="cb2-6"><a aria-label="6"></a>    <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"f(x)"</span>, <span class="st">"f'(x)"</span>, <span class="st">"log f(x)"</span>)</span>
-<span id="cb2-7"><a aria-label="7"></a>  ),</span>
-<span id="cb2-8"><a aria-label="8"></a>  <span class="at">value =</span> <span class="fu">c</span>(<span class="fu">f</span>(grid), <span class="fu">f</span>(grid) <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> <span class="fu">f</span>(grid)), <span class="fu">log</span>(<span class="fu">f</span>(grid)))</span>
-<span id="cb2-9"><a aria-label="9"></a>)</span>
-<span id="cb2-10"><a aria-label="10"></a>ggplot2<span class="sc">::</span><span class="fu">ggplot</span>(panels) <span class="sc">+</span></span>
-<span id="cb2-11"><a aria-label="11"></a>  ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> value) <span class="sc">+</span></span>
-<span id="cb2-12"><a aria-label="12"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb2-13"><a aria-label="13"></a>  ggplot2<span class="sc">::</span><span class="fu">facet_wrap</span>(<span class="sc">~</span>panel, <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
-<span id="cb2-14"><a aria-label="14"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Input, x"</span>, <span class="at">y =</span> <span class="cn">NULL</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-label="1"></a>grid <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">6</span>, <span class="dv">6</span>, <span class="at">length.out =</span> <span class="dv">241</span>)</span>
+<span id="cb4-2"><a aria-label="2"></a>panels <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb4-3"><a aria-label="3"></a>  <span class="at">x =</span> <span class="fu">rep</span>(grid, <span class="dv">3</span>),</span>
+<span id="cb4-4"><a aria-label="4"></a>  <span class="at">panel =</span> <span class="fu">factor</span>(</span>
+<span id="cb4-5"><a aria-label="5"></a>    <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"f(x)"</span>, <span class="st">"f'(x)"</span>, <span class="st">"log f(x)"</span>), <span class="at">each =</span> <span class="fu">length</span>(grid)),</span>
+<span id="cb4-6"><a aria-label="6"></a>    <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"f(x)"</span>, <span class="st">"f'(x)"</span>, <span class="st">"log f(x)"</span>)</span>
+<span id="cb4-7"><a aria-label="7"></a>  ),</span>
+<span id="cb4-8"><a aria-label="8"></a>  <span class="at">value =</span> <span class="fu">c</span>(<span class="fu">f</span>(grid), <span class="fu">f</span>(grid) <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> <span class="fu">f</span>(grid)), <span class="fu">log</span>(<span class="fu">f</span>(grid)))</span>
+<span id="cb4-9"><a aria-label="9"></a>)</span>
+<span id="cb4-10"><a aria-label="10"></a>ggplot2<span class="sc">::</span><span class="fu">ggplot</span>(panels) <span class="sc">+</span></span>
+<span id="cb4-11"><a aria-label="11"></a>  ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> value) <span class="sc">+</span></span>
+<span id="cb4-12"><a aria-label="12"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb4-13"><a aria-label="13"></a>  ggplot2<span class="sc">::</span><span class="fu">facet_wrap</span>(<span class="sc">~</span>panel, <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
+<span id="cb4-14"><a aria-label="14"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Input, x"</span>, <span class="at">y =</span> <span class="cn">NULL</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output-display">
 <div id="fig-function-profile-logistic" class="quarto-float quarto-figure quarto-figure-center" alt="Three panels over x from -6 to 6. The first, the logistic function, rises in an S shape from near 0 to near 1 and passes through 0.5 at x = 0. The second, its derivative, is a bell-shaped bump with maximum 0.25 at x = 0 and tails near 0. The third, the logarithm of the logistic function, increases from a steep line of slope 1 on the left and flattens toward 0 on the right.">
 <figure class="quarto-float quarto-float-fig"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-function-profile-logistic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: The logistic function, its derivative and its logarithm
+Figure&nbsp;2: The logistic function, its derivative and its logarithm
 </figcaption><div aria-describedby="fig-function-profile-logistic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="calculus-derivatives_files/figure-html/fig-function-profile-logistic-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: The logistic function, its derivative and its logarithm"><img data-src="calculus-derivatives_files/figure-html/fig-function-profile-logistic-1.png" alt="Three panels over x from -6 to 6. The first, the logistic function, rises in an S shape from near 0 to near 1 and passes through 0.5 at x = 0. The second, its derivative, is a bell-shaped bump with maximum 0.25 at x = 0 and tails near 0. The third, the logarithm of the logistic function, increases from a steep line of slope 1 on the left and flattens toward 0 on the right." width="672"></a>
+<a href="calculus-derivatives_files/figure-html/fig-function-profile-logistic-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;2: The logistic function, its derivative and its logarithm"><img data-src="calculus-derivatives_files/figure-html/fig-function-profile-logistic-1.png" alt="Three panels over x from -6 to 6. The first, the logistic function, rises in an S shape from near 0 to near 1 and passes through 0.5 at x = 0. The second, its derivative, is a bell-shaped bump with maximum 0.25 at x = 0 and tails near 0. The third, the logarithm of the logistic function, increases from a steep line of slope 1 on the left and flattens toward 0 on the right." width="672"></a>
 </div>
 </figure>
 </div>
@@ -1183,12 +1265,12 @@ Figure&nbsp;1: The logistic function, its derivative and its logarithm
 </section><section id="sec-tangent-lines" class="slide level2" data-number="4"><h2>
 <span class="header-section-number">4</span> Tangent lines</h2>
 </section><section class="slide level2"><div id="def-tangent-line" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 16 (Tangent line)</strong></span> Let <span class="math inline">\(f\)</span> be differentiable at <span class="math inline">\(c\)</span> (<a href="#/def-differentiable" class="quarto-xref">Definition&nbsp;6</a>). The <strong>tangent line</strong> to the <a href="https://morrison-lab.github.io/mcs/functions.html#def-graph">graph</a> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span> is the graph of the <a href="./algebra-exponentials.html#def-affine-function">affine function</a></p>
+<p><span class="theorem-title"><strong>Definition 17 (Tangent line)</strong></span> Let <span class="math inline">\(f\)</span> be differentiable at <span class="math inline">\(c\)</span> (<a href="#/def-differentiable" class="quarto-xref">Definition&nbsp;6</a>). The <strong>tangent line</strong> to the <a href="https://morrison-lab.github.io/mcs/functions.html#def-graph">graph</a> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span> is the graph of the <a href="./algebra-polynomials.html#def-affine-function">affine function</a></p>
 <p><span class="math display">\[x \mapsto f(c) + f'(c)\,(x - c),\]</span></p>
-<p>the line through the point <span class="math inline">\((c, f(c))\)</span> with <a href="./algebra-exponentials.html#def-slope">slope</a> <span class="math inline">\(f'(c)\)</span>. The slope <span class="math inline">\(f'(c)\)</span> is also called the <strong>tangent slope</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span>.</p>
+<p>the line through the point <span class="math inline">\((c, f(c))\)</span> with <a href="./algebra-polynomials.html#def-slope">slope</a> <span class="math inline">\(f'(c)\)</span>. The slope <span class="math inline">\(f'(c)\)</span> is also called the <strong>tangent slope</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-tangent-line" class="theorem example">
-<p><span class="theorem-title"><strong>Example 9 (The tangent line to <span class="math inline">\(x^2\)</span> at <span class="math inline">\(1\)</span>)</strong></span> For <span class="math inline">\(f(x) = x^2\)</span> at <span class="math inline">\(c = 1\)</span>, <span class="math inline">\(f(1) = 1\)</span> and <span class="math inline">\(f'(1) = 2\)</span> (<a href="#/exm-derivative" class="quarto-xref">Example&nbsp;5</a>), so the tangent line is the graph of</p>
+<p><span class="theorem-title"><strong>Example 10 (The tangent line to <span class="math inline">\(x^2\)</span> at <span class="math inline">\(1\)</span>)</strong></span> For <span class="math inline">\(f(x) = x^2\)</span> at <span class="math inline">\(c = 1\)</span>, <span class="math inline">\(f(1) = 1\)</span> and <span class="math inline">\(f'(1) = 2\)</span> (<a href="#/exm-derivative" class="quarto-xref">Example&nbsp;5</a>), so the tangent line is the graph of</p>
 <p><span class="math display">\[
 \begin{aligned}
 x
@@ -1206,50 +1288,50 @@ x
 </section><section class="slide level2"><p>For a <a href="#/def-differentiable">differentiable function</a> <span class="math inline">\(f\)</span> and a small step <span class="math inline">\(\varepsilon\)</span>,</p>
 <p><span id="eq-linear-approx"><span class="math display">\[f(w + \varepsilon) \approx f(w) + \varepsilon\,\frac{d }{d w}f(w) \tag{1}\]</span></span></p>
 </section><section class="slide level2"><div id="def-linear-approximation" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 17 (Linear approximation (first-order Taylor approximation, first-order Taylor expansion))</strong></span> For a <a href="https://morrison-lab.github.io/mcs/functions.html#def-function">function</a> <span class="math inline">\(f\)</span> that is <a href="#/def-differentiable">differentiable at</a> <span class="math inline">\(w\)</span>, the <strong>linear approximation</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(w\)</span> <span class="citation" data-cites="wikipedia_linear_approximation"><a href="#/references" role="doc-biblioref" onclick="">[14]</a></span> (also called the <strong>first-order Taylor approximation</strong> or the <strong>first-order Taylor expansion</strong>) is the function of the step <span class="math inline">\(\varepsilon\)</span></p>
+<p><span class="theorem-title"><strong>Definition 18 (Linear approximation (first-order Taylor approximation, first-order Taylor expansion))</strong></span> For a <a href="https://morrison-lab.github.io/mcs/functions.html#def-function">function</a> <span class="math inline">\(f\)</span> that is <a href="#/def-differentiable">differentiable at</a> <span class="math inline">\(w\)</span>, the <strong>linear approximation</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(w\)</span> <span class="citation" data-cites="wikipedia_linear_approximation"><a href="#/references" role="doc-biblioref" onclick="">[15]</a></span> (also called the <strong>first-order Taylor approximation</strong> or the <strong>first-order Taylor expansion</strong>) is the function of the step <span class="math inline">\(\varepsilon\)</span></p>
 <p><span class="math display">\[\hat{f}_w(\varepsilon) = f(w) + \varepsilon\,\frac{d }{d w}f(w)\]</span></p>
-<p>so <a href="#/eq-linear-approx" class="quarto-xref">Equation&nbsp;1</a> says <span class="math inline">\(f(w + \varepsilon) \approx \hat{f}_w(\varepsilon)\)</span> for small <span class="math inline">\(\varepsilon\)</span>. <a href="#/fig-linear-approx" class="quarto-xref">Figure&nbsp;2</a> illustrates this approximation interactively for a <a href="./algebra-exponentials.html#def-quadratic-polynomial">quadratic function</a>.</p>
+<p>so <a href="#/eq-linear-approx" class="quarto-xref">Equation&nbsp;1</a> says <span class="math inline">\(f(w + \varepsilon) \approx \hat{f}_w(\varepsilon)\)</span> for small <span class="math inline">\(\varepsilon\)</span>. <a href="#/fig-linear-approx" class="quarto-xref">Figure&nbsp;3</a> illustrates this approximation interactively for a <a href="./algebra-polynomials.html#def-quadratic-polynomial">quadratic function</a>.</p>
 </div>
 </section><section class="slide level2"><div id="rem-linear-approx-affine" class="proof remark">
-<p><span class="proof-title"><em>Remark 2</em> (The “linear” approximation is affine). </span>The linear approximation <span class="math inline">\(\hat{f}_w\)</span> (<a href="#/def-linear-approximation" class="quarto-xref">Definition&nbsp;17</a>) is an <a href="./algebra-exponentials.html#def-affine-function">affine function</a> of the step <span class="math inline">\(\varepsilon\)</span>: its <a href="./algebra-exponentials.html#def-slope">slope</a> is <span class="math inline">\(\frac{d }{d w}f(w)\)</span> and its <a href="./algebra-exponentials.html#def-intercept">intercept</a> is <span class="math inline">\(f(w)\)</span>. It is <a href="./algebra-exponentials.html#def-linear-function">linear</a> in <span class="math inline">\(\varepsilon\)</span> only when <span class="math inline">\(f(w) = 0\)</span>. The name “linear approximation” uses “linear” in the looser sense of elementary algebra (<a href="./algebra-exponentials.html#rem-linear-function-terminology">remark</a>). <span class="citation" data-cites="boyd2018vmls">Boyd and Vandenberghe <a href="#/references" role="doc-biblioref" onclick="">[15]</a></span>, section 2.2, treats the <a href="#/def-linear-approximation">first-order Taylor approximation</a> as an affine function for <a href="https://morrison-lab.github.io/mcs/functions.html#def-function">functions</a> of several variables as well.</p>
+<p><span class="proof-title"><em>Remark 3</em> (The “linear” approximation is affine). </span>The linear approximation <span class="math inline">\(\hat{f}_w\)</span> (<a href="#/def-linear-approximation" class="quarto-xref">Definition&nbsp;18</a>) is an <a href="./algebra-polynomials.html#def-affine-function">affine function</a> of the step <span class="math inline">\(\varepsilon\)</span>: its <a href="./algebra-polynomials.html#def-slope">slope</a> is <span class="math inline">\(\frac{d }{d w}f(w)\)</span> and its <a href="./algebra-polynomials.html#def-intercept">intercept</a> is <span class="math inline">\(f(w)\)</span>. It is <a href="./algebra-polynomials.html#def-linear-function">linear</a> in <span class="math inline">\(\varepsilon\)</span> only when <span class="math inline">\(f(w) = 0\)</span>. The name “linear approximation” uses “linear” in the looser sense of elementary algebra (<a href="./algebra-polynomials.html#rem-linear-function-terminology">remark</a>). <span class="citation" data-cites="boyd2018vmls">Boyd and Vandenberghe <a href="#/references" role="doc-biblioref" onclick="">[16]</a></span>, section 2.2, treats the <a href="#/def-linear-approximation">first-order Taylor approximation</a> as an affine function for <a href="https://morrison-lab.github.io/mcs/functions.html#def-function">functions</a> of several variables as well.</p>
 </div>
-</section><section class="slide level2"><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" data-startfrom="2" data-source-offset="-72"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 1;"><span id="cb3-2"><a aria-label="2"></a>tanF <span class="op">=</span> (w) <span class="kw">=&gt;</span> w <span class="op">*</span> w <span class="op">-</span> <span class="dv">4</span> <span class="op">*</span> w <span class="op">+</span> <span class="dv">7</span></span>
-<span id="cb3-3"><a aria-label="3"></a>tanDf <span class="op">=</span> (w) <span class="kw">=&gt;</span> <span class="dv">2</span> <span class="op">*</span> w <span class="op">-</span> <span class="dv">4</span></span>
-<span id="cb3-4"><a aria-label="4"></a>tanPred <span class="op">=</span> <span class="fu">tanF</span>(tanW) <span class="op">+</span> tanEps <span class="op">*</span> <span class="fu">tanDf</span>(tanW)</span>
-<span id="cb3-5"><a aria-label="5"></a>tanExact <span class="op">=</span> <span class="fu">tanF</span>(tanW <span class="op">+</span> tanEps)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" data-startfrom="0" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line -1;"><span id="cb4-0"><a aria-label="0"></a>viewof tanW <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="op">-</span><span class="dv">1</span><span class="op">,</span> <span class="dv">4</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.05</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"w"</span>})</span>
-<span id="cb4-1"><a aria-label="1"></a>viewof tanEps <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="fl">0.01</span><span class="op">,</span> <span class="dv">2</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="fl">0.5</span><span class="op">,</span> <span class="dt">transform</span><span class="op">:</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">log</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"step </span><span class="sc">\u03b5</span><span class="st">"</span><span class="op">,</span> <span class="dt">format</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">format</span>(<span class="st">".3~f"</span>)})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" data-startfrom="-1" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line -2;"><span id="cb5--1"><a aria-label="-1"></a><span class="fu">md</span><span class="vs">`At w = </span><span class="sc">${</span>tanW<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="sc">}</span><span class="vs">, f(w) = </span><span class="sc">${</span><span class="fu">tanF</span>(tanW)<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">4</span>)<span class="sc">}</span><span class="vs"> and f</span><span class="sc">\u2032</span><span class="vs">(w) = </span><span class="sc">${</span><span class="fu">tanDf</span>(tanW)<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="sc">}</span><span class="vs">.</span></span>
-<span id="cb5-0"><a aria-label="0"></a></span>
-<span id="cb5-1"><a aria-label="1"></a><span class="vs">A step of </span><span class="sc">\u03b5</span><span class="vs"> = </span><span class="sc">${</span>tanEps<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">3</span>)<span class="sc">}</span><span class="vs">:</span></span>
-<span id="cb5-2"><a aria-label="2"></a></span>
-<span id="cb5-3"><a aria-label="3"></a><span class="vs">- predicted by the tangent line, f(w) + </span><span class="sc">\u03b5</span><span class="vs"> f</span><span class="sc">\u2032</span><span class="vs">(w) = </span><span class="sc">${</span>tanPred<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">4</span>)<span class="sc">}</span><span class="vs">;</span></span>
-<span id="cb5-4"><a aria-label="4"></a><span class="vs">- exact, f(w + </span><span class="sc">\u03b5</span><span class="vs">) = </span><span class="sc">${</span>tanExact<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">4</span>)<span class="sc">}</span><span class="vs">;</span></span>
-<span id="cb5-5"><a aria-label="5"></a><span class="vs">- error </span><span class="sc">${</span>(tanExact <span class="op">-</span> tanPred)<span class="op">.</span><span class="fu">toPrecision</span>(<span class="dv">3</span>)<span class="sc">}</span><span class="vs">, and error / </span><span class="sc">\u03b5\u00b2</span><span class="vs"> = </span><span class="sc">${</span>((tanExact <span class="op">-</span> tanPred) <span class="op">/</span> tanEps <span class="op">**</span> <span class="dv">2</span>)<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">3</span>)<span class="sc">}</span><span class="vs">.`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6" data-startfrom="-1" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line -2;"><span id="cb6--1"><a aria-label="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
-<span id="cb6-0"><a aria-label="0"></a>  <span class="dt">ariaLabel</span><span class="op">:</span> <span class="st">'The parabola f of w, '</span> <span class="op">+</span></span>
-<span id="cb6-1"><a aria-label="1"></a>    <span class="st">'with the tangent line at the chosen w, '</span> <span class="op">+</span></span>
-<span id="cb6-2"><a aria-label="2"></a>    <span class="st">'and two points above w plus epsilon: '</span> <span class="op">+</span></span>
-<span id="cb6-3"><a aria-label="3"></a>    <span class="st">'one on the tangent line (the prediction) and one on the curve (the exact value), '</span> <span class="op">+</span></span>
-<span id="cb6-4"><a aria-label="4"></a>    <span class="st">'joined by a red segment showing the error.'</span><span class="op">,</span></span>
-<span id="cb6-5"><a aria-label="5"></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">460</span><span class="op">,</span> <span class="dt">height</span><span class="op">:</span> <span class="dv">340</span><span class="op">,</span> <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
-<span id="cb6-6"><a aria-label="6"></a>  <span class="dt">x</span><span class="op">:</span> {<span class="dt">domain</span><span class="op">:</span> [<span class="op">-</span><span class="fl">1.5</span><span class="op">,</span> <span class="fl">6.5</span>]<span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"w"</span>}<span class="op">,</span></span>
-<span id="cb6-7"><a aria-label="7"></a>  <span class="dt">y</span><span class="op">:</span> {<span class="dt">domain</span><span class="op">:</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">20</span>]<span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"f(w)"</span>}<span class="op">,</span></span>
-<span id="cb6-8"><a aria-label="8"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
-<span id="cb6-9"><a aria-label="9"></a>    Plot<span class="op">.</span><span class="fu">line</span>(d3<span class="op">.</span><span class="fu">range</span>(<span class="op">-</span><span class="fl">1.5</span><span class="op">,</span> <span class="fl">6.51</span><span class="op">,</span> <span class="fl">0.05</span>)<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> (w) <span class="kw">=&gt;</span> w<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> tanF<span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"#555"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span> <span class="dt">clip</span><span class="op">:</span> <span class="kw">true</span>})<span class="op">,</span></span>
-<span id="cb6-10"><a aria-label="10"></a>    Plot<span class="op">.</span><span class="fu">line</span>([<span class="op">-</span><span class="fl">1.5</span><span class="op">,</span> <span class="fl">6.5</span>]<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> (w) <span class="kw">=&gt;</span> w<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> (w) <span class="kw">=&gt;</span> <span class="fu">tanF</span>(tanW) <span class="op">+</span> (w <span class="op">-</span> tanW) <span class="op">*</span> <span class="fu">tanDf</span>(tanW)<span class="op">,</span></span>
-<span id="cb6-11"><a aria-label="11"></a>                        <span class="dt">stroke</span><span class="op">:</span> <span class="st">"#1f77b4"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span> <span class="dt">strokeDasharray</span><span class="op">:</span> <span class="st">"6,4"</span><span class="op">,</span> <span class="dt">clip</span><span class="op">:</span> <span class="kw">true</span>})<span class="op">,</span></span>
-<span id="cb6-12"><a aria-label="12"></a>    Plot<span class="op">.</span><span class="fu">ruleX</span>([tanW <span class="op">+</span> tanEps]<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">"#bbb"</span><span class="op">,</span> <span class="dt">strokeDasharray</span><span class="op">:</span> <span class="st">"2,3"</span>})<span class="op">,</span></span>
-<span id="cb6-13"><a aria-label="13"></a>    Plot<span class="op">.</span><span class="fu">link</span>([<span class="dv">0</span>]<span class="op">,</span> {<span class="dt">x1</span><span class="op">:</span> tanW <span class="op">+</span> tanEps<span class="op">,</span> <span class="dt">x2</span><span class="op">:</span> tanW <span class="op">+</span> tanEps<span class="op">,</span> <span class="dt">y1</span><span class="op">:</span> tanPred<span class="op">,</span> <span class="dt">y2</span><span class="op">:</span> tanExact<span class="op">,</span></span>
-<span id="cb6-14"><a aria-label="14"></a>                    <span class="dt">stroke</span><span class="op">:</span> <span class="st">"#d62728"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">3</span><span class="op">,</span> <span class="dt">clip</span><span class="op">:</span> <span class="kw">true</span>})<span class="op">,</span></span>
-<span id="cb6-15"><a aria-label="15"></a>    Plot<span class="op">.</span><span class="fu">dot</span>([[tanW<span class="op">,</span> <span class="fu">tanF</span>(tanW)]]<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d[<span class="dv">0</span>]<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d[<span class="dv">1</span>]<span class="op">,</span> <span class="dt">r</span><span class="op">:</span> <span class="dv">5</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"#222"</span>})<span class="op">,</span></span>
-<span id="cb6-16"><a aria-label="16"></a>    Plot<span class="op">.</span><span class="fu">dot</span>([[tanW <span class="op">+</span> tanEps<span class="op">,</span> tanPred]]<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d[<span class="dv">0</span>]<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d[<span class="dv">1</span>]<span class="op">,</span> <span class="dt">r</span><span class="op">:</span> <span class="dv">4</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"#1f77b4"</span><span class="op">,</span> <span class="dt">clip</span><span class="op">:</span> <span class="kw">true</span>})<span class="op">,</span></span>
-<span id="cb6-17"><a aria-label="17"></a>    Plot<span class="op">.</span><span class="fu">dot</span>([[tanW <span class="op">+</span> tanEps<span class="op">,</span> tanExact]]<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d[<span class="dv">0</span>]<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d[<span class="dv">1</span>]<span class="op">,</span> <span class="dt">r</span><span class="op">:</span> <span class="dv">4</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"#555"</span><span class="op">,</span> <span class="dt">clip</span><span class="op">:</span> <span class="kw">true</span>})</span>
-<span id="cb6-18"><a aria-label="18"></a>  ]</span>
-<span id="cb6-19"><a aria-label="19"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section><section class="slide level2"><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" data-startfrom="2" data-source-offset="-72"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 1;"><span id="cb5-2"><a aria-label="2"></a>tanF <span class="op">=</span> (w) <span class="kw">=&gt;</span> w <span class="op">*</span> w <span class="op">-</span> <span class="dv">4</span> <span class="op">*</span> w <span class="op">+</span> <span class="dv">7</span></span>
+<span id="cb5-3"><a aria-label="3"></a>tanDf <span class="op">=</span> (w) <span class="kw">=&gt;</span> <span class="dv">2</span> <span class="op">*</span> w <span class="op">-</span> <span class="dv">4</span></span>
+<span id="cb5-4"><a aria-label="4"></a>tanPred <span class="op">=</span> <span class="fu">tanF</span>(tanW) <span class="op">+</span> tanEps <span class="op">*</span> <span class="fu">tanDf</span>(tanW)</span>
+<span id="cb5-5"><a aria-label="5"></a>tanExact <span class="op">=</span> <span class="fu">tanF</span>(tanW <span class="op">+</span> tanEps)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6" data-startfrom="0" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line -1;"><span id="cb6-0"><a aria-label="0"></a>viewof tanW <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="op">-</span><span class="dv">1</span><span class="op">,</span> <span class="dv">4</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.05</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"w"</span>})</span>
+<span id="cb6-1"><a aria-label="1"></a>viewof tanEps <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="fl">0.01</span><span class="op">,</span> <span class="dv">2</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="fl">0.5</span><span class="op">,</span> <span class="dt">transform</span><span class="op">:</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">log</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"step </span><span class="sc">\u03b5</span><span class="st">"</span><span class="op">,</span> <span class="dt">format</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">format</span>(<span class="st">".3~f"</span>)})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7" data-startfrom="-1" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line -2;"><span id="cb7--1"><a aria-label="-1"></a><span class="fu">md</span><span class="vs">`At w = </span><span class="sc">${</span>tanW<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="sc">}</span><span class="vs">, f(w) = </span><span class="sc">${</span><span class="fu">tanF</span>(tanW)<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">4</span>)<span class="sc">}</span><span class="vs"> and f</span><span class="sc">\u2032</span><span class="vs">(w) = </span><span class="sc">${</span><span class="fu">tanDf</span>(tanW)<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="sc">}</span><span class="vs">.</span></span>
+<span id="cb7-0"><a aria-label="0"></a></span>
+<span id="cb7-1"><a aria-label="1"></a><span class="vs">A step of </span><span class="sc">\u03b5</span><span class="vs"> = </span><span class="sc">${</span>tanEps<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">3</span>)<span class="sc">}</span><span class="vs">:</span></span>
+<span id="cb7-2"><a aria-label="2"></a></span>
+<span id="cb7-3"><a aria-label="3"></a><span class="vs">- predicted by the tangent line, f(w) + </span><span class="sc">\u03b5</span><span class="vs"> f</span><span class="sc">\u2032</span><span class="vs">(w) = </span><span class="sc">${</span>tanPred<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">4</span>)<span class="sc">}</span><span class="vs">;</span></span>
+<span id="cb7-4"><a aria-label="4"></a><span class="vs">- exact, f(w + </span><span class="sc">\u03b5</span><span class="vs">) = </span><span class="sc">${</span>tanExact<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">4</span>)<span class="sc">}</span><span class="vs">;</span></span>
+<span id="cb7-5"><a aria-label="5"></a><span class="vs">- error </span><span class="sc">${</span>(tanExact <span class="op">-</span> tanPred)<span class="op">.</span><span class="fu">toPrecision</span>(<span class="dv">3</span>)<span class="sc">}</span><span class="vs">, and error / </span><span class="sc">\u03b5\u00b2</span><span class="vs"> = </span><span class="sc">${</span>((tanExact <span class="op">-</span> tanPred) <span class="op">/</span> tanEps <span class="op">**</span> <span class="dv">2</span>)<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">3</span>)<span class="sc">}</span><span class="vs">.`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8" data-startfrom="-1" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line -2;"><span id="cb8--1"><a aria-label="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb8-0"><a aria-label="0"></a>  <span class="dt">ariaLabel</span><span class="op">:</span> <span class="st">'The parabola f of w, '</span> <span class="op">+</span></span>
+<span id="cb8-1"><a aria-label="1"></a>    <span class="st">'with the tangent line at the chosen w, '</span> <span class="op">+</span></span>
+<span id="cb8-2"><a aria-label="2"></a>    <span class="st">'and two points above w plus epsilon: '</span> <span class="op">+</span></span>
+<span id="cb8-3"><a aria-label="3"></a>    <span class="st">'one on the tangent line (the prediction) and one on the curve (the exact value), '</span> <span class="op">+</span></span>
+<span id="cb8-4"><a aria-label="4"></a>    <span class="st">'joined by a red segment showing the error.'</span><span class="op">,</span></span>
+<span id="cb8-5"><a aria-label="5"></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">460</span><span class="op">,</span> <span class="dt">height</span><span class="op">:</span> <span class="dv">340</span><span class="op">,</span> <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb8-6"><a aria-label="6"></a>  <span class="dt">x</span><span class="op">:</span> {<span class="dt">domain</span><span class="op">:</span> [<span class="op">-</span><span class="fl">1.5</span><span class="op">,</span> <span class="fl">6.5</span>]<span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"w"</span>}<span class="op">,</span></span>
+<span id="cb8-7"><a aria-label="7"></a>  <span class="dt">y</span><span class="op">:</span> {<span class="dt">domain</span><span class="op">:</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">20</span>]<span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"f(w)"</span>}<span class="op">,</span></span>
+<span id="cb8-8"><a aria-label="8"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb8-9"><a aria-label="9"></a>    Plot<span class="op">.</span><span class="fu">line</span>(d3<span class="op">.</span><span class="fu">range</span>(<span class="op">-</span><span class="fl">1.5</span><span class="op">,</span> <span class="fl">6.51</span><span class="op">,</span> <span class="fl">0.05</span>)<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> (w) <span class="kw">=&gt;</span> w<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> tanF<span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"#555"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span> <span class="dt">clip</span><span class="op">:</span> <span class="kw">true</span>})<span class="op">,</span></span>
+<span id="cb8-10"><a aria-label="10"></a>    Plot<span class="op">.</span><span class="fu">line</span>([<span class="op">-</span><span class="fl">1.5</span><span class="op">,</span> <span class="fl">6.5</span>]<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> (w) <span class="kw">=&gt;</span> w<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> (w) <span class="kw">=&gt;</span> <span class="fu">tanF</span>(tanW) <span class="op">+</span> (w <span class="op">-</span> tanW) <span class="op">*</span> <span class="fu">tanDf</span>(tanW)<span class="op">,</span></span>
+<span id="cb8-11"><a aria-label="11"></a>                        <span class="dt">stroke</span><span class="op">:</span> <span class="st">"#1f77b4"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span> <span class="dt">strokeDasharray</span><span class="op">:</span> <span class="st">"6,4"</span><span class="op">,</span> <span class="dt">clip</span><span class="op">:</span> <span class="kw">true</span>})<span class="op">,</span></span>
+<span id="cb8-12"><a aria-label="12"></a>    Plot<span class="op">.</span><span class="fu">ruleX</span>([tanW <span class="op">+</span> tanEps]<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">"#bbb"</span><span class="op">,</span> <span class="dt">strokeDasharray</span><span class="op">:</span> <span class="st">"2,3"</span>})<span class="op">,</span></span>
+<span id="cb8-13"><a aria-label="13"></a>    Plot<span class="op">.</span><span class="fu">link</span>([<span class="dv">0</span>]<span class="op">,</span> {<span class="dt">x1</span><span class="op">:</span> tanW <span class="op">+</span> tanEps<span class="op">,</span> <span class="dt">x2</span><span class="op">:</span> tanW <span class="op">+</span> tanEps<span class="op">,</span> <span class="dt">y1</span><span class="op">:</span> tanPred<span class="op">,</span> <span class="dt">y2</span><span class="op">:</span> tanExact<span class="op">,</span></span>
+<span id="cb8-14"><a aria-label="14"></a>                    <span class="dt">stroke</span><span class="op">:</span> <span class="st">"#d62728"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">3</span><span class="op">,</span> <span class="dt">clip</span><span class="op">:</span> <span class="kw">true</span>})<span class="op">,</span></span>
+<span id="cb8-15"><a aria-label="15"></a>    Plot<span class="op">.</span><span class="fu">dot</span>([[tanW<span class="op">,</span> <span class="fu">tanF</span>(tanW)]]<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d[<span class="dv">0</span>]<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d[<span class="dv">1</span>]<span class="op">,</span> <span class="dt">r</span><span class="op">:</span> <span class="dv">5</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"#222"</span>})<span class="op">,</span></span>
+<span id="cb8-16"><a aria-label="16"></a>    Plot<span class="op">.</span><span class="fu">dot</span>([[tanW <span class="op">+</span> tanEps<span class="op">,</span> tanPred]]<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d[<span class="dv">0</span>]<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d[<span class="dv">1</span>]<span class="op">,</span> <span class="dt">r</span><span class="op">:</span> <span class="dv">4</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"#1f77b4"</span><span class="op">,</span> <span class="dt">clip</span><span class="op">:</span> <span class="kw">true</span>})<span class="op">,</span></span>
+<span id="cb8-17"><a aria-label="17"></a>    Plot<span class="op">.</span><span class="fu">dot</span>([[tanW <span class="op">+</span> tanEps<span class="op">,</span> tanExact]]<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d[<span class="dv">0</span>]<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d[<span class="dv">1</span>]<span class="op">,</span> <span class="dt">r</span><span class="op">:</span> <span class="dv">4</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"#555"</span><span class="op">,</span> <span class="dt">clip</span><span class="op">:</span> <span class="kw">true</span>})</span>
+<span id="cb8-18"><a aria-label="18"></a>  ]</span>
+<span id="cb8-19"><a aria-label="19"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div id="fig-linear-approx" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-linear-approx-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: The linear approximation <a href="#/eq-linear-approx" class="quarto-xref">Equation&nbsp;1</a> for <span class="math inline">\(f(w) = w^2 - 4w + 7\)</span>, at any <span class="math inline">\(w\)</span> and step <span class="math inline">\(\varepsilon\)</span>.
+Figure&nbsp;3: The linear approximation <a href="#/eq-linear-approx" class="quarto-xref">Equation&nbsp;1</a> for <span class="math inline">\(f(w) = w^2 - 4w + 7\)</span>, at any <span class="math inline">\(w\)</span> and step <span class="math inline">\(\varepsilon\)</span>.
 </figcaption><div aria-describedby="fig-linear-approx-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell hidden">
 <div class="cell-output cell-output-display hidden">
@@ -1314,13 +1396,13 @@ Figure&nbsp;2: The linear approximation <a href="#/eq-linear-approx" class="quar
 </div>
 </div>
 </div>
-<p>The dashed blue line is the tangent line (<a href="#/def-tangent-line" class="quarto-xref">Definition&nbsp;16</a>) at <span class="math inline">\(w\)</span>; the red segment is the error of the prediction.</p>
+<p>The dashed blue line is the tangent line (<a href="#/def-tangent-line" class="quarto-xref">Definition&nbsp;17</a>) at <span class="math inline">\(w\)</span>; the red segment is the error of the prediction.</p>
 </div></div>
 </div>
 </figure>
 </div>
 </section><section class="slide level2"><div id="exr-miller-deriv-tangent-line-approx" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 13 (Tangent line approximation)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[10]</a></span>, Question 1.1.8.</p>
+<p><span class="theorem-title"><strong>Exercise 13 (Tangent line approximation)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller <a href="#/references" role="doc-biblioref" onclick="">[11]</a></span>, Question 1.1.8.</p>
 <p>Let <span class="math inline">\(f(x) = 4x + \sqrt{2}\cos x\)</span>.</p>
 <p>Find <span class="math inline">\(f'(x)\)</span>.</p>
 </div>
@@ -1590,38 +1672,43 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
 <div class="csl-right-inline">Wikipedia contributors, <span>“Second derivative — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Second_derivative">https://en.wikipedia.org/wiki/Second_derivative</a>
 </div>
 </div>
-<div id="ref-wikipedia_power_rule" class="csl-entry" role="listitem">
+<div id="ref-wikipedia_smoothness" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[9] </div>
+<div class="csl-right-inline">Wikipedia contributors, <span>“Smoothness — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Smoothness">https://en.wikipedia.org/wiki/Smoothness</a>
+</div>
+</div>
+<div id="ref-wikipedia_power_rule" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[10] </div>
 <div class="csl-right-inline">Wikipedia contributors, <span>“Power rule — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Power_rule">https://en.wikipedia.org/wiki/Power_rule</a>
 </div>
 </div>
 <div id="ref-problifesavercalc" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[10] </div>
+<div class="csl-left-margin">[11] </div>
 <div class="csl-right-inline">S. J. Miller, <em>The probability lifesaver: Calculus review problems</em>. 2016. Available: <a href="https://web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/index.htm#:~:text=http%3A//web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/supplementalchap_calcreview.pdf">https://web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/index.htm#:~:text=http%3A//web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/supplementalchap_calcreview.pdf</a>
 </div>
 </div>
 <div id="ref-wikipedia_product_rule" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[11] </div>
+<div class="csl-left-margin">[12] </div>
 <div class="csl-right-inline">Wikipedia contributors, <span>“Product rule — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Product_rule">https://en.wikipedia.org/wiki/Product_rule</a>
 </div>
 </div>
 <div id="ref-wikipedia_quotient_rule" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[12] </div>
+<div class="csl-left-margin">[13] </div>
 <div class="csl-right-inline">Wikipedia contributors, <span>“Quotient rule — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Quotient_rule">https://en.wikipedia.org/wiki/Quotient_rule</a>
 </div>
 </div>
 <div id="ref-wikipedia_chain_rule" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[13] </div>
+<div class="csl-left-margin">[14] </div>
 <div class="csl-right-inline">Wikipedia contributors, <span>“Chain rule — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Chain_rule">https://en.wikipedia.org/wiki/Chain_rule</a>
 </div>
 </div>
 <div id="ref-wikipedia_linear_approximation" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[14] </div>
+<div class="csl-left-margin">[15] </div>
 <div class="csl-right-inline">Wikipedia contributors, <span>“Linear approximation — <span>Wikipedia</span><span>,</span> the free encyclopedia.”</span> 2026. Available: <a href="https://en.wikipedia.org/wiki/Linear_approximation">https://en.wikipedia.org/wiki/Linear_approximation</a>
 </div>
 </div>
 <div id="ref-boyd2018vmls" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[15] </div>
+<div class="csl-left-margin">[16] </div>
 <div class="csl-right-inline">S. Boyd and L. Vandenberghe, <em>Introduction to applied linear algebra: Vectors, matrices, and least squares</em>. Cambridge University Press, 2018. doi: <a href="https://doi.org/10.1017/9781108583664">10.1017/9781108583664</a>.</div>
 </div>
 </div>
