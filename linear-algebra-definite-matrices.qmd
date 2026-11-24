@@ -1,5 +1,5 @@
 ---
-title: "Definite Matrices and Determinants"
+title: "Definite Matrices"
 format:
   html: default
   revealjs:
@@ -15,7 +15,3 @@ format:
 # Definite Matrices {#sec-definite-matrices}
 
 {{< include mds/_subfiles/_sec_linear_algebra_definite_matrices.qmd >}}
-
-# Determinants {#sec-determinants}
-
-{{< include mds/_subfiles/_sec_linear_algebra_determinants.qmd >}}

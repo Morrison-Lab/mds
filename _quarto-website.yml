@@ -107,6 +107,7 @@ website:
           - linear-algebra-orthonormal-bases.qmd
           - linear-algebra-special-matrices.qmd
           - linear-algebra-decompositions.qmd
+          - linear-algebra-determinants.qmd
           - linear-algebra-definite-matrices.qmd
           - linear-algebra-projections.qmd
           - linear-algebra-generalized-inverses.qmd
@@ -202,6 +203,7 @@ website:
           - linear-algebra-orthonormal-bases.qmd
           - linear-algebra-special-matrices.qmd
           - linear-algebra-decompositions.qmd
+          - linear-algebra-determinants.qmd
           - linear-algebra-definite-matrices.qmd
           - linear-algebra-projections.qmd
           - linear-algebra-generalized-inverses.qmd
