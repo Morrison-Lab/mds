@@ -1,0 +1,10 @@
+:::{#exm-affine-linear-iff}
+#### Two affine maps with the same matrix
+
+Let $\matr{A} = \sbmat{2 & 0 \\ 1 & 1}$, the matrix of the linear map in @exm-linear-map.
+$f(\vx) = \matr{A}\vx$ has offset $\vzero$, so it is linear.
+$g(\vx) = \matr{A}\vx + \sbmat{1 \\ 0}$ has offset $\sbmat{1 \\ 0} \neq \vzero$,
+so by @thm-affine-linear-iff it is not linear:
+indeed $g(\vzero) = \sbmat{1 \\ 0}$, not $\vzero$.
+
+:::

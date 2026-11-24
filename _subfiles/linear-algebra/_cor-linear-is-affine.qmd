@@ -1,8 +1,14 @@
 :::{#cor-linear-is-affine}
 #### Every linear map is affine
 
-Every linear map $f : \reals^p \to \reals^m$ (@def-linear-map)
-is an affine map (@def-affine-map) with offset $\vzero$.
+Every [linear map](#def-linear-map) $f : \reals^p \to \reals^m$
+is an [affine map](#def-affine-map) with [offset](#def-affine-offset) $\vzero$.
+With $\matr{A}$ the [matrix of $f$](#def-matrix-of-linear-map),
+
+$$
+f(\vx) = \matr{A}\vx + \vzero
+\quad \text{for all } \vx \in \reals^p.
+$$ {#eq-linear-is-affine}
 
 :::
 
@@ -18,6 +24,6 @@ f(\vx) &= \matr{A}\vx \\
 \end{aligned}
 $$
 
-which is @def-affine-map with $\vec{b} = \vzero$.
+which is an [affine map](#def-affine-map) with [offset](#def-affine-offset) $\vec{b} = \vzero$.
 
 :::
