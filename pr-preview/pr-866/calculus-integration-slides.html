@@ -247,9 +247,10 @@
     reads those vars so it stays legible in every palette. Light is the
     default variable set, Off-white and Parchment are a data-palette attribute
     on <html>, and Dark is the body.qwt-dark class. The choice is saved under
-    "mln-theme", the key the website's theme dropdown (theme-picker.html) uses,
-    so it carries across the site and the decks. First-time visitors get
-    Dark if their system prefers it, and Off-white otherwise.
+    "lds-theme" (falling back to "mln-theme"), the key the website's theme
+    dropdown (theme-picker.html) uses, so it carries across the site and the
+    decks. First-time visitors get Dark if their system prefers it, and
+    Off-white otherwise.
   --><style>
     #qwt-theme-select {
       position: fixed;
@@ -282,7 +283,8 @@
 <script>
   (function () {
     "use strict";
-    var KEY = "mln-theme";
+    var KEY = "lds-theme";
+    var LEGACY_KEY = "mln-theme";
     var DARK_CLASS = "qwt-dark";
     var OPTIONS = [["light", "Light"], ["offwhite", "Off-white"], ["parchment", "Parchment"], ["dark", "Dark"]];
     var root = document.documentElement;
@@ -292,7 +294,7 @@
     }
 
     function stored() {
-      try { return localStorage.getItem(KEY); } catch (e) { return null; }
+      try { return localStorage.getItem(KEY) || localStorage.getItem(LEGACY_KEY); } catch (e) { return null; }
     }
 
     function initialTheme() {
@@ -363,7 +365,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-20 01:46:09 (PST)</p>
+  <p class="date">Last modified: 2026-11-25 11:14:34 (PST)</p>
 </section><section class="slide level2"></section><section id="sec-integration" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Integration</h2>
 </section><section class="slide level2"><p>Integration is the inverse operation of differentiation: it recovers a function from its derivative and accumulates quantities such as areas, totals, and probabilities. We begin with antiderivatives, then state basic integration rules, and conclude with the Fundamental Theorem of Calculus and a worked example from probability.</p>
@@ -639,7 +641,7 @@ Figure&nbsp;1: The function <span class="math inline">\(f(x) = x^2\)</span> and 
 <span class="math inline">\(g(x) = \tfrac{x^2 - 1}{x - 1}\)</span> of <a href="#/exm-continuous" class="quarto-xref">Example&nbsp;4</a> is discontinuous at <span class="math inline">\(1\)</span>, because <span class="math inline">\(g(1)\)</span> is not defined, but it does not have a jump discontinuity there: for <span class="math inline">\(x \ne 1\)</span>, <span class="math inline">\(g(x) = x + 1\)</span>, so both one-sided limits at <span class="math inline">\(1\)</span> equal <span class="math inline">\(1 + 1 = 2\)</span>.</li>
 </ul>
 </div>
-</section><section class="slide level2 scrollable"><div id="def-continuous-on" class="theorem definition">
+</section><section class="slide level2 scrollable"><div id="def-continuous-on-interval" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 7 (Continuous on a closed interval)</strong></span> A function <span class="math inline">\(f\)</span> is <strong>continuous on</strong> a closed interval <span class="math inline">\([a, b]\)</span> if all three conditions hold:</p>
 <ol type="1">
 <li>
@@ -652,7 +654,7 @@ Figure&nbsp;1: The function <span class="math inline">\(f(x) = x^2\)</span> and 
 <p><span class="citation" data-cites="larsonCalc11e"><a href="#/references" role="doc-biblioref" onclick="">[2, Sec. 1.4]</a>, p.&nbsp;73</span></p>
 </div>
 </section><section class="slide level2"><div id="exm-continuous-on-sqrt" class="theorem example">
-<p><span class="theorem-title"><strong>Example 6 (Continuity on <span class="math inline">\(\lbrack 0, 1\rbrack\)</span> uses one-sided limits at the endpoints)</strong></span> Let <span class="math inline">\(f(x) = \sqrt{x}\)</span>, the <a href="./algebra-basics.html#def-square-root">square root</a>, defined for <span class="math inline">\(x \ge 0\)</span>. Because <span class="math inline">\(f\)</span> is undefined for <span class="math inline">\(x &lt; 0\)</span>, only the right-hand limit of <span class="math inline">\(f\)</span> at <span class="math inline">\(0\)</span> makes sense, and <a href="#/def-continuous-on" class="quarto-xref">Definition&nbsp;7</a> asks only for that one-sided limit at the endpoint <span class="math inline">\(0\)</span>. Here <span class="math inline">\(f\)</span> is continuous at every point of <span class="math inline">\((0, 1)\)</span>,</p>
+<p><span class="theorem-title"><strong>Example 6 (Continuity on <span class="math inline">\(\lbrack 0, 1\rbrack\)</span> uses one-sided limits at the endpoints)</strong></span> Let <span class="math inline">\(f(x) = \sqrt{x}\)</span>, the <a href="./algebra-basics.html#def-square-root">square root</a>, defined for <span class="math inline">\(x \ge 0\)</span>. Because <span class="math inline">\(f\)</span> is undefined for <span class="math inline">\(x &lt; 0\)</span>, only the right-hand limit of <span class="math inline">\(f\)</span> at <span class="math inline">\(0\)</span> makes sense, and <a href="#/def-continuous-on-interval" class="quarto-xref">Definition&nbsp;7</a> asks only for that <a href="./calculus-derivatives.html#def-one-sided-limit">one-sided limit</a> at the endpoint <span class="math inline">\(0\)</span>. Here <span class="math inline">\(f\)</span> is continuous at every point of <span class="math inline">\((0, 1)\)</span>,</p>
 <p><span class="math display">\[
 \begin{aligned}
 \lim_{x \to 0^+} \sqrt{x} &amp;= 0 \\
@@ -666,10 +668,39 @@ Figure&nbsp;1: The function <span class="math inline">\(f(x) = x^2\)</span> and 
 &amp;= f(1),
 \end{aligned}
 \]</span></p>
-<p>so <span class="math inline">\(f\)</span> is continuous on <span class="math inline">\([0, 1]\)</span> (<a href="#/def-continuous-on" class="quarto-xref">Definition&nbsp;7</a>).</p>
+<p>so <span class="math inline">\(f\)</span> is <a href="#/def-continuous-on-interval">continuous on</a> <span class="math inline">\([0, 1]\)</span>. <a href="#/fig-continuous-on-sqrt" class="quarto-xref">Figure&nbsp;2</a> shows its <a href="https://morrison-lab.github.io/mcs/functions.html#def-graph">graph</a>, which has no break anywhere on <span class="math inline">\([0, 1]\)</span>.</p>
+<details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-label="1"></a>x_values <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">length.out =</span> <span class="dv">401</span>)</span>
+<span id="cb3-2"><a aria-label="2"></a>root_values <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(x_values)</span>
+<span id="cb3-3"><a aria-label="3"></a>curve <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(<span class="at">x =</span> x_values, <span class="at">y =</span> root_values)</span>
+<span id="cb3-4"><a aria-label="4"></a>endpoints <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tribble</span>(</span>
+<span id="cb3-5"><a aria-label="5"></a>  <span class="sc">~</span>x, <span class="sc">~</span>y,</span>
+<span id="cb3-6"><a aria-label="6"></a>  <span class="dv">0</span>, <span class="dv">0</span>,</span>
+<span id="cb3-7"><a aria-label="7"></a>  <span class="dv">1</span>, <span class="dv">1</span></span>
+<span id="cb3-8"><a aria-label="8"></a>)</span>
+<span id="cb3-9"><a aria-label="9"></a></span>
+<span id="cb3-10"><a aria-label="10"></a>curve <span class="sc">|&gt;</span></span>
+<span id="cb3-11"><a aria-label="11"></a>  ggplot2<span class="sc">::</span><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb3-12"><a aria-label="12"></a>  ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y) <span class="sc">+</span></span>
+<span id="cb3-13"><a aria-label="13"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb3-14"><a aria-label="14"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_point</span>(<span class="at">data =</span> endpoints, <span class="at">size =</span> <span class="fl">2.5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><div id="fig-continuous-on-sqrt" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-continuous-on-sqrt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: The <a href="./algebra-basics.html#def-square-root">square root</a> <span class="math inline">\(f(x) = \sqrt{x}\)</span> on <span class="math inline">\([0, 1]\)</span>. The curve meets both filled <a href="https://morrison-lab.github.io/mcs/sets.html#def-interval">endpoints</a>, <span class="math inline">\((0, 0)\)</span> and <span class="math inline">\((1, 1)\)</span>, without a jump.
+</figcaption><div aria-describedby="fig-continuous-on-sqrt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><a href="calculus-integration_files/figure-html/continuous-on-sqrt-plot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;2: The square root f(x) = \sqrt{x} on [0, 1]. The curve meets both filled endpoints, (0, 0) and (1, 1), without a jump."><img data-src="calculus-integration_files/figure-html/continuous-on-sqrt-plot-1.png" alt="The graph of the square root of x for x from 0 to 1: an unbroken curve rising steeply from the point (0, 0) and flattening as it reaches the point (1, 1). Both endpoints are marked with filled dots." width="432"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
 </div>
 </section><section class="slide level2"><div id="exm-not-continuous-on" class="theorem example">
-<p><span class="theorem-title"><strong>Example 7 (A function not continuous on <span class="math inline">\(\lbrack 0, 1\rbrack\)</span>)</strong></span> Let <span class="math inline">\(f(x) = 0\)</span> for <span class="math inline">\(0 \le x &lt; 1\)</span> and <span class="math inline">\(f(1) = 2\)</span>. Conditions 1 and 2 of <a href="#/def-continuous-on" class="quarto-xref">Definition&nbsp;7</a> hold, but</p>
+<p><span class="theorem-title"><strong>Example 7 (A function not continuous on <span class="math inline">\(\lbrack 0, 1\rbrack\)</span>)</strong></span> Let <span class="math inline">\(f(x) = 0\)</span> for <span class="math inline">\(0 \le x &lt; 1\)</span> and <span class="math inline">\(f(1) = 2\)</span>. Conditions 1 and 2 of <a href="#/def-continuous-on-interval" class="quarto-xref">Definition&nbsp;7</a> hold, but</p>
 <p><span class="math display">\[
 \begin{aligned}
 \lim_{x \to 1^-} f(x) &amp;= 0 \\
@@ -677,7 +708,36 @@ Figure&nbsp;1: The function <span class="math inline">\(f(x) = x^2\)</span> and 
 &amp;= f(1),
 \end{aligned}
 \]</span></p>
-<p>so condition 3 fails and <span class="math inline">\(f\)</span> is not continuous on <span class="math inline">\([0, 1]\)</span>.</p>
+<p>so condition 3 fails and <span class="math inline">\(f\)</span> is not continuous on <span class="math inline">\([0, 1]\)</span>. <a href="#/fig-not-continuous-on" class="quarto-xref">Figure&nbsp;3</a> shows the jump at <span class="math inline">\(x = 1\)</span>.</p>
+<details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-label="1"></a>segment <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tribble</span>(</span>
+<span id="cb4-2"><a aria-label="2"></a>  <span class="sc">~</span>x, <span class="sc">~</span>y,</span>
+<span id="cb4-3"><a aria-label="3"></a>  <span class="dv">0</span>, <span class="dv">0</span>,</span>
+<span id="cb4-4"><a aria-label="4"></a>  <span class="dv">1</span>, <span class="dv">0</span></span>
+<span id="cb4-5"><a aria-label="5"></a>)</span>
+<span id="cb4-6"><a aria-label="6"></a>open_end <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(<span class="at">x =</span> <span class="dv">1</span>, <span class="at">y =</span> <span class="dv">0</span>)</span>
+<span id="cb4-7"><a aria-label="7"></a>value_at_one <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(<span class="at">x =</span> <span class="dv">1</span>, <span class="at">y =</span> <span class="dv">2</span>)</span>
+<span id="cb4-8"><a aria-label="8"></a></span>
+<span id="cb4-9"><a aria-label="9"></a>segment <span class="sc">|&gt;</span></span>
+<span id="cb4-10"><a aria-label="10"></a>  ggplot2<span class="sc">::</span><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb4-11"><a aria-label="11"></a>  ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y) <span class="sc">+</span></span>
+<span id="cb4-12"><a aria-label="12"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb4-13"><a aria-label="13"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_point</span>(<span class="at">data =</span> open_end, <span class="at">shape =</span> <span class="dv">21</span>, <span class="at">fill =</span> <span class="st">"white"</span>, <span class="at">size =</span> <span class="fl">2.5</span>) <span class="sc">+</span></span>
+<span id="cb4-14"><a aria-label="14"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_point</span>(<span class="at">data =</span> value_at_one, <span class="at">size =</span> <span class="fl">2.5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><div id="fig-not-continuous-on" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-not-continuous-on-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: The function with <span class="math inline">\(f(x) = 0\)</span> for <span class="math inline">\(0 \le x &lt; 1\)</span> and <span class="math inline">\(f(1) = 2\)</span>. The open circle at <span class="math inline">\((1, 0)\)</span> marks the <a href="./calculus-derivatives.html#def-one-sided-limit">left-hand limit</a> of <span class="math inline">\(f\)</span> at <span class="math inline">\(1\)</span>, <!-- check-term-links: allow: "open circle" names the plot marker, not the geometric circle --> and the filled dot at <span class="math inline">\((1, 2)\)</span> is <span class="math inline">\(f(1)\)</span>.
+</figcaption><div aria-describedby="fig-not-continuous-on-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><a href="calculus-integration_files/figure-html/not-continuous-on-plot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;3: The function with f(x) = 0 for 0 \le x < 1 and f(1) = 2. The open circle at (1, 0) marks the left-hand limit of f at 1,  and the filled dot at (1, 2) is f(1)."><img data-src="calculus-integration_files/figure-html/not-continuous-on-plot-1.png" alt="A horizontal segment at height 0 from x = 0 to x = 1, ending in an open circle at (1, 0), and a separate filled dot at (1, 2) above it." width="432"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
 </div>
 </section><section class="slide level2"><div id="def-partition" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 8</strong></span> &nbsp;</p>
@@ -758,7 +818,7 @@ a &amp;= x_0 \\
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="def-riemann-integral" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 12 (Riemann integral (definite integral))</strong></span> Let <span class="math inline">\(f\)</span> be a <a href="./algebra-sums.html#def-bounded">bounded</a> function on <span class="math inline">\([a, b]\)</span>. For each partition <span class="math inline">\(\mathcal{P}\)</span> of <span class="math inline">\([a, b]\)</span> (<a href="#/def-partition" class="quarto-xref">Definition&nbsp;8</a>), choose a sample point <span class="math inline">\(x_i^*\)</span> in each subinterval <span class="math inline">\([x_{i-1}, x_i]\)</span>. The <strong>Riemann integral</strong> of <span class="math inline">\(f\)</span> over <span class="math inline">\([a, b]\)</span> <span class="citation" data-cites="wikipedia_riemann_integral"><a href="#/references" role="doc-biblioref" onclick="">[7]</a></span> (also called the <strong>definite integral</strong> of <span class="math inline">\(f\)</span> from <span class="math inline">\(a\)</span> to <span class="math inline">\(b\)</span>) is the limit of the Riemann sums (<a href="#/def-riemann-sum" class="quarto-xref">Definition&nbsp;11</a>) as the mesh (<a href="#/def-mesh" class="quarto-xref">Definition&nbsp;9</a>) shrinks to zero:</p>
+<p><span class="theorem-title"><strong>Definition 12 (Riemann integral (definite integral))</strong></span> Let <span class="math inline">\(f\)</span> be a <a href="./algebra-convexity.html#def-bounded">bounded</a> function on <span class="math inline">\([a, b]\)</span>. For each partition <span class="math inline">\(\mathcal{P}\)</span> of <span class="math inline">\([a, b]\)</span> (<a href="#/def-partition" class="quarto-xref">Definition&nbsp;8</a>), choose a sample point <span class="math inline">\(x_i^*\)</span> in each subinterval <span class="math inline">\([x_{i-1}, x_i]\)</span>. The <strong>Riemann integral</strong> of <span class="math inline">\(f\)</span> over <span class="math inline">\([a, b]\)</span> <span class="citation" data-cites="wikipedia_riemann_integral"><a href="#/references" role="doc-biblioref" onclick="">[7]</a></span> (also called the <strong>definite integral</strong> of <span class="math inline">\(f\)</span> from <span class="math inline">\(a\)</span> to <span class="math inline">\(b\)</span>) is the limit of the Riemann sums (<a href="#/def-riemann-sum" class="quarto-xref">Definition&nbsp;11</a>) as the mesh (<a href="#/def-mesh" class="quarto-xref">Definition&nbsp;9</a>) shrinks to zero:</p>
 <p><span class="math display">\[\int_a^b f(x)\,dx \stackrel{\text{def}}{=}\lim_{\mathopen{}\left\lVert\mathcal{P}\right\rVert\mathclose{} \to 0} \sum_{i=1}^nf(x_i^*)\,\Delta x_i,\]</span></p>
 <p>when that limit exists and has the same value for every choice of the partitions and of the sample points <span class="math inline">\(x_i^*\)</span>.</p>
 <p><span class="citation" data-cites="larsonCalc11e"><a href="#/references" role="doc-biblioref" onclick="">[2, Sec. 4.3]</a>, p.&nbsp;272</span></p>
@@ -793,7 +853,7 @@ a &amp;= x_0 \\
 </section><section class="slide level2"><div id="exm-integrand" class="theorem example">
 <p><span class="theorem-title"><strong>Example 13 (Integrands)</strong></span> &nbsp;</p>
 <ul>
-<li>In <span class="math inline">\(\int_0^3 2\,dx = 6\)</span> (<a href="#/exm-integrable-constant" class="quarto-xref">Example&nbsp;12</a>), the integrand is the <a href="./algebra-exponentials.html#def-constant-function">constant function</a> <span class="math inline">\(f(x) = 2\)</span>, and the <a href="./algebra-sums.html#def-limits-of-integration">limits of integration</a> are <span class="math inline">\(0\)</span> and <span class="math inline">\(3\)</span>.</li>
+<li>In <span class="math inline">\(\int_0^3 2\,dx = 6\)</span> (<a href="#/exm-integrable-constant" class="quarto-xref">Example&nbsp;12</a>), the integrand is the <a href="./algebra-polynomials.html#def-constant-function">constant function</a> <span class="math inline">\(f(x) = 2\)</span>, and the <a href="./algebra-sums.html#def-limits-of-integration">limits of integration</a> are <span class="math inline">\(0\)</span> and <span class="math inline">\(3\)</span>.</li>
 <li>In <span class="math inline">\(\int \mathopen{}\left(3x^2 - 1\right)\mathclose{}\,dx = x^3 - x + C\)</span> (<a href="#/exm-integral-rules-quadratic" class="quarto-xref">Example&nbsp;2</a>), the integrand is <span class="math inline">\(f(x) = 3x^2 - 1\)</span>; its value at <span class="math inline">\(x = 2\)</span> is <span class="math inline">\(3 \cdot 4 - 1 = 11\)</span>.</li>
 </ul>
 </div>
@@ -874,21 +934,21 @@ S_2
 \end{aligned}
 \]</span></p>
 <p>but it is not differentiable at <span class="math inline">\(x = 0\)</span>: its left-hand derivative there is <span class="math inline">\(-1\)</span> and its right-hand derivative is <span class="math inline">\(+1\)</span> (<a href="./calculus-derivatives.html#exm-one-sided-derivative">Example&nbsp;6 in Derivatives</a>).</p>
-<p>This <a href="https://morrison-lab.github.io/mcs/proof-writing.html#def-counterexample">counterexample</a> shows that the <a href="https://morrison-lab.github.io/mcs/proof-writing.html#def-converse">converse</a> of <a href="#/thm-diff-implies-cont" class="quarto-xref">Theorem&nbsp;2</a> fails: continuity does not imply differentiability. See <a href="#/fig-abs-value" class="quarto-xref">Figure&nbsp;2</a>.</p>
+<p>This <a href="https://morrison-lab.github.io/mcs/proof-writing.html#def-counterexample">counterexample</a> shows that the <a href="https://morrison-lab.github.io/mcs/proof-writing.html#def-converse">converse</a> of <a href="#/thm-diff-implies-cont" class="quarto-xref">Theorem&nbsp;2</a> fails: continuity does not imply differentiability. See <a href="#/fig-abs-value" class="quarto-xref">Figure&nbsp;4</a>.</p>
 <hr>
-<details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-label="1"></a>ggplot2<span class="sc">::</span><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb3-2"><a aria-label="2"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_function</span>(<span class="at">fun =</span> abs, <span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>), <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb3-3"><a aria-label="3"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_point</span>(ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="dv">0</span>), <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb3-4"><a aria-label="4"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Input, x"</span>, <span class="at">y =</span> <span class="fu">expression</span>(<span class="st">"Output, "</span> <span class="sc">*</span> <span class="fu">f</span>(x) <span class="sc">==</span> <span class="fu">abs</span>(x))) <span class="sc">+</span></span>
-<span id="cb3-5"><a aria-label="5"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-label="1"></a>ggplot2<span class="sc">::</span><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb5-2"><a aria-label="2"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_function</span>(<span class="at">fun =</span> abs, <span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>), <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb5-3"><a aria-label="3"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_point</span>(ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="dv">0</span>), <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb5-4"><a aria-label="4"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Input, x"</span>, <span class="at">y =</span> <span class="fu">expression</span>(<span class="st">"Output, "</span> <span class="sc">*</span> <span class="fu">f</span>(x) <span class="sc">==</span> <span class="fu">abs</span>(x))) <span class="sc">+</span></span>
+<span id="cb5-5"><a aria-label="5"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div id="fig-abs-value" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-abs-value-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: <span class="math inline">\(f(x) = \mathopen{}\left|x\right|\mathclose{}\)</span> has a sharp corner at <span class="math inline">\(x = 0\)</span> (not differentiable there) but is continuous everywhere: no gaps or jumps.
+Figure&nbsp;4: <span class="math inline">\(f(x) = \mathopen{}\left|x\right|\mathclose{}\)</span> has a sharp corner at <span class="math inline">\(x = 0\)</span> (not differentiable there) but is continuous everywhere: no gaps or jumps.
 </figcaption><div aria-describedby="fig-abs-value-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><a href="calculus-integration_files/figure-html/abs-value-code-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;2: f(x) = \mathopen{}\left|x\right|\mathclose{} has a sharp corner at x = 0 (not differentiable there) but is continuous everywhere: no gaps or jumps."><img data-src="calculus-integration_files/figure-html/abs-value-code-1.png" width="672"></a></p>
+<figure><p><a href="calculus-integration_files/figure-html/abs-value-code-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;4: f(x) = \mathopen{}\left|x\right|\mathclose{} has a sharp corner at x = 0 (not differentiable there) but is continuous everywhere: no gaps or jumps."><img data-src="calculus-integration_files/figure-html/abs-value-code-1.png" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -902,7 +962,7 @@ Figure&nbsp;2: <span class="math inline">\(f(x) = \mathopen{}\left|x\right|\math
 <p><span class="citation" data-cites="larsonCalc11e"><a href="#/references" role="doc-biblioref" onclick="">[2]</a>, Theorem 4.4, p.&nbsp;272</span></p>
 </div>
 <div id="exm-cont-implies-int" class="theorem example">
-<p><span class="theorem-title"><strong>Example 17 (Continuous, hence integrable: polynomials)</strong></span> Every <a href="./algebra-exponentials.html#def-polynomial">polynomial</a> is continuous on <span class="math inline">\(\mathbb{R}\)</span>, so by <a href="#/thm-cont-implies-int" class="quarto-xref">Theorem&nbsp;3</a> every polynomial is integrable on every closed interval <span class="math inline">\([a, b]\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 17 (Continuous, hence integrable: polynomials)</strong></span> Every <a href="./algebra-polynomials.html#def-polynomial">polynomial</a> is continuous on <span class="math inline">\(\mathbb{R}\)</span>, so by <a href="#/thm-cont-implies-int" class="quarto-xref">Theorem&nbsp;3</a> every polynomial is integrable on every closed interval <span class="math inline">\([a, b]\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-int-not-cont" class="theorem example">
 <p><span class="theorem-title"><strong>Example 18 (Integrable but not continuous: a step function)</strong></span> Let <span class="math inline">\(f(x) = 0\)</span> for <span class="math inline">\(x &lt; \tfrac{1}{2}\)</span> and <span class="math inline">\(f(x) = 1\)</span> for <span class="math inline">\(x \ge \tfrac{1}{2}\)</span>. Then <span class="math inline">\(f\)</span> has a jump discontinuity (<a href="#/def-jump-discontinuity" class="quarto-xref">Definition&nbsp;6</a>) at <span class="math inline">\(x = \tfrac{1}{2}\)</span>, but it is integrable on <span class="math inline">\([0, 1]\)</span>:</p>
@@ -914,41 +974,41 @@ Figure&nbsp;2: <span class="math inline">\(f(x) = \mathopen{}\left|x\right|\math
 &amp;= \tfrac{1}{2}.
 \end{aligned}
 \]</span></p>
-<p>This counterexample shows that the converse of <a href="#/thm-cont-implies-int" class="quarto-xref">Theorem&nbsp;3</a> fails: integrability does not imply continuity. See <a href="#/fig-step" class="quarto-xref">Figure&nbsp;3</a>.</p>
+<p>This counterexample shows that the converse of <a href="#/thm-cont-implies-int" class="quarto-xref">Theorem&nbsp;3</a> fails: integrability does not imply continuity. See <a href="#/fig-step" class="quarto-xref">Figure&nbsp;5</a>.</p>
 <hr>
-<details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-label="1"></a>step_df <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(</span>
-<span id="cb4-2"><a aria-label="2"></a>  <span class="at">x =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.5</span>, <span class="fl">0.5</span>, <span class="dv">1</span>),</span>
-<span id="cb4-3"><a aria-label="3"></a>  <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>),</span>
-<span id="cb4-4"><a aria-label="4"></a>  <span class="at">segment =</span> <span class="fu">c</span>(<span class="st">"left"</span>, <span class="st">"left"</span>, <span class="st">"right"</span>, <span class="st">"right"</span>)</span>
-<span id="cb4-5"><a aria-label="5"></a>)</span>
-<span id="cb4-6"><a aria-label="6"></a></span>
-<span id="cb4-7"><a aria-label="7"></a>ggplot2<span class="sc">::</span><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb4-8"><a aria-label="8"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_rect</span>(</span>
-<span id="cb4-9"><a aria-label="9"></a>    ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">xmin =</span> <span class="fl">0.5</span>, <span class="at">xmax =</span> <span class="dv">1</span>, <span class="at">ymin =</span> <span class="dv">0</span>, <span class="at">ymax =</span> <span class="dv">1</span>),</span>
-<span id="cb4-10"><a aria-label="10"></a>    <span class="at">fill =</span> <span class="st">"steelblue"</span>, <span class="at">alpha =</span> <span class="fl">0.3</span></span>
-<span id="cb4-11"><a aria-label="11"></a>  ) <span class="sc">+</span></span>
-<span id="cb4-12"><a aria-label="12"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_line</span>(</span>
-<span id="cb4-13"><a aria-label="13"></a>    <span class="at">data =</span> step_df,</span>
-<span id="cb4-14"><a aria-label="14"></a>    ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">group =</span> segment),</span>
-<span id="cb4-15"><a aria-label="15"></a>    <span class="at">linewidth =</span> <span class="dv">1</span></span>
-<span id="cb4-16"><a aria-label="16"></a>  ) <span class="sc">+</span></span>
-<span id="cb4-17"><a aria-label="17"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_point</span>(ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> <span class="fl">0.5</span>, <span class="at">y =</span> <span class="dv">0</span>), <span class="at">shape =</span> <span class="dv">1</span>, <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb4-18"><a aria-label="18"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_point</span>(ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> <span class="fl">0.5</span>, <span class="at">y =</span> <span class="dv">1</span>), <span class="at">shape =</span> <span class="dv">16</span>, <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb4-19"><a aria-label="19"></a>  ggplot2<span class="sc">::</span><span class="fu">scale_x_continuous</span>(</span>
-<span id="cb4-20"><a aria-label="20"></a>    <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.5</span>, <span class="dv">1</span>),</span>
-<span id="cb4-21"><a aria-label="21"></a>    <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"0"</span>, <span class="st">"1/2"</span>, <span class="st">"1"</span>)</span>
-<span id="cb4-22"><a aria-label="22"></a>  ) <span class="sc">+</span></span>
-<span id="cb4-23"><a aria-label="23"></a>  ggplot2<span class="sc">::</span><span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.1</span>, <span class="fl">1.2</span>)) <span class="sc">+</span></span>
-<span id="cb4-24"><a aria-label="24"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Input, x"</span>, <span class="at">y =</span> <span class="st">"Output, f(x)"</span>) <span class="sc">+</span></span>
-<span id="cb4-25"><a aria-label="25"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a aria-label="1"></a>step_df <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(</span>
+<span id="cb6-2"><a aria-label="2"></a>  <span class="at">x =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.5</span>, <span class="fl">0.5</span>, <span class="dv">1</span>),</span>
+<span id="cb6-3"><a aria-label="3"></a>  <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>),</span>
+<span id="cb6-4"><a aria-label="4"></a>  <span class="at">segment =</span> <span class="fu">c</span>(<span class="st">"left"</span>, <span class="st">"left"</span>, <span class="st">"right"</span>, <span class="st">"right"</span>)</span>
+<span id="cb6-5"><a aria-label="5"></a>)</span>
+<span id="cb6-6"><a aria-label="6"></a></span>
+<span id="cb6-7"><a aria-label="7"></a>ggplot2<span class="sc">::</span><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb6-8"><a aria-label="8"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_rect</span>(</span>
+<span id="cb6-9"><a aria-label="9"></a>    ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">xmin =</span> <span class="fl">0.5</span>, <span class="at">xmax =</span> <span class="dv">1</span>, <span class="at">ymin =</span> <span class="dv">0</span>, <span class="at">ymax =</span> <span class="dv">1</span>),</span>
+<span id="cb6-10"><a aria-label="10"></a>    <span class="at">fill =</span> <span class="st">"steelblue"</span>, <span class="at">alpha =</span> <span class="fl">0.3</span></span>
+<span id="cb6-11"><a aria-label="11"></a>  ) <span class="sc">+</span></span>
+<span id="cb6-12"><a aria-label="12"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_line</span>(</span>
+<span id="cb6-13"><a aria-label="13"></a>    <span class="at">data =</span> step_df,</span>
+<span id="cb6-14"><a aria-label="14"></a>    ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">group =</span> segment),</span>
+<span id="cb6-15"><a aria-label="15"></a>    <span class="at">linewidth =</span> <span class="dv">1</span></span>
+<span id="cb6-16"><a aria-label="16"></a>  ) <span class="sc">+</span></span>
+<span id="cb6-17"><a aria-label="17"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_point</span>(ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> <span class="fl">0.5</span>, <span class="at">y =</span> <span class="dv">0</span>), <span class="at">shape =</span> <span class="dv">1</span>, <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb6-18"><a aria-label="18"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_point</span>(ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> <span class="fl">0.5</span>, <span class="at">y =</span> <span class="dv">1</span>), <span class="at">shape =</span> <span class="dv">16</span>, <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb6-19"><a aria-label="19"></a>  ggplot2<span class="sc">::</span><span class="fu">scale_x_continuous</span>(</span>
+<span id="cb6-20"><a aria-label="20"></a>    <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.5</span>, <span class="dv">1</span>),</span>
+<span id="cb6-21"><a aria-label="21"></a>    <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"0"</span>, <span class="st">"1/2"</span>, <span class="st">"1"</span>)</span>
+<span id="cb6-22"><a aria-label="22"></a>  ) <span class="sc">+</span></span>
+<span id="cb6-23"><a aria-label="23"></a>  ggplot2<span class="sc">::</span><span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.1</span>, <span class="fl">1.2</span>)) <span class="sc">+</span></span>
+<span id="cb6-24"><a aria-label="24"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Input, x"</span>, <span class="at">y =</span> <span class="st">"Output, f(x)"</span>) <span class="sc">+</span></span>
+<span id="cb6-25"><a aria-label="25"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div id="fig-step" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-step-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: Step function: <span class="math inline">\(f(x) = 0\)</span> on <span class="math inline">\([0, \tfrac{1}{2})\)</span> (open circle at the jump) and <span class="math inline">\(f(x) = 1\)</span> on <span class="math inline">\([\tfrac{1}{2}, 1]\)</span> (filled circle). The shaded rectangle has area <span class="math inline">\(\tfrac{1}{2}\)</span>, matching the integral computed in <a href="#/exm-int-not-cont" class="quarto-xref">Example&nbsp;18</a>.
+Figure&nbsp;5: Step function: <span class="math inline">\(f(x) = 0\)</span> on <span class="math inline">\([0, \tfrac{1}{2})\)</span> (open circle at the jump) and <span class="math inline">\(f(x) = 1\)</span> on <span class="math inline">\([\tfrac{1}{2}, 1]\)</span> (filled circle). The shaded rectangle has area <span class="math inline">\(\tfrac{1}{2}\)</span>, matching the integral computed in <a href="#/exm-int-not-cont" class="quarto-xref">Example&nbsp;18</a>.
 </figcaption><div aria-describedby="fig-step-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><a href="calculus-integration_files/figure-html/step-code-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;3: Step function: f(x) = 0 on [0, \tfrac{1}{2}) (open circle at the jump) and f(x) = 1 on [\tfrac{1}{2}, 1] (filled circle). The shaded rectangle has area \tfrac{1}{2}, matching the integral computed in Example&nbsp;18."><img data-src="calculus-integration_files/figure-html/step-code-1.png" width="672"></a></p>
+<figure><p><a href="calculus-integration_files/figure-html/step-code-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;5: Step function: f(x) = 0 on [0, \tfrac{1}{2}) (open circle at the jump) and f(x) = 1 on [\tfrac{1}{2}, 1] (filled circle). The shaded rectangle has area \tfrac{1}{2}, matching the integral computed in Example&nbsp;18."><img data-src="calculus-integration_files/figure-html/step-code-1.png" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -1346,29 +1406,29 @@ F'(x) &amp;= 2x \\
 &amp;= f(x),
 \end{aligned}
 \]</span></p>
-<p>as <a href="#/thm-ftc-part1" class="quarto-xref">Theorem&nbsp;5</a> predicts. <a href="#/fig-ftc-part1" class="quarto-xref">Figure&nbsp;4</a> shows the integrand on the left (shaded area equals <span class="math inline">\(F(x)\)</span> at each <span class="math inline">\(x\)</span>) and the accumulation function <span class="math inline">\(F(x) = x^2\)</span> on the right (its slope at <span class="math inline">\(x\)</span> equals <span class="math inline">\(f(x) = 2x\)</span>).</p>
+<p>as <a href="#/thm-ftc-part1" class="quarto-xref">Theorem&nbsp;5</a> predicts. <a href="#/fig-ftc-part1" class="quarto-xref">Figure&nbsp;6</a> shows the integrand on the left (shaded area equals <span class="math inline">\(F(x)\)</span> at each <span class="math inline">\(x\)</span>) and the accumulation function <span class="math inline">\(F(x) = x^2\)</span> on the right (its slope at <span class="math inline">\(x\)</span> equals <span class="math inline">\(f(x) = 2x\)</span>).</p>
 <hr>
 <div id="fig-ftc-part1" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-ftc-part1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: vertical lines mark <span class="math inline">\(x \in \{1, 1.5, 2\}\)</span>. Right: <span class="math inline">\(F(x) = x^2\)</span>; for each marked <span class="math inline">\(x\)</span>, the tangent slope equals <span class="math inline">\(f(x) = 2x\)</span>.
+Figure&nbsp;6: vertical lines mark <span class="math inline">\(x \in \{1, 1.5, 2\}\)</span>. Right: <span class="math inline">\(F(x) = x^2\)</span>; for each marked <span class="math inline">\(x\)</span>, the tangent slope equals <span class="math inline">\(f(x) = 2x\)</span>.
 </figcaption><div aria-describedby="fig-ftc-part1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-ftc-part1" style="flex-basis: 50.0%;justify-content: flex-start;">
-<details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-label="1"></a>ggplot2<span class="sc">::</span><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb5-2"><a aria-label="2"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_area</span>(</span>
-<span id="cb5-3"><a aria-label="3"></a>    <span class="at">data =</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(<span class="at">t =</span> <span class="fu">seq</span>(<span class="dv">0</span>, x_focus, <span class="at">length.out =</span> <span class="dv">200</span>)),</span>
-<span id="cb5-4"><a aria-label="4"></a>    ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> t, <span class="at">y =</span> <span class="dv">2</span> <span class="sc">*</span> t),</span>
-<span id="cb5-5"><a aria-label="5"></a>    <span class="at">fill =</span> <span class="st">"steelblue"</span>, <span class="at">alpha =</span> <span class="fl">0.4</span></span>
-<span id="cb5-6"><a aria-label="6"></a>  ) <span class="sc">+</span></span>
-<span id="cb5-7"><a aria-label="7"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_function</span>(<span class="at">fun =</span> \(t) <span class="dv">2</span> <span class="sc">*</span> t, <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">2.2</span>), <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb5-8"><a aria-label="8"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_vline</span>(</span>
-<span id="cb5-9"><a aria-label="9"></a>    <span class="at">data =</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(<span class="at">x =</span> x_marks),</span>
-<span id="cb5-10"><a aria-label="10"></a>    ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">xintercept =</span> x, <span class="at">color =</span> <span class="fu">factor</span>(x)),</span>
-<span id="cb5-11"><a aria-label="11"></a>    <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">linewidth =</span> <span class="fl">0.6</span></span>
-<span id="cb5-12"><a aria-label="12"></a>  ) <span class="sc">+</span></span>
-<span id="cb5-13"><a aria-label="13"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Input, t"</span>, <span class="at">y =</span> <span class="st">"Output, f(t) = 2t"</span>, <span class="at">color =</span> <span class="st">"x"</span>) <span class="sc">+</span></span>
-<span id="cb5-14"><a aria-label="14"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb5-15"><a aria-label="15"></a>  ggplot2<span class="sc">::</span><span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a aria-label="1"></a>ggplot2<span class="sc">::</span><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb7-2"><a aria-label="2"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_area</span>(</span>
+<span id="cb7-3"><a aria-label="3"></a>    <span class="at">data =</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(<span class="at">t =</span> <span class="fu">seq</span>(<span class="dv">0</span>, x_focus, <span class="at">length.out =</span> <span class="dv">200</span>)),</span>
+<span id="cb7-4"><a aria-label="4"></a>    ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> t, <span class="at">y =</span> <span class="dv">2</span> <span class="sc">*</span> t),</span>
+<span id="cb7-5"><a aria-label="5"></a>    <span class="at">fill =</span> <span class="st">"steelblue"</span>, <span class="at">alpha =</span> <span class="fl">0.4</span></span>
+<span id="cb7-6"><a aria-label="6"></a>  ) <span class="sc">+</span></span>
+<span id="cb7-7"><a aria-label="7"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_function</span>(<span class="at">fun =</span> \(t) <span class="dv">2</span> <span class="sc">*</span> t, <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">2.2</span>), <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb7-8"><a aria-label="8"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_vline</span>(</span>
+<span id="cb7-9"><a aria-label="9"></a>    <span class="at">data =</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(<span class="at">x =</span> x_marks),</span>
+<span id="cb7-10"><a aria-label="10"></a>    ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">xintercept =</span> x, <span class="at">color =</span> <span class="fu">factor</span>(x)),</span>
+<span id="cb7-11"><a aria-label="11"></a>    <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">linewidth =</span> <span class="fl">0.6</span></span>
+<span id="cb7-12"><a aria-label="12"></a>  ) <span class="sc">+</span></span>
+<span id="cb7-13"><a aria-label="13"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Input, t"</span>, <span class="at">y =</span> <span class="st">"Output, f(t) = 2t"</span>, <span class="at">color =</span> <span class="st">"x"</span>) <span class="sc">+</span></span>
+<span id="cb7-14"><a aria-label="14"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb7-15"><a aria-label="15"></a>  ggplot2<span class="sc">::</span><span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div id="fig-ftc-part1-left" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-subfloat-fig"><figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-ftc-part1-left-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (a) <span class="math inline">\(f(t) = 2t\)</span>; shaded area equals <span class="math inline">\(F(1.5) = 2.25\)</span>; vertical lines mark <span class="math inline">\(x \in \{1, 1.5, 2\}\)</span>.
@@ -1376,7 +1436,7 @@ Figure&nbsp;4: vertical lines mark <span class="math inline">\(x \in \{1, 1.5, 2
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><a href="calculus-integration_files/figure-html/ftc-part1-left-code-1.png" class="lightbox" data-gallery="fig-ftc-part1" title="Figure&nbsp;4&nbsp;(a): f(t) = 2t; shaded area equals F(1.5) = 2.25; vertical lines mark x \in \{1, 1.5, 2\}."><img data-src="calculus-integration_files/figure-html/ftc-part1-left-code-1.png" data-ref-parent="fig-ftc-part1" width="672"></a></p>
+<figure><p><a href="calculus-integration_files/figure-html/ftc-part1-left-code-1.png" class="lightbox" data-gallery="fig-ftc-part1" title="Figure&nbsp;6&nbsp;(a): f(t) = 2t; shaded area equals F(1.5) = 2.25; vertical lines mark x \in \{1, 1.5, 2\}."><img data-src="calculus-integration_files/figure-html/ftc-part1-left-code-1.png" data-ref-parent="fig-ftc-part1" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -1386,35 +1446,35 @@ Figure&nbsp;4: vertical lines mark <span class="math inline">\(x \in \{1, 1.5, 2
 </div>
 </div>
 <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-ftc-part1" style="flex-basis: 50.0%;justify-content: flex-start;">
-<details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a aria-label="1"></a>slope_df <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(</span>
-<span id="cb6-2"><a aria-label="2"></a>  <span class="at">x =</span> x_marks,</span>
-<span id="cb6-3"><a aria-label="3"></a>  <span class="at">Fx =</span> x_marks<span class="sc">^</span><span class="dv">2</span>,</span>
-<span id="cb6-4"><a aria-label="4"></a>  <span class="at">slope =</span> <span class="dv">2</span> <span class="sc">*</span> x_marks</span>
-<span id="cb6-5"><a aria-label="5"></a>)</span>
-<span id="cb6-6"><a aria-label="6"></a></span>
-<span id="cb6-7"><a aria-label="7"></a>ggplot2<span class="sc">::</span><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb6-8"><a aria-label="8"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_function</span>(<span class="at">fun =</span> \(x) x<span class="sc">^</span><span class="dv">2</span>, <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">2.2</span>), <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb6-9"><a aria-label="9"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_point</span>(</span>
-<span id="cb6-10"><a aria-label="10"></a>    <span class="at">data =</span> slope_df,</span>
-<span id="cb6-11"><a aria-label="11"></a>    ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> Fx, <span class="at">color =</span> <span class="fu">factor</span>(x)),</span>
-<span id="cb6-12"><a aria-label="12"></a>    <span class="at">size =</span> <span class="dv">3</span></span>
-<span id="cb6-13"><a aria-label="13"></a>  ) <span class="sc">+</span></span>
-<span id="cb6-14"><a aria-label="14"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_segment</span>(</span>
-<span id="cb6-15"><a aria-label="15"></a>    <span class="at">data =</span> slope_df,</span>
-<span id="cb6-16"><a aria-label="16"></a>    ggplot2<span class="sc">::</span><span class="fu">aes</span>(</span>
-<span id="cb6-17"><a aria-label="17"></a>      <span class="at">x =</span> x <span class="sc">-</span> <span class="fl">0.3</span>, <span class="at">xend =</span> x <span class="sc">+</span> <span class="fl">0.3</span>,</span>
-<span id="cb6-18"><a aria-label="18"></a>      <span class="at">y =</span> Fx <span class="sc">-</span> <span class="fl">0.3</span> <span class="sc">*</span> slope, <span class="at">yend =</span> Fx <span class="sc">+</span> <span class="fl">0.3</span> <span class="sc">*</span> slope,</span>
-<span id="cb6-19"><a aria-label="19"></a>      <span class="at">color =</span> <span class="fu">factor</span>(x)</span>
-<span id="cb6-20"><a aria-label="20"></a>    ),</span>
-<span id="cb6-21"><a aria-label="21"></a>    <span class="at">linewidth =</span> <span class="fl">0.8</span></span>
-<span id="cb6-22"><a aria-label="22"></a>  ) <span class="sc">+</span></span>
-<span id="cb6-23"><a aria-label="23"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(</span>
-<span id="cb6-24"><a aria-label="24"></a>    <span class="at">x =</span> <span class="st">"Upper limit, x"</span>,</span>
-<span id="cb6-25"><a aria-label="25"></a>    <span class="at">y =</span> <span class="fu">expression</span>(<span class="st">"Accumulated area, "</span> <span class="sc">*</span> <span class="fu">F</span>(x) <span class="sc">==</span> x<span class="sc">^</span><span class="dv">2</span>),</span>
-<span id="cb6-26"><a aria-label="26"></a>    <span class="at">color =</span> <span class="st">"x"</span></span>
-<span id="cb6-27"><a aria-label="27"></a>  ) <span class="sc">+</span></span>
-<span id="cb6-28"><a aria-label="28"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb6-29"><a aria-label="29"></a>  ggplot2<span class="sc">::</span><span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a aria-label="1"></a>slope_df <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(</span>
+<span id="cb8-2"><a aria-label="2"></a>  <span class="at">x =</span> x_marks,</span>
+<span id="cb8-3"><a aria-label="3"></a>  <span class="at">Fx =</span> x_marks<span class="sc">^</span><span class="dv">2</span>,</span>
+<span id="cb8-4"><a aria-label="4"></a>  <span class="at">slope =</span> <span class="dv">2</span> <span class="sc">*</span> x_marks</span>
+<span id="cb8-5"><a aria-label="5"></a>)</span>
+<span id="cb8-6"><a aria-label="6"></a></span>
+<span id="cb8-7"><a aria-label="7"></a>ggplot2<span class="sc">::</span><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb8-8"><a aria-label="8"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_function</span>(<span class="at">fun =</span> \(x) x<span class="sc">^</span><span class="dv">2</span>, <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">2.2</span>), <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb8-9"><a aria-label="9"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_point</span>(</span>
+<span id="cb8-10"><a aria-label="10"></a>    <span class="at">data =</span> slope_df,</span>
+<span id="cb8-11"><a aria-label="11"></a>    ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> Fx, <span class="at">color =</span> <span class="fu">factor</span>(x)),</span>
+<span id="cb8-12"><a aria-label="12"></a>    <span class="at">size =</span> <span class="dv">3</span></span>
+<span id="cb8-13"><a aria-label="13"></a>  ) <span class="sc">+</span></span>
+<span id="cb8-14"><a aria-label="14"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_segment</span>(</span>
+<span id="cb8-15"><a aria-label="15"></a>    <span class="at">data =</span> slope_df,</span>
+<span id="cb8-16"><a aria-label="16"></a>    ggplot2<span class="sc">::</span><span class="fu">aes</span>(</span>
+<span id="cb8-17"><a aria-label="17"></a>      <span class="at">x =</span> x <span class="sc">-</span> <span class="fl">0.3</span>, <span class="at">xend =</span> x <span class="sc">+</span> <span class="fl">0.3</span>,</span>
+<span id="cb8-18"><a aria-label="18"></a>      <span class="at">y =</span> Fx <span class="sc">-</span> <span class="fl">0.3</span> <span class="sc">*</span> slope, <span class="at">yend =</span> Fx <span class="sc">+</span> <span class="fl">0.3</span> <span class="sc">*</span> slope,</span>
+<span id="cb8-19"><a aria-label="19"></a>      <span class="at">color =</span> <span class="fu">factor</span>(x)</span>
+<span id="cb8-20"><a aria-label="20"></a>    ),</span>
+<span id="cb8-21"><a aria-label="21"></a>    <span class="at">linewidth =</span> <span class="fl">0.8</span></span>
+<span id="cb8-22"><a aria-label="22"></a>  ) <span class="sc">+</span></span>
+<span id="cb8-23"><a aria-label="23"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(</span>
+<span id="cb8-24"><a aria-label="24"></a>    <span class="at">x =</span> <span class="st">"Upper limit, x"</span>,</span>
+<span id="cb8-25"><a aria-label="25"></a>    <span class="at">y =</span> <span class="fu">expression</span>(<span class="st">"Accumulated area, "</span> <span class="sc">*</span> <span class="fu">F</span>(x) <span class="sc">==</span> x<span class="sc">^</span><span class="dv">2</span>),</span>
+<span id="cb8-26"><a aria-label="26"></a>    <span class="at">color =</span> <span class="st">"x"</span></span>
+<span id="cb8-27"><a aria-label="27"></a>  ) <span class="sc">+</span></span>
+<span id="cb8-28"><a aria-label="28"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb8-29"><a aria-label="29"></a>  ggplot2<span class="sc">::</span><span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div id="fig-ftc-part1-right" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-subfloat-fig"><figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-ftc-part1-right-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (b) <span class="math inline">\(F(x) = x^2\)</span>; tangent slope at each marked <span class="math inline">\(x\)</span> equals <span class="math inline">\(f(x) = 2x\)</span>.
@@ -1422,7 +1482,7 @@ Figure&nbsp;4: vertical lines mark <span class="math inline">\(x \in \{1, 1.5, 2
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><a href="calculus-integration_files/figure-html/ftc-part1-right-code-1.png" class="lightbox" data-gallery="fig-ftc-part1" title="Figure&nbsp;4&nbsp;(b): F(x) = x^2; tangent slope at each marked x equals f(x) = 2x."><img data-src="calculus-integration_files/figure-html/ftc-part1-right-code-1.png" data-ref-parent="fig-ftc-part1" width="672"></a></p>
+<figure><p><a href="calculus-integration_files/figure-html/ftc-part1-right-code-1.png" class="lightbox" data-gallery="fig-ftc-part1" title="Figure&nbsp;6&nbsp;(b): F(x) = x^2; tangent slope at each marked x equals f(x) = 2x."><img data-src="calculus-integration_files/figure-html/ftc-part1-right-code-1.png" data-ref-parent="fig-ftc-part1" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -1515,26 +1575,26 @@ F(2)
 &amp;= 0.865
 \end{aligned}
 \]</span></p>
-<p>See <a href="#/fig-exp-pdf-cdf" class="quarto-xref">Figure&nbsp;5</a>.</p>
+<p>See <a href="#/fig-exp-pdf-cdf" class="quarto-xref">Figure&nbsp;7</a>.</p>
 <hr>
 <div id="fig-exp-pdf-cdf" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-exp-pdf-cdf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5: Exponential distribution with <span class="math inline">\({\lambda}= 1\)</span>. Left: the PDF <span class="math inline">\(f(t) = {\lambda}\text{e}^{-{\lambda}t}\)</span>; the shaded area under the curve from <span class="math inline">\(0\)</span> to <span class="math inline">\(2\)</span> equals <span class="math inline">\(F(2) \approx 0.865\)</span>. Right: the CDF <span class="math inline">\(F(t) = 1 - \text{e}^{-{\lambda}t}\)</span>; the dashed lines mark the value <span class="math inline">\(F(2)\)</span> computed via FTC Part 2.
+Figure&nbsp;7: Exponential distribution with <span class="math inline">\({\lambda}= 1\)</span>. Left: the PDF <span class="math inline">\(f(t) = {\lambda}\text{e}^{-{\lambda}t}\)</span>; the shaded area under the curve from <span class="math inline">\(0\)</span> to <span class="math inline">\(2\)</span> equals <span class="math inline">\(F(2) \approx 0.865\)</span>. Right: the CDF <span class="math inline">\(F(t) = 1 - \text{e}^{-{\lambda}t}\)</span>; the dashed lines mark the value <span class="math inline">\(F(2)\)</span> computed via FTC Part 2.
 </figcaption><div aria-describedby="fig-exp-pdf-cdf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-exp-pdf-cdf" style="flex-basis: 50.0%;justify-content: flex-start;">
-<details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a aria-label="1"></a>ggplot2<span class="sc">::</span><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb7-2"><a aria-label="2"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_area</span>(</span>
-<span id="cb7-3"><a aria-label="3"></a>    <span class="at">data =</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(<span class="at">t =</span> <span class="fu">seq</span>(<span class="dv">0</span>, t_focus, <span class="at">length.out =</span> <span class="dv">300</span>)),</span>
-<span id="cb7-4"><a aria-label="4"></a>    ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> t, <span class="at">y =</span> lambda <span class="sc">*</span> <span class="fu">exp</span>(<span class="sc">-</span>lambda <span class="sc">*</span> t)),</span>
-<span id="cb7-5"><a aria-label="5"></a>    <span class="at">fill =</span> <span class="st">"steelblue"</span>, <span class="at">alpha =</span> <span class="fl">0.4</span></span>
-<span id="cb7-6"><a aria-label="6"></a>  ) <span class="sc">+</span></span>
-<span id="cb7-7"><a aria-label="7"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_function</span>(</span>
-<span id="cb7-8"><a aria-label="8"></a>    <span class="at">fun =</span> \(t) lambda <span class="sc">*</span> <span class="fu">exp</span>(<span class="sc">-</span>lambda <span class="sc">*</span> t),</span>
-<span id="cb7-9"><a aria-label="9"></a>    <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>, t_max), <span class="at">linewidth =</span> <span class="dv">1</span></span>
-<span id="cb7-10"><a aria-label="10"></a>  ) <span class="sc">+</span></span>
-<span id="cb7-11"><a aria-label="11"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Time, t"</span>, <span class="at">y =</span> <span class="st">"Density, f(t)"</span>) <span class="sc">+</span></span>
-<span id="cb7-12"><a aria-label="12"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a aria-label="1"></a>ggplot2<span class="sc">::</span><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb9-2"><a aria-label="2"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_area</span>(</span>
+<span id="cb9-3"><a aria-label="3"></a>    <span class="at">data =</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(<span class="at">t =</span> <span class="fu">seq</span>(<span class="dv">0</span>, t_focus, <span class="at">length.out =</span> <span class="dv">300</span>)),</span>
+<span id="cb9-4"><a aria-label="4"></a>    ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> t, <span class="at">y =</span> lambda <span class="sc">*</span> <span class="fu">exp</span>(<span class="sc">-</span>lambda <span class="sc">*</span> t)),</span>
+<span id="cb9-5"><a aria-label="5"></a>    <span class="at">fill =</span> <span class="st">"steelblue"</span>, <span class="at">alpha =</span> <span class="fl">0.4</span></span>
+<span id="cb9-6"><a aria-label="6"></a>  ) <span class="sc">+</span></span>
+<span id="cb9-7"><a aria-label="7"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_function</span>(</span>
+<span id="cb9-8"><a aria-label="8"></a>    <span class="at">fun =</span> \(t) lambda <span class="sc">*</span> <span class="fu">exp</span>(<span class="sc">-</span>lambda <span class="sc">*</span> t),</span>
+<span id="cb9-9"><a aria-label="9"></a>    <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>, t_max), <span class="at">linewidth =</span> <span class="dv">1</span></span>
+<span id="cb9-10"><a aria-label="10"></a>  ) <span class="sc">+</span></span>
+<span id="cb9-11"><a aria-label="11"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Time, t"</span>, <span class="at">y =</span> <span class="st">"Density, f(t)"</span>) <span class="sc">+</span></span>
+<span id="cb9-12"><a aria-label="12"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div id="fig-exp-pdf-cdf-pdf" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-subfloat-fig"><figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-exp-pdf-cdf-pdf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (a) PDF with <span class="math inline">\({\lambda}= 1\)</span>; shaded area equals <span class="math inline">\(F(2) \approx 0.865\)</span>.
@@ -1542,7 +1602,7 @@ Figure&nbsp;5: Exponential distribution with <span class="math inline">\({\lambd
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><a href="calculus-integration_files/figure-html/exp-pdf-cdf-pdf-code-1.png" class="lightbox" data-gallery="fig-exp-pdf-cdf" title="Figure&nbsp;5&nbsp;(a): PDF with {\lambda}= 1; shaded area equals F(2) \approx 0.865."><img data-src="calculus-integration_files/figure-html/exp-pdf-cdf-pdf-code-1.png" data-ref-parent="fig-exp-pdf-cdf" width="672"></a></p>
+<figure><p><a href="calculus-integration_files/figure-html/exp-pdf-cdf-pdf-code-1.png" class="lightbox" data-gallery="fig-exp-pdf-cdf" title="Figure&nbsp;7&nbsp;(a): PDF with {\lambda}= 1; shaded area equals F(2) \approx 0.865."><img data-src="calculus-integration_files/figure-html/exp-pdf-cdf-pdf-code-1.png" data-ref-parent="fig-exp-pdf-cdf" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -1552,25 +1612,25 @@ Figure&nbsp;5: Exponential distribution with <span class="math inline">\({\lambd
 </div>
 </div>
 <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-exp-pdf-cdf" style="flex-basis: 50.0%;justify-content: flex-start;">
-<details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a aria-label="1"></a>ggplot2<span class="sc">::</span><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb8-2"><a aria-label="2"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_function</span>(</span>
-<span id="cb8-3"><a aria-label="3"></a>    <span class="at">fun =</span> \(t) <span class="dv">1</span> <span class="sc">-</span> <span class="fu">exp</span>(<span class="sc">-</span>lambda <span class="sc">*</span> t),</span>
-<span id="cb8-4"><a aria-label="4"></a>    <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>, t_max), <span class="at">linewidth =</span> <span class="dv">1</span></span>
-<span id="cb8-5"><a aria-label="5"></a>  ) <span class="sc">+</span></span>
-<span id="cb8-6"><a aria-label="6"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_point</span>(</span>
-<span id="cb8-7"><a aria-label="7"></a>    ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> t_focus, <span class="at">y =</span> F_at_focus),</span>
-<span id="cb8-8"><a aria-label="8"></a>    <span class="at">size =</span> <span class="dv">3</span>, <span class="at">color =</span> <span class="st">"steelblue"</span></span>
-<span id="cb8-9"><a aria-label="9"></a>  ) <span class="sc">+</span></span>
-<span id="cb8-10"><a aria-label="10"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_segment</span>(</span>
-<span id="cb8-11"><a aria-label="11"></a>    ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> t_focus, <span class="at">xend =</span> t_focus, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">yend =</span> F_at_focus),</span>
-<span id="cb8-12"><a aria-label="12"></a>    <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"steelblue"</span></span>
-<span id="cb8-13"><a aria-label="13"></a>  ) <span class="sc">+</span></span>
-<span id="cb8-14"><a aria-label="14"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_segment</span>(</span>
-<span id="cb8-15"><a aria-label="15"></a>    ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">0</span>, <span class="at">xend =</span> t_focus, <span class="at">y =</span> F_at_focus, <span class="at">yend =</span> F_at_focus),</span>
-<span id="cb8-16"><a aria-label="16"></a>    <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"steelblue"</span></span>
-<span id="cb8-17"><a aria-label="17"></a>  ) <span class="sc">+</span></span>
-<span id="cb8-18"><a aria-label="18"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Time, t"</span>, <span class="at">y =</span> <span class="st">"Cumulative probability, F(t)"</span>) <span class="sc">+</span></span>
-<span id="cb8-19"><a aria-label="19"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold"><summary>[Code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a aria-label="1"></a>ggplot2<span class="sc">::</span><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb10-2"><a aria-label="2"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_function</span>(</span>
+<span id="cb10-3"><a aria-label="3"></a>    <span class="at">fun =</span> \(t) <span class="dv">1</span> <span class="sc">-</span> <span class="fu">exp</span>(<span class="sc">-</span>lambda <span class="sc">*</span> t),</span>
+<span id="cb10-4"><a aria-label="4"></a>    <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>, t_max), <span class="at">linewidth =</span> <span class="dv">1</span></span>
+<span id="cb10-5"><a aria-label="5"></a>  ) <span class="sc">+</span></span>
+<span id="cb10-6"><a aria-label="6"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_point</span>(</span>
+<span id="cb10-7"><a aria-label="7"></a>    ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> t_focus, <span class="at">y =</span> F_at_focus),</span>
+<span id="cb10-8"><a aria-label="8"></a>    <span class="at">size =</span> <span class="dv">3</span>, <span class="at">color =</span> <span class="st">"steelblue"</span></span>
+<span id="cb10-9"><a aria-label="9"></a>  ) <span class="sc">+</span></span>
+<span id="cb10-10"><a aria-label="10"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_segment</span>(</span>
+<span id="cb10-11"><a aria-label="11"></a>    ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> t_focus, <span class="at">xend =</span> t_focus, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">yend =</span> F_at_focus),</span>
+<span id="cb10-12"><a aria-label="12"></a>    <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"steelblue"</span></span>
+<span id="cb10-13"><a aria-label="13"></a>  ) <span class="sc">+</span></span>
+<span id="cb10-14"><a aria-label="14"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_segment</span>(</span>
+<span id="cb10-15"><a aria-label="15"></a>    ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">0</span>, <span class="at">xend =</span> t_focus, <span class="at">y =</span> F_at_focus, <span class="at">yend =</span> F_at_focus),</span>
+<span id="cb10-16"><a aria-label="16"></a>    <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"steelblue"</span></span>
+<span id="cb10-17"><a aria-label="17"></a>  ) <span class="sc">+</span></span>
+<span id="cb10-18"><a aria-label="18"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Time, t"</span>, <span class="at">y =</span> <span class="st">"Cumulative probability, F(t)"</span>) <span class="sc">+</span></span>
+<span id="cb10-19"><a aria-label="19"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div id="fig-exp-pdf-cdf-cdf" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-subfloat-fig"><figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-fig" id="fig-exp-pdf-cdf-cdf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (b) CDF with <span class="math inline">\({\lambda}= 1\)</span>; point marks <span class="math inline">\(F(2) \approx 0.865\)</span>.
@@ -1578,7 +1638,7 @@ Figure&nbsp;5: Exponential distribution with <span class="math inline">\({\lambd
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><a href="calculus-integration_files/figure-html/exp-pdf-cdf-cdf-code-1.png" class="lightbox" data-gallery="fig-exp-pdf-cdf" title="Figure&nbsp;5&nbsp;(b): CDF with {\lambda}= 1; point marks F(2) \approx 0.865."><img data-src="calculus-integration_files/figure-html/exp-pdf-cdf-cdf-code-1.png" data-ref-parent="fig-exp-pdf-cdf" width="672"></a></p>
+<figure><p><a href="calculus-integration_files/figure-html/exp-pdf-cdf-cdf-code-1.png" class="lightbox" data-gallery="fig-exp-pdf-cdf" title="Figure&nbsp;7&nbsp;(b): CDF with {\lambda}= 1; point marks F(2) \approx 0.865."><img data-src="calculus-integration_files/figure-html/exp-pdf-cdf-cdf-code-1.png" data-ref-parent="fig-exp-pdf-cdf" width="672"></a></p>
 </figure>
 </div>
 </div>

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-20 01:46:09 (PST)
+Last modified: 2026-11-25 11:14:34 (PST)
 
 # 1 Equalities
 
@@ -150,7 +150,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> *Remark 1* (Powers with real exponents). [Definition 28 in Polynomials, Exponentials and Logarithms](algebra-exponentials.llms.md#def-real-power) extends powers to real exponents when the base is positive.
+> *Remark 1* (Powers with real exponents). [Definition 4 in Exponentials and Logarithms](algebra-exponentials.llms.md#def-real-power) extends powers to real exponents when the base is positive.
 
 > **NOTE:**
 >
@@ -429,7 +429,7 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> **Definition 19 (Local minimizer)** Let $A \subseteq \mathbb{R}^p$ and let $f : A \to \mathbb{R}$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function). A point $x^* \in A$ is a **local minimizer** of $f$ if there is a number $\delta> 0$ such that $f(x^*) \le f(x)$ [for all](https://morrison-lab.github.io/mcs/proof-writing.html#def-universal-quantifier) $x \in A$ in the [open ball](vector-calculus.llms.md#def-ball) ${B_{\delta}\mathopen{}\left(x^*\right)\mathclose{}}$ of radius $\delta$ around $x^*$.
+> **Definition 19 (Local minimizer)** Let $A \subseteq \mathbb{R}^p$ and let $f : A \to \mathbb{R}$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function). A point $x^* \in A$ is a **local minimizer** of $f$ if there is a number $\delta> 0$ such that $f(x^*) \le f(x)$ [for all](https://morrison-lab.github.io/mcs/proof-writing.html#def-universal-quantifier) $x \in A$ in the [open ball](vector-calculus-hessian.llms.md#def-ball) ${B_{\delta}\mathopen{}\left(x^*\right)\mathclose{}}$ of radius $\delta$ around $x^*$.
 
 > **NOTE:**
 >

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-20 01:46:09 (PST)
+Last modified: 2026-11-25 11:14:34 (PST)
 
 # 1 Integration
 
@@ -219,7 +219,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Example 6 (Continuity on** $\lbrack 0, 1\rbrack$ uses one-sided limits at the endpoints) Let $f(x) = \sqrt{x}$, the [square root](algebra-basics.llms.md#def-square-root), defined for $x \ge 0$. Because $f$ is undefined for $x < 0$, only the right-hand limit of $f$ at $0$ makes sense, and [Definition 7](#def-continuous-on) asks only for that one-sided limit at the endpoint $0$. Here $f$ is continuous at every point of $(0, 1)$,
+> **Example 6 (Continuity on** $\lbrack 0, 1\rbrack$ uses one-sided limits at the endpoints) Let $f(x) = \sqrt{x}$, the [square root](algebra-basics.llms.md#def-square-root), defined for $x \ge 0$. Because $f$ is undefined for $x < 0$, only the right-hand limit of $f$ at $0$ makes sense, and [Definition 7](#def-continuous-on-interval) asks only for that [one-sided limit](calculus-derivatives.llms.md#def-one-sided-limit) at the endpoint $0$. Here $f$ is continuous at every point of $(0, 1)$,
 >
 > $$\begin{aligned}
 > \lim_{x \to 0^+} \sqrt{x} &= 0 \\
@@ -233,11 +233,36 @@ Integration is the inverse operation of differentiation: it recovers a function 
 > &= f(1),
 > \end{aligned}$$
 >
-> so $f$ is continuous on $[0, 1]$ ([Definition 7](#def-continuous-on)).
+> so $f$ is [continuous on](#def-continuous-on-interval) $[0, 1]$. [Figure 2](#fig-continuous-on-sqrt) shows its [graph](https://morrison-lab.github.io/mcs/functions.html#def-graph), which has no break anywhere on $[0, 1]$.
+>
+> > **NOTE:**
+> >
+> > Show code
+> >
+> > ``` downlit
+> > x_values <- seq(0, 1, length.out = 401)
+> > root_values <- sqrt(x_values)
+> > curve <- tibble::tibble(x = x_values, y = root_values)
+> > endpoints <- tibble::tribble(
+> >   ~x, ~y,
+> >   0, 0,
+> >   1, 1
+> > )
+> >
+> > curve |>
+> >   ggplot2::ggplot() +
+> >   ggplot2::aes(x = x, y = y) +
+> >   ggplot2::geom_line() +
+> >   ggplot2::geom_point(data = endpoints, size = 2.5)
+> > ```
+> >
+> > [![The graph of the square root of x for x from 0 to 1: an unbroken curve rising steeply from the point (0, 0) and flattening as it reaches the point (1, 1). Both endpoints are marked with filled dots.](calculus-integration_files/figure-html/continuous-on-sqrt-plot-1.png)](calculus-integration_files/figure-html/continuous-on-sqrt-plot-1.png "Figure 2: The square root f(x) = \sqrt{x} on [0, 1]. The curve meets both filled endpoints, (0, 0) and (1, 1), without a jump.")
+> >
+> > Figure 2: The [square root](algebra-basics.llms.md#def-square-root) $f(x) = \sqrt{x}$ on $[0, 1]$. The curve meets both filled [endpoints](https://morrison-lab.github.io/mcs/sets.html#def-interval), $(0, 0)$ and $(1, 1)$, without a jump.
 
 > **NOTE:**
 >
-> **Example 7 (A function not continuous on** $\lbrack 0, 1\rbrack$) Let $f(x) = 0$ for $0 \le x < 1$ and $f(1) = 2$. Conditions 1 and 2 of [Definition 7](#def-continuous-on) hold, but
+> **Example 7 (A function not continuous on** $\lbrack 0, 1\rbrack$) Let $f(x) = 0$ for $0 \le x < 1$ and $f(1) = 2$. Conditions 1 and 2 of [Definition 7](#def-continuous-on-interval) hold, but
 >
 > $$\begin{aligned}
 > \lim_{x \to 1^-} f(x) &= 0 \\
@@ -245,7 +270,32 @@ Integration is the inverse operation of differentiation: it recovers a function 
 > &= f(1),
 > \end{aligned}$$
 >
-> so condition 3 fails and $f$ is not continuous on $[0, 1]$.
+> so condition 3 fails and $f$ is not continuous on $[0, 1]$. [Figure 3](#fig-not-continuous-on) shows the jump at $x = 1$.
+>
+> > **NOTE:**
+> >
+> > Show code
+> >
+> > ``` downlit
+> > segment <- tibble::tribble(
+> >   ~x, ~y,
+> >   0, 0,
+> >   1, 0
+> > )
+> > open_end <- tibble::tibble(x = 1, y = 0)
+> > value_at_one <- tibble::tibble(x = 1, y = 2)
+> >
+> > segment |>
+> >   ggplot2::ggplot() +
+> >   ggplot2::aes(x = x, y = y) +
+> >   ggplot2::geom_line() +
+> >   ggplot2::geom_point(data = open_end, shape = 21, fill = "white", size = 2.5) +
+> >   ggplot2::geom_point(data = value_at_one, size = 2.5)
+> > ```
+> >
+> > [![A horizontal segment at height 0 from x = 0 to x = 1, ending in an open circle at (1, 0), and a separate filled dot at (1, 2) above it.](calculus-integration_files/figure-html/not-continuous-on-plot-1.png)](calculus-integration_files/figure-html/not-continuous-on-plot-1.png "Figure 3: The function with f(x) = 0 for 0 \le x < 1 and f(1) = 2. The open circle at (1, 0) marks the left-hand limit of f at 1,  and the filled dot at (1, 2) is f(1).")
+> >
+> > Figure 3: The function with $f(x) = 0$ for $0 \le x < 1$ and $f(1) = 2$. The open circle at $(1, 0)$ marks the [left-hand limit](calculus-derivatives.llms.md#def-one-sided-limit) of $f$ at $1$, and the filled dot at $(1, 2)$ is $f(1)$.
 
 > **NOTE:**
 >
@@ -340,7 +390,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Definition 12 (Riemann integral (definite integral))** Let $f$ be a [bounded](algebra-sums.llms.md#def-bounded) function on $[a, b]$. For each partition $\mathcal{P}$ of $[a, b]$ ([Definition 8](#def-partition)), choose a sample point $x_i^*$ in each subinterval $[x_{i-1}, x_i]$. The **Riemann integral** of $f$ over $[a, b]$ [\[7\]](#ref-wikipedia_riemann_integral) (also called the **definite integral** of $f$ from $a$ to $b$) is the limit of the Riemann sums ([Definition 11](#def-riemann-sum)) as the mesh ([Definition 9](#def-mesh)) shrinks to zero:
+> **Definition 12 (Riemann integral (definite integral))** Let $f$ be a [bounded](algebra-convexity.llms.md#def-bounded) function on $[a, b]$. For each partition $\mathcal{P}$ of $[a, b]$ ([Definition 8](#def-partition)), choose a sample point $x_i^*$ in each subinterval $[x_{i-1}, x_i]$. The **Riemann integral** of $f$ over $[a, b]$ [\[7\]](#ref-wikipedia_riemann_integral) (also called the **definite integral** of $f$ from $a$ to $b$) is the limit of the Riemann sums ([Definition 11](#def-riemann-sum)) as the mesh ([Definition 9](#def-mesh)) shrinks to zero:
 >
 > $$\int_a^b f(x)\,dx \stackrel{\text{def}}{=}\lim_{\mathopen{}\left\lVert\mathcal{P}\right\rVert\mathclose{} \to 0} \sum_{i=1}^nf(x_i^*)\,\Delta x_i,$$
 >
@@ -383,7 +433,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 >
 > **Example 13 (Integrands)**  
 >
-> - In $\int_0^3 2\,dx = 6$ ([Example 12](#exm-integrable-constant)), the integrand is the [constant function](algebra-exponentials.llms.md#def-constant-function) $f(x) = 2$, and the [limits of integration](algebra-sums.llms.md#def-limits-of-integration) are $0$ and $3$.
+> - In $\int_0^3 2\,dx = 6$ ([Example 12](#exm-integrable-constant)), the integrand is the [constant function](algebra-polynomials.llms.md#def-constant-function) $f(x) = 2$, and the [limits of integration](algebra-sums.llms.md#def-limits-of-integration) are $0$ and $3$.
 > - In $\int \mathopen{}\left(3x^2 - 1\right)\mathclose{}\,dx = x^3 - x + C$ ([Example 2](#exm-integral-rules-quadratic)), the integrand is $f(x) = 3x^2 - 1$; its value at $x = 2$ is $3 \cdot 4 - 1 = 11$.
 
 > **NOTE:**
@@ -463,7 +513,7 @@ Before stating the Fundamental Theorem of Calculus, we record two prerequisite r
 >
 > but it is not differentiable at $x = 0$: its left-hand derivative there is $-1$ and its right-hand derivative is $+1$ ([Example 6 in Derivatives](calculus-derivatives.llms.md#exm-one-sided-derivative)).
 >
-> This [counterexample](https://morrison-lab.github.io/mcs/proof-writing.html#def-counterexample) shows that the [converse](https://morrison-lab.github.io/mcs/proof-writing.html#def-converse) of [Theorem 2](#thm-diff-implies-cont) fails: continuity does not imply differentiability. See [Figure 2](#fig-abs-value).
+> This [counterexample](https://morrison-lab.github.io/mcs/proof-writing.html#def-counterexample) shows that the [converse](https://morrison-lab.github.io/mcs/proof-writing.html#def-converse) of [Theorem 2](#thm-diff-implies-cont) fails: continuity does not imply differentiability. See [Figure 4](#fig-abs-value).
 >
 > > **NOTE:**
 > >
@@ -477,9 +527,9 @@ Before stating the Fundamental Theorem of Calculus, we record two prerequisite r
 > >   ggplot2::theme_minimal()
 > > ```
 > >
-> > [![](calculus-integration_files/figure-html/abs-value-code-1.png)](calculus-integration_files/figure-html/abs-value-code-1.png "Figure 2: f(x) = \mathopen{}\left|x\right|\mathclose{} has a sharp corner at x = 0 (not differentiable there) but is continuous everywhere: no gaps or jumps.")
+> > [![](calculus-integration_files/figure-html/abs-value-code-1.png)](calculus-integration_files/figure-html/abs-value-code-1.png "Figure 4: f(x) = \mathopen{}\left|x\right|\mathclose{} has a sharp corner at x = 0 (not differentiable there) but is continuous everywhere: no gaps or jumps.")
 > >
-> > Figure 2: $f(x) = \mathopen{}\left|x\right|\mathclose{}$ has a sharp corner at $x = 0$ (not differentiable there) but is continuous everywhere: no gaps or jumps.
+> > Figure 4: $f(x) = \mathopen{}\left|x\right|\mathclose{}$ has a sharp corner at $x = 0$ (not differentiable there) but is continuous everywhere: no gaps or jumps.
 
 > **NOTE:**
 >
@@ -489,7 +539,7 @@ Before stating the Fundamental Theorem of Calculus, we record two prerequisite r
 
 > **NOTE:**
 >
-> **Example 17 (Continuous, hence integrable: polynomials)** Every [polynomial](algebra-exponentials.llms.md#def-polynomial) is continuous on $\mathbb{R}$, so by [Theorem 3](#thm-cont-implies-int) every polynomial is integrable on every closed interval $[a, b]$.
+> **Example 17 (Continuous, hence integrable: polynomials)** Every [polynomial](algebra-polynomials.llms.md#def-polynomial) is continuous on $\mathbb{R}$, so by [Theorem 3](#thm-cont-implies-int) every polynomial is integrable on every closed interval $[a, b]$.
 
 > **NOTE:**
 >
@@ -502,7 +552,7 @@ Before stating the Fundamental Theorem of Calculus, we record two prerequisite r
 > &= \tfrac{1}{2}.
 > \end{aligned}$$
 >
-> This counterexample shows that the converse of [Theorem 3](#thm-cont-implies-int) fails: integrability does not imply continuity. See [Figure 3](#fig-step).
+> This counterexample shows that the converse of [Theorem 3](#thm-cont-implies-int) fails: integrability does not imply continuity. See [Figure 5](#fig-step).
 >
 > > **NOTE:**
 > >
@@ -536,9 +586,9 @@ Before stating the Fundamental Theorem of Calculus, we record two prerequisite r
 > >   ggplot2::theme_minimal()
 > > ```
 > >
-> > [![](calculus-integration_files/figure-html/step-code-1.png)](calculus-integration_files/figure-html/step-code-1.png "Figure 3: Step function: f(x) = 0 on [0, \tfrac{1}{2}) (open circle at the jump) and f(x) = 1 on [\tfrac{1}{2}, 1] (filled circle). The shaded rectangle has area \tfrac{1}{2}, matching the integral computed in Example 18.")
+> > [![](calculus-integration_files/figure-html/step-code-1.png)](calculus-integration_files/figure-html/step-code-1.png "Figure 5: Step function: f(x) = 0 on [0, \tfrac{1}{2}) (open circle at the jump) and f(x) = 1 on [\tfrac{1}{2}, 1] (filled circle). The shaded rectangle has area \tfrac{1}{2}, matching the integral computed in Example 18.")
 > >
-> > Figure 3: Step function: $f(x) = 0$ on $[0, \tfrac{1}{2})$ (open circle at the jump) and $f(x) = 1$ on $[\tfrac{1}{2}, 1]$ (filled circle). The shaded rectangle has area $\tfrac{1}{2}$, matching the integral computed in [Example 18](#exm-int-not-cont).
+> > Figure 5: Step function: $f(x) = 0$ on $[0, \tfrac{1}{2})$ (open circle at the jump) and $f(x) = 1$ on $[\tfrac{1}{2}, 1]$ (filled circle). The shaded rectangle has area $\tfrac{1}{2}$, matching the integral computed in [Example 18](#exm-int-not-cont).
 
 Together, [Theorem 2](#thm-diff-implies-cont) and [Theorem 3](#thm-cont-implies-int) establish the chain:
 
@@ -983,7 +1033,7 @@ The standard form of the FTC assumes $f$ is continuous on $[a, b]$; continuity i
 > &= f(x),
 > \end{aligned}$$
 >
-> as [Theorem 5](#thm-ftc-part1) predicts. [Figure 4](#fig-ftc-part1) shows the integrand on the left (shaded area equals $F(x)$ at each $x$) and the accumulation function $F(x) = x^2$ on the right (its slope at $x$ equals $f(x) = 2x$).
+> as [Theorem 5](#thm-ftc-part1) predicts. [Figure 6](#fig-ftc-part1) shows the integrand on the left (shaded area equals $F(x)$ at each $x$) and the accumulation function $F(x) = x^2$ on the right (its slope at $x$ equals $f(x) = 2x$).
 >
 > > **NOTE:**
 > >
@@ -1007,7 +1057,7 @@ The standard form of the FTC assumes $f$ is continuous on $[a, b]$; continuity i
 > >   ggplot2::theme(legend.position = "bottom")
 > > ```
 > >
-> > [![](calculus-integration_files/figure-html/ftc-part1-left-code-1.png)](calculus-integration_files/figure-html/ftc-part1-left-code-1.png "Figure 4 (a): f(t) = 2t; shaded area equals F(1.5) = 2.25; vertical lines mark x \in \{1, 1.5, 2\}.")
+> > [![](calculus-integration_files/figure-html/ftc-part1-left-code-1.png)](calculus-integration_files/figure-html/ftc-part1-left-code-1.png "Figure 6 (a): f(t) = 2t; shaded area equals F(1.5) = 2.25; vertical lines mark x \in \{1, 1.5, 2\}.")
 > >
 > > \(a\) $f(t) = 2t$; shaded area equals $F(1.5) = 2.25$; vertical lines mark $x \in \{1, 1.5, 2\}$.
 > >
@@ -1045,7 +1095,7 @@ The standard form of the FTC assumes $f$ is continuous on $[a, b]$; continuity i
 > >   ggplot2::theme(legend.position = "bottom")
 > > ```
 > >
-> > [![](calculus-integration_files/figure-html/ftc-part1-right-code-1.png)](calculus-integration_files/figure-html/ftc-part1-right-code-1.png "Figure 4 (b): F(x) = x^2; tangent slope at each marked x equals f(x) = 2x.")
+> > [![](calculus-integration_files/figure-html/ftc-part1-right-code-1.png)](calculus-integration_files/figure-html/ftc-part1-right-code-1.png "Figure 6 (b): F(x) = x^2; tangent slope at each marked x equals f(x) = 2x.")
 > >
 > > \(b\) $F(x) = x^2$; tangent slope at each marked $x$ equals $f(x) = 2x$.
 > >
@@ -1056,7 +1106,7 @@ The standard form of the FTC assumes $f$ is continuous on $[a, b]$; continuity i
 > > &= 2.25;
 > > \end{aligned}$$
 > >
-> > Figure 4: vertical lines mark $x \in \{1, 1.5, 2\}$. Right: $F(x) = x^2$; for each marked $x$, the tangent slope equals $f(x) = 2x$.
+> > Figure 6: vertical lines mark $x \in \{1, 1.5, 2\}$. Right: $F(x) = x^2$; for each marked $x$, the tangent slope equals $f(x) = 2x$.
 
 > **NOTE:**
 >
@@ -1128,7 +1178,7 @@ The standard form of the FTC assumes $f$ is continuous on $[a, b]$; continuity i
 > &= 0.865
 > \end{aligned}$$
 >
-> See [Figure 5](#fig-exp-pdf-cdf).
+> See [Figure 7](#fig-exp-pdf-cdf).
 >
 > > **NOTE:**
 > >
@@ -1149,7 +1199,7 @@ The standard form of the FTC assumes $f$ is continuous on $[a, b]$; continuity i
 > >   ggplot2::theme_minimal()
 > > ```
 > >
-> > [![](calculus-integration_files/figure-html/exp-pdf-cdf-pdf-code-1.png)](calculus-integration_files/figure-html/exp-pdf-cdf-pdf-code-1.png "Figure 5 (a): PDF with {\lambda}= 1; shaded area equals F(2) \approx 0.865.")
+> > [![](calculus-integration_files/figure-html/exp-pdf-cdf-pdf-code-1.png)](calculus-integration_files/figure-html/exp-pdf-cdf-pdf-code-1.png "Figure 7 (a): PDF with {\lambda}= 1; shaded area equals F(2) \approx 0.865.")
 > >
 > > \(a\) PDF with ${\lambda}= 1$; shaded area equals $F(2) \approx 0.865$.
 > >
@@ -1177,11 +1227,11 @@ The standard form of the FTC assumes $f$ is continuous on $[a, b]$; continuity i
 > >   ggplot2::theme_minimal()
 > > ```
 > >
-> > [![](calculus-integration_files/figure-html/exp-pdf-cdf-cdf-code-1.png)](calculus-integration_files/figure-html/exp-pdf-cdf-cdf-code-1.png "Figure 5 (b): CDF with {\lambda}= 1; point marks F(2) \approx 0.865.")
+> > [![](calculus-integration_files/figure-html/exp-pdf-cdf-cdf-code-1.png)](calculus-integration_files/figure-html/exp-pdf-cdf-cdf-code-1.png "Figure 7 (b): CDF with {\lambda}= 1; point marks F(2) \approx 0.865.")
 > >
 > > \(b\) CDF with ${\lambda}= 1$; point marks $F(2) \approx 0.865$.
 > >
-> > Figure 5: Exponential distribution with ${\lambda}= 1$. Left: the PDF $f(t) = {\lambda}\text{e}^{-{\lambda}t}$; the shaded area under the curve from $0$ to $2$ equals $F(2) \approx 0.865$. Right: the CDF $F(t) = 1 - \text{e}^{-{\lambda}t}$; the dashed lines mark the value $F(2)$ computed via FTC Part 2.
+> > Figure 7: Exponential distribution with ${\lambda}= 1$. Left: the PDF $f(t) = {\lambda}\text{e}^{-{\lambda}t}$; the shaded area under the curve from $0$ to $2$ equals $F(2) \approx 0.865$. Right: the CDF $F(t) = 1 - \text{e}^{-{\lambda}t}$; the dashed lines mark the value $F(2)$ computed via FTC Part 2.
 
 > **NOTE:**
 >
@@ -1297,7 +1347,7 @@ The standard form of the FTC assumes $f$ is continuous on $[a, b]$; continuity i
 - [Definition 4 (Continuous function)](#def-continuous)
 - [Definition 5 (Discontinuous function)](#def-discontinuous)
 - [Definition 6 (Jump discontinuity)](#def-jump-discontinuity)
-- [Definition 7 (Continuous on a closed interval)](#def-continuous-on)
+- [Definition 7 (Continuous on a closed interval)](#def-continuous-on-interval)
 - [Definition 8](#def-partition)
 - [Definition 9 (Mesh of a partition)](#def-mesh)
 - [Definition 10 (Sample point)](#def-sample-point)

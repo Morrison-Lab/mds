@@ -185,9 +185,10 @@
     reads those vars so it stays legible in every palette. Light is the
     default variable set, Off-white and Parchment are a data-palette attribute
     on <html>, and Dark is the body.qwt-dark class. The choice is saved under
-    "mln-theme", the key the website's theme dropdown (theme-picker.html) uses,
-    so it carries across the site and the decks. First-time visitors get
-    Dark if their system prefers it, and Off-white otherwise.
+    "lds-theme" (falling back to "mln-theme"), the key the website's theme
+    dropdown (theme-picker.html) uses, so it carries across the site and the
+    decks. First-time visitors get Dark if their system prefers it, and
+    Off-white otherwise.
   -->
   <style>
     #qwt-theme-select {
@@ -221,7 +222,8 @@
   <script>
   (function () {
     "use strict";
-    var KEY = "mln-theme";
+    var KEY = "lds-theme";
+    var LEGACY_KEY = "mln-theme";
     var DARK_CLASS = "qwt-dark";
     var OPTIONS = [["light", "Light"], ["offwhite", "Off-white"], ["parchment", "Parchment"], ["dark", "Dark"]];
     var root = document.documentElement;
@@ -231,7 +233,7 @@
     }
 
     function stored() {
-      try { return localStorage.getItem(KEY); } catch (e) { return null; }
+      try { return localStorage.getItem(KEY) || localStorage.getItem(LEGACY_KEY); } catch (e) { return null; }
     }
 
     function initialTheme() {
@@ -302,7 +304,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-11-20 01:46:09 (PST)</p>
+  <p class="date">Last modified: 2026-11-25 11:14:34 (PST)</p>
 </section>
 <section class="slide level2">
 
@@ -314,7 +316,12 @@
 <section class="slide level2">
 
 <div id="def-taylor-polynomial" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1 (Taylor polynomial (Taylor expansion))</strong></span> Let <span class="math inline">\(f\)</span> be a function that has at least <span class="math inline">\(n\)</span> derivatives at a point <span class="math inline">\(x_0\)</span>. The <strong>Taylor polynomial</strong> (also called the <strong>Taylor expansion</strong>) of <a href="./algebra-exponentials.html#def-polynomial-degree">degree</a> <span class="math inline">\(n\)</span> for <span class="math inline">\(f\)</span> centered at <span class="math inline">\(x_0\)</span> is:</p>
+<p><span class="theorem-title"><strong>Definition 1 (Taylor polynomial (Taylor expansion))</strong></span> &nbsp;</p>
+<!-- def-equiv-ok: the second line writes out the terms of the defining sum, not a result -->
+<!-- no-graph: the graph is tracked in mds#859 -->
+<!-- check-definition-expectation: allow -->
+<!-- The sum above weights derivatives by powers of (x - x0), not probabilities, so no expectation fits. -->
+<p>Let <span class="math inline">\(f\)</span> be a function that has at least <span class="math inline">\(n\)</span> derivatives at a point <span class="math inline">\(x_0\)</span>. The <strong>Taylor polynomial</strong> (also called the <strong>Taylor expansion</strong>) of <a href="./algebra-polynomials.html#def-polynomial-degree">degree</a> <span class="math inline">\(n\)</span> for <span class="math inline">\(f\)</span> centered at <span class="math inline">\(x_0\)</span> is:</p>
 <p><span id="eq-taylor-poly-def"><span class="math display">\[
 \begin{aligned}
 P_n(x)

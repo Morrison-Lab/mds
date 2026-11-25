@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-20 01:46:09 (PST)
+Last modified: 2026-11-25 11:14:34 (PST)
 
 # 1 Double Integrals
 
@@ -306,7 +306,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 > &= \frac{x^2 - y^2}{(x^2 + y^2)^2}.
 > \end{aligned}$$
 >
-> (A derivative in one variable with the others held fixed is a [partial derivative](vector-calculus.llms.md#def-partial-derivative), defined on the vector calculus page.) The arctangent $\arctan$ is the inverse of the tangent function from trigonometry; all this example needs is that $\frac{d }{d x}\arctan(x) = \frac{1}{1 + x^2}$, $\arctan(0) = 0$, and $\arctan(1) = \frac{\pi}{4}$.
+> (A derivative in one variable with the others held fixed is a [partial derivative](vector-calculus-gradients.llms.md#def-partial-derivative), defined on the [Partial Derivatives and Gradients](vector-calculus-gradients.llms.md) page.) The arctangent $\arctan$ is the inverse of the tangent function from trigonometry; all this example needs is that $\frac{d }{d x}\arctan(x) = \frac{1}{1 + x^2}$, $\arctan(0) = 0$, and $\arctan(1) = \frac{\pi}{4}$.
 >
 > $$\begin{aligned}
 > \int_0^1\!\int_0^1 f(x, y)\,dy\,dx
