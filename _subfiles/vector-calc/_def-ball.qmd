@@ -12,8 +12,6 @@ of [points](linear-algebra-vectors.qmd#def-real-coordinate-space) whose distance
 is less than $r$:
 
 <!-- check-ball-neighborhoods: allow: defines the ball -->
-$$
-\ball{\vx}{r} \eqdef \cb{\vy \in \reals^p : \norm{\vy - \vx} < r}.
-$$
+$$\ball{\vx}{r} \eqdef \cb{\vy \in \reals^p : \norm{\vy - \vx} < r}.$$ {#eq-ball}
 
 :::
