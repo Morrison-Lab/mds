@@ -4,7 +4,7 @@
 In a table of pairwise comparisons among several items,
 the [off-diagonal entries](#def-off-diagonal-entry) are the comparisons between two different items,
 so counting them counts the ordered pairs of different items.
-Let $\matr{A}$ be a $5 \times 5$ [matrix](#def-matrix),
+Let $\matr{A}$ be a $5 \times 5$ [matrix](linear-algebra-matrices.qmd#def-matrix),
 so $\matr{A}$ is [square](#def-square-matrix).
 
 How many off-diagonal entries does $\matr{A}$ have?

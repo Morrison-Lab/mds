@@ -1,10 +1,10 @@
 :::{#thm-convex-hessian-converse}
 #### A convex function has a positive semidefinite Hessian
 
-Let $f : \reals^p \to \reals$ have first and [second partial derivatives](vector-calculus.qmd#def-second-partial-derivative)
-that are [continuous on](vector-calculus.qmd#def-continuous-on) $\reals^p$.
-If $f$ is [convex](algebra-sums.qmd#def-convex-function),
-then the Hessian $\matr{H}_f(\vx)$ is [positive semidefinite](linear-algebra-special-matrices.qmd#def-positive-semidefinite) for every $\vx \in \reals^p$.
+Let $f : \reals^p \to \reals$ have first and [second partial derivatives](vector-calculus-hessian.qmd#def-second-partial-derivative)
+that are [continuous on](vector-calculus-hessian.qmd#def-continuous-on) $\reals^p$.
+If $f$ is [convex](algebra-convexity.qmd#def-convex-function),
+then the [Hessian](vector-calculus-hessian.qmd#def-hessian) $\matr{H}_f(\vx)$ is [positive semidefinite](linear-algebra-definite-matrices.qmd#def-positive-semidefinite) for every $\vx \in \reals^p$.
 
 :::
 
@@ -36,7 +36,7 @@ f(\vx + h\vecf{v}) + f(\vx - h\vecf{v}) - 2 f(\vx)
 = \frac{h^2}{2}\,\tp{\vecf{v}}\paren{\matr{H}_f(\vecf{w}_+) + \matr{H}_f(\vecf{w}_-)}\vecf{v}.
 $$
 
-Since $f$ is [convex](algebra-sums.qmd#def-convex-function) and $\vx = \frac{1}{2}(\vx + h\vecf{v}) + \frac{1}{2}(\vx - h\vecf{v})$,
+Since $f$ is [convex](algebra-convexity.qmd#def-convex-function) and $\vx = \frac{1}{2}(\vx + h\vecf{v}) + \frac{1}{2}(\vx - h\vecf{v})$,
 
 $$
 f(\vx) \le \frac{1}{2} f(\vx + h\vecf{v}) + \frac{1}{2} f(\vx - h\vecf{v}),
@@ -51,7 +51,7 @@ $$
 $$
 
 As $h \to 0$, both $\vecf{w}_+$ and $\vecf{w}_-$ approach $\vx$,
-and the entries of $\matr{H}_f$ are [continuous](vector-calculus.qmd#def-continuous-several),
+and the entries of $\matr{H}_f$ are [continuous](vector-calculus-hessian.qmd#def-continuous-several),
 so the left side approaches $2\,\tp{\vecf{v}}\,\matr{H}_f(\vx)\,\vecf{v}$.
 Therefore $\tp{\vecf{v}}\,\matr{H}_f(\vx)\,\vecf{v} \ge 0$ for every $\vecf{v}$.
 

@@ -4,9 +4,9 @@
 For $\vx = (1, 2)$,
 [the example of a self outer product](linear-algebra.qmd#exm-self-outer-product)
 found $\soprod{\vx} = \begin{bmatrix} 1 & 2 \\ 2 & 4 \end{bmatrix}$,
-which is [symmetric](#def-symmetric-matrix).
+which is [symmetric](linear-algebra-special-matrices.qmd#def-symmetric-matrix).
 Take $\vecf{w} = (2, -1)$.
-The [quadratic form](#def-quadratic-form) in $\soprod{\vx}$ at $\vecf{w}$ is
+The [quadratic form](linear-algebra-special-matrices.qmd#def-quadratic-form) in $\soprod{\vx}$ at $\vecf{w}$ is
 
 $$
 \ba

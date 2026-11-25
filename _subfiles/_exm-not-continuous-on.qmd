@@ -2,7 +2,7 @@
 #### A function not continuous on $\lbrack 0, 1\rbrack$
 
 Let $f(x) = 0$ for $0 \le x < 1$ and $f(1) = 2$.
-Conditions 1 and 2 of @def-continuous-on hold,
+Conditions 1 and 2 of @def-continuous-on-interval hold,
 but
 
 $$
@@ -14,5 +14,36 @@ $$
 $$
 
 so condition 3 fails and $f$ is not continuous on $[0, 1]$.
+@fig-not-continuous-on shows the jump at $x = 1$.
+
+:::{#fig-not-continuous-on}
+
+```{r}
+#| label: not-continuous-on-plot
+#| fig-alt: >-
+#|   A horizontal segment at height 0 from x = 0 to x = 1, ending in an
+#|   open circle at (1, 0), and a separate filled dot at (1, 2) above it.
+#| fig-height: 3.5
+#| fig-width: 4.5
+segment <- tibble::tribble(
+  ~x, ~y,
+  0, 0,
+  1, 0
+)
+open_end <- tibble::tibble(x = 1, y = 0)
+value_at_one <- tibble::tibble(x = 1, y = 2)
+
+segment |>
+  ggplot2::ggplot() +
+  ggplot2::aes(x = x, y = y) +
+  ggplot2::geom_line() +
+  ggplot2::geom_point(data = open_end, shape = 21, fill = "white", size = 2.5) +
+  ggplot2::geom_point(data = value_at_one, size = 2.5)
+```
+
+The function with $f(x) = 0$ for $0 \le x < 1$ and $f(1) = 2$.
+The open circle at $(1, 0)$ marks the [left-hand limit](calculus-derivatives.qmd#def-one-sided-limit) of $f$ at $1$, <!-- check-term-links: allow: "open circle" names the plot marker, not the geometric circle -->
+and the filled dot at $(1, 2)$ is $f(1)$.
+:::
 
 :::

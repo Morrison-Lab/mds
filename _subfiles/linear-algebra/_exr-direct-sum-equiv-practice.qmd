@@ -2,7 +2,7 @@
 #### Recognizing a direct sum by counting dimensions
 
 Statement 2 of @thm-direct-sum-equiv recognizes a [direct sum](#def-direct-sum)
-from [dimensions](linear-algebra-subspaces.qmd#def-dimension) alone.
+from [dimensions](linear-algebra-bases.qmd#def-dimension) alone.
 Let $\mathcal{S}_1 = \operatorname{span}\cb{(1, 0, 0), (0, 1, 0)}$
 and $\mathcal{S}_2 = \operatorname{span}\cb{(0, 1, 1)}$,
 and suppose that you have already checked that $\mathcal{S}_1 + \mathcal{S}_2 = \reals^3$.

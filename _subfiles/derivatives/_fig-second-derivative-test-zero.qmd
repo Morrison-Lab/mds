@@ -70,7 +70,7 @@ This figure shows the [functions](https://morrison-lab.github.io/mcs/functions.h
 All three have a [flat point](#def-flat-point) at $x = 0$ (circles)
 where the [second derivative](calculus-derivatives.qmd#def-second-derivative) is $0$:
 a [local minimizer](algebra.qmd#def-local-minimizer),
-a [local maximizer](#def-local-maximizer),
+a [local maximizer](optimization-optimality.qmd#def-local-maximizer),
 and neither.
 
 :::

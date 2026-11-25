@@ -2,7 +2,7 @@
 
 Both $(1, 0, 0)$ and $(0, 1, 0)$ lie in $\mathcal{S}_1$,
 and they are [linearly independent](linear-algebra-subspaces.qmd#def-linearly-independent),
-so they are a [basis](linear-algebra-subspaces.qmd#def-basis) of $\mathcal{S}_1$
+so they are a [basis](linear-algebra-bases.qmd#def-basis) of $\mathcal{S}_1$
 and $\dim(\mathcal{S}_1) = 2$.
 The single nonzero vector $(0, 1, 1)$ is a basis of $\mathcal{S}_2$,
 so $\dim(\mathcal{S}_2) = 1$.

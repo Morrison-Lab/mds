@@ -2,7 +2,7 @@
 #### Finding a rank factorization of a rank-one matrix
 
 A [rank factorization](#def-rank-factorization) writes an $m \times n$ [matrix](linear-algebra-matrices.qmd#def-matrix) with [rank](linear-algebra-subspaces.qmd#def-rank) $r$
-as a [matrix product](linear-algebra-matrices.qmd#def-matrix-mult) of an $m \times r$ and an $r \times n$ matrix.
+as a [matrix product](linear-algebra-matrix-multiplication.qmd#def-matrix-mult) of an $m \times r$ and an $r \times n$ matrix.
 Let
 
 $$

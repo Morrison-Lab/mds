@@ -3,7 +3,7 @@
 
 @rem-transpose-product-order shows that,
 for factors that are not [square](#def-square-matrix),
-keeping the original order of the factors in the [transpose](#def-matrix-transpose) of a [product](#def-matrix-mult) can give an undefined product.
+keeping the original order of the factors in the [transpose](linear-algebra-matrices.qmd#def-matrix-transpose) of a [product](#def-matrix-mult) can give an undefined product.
 For two [square matrices](#def-square-matrix) of the same size,
 both $\tp{\matr{A}}\tp{\matr{B}}$ and $\tp{\matr{B}}\tp{\matr{A}}$ are defined,
 so the shapes alone cannot settle which order gives $\tp{(\matr{A}\matr{B})}$.
@@ -20,7 +20,7 @@ Does $\tp{\matr{A}}\tp{\matr{B}}$ equal $\tp{(\matr{A}\matr{B})}$ for these $\ma
 ::: {.callout-tip}
 #### Hint
 
-Compute $\matr{A}\matr{B}$ with @def-matrix-mult and take its [transpose](#def-matrix-transpose),
+Compute $\matr{A}\matr{B}$ with @def-matrix-mult and take its [transpose](linear-algebra-matrices.qmd#def-matrix-transpose),
 then compute $\tp{\matr{A}}\tp{\matr{B}}$ and compare the two entry by entry.
 
 :::

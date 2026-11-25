@@ -14,7 +14,7 @@ $$
 ::: proof
 
 Swapping the vectors relies on the fact that
-[a $1 \times 1$ product equals its own transpose](linear-algebra-matrices.qmd#thm-scalar-transpose),
+[a $1 \times 1$ product equals its own transpose](linear-algebra-matrix-multiplication.qmd#thm-scalar-transpose),
 which justifies the step labeled with that fact:
 
 $$

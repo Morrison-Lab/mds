@@ -82,8 +82,8 @@ cat(
 ```
 
 The [objective](#def-objective-function) $x_1^2 + x_2^2$ of @exm-quadratic-program as a surface,
-whose [level curves](vector-calculus.qmd#def-level-set) are the circles in @fig-quadratic-program.
-The dashed curve lies above the edge $x_1 + x_2 = 1$ of the feasible [half-plane](optimization-convexity.qmd#def-half-space),
+whose [level curves](vector-calculus-gradients.qmd#def-level-set) are the [circles](linear-algebra-vectors.qmd#def-circle) in @fig-quadratic-program.
+The dashed curve lies above the edge $x_1 + x_2 = 1$ of the feasible [half-plane](optimization-convexity.qmd#def-half-space-inequality),
 and its lowest point, at $\tp{(0.5, 0.5)}$ and height $0.5$, is the dot.
 
 :::

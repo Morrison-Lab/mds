@@ -16,4 +16,16 @@ filters:
 
 # Matrices
 
-{{< include mds/_subfiles/_sec_linear_algebra_matrices.qmd >}}
+{{< include mds/_subfiles/_sec_linear_algebra_matrices_intro.qmd >}}
+
+## Matrix transpose {#sec-matrix-transpose}
+
+{{< include mds/_subfiles/_sec_linear_algebra_matrices_transpose.qmd >}}
+
+## Matrix addition
+
+{{< include mds/_subfiles/_sec_linear_algebra_matrices_addition.qmd >}}
+
+## Scalar multiplication
+
+{{< include mds/_subfiles/_sec_linear_algebra_matrices_scalar_mult.qmd >}}

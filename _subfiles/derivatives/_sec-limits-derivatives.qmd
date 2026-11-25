@@ -59,3 +59,15 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/derivatives/_exm-second-derivative.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_def-smooth-function.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_exm-smooth-function.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_rem-smooth-function-loose.qmd >}}

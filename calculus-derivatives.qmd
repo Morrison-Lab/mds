@@ -12,6 +12,12 @@ format:
 
 {{< include latex-macros/macros.qmd >}}
 
+```{r}
+#| include: false
+py_packages <- c("numpy", "matplotlib")
+reticulate::py_require(py_packages)
+```
+
 # Limits and derivatives {#sec-limits-derivatives}
 
 {{< include mds/_subfiles/derivatives/_sec-limits-derivatives.qmd >}}

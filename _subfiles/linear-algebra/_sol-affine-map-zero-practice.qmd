@@ -16,7 +16,7 @@ $$
 $$
 
 By @def-matvec-mult,
-$\matr{A} \tp{(1, 0)}$ is the first [column of $\matr{A}$](#def-matrix-column),
+$\matr{A} \tp{(1, 0)}$ is the first [column of $\matr{A}$](linear-algebra-matrices.qmd#def-matrix-column),
 which is therefore $\tp{(3, 0)}$.
 
 :::

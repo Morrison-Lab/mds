@@ -1,10 +1,10 @@
 :::{#def-matrix-induced-inner-product}
 #### Matrix-induced inner product ($\matr{A}$-inner product)
 
-Let $\matr{A}$ be a $p \times p$ [symmetric](#def-symmetric-matrix) [positive definite matrix](#def-positive-definite).
+Let $\matr{A}$ be a $p \times p$ [symmetric](linear-algebra-special-matrices.qmd#def-symmetric-matrix) [positive definite matrix](#def-positive-definite).
 The **matrix-induced inner product** (or **$\matr{A}$-inner product**)
 on $\reals^p$
-is the [symmetric bilinear form](#def-symmetric-bilinear-form) of $\matr{A}$,
+is the [symmetric bilinear form](linear-algebra-special-matrices.qmd#def-symmetric-bilinear-form) of $\matr{A}$,
 used as an [inner product](linear-algebra-inner-products.qmd#def-inner-product):
 [for all](https://morrison-lab.github.io/mcs/proof-writing.html#def-universal-quantifier) $\vx, \vy \in \reals^p$,
 

@@ -38,7 +38,7 @@ so $\mathcal{C}(\matr{A}) \subseteq \mathcal{C}\paren{\begin{bmatrix} \matr{A} &
   every combination of the columns of $\begin{bmatrix} \matr{A} & \vecf{b} \end{bmatrix}$
   is a combination of the columns of $\matr{A}$ (@def-column-space),
   so the two column spaces (@def-column-space) coincide and their [ranks](linear-algebra-subspaces.qmd#def-rank) agree (@thm-rank-dim).
-- If the ranks agree, the two column spaces have the same [dimension](linear-algebra-subspaces.qmd#def-dimension) (@thm-rank-dim),
+- If the ranks agree, the two column spaces have the same [dimension](linear-algebra-bases.qmd#def-dimension) (@thm-rank-dim),
   so they coincide (@thm-subspace-equal-dim),
   and $\vecf{b} \in \mathcal{C}\paren{\begin{bmatrix} \matr{A} & \vecf{b} \end{bmatrix}} = \mathcal{C}(\matr{A})$.
 

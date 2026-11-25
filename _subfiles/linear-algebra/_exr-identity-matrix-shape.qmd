@@ -2,7 +2,7 @@
 #### Whether a matrix with the identity pattern is an identity matrix
 
 An [identity matrix](#def-identity-matrix) has ones on its [main diagonal](#def-main-diagonal) and zeros elsewhere.
-The [matrix](#def-matrix) below has the same pattern of ones and zeros.
+The [matrix](linear-algebra-matrices.qmd#def-matrix) below has the same pattern of ones and zeros.
 Let
 
 $$

@@ -11,9 +11,9 @@ $$
 :::
 
 :::{.proof}
-By @thm-svd-evd, the [eigenvalues](linear-algebra-special-matrices.qmd#def-eigenvalue) of the [symmetric matrix](linear-algebra-special-matrices.qmd#def-symmetric-matrix) $\tp{\matr{A}}\matr{A}$
+By @thm-svd-evd, the [eigenvalues](linear-algebra-decompositions.qmd#def-eigenvalue) of the [symmetric matrix](linear-algebra-special-matrices.qmd#def-symmetric-matrix) $\tp{\matr{A}}\matr{A}$
 are $\singval_1^2 \ge \cdots \ge \singval_p^2$,
-where $\singval_1 \ge \cdots \ge \singval_p$ are the [singular values](#def-singular-values) of $\matr{A}$,
+where $\singval_1 \ge \cdots \ge \singval_p$ are the [singular values](linear-algebra-decompositions.qmd#def-singular-values) of $\matr{A}$,
 with zeros counted (@rem-svd-zero-singular-values).
 These eigenvalues are non-negative,
 so for the symmetric matrix $\tp{\matr{A}}\matr{A}$ they are also its singular values.
