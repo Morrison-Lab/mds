@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-24 09:19:45 (PST)
+Last modified: 2026-11-27 23:30:58 (PST)
 
 # 1 Optimality conditions in several variables
 
@@ -524,7 +524,7 @@ This is the case $n = 2$ of [\[4\]](#ref-rudin1976principles), Theorem 5.15, who
 
 > **NOTE:**
 >
-> **Definition 2 (Strict local minimizer)** Let $f : \mathbb{R}^p \to \mathbb{R}$. A point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*$ is a **strict local minimizer** of $f$ if there is a number $\delta> 0$ such that $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*) < f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*$ with $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*\right\rVert\mathclose{} < \delta$.
+> **Definition 2 (Strict local minimizer)** Let $f : \mathbb{R}^p \to \mathbb{R}$. A point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*$ is a **strict local minimizer** of $f$ if there is a number $\delta> 0$ such that $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*) < f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ for every $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\ne \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*$ in the [open ball](vector-calculus-hessian.llms.md#def-ball) ${B_{\delta}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*\right)\mathclose{}}$ of radius $\delta$ around $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*$.
 
 > **NOTE:**
 >
@@ -983,7 +983,7 @@ This is the case $n = 2$ of [\[4\]](#ref-rudin1976principles), Theorem 5.15, who
 
 > **NOTE:**
 >
-> **Definition 3 (Local maximizer)** Let $f : \mathbb{R}^p \to \mathbb{R}$. A point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^* \in \mathbb{R}^p$ is a **local maximizer** of $f$ if there is a number $\delta> 0$ such that $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*) \ge f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ for all $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$ with $\mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*\right\rVert\mathclose{} < \delta$.
+> **Definition 3 (Local maximizer)** Let $f : \mathbb{R}^p \to \mathbb{R}$. A point $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^* \in \mathbb{R}^p$ is a **local maximizer** of $f$ if there is a number $\delta> 0$ such that $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*) \ge f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ [for all](https://morrison-lab.github.io/mcs/proof-writing.html#def-universal-quantifier) $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ in the [open ball](vector-calculus-hessian.llms.md#def-ball) ${B_{\delta}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*\right)\mathclose{}}$ of radius $\delta$ around $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}^*$.
 
 > **NOTE:**
 >

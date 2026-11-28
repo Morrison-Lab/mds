@@ -4,13 +4,15 @@ Code
 
 Published
 
-Last modified: 2026-11-24 09:19:45 (PST)
+Last modified: 2026-11-27 23:30:58 (PST)
 
 # 1 Second partial derivatives and the Hessian
 
 > **NOTE:**
 >
-> **Definition 1 (Open ball)** Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$ and $r > 0$. The **open ball** [\[1\]](#ref-wikipedia_ball_mathematics) of radius $r$ around $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is the set $\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p : \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{} < r\right\}\mathclose{}$, of points whose distance from $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ (the [Euclidean norm](linear-algebra-vectors.llms.md#def-euclidean-norm) of the difference) is less than $r$.
+> **Definition 1 (Open ball)** Let $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\in \mathbb{R}^p$ and $r > 0$. The **open ball** [\[1\]](#ref-wikipedia_ball_mathematics) of radius $r$ around $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$, written ${B_{r}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right)\mathclose{}}$, is the [set](https://morrison-lab.github.io/mcs/sets.html#def-set) of [points](linear-algebra-vectors.llms.md#def-real-coordinate-space) whose distance from $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ (the [Euclidean norm](linear-algebra-vectors.llms.md#def-euclidean-norm) of the difference) is less than $r$:
+>
+> $${B_{r}\mathopen{}\left(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right)\mathclose{}} \stackrel{\text{def}}{=}\mathopen{}\left\{\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\in \mathbb{R}^p : \mathopen{}\left\lVert\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}- \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}\right\rVert\mathclose{} < r\right\}\mathclose{}. \tag{1}$$
 
 > **NOTE:**
 >
@@ -88,7 +90,7 @@ Last modified: 2026-11-24 09:19:45 (PST)
 > **Definition 6 (Hessian matrix)** Let $f$ be a scalar-valued function of a $p \times 1$ vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ whose first partial derivatives exist on an open ball around $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ ([Definition 1](#def-ball)) and whose second partial derivatives ([Definition 4](#def-second-partial-derivative)) exist at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$. The **Hessian matrix** [\[2\]](#ref-wikipedia_hessian_matrix) of $f$ at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is the derivative ([Definition 2 in Jacobians and Derivative Rules](vector-calculus-derivative-rules.llms.md#def-vector-valued-derivative)) of the transposed gradient ${\mathopen{}\left(\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\right)\mathclose{}}^{\top}$ ([Definition 2 in Partial Derivatives and Gradients](vector-calculus-gradients.llms.md#def-vector-derivative)):
 >
 > $$\underbrace{\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})}_{p \times p} \stackrel{\text{def}}{=}\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} {\mathopen{}\left(\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\right)\mathclose{}}^{\top}.
-> \tag{1}$$
+> \tag{2}$$
 
 > **NOTE:**
 >
@@ -127,23 +129,23 @@ Last modified: 2026-11-24 09:19:45 (PST)
 >     &= \frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} \mathopen{}\left(\frac{\partial f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})}{\partial {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}}\right)\mathclose{} \\
 >     &= \frac{\partial^2 f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}} \partial {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}}.
 >     \end{aligned}
->     \tag{2}$$
+>     \tag{3}$$
 >
 > 2.  The $(i, j)$ entry of the Hessian is
 >
 >     $$\mathopen{}\left[\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\right]\mathclose{}_{ij} = \frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\right)\mathclose{}.
->     \tag{3}$$
+>     \tag{4}$$
 
 > **NOTE:**
 >
-> *Proof*. **Part 1.** By [Theorem 1 in Jacobians and Derivative Rules](vector-calculus-derivative-rules.llms.md#thm-row-deriv-tp-col-deriv), the transposed gradient ${\mathopen{}\left(\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\right)\mathclose{}}^{\top}$ equals the row-vector derivative $\frac{\partial f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})}{\partial {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}}$. Substituting it into [Equation 1](#eq-hessian) gives the first line. The second line is the same expression written as a second derivative. It follows the [shape rule](linear-algebra-matrix-multiplication.llms.md#def-shape-rule) of [matrix multiplication](linear-algebra-matrix-multiplication.llms.md#def-matrix-mult) ([Remark 2 in Jacobians and Derivative Rules](vector-calculus-derivative-rules.llms.md#rem-row-derivative-shape)): the $p \times 1$ column-vector operator $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}$ stands on the left of a $1 \times p$ row vector, giving a $p \times p$ matrix.
+> *Proof*. **Part 1.** By [Theorem 1 in Jacobians and Derivative Rules](vector-calculus-derivative-rules.llms.md#thm-row-deriv-tp-col-deriv), the transposed gradient ${\mathopen{}\left(\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\right)\mathclose{}}^{\top}$ equals the row-vector derivative $\frac{\partial f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})}{\partial {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}^{\top}}$. Substituting it into [Equation 2](#eq-hessian) gives the first line. The second line is the same expression written as a second derivative. It follows the [shape rule](linear-algebra-matrix-multiplication.llms.md#def-shape-rule) of [matrix multiplication](linear-algebra-matrix-multiplication.llms.md#def-matrix-mult) ([Remark 2 in Jacobians and Derivative Rules](vector-calculus-derivative-rules.llms.md#rem-row-derivative-shape)): the $p \times 1$ column-vector operator $\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}}$ stands on the left of a $1 \times p$ row vector, giving a $p \times p$ matrix.
 >
 > **Part 2.** Let $y_j \stackrel{\text{def}}{=}\frac{\partial}{\partial x_j} f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})$ be entry $j$ of the gradient. By [Definition 2 in Jacobians and Derivative Rules](vector-calculus-derivative-rules.llms.md#def-vector-valued-derivative), the $(i, j)$ entry of the derivative of the vector $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}= (y_1, \ldots, y_p)$ with respect to $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}$ is
 >
 > $$\begin{aligned}
 > \mathopen{}\left[\mathbf{H}_f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}})\right]\mathclose{}_{ij}
 > &= \mathopen{}\left[\frac{\partial}{\partial \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}} {\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}}^{\top}\right]\mathclose{}_{ij}
-> && \text{(}\href{#eq-hessian}{\text{Equation~1}}\text{, with } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\text{ the gradient)}
+> && \text{(}\href{#eq-hessian}{\text{Equation~2}}\text{, with } \mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{y}}\vphantom{y}}\text{ the gradient)}
 > \\
 > &= \frac{\partial}{\partial x_i} y_j
 > && \text{(}\href{vector-calculus-derivative-rules.qmd#def-vector-valued-derivative}{\text{Definition~2 in Jacobians and Derivative Rules}}\text{)}
@@ -154,7 +156,7 @@ Last modified: 2026-11-24 09:19:45 (PST)
 
 > **NOTE:**
 >
-> **Example 5 (Computing the Hessian entry by entry, and checking it by finite differences)** Take $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = e^{2x_1 + x_2} - x_1$ from [Example 3](#exm-hessian). By [Equation 3](#eq-hessian-entry), entry $(i, j)$ of the Hessian is the derivative with respect to $x_i$ of the derivative with respect to $x_j$. The code differentiates `f` symbolically in that order with [`D()`](https://rdrr.io/r/stats/deriv.html), evaluates the four entries at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (0.5, -1)$, and compares them with central differences of the gradient.
+> **Example 5 (Computing the Hessian entry by entry, and checking it by finite differences)** Take $f(\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}) = e^{2x_1 + x_2} - x_1$ from [Example 3](#exm-hessian). By [Equation 4](#eq-hessian-entry), entry $(i, j)$ of the Hessian is the derivative with respect to $x_i$ of the derivative with respect to $x_j$. The code differentiates `f` symbolically in that order with [`D()`](https://rdrr.io/r/stats/deriv.html), evaluates the four entries at $\mathord{\smash[b]{\underset{\raise.3ex\hbox{$\scriptstyle\sim$}}{x}}\vphantom{x}}= (0.5, -1)$, and compares them with central differences of the gradient.
 >
 > ``` downlit
 > f_expr <- quote(exp(2 * x1 + x2) - x1)

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-11-24 09:19:45 (PST)
+Last modified: 2026-11-27 23:30:58 (PST)
 
 # 1 Equalities
 
@@ -429,7 +429,7 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 > **NOTE:**
 >
-> **Definition 19 (Local minimizer)** Let $A \subseteq \mathbb{R}^p$ and let $f : A \to \mathbb{R}$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function). A point $x^* \in A$ is a **local minimizer** of $f$ if there is a number $\delta> 0$ such that $f(x^*) \le f(x)$ for all $x \in A$ with $\mathopen{}\left\lVert x - x^*\right\rVert\mathclose{} < \delta$, where $\mathopen{}\left\lVert\cdot\right\rVert\mathclose{}$ is the [Euclidean norm](linear-algebra-vectors.llms.md#def-euclidean-norm).
+> **Definition 19 (Local minimizer)** Let $A \subseteq \mathbb{R}^p$ and let $f : A \to \mathbb{R}$ be a [function](https://morrison-lab.github.io/mcs/functions.html#def-function). A point $x^* \in A$ is a **local minimizer** of $f$ if there is a number $\delta> 0$ such that $f(x^*) \le f(x)$ [for all](https://morrison-lab.github.io/mcs/proof-writing.html#def-universal-quantifier) $x \in A$ in the [open ball](vector-calculus-hessian.llms.md#def-ball) ${B_{\delta}\mathopen{}\left(x^*\right)\mathclose{}}$ of radius $\delta$ around $x^*$.
 
 > **NOTE:**
 >

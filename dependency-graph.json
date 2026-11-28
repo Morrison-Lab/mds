@@ -7182,6 +7182,14 @@
    "mcs/functions#def-function"
   ],
   [
+   "mds/algebra-basics#def-local-minimizer",
+   "mcs/proof-writing#def-universal-quantifier"
+  ],
+  [
+   "mds/algebra-basics#def-local-minimizer",
+   "mds/vector-calculus-hessian#def-ball"
+  ],
+  [
    "mds/algebra-basics#def-negative-part",
    "mcs/functions#def-function"
   ],
@@ -11034,12 +11042,24 @@
    "mds/vector-calculus-hessian#thm-hessian-quadratic"
   ],
   [
+   "mds/optimization-optimality#def-local-maximizer",
+   "mcs/proof-writing#def-universal-quantifier"
+  ],
+  [
+   "mds/optimization-optimality#def-local-maximizer",
+   "mds/vector-calculus-hessian#def-ball"
+  ],
+  [
    "mds/optimization-optimality#def-saddle-point",
    "mds/optimization-optimality#def-local-maximizer"
   ],
   [
    "mds/optimization-optimality#def-saddle-point",
    "mds/optimization-optimality#def-stationary-point"
+  ],
+  [
+   "mds/optimization-optimality#def-strict-local-minimizer",
+   "mds/vector-calculus-hessian#def-ball"
   ],
   [
    "mds/optimization-optimality#thm-fermat",
@@ -11304,6 +11324,18 @@
   [
    "mds/vector-calculus-gradients#thm-normal-vector-uphill",
    "mds/linear-algebra-vectors#def-dot-product"
+  ],
+  [
+   "mds/vector-calculus-hessian#def-ball",
+   "mcs/sets#def-set"
+  ],
+  [
+   "mds/vector-calculus-hessian#def-ball",
+   "mds/linear-algebra-vectors#def-euclidean-norm"
+  ],
+  [
+   "mds/vector-calculus-hessian#def-ball",
+   "mds/linear-algebra-vectors#def-real-coordinate-space"
   ],
   [
    "mds/vector-calculus-hessian#def-closed-ball",
